@@ -14,6 +14,8 @@ our @EXPORT = qw(set_links);
 # Many links via Wayback Machine
 # http://www.confsudbridge.org/Torneos/
 # https://csbnews.org/ganadores-de-los-campeonatos-sudamericanos-19482015/
+#
+# TODO Probably some Zonal are the same as non-Zonal
 
 my %GLOBAL = (
   ORGANIZATION => 'CSB',
@@ -159,6 +161,24 @@ my %MEETS_SOUTHAMERICA =
         DATE_START => '2016-05-25',
         DATE_END => '2016-06-04'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-05-07',
+        DATE_END => '2017-05-13'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-05-10',
+        DATE_END => '2018-05-19'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-05-25',
+        DATE_END => '2022-05-29'
+      },
     }
   },
 
@@ -203,11 +223,29 @@ my %MEETS_SOUTHAMERICA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2017,
+        DATE_START => '2017-05-14',
+        DATE_END => '2017-05-18'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-05-21',
+        DATE_END => '2019-05-25'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-04-10',
+        DATE_END => '2023-04-13'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-04-07',
+        DATE_END => '2024-04-14'
       },
     }
   }
@@ -293,6 +331,32 @@ my %TOURNAMENTS_SOUTHAMERICA =
           } 
         }
       },
+      '2018' =>
+      {
+        MEET => 'South American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-10',
+            DATE_END => '2018-05-13'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'South American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-25',
+            DATE_END => '2022-05-26'
+          },
+        }
+      },
     }
   },
 
@@ -302,20 +366,20 @@ my %TOURNAMENTS_SOUTHAMERICA =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-10-29',
+            DATE_END => '2022-10-30'
           },
         }
       },
@@ -401,6 +465,21 @@ my %TOURNAMENTS_SOUTHAMERICA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'South American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2017-05-07',
+            DATE_END => '2017-05-07'
+          } 
+        }
+      },
     }
   },
 
@@ -415,15 +494,15 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-05-14',
+            DATE_END => '2018-05-19'
           },
         }
       },
@@ -815,6 +894,32 @@ my %TOURNAMENTS_SOUTHAMERICA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'South American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-08',
+            DATE_END => '2017-05-13'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'South American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-26',
+            DATE_END => '2022-05-29'
+          },
+        }
+      },
     }
   },
 
@@ -840,6 +945,18 @@ my %TOURNAMENTS_SOUTHAMERICA =
             DATE_START => '2009-04-18',
             DATE_END => '2009-04-19'
           } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-15',
+            DATE_END => '2022-10-16'
+          },
         }
       },
     }
@@ -897,6 +1014,19 @@ my %TOURNAMENTS_SOUTHAMERICA =
           } 
         }
       },
+      '2018' =>
+      {
+        MEET => 'South American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-10',
+            DATE_END => '2018-05-12'
+          },
+        }
+      },
     }
   },
 
@@ -929,8 +1059,6 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Transnational Open Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -938,15 +1066,40 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-05-27',
+            DATE_END => '2019-06-01'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-14',
+            DATE_END => '2023-04-19'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'South American Zonal Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-11',
+            DATE_END => '2024-04-14'
           },
         }
       },
@@ -956,23 +1109,35 @@ my %TOURNAMENTS_SOUTHAMERICA =
   'South American Transnational Women Teams' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-05-27',
+            DATE_END => '2019-06-01'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-14',
+            DATE_END => '2023-04-19'
           },
         }
       },
@@ -1158,6 +1323,32 @@ my %TOURNAMENTS_SOUTHAMERICA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'South American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-08',
+            DATE_END => '2017-05-13'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'South American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-19',
+            DATE_END => '2018-05-19'
+          },
+        }
+      },
     }
   },
 
@@ -1214,81 +1405,15 @@ my %TOURNAMENTS_SOUTHAMERICA =
           } 
         }
       },
-    }
-  },
-
-  'South American Zonal Mixed Teams' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          },
-        }
-      },
-    }
-  },
-
-  'South American Zonal Open Teams' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          },
-        }
-      },
-    }
-  },
-
-  'South American Zonal Senior Teams' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-10-15',
+            DATE_END => '2022-10-16'
           },
         }
       },
@@ -1321,10 +1446,45 @@ my %TOURNAMENTS_SOUTHAMERICA =
     }
   },
 
-  'South American Zonal Women Teams' =>
+  'South American Zonal Mixed Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-22',
+            DATE_END => '2019-05-22'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'South American Zonal Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-10',
+            DATE_END => '2023-04-13'
+          },
+        }
+      },
+    }
+  },
+
+  'South American Zonal Open Teams' =>
+  {
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1332,15 +1492,144 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
+        MEET => 'South American Zonal Trials',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-05-14',
+            DATE_END => '2017-05-18'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'South American Zonal Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-21',
+            DATE_END => '2019-05-25'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'South American Zonal Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-10',
+            DATE_END => '2023-04-13'
+          },
+        }
+      },
+    }
+  },
+
+  'South American Zonal Senior Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'South American Zonal Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-14',
+            DATE_END => '2017-05-18'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'South American Zonal Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-10',
+            DATE_END => '2023-04-13'
+          },
+        }
+      },
+    }
+  },
+
+  'South American Zonal Women Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'South American Zonal Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-14',
+            DATE_END => '2017-05-18'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'South American Zonal Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-21',
+            DATE_END => '2019-05-25'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'South American Zonal Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-10',
+            DATE_END => '2023-04-13'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'South American Zonal Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-07',
+            DATE_END => '2024-04-08'
           },
         }
       },

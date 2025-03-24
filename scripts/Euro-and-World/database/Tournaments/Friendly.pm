@@ -1828,15 +1828,15 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-01-28',
+            DATE_END => '2023-01-29'
           },
         }
       },

@@ -349,6 +349,7 @@ my %MULTI_TYPOS =
     'turkey swiss mixed teams',
     'turkish swiss mýxed teams'],
   'Turkish Swiss Open Teams' => [
+    'turkey summer swiss team championship',
     'turkiye nakavt-swiss takimlar sampiyonasi',
     'turkiye nakavt takim sampiyonasi',
     'turkiye nakavt takimlar sampiyonasi',

@@ -39,6 +39,7 @@ my @MULTI_WORDS =
   'Norwegian Premier League',
   'Norwegian Senior Teams',
   'Norwegian Swiss Pairs',
+  'Norwegian Swiss Women Teams',
   'Norwegian Swiss Teams',
   'Norwegian Team Trials',
   'Norwegian Women Invitational Pairs',
@@ -205,6 +206,9 @@ my %MULTI_TYPOS =
     'norwegian championship open teams swiss',
     'norwegian championship swiss teams',
     'norwegian swiss team championship'],
+  'Norwegian Swiss Women Teams' => [
+    'nbf women swiss team championship',
+    'norwegian women swiss championship'],
   'Norwegian Team Trials' => ['nor team trials',
     'norwegian open trials',
     'norwegian wbg qualification'],

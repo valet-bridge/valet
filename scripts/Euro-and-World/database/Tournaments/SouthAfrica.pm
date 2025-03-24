@@ -62,6 +62,24 @@ my %MEETS_SOUTHAFRICA =
         DATE_START => '2016-05-17',
         DATE_END => '2016-05-19'
       },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-05-03',
+        DATE_END => '2018-05-04'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-07-16',
+        DATE_END => '2019-07-16'
+      },
+      '2020' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-03-10',
+        DATE_END => '2020-03-14'
+      },
     }
   },
 );
@@ -204,6 +222,47 @@ my %TOURNAMENTS_SOUTHAFRICA =
             major => 'SEGMENT',
             DATE_START => '2016-05-17',
             DATE_END => '2016-05-19'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'South African Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-03',
+            DATE_END => '2018-05-04'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'South African Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-16',
+            DATE_END => '2019-07-16'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'South African Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-03-10',
+            DATE_END => '2020-03-14'
           } 
         }
       },

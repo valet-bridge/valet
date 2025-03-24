@@ -4244,6 +4244,18 @@ my %TOURNAMENTS_TURKEY =
           },
         }
       },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-23',
+            DATE_END => '2022-05-24'
+          },
+        }
+      },
     }
   },
 

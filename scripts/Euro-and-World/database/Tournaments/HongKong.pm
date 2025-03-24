@@ -373,7 +373,7 @@ my %TOURNAMENTS_HONGKONG =
             YEAR => 2019,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2019-07-21',
+            DATE_START => '2019-07-20',
             DATE_END => '2019-07-21'
           } 
         }

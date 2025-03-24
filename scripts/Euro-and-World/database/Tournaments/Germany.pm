@@ -988,8 +988,8 @@ my %TOURNAMENTS_GERMANY =
         {
           'WEEKEND 1' =>
           {
-            DATE_START => '2022-02-05',
-            DATE_END => '2022-02-06',
+            DATE_START => '2022-05-26',
+            DATE_END => '2022-05-29',
             WEEKEND => 1,
             major => 'ROUND',
             minor => 'SEGMENT',
@@ -997,18 +997,9 @@ my %TOURNAMENTS_GERMANY =
           },
           'WEEKEND 2' =>
           {
-            DATE_START => '2022-02-26',
-            DATE_END => '2022-02-27',
+            DATE_START => '2022-09-10',
+            DATE_END => '2022-09-11',
             WEEKEND => 2,
-            major => 'ROUND',
-            minor => 'SEGMENT',
-            MOVEMENT => 'Round-robin'
-          },
-          'WEEKEND 3' =>
-          {
-            DATE_START => '2022-03-05',
-            DATE_END => '2022-03-06',
-            WEEKEND => 3,
             major => 'ROUND',
             minor => 'SEGMENT',
             MOVEMENT => 'Round-robin'
@@ -2390,17 +2381,19 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2023-04-29',
-            DATE_END => '2023-05-01'
+            DATE_END => '2023-04-30'
           },
           'C1' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2023-04-29',
+            DATE_START => '2023-04-30',
             DATE_END => '2023-05-01'
           } 
         }
@@ -2416,6 +2409,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2024-04-12',
@@ -2424,6 +2418,7 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2024-04-13',
@@ -2761,19 +2756,19 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2018,
-            MOVEMENT => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
-            DATE_START => '2018-04-29',
-            DATE_END => '2018-05-01'
+            DATE_START => '2018-05-05',
+            DATE_END => '2018-05-06'
           },
           'C1' => 
           {
             YEAR => 2018,
-            MOVEMENT => 'Swiss',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2018-04-29',
-            DATE_END => '2018-05-01'
-          } 
+            DATE_START => '2018-05-06',
+            DATE_END => '2018-05-07'
+          }
         }
       },
 
