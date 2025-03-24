@@ -72,19 +72,43 @@ my %TOURNAMENTS_TAIPEI =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U31',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-06-27',
+            DATE_END => '2017-06-29'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-03',
+            DATE_END => '2018-07-03'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-01',
+            DATE_END => '2019-07-02'
           },
         }
       },
@@ -403,6 +427,90 @@ my %TOURNAMENTS_TAIPEI =
           },
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-07',
+            DATE_END => '2017-02-08'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-30',
+            DATE_END => '2018-01-31'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-22',
+            DATE_END => '2019-01-23'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-21',
+            DATE_END => '2020-01-22'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-01-20',
+            DATE_END => '2021-01-21'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-02-01',
+            DATE_END => '2023-02-02'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-24',
+            DATE_END => '2024-01-25'
+          },
+        }
+      },
     }
   },
 
@@ -545,20 +653,56 @@ my %TOURNAMENTS_TAIPEI =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-12-05',
+            DATE_END => '2020-12-06'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-12-11',
+            DATE_END => '2021-12-12'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-10',
+            DATE_END => '2022-12-11'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-18',
+            DATE_END => '2023-11-19'
           },
         }
       },
@@ -571,20 +715,20 @@ my %TOURNAMENTS_TAIPEI =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-12-07',
+            DATE_END => '2024-12-08'
           },
         }
       },
@@ -602,15 +746,51 @@ my %TOURNAMENTS_TAIPEI =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-11-21',
+            DATE_END => '2020-11-22'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-11-27',
+            DATE_END => '2021-11-28'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-19',
+            DATE_END => '2022-11-20'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-04',
+            DATE_END => '2023-11-05'
           },
         }
       },
@@ -782,6 +962,65 @@ my %TOURNAMENTS_TAIPEI =
           } 
         }
       },
+      '2016-17' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            DATE_START => '2016-12-31',
+            DATE_END => '2017-01-01'
+          } 
+        }
+      },
+      '2018A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-06',
+            DATE_END => '2018-01-07'
+          } 
+        }
+      },
+      '2018B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-01',
+            DATE_END => '2018-12-02'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-07',
+            DATE_END => '2019-12-08'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-23',
+            DATE_END => '2024-11-24'
+          } 
+        }
+      },
     }
   },
 
@@ -792,19 +1031,55 @@ my %TOURNAMENTS_TAIPEI =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-01-13',
+            DATE_END => '2018-01-14'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-12-26',
+            DATE_END => '2020-12-27'
+          },
+        }
+      },
+      '2022A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-01-08',
+            DATE_END => '2022-01-09'
+          },
+        }
+      },
+      '2022B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-08',
+            DATE_END => '2022-10-10'
           },
         }
       },
@@ -837,6 +1112,42 @@ my %TOURNAMENTS_TAIPEI =
           },
         }
       },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-30',
+            DATE_END => '2022-10-31'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-02',
+            DATE_END => '2023-12-03'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-16',
+            DATE_END => '2024-11-17'
+          },
+        }
+      },
     }
   },
 
@@ -851,15 +1162,15 @@ my %TOURNAMENTS_TAIPEI =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-01-01',
+            DATE_END => '2022-01-02'
           },
         }
       },

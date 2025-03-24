@@ -1690,7 +1690,6 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
-
   "d'Orsi" => 
   {
     ORIGIN => 'International',
@@ -2073,9 +2072,22 @@ my %TOURNAMENTS_WORLD =
           },
         }
       },
+      '2019' =>
+      {
+        ORIGIN => 'International',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-10-10',
+            DATE_END => '2019-10-13'
+          },
+        }
+      },
     }
   },
-
 
   'IMSA Elite Open Individual' => 
   {
@@ -2853,7 +2865,6 @@ my %TOURNAMENTS_WORLD =
       },
     }
   },
-
 
   'Rosenblum Cup' => 
   {
@@ -3633,6 +3644,58 @@ my %TOURNAMENTS_WORLD =
             DATE_START => '2015-10-08',
             DATE_END => '2015-10-09'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-13',
+            DATE_END => '2017-08-25'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-15',
+            DATE_END => '2019-09-28'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-28',
+            DATE_END => '2022-04-09'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-08-20',
+            DATE_END => '2023-09-02'
+          },
         }
       },
     }
@@ -7590,6 +7653,32 @@ my %TOURNAMENTS_WORLD =
             DATE_START => '2019-09-27',
             DATE_END => '2019-09-28'
           } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-28',
+            DATE_END => '2022-04-09'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-08-20',
+            DATE_END => '2023-09-02'
+          },
         }
       },
     }

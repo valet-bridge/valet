@@ -400,11 +400,17 @@ my %MEETS_ITALY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2017,
+        DATE_START => '2017-11-10',
+        DATE_END => '2017-11-11'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-04-13',
+        DATE_END => '2019-04-14'
       },
     }
   },
@@ -4219,6 +4225,45 @@ my %TOURNAMENTS_ITALY =
             major => 'SEGMENT',
             DATE_START => '2005-02-09',
             DATE_END => '2005-02-09'
+          }
+        }
+      },
+    }
+  },
+
+  'Venice Open Teams' =>
+  {
+    CITY => 'Venice',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'Venice Bridge Festival',
+        YEAR => 2017,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2017-11-10',
+            DATE_END => '2017-11-11'
+          }
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Venice Bridge Festival',
+        YEAR => 2019,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2019-04-13',
+            DATE_END => '2019-04-14'
           }
         }
       },

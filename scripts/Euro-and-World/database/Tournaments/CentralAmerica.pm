@@ -114,6 +114,21 @@ my %TOURNAMENTS_CENTRALAMERICA =
           } 
         }
       },
+      '2017' =>
+      {
+        ORDINAL => 29,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-06',
+            DATE_END => '2017-05-06'
+          } 
+        }
+      },
     }
   },
 

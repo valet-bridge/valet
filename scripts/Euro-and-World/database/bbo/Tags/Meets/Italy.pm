@@ -44,7 +44,8 @@ my %MULTI_TYPOS =
     'interclub italian'],
   'Italy Cup' => ['coppa italia'],
   'Venice Bridge Festival' => [
-    'festival bridge venezia'],
+    'festival bridge venezia',
+    'venice festival'],
 );
 
 my %SINGLE_TYPOS =
