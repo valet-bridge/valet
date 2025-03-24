@@ -1271,6 +1271,7 @@ my @LOCAL_SUBS =
   { START => 70871, END => 70895, 
     TEXT => 'NZ Interprovincials', 
     CORR => 'New Zealand Inter-Provincial Teams' },
+  { START => 70915, END => 70933, TEXT => '2021', CORR => '' },
   { START => 71112, END => 71118, 
     TEXT => 'CTCBA senior', CORR => 'CTCBA Senior Team' },
   { START => 71941, END => 71948, 

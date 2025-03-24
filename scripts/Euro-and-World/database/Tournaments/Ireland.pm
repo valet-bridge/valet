@@ -42,15 +42,15 @@ my %TOURNAMENTS_IRELAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-05-25',
+            DATE_END => '2019-05-26'
           },
         }
       },
@@ -126,7 +126,19 @@ my %TOURNAMENTS_IRELAND =
             DATE_END => '2016-06-10'
           } 
         }
-      }
+      },
+      '2017' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-06',
+            DATE_END => '2017-10-08'
+          },
+        }
+      },
     }
   },
 
@@ -218,7 +230,7 @@ my %TOURNAMENTS_IRELAND =
         }
       },
 
-      '2016' =>
+      '2016A' =>
       {
         CHAPTERS => 
         {
@@ -231,6 +243,54 @@ my %TOURNAMENTS_IRELAND =
             DATE_END => '2016-01-31'
           } 
         }
+      },
+      '2016B' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-14',
+            DATE_END => '2016-10-16'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-20',
+            DATE_END => '2018-01-28'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-26',
+            DATE_END => '2019-10-28'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-02-05',
+            DATE_END => '2023-02-05'
+          } 
+        }
       }
     }
   },
@@ -239,22 +299,46 @@ my %TOURNAMENTS_IRELAND =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-10-06',
+            DATE_END => '2017-10-06'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-09',
+            DATE_END => '2018-11-11'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-22',
+            DATE_END => '2019-11-24'
           },
         }
       },

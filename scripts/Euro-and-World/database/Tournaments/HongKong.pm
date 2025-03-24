@@ -26,11 +26,35 @@ my %MEETS_HONGKONG =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020A' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2020,
+        DATE_START => '2020-02-09',
+        DATE_END => '2020-02-16'
+      },
+      '2020B' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-03-07',
+        DATE_END => '2020-03-08'
+      },
+      '2020C' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-11-28',
+        DATE_END => '2020-11-29'
+      },
+      '2021A' =>
+      {
+        YEAR => 2021,
+        DATE_START => '2021-01-21',
+        DATE_END => '2021-01-24'
+      },
+      '2021B' =>
+      {
+        YEAR => 2021,
+        DATE_START => '2021-01-30',
+        DATE_END => '2021-01-31'
       },
     }
   },
@@ -238,6 +262,42 @@ my %TOURNAMENTS_HONGKONG =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-26',
+            DATE_END => '2017-07-30'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-17',
+            DATE_END => '2018-07-21'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-17',
+            DATE_END => '2019-07-21'
+          },
+        }
+      },
     }
   },
 
@@ -304,29 +364,57 @@ my %TOURNAMENTS_HONGKONG =
           } 
         }
       },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-21',
+            DATE_END => '2019-07-21'
+          } 
+        }
+      },
     }
   },
 
   'Hong Kong Mixed Team Trials' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
+        MEET => 'Hong Kong Trials',
+        MEET_TAG => '2020B',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-03-07',
+            DATE_END => '2020-03-08'
+          },
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Hong Kong Trials',
+        MEET_TAG => '2021A',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-01-21',
+            DATE_END => '2021-01-24'
           },
         }
       },
@@ -371,8 +459,6 @@ my %TOURNAMENTS_HONGKONG =
 
   'Hong Kong Open Team Trials' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -380,15 +466,57 @@ my %TOURNAMENTS_HONGKONG =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020A' =>
       {
+        MEET => 'Hong Kong Trials',
+        MEET_TAG => '2020A',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-02-09',
+            DATE_END => '2020-02-16'
+          },
+        }
+      },
+      '2020B' =>
+      {
+        MEET => 'Hong Kong Trials',
+        MEET_TAG => '2020C',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-11-28',
+            DATE_END => '2020-11-29'
+          },
+        }
+      },
+    }
+  },
+
+  'Hong Kong Senior Team Trials' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2021' =>
+      {
+        MEET => 'Hong Kong Trials',
+        MEET_TAG => '2021B',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-01-30',
+            DATE_END => '2021-01-31'
           },
         }
       },
@@ -406,15 +534,15 @@ my %TOURNAMENTS_HONGKONG =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-07-23',
+            DATE_END => '2024-07-23'
           },
         }
       },
