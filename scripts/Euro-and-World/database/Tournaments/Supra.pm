@@ -342,6 +342,24 @@ my %MEETS_SUPRA =
         DATE_START => '2015-03-28',
         DATE_END => '2015-03-29'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-05-06',
+        DATE_END => '2017-05-07'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-05-19',
+        DATE_END => '2018-05-20'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-05-04',
+        DATE_END => '2019-05-05'
+      },
     }
   },
 );
@@ -1640,6 +1658,45 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Neighbor Challenge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-06',
+            DATE_END => '2017-05-07'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Neighbor Challenge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-19',
+            DATE_END => '2018-05-20'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Neighbor Challenge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-04',
+            DATE_END => '2019-05-05'
+          } 
+        }
+      },
     }
   },
 
@@ -1770,6 +1827,18 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-22',
+            DATE_END => '2016-09-22'
+          },
+        }
+      },
     }
   },
 
@@ -1872,6 +1941,18 @@ my %TOURNAMENTS_SUPRA =
             major => 'ROUND',
             DATE_START => '2015-01-17',
             DATE_END => '2015-01-17'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-14',
+            DATE_END => '2017-01-14'
           } 
         }
       },

@@ -133,7 +133,7 @@ my %MEETS_ITALY =
         # https://www.federbridge.it/campionati/2015/CSS1S2S3/indice.asp
         YEAR => 2015,
         CITY => 'Salsomaggiore',
-        DATE_START => '2015-06-19',
+        DATE_START => '2015-06-18',
         DATE_END => '2015-06-21'
       },
       '2016' =>
@@ -144,7 +144,14 @@ my %MEETS_ITALY =
         DATE_START => '2016-05-19',
         DATE_END => '2016-05-22'
       },
-      '2017' =>
+      '2017A' =>
+      {
+        YEAR => 2017,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2017-04-01',
+        DATE_END => '2017-04-01'
+      },
+      '2017B' =>
       {
         # https://www.federbridge.it/campionati/2017/CSS1S2S3/indice.asp
         YEAR => 2017,
@@ -390,6 +397,7 @@ my %MEETS_ITALY =
         DATE_START => '2024-10-10',
         DATE_END => '2024-12-15'
       },
+
     }
   },
 
@@ -430,15 +438,15 @@ my %TOURNAMENTS_ITALY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-04-25',
+            DATE_END => '2018-04-27'
           },
         }
       },
@@ -762,12 +770,20 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'TABLE',
+            DATE_START => '2015-06-18',
+            DATE_END => '2015-06-18'
+          },
+          'C1' =>
+          {
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2015-06-19',
             DATE_END => '2015-06-20'
           },
-          'C1' =>
+          'C2' =>
           {
             STAGE => 'Final',
             major => 'SEGMENT',
@@ -806,7 +822,19 @@ my %TOURNAMENTS_ITALY =
           }
         }
       },
-      '2017' =>
+      '2017A' =>
+      {
+        MEET => 'Italian Club Championship',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2017-04-01',
+            DATE_END => '2017-04-01'
+          },
+        }
+      },
+      '2017B' =>
       {
         MEET => 'Italian Club Championship',
         CHAPTERS => 
@@ -875,16 +903,9 @@ my %TOURNAMENTS_ITALY =
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2019-04-04',
-            DATE_END => '2019-04-05'
-          },
-          'C1' =>
-          {
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2019-04-05',
             DATE_END => '2019-04-06'
           },
-          'C2' =>
+          'C1' =>
           {
             STAGE => 'Final',
             major => 'SEGMENT',
@@ -1065,6 +1086,7 @@ my %TOURNAMENTS_ITALY =
       '2017' =>
       {
         MEET => 'Italian Club Championship',
+        MEET_TAG => '2017B',
         CHAPTERS => 
         {
           'C0' =>
@@ -1404,7 +1426,79 @@ my %TOURNAMENTS_ITALY =
             DATE_END => '2010-12-19'
           }
         }
-      }
+      },
+      '2015' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            YEAR => 2015,
+            DATE_START => '2015-06-18',
+            DATE_END => '2015-06-18'
+          },
+        }
+      },
+      '2017A' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2017-04-01',
+            DATE_END => '2017-04-01'
+          },
+        }
+      },
+      '2017B' =>
+      {
+        MEET => 'Italy Cup',
+        MEET_TAG => 2017,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2017-12-14',
+            DATE_END => '2017-12-17'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2022-11-17',
+            DATE_END => '2022-11-20'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2023-12-07',
+            DATE_END => '2023-12-10'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-12',
+            DATE_END => '2024-12-15'
+          },
+        }
+      },
     }
   },
 
@@ -1711,6 +1805,18 @@ my %TOURNAMENTS_ITALY =
           } 
         }
       },
+      '2022' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2022-10-28',
+            DATE_END => '2022-10-30'
+          },
+        }
+      },
       '2023' =>
       {
         MEET => 'Italy Cup',
@@ -1752,14 +1858,24 @@ my %TOURNAMENTS_ITALY =
             DATE_END => '2023-10-30'
           } 
         }
-      }
+      },
+      '2024' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2024-04-24',
+            DATE_END => '2024-04-26'
+          },
+        }
+      },
     }
   },
 
   'Italian Mixed Pairs' =>
   {
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Mixed',
     AGE => 'Open',
 
@@ -1768,6 +1884,7 @@ my %TOURNAMENTS_ITALY =
       '2014' =>
       {
         MEET => 'Italy Cup',
+        SCORING => 'MP',
         YEAR => 2014,
         # https://www.federbridge.it/campionati/2014/CXCCMX/indice.asp
 
@@ -1784,6 +1901,7 @@ my %TOURNAMENTS_ITALY =
       '2015' =>
       {
         MEET => 'Italy Cup',
+        SCORING => 'MP',
         YEAR => 2015,
         # https://www.federbridge.it/campionati/2015/CXCCMX/indice.asp
 
@@ -1801,6 +1919,7 @@ my %TOURNAMENTS_ITALY =
       '2016' =>
       {
         MEET => 'Italy Cup',
+        SCORING => 'MP',
         YEAR => 2016,
         # https://www.federbridge.it/campionati/2016/CXCCMX/indice.asp
 
@@ -1818,6 +1937,7 @@ my %TOURNAMENTS_ITALY =
       '2017' =>
       {
         MEET => 'Italy Cup',
+        SCORING => 'MP',
         YEAR => 2017,
         # https://www.federbridge.it/campionati/2017/CXCCMX/indice.asp
 
@@ -1835,6 +1955,7 @@ my %TOURNAMENTS_ITALY =
       '2018' =>
       {
         MEET => 'Italy Cup',
+        SCORING => 'MP',
         YEAR => 2018,
         # https://www.federbridge.it/campionati/2018/CXCCMX/indice.asp
 
@@ -1852,6 +1973,7 @@ my %TOURNAMENTS_ITALY =
       '2019' =>
       {
         MEET => 'Italy Cup',
+        SCORING => 'MP',
         YEAR => 2019,
         # https://www.federbridge.it/campionati/2019/CXCCMX/indice.asp
 
@@ -1869,6 +1991,7 @@ my %TOURNAMENTS_ITALY =
       '2022' =>
       {
         MEET => 'Italy Cup',
+        SCORING => 'MP',
         YEAR => 2022,
         # https://www.federbridge.it/campionati/2022/CXCCMX/indice.asp
 
@@ -1886,6 +2009,7 @@ my %TOURNAMENTS_ITALY =
       '2023' =>
       {
         MEET => 'Italy Cup',
+        SCORING => 'IMP',
         YEAR => 2023,
         # https://www.federbridge.it/campionati/2023/CXCCLBMX/indice.asp
 
@@ -1899,6 +2023,20 @@ my %TOURNAMENTS_ITALY =
             DATE_END => '2023-11-01'
           }
         }
+      },
+      '2024' =>
+      {
+        SCORING => 'IMP',
+        YEAR => 2024,
+
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2024-04-27',
+            DATE_END => '2024-04-28'
+          }
+        }
       }
     }
   },
@@ -1909,20 +2047,20 @@ my %TOURNAMENTS_ITALY =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-02-17',
+            DATE_END => '2022-02-27'
           },
         }
       },
@@ -2127,7 +2265,7 @@ my %TOURNAMENTS_ITALY =
           }
         }
       },
-      '2022' =>
+      '2022A' =>
       {
         YEAR => 2022,
         CITY => 'Salsomaggiore',
@@ -2141,6 +2279,18 @@ my %TOURNAMENTS_ITALY =
             major => 'ROUND',
             DATE_START => '2022-05-02',
             DATE_END => '2022-05-06'
+          }
+        }
+      },
+      '2022B' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-06-02',
+            DATE_END => '2022-06-05'
           }
         }
       },
@@ -2214,19 +2364,31 @@ my %TOURNAMENTS_ITALY =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'O61',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-09-13',
+            DATE_END => '2018-09-16'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-10',
+            DATE_END => '2019-10-13'
           },
         }
       },
@@ -2240,19 +2402,31 @@ my %TOURNAMENTS_ITALY =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'O63',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-10-12',
+            DATE_END => '2022-10-14'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-28',
+            DATE_END => '2023-10-01'
           },
         }
       },
@@ -2860,7 +3034,19 @@ my %TOURNAMENTS_ITALY =
             DATE_END => '2014-02-16'
           } 
         }
-      }
+      },
+      '2021' =>
+      {
+        YEAR => 2021,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2021-10-14',
+            DATE_END => '2021-10-17'
+          },
+        }
+      },
     }
   },
 
@@ -3117,7 +3303,18 @@ my %TOURNAMENTS_ITALY =
           }
         }
       },
-      '2023' =>
+      '2023A' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2023-03-23',
+            DATE_END => '2023-03-26'
+          }
+        }
+      },
+      '2023B' =>
       {
         YEAR => 2023,
         CITY => 'Salsomaggiore',
@@ -3134,7 +3331,18 @@ my %TOURNAMENTS_ITALY =
           }
         }
       },
-      '2024' =>
+      '2024A' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2024-04-11',
+            DATE_END => '2024-04-14'
+          }
+        }
+      },
+      '2024B' =>
       {
         YEAR => 2024,
         CITY => 'Salsomaggiore',
@@ -3464,7 +3672,19 @@ my %TOURNAMENTS_ITALY =
             DATE_END => '2023-10-01'
           }
         }
-      }
+      },
+      '2024' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2024-10-10',
+            DATE_END => '2024-10-12'
+          },
+        }
+      },
     }
   },
 
@@ -3517,7 +3737,19 @@ my %TOURNAMENTS_ITALY =
             DATE_END => '2014-04-06'
           }
         }
-      }
+      },
+      '2021' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-11-04',
+            DATE_END => '2021-11-07'
+          },
+        }
+      },
     }
   },
 
@@ -3528,19 +3760,19 @@ my %TOURNAMENTS_ITALY =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-04-15',
+            DATE_END => '2017-04-15'
           },
         }
       },
@@ -3719,6 +3951,7 @@ my %TOURNAMENTS_ITALY =
       '2017' =>
       {
         MEET => 'Italian Club Championship',
+        MEET_TAG => '2017B',
         CHAPTERS => 
         {
           'C0' =>
@@ -3815,7 +4048,18 @@ my %TOURNAMENTS_ITALY =
           }
         }
       },
-      '2022' =>
+      '2022A' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2022-05-19',
+            DATE_END => '2022-05-22'
+          },
+        }
+      },
+      '2022B' =>
       {
         CHAPTERS => 
         {
@@ -3890,7 +4134,19 @@ my %TOURNAMENTS_ITALY =
             DATE_END => '2023-12-10'
           }
         }
-      }
+      },
+      '2024' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2024-12-14',
+            DATE_END => '2024-12-14'
+          },
+        }
+      },
     }
   },
 
@@ -3900,20 +4156,38 @@ my %TOURNAMENTS_ITALY =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-02-24',
+            DATE_END => '2018-02-26'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-09',
+            DATE_END => '2018-03-11'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-01-21',
+            DATE_END => '2022-01-23'
           },
         }
       },
@@ -3984,6 +4258,42 @@ my %TOURNAMENTS_ITALY =
             major => 'SEGMENT',
             DATE_START => '2013-12-14',
             DATE_END => '2013-12-15'
+          }
+        }
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2018-12-07',
+            DATE_END => '2018-12-09'
+          }
+        }
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2019-12-06',
+            DATE_END => '2019-12-08'
+          }
+        }
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2024-12-06',
+            DATE_END => '2024-12-08'
           }
         }
       }
@@ -4133,6 +4443,42 @@ my %TOURNAMENTS_ITALY =
             DATE_START => '2015-09-05',
             DATE_END => '2015-09-05'
           }
+        }
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2016-09-03',
+            DATE_END => '2016-09-03'
+          },
+        }
+      },
+      '2017' =>
+      {
+        YEAR => 2017,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2017-09-09',
+            DATE_END => '2017-09-09'
+          },
+        }
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2018-09-08',
+            DATE_END => '2018-09-08'
+          },
         }
       },
     }

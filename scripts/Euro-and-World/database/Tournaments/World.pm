@@ -163,6 +163,12 @@ my %MEETS_WORLD =
 
     EDITIONS =>
     {
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-10-18',
+        DATE_END => '2017-10-21'
+      },
       '2019' =>
       {
         # http://db.worldbridge.org/repository/tourn/hengshui.19/microsite/Results.htm
@@ -1402,6 +1408,32 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2022' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-28',
+            DATE_END => '2022-04-09'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-08-20',
+            DATE_END => '2023-09-02'
+          },
+        }
+      },
     }
   },
 
@@ -1993,6 +2025,45 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2019' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-15',
+            DATE_END => '2019-09-28'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-28',
+            DATE_END => '2022-04-09'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-08-20',
+            DATE_END => '2023-09-02'
+          },
+        }
+      },
     }
   },
 
@@ -2114,6 +2185,19 @@ my %TOURNAMENTS_WORLD =
           },
         }
       },
+      '2017' =>
+      {
+        MEET => 'IMSA Elite Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-09',
+            DATE_END => '2017-12-15'
+          },
+        }
+      },
     }
   },
 
@@ -2138,6 +2222,19 @@ my %TOURNAMENTS_WORLD =
             major => 'SESSION',
             DATE_START => '2016-02-29',
             DATE_END => '2016-03-03'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'IMSA Elite Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-09',
+            DATE_END => '2017-12-15'
           },
         }
       },
@@ -2186,6 +2283,19 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2016-02-28',
             DATE_END => '2016-02-28'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'IMSA Elite Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-09',
+            DATE_END => '2017-12-15'
           },
         }
       },
@@ -2263,6 +2373,18 @@ my %TOURNAMENTS_WORLD =
             major => 'SESSION',
             DATE_START => '2016-02-29',
             DATE_END => '2016-03-03'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'IMSA Elite Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            DATE_START => '2017-12-09',
+            DATE_END => '2017-12-15'
           },
         }
       },
@@ -2361,6 +2483,34 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2016-02-28',
             DATE_END => '2016-02-28'
+          },
+        }
+      },
+      '2017A' =>
+      {
+        MEET => 'IMSA World Masters Championships',
+        MEET_TAG => 2017,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-18',
+            DATE_END => '2017-10-21'
+          },
+        }
+      },
+      '2017B' =>
+      {
+        MEET => 'IMSA Elite Mind Games',
+        MEET_TAG => 2017,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-09',
+            DATE_END => '2017-12-15'
           },
         }
       },
