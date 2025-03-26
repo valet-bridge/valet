@@ -464,6 +464,84 @@ my %TOURNAMENTS_SWEDEN =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Swedish Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-01',
+            DATE_END => '2017-08-03'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Swedish Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-31',
+            DATE_END => '2018-08-02'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Swedish Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-30',
+            DATE_END => '2019-08-01'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Swedish Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-02',
+            DATE_END => '2022-08-04'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Swedish Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-08-01',
+            DATE_END => '2023-08-03'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Swedish Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-07-30',
+            DATE_END => '2024-08-01'
+          },
+        }
+      },
     }
   },
 
@@ -478,15 +556,27 @@ my %TOURNAMENTS_SWEDEN =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-07-15',
+            DATE_END => '2017-07-16'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-14',
+            DATE_END => '2018-07-15'
           },
         }
       },
@@ -496,23 +586,35 @@ my %TOURNAMENTS_SWEDEN =
   'Falkenberg Pro-Am' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
+    ORIGIN => 'Pro-Am',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-07-17',
+            DATE_END => '2017-07-17'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-15',
+            DATE_END => '2018-07-16'
           },
         }
       },
@@ -1257,19 +1359,19 @@ my %TOURNAMENTS_SWEDEN =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-04-30',
+            DATE_END => '2017-04-30'
           },
         }
       },
@@ -1484,20 +1586,20 @@ my %TOURNAMENTS_SWEDEN =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-02-12',
+            DATE_END => '2022-02-13'
           },
         }
       },
@@ -1524,6 +1626,30 @@ my %TOURNAMENTS_SWEDEN =
             major => 'ROUND',
             DATE_START => '2013-01-19',
             DATE_END => '2013-01-20'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-13',
+            DATE_END => '2019-07-14'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-17',
+            DATE_END => '2022-07-17'
           } 
         }
       },
@@ -1938,6 +2064,32 @@ my %TOURNAMENTS_SWEDEN =
           } 
         }
       },
+      '2017' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-10',
+            DATE_END => '2017-02-12'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-09',
+            DATE_END => '2018-02-11'
+          } 
+        }
+      },
     }
   },
 
@@ -1992,6 +2144,36 @@ my %TOURNAMENTS_SWEDEN =
             major => 'ROUND',
             DATE_START => '2015-04-24',
             DATE_END => '2015-04-26'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-26',
+            DATE_END => '2019-01-27'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-19',
+            DATE_END => '2024-01-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-08',
+            DATE_END => '2024-03-10'
           } 
         }
       },
@@ -2149,12 +2331,19 @@ my %TOURNAMENTS_SWEDEN =
       '2017' =>
       {
         # https://www.svenskbridge.se/allsvenskan-2017/div1
-        CITY => 'Örebro',
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
+            CITY => 'Uppsala',
+            YEAR => 2017,
+            DATE_START => '2017-09-02',
+            DATE_END => '2017-09-03'
+          },
+          'C1' => 
+          {
+            CITY => 'Örebro',
             YEAR => 2017,
             DATE_START => '2017-10-27',
             DATE_END => '2017-10-29'
@@ -2168,7 +2357,13 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-01',
+            DATE_END => '2018-09-02'
+          },
+          'C1' => 
           {
             YEAR => 2018,
             DATE_START => '2018-10-19',
@@ -2179,12 +2374,19 @@ my %TOURNAMENTS_SWEDEN =
       '2019' =>
       {
         # https://www.svenskbridge.se/allsvenskan-2019/div1
-        CITY => 'Örebro',
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
+            CITY => 'Göteborg',
+            YEAR => 2019,
+            DATE_START => '2019-08-31',
+            DATE_END => '2019-09-01'
+          },
+          'C1' => 
+          {
+            CITY => 'Örebro',
             YEAR => 2019,
             DATE_START => '2019-10-18',
             DATE_END => '2019-10-20'
@@ -2198,7 +2400,13 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-09-03',
+            DATE_END => '2021-09-05'
+          },
+          'C1' => 
           {
             YEAR => 2021,
             DATE_START => '2021-10-15',
@@ -2213,6 +2421,12 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-09',
+            DATE_END => '2022-09-11'
+          },
           'SINGLE' => 
           {
             YEAR => 2022,
@@ -2228,7 +2442,13 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-15',
+            DATE_END => '2023-09-17'
+          },
+          'C1' => 
           {
             YEAR => 2023,
             DATE_START => '2023-10-06',
@@ -2243,7 +2463,13 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-04',
+            DATE_END => '2024-09-08'
+          },
+          'C1' => 
           {
             YEAR => 2024,
             DATE_START => '2024-09-27',
@@ -2325,6 +2551,114 @@ my %TOURNAMENTS_SWEDEN =
             major => 'SEGMENT',
             DATE_START => '2011-12-12',
             DATE_END => '2011-12-14'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-05-16',
+            DATE_END => '2016-05-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-12',
+            DATE_END => '2016-12-14'
+          } 
+        }
+      },
+      '2017A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-04-01',
+            DATE_END => '2017-04-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-17',
+            DATE_END => '2017-05-22'
+          } 
+        }
+      },
+      '2017B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-06',
+            DATE_END => '2017-12-13'
+          } 
+        }
+      },
+      '2018A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-21',
+            DATE_END => '2018-05-23'
+          } 
+        }
+      },
+      '2018B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-10',
+            DATE_END => '2018-12-12'
+          } 
+        }
+      },
+      '2019A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-20',
+            DATE_END => '2019-05-22'
+          } 
+        }
+      },
+      '2019B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-09',
+            DATE_END => '2019-12-11'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-18',
+            DATE_END => '2022-05-18'
           } 
         }
       },

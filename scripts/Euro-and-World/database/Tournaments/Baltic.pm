@@ -109,7 +109,7 @@ my %MEETS_BALTIC =
         CITY => 'Vilnius',
         COUNTRY => 'Lithuania',
         DATE_START => '2019-04-27',
-        DATE_END => '2019-04-28'
+        DATE_END => '2019-04-29'
       },
       '2020' =>
       {
@@ -239,7 +239,7 @@ my %MEETS_BALTIC =
       {
         MEET_ORDINAL => 14,
         YEAR => 2020,
-        DATE_START => '2020-08-12',
+        DATE_START => '2020-08-09',
         DATE_END => '2020-08-16'
       },
       '2021' =>
@@ -381,8 +381,8 @@ my %MEETS_BALTIC =
       {
         MEET_ORDINAL => 51,
         YEAR => 2018,
-        DATE_START => '2018-04-24',
-        DATE_END => '2018-04-28'
+        DATE_START => '2018-05-24',
+        DATE_END => '2018-05-28'
       },
       '2019' =>
       {
@@ -494,7 +494,7 @@ my %MEETS_BALTIC =
       '2017' =>
       {
         YEAR => 2017,
-        DATE_START => '2017-09-15',
+        DATE_START => '2017-09-13',
         DATE_END => '2017-09-17'
       },
       '2018' =>
@@ -723,6 +723,45 @@ my %TOURNAMENTS_BALTIC =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Baltic Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-04-22',
+            DATE_END => '2017-04-23'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Baltic Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-28',
+            DATE_END => '2019-04-29'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Baltic Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-20',
+            DATE_END => '2023-09-21'
+          } 
+        }
+      },
     }
   },
 
@@ -733,19 +772,19 @@ my %TOURNAMENTS_BALTIC =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-03-30',
+            DATE_END => '2024-03-31'
           },
         }
       },
@@ -889,6 +928,30 @@ my %TOURNAMENTS_BALTIC =
           } 
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-07',
+            DATE_END => '2018-04-08'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-06',
+            DATE_END => '2019-04-07'
+          } 
+        }
+      },
     }
   },
 
@@ -924,6 +987,30 @@ my %TOURNAMENTS_BALTIC =
             YEAR => 2011,
             DATE_START => '2011-08-27',
             DATE_END => '2011-08-28'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-07',
+            DATE_END => '2017-10-08'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-05',
+            DATE_END => '2019-10-06'
           } 
         }
       },
@@ -1061,6 +1148,30 @@ my %TOURNAMENTS_BALTIC =
           } 
         }
       },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-29',
+            DATE_END => '2023-01-29'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-11',
+            DATE_END => '2024-02-11'
+          },
+        }
+      },
     }
   },
 
@@ -1068,7 +1179,6 @@ my %TOURNAMENTS_BALTIC =
   {
     ORIGIN => 'Invitational',
     FORM => 'Pairs',
-    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -1077,6 +1187,7 @@ my %TOURNAMENTS_BALTIC =
       '2009' =>
       {
         MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1091,6 +1202,7 @@ my %TOURNAMENTS_BALTIC =
       '2010' =>
       {
         MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1104,6 +1216,7 @@ my %TOURNAMENTS_BALTIC =
       '2011' =>
       {
         MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1117,6 +1230,7 @@ my %TOURNAMENTS_BALTIC =
       '2012' =>
       {
         MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1130,6 +1244,7 @@ my %TOURNAMENTS_BALTIC =
       '2013' =>
       {
         MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1143,6 +1258,7 @@ my %TOURNAMENTS_BALTIC =
       '2014' =>
       {
         MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1156,6 +1272,7 @@ my %TOURNAMENTS_BALTIC =
       '2015' =>
       {
         MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1169,6 +1286,7 @@ my %TOURNAMENTS_BALTIC =
       '2016' =>
       {
         MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1176,6 +1294,104 @@ my %TOURNAMENTS_BALTIC =
             YEAR => 2016,
             DATE_START => '2016-08-17',
             DATE_END => '2016-08-17'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-09',
+            DATE_END => '2017-08-09'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-15',
+            DATE_END => '2018-08-15'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-14',
+            DATE_END => '2019-08-14'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-08-09',
+            DATE_END => '2020-08-12'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-08-11',
+            DATE_END => '2021-08-12'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-06',
+            DATE_END => '2023-09-06'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-08-21',
+            DATE_END => '2024-08-21'
           } 
         }
       },
@@ -1358,6 +1574,110 @@ my %TOURNAMENTS_BALTIC =
             DATE_START => '2016-08-19',
             DATE_END => '2016-08-19'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-09',
+            DATE_END => '2017-08-11'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-15',
+            DATE_END => '2018-08-17'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-14',
+            DATE_END => '2019-08-16'
+          },
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-08-14',
+            DATE_END => '2020-08-14'
+          },
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-08-11',
+            DATE_END => '2021-08-13'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-12',
+            DATE_END => '2022-08-12'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-06',
+            DATE_END => '2023-09-08'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Riga Invites to Jurmala',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-08-21',
+            DATE_END => '2024-08-23'
+          },
         }
       },
     }
@@ -1700,6 +2020,34 @@ my %TOURNAMENTS_BALTIC =
           },
         }
       },
+      '2017' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-05-26',
+            DATE_END => '2017-05-28'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-05-25',
+            DATE_END => '2018-05-27'
+          },
+        }
+      },
     }
   },
 
@@ -1970,7 +2318,7 @@ my %TOURNAMENTS_BALTIC =
 
   'Vilnius Open Teams' =>
   {
-    ORIGIN => 'Transnational',
+    ORIGIN => 'Invitational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2217,6 +2565,58 @@ my %TOURNAMENTS_BALTIC =
             DATE_START => '2015-09-06',
             DATE_END => '2015-09-06'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-13',
+            DATE_END => '2017-09-14'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-17',
+            DATE_END => '2018-10-18'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-14',
+            DATE_END => '2019-10-15'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-25',
+            DATE_END => '2022-09-25'
+          },
         }
       },
     }

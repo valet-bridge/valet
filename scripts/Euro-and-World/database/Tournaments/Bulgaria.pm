@@ -313,6 +313,13 @@ my %MEETS_BULGARIA =
         DATE_START => '2015-06-13',
         DATE_END => '2015-06-14'
       },
+      '2017' =>
+      {
+        MEET_ORDINAL => 17,
+        YEAR => 2017,
+        DATE_START => '2017-06-10',
+        DATE_END => '2017-06-11'
+      },
     }
   },
 
@@ -323,11 +330,39 @@ my %MEETS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        ORDINAL => 13,
+        YEAR => 2018,
+        DATE_START => '2018-01-06',
+        DATE_END => '2018-01-07'
+      },
+      '2019' =>
+      {
+        ORDINAL => 14,
+        YEAR => 2019,
+        DATE_START => '2019-01-05',
+        DATE_END => '2019-01-06'
+      },
+      '2020A' =>
+      {
+        ORDINAL => 15,
+        YEAR => 2020,
+        DATE_START => '2020-01-04',
+        DATE_END => '2020-01-05'
+      },
+      '2020B' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-01-18',
+        DATE_END => '2020-01-19'
+      },
+      '2021' =>
+      {
+        ORDINAL => 2,
+        YEAR => 2021,
+        DATE_START => '2021-03-13',
+        DATE_END => '2021-03-14'
       },
     }
   },
@@ -426,6 +461,18 @@ my %MEETS_BULGARIA =
         DATE_START => '2020-05-07',
         DATE_END => '2020-05-10'
       },
+      '2021' =>
+      {
+        YEAR => 2021,
+        DATE_START => '2021-05-29',
+        DATE_END => '2021-05-30'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-03-05',
+        DATE_END => '2022-03-06'
+      },
       '2023' =>
       {
         # https://bridgescanner.com/event/international-bridge-festival-plovdiv-2024
@@ -480,6 +527,12 @@ my %MEETS_BULGARIA =
         DATE_START => '2012-05-19',
         DATE_END => '2012-05-20'
       },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-05-15',
+        DATE_END => '2019-05-20'
+      },
     }
   },
 
@@ -505,21 +558,12 @@ my %MEETS_BULGARIA =
         DATE_START => '2015-09-21',
         DATE_END => '2015-09-22'
       },
-    }
-  },
-
-  'Sofia Bridge Festival' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'Transnational',
-
-    EDITIONS =>
-    {
-      '2000' =>
+      '2016' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        MEET_ORDINAL => 3,
+        YEAR => 2016,
+        DATE_START => '2016-09-24',
+        DATE_END => '2016-09-25'
       },
     }
   },
@@ -595,6 +639,27 @@ my %MEETS_BULGARIA =
         DATE_START => '2015-10-17',
         DATE_END => '2015-10-18'
       },
+      '2016' =>
+      {
+        MEET_ORDINAL => 35,
+        YEAR => 2016,
+        DATE_START => '2016-10-08',
+        DATE_END => '2016-10-08'
+      },
+      '2020' =>
+      {
+        MEET_ORDINAL => 39,
+        YEAR => 2020,
+        DATE_START => '2020-10-03',
+        DATE_END => '2020-10-04'
+      },
+      '2024' =>
+      {
+        MEET_ORDINAL => 43,
+        YEAR => 2024,
+        DATE_START => '2024-10-12',
+        DATE_END => '2024-10-13'
+      },
     }
   },
 
@@ -660,6 +725,48 @@ my %MEETS_BULGARIA =
         YEAR => 2018,
         DATE_START => '2018-08-13',
         DATE_END => '2018-08-19'
+      },
+      '2019' =>
+      {
+        MEET_ORDINAL => 43,
+        YEAR => 2019,
+        DATE_START => '2019-08-14',
+        DATE_END => '2019-08-18'
+      },
+      '2020' =>
+      {
+        MEET_ORDINAL => 44,
+        YEAR => 2020,
+        DATE_START => '2020-08-08',
+        DATE_END => '2020-08-09'
+      },
+      '2021' =>
+      {
+        MEET_ORDINAL => 45,
+        YEAR => 2021,
+        DATE_START => '2021-08-14',
+        DATE_END => '2021-08-15'
+      },
+      '2022' =>
+      {
+        MEET_ORDINAL => 46,
+        YEAR => 2022,
+        DATE_START => '2022-08-13',
+        DATE_END => '2022-08-14'
+      },
+      '2023' =>
+      {
+        MEET_ORDINAL => 47,
+        YEAR => 2023,
+        DATE_START => '2023-08-12',
+        DATE_END => '2023-08-13'
+      },
+      '2024' =>
+      {
+        MEET_ORDINAL => 48,
+        YEAR => 2024,
+        DATE_START => '2024-08-10',
+        DATE_END => '2024-08-11'
       },
     }
   },
@@ -736,6 +843,104 @@ my %TOURNAMENTS_BULGARIA =
           } 
         }
       },
+      '2018' =>
+      {
+        MEET => 'Albena Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-06-29',
+            DATE_END => '2018-07-01'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Albena Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-07-05',
+            DATE_END => '2019-07-07'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Albena Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            major => 'ROUND',
+            DATE_START => '2020-07-05',
+            DATE_END => '2020-07-05'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Albena Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            major => 'ROUND',
+            DATE_START => '2021-07-04',
+            DATE_END => '2021-07-04'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Albena Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND',
+            DATE_START => '2022-07-01',
+            DATE_END => '2022-07-03'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Albena Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            major => 'ROUND',
+            DATE_START => '2023-07-07',
+            DATE_END => '2023-07-09'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Albena Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            major => 'ROUND',
+            DATE_START => '2024-07-05',
+            DATE_END => '2024-07-07'
+          } 
+        }
+      },
     }
   },
 
@@ -779,6 +984,20 @@ my %TOURNAMENTS_BULGARIA =
           },
         }
       },
+      '2017' =>
+      {
+        ORDINAL => 3,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-05-27',
+            DATE_END => '2017-05-28'
+          },
+        }
+      },
     }
   },
 
@@ -793,15 +1012,15 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-10-29',
+            DATE_END => '2016-10-30'
           },
         }
       },
@@ -819,15 +1038,15 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-09-17',
+            DATE_END => '2022-09-18'
           },
         }
       },
@@ -845,15 +1064,45 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-12-09',
+            DATE_END => '2022-12-11'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-22',
+            DATE_END => '2023-09-24'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-08',
+            DATE_END => '2023-12-10'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-15',
+            DATE_END => '2024-11-17'
           },
         }
       },
@@ -862,6 +1111,7 @@ my %TOURNAMENTS_BULGARIA =
 
   'Bulgarian Open Cup' =>
   {
+    # TODO Related to Club Teams?
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Teams',
@@ -871,15 +1121,27 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-11-18',
+            DATE_END => '2022-11-20'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-17',
+            DATE_END => '2023-11-19'
           },
         }
       },
@@ -1047,6 +1309,102 @@ my %TOURNAMENTS_BULGARIA =
           },
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-04-20',
+            DATE_END => '2017-04-23'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-26',
+            DATE_END => '2018-04-29'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-04',
+            DATE_END => '2019-04-07'
+          },
+        }
+      },
+      '2021A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-05-13',
+            DATE_END => '2021-05-16'
+          },
+        }
+      },
+      '2021B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-09-23',
+            DATE_END => '2021-09-26'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-18',
+            DATE_END => '2022-03-20'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-27',
+            DATE_END => '2023-05-28'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-19',
+            DATE_END => '2024-04-21'
+          },
+        }
+      },
     }
   },
 
@@ -1157,6 +1515,42 @@ my %TOURNAMENTS_BULGARIA =
           } 
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-13',
+            DATE_END => '2018-01-14'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-01',
+            DATE_END => '2020-02-02'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-23',
+            DATE_END => '2022-09-25'
+          },
+        }
+      },
     }
   },
 
@@ -1225,15 +1619,15 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-08-18',
+            DATE_END => '2023-08-20'
           },
         }
       },
@@ -1294,15 +1688,27 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-08-26',
+            DATE_END => '2017-08-27'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-16',
+            DATE_END => '2019-11-17'
           },
         }
       },
@@ -1392,15 +1798,15 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-09-17',
+            DATE_END => '2016-09-18'
           },
         }
       },
@@ -1580,15 +1986,51 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-11-10',
+            DATE_END => '2016-11-11'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-15',
+            DATE_END => '2018-11-16'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-07',
+            DATE_END => '2019-11-10'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-11-04',
+            DATE_END => '2021-11-05'
           },
         }
       },
@@ -1662,6 +2104,96 @@ my %TOURNAMENTS_BULGARIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Lozenets Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-10',
+            DATE_END => '2017-06-11'
+          } 
+        }
+      },
+    }
+  },
+
+  'Pavel Banya Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET => 'Pavel Banya Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-06',
+            DATE_END => '2018-01-07'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Pavel Banya Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-05',
+            DATE_END => '2019-01-06'
+          } 
+        }
+      },
+      '2020A' =>
+      {
+        MEET => 'Pavel Banya Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-04',
+            DATE_END => '2020-01-05'
+          } 
+        }
+      },
+      '2020B' =>
+      {
+        MEET => 'Pavel Banya Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-18',
+            DATE_END => '2020-01-19'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Pavel Banya Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-03-13',
+            DATE_END => '2021-03-14'
+          } 
+        }
+      },
     }
   },
 
@@ -1676,15 +2208,39 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-10-22',
+            DATE_END => '2016-10-23'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-21',
+            DATE_END => '2017-10-22'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-20',
+            DATE_END => '2018-10-21'
           },
         }
       },
@@ -1745,6 +2301,45 @@ my %TOURNAMENTS_BULGARIA =
             major => 'ROUND',
             DATE_START => '2014-11-22',
             DATE_END => '2014-11-23'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-11-12',
+            DATE_END => '2016-11-13'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-11-17',
+            DATE_END => '2018-11-18'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            major => 'ROUND',
+            DATE_START => '2021-11-06',
+            DATE_END => '2021-11-07'
           } 
         }
       },
@@ -1841,6 +2436,32 @@ my %TOURNAMENTS_BULGARIA =
           } 
         }
       },
+      '2021' =>
+      {
+        MEET => 'Plovdiv Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-05-29',
+            DATE_END => '2021-05-30'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Plovdiv Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-05',
+            DATE_END => '2022-03-06'
+          },
+        }
+      },
     }
   },
 
@@ -1855,15 +2476,15 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-02-11',
+            DATE_END => '2017-02-12'
           },
         }
       },
@@ -1881,16 +2502,41 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-07-21',
+            DATE_END => '2018-07-22'
           },
+        }
+      },
+    }
+  },
+
+  'Serdika Open Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'Serdika Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-15',
+            DATE_END => '2019-05-15'
+          } 
         }
       },
     }
@@ -1964,6 +2610,19 @@ my %TOURNAMENTS_BULGARIA =
           } 
         }
       },
+      '2019' =>
+      {
+        MEET => 'Serdika Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-16',
+            DATE_END => '2019-05-19'
+          } 
+        }
+      },
     }
   },
 
@@ -2005,6 +2664,21 @@ my %TOURNAMENTS_BULGARIA =
           } 
         }
       },
+      '2016' =>
+      {
+        MEET => 'Shumen Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2016-09-24',
+            DATE_END => '2016-09-25'
+          } 
+        }
+      },
     }
   },
 
@@ -2019,15 +2693,27 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-11-05',
+            DATE_END => '2016-11-06'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-28',
+            DATE_END => '2017-10-29'
           },
         }
       },
@@ -2045,15 +2731,15 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-07-28',
+            DATE_END => '2018-07-29'
           },
         }
       },
@@ -2324,6 +3010,45 @@ my %TOURNAMENTS_BULGARIA =
           },
         }
       },
+      '2016' =>
+      {
+        MEET => 'Stara Zagora Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-08',
+            DATE_END => '2016-10-08'
+          },
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Stara Zagora Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-10-03',
+            DATE_END => '2020-10-04'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Stara Zagora Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-10-12',
+            DATE_END => '2024-10-13'
+          },
+        }
+      },
     }
   },
 
@@ -2338,15 +3063,15 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-06-02',
+            DATE_END => '2018-06-03'
           },
         }
       },
@@ -2355,7 +3080,7 @@ my %TOURNAMENTS_BULGARIA =
 
   'Varna Intercity Teams' =>
   {
-    ORIGIN => 'National',
+    ORIGIN => 'Intercity',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2426,6 +3151,45 @@ my %TOURNAMENTS_BULGARIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-16',
+            DATE_END => '2017-08-16'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-15',
+            DATE_END => '2018-08-15'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-14',
+            DATE_END => '2019-08-14'
+          },
+        }
+      },
     }
   },
 
@@ -2492,6 +3256,111 @@ my %TOURNAMENTS_BULGARIA =
             major => 'ROUND',
             DATE_START => '2016-08-20',
             DATE_END => '2016-08-21'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-08-19',
+            DATE_END => '2017-08-20'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-18',
+            DATE_END => '2018-08-19'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-17',
+            DATE_END => '2019-08-18'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-08-08',
+            DATE_END => '2020-08-09'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-08-14',
+            DATE_END => '2021-08-15'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-13',
+            DATE_END => '2022-08-14'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-08-12',
+            DATE_END => '2023-08-13'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-08-10',
+            DATE_END => '2024-08-11'
           } 
         }
       },

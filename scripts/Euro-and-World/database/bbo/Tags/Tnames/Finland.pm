@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'Finnish Women Pairs',
   'Finnish Women Trials',
   'Hanko Open Teams',
+  'Jyväskylä Open Pairs',
   'Jyväskylä Open Teams',
   'Pärnu Summer Invitational Pairs',
   'Pärnu Summer Open Teams',

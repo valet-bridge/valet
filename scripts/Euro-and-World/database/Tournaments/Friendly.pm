@@ -3809,6 +3809,36 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2017A' =>
+      {
+        GENDER => 'Open',
+        AGE => 'U26',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-20',
+            DATE_END => '2017-05-21'
+          } 
+        }
+      },
+      '2017B' =>
+      {
+        GENDER => 'Open',
+        AGE => 'U21',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-25',
+            DATE_END => '2017-11-26'
+          } 
+        }
+      },
     }
   },
 
@@ -3838,6 +3868,51 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2012-04-06',
             DATE_END => '2012-04-07'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-04',
+            DATE_END => '2017-11-05'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        GENDER => 'Open',
+        AGE => 'U26',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-19',
+            DATE_END => '2022-03-19'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-01',
+            DATE_END => '2023-04-02'
           } 
         }
       },

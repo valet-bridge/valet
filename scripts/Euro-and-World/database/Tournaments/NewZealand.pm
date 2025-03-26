@@ -32,8 +32,8 @@ my %MEETS_NEWZEALAND =
       {
         CITY => 'Otago',
         YEAR => 2016,
-        DATE_START => '2016-11-21',
-        DATE_END => '2016-11-24'
+        DATE_START => '2016-11-25',
+        DATE_END => '2016-11-27'
       },
       '2017' =>
       {
@@ -46,21 +46,21 @@ my %MEETS_NEWZEALAND =
       {
         CITY => 'Auckland',
         YEAR => 2018,
-        DATE_START => '2018-11-24',
+        DATE_START => '2018-11-23',
         DATE_END => '2018-11-26'
       },
       '2019' =>
       {
         CITY => 'Christchurch',
         YEAR => 2019,
-        DATE_START => '2019-11-23',
-        DATE_END => '2019-11-24'
+        DATE_START => '2019-11-22',
+        DATE_END => '2019-11-25'
       },
       '2020' =>
       {
         CITY => 'Christchurch',
         YEAR => 2020,
-        DATE_START => '2020-11-21',
+        DATE_START => '2020-11-20',
         DATE_END => '2020-11-23'
       },
       '2021' =>
@@ -83,6 +83,12 @@ my %MEETS_NEWZEALAND =
         YEAR => 2023,
         DATE_START => '2023-11-24',
         DATE_END => '2023-11-26'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-11-29',
+        DATE_END => '2024-12-02'
       }
     }
   },
@@ -188,6 +194,12 @@ my %MEETS_NEWZEALAND =
         CITY => 'Mount Maunganui',
         DATE_START => '2023-09-23',
         DATE_END => '2023-09-30'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-10-03',
+        DATE_END => '2024-10-05'
       }
     }
   },
@@ -210,6 +222,18 @@ my %MEETS_NEWZEALAND =
         YEAR => 2009,
         DATE_START => '2009-04-09',
         DATE_END => '2009-04-11'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-11-09',
+        DATE_END => '2018-11-11'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-02-04',
+        DATE_END => '2024-02-05'
       },
     }
   },
@@ -397,8 +421,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2016,
-            DATE_START => '2016-11-21',
-            DATE_END => '2016-11-24'
+            DATE_START => '2016-11-25',
+            DATE_END => '2016-11-27'
           } 
         }
       },
@@ -427,7 +451,7 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2018,
-            DATE_START => '2018-11-24',
+            DATE_START => '2018-11-23',
             DATE_END => '2018-11-26'
           } 
         }
@@ -442,8 +466,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-11-23',
-            DATE_END => '2019-11-24'
+            DATE_START => '2019-11-22',
+            DATE_END => '2019-11-25'
           } 
         }
       },
@@ -457,7 +481,7 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2020,
-            DATE_START => '2020-11-21',
+            DATE_START => '2020-11-20',
             DATE_END => '2020-11-23'
           } 
         }
@@ -505,59 +529,188 @@ my %TOURNAMENTS_NEWZEALAND =
             DATE_END => '2023-11-26'
           } 
         }
+      },
+
+      '2024' =>
+      {
+        MEET => 'New Zealand Inter-Provincial Teams',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-29',
+            DATE_END => '2024-12-02'
+          } 
+        }
       }
     }
   },
 
   'New Zealand Inter-Provincial Senior Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
+        MEET => 'New Zealand Inter-Provincial Teams',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          },
+            YEAR => 2017,
+            DATE_START => '2017-11-25',
+            DATE_END => '2017-11-26'
+          } 
         }
       },
+      '2018' =>
+      {
+        MEET => 'New Zealand Inter-Provincial Teams',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-24',
+            DATE_END => '2018-11-26'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'New Zealand Inter-Provincial Teams',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-23',
+            DATE_END => '2019-11-24'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'New Zealand Inter-Provincial Teams',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-11-20',
+            DATE_END => '2020-11-23'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'New Zealand Inter-Provincial Teams',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-29',
+            DATE_END => '2024-12-02'
+          } 
+        }
+      }
     }
   },
 
   'New Zealand Inter-Provincial Women Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
+        MEET => 'New Zealand Inter-Provincial Teams',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          },
+            YEAR => 2016,
+            DATE_START => '2016-11-25',
+            DATE_END => '2016-11-27'
+          } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'New Zealand Inter-Provincial Teams',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-25',
+            DATE_END => '2017-11-26'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'New Zealand Inter-Provincial Teams',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-24',
+            DATE_END => '2018-11-26'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'New Zealand Inter-Provincial Teams',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-22',
+            DATE_END => '2019-11-24'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'New Zealand Inter-Provincial Teams',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-11-21',
+            DATE_END => '2020-11-22'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'New Zealand Inter-Provincial Teams',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-29',
+            DATE_END => '2024-12-02'
+          } 
+        }
+      }
     }
   },
 
@@ -593,20 +746,20 @@ my %TOURNAMENTS_NEWZEALAND =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-03-03',
+            DATE_END => '2024-03-04'
           },
         }
       },
@@ -662,7 +815,7 @@ my %TOURNAMENTS_NEWZEALAND =
             YEAR => 2016,
             STAGE => 'Final',
             DATE_START => '2016-09-30',
-            DATE_END => '2016-09-30'
+            DATE_END => '2016-10-01'
           }
         }
       },
@@ -675,22 +828,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'C0' => 
           {
             YEAR => 2017,
-            STAGE => 'Quarterfinal',
-            DATE_START => '2017-10-05',
-            DATE_END => '2017-10-05'
-          },
-          'C1' => 
-          {
-            YEAR => 2017,
-            STAGE => 'Semifinal',
-            DATE_START => '2017-10-06',
-            DATE_END => '2017-10-06'
-          },
-          'C2' => 
-          {
-            YEAR => 2017,
             STAGE => 'Final',
-            DATE_START => '2017-10-07',
+            DATE_START => '2017-10-05',
             DATE_END => '2017-10-07'
           }
         }
@@ -720,7 +859,7 @@ my %TOURNAMENTS_NEWZEALAND =
             YEAR => 2018,
             STAGE => 'Final',
             DATE_START => '2018-10-05',
-            DATE_END => '2018-10-05'
+            DATE_END => '2018-10-06'
           }
         }
       },
@@ -749,7 +888,7 @@ my %TOURNAMENTS_NEWZEALAND =
             YEAR => 2019,
             STAGE => 'Final',
             DATE_START => '2019-10-04',
-            DATE_END => '2019-10-04'
+            DATE_END => '2019-10-05'
           }
         }
       },
@@ -778,10 +917,24 @@ my %TOURNAMENTS_NEWZEALAND =
             YEAR => 2023,
             STAGE => 'Final',
             DATE_START => '2023-09-29',
-            DATE_END => '2023-09-29'
+            DATE_END => '2023-09-30'
           }
         }
-      }
+      },
+
+      '2024' =>
+      {
+        MEET => 'New Zealand National Congress',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-10-03',
+            DATE_END => '2024-10-05'
+          },
+        }
+      },
     }
   },
 
@@ -806,6 +959,32 @@ my %TOURNAMENTS_NEWZEALAND =
             major => 'ROUND|SESSION',
             DATE_START => '2009-04-09',
             DATE_END => '2009-04-11'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'New Zealand Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-09',
+            DATE_END => '2018-11-11'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'New Zealand Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-04',
+            DATE_END => '2024-02-05'
           } 
         }
       }

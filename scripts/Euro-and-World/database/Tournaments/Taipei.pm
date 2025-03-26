@@ -521,19 +521,19 @@ my %TOURNAMENTS_TAIPEI =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U16',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-08-30',
+            DATE_END => '2020-08-30'
           },
         }
       },
@@ -587,6 +587,30 @@ my %TOURNAMENTS_TAIPEI =
           },
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-14',
+            DATE_END => '2018-10-14'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-10-18',
+            DATE_END => '2020-10-18'
+          },
+        }
+      },
     }
   },
 
@@ -612,6 +636,18 @@ my %TOURNAMENTS_TAIPEI =
             major => 'SEGMENT',
             DATE_START => '2006-07-02',
             DATE_END => '2006-07-02'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-14',
+            DATE_END => '2018-10-14'
           },
         }
       },
@@ -1112,6 +1148,18 @@ my %TOURNAMENTS_TAIPEI =
           },
         }
       },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-29',
+            DATE_END => '2019-12-29'
+          },
+        }
+      },
       '2022' =>
       {
         CHAPTERS =>
@@ -1184,19 +1232,19 @@ my %TOURNAMENTS_TAIPEI =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U21',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-12-29',
+            DATE_END => '2019-12-29'
           },
         }
       },

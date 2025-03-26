@@ -47,6 +47,12 @@ my %MEETS_FINLAND =
         DATE_START => '2009-04-10',
         DATE_END => '2009-04-10'
       },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-02-17',
+        DATE_END => '2018-02-17'
+      },
     }
   },
 
@@ -268,6 +274,90 @@ my %TOURNAMENTS_FINLAND =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-28',
+            DATE_END => '2017-07-28'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-27',
+            DATE_END => '2018-07-27'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-21',
+            DATE_END => '2019-07-21'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-08-09',
+            DATE_END => '2020-08-09'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-07-10',
+            DATE_END => '2021-07-10'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-16',
+            DATE_END => '2022-07-16'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-07-13',
+            DATE_END => '2024-07-13'
+          } 
+        }
+      },
     }
   },
 
@@ -275,22 +365,22 @@ my %TOURNAMENTS_FINLAND =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-07-07',
+            DATE_END => '2018-07-08'
           },
         }
       },
@@ -454,6 +544,90 @@ my %TOURNAMENTS_FINLAND =
             major => 'ROUND',
             DATE_START => '2016-04-16',
             DATE_END => '2016-04-17'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-04',
+            DATE_END => '2017-03-05'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-03',
+            DATE_END => '2018-03-04'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-16',
+            DATE_END => '2019-03-17'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-11-20',
+            DATE_END => '2021-11-22'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-26',
+            DATE_END => '2022-11-27'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-04',
+            DATE_END => '2023-11-05'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-23',
+            DATE_END => '2024-11-24'
           } 
         }
       },
@@ -651,6 +825,90 @@ my %TOURNAMENTS_FINLAND =
           } 
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-10',
+            DATE_END => '2016-12-11'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-09',
+            DATE_END => '2017-12-10'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-08',
+            DATE_END => '2018-12-09'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-14',
+            DATE_END => '2019-12-15'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-09-19',
+            DATE_END => '2020-09-20'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-04-02',
+            DATE_END => '2022-04-03'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-06',
+            DATE_END => '2023-05-07'
+          } 
+        }
+      },
     }
   },
 
@@ -692,6 +950,18 @@ my %TOURNAMENTS_FINLAND =
             major => 'SEGMENT|ROUND',
             DATE_START => '2015-12-12',
             DATE_END => '2015-12-13'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-09',
+            DATE_END => '2019-02-10'
           } 
         }
       },
@@ -841,6 +1111,18 @@ my %TOURNAMENTS_FINLAND =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-08',
+            DATE_END => '2017-07-09'
+          } 
+        }
+      },
     }
   },
 
@@ -893,6 +1175,18 @@ my %TOURNAMENTS_FINLAND =
             major => 'SEGMENT|ROUND',
             DATE_START => '2015-12-12',
             DATE_END => '2015-12-13'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-09',
+            DATE_END => '2019-02-10'
           } 
         }
       },
@@ -956,6 +1250,31 @@ my %TOURNAMENTS_FINLAND =
             DATE_START => '2013-07-25',
             DATE_END => '2013-07-25'
           } 
+        }
+      },
+    }
+  },
+
+  'Jyväskylä Open Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET => 'Jyväskylä Easter Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-17',
+            DATE_END => '2018-02-17'
+          },
         }
       },
     }
