@@ -75,6 +75,27 @@ my %MEETS_NORDIC =
         DATE_START => '2016-03-26',
         DATE_END => '2016-03-27'
       },
+      '2017' =>
+      {
+        AGE => 'U26',
+        YEAR => 2017,
+        DATE_START => '2017-04-14',
+        DATE_END => '2017-04-16'
+      },
+      '2019' =>
+      {
+        AGE => 'U26',
+        YEAR => 2019,
+        DATE_START => '2019-04-19',
+        DATE_END => '2019-04-20'
+      },
+      '2023' =>
+      {
+        AGE => 'U26',
+        YEAR => 2023,
+        DATE_START => '2023-05-31',
+        DATE_END => '2023-06-01'
+      },
     }
   },
 
@@ -136,6 +157,12 @@ my %MEETS_NORDIC =
         DATE_START => '2015-05-21',
         DATE_END => '2015-05-24'
       },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-09-24',
+        DATE_END => '2016-09-24'
+      },
       '2017' =>
       {
         # https://www2.bridge.dk/Default.aspx?ID=21886
@@ -164,6 +191,12 @@ my %MEETS_NORDIC =
         CITY => 'Online',
         DATE_START => '2021-05-29',
         DATE_END => '2021-05-30'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-05-26',
+        DATE_END => '2022-05-29'
       },
       '2023' =>
       {
@@ -386,6 +419,55 @@ my %TOURNAMENTS_NORDIC =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Nordic Junior Championship',
+        FORM => 'Teams',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-04-14',
+            DATE_END => '2017-04-16'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Nordic Junior Championship',
+        FORM => 'Teams',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-04-19',
+            DATE_END => '2019-04-20'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Nordic Junior Championship',
+        FORM => 'Teams',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-31',
+            DATE_END => '2023-06-01'
+          } 
+        }
+      },
     }
   },
 
@@ -393,22 +475,22 @@ my %TOURNAMENTS_NORDIC =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-09-24',
+            DATE_END => '2016-09-24'
           },
         }
       },
@@ -505,6 +587,76 @@ my %TOURNAMENTS_NORDIC =
             major => 'ROUND|MATCH',
             DATE_START => '2015-05-21',
             DATE_END => '2015-05-24'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Nordic Team Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND|MATCH',
+            DATE_START => '2016-09-24',
+            DATE_END => '2016-09-24'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Nordic Team Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND|MATCH',
+            DATE_START => '2017-06-02',
+            DATE_END => '2017-06-04'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Nordic Team Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND|MATCH',
+            DATE_START => '2019-06-07',
+            DATE_END => '2019-06-09'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Nordic Team Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND|MATCH',
+            DATE_START => '2022-05-26',
+            DATE_END => '2022-05-29'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Nordic Team Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            major => 'ROUND|MATCH',
+            DATE_START => '2023-05-30',
+            DATE_END => '2023-06-01'
           } 
         }
       },
@@ -626,6 +778,48 @@ my %TOURNAMENTS_NORDIC =
             major => 'ROUND|MATCH',
             DATE_START => '2015-05-21',
             DATE_END => '2015-05-24'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Nordic Team Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND|MATCH',
+            DATE_START => '2017-06-02',
+            DATE_END => '2017-06-04'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Nordic Team Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND|MATCH',
+            DATE_START => '2022-05-26',
+            DATE_END => '2022-05-29'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Nordic Team Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            major => 'ROUND|MATCH',
+            DATE_START => '2023-05-30',
+            DATE_END => '2023-06-01'
           } 
         }
       },
