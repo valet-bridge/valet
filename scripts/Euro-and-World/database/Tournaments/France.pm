@@ -27,11 +27,23 @@ my %MEETS_FRANCE =
 
     EDITIONS => 
     {
-      '2000' =>
+      '2018' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2018,
+        DATE_START => '2018-08-21',
+        DATE_END => '2018-08-21'
+      },
+      '2021' =>
+      {
+        YEAR => 2021,
+        DATE_START => '2021-08-17',
+        DATE_END => '2021-08-17'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-08-15',
+        DATE_END => '2023-08-15'
       },
     }
   },
@@ -95,6 +107,18 @@ my %MEETS_FRANCE =
         DATE_START => '2016-07-22',
         DATE_END => '2016-07-30'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-07-23',
+        DATE_END => '2017-07-25'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-07-24',
+        DATE_END => '2018-07-25'
+      },
       '2019' =>
       {
         # https://bridgescanner.com/event/festival-mondial-de-bridge-de-deauville-2020
@@ -113,8 +137,8 @@ my %MEETS_FRANCE =
       {
         # https://bridgescanner.com/event/festival-mondial-de-bridge-de-deauville-2022
         YEAR => 2022,
-        DATE_START => '2022-07-21',
-        DATE_END => '2022-07-29'
+        DATE_START => '2022-06-21',
+        DATE_END => '2022-06-29'
       },
       '2023' =>
       {
@@ -136,6 +160,56 @@ my %MEETS_FRANCE =
 
 my %TOURNAMENTS_FRANCE =
 (
+  'Baule Patton Teams',
+  {
+    FORM => 'Teams',
+    SCORING => 'Patton',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET => 'Festival de la Baule',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-21',
+            DATE_END => '2018-08-21'
+          },
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Festival de la Baule',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-08-17',
+            DATE_END => '2021-08-17'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Festival de la Baule',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-08-15',
+            DATE_END => '2023-08-15'
+          },
+        }
+      },
+    }
+  },
   'Biarritz Hiver',
   {
     %GLOBAL,
@@ -209,6 +283,34 @@ my %TOURNAMENTS_FRANCE =
             DATE_START => '2016-07-30',
             DATE_END => '2016-07-30'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Mondial de Deauville',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            major => 'SESSION',
+            DATE_START => '2017-07-23',
+            DATE_END => '2017-07-23'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Mondial de Deauville',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            major => 'SESSION',
+            DATE_START => '2022-06-21',
+            DATE_END => '2022-06-21'
+          },
         }
       },
     }
@@ -355,6 +457,48 @@ my %TOURNAMENTS_FRANCE =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Mondial de Deauville',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-07-24',
+            DATE_END => '2017-07-25'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Mondial de Deauville',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-07-24',
+            DATE_END => '2018-07-25'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Mondial de Deauville',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'SESSION',
+            DATE_START => '2019-07-25',
+            DATE_END => '2019-07-25'
+          } 
+        }
+      },
     }
   },
 
@@ -481,6 +625,20 @@ my %TOURNAMENTS_FRANCE =
             major => 'SESSION',
             DATE_START => '2016-07-25',
             DATE_END => '2016-07-27'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Mondial de Deauville',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'SESSION',
+            DATE_START => '2019-07-23',
+            DATE_END => '2019-07-23'
           } 
         }
       },
@@ -711,6 +869,84 @@ my %TOURNAMENTS_FRANCE =
             minor => 'MATCH',
             DATE_START => '2015-09-19',
             DATE_END => '2015-09-20'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-17',
+            DATE_END => '2016-12-18'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-16',
+            DATE_END => '2017-12-17'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-15',
+            DATE_END => '2018-12-18'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-21',
+            DATE_END => '2019-12-22'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-22',
+            DATE_END => '2022-10-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-17',
+            DATE_END => '2022-12-18'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-16',
+            DATE_END => '2023-12-17'
           } 
         }
       },
@@ -1168,6 +1404,410 @@ my %TOURNAMENTS_FRANCE =
           }
         }
       },
+      '2016-17' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2016-09-24',
+            DATE_END => '2016-09-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2016-10-01',
+            DATE_END => '2016-10-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2016-10-15',
+            DATE_END => '2016-10-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2016-10-22',
+            DATE_END => '2016-10-23'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-01-27',
+            DATE_END => '2017-01-27'
+          },
+          'C5' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-01-28',
+            DATE_END => '2017-01-29'
+          }
+        }
+      },
+      '2017' =>
+      {
+        # This is not really First Division.
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-13',
+            DATE_END => '2017-05-14'
+          },
+        }
+      },
+      '2017-18' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2017-09-16',
+            DATE_END => '2017-09-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2017-10-07',
+            DATE_END => '2017-10-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2017-10-21',
+            DATE_END => '2017-10-22'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2017-11-04',
+            DATE_END => '2017-11-05'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2017-12-16',
+            DATE_END => '2017-12-16'
+          },
+          'C5' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-19',
+            DATE_END => '2018-01-19'
+          },
+          'C6' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-20',
+            DATE_END => '2018-01-21'
+          }
+        }
+      },
+      '2018-19' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2018-09-15',
+            DATE_END => '2018-09-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2018-10-13',
+            DATE_END => '2018-10-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2018-10-20',
+            DATE_END => '2018-10-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2019-01-19',
+            DATE_END => '2019-01-20'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-20',
+            DATE_END => '2019-04-20'
+          },
+          'C5' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-21',
+            DATE_END => '2019-04-22'
+          }
+        }
+      },
+      '2019-20' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2019-09-07',
+            DATE_END => '2019-09-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2019-10-05',
+            DATE_END => '2019-10-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2019-10-19',
+            DATE_END => '2019-10-20'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2019-11-09',
+            DATE_END => '2019-11-10'
+          },
+          'C4' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-17',
+            DATE_END => '2020-01-17'
+          },
+          'C5' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-18',
+            DATE_END => '2020-01-19'
+          }
+        }
+      },
+      '2021-22' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2021-10-02',
+            DATE_END => '2021-10-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2021-10-16',
+            DATE_END => '2021-10-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2021,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2021-11-06',
+            DATE_END => '2021-11-07'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-01-14',
+            DATE_END => '2022-01-14'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-01-15',
+            DATE_END => '2022-01-16'
+          }
+        }
+      },
+      '2022-23' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2022-09-24',
+            DATE_END => '2022-09-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2022-10-01',
+            DATE_END => '2022-10-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2022-10-15',
+            DATE_END => '2022-10-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2022-11-05',
+            DATE_END => '2022-11-06'
+          },
+          'C4' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-01-13',
+            DATE_END => '2023-01-13'
+          },
+          'C5' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-01-14',
+            DATE_END => '2023-01-15'
+          }
+        }
+      },
+      '2023-24' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2023-09-16',
+            DATE_END => '2023-09-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2023-09-30',
+            DATE_END => '2023-10-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2023-10-21',
+            DATE_END => '2023-10-22'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2023-11-04',
+            DATE_END => '2023-11-05'
+          },
+          'C4' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-12',
+            DATE_END => '2024-01-12'
+          },
+          'C5' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-13',
+            DATE_END => '2024-01-14'
+          }
+        }
+      },
+      '2024' =>
+      {
+        # This is not really First Division.
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-14',
+            DATE_END => '2024-09-15'
+          },
+        }
+      },
     }
   },
 
@@ -1289,6 +1929,20 @@ my %TOURNAMENTS_FRANCE =
           } 
         }
       },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'MATCH',
+            DATE_START => '2024-05-25',
+            DATE_END => '2024-05-26'
+          } 
+        }
+      },
     }
   },
 
@@ -1303,15 +1957,27 @@ my %TOURNAMENTS_FRANCE =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-12-18',
+            DATE_END => '2018-12-21'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-11',
+            DATE_END => '2020-02-18'
           },
         }
       },
@@ -1522,12 +2188,71 @@ my %TOURNAMENTS_FRANCE =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2015,
+            major => 'MATCH',
+            DATE_START => '2015-09-08',
+            DATE_END => '2015-09-10'
+          },
+          'C1' => 
           {
             YEAR => 2015,
             major => 'MATCH',
             DATE_START => '2015-09-16',
             DATE_END => '2015-09-18'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'MATCH',
+            DATE_START => '2018-02-03',
+            DATE_END => '2018-02-04'
+          },
+        }
+      },
+      '2019A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'MATCH',
+            DATE_START => '2019-02-11',
+            DATE_END => '2019-02-15'
+          },
+        }
+      },
+      '2019B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'MATCH',
+            DATE_START => '2019-10-25',
+            DATE_END => '2019-10-27'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            major => 'MATCH',
+            DATE_START => '2022-01-28',
+            DATE_END => '2022-01-31'
           },
         }
       }
@@ -1678,6 +2403,58 @@ my %TOURNAMENTS_FRANCE =
           } 
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-01-26',
+            DATE_END => '2016-01-27'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-03-06',
+            DATE_END => '2018-03-07'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND',
+            DATE_START => '2022-05-19',
+            DATE_END => '2022-05-22'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            major => 'ROUND',
+            DATE_START => '2024-03-18',
+            DATE_END => '2024-03-19'
+          },
+        }
+      },
     }
   },
 
@@ -1692,15 +2469,15 @@ my %TOURNAMENTS_FRANCE =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-10-13',
+            DATE_END => '2023-10-16'
           },
         }
       },
@@ -1718,15 +2495,27 @@ my %TOURNAMENTS_FRANCE =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-09-25',
+            DATE_END => '2020-09-26'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-10',
+            DATE_END => '2022-12-11'
           },
         }
       },
@@ -1806,6 +2595,72 @@ my %TOURNAMENTS_FRANCE =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'SEGMENT',
+            DATE_START => '2017-10-30',
+            DATE_END => '2017-11-02'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            major => 'SEGMENT',
+            DATE_START => '2018-02-09',
+            DATE_END => '2018-02-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            major => 'SEGMENT',
+            DATE_START => '2018-03-16',
+            DATE_END => '2018-03-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            major => 'SEGMENT',
+            DATE_START => '2018-03-30',
+            DATE_END => '2018-04-01'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            major => 'SEGMENT',
+            DATE_START => '2022-05-21',
+            DATE_END => '2022-05-21'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            major => 'SEGMENT',
+            DATE_START => '2024-03-16',
+            DATE_END => '2024-03-17'
+          } 
+        }
+      },
     }
   },
 
@@ -1846,15 +2701,15 @@ my %TOURNAMENTS_FRANCE =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-03-12',
+            DATE_END => '2020-03-12'
           },
         }
       },

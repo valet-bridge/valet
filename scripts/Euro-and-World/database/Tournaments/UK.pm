@@ -53,8 +53,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2019,
-            DATE_START => '2019-12-16',
-            DATE_END => '2019-12-17'
+            DATE_START => '2019-02-16',
+            DATE_END => '2019-02-17'
           },
         }
       },
@@ -1165,7 +1165,7 @@ my %TOURNAMENTS_UK =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
@@ -1196,15 +1196,45 @@ my %TOURNAMENTS_UK =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-07',
+            DATE_END => '2018-09-09'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-08',
+            DATE_END => '2018-12-09'
+          },
+        }
+      },
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-02-07',
+            DATE_END => '2020-02-09'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-12-10',
+            DATE_END => '2021-12-12'
           },
         }
       },
@@ -1215,22 +1245,82 @@ my %TOURNAMENTS_UK =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-01-12',
+            DATE_END => '2018-01-15'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-01',
+            DATE_END => '2019-11-03'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-22',
+            DATE_END => '2019-11-24'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-03',
+            DATE_END => '2020-01-06'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-09-24',
+            DATE_END => '2021-09-26'
+          },
+          'C1' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-11-19',
+            DATE_END => '2021-11-22'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-12',
+            DATE_END => '2024-01-15'
           },
         }
       },
@@ -1362,6 +1452,58 @@ my %TOURNAMENTS_UK =
             major => 'SEGMENT',
             DATE_START => '2008-08-28',
             DATE_END => '2008-08-28'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            major => 'MATCH|ROUND',
+            DATE_START => '2019-12-15',
+            DATE_END => '2019-12-15'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            major => 'MATCH|ROUND',
+            DATE_START => '2020-03-14',
+            DATE_END => '2020-03-17'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            major => 'MATCH|ROUND',
+            DATE_START => '2022-12-17',
+            DATE_END => '2022-12-17'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            major => 'MATCH|ROUND',
+            DATE_START => '2024-04-29',
+            DATE_END => '2024-04-29'
           },
         }
       }
@@ -2074,22 +2216,112 @@ my %TOURNAMENTS_UK =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-01-27',
+            DATE_END => '2017-01-29'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-26',
+            DATE_END => '2018-01-28'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-11',
+            DATE_END => '2019-01-13'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-02',
+            DATE_END => '2019-02-03'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-11',
+            DATE_END => '2020-01-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-17',
+            DATE_END => '2020-01-20'
+          },
+          'C2' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-25',
+            DATE_END => '2020-01-26'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-09',
+            DATE_END => '2022-12-11'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-08',
+            DATE_END => '2023-12-10'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-09',
+            DATE_END => '2024-02-11'
           },
         }
       },
@@ -2102,6 +2334,8 @@ my %TOURNAMENTS_UK =
     ORIGIN => 'National',
     ZONE => 'Europe',
     COUNTRY => 'England',
+    FORM => 'Teams',
+    SCORING => 'IMP',
     GENDER => 'Women',
     AGE => 'Open',
 
@@ -2109,8 +2343,6 @@ my %TOURNAMENTS_UK =
     {
       '2006' =>
       {
-        FORM => 'Teams',
-        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
@@ -2131,8 +2363,6 @@ my %TOURNAMENTS_UK =
       },
       '2008' =>
       {
-        FORM => 'Teams',
-        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2146,8 +2376,6 @@ my %TOURNAMENTS_UK =
       },
       '2009' =>
       {
-        FORM => 'Teams',
-        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2162,8 +2390,6 @@ my %TOURNAMENTS_UK =
       '2010' =>
       {
         # https://www.ebu.co.uk/results/277
-        FORM => 'Teams',
-        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2178,8 +2404,6 @@ my %TOURNAMENTS_UK =
       '2011' =>
       {
         # https://www.ebu.co.uk/results/217
-        FORM => 'Teams',
-        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2194,8 +2418,6 @@ my %TOURNAMENTS_UK =
       '2012' =>
       {
         # https://www.ebu.co.uk/results/155
-        FORM => 'Pairs',
-        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2210,8 +2432,6 @@ my %TOURNAMENTS_UK =
       '2013' =>
       {
         # https://www.ebu.co.uk/results/94
-        FORM => 'Pairs',
-        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2226,8 +2446,6 @@ my %TOURNAMENTS_UK =
       '2014' =>
       {
         # https://www.ebu.co.uk/results/17
-        FORM => 'Pairs',
-        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2242,8 +2460,6 @@ my %TOURNAMENTS_UK =
       '2015' =>
       {
         # https://www.ebu.co.uk/results/235
-        FORM => 'Pairs',
-        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2258,8 +2474,6 @@ my %TOURNAMENTS_UK =
       '2016' =>
       {
         # https://www.ebu.co.uk/results/461
-        FORM => 'Pairs',
-        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2270,7 +2484,46 @@ my %TOURNAMENTS_UK =
             DATE_END => '2016-01-24'
           },
         }
-      }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'SESSION|SET',
+            DATE_START => '2018-03-04',
+            DATE_END => '2018-03-05'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            major => 'SESSION|SET',
+            DATE_START => '2022-12-16',
+            DATE_END => '2022-12-18'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            major => 'MATCH|ROUND',
+            DATE_START => '2024-03-02',
+            DATE_END => '2024-03-03'
+          },
+        }
+      },
     }
   },
 

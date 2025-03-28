@@ -45,6 +45,12 @@ my %MEETS_SUPRA =
         DATE_START => '2012-09-10',
         DATE_END => '2012-09-13'
       },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-04-24',
+        DATE_END => '2019-04-28'
+      },
     }
   },
 
@@ -208,6 +214,18 @@ my %MEETS_SUPRA =
         DATE_START => '2015-10-19',
         DATE_END => '2015-10-23'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-02-14',
+        DATE_END => '2017-02-19'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-02-03',
+        DATE_END => '2019-02-08'
+      },
     }
   },
 
@@ -267,6 +285,12 @@ my %MEETS_SUPRA =
         DATE_START => '2016-12-16',
         DATE_END => '2016-12-18'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-12-15',
+        DATE_END => '2017-12-17'
+      },
       '2018' =>
       {
         CITY => 'Lille',
@@ -292,7 +316,14 @@ my %MEETS_SUPRA =
         DATE_START => '2021-12-17',
         DATE_END => '2021-12-19'
       },
-      '2022' =>
+      '2022A' =>
+      {
+        # Part of 2021?
+        YEAR => 2022,
+        DATE_START => '2022-03-11',
+        DATE_END => '2022-03-13'
+      },
+      '2022B' =>
       {
         # https://bridgescanner.com/event/channel-trophy-2022
         CITY => 'Lille',
@@ -404,6 +435,20 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
+      '2019' =>
+      {
+        MEET => 'Buffett Cup',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-27',
+            DATE_END => '2019-04-28'
+          } 
+        }
+      },
     }
   },
 
@@ -459,6 +504,20 @@ my %TOURNAMENTS_SUPRA =
             ignore => 'TABLE',
             DATE_START => '2012-09-10',
             DATE_END => '2012-09-10'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Buffett Cup',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-24',
+            DATE_END => '2019-04-26'
           } 
         }
       },
@@ -832,6 +891,34 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Cavendish Invitational',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-17',
+            DATE_END => '2017-02-19'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Cavendish Invitational',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-06',
+            DATE_END => '2019-02-08'
+          },
+        }
+      },
     }
   },
 
@@ -1123,6 +1210,32 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Cavendish Invitational',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-14',
+            DATE_END => '2017-02-16'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Cavendish Invitational',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-03',
+            DATE_END => '2019-02-05'
+          },
+        }
+      },
     }
   },
 
@@ -1212,13 +1325,13 @@ my %TOURNAMENTS_SUPRA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
-    AGE => 'U26',
 
     EDITIONS =>
     {
       '2007' =>
       {
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1234,6 +1347,7 @@ my %TOURNAMENTS_SUPRA =
       '2015' =>
       {
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1243,6 +1357,92 @@ my %TOURNAMENTS_SUPRA =
             minor => 'SEGMENT|SET',
             DATE_START => '2015-12-18',
             DATE_END => '2015-12-20'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-17',
+            DATE_END => '2016-12-17'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-15',
+            DATE_END => '2017-12-16'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-20',
+            DATE_END => '2019-12-22'
+          } 
+        }
+      },
+      '2022A' =>
+      {
+        # Really 2021?
+        MEET => 'Channel Trophy',
+        MEET_TAG => '2022A',
+        AGE => 'U25',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-11',
+            DATE_END => '2022-03-13'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-15',
+            DATE_END => '2023-12-15'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-14',
+            DATE_END => '2024-12-14'
           } 
         }
       },
@@ -1349,6 +1549,20 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-15',
+            DATE_END => '2017-12-17'
+          } 
+        }
+      },
       '2018' =>
       {
         MEET => 'Channel Trophy',
@@ -1392,10 +1606,27 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
-      '2022' =>
+      '2022A' =>
+      {
+        # Really 2021?
+        MEET => 'Channel Trophy',
+        MEET_TAG => '2022A',
+        AGE => 'U25',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-11',
+            DATE_END => '2022-03-13'
+          } 
+        }
+      },
+      '2022B' =>
       {
         # https://bridgescanner.com/event/channel-trophy-2022
         MEET => 'Channel Trophy',
+        MEET_TAG => '2022B',
         AGE => 'U26',
         CHAPTERS =>
         {
@@ -1507,6 +1738,64 @@ my %TOURNAMENTS_SUPRA =
             minor => 'SEGMENT|SET',
             DATE_START => '2015-12-18',
             DATE_END => '2015-12-20'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U21',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-17',
+            DATE_END => '2016-12-17'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U21',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-16',
+            DATE_END => '2017-12-16'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U21',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-21',
+            DATE_END => '2019-12-21'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        # Really 2021?
+        MEET => 'Channel Trophy',
+        MEET_TAG => '2022A',
+        AGE => 'U20',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-13',
+            DATE_END => '2022-03-13'
           } 
         }
       },
