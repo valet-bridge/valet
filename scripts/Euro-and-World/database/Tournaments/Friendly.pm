@@ -851,15 +851,27 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-09-30',
+            DATE_END => '2016-10-01'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-05',
+            DATE_END => '2018-10-06'
           },
         }
       },
@@ -928,6 +940,38 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2016-05-28',
             DATE_END => '2016-05-28'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-06-18',
+            DATE_END => '2017-06-18'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-03-16',
+            DATE_END => '2019-03-16'
           } 
         }
       },

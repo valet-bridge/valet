@@ -49,6 +49,19 @@ my %MEETS_DENMARK =
         YEAR => 2015,
         DATE_START => '2015-01-15',
         DATE_END => '2015-01-18'
+      },
+      '2016' =>
+      {
+        # Qualifying for 2017
+        YEAR => 2016,
+        DATE_START => '2016-12-03',
+        DATE_END => '2016-12-11'
+      },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-01-19',
+        DATE_END => '2017-01-22'
       }
     }
   },
@@ -285,6 +298,44 @@ my %TOURNAMENTS_DENMARK =
             DATE_END => '2015-01-18'
           } 
         }
+      },
+      '2016' =>
+      {
+        # TODO Is this really 2017?
+        MEET => 'Copenhagen Invitational',
+        SCORING => 'IMP',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2016-12-03',
+            DATE_END => '2016-12-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2016-12-10',
+            DATE_END => '2016-12-11'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Copenhagen Invitational',
+        SCORING => 'IMP',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2017-01-20',
+            DATE_END => '2017-01-22'
+          } 
+        }
       }
     }
   },
@@ -339,6 +390,45 @@ my %TOURNAMENTS_DENMARK =
             DATE_END => '2015-03-29'
           } 
         }
+      },
+      '2016' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SECTION',
+            DATE_START => '2016-04-16',
+            DATE_END => '2016-04-17'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'SECTION',
+            DATE_START => '2017-04-22',
+            DATE_END => '2017-04-23'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'SECTION',
+            DATE_START => '2019-03-30',
+            DATE_END => '2019-03-30'
+          } 
+        }
       }
     }
   },
@@ -390,6 +480,19 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2015,
             DATE_START => '2015-01-15',
             DATE_END => '2015-01-15'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Copenhagen Invitational',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-19',
+            DATE_END => '2017-01-19'
           } 
         }
       },
@@ -654,6 +757,22 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2023,
             DATE_START => '2023-10-28',
             DATE_END => '2023-10-29'
+          } 
+        }
+      },
+
+      '2024' =>
+      {
+        
+        # https://www2.bridge.dk/Default.aspx?ID=26081#32104
+        CITY => 'Hillerød',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-10-26',
+            DATE_END => '2024-10-27'
           } 
         }
       }
@@ -1032,7 +1151,20 @@ my %TOURNAMENTS_DENMARK =
             DATE_END => '2023-09-10'
           } 
         }
-      }
+      },
+
+      '2024' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-07',
+            DATE_END => '2024-09-08'
+          },
+        }
+      },
     }
   },
 
@@ -1768,6 +1900,20 @@ my %TOURNAMENTS_DENMARK =
         }
       },
 
+      '2020-21' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            WEEKEND => 1,
+            DATE_START => '2020-10-03',
+            DATE_END => '2020-10-04'
+          },
+        }
+      },
+
       '2021-22' =>
       {
         # https://www2.bridge.dk/Default.aspx?ID=25956#31518
@@ -1797,13 +1943,20 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Maybe a special match
+            YEAR => 2022,
+            DATE_START => '2022-02-03',
+            DATE_END => '2022-02-03'
+          },
+          'C4' => 
+          {
             # Copenhagen
             YEAR => 2022,
             WEEKEND => 4,
             DATE_START => '2022-03-05',
             DATE_END => '2022-03-06'
           },
-          'C4' => 
+          'C5' => 
           {
             # Århus
             YEAR => 2022,
@@ -1812,7 +1965,7 @@ my %TOURNAMENTS_DENMARK =
             DATE_START => '2022-04-23',
             DATE_END => '2022-04-23'
           },
-          'C5' => 
+          'C6' => 
           {
             # Århus
             YEAR => 2022,
@@ -1996,20 +2149,32 @@ my %TOURNAMENTS_DENMARK =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-03-12',
+            DATE_END => '2017-03-12'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-16',
+            DATE_END => '2024-03-17'
           },
         }
       },
@@ -2092,6 +2257,21 @@ my %TOURNAMENTS_DENMARK =
             major => 'SEGMENT',
             DATE_START => '2014-04-12',
             DATE_END => '2014-04-13'
+          } 
+        }
+      },
+
+      '2017' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-21',
+            DATE_END => '2017-05-21'
           } 
         }
       },
@@ -2263,7 +2443,20 @@ my %TOURNAMENTS_DENMARK =
         }
       },
 
-      # Can't find 2019
+      '2019' =>
+      {
+        MEET => 'Danish Bridge Festival',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            DATE_START => '2019-07-06',
+            DATE_END => '2019-07-07'
+          } 
+        }
+      },
 
       '2022' =>
       {
@@ -2347,7 +2540,31 @@ my %TOURNAMENTS_DENMARK =
             DATE_END => '2014-05-18'
           } 
         }
-      }
+      },
+      '2017' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-14',
+            DATE_END => '2017-05-14'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-07',
+            DATE_END => '2023-05-07'
+          },
+        }
+      },
     }
   },
 
@@ -2534,6 +2751,60 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2018,
             DATE_START => '2018-07-14',
             DATE_END => '2018-07-15'
+          } 
+        }
+      },
+
+      '2019' =>
+      {
+        MEET => 'Danish Bridge Festival',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-13',
+            DATE_END => '2019-07-14'
+          } 
+        }
+      },
+
+      '2022' =>
+      {
+        MEET => 'Danish Bridge Festival',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-17',
+            DATE_END => '2022-07-17'
+          } 
+        }
+      },
+
+      '2023' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-16',
+            DATE_END => '2023-09-17'
+          } 
+        }
+      },
+
+      '2024' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-21',
+            DATE_END => '2024-09-22'
           } 
         }
       }
@@ -2807,6 +3078,18 @@ my %TOURNAMENTS_DENMARK =
             DATE_END => '2012-04-15'
           } 
         }
+      },
+      '2019' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-09',
+            DATE_END => '2019-03-10'
+          },
+        }
       }
     }
   },
@@ -2818,19 +3101,67 @@ my %TOURNAMENTS_DENMARK =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-02-05',
+            DATE_END => '2017-02-05'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-09',
+            DATE_END => '2019-03-10'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-02',
+            DATE_END => '2020-02-02'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-02-06',
+            DATE_END => '2022-02-06'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-03',
+            DATE_END => '2024-02-04'
           },
         }
       },
@@ -2905,15 +3236,15 @@ my %TOURNAMENTS_DENMARK =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-08-27',
+            DATE_END => '2017-08-27'
           },
         }
       },
@@ -2999,15 +3330,15 @@ my %TOURNAMENTS_DENMARK =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-05-26',
+            DATE_END => '2017-05-27'
           },
         }
       },

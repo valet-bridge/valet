@@ -681,10 +681,18 @@ my %MEETS_AUSTRALIA =
         # Open ("2025")
         YEAR => 2024,
         CITY => 'Canberra',
+        DATE_START => '2024-01-11',
+        DATE_END => '2024-01-14'
+      },
+      '2024B' =>
+      {
+        # Open ("2025")
+        YEAR => 2024,
+        CITY => 'Canberra',
         DATE_START => '2024-11-16',
         DATE_END => '2024-11-21'
       },
-      '2024B' =>
+      '2024C' =>
       {
         # Mixed ("2025")
         YEAR => 2024,
@@ -1003,10 +1011,10 @@ my %MEETS_AUSTRALIA =
       '2023' =>
       {
         # https://www.myabf.com.au/events/congress/view/343
-        YEAR => 2024,
+        YEAR => 2023,
         CITY => 'Canberra',
-        DATE_START => '2024-01-10',
-        DATE_END => '2024-01-22'
+        DATE_START => '2023-01-10',
+        DATE_END => '2023-01-22'
       },
       '2024' =>
       {
@@ -1121,7 +1129,7 @@ my %MEETS_AUSTRALIA =
         YEAR => 2017,
         CITY => 'Canberra',
         DATE_START => '2017-01-07',
-        DATE_END => '2017-01-13'
+        DATE_END => '2017-01-14'
       },
       '2018' =>
       {
@@ -1703,6 +1711,111 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Australian Autumn Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-08',
+            DATE_END => '2017-05-08'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Australian Autumn Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-07',
+            DATE_END => '2018-05-07'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Australian Autumn Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-06',
+            DATE_END => '2019-05-06'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Australian Autumn Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-05-03',
+            DATE_END => '2021-05-03'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Australian Autumn Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-05-02',
+            DATE_END => '2022-05-02'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Australian Autumn Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-08',
+            DATE_END => '2023-05-08'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Australian Autumn Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-05-06',
+            DATE_END => '2024-05-06'
+          } 
+        }
+      },
     }
   },
 
@@ -2198,12 +2311,26 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2022' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-06',
+            DATE_END => '2022-07-07'
+          } 
+        }
+      },
     }
   },
 
   'Australian Mixed Teams',
   {
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2211,15 +2338,17 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2019A',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-01-26',
+            DATE_END => '2019-01-28'
           } 
         }
       },
@@ -2228,7 +2357,6 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Australian Mixed Trials',
   {
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2236,15 +2364,52 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
+      {
+        MEET => 'Australian Playoffs',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-26',
+            DATE_END => '2020-01-27'
+          } 
+        }
+      },
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-12-03',
+            DATE_END => '2022-12-08'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-09',
+            DATE_END => '2023-12-14'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-07',
+            DATE_END => '2024-12-12'
           } 
         }
       },
@@ -2661,6 +2826,84 @@ my %TOURNAMENTS_AUSTRALIA =
           },
         }
       },
+      '2017' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-20',
+            DATE_END => '2017-01-22'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-19',
+            DATE_END => '2018-01-21'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-18',
+            DATE_END => '2019-01-20'
+          },
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-17',
+            DATE_END => '2020-01-19'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-20',
+            DATE_END => '2023-01-22'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-19',
+            DATE_END => '2024-01-21'
+          },
+        }
+      },
     }
   },
 
@@ -2841,6 +3084,58 @@ my %TOURNAMENTS_AUSTRALIA =
             DATE_START => '2016-01-16',
             DATE_END => '2016-01-17'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-14',
+            DATE_END => '2017-01-15'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-13',
+            DATE_END => '2018-01-14'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-12',
+            DATE_END => '2019-01-13'
+          },
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-11',
+            DATE_END => '2020-01-12'
+          },
         }
       },
     }
@@ -3029,6 +3324,58 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-14',
+            DATE_END => '2017-01-15'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-13',
+            DATE_END => '2018-01-14'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-12',
+            DATE_END => '2019-01-13'
+          },
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-11',
+            DATE_END => '2020-01-12'
+          },
+        }
+      },
     }
   },
 
@@ -3195,6 +3542,103 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2016-07-01',
             DATE_END => '2016-07-01'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-21',
+            DATE_END => '2017-07-21'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-02',
+            DATE_END => '2018-08-03'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-17',
+            DATE_END => '2019-07-18'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-06',
+            DATE_END => '2022-07-07'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-07-13',
+            DATE_END => '2023-07-14'
+          } 
+        }
+      },
+    }
+  },
+
+  'Australian Open Pair Trials',
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2017A',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-15',
+            DATE_END => '2017-11-16'
           } 
         }
       },
@@ -3603,7 +4047,7 @@ my %TOURNAMENTS_AUSTRALIA =
       {
         # https://abfevents.com.au/events/playoffs/2025/open/
         MEET => 'Australian Playoffs',
-        MEET_TAG => '2024A',
+        MEET_TAG => '2024B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3611,6 +4055,32 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2024,
             DATE_START => '2024-11-16',
             DATE_END => '2024-11-21'
+          } 
+        }
+      },
+    }
+  },
+
+  'Australian Senior Pair Trials',
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2017B',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-06',
+            DATE_END => '2017-12-07'
           } 
         }
       },
@@ -4059,7 +4529,21 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2017' =>
+      '2017A' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => 2017,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-21',
+            DATE_END => '2017-07-21'
+          } 
+        }
+      },
+      '2017B' =>
       {
         # http://abfevents.com.au/events/playoffs/2018/sw/
         MEET => 'Australian Playoffs',
@@ -4074,7 +4558,21 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2018' =>
+      '2018A' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => 2018,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-02',
+            DATE_END => '2018-08-03'
+          } 
+        }
+      },
+      '2018B' =>
       {
         # http://abfevents.com.au/events/playoffs/2019/SW/
         MEET => 'Australian Playoffs',
@@ -4089,7 +4587,23 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2019' =>
+      '2019A' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => 2019,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-17',
+            DATE_END => '2019-07-18'
+          } 
+        }
+      },
+      '2019B' =>
       {
         # http://abfevents.com.au/events/playoffs/2020/sw/
         MEET => 'Australian Playoffs',
@@ -4104,7 +4618,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2022' =>
+      '2022A' =>
       {
         # http://abfevents.com.au/events/playoffs/2022/ows/
         MEET => 'Australian Playoffs',
@@ -4116,6 +4630,66 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2022,
             DATE_START => '2022-04-18',
             DATE_END => '2022-04-23'
+          } 
+        }
+      },
+      '2022B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => 2022,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-06',
+            DATE_END => '2022-07-07'
+          } 
+        }
+      },
+      '2023A' =>
+      {
+        MEET => 'Australian Summer Festival',
+        MEET_TAG => '2023',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-13',
+            DATE_END => '2023-01-15'
+          } 
+        }
+      },
+      '2023B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => '2023',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-07-13',
+            DATE_END => '2023-07-14'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2024A',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-11',
+            DATE_END => '2024-01-14'
           } 
         }
       },
@@ -4142,6 +4716,31 @@ my %TOURNAMENTS_AUSTRALIA =
             DATE_START => '2000-01-01',
             DATE_END => '2000-01-01'
           } 
+        }
+      },
+    }
+  },
+
+  'Australian Spring Mixed Teams',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-21',
+            DATE_END => '2023-10-25'
+          },
         }
       },
     }
@@ -4357,6 +4956,84 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2016' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-22',
+            DATE_END => '2016-10-23'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-21',
+            DATE_END => '2017-10-22'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-20',
+            DATE_END => '2018-10-21'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-19',
+            DATE_END => '2019-10-20'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-22',
+            DATE_END => '2022-10-23'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-21',
+            DATE_END => '2023-10-25'
+          },
+        }
+      },
     }
   },
 
@@ -4543,6 +5220,47 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2014-11-06',
             DATE_END => '2014-11-06'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-27',
+            DATE_END => '2016-10-27'
+          } 
+        }
+      },
+    }
+  },
+
+  'Australian Women Pair Trials',
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Women',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2017B',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-06',
+            DATE_END => '2017-12-07'
           } 
         }
       },
@@ -4971,7 +5689,21 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2017' =>
+      '2017A' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => 2017,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-21',
+            DATE_END => '2017-07-21'
+          } 
+        }
+      },
+      '2017B' =>
       {
         # https://abfevents.com.au/events/playoffs/2018/sw/
         MEET => 'Australian Playoffs',
@@ -4986,7 +5718,21 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2018' =>
+      '2018A' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => 2018,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-02',
+            DATE_END => '2018-08-03'
+          } 
+        }
+      },
+      '2018B' =>
       {
         # https://abfevents.com.au/events/playoffs/2019/SW/
         MEET => 'Australian Playoffs',
@@ -5001,7 +5747,23 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2019' =>
+      '2019A' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => 2019,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-17',
+            DATE_END => '2019-07-18'
+          } 
+        }
+      },
+      '2019B' =>
       {
         # https://abfevents.com.au/events/playoffs/2020/sw/
         MEET => 'Australian Playoffs',
@@ -5016,7 +5778,20 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2022' =>
+      '2020' =>
+      {
+        MEET => 'Australian Summer Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-11',
+            DATE_END => '2020-01-12'
+          },
+        }
+      },
+      '2022A' =>
       {
         # https://abfevents.com.au/events/playoffs/2022/ows/
         MEET => 'Australian Playoffs',
@@ -5028,6 +5803,66 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2022,
             DATE_START => '2022-04-18',
             DATE_END => '2022-04-23'
+          } 
+        }
+      },
+      '2022B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => '2022',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-07',
+            DATE_END => '2022-07-07'
+          } 
+        }
+      },
+      '2023A' =>
+      {
+        MEET => 'Australian Summer Festival',
+        MEET_TAG => '2023',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-13',
+            DATE_END => '2023-01-15'
+          } 
+        }
+      },
+      '2023B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => '2023',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-07-13',
+            DATE_END => '2023-07-14'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2024A',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-11',
+            DATE_END => '2024-01-14'
           } 
         }
       },
@@ -5401,6 +6236,79 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2016-01-11',
             DATE_END => '2016-01-15'
+          } 
+        }
+      },
+      '2017A' =>
+      {
+        MEET => 'Australian Youth Week',
+        MEET_TAG => 2017,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-13',
+            DATE_END => '2017-01-14'
+          } 
+        }
+      },
+      '2017B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => 2017,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-21',
+            DATE_END => '2017-07-21'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-02',
+            DATE_END => '2018-08-03'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-17',
+            DATE_END => '2019-07-18'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-07-13',
+            DATE_END => '2023-07-14'
           } 
         }
       },
@@ -6536,15 +7444,27 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-12-11',
+            DATE_END => '2023-12-18'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-02',
+            DATE_END => '2024-12-09'
           } 
         }
       },
