@@ -195,7 +195,6 @@ my %MULTI_TYPOS =
   'Tomohon Open Teams' => [
     'tomohon international bridge tournament'],
   'Walikota Solo Pairs Cup' => [
-    'kejurnas 58 solo',
     'walikota cup'],
   'West Java Open Teams' => [
     'banten sports week',

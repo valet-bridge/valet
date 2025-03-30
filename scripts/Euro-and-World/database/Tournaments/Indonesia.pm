@@ -111,6 +111,15 @@ my %MEETS_INDONESIA =
         DATE_START => '2016-05-09',
         DATE_END => '2016-05-17'
       },
+      '2017' =>
+      {
+        # http://www.kejurnasbridge2017.com/, Wayback Machine
+        ORDINAL => 55,
+        YEAR => 2017,
+        CITY => 'Sidoarjo',
+        DATE_START => '2017-07-17',
+        DATE_END => '2017-07-26'
+      },
       '2018' =>
       {
         # https://bridge.web.id/2018/kejurnas/
@@ -329,6 +338,25 @@ my %MEETS_INDONESIA =
         DATE_START => '2015-11-03',
         DATE_END => '2015-11-05'
       },
+      '2016' =>
+      {
+        MEET_ORDINAL => 18,
+        YEAR => 2016,
+        DATE_START => '2016-11-13',
+        DATE_END => '2016-11-15'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-11-11',
+        DATE_END => '2019-11-13'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-11-15',
+        DATE_END => '2024-11-16'
+      },
     }
   },
 );
@@ -346,15 +374,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-09-21',
+            DATE_END => '2019-09-29'
           },
         }
       },
@@ -401,15 +429,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-04-29',
+            DATE_END => '2017-05-01'
           },
         }
       },
@@ -427,15 +455,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-07-13',
+            DATE_END => '2018-07-15'
           },
         }
       },
@@ -453,15 +481,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-06-13',
+            DATE_END => '2024-06-15'
           },
         }
       },
@@ -479,15 +507,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-08-16',
+            DATE_END => '2024-08-18'
           },
         }
       },
@@ -505,15 +533,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-02-17',
+            DATE_END => '2023-02-17'
           },
         }
       },
@@ -531,15 +559,27 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-11-10',
+            DATE_END => '2023-11-14'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-12',
+            DATE_END => '2024-11-13'
           },
         }
       },
@@ -660,6 +700,45 @@ my %TOURNAMENTS_INDONESIA =
           },
         }
       },
+      '2019' =>
+      {
+        ORDINAL => 19,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-26',
+            DATE_END => '2019-04-27'
+          },
+        }
+      },
+      '2022' =>
+      {
+        ORDINAL => 22,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-22',
+            DATE_END => '2022-07-23'
+          },
+        }
+      },
+      '2023' =>
+      {
+        ORDINAL => 23,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-06-21',
+            DATE_END => '2023-06-24'
+          },
+        }
+      },
     }
   },
 
@@ -674,15 +753,16 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
+        ORDINAL => 22,
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-07-24',
+            DATE_END => '2022-07-24'
           },
         }
       },
@@ -977,15 +1057,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-11-01',
+            DATE_END => '2019-11-03'
           },
         }
       },
@@ -1135,6 +1215,19 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2015-05-13',
             DATE_END => '2015-05-13'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-21',
+            DATE_END => '2017-07-23' 
+          },
         }
       },
     }
@@ -1625,6 +1718,19 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-17',
+            DATE_END => '2017-07-19' 
+          },
+        }
+      },
     }
   },
 
@@ -1732,6 +1838,19 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2015,
             DATE_START => '2015-09-07',
             DATE_END => '2015-09-11'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Indonesian National Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-18',
+            DATE_END => '2016-09-22',
           },
         }
       },
@@ -1868,6 +1987,19 @@ my %TOURNAMENTS_INDONESIA =
             major => 'SEGMENT',
             DATE_START => '2015-09-11',
             DATE_END => '2015-09-11'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Indonesian National Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-22',
+            DATE_END => '2016-09-28',
           },
         }
       },
@@ -2437,22 +2569,22 @@ my %TOURNAMENTS_INDONESIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-11-08',
+            DATE_END => '2016-11-16'
           },
         }
       },
@@ -3052,24 +3184,52 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian University Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U31',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
+        MEET => 'Indonesian University Championship',
+
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-11-13',
+            DATE_END => '2016-11-15'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Indonesian University Championship',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-11',
+            DATE_END => '2019-11-13'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Indonesian University Championship',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-15',
+            DATE_END => '2024-11-16'
           },
         }
       },
@@ -3270,6 +3430,19 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
+      '2016' =>
+      {
+        MEET => 'Indonesian National Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-22',
+            DATE_END => '2016-09-28',
+          },
+        }
+      },
     }
   },
 
@@ -3312,15 +3485,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-08-25',
+            DATE_END => '2023-08-27'
           },
         }
       },
@@ -3693,15 +3866,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-10-15',
+            DATE_END => '2023-10-15'
           },
         }
       },
@@ -3755,15 +3928,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-09-30',
+            DATE_END => '2024-10-02'
           },
         }
       },
@@ -3781,15 +3954,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-08-01',
+            DATE_END => '2019-08-03'
           },
         }
       },
@@ -3807,15 +3980,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-11-19',
+            DATE_END => '2024-11-24'
           },
         }
       },
@@ -3846,6 +4019,42 @@ my %TOURNAMENTS_INDONESIA =
             major => 'ROUND',
             DATE_START => '2014-12-14',
             DATE_END => '2014-12-14'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-17',
+            DATE_END => '2016-12-18'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-18',
+            DATE_END => '2017-11-19'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-11-20',
+            DATE_END => '2021-11-21'
           },
         }
       },
@@ -3981,6 +4190,18 @@ my %TOURNAMENTS_INDONESIA =
           },
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-03',
+            DATE_END => '2018-08-05'
+          },
+        }
+      },
     }
   },
 
@@ -4036,10 +4257,11 @@ my %TOURNAMENTS_INDONESIA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U31',
 
     EDITIONS =>
     {
+      # The ordinals are all over the place here.
       '2013' =>
       {
         ORDINAL => 2,
@@ -4060,6 +4282,32 @@ my %TOURNAMENTS_INDONESIA =
             major => 'ROUND',
             DATE_START => '2013-06-09',
             DATE_END => '2013-06-09'
+          },
+        }
+      },
+      '2016' =>
+      {
+        ORDINAL => 11,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-05',
+            DATE_END => '2016-10-05'
+          },
+        }
+      },
+      '2024' =>
+      {
+        ORDINAL => 24,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-08-02',
+            DATE_END => '2024-08-02'
           },
         }
       },
@@ -4431,6 +4679,19 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
+      '2023' =>
+      {
+        CITY => 'Jakarta',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-13',
+            DATE_END => '2023-10-15'
+          } 
+        }
+      },
     }
   },
 
@@ -4445,15 +4706,15 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-08-05',
+            DATE_END => '2019-08-07'
           },
         }
       },
@@ -4471,15 +4732,27 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-12-01',
+            DATE_END => '2023-12-03'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-29',
+            DATE_END => '2024-12-01'
           },
         }
       },
@@ -4490,22 +4763,23 @@ my %TOURNAMENTS_INDONESIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    CITY => 'Solo',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-05-29',
+            DATE_END => '2022-05-29'
           },
         }
       },
@@ -4589,6 +4863,19 @@ my %TOURNAMENTS_INDONESIA =
           },
         }
       },
+      '2018' =>
+      {
+        ORDINAL => 13,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2084,
+            DATE_START => '2018-10-06',
+            DATE_END => '2018-10-14'
+          },
+        }
+      },
     }
   },
 
@@ -4609,9 +4896,9 @@ my %TOURNAMENTS_INDONESIA =
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-10-21',
+            DATE_END => '2016-10-30'
           },
         }
       },

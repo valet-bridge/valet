@@ -857,7 +857,7 @@ my @LOCAL_SUBS =
     CORR => 'Asia Open Team Trials' },
   { START => 52258, END => 52417,
     TEXT => 'Indonesian National Champh*ionships*', 
-    CORR => 'Indonesian National Games' },
+    CORR => 'Indonesian National Championship Week' },
   { START => 52564, END => 52577, TEXT => ' 1_8$', CORR => ' QF' },
   { START => 52592, END => 52602, 
     TEXT => 'Mautern Teams', CORR => 'Mautern Open Teams' },

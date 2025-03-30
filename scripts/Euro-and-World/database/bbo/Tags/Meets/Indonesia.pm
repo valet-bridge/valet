@@ -35,6 +35,7 @@ my %MULTI_TYPOS =
     'indonesian national championship',
     'indonesian national championships',
     'indonesian national champonship',
+    'kejurnas 58 solo',
     'national indonesian championship',
     'national championship indonesia'],
   'Indonesian National Games' => [
