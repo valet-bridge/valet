@@ -118,8 +118,8 @@ my %COUNTRY_TO_CITY =
   Argentina => ['buenos aires', 'mar del plata', 'san luis'],
   Australia => [
     'adelaide', 'banora point', 'brisbane', 'broadbeach', 'cairns', 
-    'canberra', 'gold coast', 'hobart', 'melbourne', 'perth', 
-    'sydney', 'tweed heads'],
+    'canberra', 'gold coast', 'hobart', 'melbourne', 
+    'moonee ponds', 'perth', 'sydney', 'tweed heads'],
   Austria => ['graz', 'mautern', 'vienna'],
   Belarus => ['minsk'],
   Belgium => ['antwerpen', 'bruges', 'brussels', 'gent', 'leuven',

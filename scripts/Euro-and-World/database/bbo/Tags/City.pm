@@ -69,6 +69,7 @@ my @MULTI_WORDS =
   'Miercurea Ciuc',
   'Mitra Vihar',
   'Mo i Rana',
+  'Moonee Ponds',
   'Monte Carlo',
   'Muara Bungo',
   'Nea Moudania',

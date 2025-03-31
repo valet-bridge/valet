@@ -79,7 +79,9 @@ my @MULTI_WORDS =
   'Tomohon Open Teams',
   'Tugu Muda Cup',
   'Walikota Solo Pairs Cup',
+  'West Java Mixed Teams',
   'West Java Open Teams',
+  'West Java Women Teams',
   'West Kalimantan Open Teams'
 );
 
@@ -195,7 +197,8 @@ my %MULTI_TYPOS =
   'Tomohon Open Teams' => [
     'tomohon international bridge tournament'],
   'Walikota Solo Pairs Cup' => [
-    'walikota cup'],
+    'walikota cup',
+    'walikota cup malang'],
   'West Java Open Teams' => [
     'banten sports week',
     'porda west java',

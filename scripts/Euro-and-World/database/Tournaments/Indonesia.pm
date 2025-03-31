@@ -234,6 +234,12 @@ my %MEETS_INDONESIA =
         DATE_START => '2015-09-06',
         DATE_END => '2015-09-12'
       },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-07-25',
+        DATE_END => '2023-07-29'
+      },
     }
   },
 
@@ -260,11 +266,43 @@ my %MEETS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        MEET_ORDINAL => 12,
+        REGION => 'West Kalimantan',
+        YEAR => 2018,
+        DATE_START => '2018-11-19',
+        DATE_END => '2018-11-23'
+      },
+      '2019' =>
+      {
+        MEET_ORDINAL => 6,
+        REGION => 'East Java',
+        YEAR => 2019,
+        DATE_START => '2019-07-08',
+        DATE_END => '2019-07-13'
+      },
+      '2022A' =>
+      {
+        MEET_ORDINAL => 7,
+        REGION => 'East Java',
+        YEAR => 2022,
+        DATE_START => '2022-06-26',
+        DATE_END => '2022-07-01'
+      },
+      '2022B' =>
+      {
+        MEET_ORDINAL => 13,
+        REGION => 'West Kalimantan',
+        YEAR => 2022,
+        DATE_START => '2022-11-10',
+        DATE_END => '2022-11-16'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-09-09',
+        DATE_END => '2023-09-15'
       },
     }
   },
@@ -343,7 +381,7 @@ my %MEETS_INDONESIA =
         MEET_ORDINAL => 18,
         YEAR => 2016,
         DATE_START => '2016-11-13',
-        DATE_END => '2016-11-15'
+        DATE_END => '2016-11-20'
       },
       '2019' =>
       {
@@ -541,7 +579,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2023,
             DATE_START => '2023-02-17',
-            DATE_END => '2023-02-17'
+            DATE_END => '2023-02-19'
           },
         }
       },
@@ -1226,7 +1264,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2017,
             DATE_START => '2017-07-21',
-            DATE_END => '2017-07-23' 
+            DATE_END => '2017-07-25' 
           },
         }
       },
@@ -1731,6 +1769,19 @@ my %TOURNAMENTS_INDONESIA =
           },
         }
       },
+      '2018' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-08',
+            DATE_END => '2018-12-15' 
+          },
+        }
+      },
     }
   },
 
@@ -1851,6 +1902,19 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2016,
             DATE_START => '2016-09-18',
             DATE_END => '2016-09-22',
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Indonesian National Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-09',
+            DATE_END => '2024-09-12',
           },
         }
       },
@@ -2003,6 +2067,45 @@ my %TOURNAMENTS_INDONESIA =
           },
         }
       },
+      '2019' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-05',
+            DATE_END => '2019-12-09',
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Indonesian National Pre-Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-25',
+            DATE_END => '2023-07-29',
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Indonesian National Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-13',
+            DATE_END => '2024-09-18',
+          },
+        }
+      },
     }
   },
 
@@ -2042,6 +2145,19 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2012,
             DATE_START => '2012-09-10',
             DATE_END => '2012-09-11'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Indonesian National Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-09',
+            DATE_END => '2024-09-12',
           },
         }
       },
@@ -2165,6 +2281,58 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
+      '2019' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-12',
+            DATE_END => '2019-12-13',
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-26',
+            DATE_END => '2022-11-29'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Indonesian National Pre-Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-28',
+            DATE_END => '2023-07-29',
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Indonesian National Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-13',
+            DATE_END => '2024-09-18',
+          },
+        }
+      },
     }
   },
 
@@ -2223,7 +2391,6 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Open Teams' =>
   {
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2346,6 +2513,58 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
+      '2018' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-21',
+            DATE_END => '2018-11-23',
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-10',
+            DATE_END => '2019-12-13',
+          },
+        }
+      },
+      '2022A' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        MEET_TAG => 2022,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-25',
+            DATE_END => '2022-12-04'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-31',
+            DATE_END => '2023-08-03'
+          } 
+        }
+      },
     }
   },
 
@@ -2379,6 +2598,407 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2007-07-27',
             DATE_END => '2007-07-27'
           } 
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Junior Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'U22',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        MEET_TAG => '2022A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-06-30',
+            DATE_END => '2022-07-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Junior Women Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'U22',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        MEET_TAG => '2022A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-06-30',
+            DATE_END => '2022-07-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Junior Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U22',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        MEET_TAG => '2022A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-06-26',
+            DATE_END => '2022-07-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Men Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Men',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-20',
+            DATE_END => '2018-11-20',
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Men Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Men',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-09',
+            DATE_END => '2023-09-15'
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Mixed Junior Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'U22',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        MEET_TAG => '2022A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-06-28',
+            DATE_END => '2022-06-29'
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Mixed Pairs' =>
+  {
+    FORM => 'Mixed',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-19',
+            DATE_END => '2018-11-19',
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        MEET_TAG => '2022B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-10',
+            DATE_END => '2022-11-10'
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Mixed Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-12',
+            DATE_END => '2019-07-13'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        MEET_TAG => '2022B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-11',
+            DATE_END => '2022-11-15'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-09',
+            DATE_END => '2023-09-15'
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Open Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        MEET_TAG => '2022B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-12',
+            DATE_END => '2022-11-12'
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Swiss Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    MOVEMENT => 'Swiss',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        MEET_TAG => '2022B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-13',
+            DATE_END => '2022-11-13'
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-08',
+            DATE_END => '2019-07-09'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        MEET_TAG => '2022B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-11',
+            DATE_END => '2022-11-16'
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Senior Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-25',
+            DATE_END => '2022-11-29'
+          } 
+        }
+      },
+    }
+  },
+
+  'Indonesian Province Women Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-08',
+            DATE_END => '2019-07-09'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Indonesian Province Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-09',
+            DATE_END => '2023-09-15'
+          },
         }
       },
     }
@@ -2493,6 +3113,42 @@ my %TOURNAMENTS_INDONESIA =
             major => 'SEGMENT|ROUND',
             DATE_START => '2010-04-16',
             DATE_END => '2010-04-18'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-29',
+            DATE_END => '2020-03-01'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-21',
+            DATE_END => '2022-08-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-10',
+            DATE_END => '2022-09-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-24',
+            DATE_END => '2022-09-25'
           },
         }
       },
@@ -2642,6 +3298,31 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2016-03-19',
             DATE_END => '2016-03-21'
           } 
+        }
+      },
+    }
+  },
+
+  'Indonesian U16 Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U16',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-20',
+            DATE_END => '2017-07-20'
+          }
         }
       },
     }
@@ -2840,6 +3521,19 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-20',
+            DATE_END => '2017-07-20'
+          }
+        }
+      },
     }
   },
 
@@ -3008,6 +3702,33 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2015-11-05',
             DATE_END => '2015-11-05'
           } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Indonesian University Championship',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-11-18',
+            DATE_END => '2016-11-20'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-20',
+            DATE_END => '2017-07-20'
+          }
         }
       },
     }
@@ -3273,6 +3994,19 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
+      '2024' =>
+      {
+        MEET => 'Indonesian National Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-09',
+            DATE_END => '2024-09-12',
+          },
+        }
+      },
     }
   },
 
@@ -3440,6 +4174,32 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2016,
             DATE_START => '2016-09-22',
             DATE_END => '2016-09-28',
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Indonesian National Pre-Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-25',
+            DATE_END => '2023-07-29',
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Indonesian National Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-13',
+            DATE_END => '2024-09-18'
           },
         }
       },
@@ -4294,7 +5054,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2016,
             DATE_START => '2016-10-05',
-            DATE_END => '2016-10-05'
+            DATE_END => '2016-10-10'
           },
         }
       },
@@ -4307,7 +5067,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2024,
             DATE_START => '2024-08-02',
-            DATE_END => '2024-08-02'
+            DATE_END => '2024-08-03'
           },
         }
       },
@@ -4786,6 +5546,33 @@ my %TOURNAMENTS_INDONESIA =
     }
   },
 
+  'West Java Mixed Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Regional',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        ORDINAL => 13,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-06',
+            DATE_END => '2018-10-14'
+          },
+        }
+      },
+    }
+  },
+
   'West Java Open Teams' =>
   {
     %GLOBAL,
@@ -4870,7 +5657,34 @@ my %TOURNAMENTS_INDONESIA =
         {
           'C0' => 
           {
-            YEAR => 2084,
+            YEAR => 2018,
+            DATE_START => '2018-10-06',
+            DATE_END => '2018-10-14'
+          },
+        }
+      },
+    }
+  },
+
+  'West Java Women Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Regional',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        ORDINAL => 13,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
             DATE_START => '2018-10-06',
             DATE_END => '2018-10-14'
           },

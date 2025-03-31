@@ -172,15 +172,27 @@ my %TOURNAMENTS_NETHERLANDS =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-09-29',
+            DATE_END => '2018-09-29'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-28',
+            DATE_END => '2019-09-28'
           },
         }
       },
@@ -576,6 +588,126 @@ my %TOURNAMENTS_NETHERLANDS =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-14',
+            DATE_END => '2017-01-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-28',
+            DATE_END => '2017-01-29'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-13',
+            DATE_END => '2018-01-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-27',
+            DATE_END => '2018-01-28'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-12',
+            DATE_END => '2019-01-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-26',
+            DATE_END => '2019-01-27'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-11',
+            DATE_END => '2020-01-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-25',
+            DATE_END => '2020-01-26'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-14',
+            DATE_END => '2022-05-15'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-14',
+            DATE_END => '2023-01-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-28',
+            DATE_END => '2023-01-29'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-03',
+            DATE_END => '2024-02-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-24',
+            DATE_END => '2024-02-25'
+          } 
+        }
+      },
     }
   },
 
@@ -713,6 +845,58 @@ my %TOURNAMENTS_NETHERLANDS =
             major => 'ROUND',
             DATE_START => '2015-09-05',
             DATE_END => '2015-09-05'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-10-15',
+            DATE_END => '2016-10-15'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-10-08',
+            DATE_END => '2017-10-08'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-09-23',
+            DATE_END => '2018-09-23'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-09-22',
+            DATE_END => '2019-09-22'
           } 
         }
       },
@@ -865,7 +1049,6 @@ my %TOURNAMENTS_NETHERLANDS =
       },
     }
   },
-
 
   'Top Circuit',
   {
@@ -1062,6 +1245,94 @@ my %TOURNAMENTS_NETHERLANDS =
             major => 'ROUND',
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-06'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2017-03-04',
+            DATE_END => '2017-03-05'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2018-03-03',
+            DATE_END => '2018-03-04'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2019-03-02',
+            DATE_END => '2019-03-03'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2020-02-22',
+            DATE_END => '2020-02-23'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2023-03-04',
+            DATE_END => '2023-03-05'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-09',
+            DATE_END => '2024-03-10'
           } 
         }
       },
@@ -1520,6 +1791,45 @@ my %TOURNAMENTS_NETHERLANDS =
             DATE_START => '2016-03-25',
             DATE_END => '2016-03-25'
           } 
+        }
+      },
+      '2017' =>
+      {
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-27',
+            DATE_END => '2017-03-31'
+          },
+        }
+      },
+      '2018' =>
+      {
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-26',
+            DATE_END => '2018-03-30'
+          },
+        }
+      },
+      '2019' =>
+      {
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-25',
+            DATE_END => '2019-03-29'
+          },
         }
       },
     }

@@ -29,6 +29,7 @@ my @MULTI_WORDS =
   'Romanian Open Trials',
   'Romanian Second League',
   'Romanian Senior Team Trials',
+  'Romanian Super League',
   'Romanian Women Team Trials',
 );
 
@@ -50,7 +51,6 @@ my %MULTI_TYPOS =
     'romanian national teams div a',
     'romanian national division',
     'romanian national teams- div a',
-    'romanian superleague' ,
     'romanian team championship',
     'romanian teams-a division',
     'romanian teams- a division'],
@@ -94,6 +94,9 @@ my %MULTI_TYPOS =
     'cn ecgipe div b seria a'],
   'Romanian Senior Team Trials' => [
     'romanian seniors trials'],
+  'Romanian Super League' => [
+    'romanian superleague',
+    'romanian teams superleague'],
   'Romanian Women Team Trials' => [
     'romanian women trials'],
 );

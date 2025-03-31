@@ -614,6 +614,24 @@ my %MEETS_POLAND =
         DATE_START => '2016-04-01',
         DATE_END => '2016-04-03'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-04-05',
+        DATE_END => '2017-04-09'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-04-25',
+        DATE_END => '2018-04-29'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-04-24',
+        DATE_END => '2019-04-28'
+      },
     }
   },
 
@@ -3736,6 +3754,45 @@ my %TOURNAMENTS_POLAND =
           },
         }
       },
+      '2017' =>
+      {
+        MEET => 'Palace Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-04-05',
+            DATE_END => '2017-04-09'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Palace Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-25',
+            DATE_END => '2018-04-29'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Palace Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-24',
+            DATE_END => '2019-04-28'
+          },
+        }
+      },
     }
   },
 
@@ -6798,6 +6855,18 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-28',
+            DATE_END => '2017-10-28'
+          } 
+        }
+      },
     }
   },
 
@@ -6898,6 +6967,54 @@ my %TOURNAMENTS_POLAND =
             major => 'ROUND|SEGMENT',
             DATE_START => '2016-06-03',
             DATE_END => '2016-06-04'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-19',
+            DATE_END => '2017-05-20'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-25',
+            DATE_END => '2018-05-26'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-31',
+            DATE_END => '2019-06-01'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-03-26',
+            DATE_END => '2021-03-27'
           } 
         }
       },
@@ -7050,6 +7167,19 @@ my %TOURNAMENTS_POLAND =
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-05'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Zulawski Congress',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-03',
+            DATE_END => '2017-03-04'
+          },
         }
       },
     }

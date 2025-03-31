@@ -863,6 +863,18 @@ my %TOURNAMENTS_FRIENDLY =
           },
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-11',
+            DATE_END => '2017-12-12'
+          },
+        }
+      },
       '2018' =>
       {
         CHAPTERS =>
@@ -1337,6 +1349,80 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2019' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-31',
+            DATE_END => '2019-09-01'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-22',
+            DATE_END => '2020-02-23'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-02-25',
+            DATE_END => '2023-02-26'
+          } 
+        }
+      },
+    }
+  },
+
+  'Denmark Practice Pairs' => 
+  {
+    ORGANIZATION => 'DBF',
+    COUNTRY => 'Denmark',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-20',
+            DATE_END => '2024-04-20'
+          } 
+        }
+      },
     }
   },
 
@@ -1512,6 +1598,111 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2016-07-01',
             DATE_END => '2016-07-03'
+          } 
+        }
+      },
+      '2017A' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-04-21',
+            DATE_END => '2017-04-23'
+          } 
+        }
+      },
+      '2017B' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-10',
+            DATE_END => '2017-05-12'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-15',
+            DATE_END => '2018-05-16'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-29',
+            DATE_END => '2019-05-01'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-24',
+            DATE_END => '2020-01-26'
+          } 
+        }
+      },
+      '2024A' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-26',
+            DATE_END => '2024-01-28'
+          } 
+        }
+      },
+      '2024B' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-02',
+            DATE_END => '2024-02-03'
           } 
         }
       },
@@ -1826,6 +2017,22 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2016-11-08',
             DATE_END => '2016-11-08'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        ORIGIN => 'National',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-07',
+            DATE_END => '2023-04-08'
           } 
         }
       },
@@ -2850,6 +3057,66 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2017' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-11',
+            DATE_END => '2017-10-13'
+          } 
+        }
+      },
+      '2019A' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-12',
+            DATE_END => '2019-04-21'
+          } 
+        }
+      },
+      '2019B' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-10',
+            DATE_END => '2019-05-12'
+          } 
+        }
+      },
+      '2019C' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-17',
+            DATE_END => '2019-05-19'
+          } 
+        }
+      },
     }
   },
 
@@ -3192,6 +3459,156 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2017A' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-19',
+            DATE_END => '2017-03-19'
+          } 
+        }
+      },
+      '2017B' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-12',
+            DATE_END => '2017-05-14'
+          } 
+        }
+      },
+      '2017C' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-09',
+            DATE_END => '2017-06-11'
+          } 
+        }
+      },
+      '2017D' =>
+      {
+        GENDER => 'Open',
+        AGE => 'U26',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-04',
+            DATE_END => '2017-07-04'
+          } 
+        }
+      },
+      '2018A' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-14',
+            DATE_END => '2018-10-18'
+          } 
+        }
+      },
+      '2018B' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-30',
+            DATE_END => '2018-12-02'
+          } 
+        }
+      },
+      '2019A' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-18',
+            DATE_END => '2019-01-20'
+          } 
+        }
+      },
+      '2019B' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-05',
+            DATE_END => '2019-04-05'
+          } 
+        }
+      },
+      '2019C' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-12',
+            DATE_END => '2019-04-14'
+          } 
+        }
+      },
+      '2024B' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-05-17',
+            DATE_END => '2024-05-19'
+          } 
+        }
+      },
     }
   },
 
@@ -3465,6 +3882,21 @@ my %TOURNAMENTS_FRIENDLY =
             DATE_START => '2016-08-20',
             DATE_END => '2016-08-20'
           } 
+        }
+      },
+      '2017' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-24',
+            DATE_END => '2017-05-24'
+          },
         }
       },
     }
@@ -3780,6 +4212,21 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2014-05-16',
             DATE_END => '2014-05-18'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-01-02',
+            DATE_END => '2016-01-03'
           } 
         }
       },

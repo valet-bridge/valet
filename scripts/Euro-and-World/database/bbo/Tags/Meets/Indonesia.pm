@@ -43,11 +43,10 @@ my %MULTI_TYPOS =
     'indonesian games',
     'indonesian nasional games',
     'indonesian national sports week',
-    'indonesian national sports weeks'],
-  'Indonesian National Pre-Sports Week' => ['pra pon'],
-  'Indonesian National Sports Week' => [
+    'indonesian national sports weeks',
     'pekan olahraga nasional',
     'pekan olah raga nasional'],
+  'Indonesian National Pre-Sports Week' => ['pra pon'],
   'Indonesian Student Championship' => [
     'indonesian student championships',
     'indonesian students championship',

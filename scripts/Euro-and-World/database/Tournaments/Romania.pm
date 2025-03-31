@@ -65,19 +65,19 @@ my %TOURNAMENTS_ROMANIA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-05-02',
+            DATE_END => '2019-05-03'
           },
         }
       },
@@ -147,15 +147,27 @@ my %TOURNAMENTS_ROMANIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-03-23',
+            DATE_END => '2023-03-26'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-05-23',
+            DATE_END => '2024-05-26'
           },
         }
       },
@@ -173,15 +185,39 @@ my %TOURNAMENTS_ROMANIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-04-22',
+            DATE_END => '2017-04-23'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-14',
+            DATE_END => '2018-04-15'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-21',
+            DATE_END => '2019-04-21'
           },
         }
       },
@@ -192,22 +228,46 @@ my %TOURNAMENTS_ROMANIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-01-27',
+            DATE_END => '2017-01-29'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-27',
+            DATE_END => '2018-01-28'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-27',
+            DATE_END => '2024-01-27'
           },
         }
       },
@@ -218,22 +278,22 @@ my %TOURNAMENTS_ROMANIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Individual',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-11-18',
+            DATE_END => '2018-11-18'
           },
         }
       },
@@ -385,6 +445,18 @@ my %TOURNAMENTS_ROMANIA =
           } 
         }
       },
+      '2016-17' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-03',
+            DATE_END => '2017-03-05'
+          } 
+        }
+      },
     }
   },
 
@@ -392,22 +464,46 @@ my %TOURNAMENTS_ROMANIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-11-12',
+            DATE_END => '2016-11-13'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-12',
+            DATE_END => '2017-11-12'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-02',
+            DATE_END => '2018-12-02'
           },
         }
       },
@@ -420,7 +516,7 @@ my %TOURNAMENTS_ROMANIA =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
@@ -451,15 +547,51 @@ my %TOURNAMENTS_ROMANIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-04-29',
+            DATE_END => '2017-04-30'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-06-02',
+            DATE_END => '2018-06-03'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-09',
+            DATE_END => '2019-06-09'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-06-15',
+            DATE_END => '2024-06-15'
           },
         }
       },
@@ -634,7 +766,7 @@ my %TOURNAMENTS_ROMANIA =
           } 
         }
       },
-      '2016' =>
+      '2016A' =>
       {
         CHAPTERS =>
         {
@@ -654,6 +786,168 @@ my %TOURNAMENTS_ROMANIA =
             DATE_START => '2016-06-03',
             DATE_END => '2016-06-05'
           } 
+        }
+      },
+      '2016B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-11-04',
+            DATE_END => '2016-11-06'
+          },
+        }
+      },
+      '2017A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-02',
+            DATE_END => '2017-06-04'
+          },
+        }
+      },
+      '2017B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-24',
+            DATE_END => '2017-11-26'
+          },
+        }
+      },
+      '2018A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-23',
+            DATE_END => '2018-02-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-03',
+            DATE_END => '2018-03-04'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-02',
+            DATE_END => '2018-11-04'
+          },
+        }
+      },
+      '2019A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-15',
+            DATE_END => '2019-02-17'
+          },
+        }
+      },
+      '2019B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-29',
+            DATE_END => '2019-12-01'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-21',
+            DATE_END => '2020-02-23'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-16',
+            DATE_END => '2022-12-18'
+          },
+        }
+      },
+      '2023A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-02-10',
+            DATE_END => '2023-02-12'
+          },
+        }
+      },
+      '2023B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-03',
+            DATE_END => '2023-11-05'
+          },
+        }
+      },
+      '2024A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-01',
+            DATE_END => '2024-03-03'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-08',
+            DATE_END => '2024-11-10'
+          },
         }
       },
     }
@@ -749,6 +1043,72 @@ my %TOURNAMENTS_ROMANIA =
           } 
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-20',
+            DATE_END => '2018-01-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-03',
+            DATE_END => '2018-02-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-17',
+            DATE_END => '2018-03-18'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-07',
+            DATE_END => '2020-02-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-14',
+            DATE_END => '2020-02-15'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-02-25',
+            DATE_END => '2022-02-27'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-02',
+            DATE_END => '2024-02-11'
+          },
+        }
+      },
     }
   },
 
@@ -799,19 +1159,105 @@ my %TOURNAMENTS_ROMANIA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-03-16',
+            DATE_END => '2024-03-17'
+          },
+        }
+      },
+    }
+  },
+
+  'Romanian Super League',
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-02',
+            DATE_END => '2017-06-03'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-30',
+            DATE_END => '2019-03-31'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-10-03',
+            DATE_END => '2020-10-04'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-28',
+            DATE_END => '2022-05-29'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-06',
+            DATE_END => '2023-05-07'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-06-01',
+            DATE_END => '2024-06-02'
           },
         }
       },
@@ -824,20 +1270,20 @@ my %TOURNAMENTS_ROMANIA =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-03-16',
+            DATE_END => '2024-03-17'
           },
         }
       },

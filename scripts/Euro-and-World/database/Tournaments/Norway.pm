@@ -109,7 +109,7 @@ my %MEETS_NORWAY =
       '2019' =>
       {
         YEAR => 2019,
-        DATE_START => '2019-08-04',
+        DATE_START => '2019-08-03',
         DATE_END => '2019-08-10'
       },
       '2020' =>
@@ -121,13 +121,13 @@ my %MEETS_NORWAY =
       '2021' =>
       {
         YEAR => 2021,
-        DATE_START => '2021-08-02',
+        DATE_START => '2021-08-01',
         DATE_END => '2021-08-07'
       },
       '2022' =>
       {
         YEAR => 2022,
-        DATE_START => '2022-08-07',
+        DATE_START => '2022-08-06',
         DATE_END => '2022-08-13'
       },
       '2023' =>
@@ -163,6 +163,60 @@ my %MEETS_NORWAY =
         YEAR => 2015,
         DATE_START => '2015-09-18',
         DATE_END => '2015-09-20'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-09-23',
+        DATE_END => '2016-09-25'
+      },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-09-22',
+        DATE_END => '2017-09-24'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-09-21',
+        DATE_END => '2018-09-23'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-09-20',
+        DATE_END => '2019-09-22'
+      },
+      '2020' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-09-18',
+        DATE_END => '2020-09-20'
+      },
+      '2021' =>
+      {
+        YEAR => 2021,
+        DATE_START => '2021-10-02',
+        DATE_END => '2021-10-03'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-09-23',
+        DATE_END => '2022-09-25'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-09-22',
+        DATE_END => '2023-09-24'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-09-20',
+        DATE_END => '2024-09-22'
       },
     }
   },
@@ -597,15 +651,15 @@ my %TOURNAMENTS_NORWAY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-10-14',
+            DATE_END => '2017-10-15'
           },
         }
       },
@@ -633,6 +687,71 @@ my %TOURNAMENTS_NORWAY =
             major => 'SESSION',
             DATE_START => '2016-08-05',
             DATE_END => '2016-08-07'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'SESSION',
+            DATE_START => '2017-08-04',
+            DATE_END => '2017-08-06'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'SESSION',
+            DATE_START => '2018-06-29',
+            DATE_END => '2018-07-01'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'SESSION',
+            DATE_START => '2019-07-05',
+            DATE_END => '2019-07-07'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            major => 'SESSION',
+            DATE_START => '2022-05-27',
+            DATE_END => '2022-05-29'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            major => 'SESSION',
+            DATE_START => '2024-05-24',
+            DATE_END => '2024-05-26'
           } 
         }
       },
@@ -715,6 +834,26 @@ my %TOURNAMENTS_NORWAY =
             major => 'ROUND',
             DATE_START => '2011-06-01',
             DATE_END => '2011-06-01'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            major => 'ROUND',
+            DATE_START => '2020-08-29',
+            DATE_END => '2020-08-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            major => 'ROUND',
+            DATE_START => '2020-09-11',
+            DATE_END => '2020-09-11'
           } 
         }
       },
@@ -930,6 +1069,54 @@ my %TOURNAMENTS_NORWAY =
           } 
         }
       },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-30',
+            DATE_END => '2019-06-01'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-10-15',
+            DATE_END => '2020-10-18'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-26',
+            DATE_END => '2023-05-29'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-05-30',
+            DATE_END => '2024-06-02'
+          } 
+        }
+      },
     }
   },
 
@@ -1095,6 +1282,104 @@ my %TOURNAMENTS_NORWAY =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'SESSION',
+            DATE_START => '2017-08-10',
+            DATE_END => '2017-08-11'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'SESSION',
+            DATE_START => '2018-08-04',
+            DATE_END => '2018-08-05'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'SESSION',
+            DATE_START => '2019-08-03',
+            DATE_END => '2019-08-04'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            major => 'SESSION',
+            DATE_START => '2020-08-07',
+            DATE_END => '2020-08-08'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            major => 'SESSION',
+            DATE_START => '2021-08-01',
+            DATE_END => '2021-08-01'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            major => 'SESSION',
+            DATE_START => '2022-08-06',
+            DATE_END => '2022-08-07'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            major => 'SESSION',
+            DATE_START => '2024-08-03',
+            DATE_END => '2024-08-04'
+          } 
+        }
+      },
     }
   },
 
@@ -1104,20 +1389,20 @@ my %TOURNAMENTS_NORWAY =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-11-17',
+            DATE_END => '2018-11-18'
           },
         }
       },
@@ -1159,6 +1444,111 @@ my %TOURNAMENTS_NORWAY =
             major => 'ROUND',
             DATE_START => '2016-07-31',
             DATE_END => '2016-08-01'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-08-12',
+            DATE_END => '2017-08-13'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2018-08-06',
+            DATE_END => '2018-08-07'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-08-05',
+            DATE_END => '2019-08-07'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2020-08-05',
+            DATE_END => '2020-08-06'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2021-08-02',
+            DATE_END => '2021-08-03'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2022-08-08',
+            DATE_END => '2022-08-09'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2024-08-05',
+            DATE_END => '2024-08-06'
           } 
         }
       },
@@ -1349,6 +1739,123 @@ my %TOURNAMENTS_NORWAY =
           } 
         }
       },
+      '2016' =>
+      {
+        MEET => 'Norwegian Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-23',
+            DATE_END => '2016-09-25'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Norwegian Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-22',
+            DATE_END => '2017-09-24'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Norwegian Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-21',
+            DATE_END => '2018-09-23'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Norwegian Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-20',
+            DATE_END => '2019-09-22'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Norwegian Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-09-18',
+            DATE_END => '2020-09-20'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Norwegian Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-10-02',
+            DATE_END => '2021-10-03'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Norwegian Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-23',
+            DATE_END => '2022-09-25'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Norwegian Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-22',
+            DATE_END => '2023-09-24'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Norwegian Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-20',
+            DATE_END => '2024-09-22'
+          } 
+        }
+      },
     }
   },
 
@@ -1472,6 +1979,94 @@ my %TOURNAMENTS_NORWAY =
           }
         }
       },
+      '2017A' =>
+      {
+        MEET_TAG => 2017,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-25',
+            DATE_END => '2017-05-27'
+          },
+        }
+      },
+      '2017B' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        MEET_TAG => 2017,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-06',
+            DATE_END => '2017-08-08'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-10',
+            DATE_END => '2018-05-13'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-09',
+            DATE_END => '2019-08-10'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-09-02',
+            DATE_END => '2020-09-06'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-09-16',
+            DATE_END => '2021-09-19'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-19',
+            DATE_END => '2022-05-22'
+          },
+        }
+      },
     }
   },
 
@@ -1480,21 +2075,21 @@ my %TOURNAMENTS_NORWAY =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Teams',
-    SCORING => 'IMP',
+    SCORING => 'Patton',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-08-03',
+            DATE_END => '2020-08-03'
           },
         }
       },
@@ -1821,6 +2416,133 @@ my %TOURNAMENTS_NORWAY =
       },
 
       # https://www.bridge.no/Turneringer/NM-for-klubblag/Tidligere-aar
+
+      '2016-17' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-29',
+            DATE_END => '2016-10-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-11',
+            DATE_END => '2017-02-12'
+          },
+        }
+      },
+      '2017-18' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-28',
+            DATE_END => '2017-10-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-10',
+            DATE_END => '2018-02-11'
+          },
+        }
+      },
+      '2018-19' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-27',
+            DATE_END => '2018-10-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-09',
+            DATE_END => '2019-02-10'
+          },
+        }
+      },
+      '2019-20' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-17',
+            DATE_END => '2019-10-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-09',
+            DATE_END => '2019-11-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-15',
+            DATE_END => '2020-02-16'
+          },
+        }
+      },
+      '2021-22' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-10-29',
+            DATE_END => '2021-10-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-04-22',
+            DATE_END => '2022-04-24'
+          },
+        }
+      },
+      '2023-24' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-27',
+            DATE_END => '2023-10-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-02',
+            DATE_END => '2024-02-04'
+          },
+        }
+      },
+      '2024-25' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-15',
+            DATE_END => '2024-11-17'
+          },
+        }
+      },
     }
   },
 
@@ -1968,6 +2690,90 @@ my %TOURNAMENTS_NORWAY =
             major => 'SESSION',
             DATE_START => '2013-08-04',
             DATE_END => '2013-08-05'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-09',
+            DATE_END => '2017-08-10'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-07',
+            DATE_END => '2018-08-08'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-06',
+            DATE_END => '2019-08-07'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-08-03',
+            DATE_END => '2021-08-04'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-09',
+            DATE_END => '2022-08-10'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-08-06',
+            DATE_END => '2024-08-07'
           } 
         }
       },
@@ -2119,6 +2925,86 @@ my %TOURNAMENTS_NORWAY =
           } 
         }
       },
+      '2018' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2018-08-10',
+            DATE_END => '2018-08-11'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2020-08-04',
+            DATE_END => '2020-08-05'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2021-08-06',
+            DATE_END => '2021-08-07'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2022-08-12',
+            DATE_END => '2022-08-13'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2024-08-09',
+            DATE_END => '2024-08-10'
+          } 
+        }
+      },
     }
   },
 
@@ -2263,6 +3149,19 @@ my %TOURNAMENTS_NORWAY =
           } 
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION|SEGMENT',
+            DATE_START => '2016-11-19',
+            DATE_END => '2016-11-19'
+          } 
+        }
+      },
     }
   },
 
@@ -2316,9 +3215,73 @@ my %TOURNAMENTS_NORWAY =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-03-11',
+            DATE_END => '2017-03-12'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-03-10',
+            DATE_END => '2018-03-11'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-03-09',
+            DATE_END => '2019-03-10'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            major => 'ROUND',
+            DATE_START => '2020-03-07',
+            DATE_END => '2020-03-08'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND',
+            DATE_START => '2022-03-05',
+            DATE_END => '2022-03-06'
+          } 
+        }
+      },
     }
   },
-
 
   'Olrud Easter Mixed Pairs' =>
   {
@@ -2878,22 +3841,22 @@ my %TOURNAMENTS_NORWAY =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-09-11',
+            DATE_END => '2020-09-11'
           },
         }
       },
