@@ -18,6 +18,7 @@ my @MULTI_WORDS =
   'Andhra Pradesh',
   'Australian Central Territory',
   'Bangka Belitung',
+  'Biala Podlaska',
   'Bisma Semarang',
   'Boeven Digoel',
   'Bone Bolango',

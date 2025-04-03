@@ -717,6 +717,30 @@ my %MEETS_POLAND =
         DATE_START => '2016-04-30',
         DATE_END => '2016-05-03'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-04-29',
+        DATE_END => '2017-05-01'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-05-02',
+        DATE_END => '2019-05-03'
+      },
+      '2021' =>
+      {
+        YEAR => 2021,
+        DATE_START => '2021-12-11',
+        DATE_END => '2021-12-12'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-05-03',
+        DATE_END => '2024-05-03'
+      },
     }
   },
 
@@ -839,6 +863,12 @@ my %MEETS_POLAND =
         DATE_START => '2015-12-11',
         DATE_END => '2015-12-13'
       },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-12-09',
+        DATE_END => '2016-12-11'
+      },
     }
   },
 
@@ -891,6 +921,24 @@ my %MEETS_POLAND =
         DATE_START => '2012-05-05',
         DATE_END => '2012-05-06'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-05-02',
+        DATE_END => '2017-05-03'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-05-02',
+        DATE_END => '2018-05-03'
+      },
+      '2021' =>
+      {
+        YEAR => 2021,
+        DATE_START => '2021-12-11',
+        DATE_END => '2021-12-12'
+      },
     }
   },
 
@@ -920,15 +968,15 @@ my %MEETS_POLAND =
   'Polish Youth Olympics' =>
   {
     %GLOBAL,
-    ORIGIN => 'Transnational',
+    ORIGIN => 'National',
 
-    EDITIONS =>
+    EDITIONS => 
     {
-      '2000' =>
+      '2024' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2024,
+        DATE_START => '2024-06-05',
+        DATE_END => '2024-06-06'
       },
     }
   },
@@ -2765,6 +2813,20 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2016D' =>
+      {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2016',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-09',
+            DATE_END => '2016-12-11'
+          } 
+        }
+      },
     }
   },
 
@@ -3340,6 +3402,130 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2023A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-03-31',
+            DATE_END => '2023-04-02'
+          },
+        }
+      },
+      '2023B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-20',
+            DATE_END => '2023-05-21'
+          },
+        }
+      },
+      '2023C' =>
+      {
+        MEET => 'Baltic Congress',
+        MEET_TAG => 2023,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-31',
+            DATE_END => '2023-08-01'
+          },
+        }
+      },
+      '2023D' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-08-27',
+            DATE_END => '2023-08-27'
+          },
+        }
+      },
+      '2023E' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-15',
+            DATE_END => '2023-12-17'
+          },
+        }
+      },
+      '2024A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-23',
+            DATE_END => '2024-03-24'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        MEET => 'Baltic Congress',
+        MEET_TAG => 2024,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-07-31',
+            DATE_END => '2024-07-31'
+          },
+        }
+      },
+      '2024C' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-08-25',
+            DATE_END => '2024-08-25'
+          },
+        }
+      },
+      '2024D' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-29',
+            DATE_END => '2024-09-29'
+          },
+        }
+      },
+      '2024E' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-20',
+            DATE_END => '2024-12-22'
+          },
+        }
+      },
     }
   },
 
@@ -3683,6 +3869,32 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
+  'Palace Pro-Am Cup' =>
+  {
+    ORIGIN => 'Pro-Am',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'Palace Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-26',
+            DATE_END => '2019-04-26'
+          },
+        }
+      },
+    }
+  },
+
   'Palace Teams Cup' =>
   {
     ORIGIN => 'Invitational',
@@ -3920,6 +4132,54 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-18',
+            DATE_END => '2018-08-18'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-17',
+            DATE_END => '2019-08-17'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-13',
+            DATE_END => '2022-08-13'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-08-10',
+            DATE_END => '2024-08-10'
+          },
+        }
+      },
     }
   },
 
@@ -4116,32 +4376,6 @@ my %TOURNAMENTS_POLAND =
             major => 'ROUND|SEGMENT',
             DATE_START => '2013-04-11',
             DATE_END => '2013-04-14'
-          } 
-        }
-      },
-    }
-  },
-
-  'Polish Girls Trials',
-  {
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Women',
-    AGE => 'U26',
-
-    EDITIONS =>
-    {
-      '2009' =>
-      {
-        MEET => 'Wroclaw Meeting',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            major => 'SEGMENT',
-            DATE_START => '2009-05-09',
-            DATE_END => '2009-05-10'
           } 
         }
       },
@@ -4544,6 +4778,20 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Polish Championships',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-01',
+            DATE_END => '2017-05-01'
+          } 
+        }
+      },
     }
   },
 
@@ -4551,22 +4799,34 @@ my %TOURNAMENTS_POLAND =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-02-26',
+            DATE_END => '2022-02-27'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-03-24',
+            DATE_END => '2023-03-26'
           },
         }
       },
@@ -4579,20 +4839,20 @@ my %TOURNAMENTS_POLAND =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-01-25',
+            DATE_END => '2019-01-27'
           },
         }
       },
@@ -4625,6 +4885,42 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-09-25',
+            DATE_END => '2021-09-26'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-04-22',
+            DATE_END => '2022-04-24'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-30',
+            DATE_END => '2023-04-30'
+          } 
+        }
+      },
     }
   },
 
@@ -4639,22 +4935,22 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-01-21',
+            DATE_END => '2022-01-23'
           },
         }
       },
     }
   },
 
-  'Polish Open Pairs',
+  'Polish Open Pairs' =>
   {
     FORM => 'Pairs',
     GENDER => 'Open',
@@ -4905,10 +5201,106 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Polish Pairs Championship',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-02',
+            DATE_END => '2017-05-03'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Polish Pairs Championship',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-02',
+            DATE_END => '2018-05-03'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Polish Championships',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-02',
+            DATE_END => '2019-05-03'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Polish Pairs Championship',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-12-11',
+            DATE_END => '2021-12-12'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-10',
+            DATE_END => '2022-07-11'
+          },
+        }
+      },
+      '2023' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-02',
+            DATE_END => '2023-05-02'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Polish Championships',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-05-03',
+            DATE_END => '2024-05-03'
+          } 
+        }
+      },
     }
   },
 
-  'Polish Open Teams',
+  'Polish Open Teams' =>
   {
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -5262,9 +5654,10 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2016' =>
+      '2016A' =>
       {
         MEET => 'Krakow Congress',
+        MEET_TAG => 2016,
         CHAPTERS =>
         {
           # https://wyniki.pzbs.pl/2016/kwb/
@@ -5290,11 +5683,169 @@ my %TOURNAMENTS_POLAND =
             DATE_END => '2016-03-12'
           },
         }
-      }
+      },
+      '2016B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-15',
+            DATE_END => '2016-12-17'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-08',
+            DATE_END => '2017-08-09'
+          },
+        }
+      },
+      '2018A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-02',
+            DATE_END => '2018-03-03'
+          },
+        }
+      },
+      '2018B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-09',
+            DATE_END => '2018-08-10'
+          },
+        }
+      },
+      '2019A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-08',
+            DATE_END => '2019-03-09'
+          },
+        }
+      },
+      '2019B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-07',
+            DATE_END => '2019-08-08'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-24',
+            DATE_END => '2020-01-25'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-08-10',
+            DATE_END => '2021-08-12'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-20',
+            DATE_END => '2022-07-21'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-01',
+            DATE_END => '2024-03-02'
+          },
+        }
+      },
     }
   },
 
-  'Polish Open Trials',
+  'Polish Open Pair Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-13',
+            DATE_END => '2022-05-15'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-02-24',
+            DATE_END => '2023-02-26'
+          },
+        }
+      },
+    }
+  },
+
+  'Polish Open Trials' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
@@ -5497,10 +6048,70 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-18',
+            DATE_END => '2017-05-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-31',
+            DATE_END => '2017-06-04'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-09',
+            DATE_END => '2018-04-13'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-13',
+            DATE_END => '2019-05-18'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-06-20',
+            DATE_END => '2021-06-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-07-28',
+            DATE_END => '2021-07-30'
+          },
+        }
+      },
     }
   },
 
-  'Polish Pairs Cup',
+  'Polish Pairs Cup' =>
   {
     FORM => 'Pairs',
     SCORING => 'MP',
@@ -5526,7 +6137,7 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Polish Patton Pairs',
+  'Polish Patton Pairs' =>
   {
     FORM => 'Pairs',
     SCORING => 'Patton',
@@ -5553,7 +6164,7 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Polish Patton Teams',
+  'Polish Patton Teams' =>
   {
     FORM => 'Teams',
     SCORING => 'Patton',
@@ -5675,10 +6286,34 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-23',
+            DATE_END => '2016-09-24'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-31',
+            DATE_END => '2022-08-01'
+          },
+        }
+      },
     }
   },
 
-  'Polish Premier League',
+  'Polish Premier League' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
@@ -6269,10 +6904,262 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2016-17' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-07',
+            DATE_END => '2016-10-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-06',
+            DATE_END => '2017-01-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-03',
+            DATE_END => '2017-02-05'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-05',
+            DATE_END => '2017-05-07'
+          },
+        }
+      },
+      '2017-18' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-06',
+            DATE_END => '2017-10-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-05',
+            DATE_END => '2018-01-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-26',
+            DATE_END => '2018-01-28'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-04',
+            DATE_END => '2018-05-06'
+          },
+        }
+      },
+      '2018-19' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-12',
+            DATE_END => '2018-10-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-04',
+            DATE_END => '2019-01-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-01',
+            DATE_END => '2019-02-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-06',
+            DATE_END => '2019-06-09'
+          },
+        }
+      },
+      '2019-20' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-04',
+            DATE_END => '2019-10-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-04',
+            DATE_END => '2020-01-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-31',
+            DATE_END => '2020-02-02'
+          },
+          'C3' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-06-26',
+            DATE_END => '2020-06-28'
+          },
+        }
+      },
+      '2020-21' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-10-02',
+            DATE_END => '2020-10-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-05-28',
+            DATE_END => '2021-05-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-06-11',
+            DATE_END => '2021-06-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-09-02',
+            DATE_END => '2021-09-05'
+          },
+        }
+      },
+      '2021-22' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-11-19',
+            DATE_END => '2021-11-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-01-07',
+            DATE_END => '2022-01-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-02-18',
+            DATE_END => '2022-02-20'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-06-03',
+            DATE_END => '2022-06-05'
+          },
+        }
+      },
+      '2022-23' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-30',
+            DATE_END => '2022-10-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-06',
+            DATE_END => '2023-01-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-02-10',
+            DATE_END => '2023-02-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-26',
+            DATE_END => '2023-05-28'
+          },
+        }
+      },
+      '2023-24' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-06',
+            DATE_END => '2023-10-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-05',
+            DATE_END => '2024-01-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-23',
+            DATE_END => '2024-02-25'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-06-07',
+            DATE_END => '2024-06-09'
+          },
+        }
+      },
+      '2024-25' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-10-04',
+            DATE_END => '2024-10-06'
+          },
+        }
+      },
     }
   },
 
-  'Polish School Pairs',
+  'Polish School Pairs' =>
   {
     FORM => 'Pairs',
     SCORING => 'IMP',
@@ -6305,7 +7192,7 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Polish School Teams',
+  'Polish School Teams' =>
   {
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -6370,7 +7257,7 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Polish Second League',
+  'Polish Second League' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
@@ -6396,30 +7283,70 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-28',
+            DATE_END => '2017-05-28'
+          } 
+        }
+      },
     }
   },
 
   'Polish Senior Pairs' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Pairs',
-    SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
+        MEET => 'Polish Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-04-29',
+            DATE_END => '2017-04-29'
           },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Warsaw Grand Prix',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-08-23',
+            DATE_END => '2023-08-23'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Warsaw Grand Prix',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            major => 'ROUND',
+            DATE_START => '2024-08-21',
+            DATE_END => '2024-08-21'
+          } 
         }
       },
     }
@@ -6450,6 +7377,30 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-10',
+            DATE_END => '2018-02-11'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-19',
+            DATE_END => '2020-01-21'
+          } 
+        }
+      },
     }
   },
 
@@ -6475,6 +7426,19 @@ my %TOURNAMENTS_POLAND =
             major => 'SEGMENT',
             DATE_START => '2015-02-28',
             DATE_END => '2015-02-28'
+          },
+        }
+      },
+      '2017' =>
+      {
+        REGION => 'Biala Podlaska',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-11',
+            DATE_END => '2017-03-12'
           },
         }
       },
@@ -6566,22 +7530,46 @@ my %TOURNAMENTS_POLAND =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U21',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-05-13',
+            DATE_END => '2022-05-15'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-03-11',
+            DATE_END => '2023-03-12'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-19',
+            DATE_END => '2024-04-21'
           },
         }
       },
@@ -6595,19 +7583,19 @@ my %TOURNAMENTS_POLAND =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U21',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-03-10',
+            DATE_END => '2023-03-11'
           },
         }
       },
@@ -6641,26 +7629,154 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Polish U26 Women Team Trials' =>
+  'Polish U26 Women Pair Trials' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
+    GENDER => 'Women',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
+      {
+        %GLOBAL,
+        ORIGIN => 'National',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-02',
+            DATE_END => '2018-03-04'
+          },
+        }
+      },
+      '2022' =>
+      {
+        %GLOBAL,
+        ORIGIN => 'National',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-05',
+            DATE_END => '2022-03-06'
+          },
+        }
+      },
+      '2023' =>
+      {
+        %GLOBAL,
+        ORIGIN => 'National',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-03-10',
+            DATE_END => '2023-03-12'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Polish Youth Olympics',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-06-05',
+            DATE_END => '2024-06-06'
+          },
+        }
+      },
+    }
+  },
+
+  'Polish U26 Women Team Trials' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Wroclaw Meeting',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'SEGMENT',
+            DATE_START => '2009-05-09',
+            DATE_END => '2009-05-10'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Zulawski Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-02',
+            DATE_END => '2018-03-04'
+          },
+        }
+      },
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-04-05',
+            DATE_END => '2019-04-07'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-21',
+            DATE_END => '2020-02-23'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-05',
+            DATE_END => '2022-03-06'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-19',
+            DATE_END => '2024-04-21'
           },
         }
       },
@@ -6671,22 +7787,22 @@ my %TOURNAMENTS_POLAND =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U31',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-02-16',
+            DATE_END => '2024-02-18'
           },
         }
       },
@@ -6695,8 +7811,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Women Pairs',
   {
-    FORM => 'Pairs',
     SCORING => 'MP',
+    FORM => 'Pairs',
     GENDER => 'Women',
     AGE => 'Open',
 
@@ -6714,6 +7830,20 @@ my %TOURNAMENTS_POLAND =
             major => 'ROUND',
             DATE_START => '2014-05-02',
             DATE_END => '2014-05-03'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Warsaw Grand Prix',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            major => 'ROUND',
+            DATE_START => '2024-08-23',
+            DATE_END => '2024-08-23'
           } 
         }
       },

@@ -270,6 +270,7 @@ my @LOCAL_SUBS =
   { START => 82113, END => 82118, TEXT => '^Gold ', 
     CORR => 'Indian Gold Open Teams ' },
   { START => 82252, END => 82271, TEXT => '^1_8 ', CORR => "QF " },
+  { START => 82304, END => 82325, TEXT => '^SL ', CORR => "Swiss " },
   { START => 83207, END => 83317, TEXT => '^WTC-', CORR => '' },
   { START => 83051, END => 83058,
     TEXT => 'Open Team', CORR => 'U26 Teams' },

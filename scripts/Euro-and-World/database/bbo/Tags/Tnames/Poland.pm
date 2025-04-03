@@ -39,7 +39,6 @@ my @MULTI_WORDS =
   'Polish Business League',
   'Polish Business Pairs',
   'Polish Girls Championship',
-  'Polish Girls Trials',
   'Polish IMP Pairs',
   'Polish Individual Championship',
   'Polish Junior Pairs Trials',
@@ -49,6 +48,7 @@ my @MULTI_WORDS =
   'Polish Mixed Team Trials',
   'Polish Online Open Teams',
   'Polish Open Pairs',
+  'Polish Open Pair Trials',
   'Polish Open Teams',
   'Polish Open Trials',
   'Polish Pairs Cup',
@@ -67,6 +67,7 @@ my @MULTI_WORDS =
   'Polish U21 Team Trials',
   'Polish U25 Trials',
   'Polish U26 Women Team Trials',
+  'Polish U26 Women Pair Trials',
   'Polish U31 Pair Trials',
   'Polish Women Pairs',
   'Polish Women Trials',
@@ -245,6 +246,7 @@ my %MULTI_TYPOS =
     'rozgrywki kadry u-21'],
   'Polish U25 Trials' => ['poish u25 trials'],
   'Polish U26 Women Team Trials' => [
+    'polish girls trials',
     'polish national girls team trials'],
   'Polish U31 Pair Trials' => [
     'rozgrywki kadr u-21 i u-26'],

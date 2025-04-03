@@ -734,6 +734,18 @@ my %MEETS_INDIA =
         DATE_START => '2016-06-25',
         DATE_END => '2016-06-25'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-02-17',
+        DATE_END => '2017-02-18'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-04-14',
+        DATE_END => '2023-04-16'
+      },
     }
   },
 
@@ -789,11 +801,29 @@ my %MEETS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2022,
+        DATE_START => '2022-11-12',
+        DATE_END => '2022-11-13'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-11-18',
+        DATE_END => '2023-11-19'
+      },
+      '2024A' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-07-21',
+        DATE_END => '2024-07-21'
+      },
+      '2024B' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-11-09',
+        DATE_END => '2024-11-10'
       },
     }
   },
@@ -836,15 +866,15 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-11-16',
+            DATE_END => '2019-11-17'
           },
         }
       },
@@ -987,6 +1017,54 @@ my %TOURNAMENTS_INDIA =
             DATE_START => '2016-08-27',
             DATE_END => '2016-08-27'
           } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-05',
+            DATE_END => '2017-08-05'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-04',
+            DATE_END => '2018-08-04'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-24',
+            DATE_END => '2019-08-24'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-13',
+            DATE_END => '2022-08-13'
+          },
         }
       },
     }
@@ -1366,6 +1444,45 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2016' =>
+      {
+        MEET => 'All India HCL Tournament',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-19',
+            DATE_END => '2016-10-23'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'All India HCL Tournament',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-12',
+            DATE_END => '2017-09-17'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'All India HCL Tournament',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-31',
+            DATE_END => '2023-11-04'
+          },
+        }
+      },
     }
   },
 
@@ -1501,6 +1618,66 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-21',
+            DATE_END => '2018-04-22'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-19',
+            DATE_END => '2019-04-21'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-14',
+            DATE_END => '2022-05-15'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-26',
+            DATE_END => '2023-05-28'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-12',
+            DATE_END => '2024-04-14'
+          },
+        }
+      },
     }
   },
 
@@ -1544,22 +1721,22 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-12-09',
+            DATE_END => '2024-12-09'
           },
         }
       },
@@ -1569,7 +1746,7 @@ my %TOURNAMENTS_INDIA =
   'Anoop Dhawan Invitational Pairs' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Invitational',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1577,15 +1754,15 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-03-19',
+            DATE_END => '2017-03-19'
           },
         }
       },
@@ -1810,15 +1987,15 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-03-01',
+            DATE_END => '2019-03-03'
           },
         }
       },
@@ -2071,29 +2248,65 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-03',
+            DATE_END => '2017-03-05'
+          }
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-16',
+            DATE_END => '2018-03-18'
+          }
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-28',
+            DATE_END => '2020-03-01'
+          }
+        }
+      },
     }
   },
 
-  'Fenesta Open Teams' =>
+  'Fenesta Open Pairs' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-05-24',
+            DATE_END => '2023-05-24'
           },
         }
       },
@@ -2105,21 +2318,21 @@ my %TOURNAMENTS_INDIA =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Pairs',
-    SCORING => 'MP',
+    SCORING => 'IMP',
     GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-05-23',
+            DATE_END => '2023-05-23'
           },
         }
       },
@@ -2137,15 +2350,27 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-03-02',
+            DATE_END => '2023-03-05'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-07-12',
+            DATE_END => '2024-07-14'
           },
         }
       },
@@ -2190,23 +2415,35 @@ my %TOURNAMENTS_INDIA =
   'HCL Pro-Am Pairs' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Pro-Am',
     FORM => 'Pairs',
-    SCORING => 'MP',
+    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-11-06',
+            DATE_END => '2023-11-06'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-22',
+            DATE_END => '2024-09-22'
           },
         }
       },
@@ -2254,22 +2491,22 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-12-08',
+            DATE_END => '2022-12-09'
           },
         }
       },
@@ -2357,6 +2594,20 @@ my %TOURNAMENTS_INDIA =
       },
       '2022A' =>
       {
+        MEET => 'Indian Summer Nationals',
+        MEET_TAG => '2022',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-06-29',
+            DATE_END => '2022-07-02'
+          },
+        }
+      },
+      '2022B' =>
+      {
         MEET => 'All India HCL Tournament',
         MEET_TAG => '2022',
         CHAPTERS =>
@@ -2369,7 +2620,7 @@ my %TOURNAMENTS_INDIA =
           },
         }
       },
-      '2022B' =>
+      '2022C' =>
       {
         MEET => 'Indian Winter Nationals',
         MEET_TAG => '2022',
@@ -2399,6 +2650,20 @@ my %TOURNAMENTS_INDIA =
       },
       '2024B' =>
       {
+        MEET => 'Indian Summer Nationals',
+        MEET_TAG => '2024',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-06-11',
+            DATE_END => '2024-06-13'
+          },
+        }
+      },
+      '2024C' =>
+      {
         MEET => 'All India HCL Tournament',
         MEET_TAG => '2024',
         CHAPTERS =>
@@ -2411,7 +2676,7 @@ my %TOURNAMENTS_INDIA =
           },
         }
       },
-      '2024C' =>
+      '2024D' =>
       {
         MEET => 'Indian Winter Nationals',
         MEET_TAG => '2024B',
@@ -2430,8 +2695,6 @@ my %TOURNAMENTS_INDIA =
 
   'Indian Gold Women Pairs' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -2441,6 +2704,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2022' =>
       {
+        MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2589,29 +2853,113 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-11-04',
+            DATE_END => '2016-11-06'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-02',
+            DATE_END => '2017-09-03'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-07',
+            DATE_END => '2018-09-09'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-06',
+            DATE_END => '2019-09-08'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-14',
+            DATE_END => '2022-09-18'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-24',
+            DATE_END => '2023-11-26'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-08-29',
+            DATE_END => '2024-08-31'
+          },
+        }
+      },
     }
   },
 
   'Indian Masters Invitational Pairs' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
+    ORIGIN => 'Invitational',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-09-29',
+            DATE_END => '2022-10-02'
           },
         }
       },
@@ -2629,15 +2977,39 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-11-27',
+            DATE_END => '2016-11-29'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-06',
+            DATE_END => '2017-11-07'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-18',
+            DATE_END => '2024-02-20'
           },
         }
       },
@@ -2650,20 +3022,20 @@ my %TOURNAMENTS_INDIA =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Men',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2020' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2020,
-            DATE_START => '2020-01-01',
-            DATE_END => '2020-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-05-01',
+            DATE_END => '2024-05-07'
           },
         }
       },
@@ -2673,15 +3045,29 @@ my %TOURNAMENTS_INDIA =
   'Indian Mixed Pairs' =>
   {
     FORM => 'Pairs',
-    SCORING => 'IMP',
     GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
+      '2022' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-11',
+            DATE_END => '2022-12-11'
+          },
+        }
+      },
       '2024' =>
       {
         MEET => 'All India HCL Tournament',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2699,22 +3085,22 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-05-08',
+            DATE_END => '2024-05-12'
           },
         }
       },
@@ -2894,6 +3280,32 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2017A' =>
+      {
+        CITY => 'Ahmedabad',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-03',
+            DATE_END => '2017-02-06'
+          },
+        }
+      },
+      '2017B' =>
+      {
+        CITY => 'Pune',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-06',
+            DATE_END => '2017-10-08'
+          },
+        }
+      },
     }
   },
 
@@ -3044,15 +3456,135 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018A' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-08-14',
+            DATE_END => '2018-08-14'
+          },
+        }
+      },
+      '2018B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-13',
+            DATE_END => '2018-12-13'
+          },
+        }
+      },
+      '2019A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-03',
+            DATE_END => '2019-06-05'
+          },
+        }
+      },
+      '2019B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-10',
+            DATE_END => '2019-08-10'
+          },
+        }
+      },
+      '2019C' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-12',
+            DATE_END => '2019-12-12'
+          },
+        }
+      },
+      '2022A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-15',
+            DATE_END => '2022-10-16'
+          },
+        }
+      },
+      '2022B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-06',
+            DATE_END => '2022-12-07'
+          },
+        }
+      },
+      '2023A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-06-27',
+            DATE_END => '2023-06-27'
+          },
+        }
+      },
+      '2023B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-05',
+            DATE_END => '2023-11-05'
+          },
+        }
+      },
+      '2024A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-21',
+            DATE_END => '2024-09-21'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-15',
+            DATE_END => '2024-12-15'
           },
         }
       },
@@ -3147,22 +3679,22 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-05-13',
+            DATE_END => '2024-05-16'
           },
         }
       },
@@ -3206,15 +3738,15 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-07-02',
+            DATE_END => '2017-07-03'
           },
         }
       },
@@ -3389,22 +3921,22 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-09-30',
+            DATE_END => '2023-10-02'
           },
         }
       },
@@ -3415,22 +3947,22 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-09-19',
+            DATE_END => '2022-09-21'
           },
         }
       },
@@ -3605,6 +4137,20 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2023' =>
+      {
+        MEET => 'Maharaja Holkar National Championship',
+        MEET_TAG => '2023A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-16',
+            DATE_END => '2023-01-18'
+          },
+        }
+      },
     }
   },
 
@@ -3648,15 +4194,39 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-10-26',
+            DATE_END => '2018-10-28'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-20',
+            DATE_END => '2019-10-22'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-04',
+            DATE_END => '2022-11-06'
           },
         }
       },
@@ -4343,7 +4913,72 @@ my %TOURNAMENTS_INDIA =
             DATE_END => '2016-01-10'
           },
         },
-      }
+      },
+      '2017' =>
+      {
+        MEET => 'Maharaja Holkar National Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-06',
+            DATE_END => '2017-01-08'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Maharaja Holkar National Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-12',
+            DATE_END => '2018-01-14'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Maharaja Holkar National Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-11',
+            DATE_END => '2019-01-13'
+          },
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Maharaja Holkar National Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-05',
+            DATE_END => '2020-01-07'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Maharaja Holkar National Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-17',
+            DATE_END => '2023-12-19'
+          },
+        }
+      },
     }
   },
 
@@ -4513,6 +5148,32 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Maharashtra State Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-17',
+            DATE_END => '2017-02-18'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Maharashtra State Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-14',
+            DATE_END => '2023-04-16'
+          } 
+        }
+      },
     }
   },
 
@@ -4520,22 +5181,22 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-12-17',
+            DATE_END => '2024-12-18'
           },
         }
       },
@@ -4553,15 +5214,27 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-08-03',
+            DATE_END => '2023-08-06'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-08-15',
+            DATE_END => '2024-08-18'
           },
         }
       },
@@ -4891,6 +5564,78 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-26',
+            DATE_END => '2017-03-28'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-01',
+            DATE_END => '2018-04-03'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-15',
+            DATE_END => '2019-03-17'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-29',
+            DATE_END => '2022-07-31'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-09',
+            DATE_END => '2023-04-11'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-29',
+            DATE_END => '2024-03-31'
+          },
+        }
+      },
     }
   },
 
@@ -4899,23 +5644,23 @@ my %TOURNAMENTS_INDIA =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Pairs',
-    SCORING => 'MP',
+    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2011' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2011,
+            YEAR => 2023,
             STAGE => 'Final',
             major => 'SESSION',
-            DATE_START => '2011-02-12',
-            DATE_END => '2011-02-13'
+            DATE_START => '2023-04-11',
+            DATE_END => '2023-04-11'
           } 
         }
       },
@@ -5069,22 +5814,58 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-02-22',
+            DATE_END => '2019-02-24'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-21',
+            DATE_END => '2020-02-23'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-02-24',
+            DATE_END => '2023-02-26'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-23',
+            DATE_END => '2024-02-25'
           },
         }
       },
@@ -5095,22 +5876,22 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-12-10',
+            DATE_END => '2024-12-11'
           },
         }
       },
@@ -6175,6 +6956,20 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            DATE_START => '2017-12-20',
+            DATE_END => '2017-12-20'
+          } 
+        }
+      },
     }
   },
 
@@ -6182,22 +6977,22 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'Corporate',
-    FORM => 'Pairs',
-    SCORING => 'MP',
+    FORM => 'Teams',
+    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-09-23',
+            DATE_END => '2023-09-23'
           },
         }
       },
@@ -6314,22 +7109,22 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-03-27',
+            DATE_END => '2024-03-27'
           },
         }
       },
@@ -6472,6 +7267,18 @@ my %TOURNAMENTS_INDIA =
             DATE_START => '2016-06-19',
             DATE_END => '2016-06-19'
           } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-10',
+            DATE_END => '2017-06-11'
+          },
         }
       },
     }
@@ -6810,6 +7617,32 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Indian Summer Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-18',
+            DATE_END => '2017-06-21'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Indian Summer Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-06-25',
+            DATE_END => '2018-06-28'
+          },
+        }
+      },
     }
   },
 
@@ -7064,6 +7897,70 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
+  'West Bengal Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'West Bengal State Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-12',
+            DATE_END => '2022-11-13'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'West Bengal State Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-18',
+            DATE_END => '2023-11-19'
+          },
+        }
+      },
+      '2024A' =>
+      {
+        MEET => 'West Bengal State Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-07-21',
+            DATE_END => '2024-07-21'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        MEET => 'West Bengal State Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-09',
+            DATE_END => '2024-11-10'
+          },
+        }
+      },
+    }
+  },
+
   'West Bengal Open Team Trials' =>
   {
     %GLOBAL,
@@ -7075,15 +7972,15 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-05-18',
+            DATE_END => '2024-05-19'
           },
         }
       },

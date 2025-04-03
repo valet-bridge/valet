@@ -31,7 +31,7 @@ my @MULTI_WORDS =
   'Delhi Gymkhana Club Dhampur Trophy',
   'Delhi Gymkhana Club Open Pairs',
   'Delhi Gymkhana Club Open Teams',
-  'Fenesta Open Teams',
+  'Fenesta Open Pairs',
   'Fenesta Women Pairs',
   'Ganesha Open Teams',
   'Godfrey Phillips All India Open',
