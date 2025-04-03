@@ -46,6 +46,7 @@ my @MULTI_WORDS =
   'Indian Mixed Pairs',
   'Indian Mixed Trials',
   'Indian Open Trials',
+  'Indian Senior Pair Trials',
   'Indian Senior Trials',
   'Indian Silver Open Teams',
   'Indian State Championship',

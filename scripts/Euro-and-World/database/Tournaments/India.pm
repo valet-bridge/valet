@@ -663,6 +663,30 @@ my %MEETS_INDIA =
         DATE_START => '2016-01-08',
         DATE_END => '2016-01-10'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-01-06',
+        DATE_END => '2017-01-08'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-01-12',
+        DATE_END => '2018-01-14'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-01-11',
+        DATE_END => '2019-01-13'
+      },
+      '2020' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-01-05',
+        DATE_END => '2020-01-07'
+      },
       '2023A' =>
       {
         MEET_ORDINAL => 18,
@@ -1122,6 +1146,20 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2016' =>
+      {
+        MEET => 'All India HCL Tournament',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-10-23',
+            DATE_END => '2016-10-23'
+          } 
+        }
+      },
     }
   },
 
@@ -1489,7 +1527,6 @@ my %TOURNAMENTS_INDIA =
   'All India Open Pairs' =>
   {
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -1500,6 +1537,7 @@ my %TOURNAMENTS_INDIA =
       {
         MEET => 'Indian Summer Nationals',
         MEET_TAG => '2013',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1516,6 +1554,7 @@ my %TOURNAMENTS_INDIA =
       {
         MEET => 'Indian Winter Nationals',
         MEET_TAG => '2013',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1531,6 +1570,7 @@ my %TOURNAMENTS_INDIA =
       '2014' =>
       {
         MEET => 'Indian Winter Nationals',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1545,6 +1585,7 @@ my %TOURNAMENTS_INDIA =
       '2015' =>
       {
         MEET => 'Indian Summer Nationals',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1553,6 +1594,36 @@ my %TOURNAMENTS_INDIA =
             STAGE => 'Final',
             DATE_START => '2015-06-21',
             DATE_END => '2015-06-21'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Indian Summer Nationals',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            DATE_START => '2017-06-21',
+            DATE_END => '2017-06-21'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Indian Summer Nationals',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            DATE_START => '2023-06-28',
+            DATE_END => '2023-06-28'
           } 
         }
       },
@@ -2417,7 +2488,6 @@ my %TOURNAMENTS_INDIA =
     %GLOBAL,
     ORIGIN => 'Pro-Am',
     FORM => 'Pairs',
-    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -2425,6 +2495,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2023' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2437,6 +2508,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2024' =>
       {
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2634,6 +2706,34 @@ my %TOURNAMENTS_INDIA =
           },
         }
       },
+      '2023A' =>
+      {
+        MEET => 'Indian Summer Nationals',
+        MEET_TAG => '2023',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-06-25',
+            DATE_END => '2023-06-27'
+          },
+        }
+      },
+      '2023B' =>
+      {
+        MEET => 'All India HCL Tournament',
+        MEET_TAG => '2023',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-05',
+            DATE_END => '2023-11-05'
+          },
+        }
+      },
       '2024A' =>
       {
         MEET => 'Indian Winter Nationals',
@@ -2695,8 +2795,8 @@ my %TOURNAMENTS_INDIA =
 
   'Indian Gold Women Pairs' =>
   {
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Women',
     AGE => 'Open',
 
@@ -3442,6 +3542,44 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-07',
+            DATE_END => '2017-02-09'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CITY => 'Mumbai',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-29',
+            DATE_END => '2018-05-01'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        CITY => 'Ahmedabad',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-10-25',
+            DATE_END => '2021-10-27'
+          } 
+        }
+      },
     }
   },
 
@@ -3571,12 +3709,24 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            DATE_START => '2024-01-06',
+            DATE_END => '2024-01-06'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
             DATE_START => '2024-09-21',
             DATE_END => '2024-09-21'
           },
         }
       },
-      '2024B' =>
+      '2024C' =>
       {
         CHAPTERS =>
         {
@@ -4969,6 +5119,7 @@ my %TOURNAMENTS_INDIA =
       '2023' =>
       {
         MEET => 'Maharaja Holkar National Championship',
+        MEET_TAG => '2023B',
         CHAPTERS =>
         {
           'C0' => 
