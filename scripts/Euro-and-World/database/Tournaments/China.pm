@@ -280,15 +280,25 @@ my %MEETS_CHINA =
   'Sanya Nanshan Festival' =>
   {
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
 
     EDITIONS =>
     {
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-10-29',
+        DATE_END => '2016-11-02'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-11-09',
+        DATE_END => '2018-11-09'
+      },
       '2019' =>
       {
         YEAR => 2019,
-        DATE_START => '2019-10-07',
+        DATE_START => '2019-10-06',
         DATE_END => '2019-10-13'
       },
     }
@@ -2709,8 +2719,6 @@ my %TOURNAMENTS_CHINA =
 
   'Nanshan Mixed Teams Cup' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2720,6 +2728,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2016' =>
       {
+        MEET => 'Sanya Nanshan Festival',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2732,6 +2741,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2018' =>
       {
+        MEET => 'Sanya Nanshan Festival',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2760,8 +2770,6 @@ my %TOURNAMENTS_CHINA =
 
   'Nanshan Open Teams Cup' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2771,6 +2779,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2018' =>
       {
+        MEET => 'Sanya Nanshan Festival',
         CHAPTERS =>
         {
           'SINGLE' =>

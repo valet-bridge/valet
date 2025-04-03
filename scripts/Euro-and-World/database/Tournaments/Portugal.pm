@@ -680,6 +680,20 @@ my %TOURNAMENTS_PORTUGAL =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Lisbon International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-03-10',
+            DATE_END => '2017-03-12'
+          } 
+        }
+      },
       '2018' =>
       {
         MEET => 'Lisbon International Festival',

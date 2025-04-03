@@ -2718,15 +2718,15 @@ my %TOURNAMENTS_UK =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-05-21',
+            DATE_END => '2022-05-21'
           },
         }
       },

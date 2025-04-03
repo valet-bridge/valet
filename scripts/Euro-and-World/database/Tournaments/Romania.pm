@@ -47,9 +47,9 @@ my %MEETS_ROMANIA =
     {
       '2000' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2023,
+        DATE_START => '2023-04-30',
+        DATE_END => '2023-04-30'
       },
     }
   },
@@ -1284,6 +1284,33 @@ my %TOURNAMENTS_ROMANIA =
             YEAR => 2024,
             DATE_START => '2024-03-16',
             DATE_END => '2024-03-17'
+          },
+        }
+      },
+    }
+  },
+
+  'Tusnad Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => 'Tusnad Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-30',
+            DATE_END => '2023-04-30'
           },
         }
       },

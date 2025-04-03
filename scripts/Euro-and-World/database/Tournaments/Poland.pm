@@ -869,6 +869,54 @@ my %MEETS_POLAND =
         DATE_START => '2016-12-09',
         DATE_END => '2016-12-11'
       },
+      '2018' =>
+      {
+        # https://wyniki.pzbs.pl/2018/gpp/final/W-sesja4.html
+        CITY => '',
+        YEAR => 2018,
+        DATE_START => '2018-12-14',
+        DATE_END => '2018-12-16'
+      },
+      '2019' =>
+      {
+        # https://wyniki.pzbs.pl/2019/gpp/final/W-sesja4.html
+        CITY => 'Lichen',
+        YEAR => 2019,
+        DATE_START => '2019-12-20',
+        DATE_END => '2019-12-22'
+      },
+      '2021' =>
+      {
+        # https://wyniki.pzbs.pl/2021/gppmpp/gp/1/
+        CITY => 'Starachowice',
+        YEAR => 2021,
+        DATE_START => '2021-12-09',
+        DATE_END => '2021-12-11'
+      },
+      '2022' =>
+      {
+        # https://wyniki.pzbs.pl/2022/finalGPPP/1/
+        CITY => 'Starachowice',
+        YEAR => 2022,
+        DATE_START => '2022-12-16',
+        DATE_END => '2022-12-18'
+      },
+      '2023' =>
+      {
+        # https://wyniki.pzbs.pl/2023/finalGPPP/
+        CITY => 'Trzebaw',
+        YEAR => 2023,
+        DATE_START => '2023-12-08',
+        DATE_END => '2023-12-10'
+      },
+      '2024' =>
+      {
+        # https://wyniki.pzbs.pl/2024/finalGPPP/1/
+        CITY => 'Mragowo',
+        YEAR => 2024,
+        DATE_START => '2024-12-13',
+        DATE_END => '2024-12-13'
+      },
     }
   },
 
@@ -2860,6 +2908,90 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2016,
             DATE_START => '2016-12-09',
             DATE_END => '2016-12-11'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2018',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-14',
+            DATE_END => '2018-12-16'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2019',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-20',
+            DATE_END => '2019-12-22'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2021',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-12-09',
+            DATE_END => '2021-12-11'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2022',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-16',
+            DATE_END => '2022-12-18'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2023',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-08',
+            DATE_END => '2023-12-10'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2024',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-13',
+            DATE_END => '2024-12-15'
           } 
         }
       },

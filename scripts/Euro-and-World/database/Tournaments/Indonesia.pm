@@ -5704,7 +5704,7 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {

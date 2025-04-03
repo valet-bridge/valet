@@ -1585,6 +1585,30 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-18',
+            DATE_END => '2020-01-19'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-21',
+            DATE_END => '2023-01-22'
+          } 
+        }
+      },
     }
   },
 
@@ -2484,7 +2508,7 @@ my %TOURNAMENTS_TURKEY =
 
     %GLOBAL,
     ORIGIN => 'Regional',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP', # Really IAF, but hard to get through the code
     GENDER => 'Open',
     AGE => 'Open',
@@ -2531,6 +2555,18 @@ my %TOURNAMENTS_TURKEY =
             major => 'SESSION|SEGMENT',
             DATE_START => '2015-06-03',
             DATE_END => '2015-06-04'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-27',
+            DATE_END => '2016-09-28'
           },
         }
       },
@@ -2722,6 +2758,32 @@ my %TOURNAMENTS_TURKEY =
             major => 'ROUND',
             DATE_START => '2016-06-05',
             DATE_END => '2016-06-05'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-04-07',
+            DATE_END => '2018-04-08'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-05-25',
+            DATE_END => '2019-05-27'
           },
         }
       },

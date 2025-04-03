@@ -384,6 +384,18 @@ my %TOURNAMENTS_FINLAND =
           },
         }
       },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-10-30',
+            DATE_END => '2021-10-31'
+          },
+        }
+      },
     }
   },
 
@@ -1130,22 +1142,22 @@ my %TOURNAMENTS_FINLAND =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-03-09',
+            DATE_END => '2019-03-09'
           },
         }
       },

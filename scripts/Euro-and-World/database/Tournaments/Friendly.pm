@@ -1394,6 +1394,21 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2024' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-20',
+            DATE_END => '2024-04-20'
+          } 
+        }
+      },
     }
   },
 
@@ -2017,6 +2032,22 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2016-11-08',
             DATE_END => '2016-11-08'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        ORIGIN => 'National',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-11',
+            DATE_END => '2017-06-11'
           } 
         }
       },
@@ -3603,6 +3634,21 @@ my %TOURNAMENTS_FRIENDLY =
             YEAR => 2019,
             DATE_START => '2019-04-12',
             DATE_END => '2019-04-14'
+          } 
+        }
+      },
+      '2024A' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-20',
+            DATE_END => '2024-04-20'
           } 
         }
       },

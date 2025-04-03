@@ -2147,6 +2147,18 @@ my %TOURNAMENTS_SWEDEN =
           } 
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-10',
+            DATE_END => '2018-02-11'
+          } 
+        }
+      },
       '2019' =>
       {
         CHAPTERS =>

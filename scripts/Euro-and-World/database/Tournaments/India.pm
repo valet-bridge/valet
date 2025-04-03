@@ -259,6 +259,20 @@ my %MEETS_INDIA =
         DATE_START => '2017-07-21',
         DATE_END => '2017-07-24'
       },
+      '2018' =>
+      {
+        YEAR => 2018,
+        CITY => 'Panjim',
+        DATE_START => '2018-07-21',
+        DATE_END => '2018-07-22'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        CITY => 'Panjim',
+        DATE_START => '2019-07-20',
+        DATE_END => '2019-07-21'
+      },
       '2020' =>
       {
         YEAR => 2020,
@@ -7251,6 +7265,45 @@ my %TOURNAMENTS_INDIA =
             DATE_START => '2016-07-30',
             DATE_END => '2016-07-31'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Goa Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-22',
+            DATE_END => '2017-07-23'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Goa Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-21',
+            DATE_END => '2018-07-22'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Goa Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-20',
+            DATE_END => '2019-07-21'
+          },
         }
       },
     }
