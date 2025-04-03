@@ -1277,6 +1277,48 @@ my %MEETS_AUSTRALIA =
         DATE_START => '2016-02-19',
         DATE_END => '2016-02-27'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-02-24',
+        DATE_END => '2017-02-25'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-02-23',
+        DATE_END => '2018-02-24'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-02-22',
+        DATE_END => '2019-02-23'
+      },
+      '2020' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-02-28',
+        DATE_END => '2020-02-29'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-02-26',
+        DATE_END => '2022-02-26'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-02-25',
+        DATE_END => '2023-02-25'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-02-24',
+        DATE_END => '2024-02-24'
+      },
     }
   },
 
@@ -1452,8 +1494,8 @@ my %MEETS_AUSTRALIA =
         # https://www.abf.com.au/event/2022-victor-champion-cup/
         CITY => 'Melbourne',
         YEAR => 2022,
-        DATE_START => '2022-09-06',
-        DATE_END => '2022-09-13'
+        DATE_START => '2022-06-06',
+        DATE_END => '2022-06-13'
       },
       '2023' =>
       {
@@ -1466,7 +1508,7 @@ my %MEETS_AUSTRALIA =
       '2024' =>
       {
         # https://www.abf.com.au/event/2024-victor-champion-cup/
-        CITY => 'Moonee Ponds',
+        CITY => 'Melbourne',
         YEAR => 2024,
         DATE_START => '2024-06-06',
         DATE_END => '2024-06-10'
@@ -6464,6 +6506,96 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2016' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-27',
+            DATE_END => '2016-10-27'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-26',
+            DATE_END => '2017-10-26'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-25',
+            DATE_END => '2018-10-25'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-24',
+            DATE_END => '2019-10-24'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-28',
+            DATE_END => '2022-10-28'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-10-25',
+            DATE_END => '2023-10-25'
+          } 
+        }
+      },
     }
   },
 
@@ -6934,6 +7066,97 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-24',
+            DATE_END => '2017-02-25'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-23',
+            DATE_END => '2018-02-24'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-22',
+            DATE_END => '2019-02-23'
+          },
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-28',
+            DATE_END => '2020-02-29'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-02-26',
+            DATE_END => '2022-02-26'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-02-25',
+            DATE_END => '2023-02-25'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-24',
+            DATE_END => '2024-02-24'
+          },
+        }
+      },
     }
   },
 
@@ -7074,6 +7297,48 @@ my %TOURNAMENTS_AUSTRALIA =
           },
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2016-12-11',
+            DATE_END => '2016-12-11'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2018-12-16',
+            DATE_END => '2018-12-16'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2019-12-17',
+            DATE_END => '2019-12-17'
+          },
+        }
+      },
     }
   },
 
@@ -7155,6 +7420,81 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2015-10-29',
             DATE_END => '2015-10-29'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-27',
+            DATE_END => '2016-10-27'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-26',
+            DATE_END => '2017-10-26'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-25',
+            DATE_END => '2018-10-25'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-24',
+            DATE_END => '2019-10-24'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-28',
+            DATE_END => '2022-10-28'
           } 
         }
       },
@@ -7664,6 +8004,96 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2017-06-10',
+            DATE_END => '2017-06-12'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2018-06-09',
+            DATE_END => '2018-06-11'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2019-06-08',
+            DATE_END => '2019-06-10'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2022-06-11',
+            DATE_END => '2022-06-13'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2023-06-10',
+            DATE_END => '2023-06-12'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2024-06-08',
+            DATE_END => '2024-06-10'
+          } 
+        }
+      },
     }
   },
 
@@ -8069,6 +8499,34 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2015-11-22',
             DATE_END => '2015-11-22'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-20',
+            DATE_END => '2016-11-20'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-18',
+            DATE_END => '2018-11-18'
           } 
         }
       },

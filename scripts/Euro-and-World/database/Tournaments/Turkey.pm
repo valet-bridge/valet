@@ -183,6 +183,13 @@ my %MEETS_TURKEY =
         DATE_START => '2015-09-11',
         DATE_END => '2015-09-11'
       },
+      '2016' =>
+      {
+        ORDINAL => 32,
+        YEAR => 2016,
+        DATE_START => '2016-09-02',
+        DATE_END => '2016-09-02'
+      },
     }
   },
 
@@ -547,6 +554,34 @@ my %TOURNAMENTS_TURKEY =
             major => 'ROUND',
             DATE_START => '2016-08-26',
             DATE_END => '2016-08-28'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-07-07',
+            DATE_END => '2017-07-08'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2024-07-06',
+            DATE_END => '2024-07-07'
           } 
         }
       },
@@ -1717,6 +1752,21 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Playoff',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2017-02-12',
+            DATE_END => '2017-02-12'
+          } 
+        }
+      },
     }
   },
 
@@ -1980,6 +2030,20 @@ my %TOURNAMENTS_TURKEY =
           },
         }
       },
+      '2018' =>
+      {
+        MEET => 'Mersin Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-09-16',
+            DATE_END => '2018-09-16'
+          },
+        }
+      },
     }
   },
 
@@ -2141,6 +2205,19 @@ my %TOURNAMENTS_TURKEY =
             major => 'SEGMENT',
             DATE_START => '2015-09-11',
             DATE_END => '2015-09-11'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Mersin Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-02',
+            DATE_END => '2016-09-02'
           },
         }
       },

@@ -277,6 +277,23 @@ my %MEETS_CHINA =
     }
   },
 
+  'Sanya Nanshan Festival' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-10-07',
+        DATE_END => '2019-10-13'
+      },
+    }
+  },
+
 );
 
 my %TOURNAMENTS_CHINA =
@@ -2725,6 +2742,19 @@ my %TOURNAMENTS_CHINA =
           },
         }
       },
+      '2019' =>
+      {
+        MEET => 'Sanya Nanshan Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-09',
+            DATE_END => '2019-10-13'
+          },
+        }
+      },
     }
   },
 
@@ -2753,13 +2783,14 @@ my %TOURNAMENTS_CHINA =
       },
       '2019' =>
       {
+        MEET => 'Sanya Nanshan Festival',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
             YEAR => 2019,
             DATE_START => '2019-10-06',
-            DATE_END => '2019-10-06'
+            DATE_END => '2019-10-08'
           },
         }
       },

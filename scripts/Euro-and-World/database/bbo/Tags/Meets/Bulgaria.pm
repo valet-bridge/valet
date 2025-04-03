@@ -64,7 +64,8 @@ my %MULTI_TYPOS =
     'bridge festival - stara zagora',
     'bridge festival stara zagora',
     'bridge festival-bulgaria-stara zagora',
-    'international bridge festival stara zagora'],
+    'international bridge festival stara zagora',
+    'international festival stara zagora'],
   'Varna Bridge Festival' => [
     'ibf varna',
     'international bridge festival varna',

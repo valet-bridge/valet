@@ -646,6 +646,13 @@ my %MEETS_BULGARIA =
         DATE_START => '2016-10-08',
         DATE_END => '2016-10-08'
       },
+      '2019' =>
+      {
+        MEET_ORDINAL => 38,
+        YEAR => 2019,
+        DATE_START => '2019-10-05',
+        DATE_END => '2019-10-06'
+      },
       '2020' =>
       {
         MEET_ORDINAL => 39,

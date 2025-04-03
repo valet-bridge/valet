@@ -1876,15 +1876,51 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-03-01',
+            DATE_END => '2017-03-02'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-28',
+            DATE_END => '2018-03-01'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-03',
+            DATE_END => '2019-03-07'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-22',
+            DATE_END => '2020-01-23'
           },
         }
       },
@@ -3402,6 +3438,162 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2017A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-13',
+            DATE_END => '2017-05-13'
+          },
+        }
+      },
+      '2017B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-16',
+            DATE_END => '2017-06-17'
+          },
+        }
+      },
+      '2017C' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-09',
+            DATE_END => '2017-12-10'
+          },
+        }
+      },
+      '2018A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-17',
+            DATE_END => '2018-02-17'
+          },
+        }
+      },
+      '2018B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-07',
+            DATE_END => '2018-12-09'
+          },
+        }
+      },
+      '2019A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-05',
+            DATE_END => '2019-04-07'
+          },
+        }
+      },
+      '2019B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-13',
+            DATE_END => '2019-07-14'
+          },
+        }
+      },
+      '2019C' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-13',
+            DATE_END => '2019-12-15'
+          },
+        }
+      },
+      '2021A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-09-17',
+            DATE_END => '2021-09-19'
+          },
+        }
+      },
+      '2021B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-12-27',
+            DATE_END => '2021-12-29'
+          },
+        }
+      },
+      '2022A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-11',
+            DATE_END => '2022-03-13'
+          },
+        }
+      },
+      '2022B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-28',
+            DATE_END => '2022-05-29'
+          },
+        }
+      },
+      '2022C' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-09',
+            DATE_END => '2022-12-11'
+          },
+        }
+      },
       '2023A' =>
       {
         CHAPTERS =>
@@ -3639,15 +3831,27 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-06-09',
+            DATE_END => '2023-06-10'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-05-31',
+            DATE_END => '2024-06-02'
           },
         }
       },
@@ -3760,15 +3964,15 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-04-03',
+            DATE_END => '2024-04-05'
           },
         }
       },

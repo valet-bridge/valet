@@ -395,6 +395,19 @@ my %TOURNAMENTS_RUSSIA =
           },
         }
       },
+      '2017' =>
+      {
+        CITY => 'Moscow',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-11',
+            DATE_END => '2017-11-12'
+          },
+        }
+      },
       '2020' =>
       {
         # https://bridgemoscow.ru/tournaments/results/nncup20/nncup20r.htm
