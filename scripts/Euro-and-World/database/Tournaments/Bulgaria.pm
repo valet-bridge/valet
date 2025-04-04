@@ -644,7 +644,21 @@ my %MEETS_BULGARIA =
         MEET_ORDINAL => 35,
         YEAR => 2016,
         DATE_START => '2016-10-08',
-        DATE_END => '2016-10-08'
+        DATE_END => '2016-10-09'
+      },
+      '2017' =>
+      {
+        MEET_ORDINAL => 36,
+        YEAR => 2017,
+        DATE_START => '2017-10-07',
+        DATE_END => '2017-10-08'
+      },
+      '2018' =>
+      {
+        MEET_ORDINAL => 37,
+        YEAR => 2018,
+        DATE_START => '2018-10-06',
+        DATE_END => '2018-10-07'
       },
       '2019' =>
       {
@@ -847,6 +861,20 @@ my %TOURNAMENTS_BULGARIA =
             major => 'ROUND',
             DATE_START => '2016-07-07',
             DATE_END => '2016-07-09'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Albena Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-07-07',
+            DATE_END => '2017-07-09'
           } 
         }
       },
@@ -1788,6 +1816,21 @@ my %TOURNAMENTS_BULGARIA =
             major => 'ROUND',
             DATE_START => '2015-04-18',
             DATE_END => '2015-04-19'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Dobrich Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-04-08',
+            DATE_END => '2017-04-09'
           } 
         }
       },
@@ -3026,7 +3069,46 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2016,
             DATE_START => '2016-10-08',
-            DATE_END => '2016-10-08'
+            DATE_END => '2016-10-09'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Stara Zagora Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-07',
+            DATE_END => '2017-10-08'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Stara Zagora Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-06',
+            DATE_END => '2018-10-07'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Stara Zagora Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-05',
+            DATE_END => '2019-10-06'
           },
         }
       },

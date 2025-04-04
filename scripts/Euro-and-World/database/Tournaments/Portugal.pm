@@ -280,9 +280,17 @@ my %MEETS_PORTUGAL =
       },
       '2016' =>
       {
+        ORDINAL => 2,
         YEAR => 2016,
         DATE_START => '2016-03-19',
         DATE_END => '2016-03-20'
+      },
+      '2017' =>
+      {
+        ORDINAL => 3,
+        YEAR => 2017,
+        DATE_START => '2017-03-10',
+        DATE_END => '2017-03-12'
       },
       '2018' =>
       {

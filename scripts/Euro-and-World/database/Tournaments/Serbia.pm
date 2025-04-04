@@ -22,10 +22,50 @@ my %GLOBAL = (
 
 my %MEETS_SERBIA =
 (
+  'Novi Sad Festival' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Transnational',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-04-20',
+        DATE_END => '2022-04-21'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_SERBIA =
 (
+  'Novi Sad Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'Novi Sad Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-04-20',
+            DATE_END => '2022-04-21'
+          },
+        }
+      }
+    }
+  },
+
   'Serbian Cup' =>
   {
     %GLOBAL,

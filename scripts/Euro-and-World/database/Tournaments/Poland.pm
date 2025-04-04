@@ -3704,6 +3704,20 @@ my %TOURNAMENTS_POLAND =
       },
       '2022B' =>
       {
+        MEET => 'Wroclaw Meeting',
+        MEET_TAG => 2022,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-21',
+            DATE_END => '2022-05-21'
+          },
+        }
+      },
+      '2022C' =>
+      {
         CHAPTERS =>
         {
           'C0' => 
@@ -3714,7 +3728,7 @@ my %TOURNAMENTS_POLAND =
           },
         }
       },
-      '2022C' =>
+      '2022D' =>
       {
         CHAPTERS =>
         {

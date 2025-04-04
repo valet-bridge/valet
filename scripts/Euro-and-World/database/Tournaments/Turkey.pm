@@ -190,6 +190,13 @@ my %MEETS_TURKEY =
         DATE_START => '2016-09-02',
         DATE_END => '2016-09-02'
       },
+      '2018' =>
+      {
+        ORDINAL => 34,
+        YEAR => 2018,
+        DATE_START => '2018-09-16',
+        DATE_END => '2018-09-16'
+      },
     }
   },
 
@@ -571,6 +578,18 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-09',
+            DATE_END => '2023-07-09'
+          } 
+        }
+      },
       '2024' =>
       {
         CHAPTERS =>
@@ -578,8 +597,6 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2024,
-            MOVEMENT => 'Round-robin',
-            major => 'ROUND',
             DATE_START => '2024-07-06',
             DATE_END => '2024-07-07'
           } 
@@ -623,6 +640,53 @@ my %TOURNAMENTS_TURKEY =
             major => 'ROUND',
             DATE_START => '2014-05-17',
             DATE_END => '2014-05-18'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-05-11',
+            DATE_END => '2018-05-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-05-28',
+            DATE_END => '2018-05-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-06-01',
+            DATE_END => '2018-06-04'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-04-26',
+            DATE_END => '2019-04-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-05-17',
+            DATE_END => '2019-05-19'
           },
         }
       }
@@ -1791,6 +1855,24 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
+      '2019-20' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-21',
+            DATE_END => '2019-12-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-05',
+            DATE_END => '2020-01-05'
+          } 
+        }
+      },
     }
   },
 
@@ -1814,6 +1896,18 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2016,
             DATE_START => '2016-10-22',
             DATE_END => '2016-10-22'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-05',
+            DATE_END => '2017-03-05'
           },
         }
       },

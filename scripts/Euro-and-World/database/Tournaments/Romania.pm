@@ -45,7 +45,7 @@ my %MEETS_ROMANIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         YEAR => 2023,
         DATE_START => '2023-04-30',
@@ -1292,8 +1292,6 @@ my %TOURNAMENTS_ROMANIA =
 
   'Tusnad Open Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

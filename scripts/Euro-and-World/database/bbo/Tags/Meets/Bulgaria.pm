@@ -31,12 +31,14 @@ my %MULTI_TYPOS =
 (
   'Albena Bridge Festival' => [
     'albena international bridge festival',
-    'international bridge festival albena'],
+    'international bridge festival albena',
+    'international festival albena'],
   'Cherven Briag Festival' => [
     'read beach festival',
     'red beach festival'],
   'Dobrich Bridge Festival' => [
-    'ibf dobrich'],
+    'ibf dobrich',
+    'international festival dobrich'],
   'Lozenets Bridge Festival' => ['bridge festival lozenets'],
   'Pavel Banya Bridge Festival' => [
     'bridge festival pavel banya',

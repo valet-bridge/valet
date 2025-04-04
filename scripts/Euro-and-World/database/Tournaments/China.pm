@@ -228,6 +228,7 @@ my %MEETS_CHINA =
 
   'Hainan Bridge Festival' =>
   {
+    # TODO Same as Sanya Bridge Festival?
     %GLOBAL,
     ORIGIN => 'Transnational',
 
@@ -254,7 +255,7 @@ my %MEETS_CHINA =
       '2019' =>
       {
         YEAR => 2019,
-        DATE_START => '2019-10-04',
+        DATE_START => '2019-09-29',
         DATE_END => '2019-10-05'
       },
     }
@@ -298,7 +299,7 @@ my %MEETS_CHINA =
       '2019' =>
       {
         YEAR => 2019,
-        DATE_START => '2019-10-06',
+        DATE_START => '2019-09-29',
         DATE_END => '2019-10-13'
       },
     }
@@ -2162,6 +2163,7 @@ my %TOURNAMENTS_CHINA =
 
   'HNA Open Teams' =>
   {
+    # TODO Could be at Sanya Bridge Festival
     SPONSOR => 'Hainan Air',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2338,7 +2340,7 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-10-04',
+            DATE_START => '2019-09-29',
             DATE_END => '2019-10-05'
           },
         }

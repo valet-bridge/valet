@@ -1329,11 +1329,17 @@ my %MEETS_AUSTRALIA =
 
     EDITIONS => 
     {
-      '2000' =>
+      '2021' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2021,
+        DATE_START => '2021-10-10',
+        DATE_END => '2021-10-10'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-10-09',
+        DATE_END => '2022-10-09'
       },
     }
   },
@@ -7214,6 +7220,21 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2018' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-23',
+            DATE_END => '2018-02-23'
+          } 
+        }
+      },
     }
   },
 
@@ -7334,8 +7355,8 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2019,
             STAGE => 'Final',
             major => 'SEGMENT|SESSION',
-            DATE_START => '2019-12-17',
-            DATE_END => '2019-12-17'
+            DATE_START => '2019-11-17',
+            DATE_END => '2019-11-17'
           },
         }
       },
@@ -8711,6 +8732,20 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2015-04-23',
             DATE_END => '2015-04-23'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-20',
+            DATE_END => '2018-09-20'
           },
         }
       },

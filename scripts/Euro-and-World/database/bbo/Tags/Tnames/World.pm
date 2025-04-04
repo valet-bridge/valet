@@ -58,6 +58,7 @@ my @MULTI_WORDS =
   'World U26 Women Teams',
   'World U31 Pairs',
   'World University Teams',
+  'World Women Pairs',
   'World Women Teams',
   'World Youngster Teams',
   'World Online Juniors Teams',

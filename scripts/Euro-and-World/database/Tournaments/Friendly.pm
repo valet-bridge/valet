@@ -1349,7 +1349,37 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2019' =>
+      '2018' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-20',
+            DATE_END => '2018-01-21'
+          } 
+        }
+      },
+      '2019A' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-19',
+            DATE_END => '2019-01-20'
+          } 
+        }
+      },
+      '2019B' =>
       {
         GENDER => 'Open',
         AGE => 'Open',
@@ -1391,21 +1421,6 @@ my %TOURNAMENTS_FRIENDLY =
             YEAR => 2023,
             DATE_START => '2023-02-25',
             DATE_END => '2023-02-26'
-          } 
-        }
-      },
-      '2024' =>
-      {
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2024,
-            DATE_START => '2024-04-20',
-            DATE_END => '2024-04-20'
           } 
         }
       },
@@ -3100,7 +3115,22 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2017' =>
+      '2017A' =>
+      {
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-17',
+            DATE_END => '2017-03-18'
+          } 
+        }
+      },
+      '2017B' =>
       {
         GENDER => 'Open',
         AGE => 'Open',
@@ -3115,7 +3145,52 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2018A' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-04',
+            DATE_END => '2018-04-06'
+          } 
+        }
+      },
+      '2018B' =>
+      {
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-20',
+            DATE_END => '2018-04-22'
+          } 
+        }
+      },
       '2019A' =>
+      {
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-22',
+            DATE_END => '2019-02-24'
+          } 
+        }
+      },
+      '2019B' =>
       {
         GENDER => 'Open',
         AGE => 'Open',
@@ -3130,9 +3205,9 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2019B' =>
+      '2019C' =>
       {
-        GENDER => 'Open',
+        GENDER => 'Women',
         AGE => 'Open',
 
         CHAPTERS =>
@@ -3145,7 +3220,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2019C' =>
+      '2019D' =>
       {
         GENDER => 'Open',
         AGE => 'Open',
@@ -3157,6 +3232,21 @@ my %TOURNAMENTS_FRIENDLY =
             YEAR => 2019,
             DATE_START => '2019-05-17',
             DATE_END => '2019-05-19'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-26',
+            DATE_END => '2023-05-27'
           } 
         }
       },
@@ -3815,6 +3905,21 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'SEGMENT',
             DATE_START => '2013-05-24',
             DATE_END => '2013-05-24'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        GENDER => 'Women',
+        AGE => 'U26',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-14',
+            DATE_END => '2018-04-15'
           } 
         }
       },

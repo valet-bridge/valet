@@ -26,6 +26,7 @@ my @MULTI_WORDS =
   'China Practice',
   'Denmark Friendly',
   'Denmark Practice',
+  'Denmark Practice Pairs',
   'France Friendly',
   'France Friendly Pairs',
   'France Practice',
