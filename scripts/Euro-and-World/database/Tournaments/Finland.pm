@@ -1143,8 +1143,8 @@ my %TOURNAMENTS_FINLAND =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Pairs',
-    SCORING => 'IMP',
-    GENDER => 'Open',
+    SCORING => 'MP',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>

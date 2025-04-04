@@ -1280,6 +1280,7 @@ my %MEETS_AUSTRALIA =
       '2017' =>
       {
         YEAR => 2017,
+        CITY => 'Broadbeach',
         DATE_START => '2017-02-24',
         DATE_END => '2017-02-25'
       },
@@ -7220,6 +7221,19 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-24',
+            DATE_END => '2017-02-24'
+          } 
+        }
+      },
       '2018' =>
       {
         MEET => 'Gold Coast Congress',
@@ -7232,6 +7246,19 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2018-02-23',
             DATE_END => '2018-02-23'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-22',
+            DATE_END => '2019-02-22'
           } 
         }
       },

@@ -1374,12 +1374,27 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-01-19',
+            DATE_START => '2019-01-20',
             DATE_END => '2019-01-20'
           } 
         }
       },
       '2019B' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-09',
+            DATE_END => '2019-03-09'
+          } 
+        }
+      },
+      '2019C' =>
       {
         GENDER => 'Open',
         AGE => 'Open',
@@ -1438,6 +1453,21 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
+      '2019' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-19',
+            DATE_END => '2019-01-19'
+          } 
+        }
+      },
       '2024' =>
       {
         GENDER => 'Open',
@@ -3175,6 +3205,21 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2018C' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-09',
+            DATE_END => '2018-05-09'
+          } 
+        }
+      },
       '2019A' =>
       {
         GENDER => 'Women',
@@ -3669,7 +3714,7 @@ my %TOURNAMENTS_FRIENDLY =
       },
       '2018B' =>
       {
-        GENDER => 'Open',
+        GENDER => 'Women',
         AGE => 'Open',
 
         CHAPTERS =>

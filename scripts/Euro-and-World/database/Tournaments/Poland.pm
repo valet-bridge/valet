@@ -915,7 +915,7 @@ my %MEETS_POLAND =
         CITY => 'Mragowo',
         YEAR => 2024,
         DATE_START => '2024-12-13',
-        DATE_END => '2024-12-13'
+        DATE_END => '2024-12-15'
       },
     }
   },
@@ -2911,7 +2911,19 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2018' =>
+      '2018A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-18',
+            DATE_END => '2018-02-18'
+          } 
+        }
+      },
+      '2018B' =>
       {
         MEET => 'Polish Grand Prix Pairs Legs',
         MEET_TAG => '2018',
@@ -3619,6 +3631,18 @@ my %TOURNAMENTS_POLAND =
         }
       },
       '2018B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-06',
+            DATE_END => '2018-10-07'
+          },
+        }
+      },
+      '2018C' =>
       {
         CHAPTERS =>
         {

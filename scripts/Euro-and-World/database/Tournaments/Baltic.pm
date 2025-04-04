@@ -2576,7 +2576,7 @@ my %TOURNAMENTS_BALTIC =
           {
             YEAR => 2017,
             DATE_START => '2017-09-13',
-            DATE_END => '2017-09-14'
+            DATE_END => '2017-09-17'
           },
         }
       },

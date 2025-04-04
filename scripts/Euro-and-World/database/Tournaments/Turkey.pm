@@ -574,7 +574,7 @@ my %TOURNAMENTS_TURKEY =
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-07-07',
-            DATE_END => '2017-07-08'
+            DATE_END => '2017-07-09'
           } 
         }
       },
@@ -1847,11 +1847,26 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2017,
-            STAGE => 'Playoff',
-            MOVEMENT => 'Round-robin',
-            major => 'ROUND|SEGMENT',
             DATE_START => '2017-02-12',
             DATE_END => '2017-02-12'
+          } 
+        }
+      },
+      '2018-19' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-22',
+            DATE_END => '2018-12-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-05',
+            DATE_END => '2019-01-06'
           } 
         }
       },
@@ -1870,6 +1885,42 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2020,
             DATE_START => '2020-01-05',
             DATE_END => '2020-01-05'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-19',
+            DATE_END => '2022-03-20'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-03-12',
+            DATE_END => '2023-03-12'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-18',
+            DATE_END => '2024-02-18'
           } 
         }
       },

@@ -725,7 +725,7 @@ my %TOURNAMENTS_CHILE =
           {
             YEAR => 2022,
             DATE_START => '2022-11-20',
-            DATE_END => '2022-11-20'
+            DATE_END => '2022-11-21'
           },
         }
       },
@@ -750,6 +750,32 @@ my %TOURNAMENTS_CHILE =
             YEAR => 2024,
             DATE_START => '2024-11-24',
             DATE_END => '2024-11-25'
+          },
+        }
+      },
+    }
+  },
+
+  'Vitacura Women Teams Cup' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-12',
+            DATE_END => '2023-11-13'
           },
         }
       },

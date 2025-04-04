@@ -27,7 +27,8 @@ my @MULTI_WORDS =
   'Chilean Senior Trials',
   'Chilean Women Teams',
   'Chilean Women Trials',
-  'Vitacura Open Teams Cup'
+  'Vitacura Open Teams Cup',
+  'Vitacura Women Teams Cup'
 );
 
 my %MULTI_TYPOS =

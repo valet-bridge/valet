@@ -234,42 +234,42 @@ my %MEETS_INDIA =
       '2013' =>
       {
         YEAR => 2013,
-        CITY => 'Panjim',
+        CITY => 'Panaji',
         DATE_START => '2013-07-18',
         DATE_END => '2013-07-21'
       },
       '2015' =>
       {
         YEAR => 2015,
-        CITY => 'Panjim',
+        CITY => 'Panaji',
         DATE_START => '2015-07-23',
         DATE_END => '2015-07-26'
       },
       '2016' =>
       {
         YEAR => 2016,
-        CITY => 'Panjim',
+        CITY => 'Panaji',
         DATE_START => '2016-07-30',
         DATE_END => '2016-07-31'
       },
       '2017' =>
       {
         YEAR => 2017,
-        CITY => 'Panjim',
+        CITY => 'Panaji',
         DATE_START => '2017-07-21',
         DATE_END => '2017-07-24'
       },
       '2018' =>
       {
         YEAR => 2018,
-        CITY => 'Panjim',
+        CITY => 'Panaji',
         DATE_START => '2018-07-21',
         DATE_END => '2018-07-22'
       },
       '2019' =>
       {
         YEAR => 2019,
-        CITY => 'Panjim',
+        CITY => 'Panaji',
         DATE_START => '2019-07-20',
         DATE_END => '2019-07-21'
       },
