@@ -135,6 +135,8 @@ my %MEETS_BALKAN =
       {
         # https://www.bridge.bg/en/tournaments_results/5513-14-Balkan-Championship-Finals
         MEET_ORDINAL => 14,
+        CITY => 'Stara Zagora',
+        COUNTRY => 'Bulgaria',
         YEAR => 2022,
         DATE_START => '2022-10-05',
         DATE_END => '2022-10-09'

@@ -659,6 +659,7 @@ my %MEETS_INDIA =
       },
       '2014' =>
       {
+        MEET_ORDINAL => 11,
         YEAR => 2014,
         CITY => 'Indore',
         DATE_START => '2014-01-04',
@@ -666,12 +667,14 @@ my %MEETS_INDIA =
       },
       '2015' =>
       {
+        MEET_ORDINAL => 12,
         YEAR => 2015,
         DATE_START => '2015-01-09',
         DATE_END => '2015-01-11'
       },
       '2016' =>
       {
+        MEET_ORDINAL => 13,
         YEAR => 2016,
         CITY => 'Indore',
         DATE_START => '2016-01-08',
@@ -679,24 +682,28 @@ my %MEETS_INDIA =
       },
       '2017' =>
       {
+        MEET_ORDINAL => 14,
         YEAR => 2017,
         DATE_START => '2017-01-06',
         DATE_END => '2017-01-08'
       },
       '2018' =>
       {
+        MEET_ORDINAL => 15,
         YEAR => 2018,
         DATE_START => '2018-01-12',
         DATE_END => '2018-01-14'
       },
       '2019' =>
       {
+        MEET_ORDINAL => 16,
         YEAR => 2019,
         DATE_START => '2019-01-11',
         DATE_END => '2019-01-13'
       },
       '2020' =>
       {
+        MEET_ORDINAL => 17,
         YEAR => 2020,
         DATE_START => '2020-01-05',
         DATE_END => '2020-01-07'
@@ -859,6 +866,7 @@ my %MEETS_INDIA =
       },
       '2024B' =>
       {
+        MEET_ORDINAL => 3,
         YEAR => 2024,
         DATE_START => '2024-11-09',
         DATE_END => '2024-11-10'
@@ -2969,6 +2977,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        CITY => 'Ludhiana',
         CHAPTERS =>
         {
           'C0' => 
@@ -2993,6 +3002,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2018' =>
       {
+        CITY => 'Mysore',
         CHAPTERS =>
         {
           'C0' => 
@@ -3041,6 +3051,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2024' =>
       {
+        REGION => 'Goa',
         CHAPTERS =>
         {
           'C0' => 
@@ -3558,6 +3569,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2017' =>
       {
+        CITY => 'Ahmedabad',
         CHAPTERS =>
         {
           'C0' => 
@@ -3599,8 +3611,6 @@ my %TOURNAMENTS_INDIA =
 
   'Indian Silver Open Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3610,6 +3620,8 @@ my %TOURNAMENTS_INDIA =
     {
       '2018A' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3622,6 +3634,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2018B' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3634,6 +3648,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2019A' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3646,6 +3662,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2019B' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3658,6 +3676,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2019C' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3670,6 +3690,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2022A' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3682,6 +3704,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2022B' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3694,6 +3718,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2023A' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3706,6 +3732,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2023B' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3718,6 +3746,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2024A' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3730,6 +3760,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2024B' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3742,6 +3774,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2024C' =>
       {
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => '2024B',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -5809,14 +5843,29 @@ my %TOURNAMENTS_INDIA =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Pairs',
-    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
+      '2011' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2011-02-12',
+            DATE_END => '2011-02-13'
+          } 
+        }
+      },
       '2023' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -8236,6 +8285,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2017' =>
       {
+        ORDINAL => 3,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -8249,6 +8299,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2018' =>
       {
+        ORDINAL => 4,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -8262,6 +8313,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2019' =>
       {
+        ORDINAL => 5,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -8275,6 +8327,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2020' =>
       {
+        ORDINAL => 6,
         CHAPTERS =>
         {
           'SINGLE' => 

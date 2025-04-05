@@ -17,7 +17,6 @@ my @MULTI_WORDS =
   'Bangkok Open Teams',
   'Thailand Junior Teams',
   'Thailand Mixed Teams',
-  'Thailand Mixed Team Trials',
   'Thailand Open Teams',
   'Thailand Open Team Trials',
   'Thailand Women Teams',

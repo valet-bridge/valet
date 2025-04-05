@@ -2116,6 +2116,7 @@ my %TOURNAMENTS_FRIENDLY =
         ORIGIN => 'National',
         GENDER => 'Open',
         AGE => 'Open',
+        CITY => 'Royan',
 
         CHAPTERS =>
         {
@@ -2172,6 +2173,7 @@ my %TOURNAMENTS_FRIENDLY =
     {
       '2023' =>
       {
+        CITY => 'Rieneck',
         CHAPTERS =>
         {
           'SINGLE' => 

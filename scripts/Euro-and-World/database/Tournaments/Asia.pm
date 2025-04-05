@@ -387,7 +387,7 @@ my %MEETS_ASIA =
       {
         # https://www.ccba.org.cn/Tour/TourIndex.aspx?tourid=11713
         MEET_ORDINAL => 3,
-        CITY => 'Goa',
+        REGION => 'Goa',
         COUNTRY => 'India',
         YEAR => 2018,
         DATE_START => '2018-06-04',

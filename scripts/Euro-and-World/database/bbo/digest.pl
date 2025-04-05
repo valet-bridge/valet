@@ -178,7 +178,6 @@ while ($entryT->read($fh))
     print $entryT->str_as_read();
     next;
   }
-next;
 
   $t0 = time();
   my ($header_entry, $chapter_entry) = 
@@ -200,6 +199,8 @@ next;
 
 close $fh;
 exit if $debug_flag;
+
+exit;
 
 # for my $i (0 .. $#times)
 # {

@@ -799,11 +799,11 @@ my %MEETS_BULGARIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2023,
+        DATE_START => '2023-05-27',
+        DATE_END => '2023-05-28'
       },
     }
   },
@@ -1418,6 +1418,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2023' =>
       {
+        MEET => 'Vitosha Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1656,6 +1657,7 @@ my %TOURNAMENTS_BULGARIA =
     {
       '2023' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -1737,6 +1739,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2019' =>
       {
+        ORDINAL => 21,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2074,6 +2077,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2021' =>
       {
+        ORDINAL => 5,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2260,6 +2264,7 @@ my %TOURNAMENTS_BULGARIA =
     {
       '2016' =>
       {
+        ORDINAL => 3,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2272,6 +2277,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2017' =>
       {
+        ORDINAL => 4,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2284,6 +2290,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2018' =>
       {
+        ORDINAL => 5,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2745,6 +2752,7 @@ my %TOURNAMENTS_BULGARIA =
     {
       '2016' =>
       {
+        MEET_ORDINAL => 15,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2783,6 +2791,7 @@ my %TOURNAMENTS_BULGARIA =
     {
       '2018' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'SINGLE' =>

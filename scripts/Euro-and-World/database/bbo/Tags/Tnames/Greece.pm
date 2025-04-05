@@ -62,6 +62,7 @@ my %MULTI_TYPOS =
     'greek open trials',
     'grekk open national team trials',
     'greek trials',
+    'greek trials for madeira',
     'helenic national team trials',
     'hellenic national team trials',
     'hellenic national teams trials',

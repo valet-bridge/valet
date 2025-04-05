@@ -144,6 +144,7 @@ my %MEETS_CHINA =
       },
       '2019' =>
       {
+        MEET_ORDINAL => 4,
         YEAR => 2019,
         DATE_START => '2019-11-09',
         DATE_END => '2019-11-16'
@@ -2924,6 +2925,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2019' =>
       {
+        ORDINAL => 5,
         CHAPTERS =>
         {
           'SINGLE' =>

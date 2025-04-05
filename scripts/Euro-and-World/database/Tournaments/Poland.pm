@@ -1917,6 +1917,7 @@ my %TOURNAMENTS_POLAND =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CITY => 'Elblag',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3596,6 +3597,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2017A' =>
       {
+        CITY => 'Bydgoszcz',
         CHAPTERS =>
         {
           'C0' => 
@@ -3608,6 +3610,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2017B' =>
       {
+        MEET => 'Poznan Congress',
+        MEET_TAG => 2017,
         CHAPTERS =>
         {
           'C0' => 
@@ -3778,6 +3782,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2023A' =>
       {
+        CITY => 'Lubomino',
         CHAPTERS =>
         {
           'C0' => 
@@ -3840,6 +3845,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2024A' =>
       {
+        CITY => 'Sieradz',
         CHAPTERS =>
         {
           'C0' => 

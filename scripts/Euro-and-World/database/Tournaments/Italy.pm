@@ -4405,6 +4405,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2014' =>
       {
+        ORDINAL => 7,
         YEAR => 2014,
         CHAPTERS => 
         {
@@ -4426,6 +4427,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2015' =>
       {
+        ORDINAL => 8,
         YEAR => 2015,
         CHAPTERS => 
         {
@@ -4447,6 +4449,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2016' =>
       {
+        ORDINAL => 9,
         YEAR => 2016,
         CHAPTERS => 
         {
@@ -4459,6 +4462,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2017' =>
       {
+        ORDINAL => 10,
         YEAR => 2017,
         CHAPTERS => 
         {
@@ -4471,6 +4475,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2018' =>
       {
+        ORDINAL => 11,
         YEAR => 2018,
         CHAPTERS => 
         {

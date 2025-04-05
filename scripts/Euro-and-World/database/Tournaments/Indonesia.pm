@@ -300,6 +300,8 @@ my %MEETS_INDONESIA =
       },
       '2023' =>
       {
+        MEET_ORDINAL => 8,
+        REGION => 'East Java',
         YEAR => 2023,
         DATE_START => '2023-09-09',
         DATE_END => '2023-09-15'
@@ -391,6 +393,7 @@ my %MEETS_INDONESIA =
       },
       '2024' =>
       {
+        MEET_ORDINAL => 23,
         YEAR => 2024,
         DATE_START => '2024-11-15',
         DATE_END => '2024-11-16'
@@ -599,6 +602,7 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2023' =>
       {
+        ORDINAL => 22,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -611,6 +615,7 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2024' =>
       {
+        ORDINAL => 23,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -4784,6 +4789,7 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2016' =>
       {
+        ORDINAL => 28,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -5014,6 +5020,7 @@ my %TOURNAMENTS_INDONESIA =
     %GLOBAL,
     ORIGIN => 'National',
     CITY => 'Malang',
+    CLUB => 'Fakultas Teknik Bridge Club Universitas Tanjungpura',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5719,6 +5726,7 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2016' =>
       {
+        ORDINAL => 15,
         CHAPTERS =>
         {
           'SINGLE' =>

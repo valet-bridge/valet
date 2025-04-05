@@ -175,6 +175,7 @@ my %MEETS_SOUTHAMERICA =
       },
       '2022' =>
       {
+        MEET_ORDINAL => 70,
         YEAR => 2022,
         DATE_START => '2022-05-25',
         DATE_END => '2022-05-29'

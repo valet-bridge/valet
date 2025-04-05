@@ -859,6 +859,7 @@ my %TOURNAMENTS_UK =
       },
       '2017' =>
       {
+        CITY => 'Edinburgh',
         CHAPTERS =>
         {
           'C0' => 
@@ -2217,14 +2218,105 @@ my %TOURNAMENTS_UK =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Pairs',
-    SCORING => 'IMP',
     GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
+      '2010' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2010,
+            DATE_START => '2010-01-22',
+            DATE_END => '2010-01-24'
+          },
+        }
+      },
+      '2011' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2011,
+            DATE_START => '2011-01-21',
+            DATE_END => '2011-01-23'
+          },
+        }
+      },
+      '2012' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2012,
+            DATE_START => '2012-01-13',
+            DATE_END => '2012-01-15'
+          },
+        }
+      },
+      '2013' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2013,
+            DATE_START => '2013-01-25',
+            DATE_END => '2013-01-27'
+          },
+        }
+      },
+      '2014' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2014,
+            DATE_START => '2014-01-24',
+            DATE_END => '2014-01-26'
+          },
+        }
+      },
+      '2015' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2015,
+            DATE_START => '2015-01-23',
+            DATE_END => '2015-01-25'
+          },
+        }
+      },
+      '2016' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2016,
+            DATE_START => '2016-01-22',
+            DATE_END => '2016-01-24'
+          },
+        }
+      },
       '2017' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2237,6 +2329,7 @@ my %TOURNAMENTS_UK =
       },
       '2018' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2249,6 +2342,7 @@ my %TOURNAMENTS_UK =
       },
       '2019' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' =>
@@ -2267,6 +2361,7 @@ my %TOURNAMENTS_UK =
       },
       '2020' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' =>
@@ -2291,6 +2386,7 @@ my %TOURNAMENTS_UK =
       },
       '2022' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2303,6 +2399,7 @@ my %TOURNAMENTS_UK =
       },
       '2023' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2315,6 +2412,7 @@ my %TOURNAMENTS_UK =
       },
       '2024' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' =>

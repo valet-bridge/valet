@@ -177,37 +177,42 @@ my %MEETS_THAILAND =
     {
       '2017' =>
       {
-        ORDINAL => 33,
+        MEET_ORDINAL => 33,
         YEAR => 2017,
         DATE_START => '2017-03-19',
         DATE_END => '2017-03-21'
       },
       '2018' =>
       {
+        MEET_ORDINAL => 34,
         YEAR => 2018,
         DATE_START => '2018-03-22',
         DATE_END => '2018-03-25'
       },
       '2019' =>
       {
+        MEET_ORDINAL => 35,
         YEAR => 2019,
         DATE_START => '2019-05-15',
         DATE_END => '2019-05-18'
       },
       '2022' =>
       {
+        MEET_ORDINAL => 37,
         YEAR => 2022,
         DATE_START => '2022-08-01',
         DATE_END => '2022-08-04'
       },
       '2023' =>
       {
+        MEET_ORDINAL => 38,
         YEAR => 2023,
         DATE_START => '2023-03-28',
         DATE_END => '2023-03-31'
       },
       '2024' =>
       {
+        MEET_ORDINAL => 39,
         YEAR => 2024,
         DATE_START => '2024-03-26',
         DATE_END => '2024-03-29'

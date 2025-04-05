@@ -367,7 +367,7 @@ my %MEETS_PORTUGAL =
       '2013' =>
       {
         # https://www.bridge-madeira.com/2013-results/
-        ORDINAL => 17,
+        MEET_ORDINAL => 17,
         YEAR => 2013,
         DATE_START => '2013-11-04',
         DATE_END => '2013-11-10'
@@ -375,7 +375,7 @@ my %MEETS_PORTUGAL =
       '2014' =>
       {
         # https://www.bridge-madeira.com/2014-results/
-        ORDINAL => 18,
+        MEET_ORDINAL => 18,
         YEAR => 2014,
         DATE_START => '2014-11-03',
         DATE_END => '2014-11-09'
@@ -383,7 +383,7 @@ my %MEETS_PORTUGAL =
       '2015' =>
       {
         # https://www.bridge-madeira.com/2015-results/
-        ORDINAL => 18,
+        MEET_ORDINAL => 18,
         YEAR => 2015,
         DATE_START => '2015-10-29',
         DATE_END => '2015-11-08'
@@ -391,7 +391,7 @@ my %MEETS_PORTUGAL =
       '2016' =>
       {
         # https://www.bridge-madeira.com/2016-results/
-        ORDINAL => 19,
+        MEET_ORDINAL => 19,
         YEAR => 2016,
         DATE_START => '2016-11-03',
         DATE_END => '2016-11-13'
@@ -399,7 +399,7 @@ my %MEETS_PORTUGAL =
       '2017' =>
       {
         # https://www.bridge-madeira.com/2017-results/
-        ORDINAL => 20,
+        MEET_ORDINAL => 20,
         YEAR => 2017,
         DATE_START => '2017-11-02',
         DATE_END => '2017-11-13'
@@ -407,7 +407,7 @@ my %MEETS_PORTUGAL =
       '2018' =>
       {
         # https://www.bridge-madeira.com/2018-results/
-        ORDINAL => 21,
+        MEET_ORDINAL => 21,
         YEAR => 2018,
         DATE_START => '2018-11-01',
         DATE_END => '2018-11-12'
@@ -415,6 +415,7 @@ my %MEETS_PORTUGAL =
       '2019' =>
       {
         # https://bridgescanner.com/event/madeira-international-bridge-open-2019
+        MEET_ORDINAL => 22,
         YEAR => 2019,
         DATE_START => '2019-10-31',
         DATE_END => '2019-11-11'
@@ -422,12 +423,14 @@ my %MEETS_PORTUGAL =
       '2020' =>
       {
         # https://bridgescanner.com/event/madeira-international-bridge-open-2020
+        MEET_ORDINAL => 23,
         YEAR => 2020,
         DATE_START => '2020-10-29',
         DATE_END => '2020-11-09'
       },
       '2021' =>
       {
+        MEET_ORDINAL => 24,
         YEAR => 2021,
         DATE_START => '2021-11-05',
         DATE_END => '2021-11-07'
@@ -435,6 +438,7 @@ my %MEETS_PORTUGAL =
       '2022' =>
       {
         # https://bridgescanner.com/event/madeira-international-bridge-open-2022
+        MEET_ORDINAL => 25,
         YEAR => 2022,
         DATE_START => '2022-11-07',
         DATE_END => '2022-11-13'
@@ -442,6 +446,7 @@ my %MEETS_PORTUGAL =
       '2023' =>
       {
         # https://bridgescanner.com/event/madeira-international-bridge-open-2023
+        MEET_ORDINAL => 26,
         YEAR => 2023,
         DATE_START => '2023-11-06',
         DATE_END => '2023-11-13'
@@ -449,6 +454,7 @@ my %MEETS_PORTUGAL =
       '2024' =>
       {
         # https://bridgescanner.com/event/madeira-international-bridge-open-2024
+        MEET_ORDINAL => 27,
         YEAR => 2024,
         DATE_START => '2024-11-04',
         DATE_END => '2024-11-11'

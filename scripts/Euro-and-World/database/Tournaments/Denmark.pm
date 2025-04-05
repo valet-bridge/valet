@@ -2785,6 +2785,7 @@ my %TOURNAMENTS_DENMARK =
 
       '2023' =>
       {
+        COUNTRY => 'Denmark',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -2798,6 +2799,7 @@ my %TOURNAMENTS_DENMARK =
 
       '2024' =>
       {
+        COUNTRY => 'Denmark',
         CHAPTERS => 
         {
           'SINGLE' => 

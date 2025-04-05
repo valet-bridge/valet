@@ -851,6 +851,7 @@ my %MEETS_AUSTRALIA =
         # https://www.myabf.com.au/events/congress/view/638
         YEAR => 2023,
         CITY => 'Sydney',
+        SPONSOR => 'Tony Bemrose Insurance Brokers',
         DATE_START => '2023-10-18',
         DATE_END => '2023-10-25'
       },
@@ -2452,6 +2453,7 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2024' =>
       {
+        CITY => 'Canberra',
         CHAPTERS =>
         {
           'SINGLE' => 

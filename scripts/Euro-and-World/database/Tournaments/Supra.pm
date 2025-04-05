@@ -216,12 +216,16 @@ my %MEETS_SUPRA =
       },
       '2017' =>
       {
+        CITY => 'Monte Carlo',
+        COUNTRY => 'Monaco',
         YEAR => 2017,
         DATE_START => '2017-02-14',
         DATE_END => '2017-02-19'
       },
       '2019' =>
       {
+        CITY => 'Monte Carlo',
+        COUNTRY => 'Monaco',
         YEAR => 2019,
         DATE_START => '2019-02-03',
         DATE_END => '2019-02-08'
@@ -2118,6 +2122,7 @@ my %TOURNAMENTS_SUPRA =
       },
       '2016' =>
       {
+        CITY => 'Boleslawiec',
         CHAPTERS =>
         {
           'C0' => 

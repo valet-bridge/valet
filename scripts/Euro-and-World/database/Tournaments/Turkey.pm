@@ -50,6 +50,7 @@ my %MEETS_TURKEY =
       },
       '2016' =>
       {
+        MEET_ORDINAL => 4,
         YEAR => 2016,
         DATE_START => '2016-09-24',
         DATE_END => '2016-09-25'
@@ -128,24 +129,28 @@ my %MEETS_TURKEY =
     {
       '2018A' =>
       {
+        MEET_ORDINAL => 3,
         YEAR => 2018,
         DATE_START => '2018-04-09',
         DATE_END => '2018-04-12'
       },
       '2018B' =>
       {
+        MEET_ORDINAL => 4,
         YEAR => 2018,
         DATE_START => '2018-09-03',
         DATE_END => '2018-09-06'
       },
       '2019A' =>
       {
+        MEET_ORDINAL => 5,
         YEAR => 2019,
         DATE_START => '2019-04-15',
         DATE_END => '2019-04-18'
       },
       '2019B' =>
       {
+        MEET_ORDINAL => 6,
         YEAR => 2019,
         DATE_START => '2019-10-07',
         DATE_END => '2019-10-10'
