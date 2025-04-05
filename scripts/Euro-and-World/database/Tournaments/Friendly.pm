@@ -1239,7 +1239,22 @@ my %TOURNAMENTS_FRIENDLY =
           },
         }
       },
-      '2019' =>
+      '2019A' =>
+      {
+        ORDINAL => 3,
+        GENDER => 'Open',
+        AGE => 'Open',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-15',
+            DATE_END => '2019-10-15'
+          },
+        }
+      },
+      '2019B' =>
       {
         ORDINAL => 3,
         GENDER => 'Mixed',
@@ -3261,6 +3276,22 @@ my %TOURNAMENTS_FRIENDLY =
       '2019B' =>
       {
         CLUB => "'t Onstein",
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-12',
+            DATE_END => '2019-04-12'
+          } 
+        }
+      },
+      '2019C' =>
+      {
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3274,7 +3305,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2019C' =>
+      '2019D' =>
       {
         CLUB => "'t Onstein",
         GENDER => 'Women',
@@ -3290,7 +3321,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2019D' =>
+      '2019E' =>
       {
         CLUB => "'t Onstein",
         GENDER => 'Open',

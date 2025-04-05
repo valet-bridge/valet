@@ -282,6 +282,7 @@ my %MEETS_CHINA =
   'Sanya Nanshan Festival' =>
   {
     ORIGIN => 'National',
+    REGION => 'Hainan',
 
     EDITIONS =>
     {

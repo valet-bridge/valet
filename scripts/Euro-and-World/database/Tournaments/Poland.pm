@@ -3673,6 +3673,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2019A' =>
       {
+        ORDINAL => 4,
+        PERSON => 'Krzysztof Bader',
         CHAPTERS =>
         {
           'C0' => 
@@ -3801,6 +3803,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2023B' =>
       {
+        ORDINAL => 6,
+        PERSON => 'Andrzej Zurek',
         CHAPTERS =>
         {
           'C0' => 
@@ -3878,6 +3882,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2024C' =>
       {
+        CITY => 'Warsaw',
         CHAPTERS =>
         {
           'C0' => 
@@ -4027,6 +4032,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2023' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -4039,6 +4045,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2024' =>
       {
+        ORDINAL => 3,
         CHAPTERS =>
         {
           'SINGLE' =>

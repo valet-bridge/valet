@@ -102,6 +102,7 @@ my %TOURNAMENTS_TAIPEI =
       },
       '2019' =>
       {
+        ORDINAL => 15,
         CHAPTERS =>
         {
           'SINGLE' =>

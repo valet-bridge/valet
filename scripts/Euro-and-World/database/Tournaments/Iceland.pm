@@ -42,6 +42,7 @@ my %MEETS_ICELAND =
       '2018' =>
       {
         YEAR => 2018,
+        CITY => 'Siglufjordur',
         DATE_START => '2018-09-15',
         DATE_END => '2018-09-16'
       },

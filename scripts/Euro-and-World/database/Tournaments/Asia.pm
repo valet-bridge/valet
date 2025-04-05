@@ -960,6 +960,7 @@ my %TOURNAMENTS_ASIA =
     {
       '2019' =>
       {
+        ORDINAL => 52,
         CHAPTERS =>
         {
           'SINGLE' =>

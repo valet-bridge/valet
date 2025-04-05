@@ -1488,6 +1488,7 @@ my %TOURNAMENTS_TURKEY =
     {
       '2018' =>
       {
+        REGION => 'Marmara',
         CHAPTERS =>
         {
           'SINGLE' =>

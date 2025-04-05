@@ -417,6 +417,8 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2019' =>
       {
+        ORDINAL => 4,
+        CITY => 'Padang',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -605,7 +607,8 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2023' =>
       {
-        ORDINAL => 22,
+        # TODO Odd
+        ORDINAL => 25,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -4817,6 +4820,7 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2021' =>
       {
+        ORDINAL => 30,
         CHAPTERS =>
         {
           'SINGLE' => 

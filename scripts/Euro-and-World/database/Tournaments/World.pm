@@ -297,6 +297,7 @@ my %MEETS_WORLD =
       {
         YEAR => 2024,
         CITY => 'Istanbul',
+        CLUB => 'Istanbul Sports',
         COUNTRY => 'Turkey',
         DATE_START => '2024-09-06',
         DATE_END => '2024-09-09'

@@ -340,6 +340,7 @@ my %MEETS_BULGARIA =
       '2019' =>
       {
         ORDINAL => 14,
+        CITY => 'Haskovski Mineralni Bani',
         YEAR => 2019,
         DATE_START => '2019-01-05',
         DATE_END => '2019-01-06'
@@ -2522,6 +2523,7 @@ my %TOURNAMENTS_BULGARIA =
       '2021' =>
       {
         MEET => 'Plovdiv Bridge Festival',
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'C0' => 
@@ -2535,6 +2537,7 @@ my %TOURNAMENTS_BULGARIA =
       '2022' =>
       {
         MEET => 'Plovdiv Bridge Festival',
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'C0' => 

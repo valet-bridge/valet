@@ -41,6 +41,7 @@ my %MEETS_FRANCE =
       },
       '2023' =>
       {
+        MEET_ORDINAL => 72,
         YEAR => 2023,
         DATE_START => '2023-08-15',
         DATE_END => '2023-08-15'
@@ -898,6 +899,7 @@ my %TOURNAMENTS_FRANCE =
       },
       '2018' =>
       {
+        ORDINAL => 8,
         CHAPTERS =>
         {
           'SINGLE' => 

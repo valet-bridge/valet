@@ -1783,6 +1783,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2024' =>
       {
+        ORDINAL => 7,
         CHAPTERS =>
         {
           'C0' => 
@@ -3078,7 +3079,10 @@ my %TOURNAMENTS_INDIA =
       },
       '2024' =>
       {
+        # TODO Really?
+        ORDINAL => 1,
         REGION => 'Goa',
+        SPONSOR => 'Shree Cement',
         CHAPTERS =>
         {
           'C0' => 

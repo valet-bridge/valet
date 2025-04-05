@@ -27,6 +27,7 @@ my %MEETS_MIDDLEEAST =
     {
       '2019' =>
       {
+        MEET_ORDINAL => 7,
         YEAR => 2019,
         DATE_START => '2019-02-21',
         DATE_END => '2019-02-25'
@@ -168,6 +169,7 @@ my %MEETS_MIDDLEEAST =
     {
       '2017' =>
       {
+        MEET_ORDINAL => 4,
         YEAR => 2017,
         DATE_START => '2017-12-03',
         DATE_END => '2017-12-03'
@@ -958,6 +960,7 @@ my %TOURNAMENTS_MIDDLEEAST =
       },
       '2018' =>
       {
+        ORDINAL => 10,
         CHAPTERS =>
         {
           'SINGLE' => 
