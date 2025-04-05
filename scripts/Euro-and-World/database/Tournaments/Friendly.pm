@@ -1241,6 +1241,9 @@ my %TOURNAMENTS_FRIENDLY =
       },
       '2019' =>
       {
+        ORDINAL => 3,
+        GENDER => 'Mixed',
+        AGE => 'Open',
         CHAPTERS =>
         {
           'SINGLE' => 

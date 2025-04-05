@@ -91,6 +91,7 @@ my %MEETS_WORLD =
       '2018' =>
       {
         # https://www.fisu.net/events/2018-fisu-world-university-championships-bridge/?utm_source=results
+        MEET_ORDINAL => 9,
         YEAR => 2018,
         CITY => 'Xuzhou',
         COUNTRY => 'China',

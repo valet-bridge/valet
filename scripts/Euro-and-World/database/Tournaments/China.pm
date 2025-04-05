@@ -2913,6 +2913,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2018' =>
       {
+        ORDINAL => 4,
         CHAPTERS =>
         {
           'SINGLE' =>

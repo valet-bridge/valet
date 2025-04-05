@@ -109,6 +109,7 @@ my %MULTI_TYPOS =
     'grand prix of poland zulawski teams',
     'grand prix polski teamow',
     'grand prix team of poland',
+    'polish gppt',
     'poznan open teams',
     'poznan teams tournament',
     'team grand prix of poland',

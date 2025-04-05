@@ -1786,6 +1786,8 @@ my @LOCAL_SUBS_INTERPOL =
     TEXT => '2016-2017 (\d+) af 11$', 
     CORR => '2016-2017 - Round $1 of 11' },
   { START => 56247, END => 56266, TEXT => '1_(\d+)$', CORR => 'Rof$1' },
+  { START => 58097, END => 58117, TEXT => '^\d 2018 Spingold', 
+    CORR => '2018 Spingold' },
   { START => 61333, END => 61361, TEXT => '1_(\d+)$', CORR => 'Rof$1' },
   { START => 64658, END => 64667, TEXT => '1_(\d+)$', CORR => 'Rof$1' },
   { START => 78194, END => 78837, 

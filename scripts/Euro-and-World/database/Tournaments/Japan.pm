@@ -23,6 +23,7 @@ my %MEETS_JAPAN =
   {
     %GLOBAL,
     ORIGIN => 'Transnational',
+    CITY => 'Yokohama',
 
     EDITIONS => 
     {
@@ -1202,9 +1203,6 @@ my %TOURNAMENTS_JAPAN =
 
   'Yokohama Cup' => 
   {
-    %GLOBAL,
-    ORIGIN => 'National',
-    CITY => 'Yokohama',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1214,6 +1212,7 @@ my %TOURNAMENTS_JAPAN =
     {
       '2019' =>
       {
+        MEET => 'Yokohama Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 

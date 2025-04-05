@@ -352,6 +352,7 @@ my %MEETS_ASIA =
     {
       '2024' =>
       {
+        MEET_ORDINAL => 21,
         YEAR => 2024,
         DATE_START => '2024-06-27',
         DATE_END => '2024-06-30'

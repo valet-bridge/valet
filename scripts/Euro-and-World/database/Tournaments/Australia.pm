@@ -819,6 +819,7 @@ my %MEETS_AUSTRALIA =
         # http://abfevents.com.au/events/spnot/2018/
         YEAR => 2018,
         CITY => 'Sydney',
+        SPONSOR => 'Tony Bemrose Insurance Brokers',
         DATE_START => '2018-10-17',
         DATE_END => '2018-10-25'
       },
@@ -1294,6 +1295,7 @@ my %MEETS_AUSTRALIA =
       '2019' =>
       {
         YEAR => 2019,
+        CITY => 'Broadbeach',
         DATE_START => '2019-02-22',
         DATE_END => '2019-02-23'
       },

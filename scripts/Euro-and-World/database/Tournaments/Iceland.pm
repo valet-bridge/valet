@@ -51,6 +51,12 @@ my %MEETS_ICELAND =
         DATE_START => '2019-09-14',
         DATE_END => '2019-09-15'
       },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-09-03',
+        DATE_END => '2022-09-04'
+      },
     }
   },
 

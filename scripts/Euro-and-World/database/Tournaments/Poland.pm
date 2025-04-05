@@ -3685,6 +3685,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2019B' =>
       {
+        ORDINAL => 2,
+        PERSON => 'Andrzej Zurek',
         CHAPTERS =>
         {
           'C0' => 

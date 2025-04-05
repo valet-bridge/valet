@@ -15,7 +15,6 @@ my %GLOBAL =
 (
   ORGANIZATION => 'SBF',
   COUNTRY => 'Sweden',
-  ORIGIN => 'National',
   ZONE => 'Europe'
 );
 
@@ -47,6 +46,7 @@ my %MEETS_SWEDEN =
   'Swedish Bridge Festival' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
 
     # Start 6 days before end
     # End 3 days after
@@ -173,6 +173,7 @@ my %MEETS_SWEDEN =
   'Swedish Women Trials' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     GENDER => 'Women',
     AGE => 'Open',
 
@@ -190,6 +191,7 @@ my %MEETS_SWEDEN =
   'Umea Bridgefestival' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
 
     EDITIONS => 
     {
@@ -592,7 +594,6 @@ my %TOURNAMENTS_SWEDEN =
 
   'Falkenberg Pro-Am' =>
   {
-    %GLOBAL,
     ORIGIN => 'Pro-Am',
     FORM => 'Pairs',
     SCORING => 'IMP',
@@ -603,6 +604,7 @@ my %TOURNAMENTS_SWEDEN =
     {
       '2017' =>
       {
+        MEET => 'Falkenberg Bridgefestival',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -615,6 +617,7 @@ my %TOURNAMENTS_SWEDEN =
       },
       '2018' =>
       {
+        MEET => 'Falkenberg Bridgefestival',
         CHAPTERS =>
         {
           'SINGLE' =>

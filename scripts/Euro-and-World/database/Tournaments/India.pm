@@ -270,6 +270,7 @@ my %MEETS_INDIA =
       {
         YEAR => 2019,
         CITY => 'Panaji',
+        PERSON => 'Krishan Kumar Modi',
         DATE_START => '2019-07-20',
         DATE_END => '2019-07-21'
       },
@@ -700,6 +701,7 @@ my %MEETS_INDIA =
       {
         MEET_ORDINAL => 16,
         YEAR => 2019,
+        CITY => 'Indore',
         DATE_START => '2019-01-11',
         DATE_END => '2019-01-13'
       },
@@ -707,6 +709,7 @@ my %MEETS_INDIA =
       {
         MEET_ORDINAL => 17,
         YEAR => 2020,
+        CITY => 'Indore',
         DATE_START => '2020-01-05',
         DATE_END => '2020-01-07'
       },
@@ -792,6 +795,7 @@ my %MEETS_INDIA =
       },
       '2023' =>
       {
+        MEET_ORDINAL => 43,
         YEAR => 2023,
         DATE_START => '2023-04-14',
         DATE_END => '2023-04-16'
@@ -860,6 +864,7 @@ my %MEETS_INDIA =
       },
       '2023' =>
       {
+        MEET_ORDINAL => 2,
         YEAR => 2023,
         DATE_START => '2023-11-18',
         DATE_END => '2023-11-19'
@@ -1073,6 +1078,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2017' =>
       {
+        ORDINAL => 6,
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1088,6 +1094,7 @@ my %TOURNAMENTS_INDIA =
       {
         ORDINAL => 7,
         SPONSOR => 'Shree Cement',
+        CITY => 'Mumbai',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1101,6 +1108,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2019' =>
       {
+        ORDINAL => 8,
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1668,6 +1676,7 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    SPONSOR => 'Shree Cement',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1761,6 +1770,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2023' =>
       {
+        ORDINAL => 6,
         CHAPTERS =>
         {
           'C0' => 
@@ -2457,6 +2467,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2023' =>
       {
+        ORDINAL => 3,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2469,6 +2480,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2024' =>
       {
+        ORDINAL => 4,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2597,6 +2609,7 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    SPONSOR => 'Shree Cement',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -3636,8 +3649,8 @@ my %TOURNAMENTS_INDIA =
     {
       '2018A' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'All India HCL Tournament',
+        MEET_TAG => 2018,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3650,8 +3663,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2018B' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => 2018,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3664,8 +3677,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2019A' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'Indian Summer Nationals',
+        MEET_TAG => 2019,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3720,8 +3733,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2022B' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => 2022,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3748,8 +3761,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2023B' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'All India HCL Tournament',
+        MEET_TAG => 2023,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -4410,6 +4423,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2018' =>
       {
+        SPONSOR => 'Dhampur Sugar',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -5808,6 +5822,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2019' =>
       {
+        CITY => 'Delhi',
         CHAPTERS =>
         {
           'C0' => 
@@ -6056,6 +6071,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2019' =>
       {
+        CITY => 'Kanpur',
         CHAPTERS =>
         {
           'SINGLE' =>
