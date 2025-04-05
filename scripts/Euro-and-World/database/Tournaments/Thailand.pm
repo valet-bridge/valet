@@ -229,6 +229,7 @@ my %MEETS_THAILAND =
     {
       '2017' =>
       {
+        ORDINAL => 44,
         YEAR => 2017,
         DATE_START => '2017-02-24',
         DATE_END => '2017-02-24'
@@ -249,24 +250,28 @@ my %MEETS_THAILAND =
       },
       '2020' =>
       {
+        ORDINAL => 47,
         YEAR => 2020,
         DATE_START => '2020-01-13',
         DATE_END => '2020-01-17'
       },
       '2022' =>
       {
+        # TODO What is this?
         YEAR => 2022,
         DATE_START => '2022-03-21',
         DATE_END => '2022-03-22'
       },
       '2023' =>
       {
+        ORDINAL => 48,
         YEAR => 2023,
         DATE_START => '2023-01-24',
         DATE_END => '2023-01-27'
       },
       '2024' =>
       {
+        ORDINAL => 49,
         YEAR => 2024,
         DATE_START => '2024-01-31',
         DATE_END => '2024-02-02'

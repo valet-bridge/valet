@@ -385,6 +385,7 @@ my %MEETS_SUPRA =
       },
       '2018' =>
       {
+        MEET_ORDINAL => 6,
         YEAR => 2018,
         DATE_START => '2018-05-19',
         DATE_END => '2018-05-20'

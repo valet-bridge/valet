@@ -4006,6 +4006,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2017' =>
       {
+        ORDINAL => 11,
         CITY => 'Tokyo',
         COUNTRY => 'Japan',
         CHAPTERS =>

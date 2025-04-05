@@ -165,6 +165,8 @@ my %MEETS_WORLD =
     {
       '2017' =>
       {
+        CITY => 'Beijing',
+        COUNTRY => 'China',
         YEAR => 2017,
         DATE_START => '2017-10-18',
         DATE_END => '2017-10-21'

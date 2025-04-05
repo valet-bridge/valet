@@ -35,6 +35,7 @@ my %MEETS_ICELAND =
       '2017' =>
       {
         YEAR => 2017,
+        CITY => 'Siglufjordur',
         DATE_START => '2017-10-07',
         DATE_END => '2017-10-08'
       },
@@ -141,8 +142,6 @@ my %TOURNAMENTS_ICELAND =
 (
   'Gunnars Birgisson Memorial' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -152,6 +151,7 @@ my %TOURNAMENTS_ICELAND =
     {
       '2022' =>
       {
+        MEET => 'Northern Lights Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' =>

@@ -3648,6 +3648,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2018B' =>
       {
+        PERSON => 'Andrzej Zurek',
         CHAPTERS =>
         {
           'C0' => 
@@ -3708,6 +3709,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2021A' =>
       {
+        CITY => 'Lubomino',
         CHAPTERS =>
         {
           'C0' => 
@@ -3758,6 +3760,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2022C' =>
       {
+        ORDINAL => 5,
+        PERSON => 'Andrzej Zurek',
         CHAPTERS =>
         {
           'C0' => 
@@ -6680,6 +6684,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2016' =>
       {
+        MEET => 'Boleslawiec Festival',
         CHAPTERS =>
         {
           'C0' => 

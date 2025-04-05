@@ -1021,6 +1021,8 @@ my @LOCAL_SUBS =
   { START => 58293, END => 58326, 
     TEXT => 'Polish Team Championships', 
     CORR => 'Polish Open Teams' },
+  { START => 58471, END => 58486, 
+    TEXT => '^XLIII ', CORR => '44th ' },
   { START => 58639, END => 58683, 
     TEXT => 'INTERSTATE NATIONAL BRIDGE CHAMPIONSHIP 2018 MYS', 
     CORR => '2018 Indian Inter-State Teams - Mysore' },

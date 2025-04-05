@@ -463,6 +463,7 @@ my %TOURNAMENTS_INDONESIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    SPONSOR => 'Bank Nagari',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -472,6 +473,7 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2017' =>
       {
+        ORDINAL => 11,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -498,6 +500,7 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2018' =>
       {
+        ORDINAL => 15,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -5727,6 +5730,7 @@ my %TOURNAMENTS_INDONESIA =
       '2016' =>
       {
         ORDINAL => 15,
+        REGION => 'Sintang',
         CHAPTERS =>
         {
           'SINGLE' =>

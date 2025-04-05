@@ -692,6 +692,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2018' =>
       {
+        PERSON => 'Yelda Baysal Mumcuoglu',
         CHAPTERS =>
         {
           'C0' => 

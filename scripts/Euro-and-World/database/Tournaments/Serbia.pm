@@ -233,6 +233,8 @@ my %TOURNAMENTS_SERBIA =
       },
       '2016' =>
       {
+        PERSON => 'Rade Antic',
+
         CHAPTERS =>
         {
           'C0' => 

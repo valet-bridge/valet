@@ -411,6 +411,7 @@ my %TOURNAMENTS_CHILE =
       },
       '2018' =>
       {
+        REGION => 'Comandatuba',
         CHAPTERS => 
         {
           'C0' => 

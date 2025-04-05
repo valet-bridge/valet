@@ -315,7 +315,7 @@ my %MEETS_BULGARIA =
       },
       '2017' =>
       {
-        MEET_ORDINAL => 17,
+        MEET_ORDINAL => 18,
         YEAR => 2017,
         DATE_START => '2017-06-10',
         DATE_END => '2017-06-11'
@@ -771,6 +771,7 @@ my %MEETS_BULGARIA =
       '2022' =>
       {
         MEET_ORDINAL => 46,
+        SPONSOR => 'Panatop',
         YEAR => 2022,
         DATE_START => '2022-08-13',
         DATE_END => '2022-08-14'
@@ -1243,8 +1244,6 @@ my %TOURNAMENTS_BULGARIA =
 
   'Bulgarian Open Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1254,6 +1253,8 @@ my %TOURNAMENTS_BULGARIA =
     {
       '2009' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'C0' => 
@@ -1285,6 +1286,8 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2013' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1299,6 +1302,8 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2014' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1314,6 +1319,8 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2015' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1330,6 +1337,8 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2016' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1346,6 +1355,8 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2017' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1358,6 +1369,8 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2018' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1370,6 +1383,8 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2019' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1382,6 +1397,8 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2021A' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1394,6 +1411,8 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2021B' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -1406,6 +1425,8 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2022' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1431,6 +1452,8 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2024' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1727,6 +1750,7 @@ my %TOURNAMENTS_BULGARIA =
     {
       '2017' =>
       {
+        ORDINAL => 19,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -1853,6 +1877,7 @@ my %TOURNAMENTS_BULGARIA =
     {
       '2016' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2389,6 +2414,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2021' =>
       {
+        ORDINAL => 41,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2765,6 +2791,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2017' =>
       {
+        MEET_ORDINAL => 16,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2792,6 +2819,7 @@ my %TOURNAMENTS_BULGARIA =
       '2018' =>
       {
         ORDINAL => 1,
+        CITY => 'Bansko',
         CHAPTERS =>
         {
           'SINGLE' =>

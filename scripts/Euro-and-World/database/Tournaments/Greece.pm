@@ -1096,6 +1096,7 @@ my %TOURNAMENTS_GREECE =
     {
       '2018' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'SINGLE' =>

@@ -122,6 +122,7 @@ my %TOURNAMENTS_SPAIN =
     {
       '2019' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -134,6 +135,7 @@ my %TOURNAMENTS_SPAIN =
       },
       '2020' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -669,6 +671,7 @@ my %TOURNAMENTS_SPAIN =
       },
       '2019' =>
       {
+        CITY => 'Madrid',
         CHAPTERS =>
         {
           'SINGLE' => 

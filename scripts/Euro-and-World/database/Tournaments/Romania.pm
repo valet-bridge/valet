@@ -149,6 +149,7 @@ my %TOURNAMENTS_ROMANIA =
     {
       '2023' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -161,6 +162,7 @@ my %TOURNAMENTS_ROMANIA =
       },
       '2024' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'SINGLE' =>

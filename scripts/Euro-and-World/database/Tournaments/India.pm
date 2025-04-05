@@ -684,6 +684,7 @@ my %MEETS_INDIA =
       {
         MEET_ORDINAL => 14,
         YEAR => 2017,
+        CITY => 'Indore',
         DATE_START => '2017-01-06',
         DATE_END => '2017-01-08'
       },
@@ -691,6 +692,7 @@ my %MEETS_INDIA =
       {
         MEET_ORDINAL => 15,
         YEAR => 2018,
+        CITY => 'Indore',
         DATE_START => '2018-01-12',
         DATE_END => '2018-01-14'
       },
@@ -774,6 +776,7 @@ my %MEETS_INDIA =
       },
       '2016' =>
       {
+        MEET_ORDINAL => 36,
         CITY => 'Pune',
         YEAR => 2016,
         DATE_START => '2016-06-25',
@@ -781,6 +784,8 @@ my %MEETS_INDIA =
       },
       '2017' =>
       {
+        MEET_ORDINAL => 37,
+        CITY => 'Solapur',
         YEAR => 2017,
         DATE_START => '2017-02-17',
         DATE_END => '2017-02-18'
@@ -849,6 +854,7 @@ my %MEETS_INDIA =
       '2022' =>
       {
         YEAR => 2022,
+        SPONSOR => 'Balarampur Chini',
         DATE_START => '2022-11-12',
         DATE_END => '2022-11-13'
       },
@@ -1067,6 +1073,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2017' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -1079,6 +1086,9 @@ my %TOURNAMENTS_INDIA =
       },
       '2018' =>
       {
+        ORDINAL => 7,
+        SPONSOR => 'Shree Cement',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -1091,6 +1101,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2019' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -1103,6 +1114,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2022' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2990,6 +3002,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2017' =>
       {
+        SPONSOR => 'Bhabha Atomic Research Centre',
+        CITY => 'Mumbai',
         CHAPTERS =>
         {
           'C0' => 
@@ -3116,6 +3130,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2017' =>
       {
+        CITY => 'Mumbai',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3583,6 +3598,7 @@ my %TOURNAMENTS_INDIA =
       '2018' =>
       {
         CITY => 'Mumbai',
+        CLUB => 'WCG Mumbai',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3676,8 +3692,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2019C' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => 2019,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3690,8 +3706,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2022A' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'All India HCL Tournament',
+        MEET_TAG => 2022,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -5765,6 +5781,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2017' =>
       {
+        ORDINAL => 9,
         CHAPTERS =>
         {
           'C0' => 
@@ -5777,6 +5794,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2018' =>
       {
+        ORDINAL => 10,
+        CITY => 'Delhi',
         CHAPTERS =>
         {
           'C0' => 
@@ -6049,6 +6068,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2020' =>
       {
+        CITY => 'Kanpur',
+        SPONSOR => 'JK White Cement',
         CHAPTERS =>
         {
           'SINGLE' =>

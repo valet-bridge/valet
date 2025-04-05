@@ -839,6 +839,7 @@ my %TOURNAMENTS_NORWAY =
       },
       '2020' =>
       {
+        REGION => 'Telemark',
         CHAPTERS =>
         {
           'C0' => 

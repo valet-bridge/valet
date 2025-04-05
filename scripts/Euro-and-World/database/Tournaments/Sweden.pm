@@ -27,6 +27,13 @@ my %MEETS_SWEDEN =
 
     EDITIONS => 
     {
+      '2017' =>
+      {
+        YEAR => 2017,
+        CITY => 'Falkenberg',
+        DATE_START => '2017-07-15',
+        DATE_END => '2017-07-17'
+      },
       '2018' =>
       {
         YEAR => 2018,
@@ -547,8 +554,6 @@ my %TOURNAMENTS_SWEDEN =
 
   'Falcon Cup' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -558,6 +563,7 @@ my %TOURNAMENTS_SWEDEN =
     {
       '2017' =>
       {
+        MEET => 'Falkenberg Bridgefestival',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -570,6 +576,7 @@ my %TOURNAMENTS_SWEDEN =
       },
       '2018' =>
       {
+        MEET => 'Falkenberg Bridgefestival',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2343,7 +2350,6 @@ my %TOURNAMENTS_SWEDEN =
       '2017' =>
       {
         # https://www.svenskbridge.se/allsvenskan-2017/div1
-
         CHAPTERS =>
         {
           'C0' => 
