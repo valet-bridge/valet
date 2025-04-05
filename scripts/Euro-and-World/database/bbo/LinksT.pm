@@ -32,6 +32,7 @@ use Tournaments::Canada;
 use Tournaments::CentralAmerica;
 use Tournaments::Chile;
 use Tournaments::China;
+use Tournaments::Colombia;
 use Tournaments::Czech;
 use Tournaments::Croatia;
 use Tournaments::Denmark;
@@ -104,6 +105,7 @@ my %DIVISIONS =
   CENTRALAMERICA => \&Tournaments::CentralAmerica::set_links,
   CHILE => \&Tournaments::Chile::set_links,
   CHINA => \&Tournaments::China::set_links,
+  COLOMBIA => \&Tournaments::Colombia::set_links,
   CZECH => \&Tournaments::Czech::set_links,
   CROATIA => \&Tournaments::Croatia::set_links,
   DENMARK => \&Tournaments::Denmark::set_links,

@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Ankara Summer Teams',
   'Ankara Winter Teams',
   'Balikcioglu Open Teams',
+  'Bodrum IMP Pairs',
   'Bodrum Patton Teams',
   'Bornova Arena Autumn Teams',
   'Bornova Arena Spring League',

@@ -1453,6 +1453,21 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
+      '2017' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-11',
+            DATE_END => '2017-11-12'
+          } 
+        }
+      },
       '2019' =>
       {
         GENDER => 'Open',
@@ -4215,6 +4230,18 @@ my %TOURNAMENTS_FRIENDLY =
           },
         }
       },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-03',
+            DATE_END => '2022-08-03'
+          },
+        }
+      },
       '2023' =>
       {
         MEET => 'Practice Match',
@@ -4678,6 +4705,35 @@ my %TOURNAMENTS_FRIENDLY =
             DATE_START => '2013-06-22',
             DATE_END => '2013-06-25'
           } 
+        }
+      },
+    }
+  },
+
+  'Turkey Friendly' => 
+  {
+    ORGANIZATION => 'FFB',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-11',
+            DATE_END => '2018-05-13'
+          },
         }
       },
     }

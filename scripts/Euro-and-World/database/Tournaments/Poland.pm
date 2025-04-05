@@ -2911,6 +2911,18 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-15',
+            DATE_END => '2017-12-17'
+          } 
+        }
+      },
       '2018A' =>
       {
         CHAPTERS =>

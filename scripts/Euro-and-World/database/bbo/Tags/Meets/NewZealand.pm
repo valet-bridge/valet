@@ -24,6 +24,8 @@ my %MULTI_TYPOS =
   'New Zealand Inter-Provincial Teams' => [
     'nz ip',
     'nz ips'],
+  'New Zealand National Congress' => [
+    'nz congress'],
   'New Zealand Trials' => [
     'nz trials'],
 );

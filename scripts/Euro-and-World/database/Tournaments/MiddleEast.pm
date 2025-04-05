@@ -156,7 +156,23 @@ my %MEETS_MIDDLEEAST =
         DATE_END => '2023-05-13'
       },
     }
-  }
+  },
+
+  'UAE Festival' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-12-03',
+        DATE_END => '2017-12-03'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_MIDDLEEAST =
@@ -1056,6 +1072,31 @@ my %TOURNAMENTS_MIDDLEEAST =
             YEAR => 2019,
             DATE_START => '2019-04-25',
             DATE_END => '2019-04-25'
+          },
+        }
+      },
+    }
+  },
+
+  'UAE Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'UAE Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-03',
+            DATE_END => '2017-12-03'
           },
         }
       },

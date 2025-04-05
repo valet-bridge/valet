@@ -3101,7 +3101,7 @@ my %TOURNAMENTS_USA =
         {
           'SINGLE' => 
           {
-            DATE_START => '2019-12-30',
+            DATE_START => '2019-12-27',
             DATE_END => '2019-12-31'
           } 
         }

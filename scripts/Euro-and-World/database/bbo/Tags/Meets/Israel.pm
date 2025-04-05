@@ -25,11 +25,13 @@ my %MULTI_TYPOS =
     'israeli grand prize'],
   'Israel Bridge Festival' => [
     'int_ israel festival', 
+    'israel bridge fest_',
     'israel festival',
     'israel fest_',
     'israel int_ festival',
     'israel international festival',
-    'israeli fest_'],
+    'israeli fest_',
+    'israeli festival'],
   'Red Sea International Festival' => [
     'dr_ rand masters',
     'dr. rand masters',

@@ -1161,6 +1161,18 @@ my %TOURNAMENTS_FINLAND =
           },
         }
       },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-03-10',
+            DATE_END => '2023-03-11'
+          },
+        }
+      },
     }
   },
 

@@ -67,6 +67,7 @@ my @MULTI_WORDS =
   'Sweden Practice',
   'Taiwan Practice',
   'Tunisia Friendly',
+  'Turkey Friendly',
   'Turkey Practice',
   'Zulawski Friendly',
 );

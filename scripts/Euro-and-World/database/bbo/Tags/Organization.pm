@@ -64,6 +64,7 @@ my %MULTI_TYPOS =
   FaBF => ['faroese bridge federation'],
   FBB => ['Federação Brasileira de Bridge'],
   FCB => ['Federacion Chilena de Bridge'],
+  FCBC => ['Federación de Clubes de Bridge de Colombia'],
   FEB => ['Ecuador Bridge Federation'],
   FIGB => ['italian bridge federation'],
   FISU => ['international university sports federation'],

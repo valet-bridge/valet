@@ -7588,6 +7588,20 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2017-12-10',
+            DATE_END => '2017-12-10'
+          } 
+        }
+      },
     }
   },
 
@@ -7643,15 +7657,15 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-12-01',
+            DATE_END => '2016-12-01'
           },
         }
       },
@@ -7706,6 +7720,44 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'ROUND',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
+          } 
+        }
+      },
+    }
+  },
+
+  'Queensland Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2021' =>
+      {
+        MEET => 'Queensland Festival of Bridge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-10-10',
+            DATE_END => '2021-10-10'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Queensland Festival of Bridge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-09',
+            DATE_END => '2022-10-09'
           } 
         }
       },
@@ -8331,6 +8383,18 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-04-09',
+            DATE_END => '2017-04-09'
+          } 
+        }
+      },
     }
   },
 
@@ -8564,6 +8628,20 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-18',
+            DATE_END => '2017-11-18'
+          } 
+        }
+      },
       '2018' =>
       {
         CHAPTERS =>
@@ -8759,6 +8837,28 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2015-04-23',
             DATE_END => '2015-04-23'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-25',
+            DATE_END => '2017-05-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-01',
+            DATE_END => '2017-06-01'
           },
         }
       },

@@ -5058,6 +5058,19 @@ my %TOURNAMENTS_INDONESIA =
           },
         }
       },
+      '2022' =>
+      {
+        ORDINAL => 22,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-08',
+            DATE_END => '2022-07-08'
+          },
+        }
+      },
       '2024' =>
       {
         ORDINAL => 24,
