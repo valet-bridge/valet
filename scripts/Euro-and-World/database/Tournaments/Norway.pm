@@ -91,12 +91,14 @@ my %MEETS_NORWAY =
       '2016' =>
       {
         YEAR => 2016,
+        CITY => 'Fredrikstad',
         DATE_START => '2016-07-29',
-        DATE_END => '2016-08-04'
+        DATE_END => '2016-08-07'
       },
       '2017' =>
       {
         YEAR => 2017,
+        CITY => 'Oslo',
         DATE_START => '2017-08-02',
         DATE_END => '2017-08-13'
       },
@@ -668,8 +670,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Marit Sveaas Open Pairs' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
+    # https://msibt.org/Results
+
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -679,6 +681,7 @@ my %TOURNAMENTS_NORWAY =
     {
       '2016' =>
       {
+        MEET => 'Norwegian Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -692,6 +695,7 @@ my %TOURNAMENTS_NORWAY =
       },
       '2017' =>
       {
+        MEET => 'Norwegian Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -705,6 +709,9 @@ my %TOURNAMENTS_NORWAY =
       },
       '2018' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
+        CITY => 'Oslo',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -718,6 +725,9 @@ my %TOURNAMENTS_NORWAY =
       },
       '2019' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
+        CITY => 'Oslo',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -731,6 +741,9 @@ my %TOURNAMENTS_NORWAY =
       },
       '2022' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
+        CITY => 'Lillehammer',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -744,6 +757,9 @@ my %TOURNAMENTS_NORWAY =
       },
       '2024' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
+        CITY => 'Bodø',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3004,6 +3020,32 @@ my %TOURNAMENTS_NORWAY =
             DATE_START => '2024-08-09',
             DATE_END => '2024-08-10'
           } 
+        }
+      },
+    }
+  },
+
+  'Norwegian Swiss Women Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }

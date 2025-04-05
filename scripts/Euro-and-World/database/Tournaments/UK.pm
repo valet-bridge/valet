@@ -928,8 +928,6 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2020,
-            CITY => 'Edinburgh',
-            COUNTRY => 'Scotland',
             major => 'MATCH',
             minor => 'SEGMENT|STANZA',
             DATE_START => '2020-01-10',
@@ -938,8 +936,6 @@ my %TOURNAMENTS_UK =
           'C1' => 
           {
             YEAR => 2020,
-            CITY => 'Belfast',
-            COUNTRY => 'Northern Ireland',
             major => 'MATCH',
             DATE_START => '2020-03-06',
             DATE_END => '2020-03-08'

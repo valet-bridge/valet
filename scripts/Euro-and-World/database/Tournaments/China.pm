@@ -1506,6 +1506,32 @@ my %TOURNAMENTS_CHINA =
     }
   },
 
+  'Chinese University Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Chinese Women First League' =>
   {
     %GLOBAL,
@@ -2378,8 +2404,6 @@ my %TOURNAMENTS_CHINA =
 
   'Jiangsu Province Open Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2389,6 +2413,8 @@ my %TOURNAMENTS_CHINA =
     {
       '2018' =>
       {
+        MEET => 'Chinese Club Championships',
+        MEET_TAG => '2018B',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2401,6 +2427,8 @@ my %TOURNAMENTS_CHINA =
       },
       '2019' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>

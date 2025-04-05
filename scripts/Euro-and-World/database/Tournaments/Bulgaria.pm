@@ -2781,7 +2781,7 @@ my %TOURNAMENTS_BULGARIA =
     {
       '2016' =>
       {
-        MEET_ORDINAL => 15,
+        ORDINAL => 15,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2794,7 +2794,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2017' =>
       {
-        MEET_ORDINAL => 16,
+        ORDINAL => 16,
         CHAPTERS =>
         {
           'SINGLE' =>

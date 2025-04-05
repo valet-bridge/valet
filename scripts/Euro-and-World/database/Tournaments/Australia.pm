@@ -2431,6 +2431,8 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2022' =>
       {
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2022C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2443,6 +2445,8 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2023' =>
       {
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2023B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2455,7 +2459,8 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2024' =>
       {
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2024C',
         CHAPTERS =>
         {
           'SINGLE' => 

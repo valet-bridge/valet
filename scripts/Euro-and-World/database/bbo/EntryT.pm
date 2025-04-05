@@ -839,6 +839,15 @@ sub prune_using
         }
       }
 
+      if ($ekey eq 'CITY' && exists $chapter->{CITY})
+      {
+        if ($evalue eq $chapter->{CITY})
+        {
+          delete $self->{HEADER}{CITY};
+          next;
+        }
+      }
+
       print $self->bbono(), ": No $ekey (", $header->{COUNTRY}, ")\n";
       next;
     }

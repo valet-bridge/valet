@@ -15,10 +15,15 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Bangkok Open Teams',
+  'Thailand Junior Mixed Teams',
   'Thailand Junior Teams',
+  'Thailand Junior Women Teams',
   'Thailand Mixed Teams',
   'Thailand Open Teams',
   'Thailand Open Team Trials',
+  'Thailand University Mixed Teams',
+  'Thailand University Open Teams',
+  'Thailand University Women Teams',
   'Thailand Women Teams',
   'Thailand Youth Games Mixed Teams',
   'Thailand Youth Games Open Teams',

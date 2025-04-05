@@ -2359,8 +2359,6 @@ my %TOURNAMENTS_ITALY =
 
   'Italian O61 Cup' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2370,6 +2368,7 @@ my %TOURNAMENTS_ITALY =
     {
       '2018' =>
       {
+        MEET => 'Italy Cup',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2382,6 +2381,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2019' =>
       {
+        MEET => 'Italy Cup',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2397,8 +2397,6 @@ my %TOURNAMENTS_ITALY =
 
   'Italian O63 Cup' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2408,6 +2406,7 @@ my %TOURNAMENTS_ITALY =
     {
       '2022' =>
       {
+        MEET => 'Italy Cup',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2420,6 +2419,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2023' =>
       {
+        MEET => 'Italy Cup',
         CHAPTERS =>
         {
           'SINGLE' =>

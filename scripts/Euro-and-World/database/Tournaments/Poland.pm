@@ -1915,9 +1915,6 @@ my %TOURNAMENTS_POLAND =
 
   'Elblag Twin Towns Open Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
-    CITY => 'Elblag',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1927,6 +1924,9 @@ my %TOURNAMENTS_POLAND =
     {
       '2017' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
+        CITY => 'Elblag',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -1939,6 +1939,9 @@ my %TOURNAMENTS_POLAND =
       },
       '2018' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
+        CITY => 'Elblag',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -1951,6 +1954,9 @@ my %TOURNAMENTS_POLAND =
       },
       '2019' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
+        CITY => 'Elblag',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -1963,6 +1969,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2020' =>
       {
+        MEET => 'Zulawski Congress',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3597,7 +3604,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2017A' =>
       {
-        CITY => 'Bydgoszcz',
+        MEET => 'Luczniczka Meeting',
+        MEET_TAG => 2017,
         CHAPTERS =>
         {
           'C0' => 
@@ -3831,6 +3839,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2023D' =>
       {
+        MEET => 'Warsaw Grand Prix',
+        MEET_TAG => 2023,
         CHAPTERS =>
         {
           'C0' => 
@@ -3882,7 +3892,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2024C' =>
       {
-        CITY => 'Warsaw',
+        MEET => 'Warsaw Grand Prix',
+        MEET_TAG => 2024,
         CHAPTERS =>
         {
           'C0' => 
@@ -5266,8 +5277,6 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Mixed Teams',
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -5278,6 +5287,8 @@ my %TOURNAMENTS_POLAND =
       '2007' =>
       {
         # https://stara.pzbs.pl/wyniki/2007/H500Mixt/final/t/HTleaderb.html
+        %GLOBAL,
+        ORIGIN => 'National',
         CITY => 'Zegrze',
         CHAPTERS =>
         {
@@ -5292,6 +5303,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2021' =>
       {
+        MEET => 'Poznan Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -5304,6 +5316,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2022' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -5316,6 +5330,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2023' =>
       {
+        MEET => 'Poznan Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -5677,6 +5692,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2023' =>
       {
+        MEET => 'Poznan Congress',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -6103,6 +6119,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2017' =>
       {
+        MEET => 'Baltic Congress',
         CHAPTERS =>
         {
           'C0' => 
@@ -6115,6 +6132,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2018A' =>
       {
+        MEET => 'Zulawski Congress',
+        MEET_TAG => 2018,
         CHAPTERS =>
         {
           'C0' => 
@@ -6127,6 +6146,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2018B' =>
       {
+        MEET => 'Baltic Congress',
+        MEET_TAG => 2018,
         CHAPTERS =>
         {
           'C0' => 
@@ -6139,6 +6160,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2019A' =>
       {
+        MEET => 'Zulawski Congress',
+        MEET_TAG => 2019,
         CHAPTERS =>
         {
           'C0' => 
@@ -6151,6 +6174,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2019B' =>
       {
+        MEET => 'Baltic Congress',
+        MEET_TAG => 2019,
         CHAPTERS =>
         {
           'C0' => 
@@ -6163,6 +6188,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2020' =>
       {
+        MEET => 'Zulawski Congress',
         CHAPTERS =>
         {
           'C0' => 
@@ -6175,6 +6201,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2021' =>
       {
+        MEET => 'Baltic Congress',
         CHAPTERS =>
         {
           'C0' => 
@@ -6187,6 +6214,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2022' =>
       {
+        MEET => 'Baltic Congress',
         CHAPTERS =>
         {
           'C0' => 
@@ -6199,6 +6227,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2024' =>
       {
+        MEET => 'Zulawski Congress',
         CHAPTERS =>
         {
           'C0' => 
@@ -6706,6 +6735,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2022' =>
       {
+        MEET => 'Warsaw Grand Prix',
         CHAPTERS =>
         {
           'C0' => 
@@ -7665,8 +7695,6 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Second League' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -7676,6 +7704,8 @@ my %TOURNAMENTS_POLAND =
     {
       '2014' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -7691,6 +7721,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2017' =>
       {
+        MEET => 'Wroclaw Meeting',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -8046,8 +8077,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2018' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'Zulawski Congress',
         CHAPTERS =>
         {
           'SINGLE' =>

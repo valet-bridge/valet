@@ -31,6 +31,7 @@ my @MULTI_WORDS =
   'Mondi Cup',
   'MTP Cup',
   'Palace Pairs Cup',
+  'Palace Pro-Am Cup',
   'Palace Teams Cup',
   'Plock District League',
   'Polish BAM Cup',

@@ -2357,14 +2357,12 @@ my %TOURNAMENTS_SWEDEN =
         {
           'C0' => 
           {
-            CITY => 'Uppsala',
             YEAR => 2017,
             DATE_START => '2017-09-02',
             DATE_END => '2017-09-03'
           },
           'C1' => 
           {
-            CITY => 'Örebro',
             YEAR => 2017,
             DATE_START => '2017-10-27',
             DATE_END => '2017-10-29'
@@ -2400,14 +2398,12 @@ my %TOURNAMENTS_SWEDEN =
         {
           'C0' => 
           {
-            CITY => 'Göteborg',
             YEAR => 2019,
             DATE_START => '2019-08-31',
             DATE_END => '2019-09-01'
           },
           'C1' => 
           {
-            CITY => 'Örebro',
             YEAR => 2019,
             DATE_START => '2019-10-18',
             DATE_END => '2019-10-20'

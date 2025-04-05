@@ -1835,8 +1835,6 @@ my %TOURNAMENTS_INDIA =
 
   'Amla Ruia Women Pairs' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1846,6 +1844,8 @@ my %TOURNAMENTS_INDIA =
     {
       '2024' =>
       {
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => '2024B',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2532,8 +2532,6 @@ my %TOURNAMENTS_INDIA =
 
   'HCL Pro-Am Pairs' =>
   {
-    %GLOBAL,
-    ORIGIN => 'Pro-Am',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -2542,6 +2540,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2023' =>
       {
+        MEET => 'All India HCL Tournament',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -2555,6 +2554,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2024' =>
       {
+        MEET => 'All India HCL Tournament',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -2608,8 +2608,6 @@ my %TOURNAMENTS_INDIA =
 
   'Indian Gold Open Pairs' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     SPONSOR => 'Shree Cement',
     FORM => 'Pairs',
     SCORING => 'MP',
@@ -2620,6 +2618,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2022' =>
       {
+        MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3043,6 +3042,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2019' =>
       {
+        CITY => 'Varanasi',
         CHAPTERS =>
         {
           'C0' => 
@@ -3055,6 +3055,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2022' =>
       {
+        CITY => 'Varanasi',
         CHAPTERS =>
         {
           'C0' => 
@@ -3466,6 +3467,32 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
+  'Indian Senior Pair Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Indian Senior Trials' =>
   {
     %GLOBAL,
@@ -3695,8 +3722,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2019B' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'All India HCL Tournament',
+        MEET_TAG => 2019,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3751,8 +3778,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2023A' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'Indian Summer Nationals',
+        MEET_TAG => 2023,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3779,8 +3806,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2024A' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => '2024A',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3793,8 +3820,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2024B' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
+        MEET => 'All India HCL Tournament',
+        MEET_TAG => 2024,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -5412,8 +5439,6 @@ my %TOURNAMENTS_INDIA =
 
   'Mall of the Millenium Pairs Cup' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5423,6 +5448,8 @@ my %TOURNAMENTS_INDIA =
     {
       '2024' =>
       {
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => '2024B',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -6129,8 +6156,6 @@ my %TOURNAMENTS_INDIA =
 
   'Phoenix Mixed Pairs' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -6140,6 +6165,8 @@ my %TOURNAMENTS_INDIA =
     {
       '2024' =>
       {
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => '2024B',
         CHAPTERS =>
         {
           'SINGLE' =>

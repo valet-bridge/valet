@@ -206,12 +206,12 @@ my @SINGLE_WORDS = qw(
   Brussels Bucharest Budapest Buffalo Buonconvento Burghausen Bursa 
   Burdur Buyukada Buzios Bydgoszcz Bytom Bø
 
-  Caen Cairns Cairo Canakkale Canberra Cankaya Cannareggio Canterbury 
-  Caracas Casablanca Cascais Catania Cerkezkoy Cesme Chandigarh Changhua 
-  Changsha Changzhou Chavdar Chaville Chelmno Chelopech Chengdu Chennai 
-  Chepelare Chiayi Chicago Chongqing Chumphon Cimahi Cirebon Civril
-  Claremont Clichy Cluj Coimbra Comandatuba Copenhagen Corlu Coventry 
-  Craiova Csapi Cuenca Cuneo
+  Caen Cairns Cairo Cali Canakkale Canberra Cankaya Cannareggio 
+  Canterbury Caracas Casablanca Cascais Catania Cerkezkoy Cesme Chandigarh 
+  Changhua Changsha Changzhou Chavdar Chaville Chelmno Chelopech Chengdu 
+  Chennai Chepelare Chiayi Chicago Chongqing Chumphon Cimahi Cirebon 
+  Civril Claremont Clichy Cluj Coimbra Comandatuba Copenhagen Corlu 
+  Coventry Craiova Csapi Cuenca Cuneo
 
   Dabrowka Dalaman Dalian Darmstadt Datca Deauville Debrecen Delft 
   Delhi Denizli Depok Derpt Deva Devrek Dikili Diyarbakir Dimitrovgrad 
@@ -299,7 +299,7 @@ my @SINGLE_WORDS = qw(
   Sieradz Siglufjordur Sigulda Silifke Silistra Sindi Singaraja 
   Singkawang Singsås Siofok Sivas Skara Skawina Ski Skien Skopje 
   Slagelse Slawa Sleman Smedstad Smolyan Smyrna Snåsa Sofia Solapur 
-  Solok Songkhla Sopot Sortland Söke Sozopol Split Stanford Stargard 
+  Solo Solok Songkhla Sopot Sortland Söke Sozopol Split Stanford Stargard 
   Stavanger Steinkjer Stirling Stockholm Stokke Stoholm Storsjöbygden 
   Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Suqian Surabaya 
   Suzhou Svendborg Svinninge Sydney Szczecinek Szczyrk Szeged Sztum 

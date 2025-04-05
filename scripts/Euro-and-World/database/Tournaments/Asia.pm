@@ -949,8 +949,6 @@ my %TOURNAMENTS_ASIA =
 
   'APBF Open Pairs' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -960,7 +958,7 @@ my %TOURNAMENTS_ASIA =
     {
       '2019' =>
       {
-        ORDINAL => 52,
+        MEET => 'APBF Championships',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -2821,8 +2819,6 @@ my %TOURNAMENTS_ASIA =
 
   'Asia Mixed Team Trials' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2832,6 +2828,7 @@ my %TOURNAMENTS_ASIA =
     {
       '2017' =>
       {
+        MEET => 'South East Asian Championship',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3112,8 +3109,6 @@ my %TOURNAMENTS_ASIA =
 
   'Asia Open Team Trials' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3123,6 +3118,8 @@ my %TOURNAMENTS_ASIA =
     {
       '2017A' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3135,6 +3132,8 @@ my %TOURNAMENTS_ASIA =
       },
       '2017B' =>
       {
+        MEET => 'South East Asian Championship',
+        MEET_TAG => 2017,
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3150,8 +3149,6 @@ my %TOURNAMENTS_ASIA =
 
   'Asia Women Team Trials' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -3161,6 +3158,7 @@ my %TOURNAMENTS_ASIA =
     {
       '2017' =>
       {
+        MEET => 'South East Asian Championship',
         CHAPTERS =>
         {
           'SINGLE' =>

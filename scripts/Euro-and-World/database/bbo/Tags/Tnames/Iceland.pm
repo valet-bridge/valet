@@ -22,6 +22,10 @@ my @MULTI_WORDS =
   'Icelandic Cup',
   'Icelandic First Division',
   'Icelandic Open Teams',
+  'Northern Lights Open Pairs',
+  'Northern Lights Open Teams',
+  'Reykjavik Open Pairs',
+  'Reykjavik Open Teams',
 );
 
 my %MULTI_TYPOS =

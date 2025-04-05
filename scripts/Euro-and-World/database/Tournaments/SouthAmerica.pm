@@ -486,8 +486,6 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Open Swiss Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -497,6 +495,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
     {
       '2018' =>
       {
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -1458,6 +1457,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
     {
       '2019' =>
       {
+        MEET => 'South American Zonal Trials',
         CHAPTERS =>
         {
           'SINGLE' =>

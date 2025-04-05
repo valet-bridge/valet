@@ -39,6 +39,7 @@ my @MULTI_WORDS =
   'Hindusthan Club Teams',
   'Indian Gold Open Pairs',
   'Indian Gold Open Teams',
+  'Indian Gold Women Pairs',
   'Indian Inter-State Teams',
   'Indian Masters Invitational Pairs',
   'Indian Masters Open Teams',
@@ -108,6 +109,7 @@ my @MULTI_WORDS =
   'Uttar Pradesh State Pairs',
   'Uttar Pradesh State Teams',
   'West Bengal Open Team Trials',
+  'West Bengal Open Teams',
   'Willingdon Sports Club Swiss Pairs',
   'WCG Open'
 );

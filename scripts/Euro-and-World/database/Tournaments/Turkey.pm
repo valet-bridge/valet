@@ -2769,8 +2769,6 @@ my %TOURNAMENTS_TURKEY =
 
   'Sadun Su U26 Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2780,6 +2778,7 @@ my %TOURNAMENTS_TURKEY =
     {
       '2020' =>
       {
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -4666,8 +4665,6 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Swiss Open Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4677,6 +4674,8 @@ my %TOURNAMENTS_TURKEY =
     {
       '2018' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -4689,6 +4688,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2022' =>
       {
+        MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -4767,6 +4767,32 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
+  'Turkish U21 Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Turkish U26 Pair Trials' =>
   {
     %GLOBAL,
@@ -4805,10 +4831,34 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
-  'Turkish U26 Teams' =>
+  'Turkish U26 Team Trials' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish U26 Teams' =>
+  {
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4818,6 +4868,7 @@ my %TOURNAMENTS_TURKEY =
     {
       '2016' =>
       {
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -4830,6 +4881,8 @@ my %TOURNAMENTS_TURKEY =
       },
       '2018' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -4863,6 +4916,32 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2017,
             DATE_START => '2017-01-30',
             DATE_END => '2017-01-31'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish U26 Women Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
           },
         }
       },
@@ -5530,6 +5609,8 @@ my %TOURNAMENTS_TURKEY =
       },
       '2018B' =>
       {
+        MEET => 'Turkish Winter Championships',
+        MEET_TAG => 2018,
         CHAPTERS =>
         {
           'C0' => 
@@ -5542,6 +5623,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2019' =>
       {
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'C0' => 

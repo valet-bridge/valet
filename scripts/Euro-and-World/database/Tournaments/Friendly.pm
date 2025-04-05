@@ -4065,7 +4065,7 @@ my %TOURNAMENTS_FRIENDLY =
 
   'Poland Practice' => 
   {
-    ORGANIZATION => 'PYBS',
+    ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',

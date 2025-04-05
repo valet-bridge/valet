@@ -14,12 +14,16 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Arab Nations Open Teams',
+  'Arab Nations Women Teams',
   'BFAME Friendship Pairs',
+  'BFAME Mixed Teams',
   'BFAME Open Teams',
   'BFAME Senior Teams',
   'BFAME Women Teams',
   'Pan Arab Inter-Club Championship',
-  'Saudi-Arabian Open Trials'
+  'Saudi-Arabian Open Trials',
+  'UAE Open Teams',
 );
 
 my %MULTI_TYPOS =

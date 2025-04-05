@@ -31,6 +31,7 @@ my @MULTI_WORDS =
   'Romanian Senior Team Trials',
   'Romanian Super League',
   'Romanian Women Team Trials',
+  'Tusnad Open Teams',
 );
 
 my %MULTI_TYPOS =

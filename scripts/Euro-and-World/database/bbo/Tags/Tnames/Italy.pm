@@ -42,6 +42,7 @@ my @MULTI_WORDS =
   'Torneo di Rastignano',
   'Torneo di Roma',
   'Toscana Cup',
+  'Venice Open Teams',
   'Viareggio Cup'
 );
 
