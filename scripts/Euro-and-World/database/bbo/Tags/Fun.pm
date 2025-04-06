@@ -623,6 +623,7 @@ my @MULTI_WORDS =
   'La Bomba',
   'La Bridgerie',
   'La Cholita',
+  'La Ice',
   'La La Land',
   'LA Light',
   'La Vista',

@@ -141,6 +141,8 @@ my @LOCAL_SUBS =
   { START => 52865, END => 53031, 
     TEXT => '^OT-', CORR => 'Open Teams - ' },
   { START => 52979, END => 53013, TEXT => '^BB\d+-', CORR => '' },
+  { START => 53043, END => 53052, TEXT => '^TN-', 
+    CORR => 'Transnational ' },
   { START => 53497, END => 53894, TEXT => 'Preselection', CORR => '' },
   { START => 53889, END => 53894, TEXT => 'Preselection', CORR => '' },
   { START => 54344, END => 54454, TEXT => '\bMen', CORR => 'Open' },

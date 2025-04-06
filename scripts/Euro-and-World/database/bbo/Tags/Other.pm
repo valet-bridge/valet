@@ -251,6 +251,7 @@ my @MULTI_WORDS =
   'Mid Open',
   'Mike Lawrence Club',
   'Minas Trith',
+  'Mixed Up',
   'Mo i Raneran',
   'Mo Yan',
   'Moki011',
@@ -324,6 +325,7 @@ my @MULTI_WORDS =
   'Sfora Bez Cibora',
   'Sham Sharma',
   'Shegoestobadat8',
+  'SHS Bridge',
   'Si Fu Te',
   'Sing-Sunn',
   'Sir Bhalchandra',
@@ -538,7 +540,7 @@ my @SINGLE_WORDS = qw(
    DAE Dalas Dalida Dallas DanEng DanFar DanMar Darff Dash Dasky DBC
    DBL DBS DCLIM Debonecos DeeJee Defne DEJT Demony Demýrbaþ DenmarS 
    Deppo Dharmawangsa Diazem Dilligaf Dimmat Dingyuan Dino Dinos 
-   Dinotask Dinozorlar Diofa Disk DJB Doksandokuz Dolphin Dombo Doki 
+   Dinotask Dinozorlar Diofa Disk DJB Doksandokuz Dolphin Dombo 
    Doubl DoVar DÖF DUBB Duniya Duros Dvizhenie 
 
    EAV Econ ECU Eferuh Efsane Egetor Egesarpdoruk Eikat Eikka EISK 

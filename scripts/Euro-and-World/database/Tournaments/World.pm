@@ -4463,7 +4463,7 @@ my %TOURNAMENTS_WORLD =
 
   'World Open Teams' => 
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4885,7 +4885,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2017,
             DATE_START => '2017-08-24',
-            DATE_END => '2017-08-25'
+            DATE_END => '2017-08-26'
           } 
         }
       },
@@ -6099,7 +6099,7 @@ my %TOURNAMENTS_WORLD =
 
   'World Senior Teams' => 
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6461,7 +6461,7 @@ my %TOURNAMENTS_WORLD =
 
   'World Women Teams' => 
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -7006,7 +7006,7 @@ my %TOURNAMENTS_WORLD =
 
   'WMG Open Teams' => 
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

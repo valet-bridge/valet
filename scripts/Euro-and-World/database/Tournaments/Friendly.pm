@@ -845,7 +845,6 @@ my %TOURNAMENTS_FRIENDLY =
     ORGANIZATION => 'AuBF',
     COUNTRY => 'Australia',
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
 
@@ -853,6 +852,7 @@ my %TOURNAMENTS_FRIENDLY =
     {
       '2016' =>
       {
+        ZONE => 'South Pacific',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -865,6 +865,7 @@ my %TOURNAMENTS_FRIENDLY =
       },
       '2017' =>
       {
+        ZONE => 'World',
         GENDER => 'Open',
         AGE => 'U21',
 
@@ -880,6 +881,7 @@ my %TOURNAMENTS_FRIENDLY =
       },
       '2018' =>
       {
+        ZONE => 'South Pacific',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3213,6 +3215,21 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2017C' =>
+      {
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-11',
+            DATE_END => '2017-10-13'
+          } 
+        }
+      },
       '2018A' =>
       {
         GENDER => 'Open',
@@ -3727,7 +3744,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2017C' =>
       {
         GENDER => 'Open',
-        AGE => 'Open',
+        AGE => 'U20',
 
         CHAPTERS =>
         {
@@ -3820,7 +3837,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2019C' =>
       {
         CLUB => "'t Onstein",
-        GENDER => 'Open',
+        GENDER => 'Women',
         AGE => 'Open',
 
         CHAPTERS =>
