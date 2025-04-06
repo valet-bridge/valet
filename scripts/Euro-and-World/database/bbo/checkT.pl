@@ -102,7 +102,8 @@ my %IGNORE_MEETS = (
     'Goa Bridge Festival',
   'Israel Open Teams Cup|2010|SINGLE' => 'Israel Grand Prix',
   'Italian Mixed Teams|2024|C0' => 'Italy Cup', # For now
-  'Izmir Winter Teams Cup|2016|SINGLE' => 'Sivrioglu Festival'
+  'Izmir Winter Teams Cup|2016|SINGLE' => 'Sivrioglu Festival',
+  'Turkey Friendly|2018A|SINGLE' => 'Turkey Practice'
 );
 
 

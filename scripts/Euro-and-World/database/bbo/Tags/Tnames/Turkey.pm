@@ -72,7 +72,6 @@ my @MULTI_WORDS =
   'Turkish Summer Women Teams',
   'Turkish Super Cup',
   'Turkish Swiss Mixed Teams',
-  'Turkish Swiss Open Teams',
   'Turkish U16 Pairs',
   'Turkish U21 Pair Trials',
   'Turkish U21 Team Trials',
@@ -347,17 +346,18 @@ my %MULTI_TYPOS =
     'turkiye senyor milli secme',
     'turkiye senyor milli secmesý',
     'turkiye senyor mýllý secmesý'],
+  'Turkish Summer Open Teams' => [
+    'turkey summer swiss team championship',
+    'turkish swiss open teams',
+    'turkiye nakavt-swiss takimlar sampiyonasi',
+    'turkiye nakavt takim sampiyonasi',
+    'turkiye nakavt takimlar sampiyonasi',
+    'turkiye nakavt takimlar þampiyonasi'],
   'Turkish Super Cup' => [
     'turkiye super kupa'],
   'Turkish Swiss Mixed Teams' => [
     'turkey swiss mixed teams',
     'turkish swiss mýxed teams'],
-  'Turkish Swiss Open Teams' => [
-    'turkey summer swiss team championship',
-    'turkiye nakavt-swiss takimlar sampiyonasi',
-    'turkiye nakavt takim sampiyonasi',
-    'turkiye nakavt takimlar sampiyonasi',
-    'turkiye nakavt takimlar þampiyonasi'],
   'Turkish U21 Team Trials' => [
     'turkey u21 national team selection',
     'turkey u21 team selection'],

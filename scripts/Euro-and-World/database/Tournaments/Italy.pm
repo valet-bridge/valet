@@ -386,7 +386,7 @@ my %MEETS_ITALY =
         DATE_START => '2023-09-28',
         DATE_END => '2023-12-10'
       },
-      '2024' =>
+      '2024A' =>
       {
         # https://www.federbridge.it/campionati/indice.asp?cYear=2024
         # Not yet available (as of 2024-09-04)
@@ -395,6 +395,17 @@ my %MEETS_ITALY =
         YEAR => 2024,
         CITY => 'Salsomaggiore',
         DATE_START => '2024-10-10',
+        DATE_END => '2024-10-13'
+      },
+      '2024B' =>
+      {
+        # https://www.federbridge.it/campionati/indice.asp?cYear=2024
+        # Not yet available (as of 2024-09-04)
+        # 
+
+        YEAR => 2024,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2024-12-12',
         DATE_END => '2024-12-15'
       },
 
@@ -1429,6 +1440,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2015' =>
       {
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
@@ -1441,6 +1453,8 @@ my %TOURNAMENTS_ITALY =
       },
       '2017A' =>
       {
+        MEET => 'Italian Club Championship',
+        MEET_TAG => '2017A',
         CHAPTERS => 
         {
           'C0' =>
@@ -1489,6 +1503,7 @@ my %TOURNAMENTS_ITALY =
       '2024' =>
       {
         MEET => 'Italy Cup',
+        MEET_TAG => '2024B',
         CHAPTERS => 
         {
           'C0' =>
@@ -3676,6 +3691,7 @@ my %TOURNAMENTS_ITALY =
       '2024' =>
       {
         MEET => 'Italy Cup',
+        MEET_TAG => '2024A',
         CHAPTERS => 
         {
           'C0' =>
@@ -4138,6 +4154,7 @@ my %TOURNAMENTS_ITALY =
       '2024' =>
       {
         MEET => 'Italy Cup',
+        MEET_TAG => '2024B',
         CHAPTERS => 
         {
           'C0' =>

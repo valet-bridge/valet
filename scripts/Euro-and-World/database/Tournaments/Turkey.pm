@@ -325,6 +325,12 @@ my %MEETS_TURKEY =
         DATE_START => '2017-05-06',
         DATE_END => '2017-05-11'
       },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-05-19',
+        DATE_END => '2018-05-24'
+      },
       '2019' =>
       {
         YEAR => 2019,
@@ -923,18 +929,6 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2018,
             DATE_START => '2018-07-12',
             DATE_END => '2018-07-12'
-          } 
-        }
-      },
-      '2019' =>
-      {
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2019,
-            DATE_START => '2019-09-15',
-            DATE_END => '2019-09-15'
           } 
         }
       },
@@ -4476,6 +4470,19 @@ my %TOURNAMENTS_TURKEY =
           },
         }
       },
+      '2018' =>
+      {
+        MEET => 'Turkish Summer Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-19',
+            DATE_END => '2018-05-24'
+          },
+        }
+      },
       '2019' =>
       {
         MEET => 'Turkish Summer Championships',
@@ -4658,45 +4665,6 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2015-12-16',
             DATE_END => '2015-12-18'
           } 
-        }
-      },
-    }
-  },
-
-  'Turkish Swiss Open Teams' =>
-  {
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2018' =>
-      {
-        %GLOBAL,
-        ORIGIN => 'National',
-        CHAPTERS =>
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2018,
-            DATE_START => '2018-05-19',
-            DATE_END => '2018-05-24'
-          },
-        }
-      },
-      '2022' =>
-      {
-        MEET => 'Turkish Summer Championships',
-        CHAPTERS =>
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2022,
-            DATE_START => '2022-05-23',
-            DATE_END => '2022-05-24'
-          },
         }
       },
     }
@@ -5577,17 +5545,25 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
-      '2017' =>
+      '2017A' =>
       {
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2017,
             DATE_START => '2017-02-24',
             DATE_END => '2017-02-28'
           },
-          'C1' => 
+        }
+      },
+      '2017B' =>
+      {
+        MEET => 'Turkish Winter Championships',
+        MEET_TAG => 2017,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
           {
             YEAR => 2017,
             DATE_START => '2017-03-25',
@@ -5967,8 +5943,6 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Women Teams',
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -5979,6 +5953,8 @@ my %TOURNAMENTS_TURKEY =
       '2009' =>
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=4&year=2009
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'C0' => 
@@ -6001,6 +5977,8 @@ my %TOURNAMENTS_TURKEY =
       '2010' =>
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2010
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6015,6 +5993,8 @@ my %TOURNAMENTS_TURKEY =
       '2014' =>
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2014
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'C0' => 
@@ -6038,6 +6018,8 @@ my %TOURNAMENTS_TURKEY =
       '2015' =>
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2015
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6052,6 +6034,8 @@ my %TOURNAMENTS_TURKEY =
       },
       '2016' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6064,6 +6048,8 @@ my %TOURNAMENTS_TURKEY =
       },
       '2017' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6076,6 +6062,8 @@ my %TOURNAMENTS_TURKEY =
       },
       '2018A' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6088,6 +6076,8 @@ my %TOURNAMENTS_TURKEY =
       },
       '2018B' =>
       {
+        MEET => 'Turkish Summer Championships',
+        MEET_TAG => 2018,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6100,6 +6090,8 @@ my %TOURNAMENTS_TURKEY =
       },
       '2019' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6112,6 +6104,8 @@ my %TOURNAMENTS_TURKEY =
       },
       '2020' =>
       {
+        %GLOBAL,
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 

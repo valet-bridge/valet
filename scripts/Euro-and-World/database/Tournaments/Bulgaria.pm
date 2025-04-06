@@ -3217,27 +3217,6 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2013' =>
-      {
-        MEET => 'Varna Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2013,
-            STAGE => 'Semifinal',
-            DATE_START => '2013-08-12',
-            DATE_END => '2013-08-12'
-          },
-          'C1' => 
-          {
-            YEAR => 2013,
-            STAGE => 'Final',
-            DATE_START => '2013-08-12',
-            DATE_END => '2013-08-12'
-          } 
-        }
-      },
       '2014' =>
       {
         MEET => 'Varna Bridge Festival',
@@ -3317,6 +3296,40 @@ my %TOURNAMENTS_BULGARIA =
             DATE_START => '2019-08-14',
             DATE_END => '2019-08-14'
           },
+        }
+      },
+    }
+  },
+
+  'Varna Open Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'Varna Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            DATE_START => '2013-08-12',
+            DATE_END => '2013-08-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            DATE_START => '2013-08-12',
+            DATE_END => '2013-08-12'
+          } 
         }
       },
     }

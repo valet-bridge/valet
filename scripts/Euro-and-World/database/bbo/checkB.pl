@@ -35,7 +35,7 @@ my (%links_t, %links_m);
 my (%links_thash, %links_mhash);
 
 # Check that tournaments and Tname/Meet have the same primary names.
-# Also check that whether a tournament would have a compatible meet.
+# Also check whether a tournament would have a compatible meet.
 
 die "perl checkB.pl t [INDONESIA]" unless ($#ARGV <= 1);
 my $file = $ARGV[0];

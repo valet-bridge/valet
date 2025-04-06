@@ -2089,8 +2089,6 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Patton Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'Patton',
     GENDER => 'Open',
@@ -2100,6 +2098,7 @@ my %TOURNAMENTS_NORWAY =
     {
       '2020' =>
       {
+        MEET => 'Norwegian Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' =>

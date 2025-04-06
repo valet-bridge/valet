@@ -2835,7 +2835,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2017,
             DATE_START => '2017-11-29',
-            DATE_END => '2017-12-03'
+            DATE_END => '2017-12-07'
           },
         }
       },
@@ -3263,19 +3263,6 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
-      '2017' =>
-      {
-        MEET => 'South East Asian Championship',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2017,
-            DATE_START => '2017-11-29',
-            DATE_END => '2017-12-07'
-          },
-        }
-      },
       '2018' =>
       {
         MEET => 'Asian National Games',
@@ -3364,19 +3351,6 @@ my %TOURNAMENTS_ASIA =
             DATE_START => '2011-11-14',
             DATE_END => '2011-11-15'
           } 
-        }
-      },
-      '2017' =>
-      {
-        MEET => 'South East Asian Championship',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2017,
-            DATE_START => '2017-11-29',
-            DATE_END => '2017-12-03'
-          },
         }
       },
       '2018' =>
@@ -3593,19 +3567,6 @@ my %TOURNAMENTS_ASIA =
             major => 'SEGMENT',
             DATE_START => '2011-11-14',
             DATE_END => '2011-11-15'
-          },
-        }
-      },
-      '2017' =>
-      {
-        MEET => 'South East Asian Championship',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2017,
-            DATE_START => '2017-11-29',
-            DATE_END => '2017-12-03'
           },
         }
       },

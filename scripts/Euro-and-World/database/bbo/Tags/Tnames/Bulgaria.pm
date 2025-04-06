@@ -48,6 +48,7 @@ my @MULTI_WORDS =
   'Star Bet Casino Open Teams',
   'Stara Zagora Open Teams',
   'Varna Intercity Teams',
+  'Varna Open Teams',
   'Varna Titan Open Teams'
 );
 

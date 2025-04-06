@@ -215,7 +215,7 @@ my @SINGLE_WORDS = qw(
 
   Dabrowka Dalaman Dalian Darmstadt Datca Deauville Debrecen Delft 
   Delhi Denizli Depok Derpt Deva Devrek Dikili Diyarbakir Dimitrovgrad 
-  Dobrich Doha Dombivli Dongguan Dortmund Dörtyol Drammen Dubai 
+  Dobrich Doha Doki Dombivli Dongguan Dortmund Dörtyol Drammen Dubai 
   Dubrovnik Durban Düsseldorf
 
   Eastbourne Edinburgh Edirne Egemen Egirdir Elblag Elmadag Enschede 

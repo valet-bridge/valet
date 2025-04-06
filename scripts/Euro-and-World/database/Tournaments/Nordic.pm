@@ -157,12 +157,6 @@ my %MEETS_NORDIC =
         DATE_START => '2015-05-21',
         DATE_END => '2015-05-24'
       },
-      '2016' =>
-      {
-        YEAR => 2016,
-        DATE_START => '2016-09-24',
-        DATE_END => '2016-09-24'
-      },
       '2017' =>
       {
         # https://www2.bridge.dk/Default.aspx?ID=21886
@@ -587,20 +581,6 @@ my %TOURNAMENTS_NORDIC =
             major => 'ROUND|MATCH',
             DATE_START => '2015-05-21',
             DATE_END => '2015-05-24'
-          } 
-        }
-      },
-      '2016' =>
-      {
-        MEET => 'Nordic Team Championship',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            major => 'ROUND|MATCH',
-            DATE_START => '2016-09-24',
-            DATE_END => '2016-09-24'
           } 
         }
       },
