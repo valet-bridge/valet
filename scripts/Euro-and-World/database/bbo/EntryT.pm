@@ -1116,7 +1116,9 @@ sub check_zone
 
   for my $country (@list)
   {
-    if (! OGAcorr::zone_country_ok($zone, $country))
+    next if OGAcorr::zone_country_ok($zone, $country);
+
+    if ( ! OGAcorr::origin_number_fixable($self->bbono()))
     {
       warn $self->{BBONO} . 
         ": $header->{TOURNAMENT_NAME}, $country does not match ZONE $zone";

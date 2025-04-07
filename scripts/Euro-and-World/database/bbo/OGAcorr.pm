@@ -35,10 +35,6 @@ my %GENDER_SPECIAL = (
   {
     2011 => { Women => 1, Men => 1, Mixed => 1},
   },
-  'Turkish Open Team Trials' =>
-  {
-    2024 => { Seniors => 1},
-  },
   'White House Juniors' => 
   {
     2006 => { Women => 1},
@@ -95,6 +91,10 @@ my %AGE_SPECIAL = (
   'Taiwan Practice' =>
   {
     2007 => { U20 => 1},
+  },
+  'Turkish Open Team Trials' =>
+  {
+    2024 => { Seniors => 1},
   },
   'White House Juniors' => 
   {
@@ -170,6 +170,10 @@ my %ORIGIN_ACCEPTS = (
     50119, 50125, 50128, 50143, 50148, 50149, 50151, 50167, 50202,
     50209,
     62139],
+  'Bank Nagari Cup' => [
+    50423],
+  'Batam Open Teams' => [
+    57835, 57840, 57857],
   'Bolivian Open Teams' => [
     30864, 30882, 31017],
   'Bonn Nations Cup' => [
@@ -242,6 +246,8 @@ my %ORIGIN_ACCEPTS = (
      3768,
     44845,
     51614, 51621, 51624, 51626, 51636, 51644],
+  'FTBC Tanjungpura University' => [
+    79748, 79752, 79753, 79755, 79757, 79758, 79759],
   'Gabrial UI Bastaman Cup' => [
      1276,  1277,
     11895,
@@ -255,7 +261,7 @@ my %ORIGIN_ACCEPTS = (
   'German Open Teams' => [
     19909, 19913,
     46399,
-    65136, 65141, 65142, 65145, 65149],
+    65136, 65141, 65142, 65145, 65147, 65149],
   'German Team Trophy' => [
     18396,
     23413, 23441, 23352, 23373,
@@ -263,6 +269,7 @@ my %ORIGIN_ACCEPTS = (
     33282,
     38526,
     44382,
+    50420, 50424,
     56817, 56826, 56836],
   'Grand Prix of Poland Pairs' => [
     28473, 28479],
@@ -270,10 +277,17 @@ my %ORIGIN_ACCEPTS = (
     28446],
   'Greek Islands Festival' => [
     15108],
+  'Guang Qing Memorial Open Teams' => [
+    57846],
   'Haskovski Mineralni Bani Open Teams' => [
     10049],
+  'HNA Mixed Teams' => [
+    53936, 53946],
+  'HNA Open Teams' => [
+    53733, 53745, 53784, 53786, 53787, 53794],
   'Hong Kong Inter-City Open Teams' => [
-    45876],
+    45876,
+    64546, 64568],
   'Hungarian Open Trials' => [
     73665, 73666, 73667, 73668, 73672, 73675, 73678, 73679],
   'Hungary Exhibition' => [
@@ -286,16 +300,21 @@ my %ORIGIN_ACCEPTS = (
     53077],
   'Mavericks Premier League' => [
     80258, 80287, 80289, 80295, 80311],
+  'IKA UNDIP Open Teams' => [
+    66484],
   'Indonesian Inter-Club Championship' => [
     35550, 35559, 35582, 35589,
     38871, 38900, 38901,
     44635, 44638, 44639, 44644, 44649, 44651, 44664, 44665, 44667,
     44669, 44670, 44672, 44673, 44678, 44762, 44767],
   'Indonesian Open Teams' => [
-    35616],
+    35616,
+    80139, 80142, 80146, 80149, 80151, 80169, 80171, 80173, 80178,
+    80185, 80187, 80211, 80240, 80246],
   'Indonesian Premier League' => [
      9392,  9505,
-    12580, 12766],
+    12580, 12766,
+    68693],
   'Israel Festival Open Teams' => [
     52026],
   'Israel Open Trials' => [
@@ -311,6 +330,10 @@ my %ORIGIN_ACCEPTS = (
     38385, 38396],
   'Jotun Open Teams' => [
     53638, 53640],
+  'Jurek Gres Open Teams Memorial' => [
+    83722, 83724, 83725, 83727],
+  'Kaylaki Open Teams' => [
+    66602],
   'Kemenpora Cup' => [
     80501, 80512, 80533, 80535],
   "Kepri Governor's Cup" => [
@@ -334,19 +357,21 @@ my %ORIGIN_ACCEPTS = (
     31021, 31048,
     37770, 37779,
     43442, 43496],
+  'Lisbon Open Teams' => [
+    49538],
   'Lodz Twin Towns Open Teams' => [
     83115, 83117, 83118, 83119, 83120, 83121, 83126, 83127, 83128, 
     83129, 83130, 83131],
   'Lozenets Open Teams' => [
      9951],
-  'Macabbi Games' => [
+  'Maccabi Games' => [
     64801, 64824, 64830],
   'Madeira Open Teams' => [
     47922,
     66582,
     77129, 77213],
   'Maharashtra State Teams' => [
-    78793, 78795, 78797, 78799, 78827, 78831, 78833],
+    78793, 78795, 78797, 78799, 78827, 78831, 78833, 78835],
   'MBH Invitational Cup' => [
     85068, 85071, 85073, 85075, 85078, 85079, 85081, 85082, 85090,
     85095, 85096],
@@ -383,7 +408,10 @@ my %ORIGIN_ACCEPTS = (
   'Norwegian Swiss Teams' => [
      2573],
   'Norwegian Women Teams' => [
-    38393],
+    38393,
+    61869, 61900],
+  'Pahlawan Cup' => [
+    54169, 54172, 54177],
   'Pan Arab Inter-Club Championship' => [
     31174],
   'Olrud Easter Swiss Teams' => [
@@ -431,6 +459,12 @@ my %ORIGIN_ACCEPTS = (
   'Russia Practice' => [
     69801, 69805,
     72425],
+  'Santiago Open Teams Cup' => [
+    60020, 60046, 60048, 60052, 60053],
+  'SEA Mixed Teams' => [
+    58495, 58496, 58498],
+  'SEA Open Teams' => [
+    81911, 81913, 81914, 81916, 81920, 81934],
   "SEA President's Cup" => [
     54726, 54736, 54747, 54748, 54764],
   'Semen Padang Cup' => [
@@ -449,7 +483,8 @@ my %ORIGIN_ACCEPTS = (
     58079, 58082, 58084, 58087, 58099, 58101, 58105, 58108, 58116, 
     58117],
   'Stara Zagora Open Teams' => [
-    20362, 20367, 20370, 20371, 20379, 20370, 20379, 20386, 20394],
+    20362, 20367, 20370, 20371, 20379, 20370, 20379, 20386, 20394,
+    53511],
   'Sweden Practice' => [
     53901, 53910, 53914, 53917, 53920, 53926,
     74026, 74029, 74030, 74033],
@@ -460,7 +495,8 @@ my %ORIGIN_ACCEPTS = (
   'Swiss Cup' => [
     45208, 45214, 45216,45217],
   'Swiss Open Teams' => [
-    44286, 44306, 44310, 44315],
+    44286, 44306, 44310, 44315,
+    49470],
   'Taiwanese Open Teams' => [
     77296, 77297, 77298, 77301, 77330, 77331, 77334, 77336,
     81317, 81323, 81327, 81356, 81357, 81363, 81370],
@@ -483,11 +519,15 @@ my %ORIGIN_ACCEPTS = (
     39014,
     44818, 44830, 44843, 44849],
   'Thailand Open Teams' => [
+    76347,
+    80681,
     85411, 85413, 85426, 85426, 85428],
   'The Hague Bridge Experience' => [
     46355],
   'Thrace Club League' => [
     34398],
+  'Tomohon Open Teams' => [
+    64902],
   'Torneo di Rastignano' => [
     40753,
     53200, 53201, 53202],
@@ -499,17 +539,21 @@ my %ORIGIN_ACCEPTS = (
     18204, 18205,
     33771,
     39222,
-    44900],
+    44900,
+    51294],
   'Tugu Muda Cup' => [
     81660, 81666, 81667, 81669, 81726,
     85737, 85741],
   'Turkish Club Championship' => [
     19580,
-    25024],
+    25024,
+    64648, 64651],
   'Turkish Open Teams' => [
      9604,  9630],
   'Turkish Winter Open Teams' => [
-    49681, 49692, 49694],
+    49331,
+    49681, 49692, 49694,
+    49968],
   'UAE Open Teams' => [
     54453, 54456, 54459, 54461],
   'Varna Titan Open Teams' => [
@@ -772,6 +816,7 @@ my %ZONE_COMPATIBILITY =
     Indonesia => 1,
     Japan => 1,
     'Macau' => 1,
+    Philippines => 1,
     Taiwan => 1,
     Thailand => 1
   },

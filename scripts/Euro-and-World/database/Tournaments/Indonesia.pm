@@ -1584,7 +1584,6 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Inter-Province Championship' =>
   {
-    ORIGIN => 'Interprovince',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1596,6 +1595,7 @@ my %TOURNAMENTS_INDONESIA =
       {
         # TODO Same as Inter-City for this year?
         MEET => 'Indonesian National Championship Week',
+        ORIGIN => 'Interprovince',
         CHAPTERS =>
         {
           'C0' => 
@@ -1635,6 +1635,7 @@ my %TOURNAMENTS_INDONESIA =
       '2010' =>
       {
         MEET => 'Indonesian National Championship Week',
+        ORIGIN => 'Interprovince',
         CHAPTERS =>
         {
           'C0' => 
@@ -1674,6 +1675,7 @@ my %TOURNAMENTS_INDONESIA =
       '2012' =>
       {
         MEET => 'Indonesian National Championship Week',
+        ORIGIN => 'Interprovince',
         CHAPTERS =>
         {
           'C0' => 
@@ -1705,6 +1707,7 @@ my %TOURNAMENTS_INDONESIA =
       '2014' =>
       {
         MEET => 'Indonesian National Championship Week',
+        ORIGIN => 'Interprovince',
         CHAPTERS =>
         {
           'C0' => 
@@ -1739,6 +1742,7 @@ my %TOURNAMENTS_INDONESIA =
       '2016' =>
       {
         MEET => 'Indonesian National Championship Week',
+        ORIGIN => 'Interprovince',
         CHAPTERS =>
         {
           'C0' => 
@@ -1770,6 +1774,7 @@ my %TOURNAMENTS_INDONESIA =
       '2017' =>
       {
         MEET => 'Indonesian National Championship Week',
+        ORIGIN => 'Interprovince',
         CHAPTERS =>
         {
           'C0' => 
@@ -1783,6 +1788,7 @@ my %TOURNAMENTS_INDONESIA =
       '2018' =>
       {
         MEET => 'Indonesian National Championship Week',
+        ORIGIN => 'Interprovince',
         CHAPTERS =>
         {
           'C0' => 

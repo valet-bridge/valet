@@ -707,10 +707,48 @@ my %TOURNAMENTS_CHILE =
     }
   },
 
+  'Santiago Open Teams Cup' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    CITY => 'Santiago',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-17',
+            DATE_END => '2018-11-18'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-18',
+            DATE_END => '2018-11-18'
+          },
+        }
+      },
+    }
+  },
+
   'Vitacura Open Teams Cup' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CITY => 'Santiago',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -720,6 +758,7 @@ my %TOURNAMENTS_CHILE =
     {
       '2022' =>
       {
+        # https://bridgevitacura.cl/resultados/2022-11-20.htm
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -732,6 +771,7 @@ my %TOURNAMENTS_CHILE =
       },
       '2023' =>
       {
+        # https://bridgevitacura.cl/resultados/2023-11-12f.htm
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -744,6 +784,7 @@ my %TOURNAMENTS_CHILE =
       },
       '2024' =>
       {
+        # https://bridgevitacura.cl/resultados/2024-11-24f.htm
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -761,6 +802,7 @@ my %TOURNAMENTS_CHILE =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CITY => 'Santiago',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -770,6 +812,7 @@ my %TOURNAMENTS_CHILE =
     {
       '2023' =>
       {
+        # Not clear that it was a separate tournament
         CHAPTERS =>
         {
           'SINGLE' =>

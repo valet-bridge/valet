@@ -1393,6 +1393,20 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
+      '2018' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-14',
+            DATE_END => '2018-12-16'
+          } 
+        }
+      },
       '2019' =>
       {
         MEET => 'Channel Trophy',
@@ -1420,6 +1434,22 @@ my %TOURNAMENTS_SUPRA =
             YEAR => 2022,
             DATE_START => '2022-03-11',
             DATE_END => '2022-03-13'
+          } 
+        }
+      },
+      '2022B' =>
+      {
+        # https://bridgescanner.com/event/channel-trophy-2022
+        MEET => 'Channel Trophy',
+        MEET_TAG => '2022B',
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-16',
+            DATE_END => '2022-12-18'
           } 
         }
       },
@@ -1774,6 +1804,20 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
+      '2018' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-14',
+            DATE_END => '2018-12-16'
+          } 
+        }
+      },
       '2019' =>
       {
         MEET => 'Channel Trophy',
@@ -1788,7 +1832,7 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
-      '2022' =>
+      '2022A' =>
       {
         # Really 2021?
         MEET => 'Channel Trophy',
@@ -1801,6 +1845,37 @@ my %TOURNAMENTS_SUPRA =
             YEAR => 2022,
             DATE_START => '2022-03-13',
             DATE_END => '2022-03-13'
+          } 
+        }
+      },
+      '2022B' =>
+      {
+        # https://bridgescanner.com/event/channel-trophy-2022
+        MEET => 'Channel Trophy',
+        MEET_TAG => '2022B',
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-16',
+            DATE_END => '2022-12-18'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        # https://bridgescanner.com/event/channel-trophy-2023
+        MEET => 'Channel Trophy',
+        AGE => 'U26',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-15',
+            DATE_END => '2023-12-17'
           } 
         }
       },

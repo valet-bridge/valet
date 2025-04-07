@@ -1584,7 +1584,6 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U26 Women Teams',
   {
-    ORIGIN => 'International',
     GENDER => 'Women',
     AGE => 'U26',
 
@@ -1593,6 +1592,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2004' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1607,6 +1607,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2005' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1622,6 +1623,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2007' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1637,6 +1639,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2009' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1652,6 +1655,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2011' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1668,6 +1672,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2013' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1684,6 +1689,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2015' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1699,6 +1705,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2017' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1713,6 +1720,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2019' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1727,6 +1735,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2022' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1741,6 +1750,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2024' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS => 
         {
           'C0' => 
@@ -1790,7 +1800,6 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U31 Open Teams',
   {
-    ORIGIN => 'International',
     GENDER => 'Open',
     AGE => 'U31',
 
@@ -1799,6 +1808,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2022' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1814,6 +1824,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2024' =>
       {
         MEET => 'European Youth Team Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS => 
         {
           'C0' => 

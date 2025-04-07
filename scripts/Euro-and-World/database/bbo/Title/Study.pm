@@ -1058,7 +1058,7 @@ my @LOCAL_SUBS =
   { START => 59998, END => 60043, 
     TEXT => 'Danmark - 1_division', CORR => 'Danish First Division' },
   { START => 60019, END => 60053, 
-    TEXT => 'Copa Zurich', CORR => 'Swiss Club Championship' },
+    TEXT => 'Copa Zurich', CORR => 'Santiago Open Teams Cup' },
   { START => 60107, END => 60137, 
     TEXT => 'The National Team Challenge 2018-2019', 
     CORR => 'China Practice' },

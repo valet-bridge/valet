@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'Chilean Senior Trials',
   'Chilean Women Teams',
   'Chilean Women Trials',
+  'Santiago Open Teams Cup',
   'Vitacura Open Teams Cup',
   'Vitacura Women Teams Cup'
 );

@@ -742,7 +742,7 @@ my %MEETS_BULGARIA =
       },
       '2018' =>
       {
-        # https://www.bridge.bg/en/tournaments/3036-41-MBF-Varna-2017
+        # https://www.bridge.bg/bg/tournaments/3650-42-%D0%9C%D0%91%D0%A4-%D0%92%D0%B0%D1%80%D0%BD%D0%B0-2018
         MEET_ORDINAL => 42,
         YEAR => 2018,
         DATE_START => '2018-08-13',
@@ -750,31 +750,35 @@ my %MEETS_BULGARIA =
       },
       '2019' =>
       {
+        # https://www.bridge.bg/bg/tournaments/4084-XLIII-%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%B5%D0%BD-%D0%B1%D1%80%D0%B8%D0%B4%D0%B6-%D1%84%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB-%D0%92%D0%B0%D1%80%D0%BD%D0%B0-2019
         MEET_ORDINAL => 43,
         YEAR => 2019,
-        DATE_START => '2019-08-14',
+        DATE_START => '2019-08-12',
         DATE_END => '2019-08-18'
       },
       '2020' =>
       {
+        # https://www.bridge.bg/bg/tournaments/4385-44-%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%B5%D0%BD-%D0%B1%D1%80%D0%B8%D0%B4%D0%B6-%D1%84%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB-%D0%92%D0%B0%D1%80%D0%BD%D0%B0
         MEET_ORDINAL => 44,
         YEAR => 2020,
-        DATE_START => '2020-08-08',
+        DATE_START => '2020-08-05',
         DATE_END => '2020-08-09'
       },
       '2021' =>
       {
+        # https://www.bridge.bg/bg/tournaments/4783-45%D1%82%D0%B8-%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%B5%D0%BD-%D0%B1%D1%80%D0%B8%D0%B4%D0%B6-%D1%84%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB-%D0%92%D0%B0%D1%80%D0%BD%D0%B0
         MEET_ORDINAL => 45,
         YEAR => 2021,
-        DATE_START => '2021-08-14',
+        DATE_START => '2021-08-11',
         DATE_END => '2021-08-15'
       },
       '2022' =>
       {
+        # https://www.bridge.bg/bg/tournaments/5195-XLVI-%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%B5%D0%BD-%D0%91%D1%80%D0%B8%D0%B4%D0%B6-%D0%A4%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB-%D0%92%D0%B0%D1%80%D0%BD%D0%B0-2022
         MEET_ORDINAL => 46,
         SPONSOR => 'Panatop',
         YEAR => 2022,
-        DATE_START => '2022-08-13',
+        DATE_START => '2022-08-10',
         DATE_END => '2022-08-14'
       },
       '2023' =>
@@ -3209,7 +3213,6 @@ my %TOURNAMENTS_BULGARIA =
 
   'Varna Intercity Teams' =>
   {
-    ORIGIN => 'Intercity',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3220,6 +3223,7 @@ my %TOURNAMENTS_BULGARIA =
       '2014' =>
       {
         MEET => 'Varna Bridge Festival',
+        ORIGIN => 'Intercity',
         CHAPTERS =>
         {
           'C0' => 
@@ -3241,6 +3245,7 @@ my %TOURNAMENTS_BULGARIA =
       '2016' =>
       {
         MEET => 'Varna Bridge Festival',
+        ORIGIN => 'Intercity',
         CHAPTERS =>
         {
           'C0' => 
@@ -3262,6 +3267,7 @@ my %TOURNAMENTS_BULGARIA =
       '2017' =>
       {
         MEET => 'Varna Bridge Festival',
+        ORIGIN => 'Intercity',
         CHAPTERS =>
         {
           'C0' => 
@@ -3275,6 +3281,7 @@ my %TOURNAMENTS_BULGARIA =
       '2018' =>
       {
         MEET => 'Varna Bridge Festival',
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'C0' => 
@@ -3288,6 +3295,7 @@ my %TOURNAMENTS_BULGARIA =
       '2019' =>
       {
         MEET => 'Varna Bridge Festival',
+        ORIGIN => 'Intercity',
         CHAPTERS =>
         {
           'C0' => 

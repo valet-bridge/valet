@@ -265,22 +265,6 @@ my %TOURNAMENTS_SWITZERLAND =
           'C0' => 
           {
             YEAR => 2018,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2018-11-17',
-            DATE_END => '2018-11-18'
-          },
-          'C1' => 
-          {
-            YEAR => 2018,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2018-11-18',
-            DATE_END => '2018-11-18'
-          },
-          'C2' => 
-          {
-            YEAR => 2018,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2018-12-02',

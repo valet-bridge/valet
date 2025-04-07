@@ -3248,14 +3248,6 @@ my %TOURNAMENTS_UK =
             YEAR => 2017,
             major => 'MATCH',
             minor => 'SEGMENT|STANZA',
-            DATE_START => '2017-01-27',
-            DATE_END => '2017-01-27'
-          },
-          'C1' => 
-          {
-            YEAR => 2017,
-            major => 'MATCH',
-            minor => 'SEGMENT|STANZA',
             DATE_START => '2017-04-21',
             DATE_END => '2017-04-23'
           },
