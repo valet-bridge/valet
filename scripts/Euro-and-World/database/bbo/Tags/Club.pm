@@ -1363,6 +1363,7 @@ my %SINGLE_TYPOS =
   'Altinay SK' => ['altýnaysk'],
   'Amed Sportif' => ['amedspor'],
   'Anadolu Bridge Club' => ['anadolu'],
+  'Anka BK' => ['anka'],
   'Ankara Kontrat' => ['kontrat'],
   'Antalya BSK' => ['ankalya', 'antakyaspor'],
   'Armando and Viviane Gonçalves Pereira' => ['avgp'],

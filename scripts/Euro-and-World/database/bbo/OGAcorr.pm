@@ -203,7 +203,7 @@ my %ORIGIN_ACCEPTS = (
     35346, 35376,
     55626, 55633, 55635],
   'Contra Open Cup' => [
-    78520, 78522, 78555, 78558, 78563, 78575, 78577,
+    78520, 78522, 78555, 78558, 78563, 78573, 78575, 78577,
     83623, 83627, 83642, 83656, 83665, 83672],
   'Danish Open Teams' => [
     19140, 19147, 19161, 19174,
@@ -274,7 +274,8 @@ my %ORIGIN_ACCEPTS = (
   'Grand Prix of Poland Pairs' => [
     28473, 28479],
   'Grand Prix of Poland Teams' => [
-    28446],
+    28446,
+    74656, 74659],
   'Greek Islands Festival' => [
     15108],
   'Guang Qing Memorial Open Teams' => [
@@ -309,8 +310,9 @@ my %ORIGIN_ACCEPTS = (
     44669, 44670, 44672, 44673, 44678, 44762, 44767],
   'Indonesian Open Teams' => [
     35616,
+    67372, 67375, 67383, 67385, 67415, 67421,
     80139, 80142, 80146, 80149, 80151, 80169, 80171, 80173, 80178,
-    80185, 80187, 80211, 80240, 80246],
+    80185, 80187, 80211, 80212, 80240, 80246],
   'Indonesian Premier League' => [
      9392,  9505,
     12580, 12766,
@@ -356,9 +358,11 @@ my %ORIGIN_ACCEPTS = (
      8512,  8514,
     31021, 31048,
     37770, 37779,
-    43442, 43496],
+    43442, 43496,
+    68528],
   'Lisbon Open Teams' => [
-    49538],
+    49538,
+    56065, 56068],
   'Lodz Twin Towns Open Teams' => [
     83115, 83117, 83118, 83119, 83120, 83121, 83126, 83127, 83128, 
     83129, 83130, 83131],
@@ -402,25 +406,28 @@ my %ORIGIN_ACCEPTS = (
     83273, 83284, 83294],
   'Norway Practice' => [
     22211, 22214],
+  'Norwegian Mixed Teams' => [
+    64863],
   'Norwegian Open Teams' => [
     34796, 34798,
     52631, 52634, 52637],
   'Norwegian Swiss Teams' => [
-     2573],
+     2573,
+    72455],
   'Norwegian Women Teams' => [
     38393,
     61869, 61900],
-  'Pahlawan Cup' => [
-    54169, 54172, 54177],
-  'Pan Arab Inter-Club Championship' => [
-    31174],
   'Olrud Easter Swiss Teams' => [
      3808,  3809,  3811,
      8534,
     13253,
     17448],
+  'Pahlawan Cup' => [
+    54169, 54172, 54177],
   'Palace Teams Cup' => [
     62589, 62611, 62614, 62626, 62632, 62673],
+  'Pan Arab Inter-Club Championship' => [
+    31174],
   'Patton de Monaco' => [
      4420,  4421,  4423,  4428,  4430,
     11487,
@@ -439,6 +446,10 @@ my %ORIGIN_ACCEPTS = (
     41377, 41397, 41408, 41409],
   'Poland Practice' => [
     51264, 51266],
+  'Polish BAM Teams' => [
+    75647],
+  'Portuguese Grand Prix' => [
+    50892],
   'Prince Takamatsu Cup' => [
     84934, 84937, 84943, 84945],
   'Pula Open BAM Teams' => [
@@ -464,6 +475,7 @@ my %ORIGIN_ACCEPTS = (
   'SEA Mixed Teams' => [
     58495, 58496, 58498],
   'SEA Open Teams' => [
+    77870, 77872, 77875, 77890,
     81911, 81913, 81914, 81916, 81920, 81934],
   "SEA President's Cup" => [
     54726, 54736, 54747, 54748, 54764],
@@ -479,6 +491,8 @@ my %ORIGIN_ACCEPTS = (
      3380,  3381,  3382,  3383],
   'Slava Cup' => [
     43270, 43305, 43336, 43355, 43363, 43373],
+  'South American Transnational Open Teams' => [
+    78847, 78849],
   'Spingold Teams' => [
     58079, 58082, 58084, 58087, 58099, 58101, 58105, 58108, 58116, 
     58117],
@@ -525,7 +539,8 @@ my %ORIGIN_ACCEPTS = (
   'The Hague Bridge Experience' => [
     46355],
   'Thrace Club League' => [
-    34398],
+    34398,
+    51062],
   'Tomohon Open Teams' => [
     64902],
   'Torneo di Rastignano' => [
@@ -550,10 +565,14 @@ my %ORIGIN_ACCEPTS = (
     64648, 64651],
   'Turkish Open Teams' => [
      9604,  9630],
+  'Turkish U26 Teams' => [
+    58029],
   'Turkish Winter Open Teams' => [
     49331,
     49681, 49692, 49694,
     49968],
+  'Turkish Winter Women Teams' => [
+    49599, 49622],
   'UAE Open Teams' => [
     54453, 54456, 54459, 54461],
   'Varna Titan Open Teams' => [
@@ -562,15 +581,21 @@ my %ORIGIN_ACCEPTS = (
   'Vilnius Open Teams' => [
     40788, 40791, 40795,
     76464, 76471, 76473],
+  'WBT Open Teams' => [
+    81121],
   'Western Mediterranean Club Teams' => [
     33891],
-  'White House Interntional' => [
+  'White House International' => [
      8188,  8199],
+  'White House Juniors' => [
+    49763,
+    61999],
   'White House Top 16' => [
      1329],
   'World Open Junior Teams' => [
     10745, 10747, 10775, 10779,
-    19615, 19621, 19641],
+    19615, 19621, 19641,
+    75571, 75602],
   'World Transnational Open Teams' => [
     65928, 65954, 65967, 65983, 65993],
   'Yeh Bros Cup' => [

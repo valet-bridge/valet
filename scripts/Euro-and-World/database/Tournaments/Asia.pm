@@ -574,7 +574,7 @@ my %TOURNAMENTS_ASIA =
       '2018' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'International',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -588,7 +588,7 @@ my %TOURNAMENTS_ASIA =
       '2019' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'International',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -841,7 +841,7 @@ my %TOURNAMENTS_ASIA =
       '2019' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'International',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3491,7 +3491,7 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'South East Asian Championship',
-        ORIGIN => 'International',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -3517,7 +3517,7 @@ my %TOURNAMENTS_ASIA =
       '2022' =>
       {
         MEET => 'South East Asian Championship',
-        ORIGIN => 'International',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -3608,7 +3608,7 @@ my %TOURNAMENTS_ASIA =
       '2022' =>
       {
         MEET => 'South East Asian Championship',
-        ORIGIN => 'International',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -3622,7 +3622,7 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'South East Asian Championship',
-        ORIGIN => 'International',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 

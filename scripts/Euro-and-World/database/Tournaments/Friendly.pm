@@ -2506,7 +2506,7 @@ my %TOURNAMENTS_FRIENDLY =
     {
       '2023A' =>
       {
-        ORIGIN => 'Supranational',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 

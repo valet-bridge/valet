@@ -517,7 +517,7 @@ my @SINGLE_WORDS = qw(
 
    AABC ABBK ABBKI ABC ABCT Abisco Access Accord Acolvik ACR Acropolis
    AdAyAzrA Aeras AFTA Aganus AIC Airoldi Airways AKYA Alertplus Alioth 
-   Alli Alpha ALWI Amalin Anbaklupa Ania Anka Antre Apaheili Archi 
+   Alli Alpha ALWI Amalin Anbaklupa Ania Antre Apaheili Archi 
    AREA Armander Armex Arrow Armut Arvechico Arya ASDBB Aslanli Aspe 
    Asya Atena Atmosfera Atrium AUE Augerne Aurora AusPolRus AUTBUL 
    AUTHOL Avagard Ayranka Aytalus Azores Azure
@@ -557,7 +557,7 @@ my @SINGLE_WORDS = qw(
 
    Gabrisem Galaktika Galim Gambitas Gamma Gaoshan Garp Garuda Gata 
    GBRD Gelin Gepi Gerilim Gewanna Gezi Gezzer Ghandi Gibs Gjesp 
-   Gkobra GMM Goldcat Goldwest Goroco Gorsi Göktürk GP Greecoura Greisnor 
+   Gkobra GMM Goldcat Goldwest Goroco Gorsi GP Greecoura Greisnor 
    Greps GRNC Grup Guayacos Gudok Gullberg Gullvi Guronii Guti
 
    Hade Hai Hakl Hane Hansa Haribda Haruss Hasvel Hayir HayirlisI Haziran 
@@ -699,7 +699,6 @@ my %SINGLE_TYPOS =
   Fevbazi => ['fevzabi'],
 
   Gelin => ['gelýn'],
-  Göktürk => ['gokturk'],
 
   Haziran => ['hazýran'],
   Hypochondriac => ['hýpokondrýyak'],

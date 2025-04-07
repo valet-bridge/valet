@@ -347,7 +347,7 @@ my %MULTI_TYPOS =
     'azs pw', 'politehnica cluj', 'poli cluj', 'poli', 'azs invit'],
   'Xuzhou Institute of Technology' => ['xuzhou iot'],
   'Wien University' => [
-    'vienna univ'],
+    'vienna univ', 'vienna university'],
   'Yildiz Technical University' => [
     'yildiz sk',
     'yildiz sp.'],

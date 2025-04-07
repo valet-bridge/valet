@@ -1807,7 +1807,7 @@ my %TOURNAMENTS_SUPRA =
       '2018' =>
       {
         MEET => 'Channel Trophy',
-        AGE => 'U26',
+        AGE => 'U21',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1853,7 +1853,7 @@ my %TOURNAMENTS_SUPRA =
         # https://bridgescanner.com/event/channel-trophy-2022
         MEET => 'Channel Trophy',
         MEET_TAG => '2022B',
-        AGE => 'U26',
+        AGE => 'U21',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1868,7 +1868,7 @@ my %TOURNAMENTS_SUPRA =
       {
         # https://bridgescanner.com/event/channel-trophy-2023
         MEET => 'Channel Trophy',
-        AGE => 'U26',
+        AGE => 'U21',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1876,6 +1876,21 @@ my %TOURNAMENTS_SUPRA =
             YEAR => 2023,
             DATE_START => '2023-12-15',
             DATE_END => '2023-12-17'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        # https://bridgescanner.com/event/channel-trophy-2024
+        MEET => 'Channel Trophy',
+        AGE => 'U21',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-13',
+            DATE_END => '2024-12-15'
           } 
         }
       },
