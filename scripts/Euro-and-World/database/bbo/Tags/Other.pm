@@ -479,6 +479,7 @@ my %MULTI_TYPOS =
     'ak obezit', 
     'obezit tatilde', 
     'obezit intl', 
+    'oz obezit',
     'öz obezýt'],
 
   "Pal's Four" => ["pal's"],

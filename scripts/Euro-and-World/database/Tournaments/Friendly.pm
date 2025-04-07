@@ -2498,7 +2498,6 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
-    ORIGIN => 'Supranational',
     ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2507,6 +2506,7 @@ my %TOURNAMENTS_FRIENDLY =
     {
       '2023A' =>
       {
+        ORIGIN => 'Supranational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2519,6 +2519,7 @@ my %TOURNAMENTS_FRIENDLY =
       },
       '2023B' =>
       {
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 

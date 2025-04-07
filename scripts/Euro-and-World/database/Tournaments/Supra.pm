@@ -2031,6 +2031,32 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Neighbor Challenge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-06',
+            DATE_END => '2017-05-07'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Neighbor Challenge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-04',
+            DATE_END => '2019-05-05'
+          } 
+        }
+      },
     }
   },
 

@@ -775,6 +775,20 @@ my %TOURNAMENTS_NORDIC =
           } 
         }
       },
+      '2019' =>
+      {
+        MEET => 'Nordic Team Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND|MATCH',
+            DATE_START => '2019-06-07',
+            DATE_END => '2019-06-09'
+          } 
+        }
+      },
       '2022' =>
       {
         MEET => 'Nordic Team Championship',

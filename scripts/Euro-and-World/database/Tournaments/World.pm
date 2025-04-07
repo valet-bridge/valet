@@ -5540,7 +5540,6 @@ my %TOURNAMENTS_WORLD =
 
   'World Open U31 Teams' =>
   {
-    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5551,6 +5550,7 @@ my %TOURNAMENTS_WORLD =
       '2022' =>
       {
         MEET => 'World Youth Open Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -5564,6 +5564,7 @@ my %TOURNAMENTS_WORLD =
       '2024' =>
       {
         MEET => 'World Youth Open Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 

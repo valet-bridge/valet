@@ -317,6 +317,20 @@ my %TOURNAMENTS_AFRICA =
           } 
         }
       },
+      '2019' =>
+      {
+        MEET => 'African Zonal Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-06-09',
+            DATE_END => '2019-06-14'
+          } 
+        }
+      },
     }
   },
 
@@ -398,6 +412,20 @@ my %TOURNAMENTS_AFRICA =
             major => 'ROUND',
             DATE_START => '2017-05-06',
             DATE_END => '2017-05-11'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'African Zonal Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-06-09',
+            DATE_END => '2019-06-14'
           } 
         }
       },

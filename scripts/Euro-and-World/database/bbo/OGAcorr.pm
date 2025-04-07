@@ -19,6 +19,11 @@ my %GENDER_SPECIAL = (
   {
     2015 => { Women => 1},
   },
+  'Ganesha Open Teams' =>
+  {
+    2023 => { Men => 1},
+    2024 => { Men => 1, Mixed => 1, Women => 1},
+  },
   'Nordic Junior Teams' => 
   {
     2009 => { Women => 1},
@@ -29,6 +34,10 @@ my %GENDER_SPECIAL = (
   'PT Timah Invitational Teams' =>
   {
     2011 => { Women => 1, Men => 1, Mixed => 1},
+  },
+  'Turkish Open Team Trials' =>
+  {
+    2024 => { Seniors => 1},
   },
   'White House Juniors' => 
   {
@@ -50,6 +59,10 @@ my %GENDER_SPECIAL = (
 );
 
 my %AGE_SPECIAL = (
+  'Alba Iulia U26 Teams' =>
+  {
+    2019 => { U21 => 1},
+  },
   'Italian U26 Teams' => 
   {
     2017 => { U21 => 1},
@@ -70,6 +83,10 @@ my %AGE_SPECIAL = (
   {
     2014 => { U15 => 1},
     2016 => { Seniors => 1},
+  },
+  'Polish U31 Pair Trials' =>
+  {
+    2024 => { U21 => 1, U26 => 1},
   },
   'Salo Midsummer Juniors Teams' =>
   {
@@ -120,7 +137,12 @@ my %ORIGIN_ACCEPTS = (
   'Argentina Friendly' => [
     17357, 17359, 17360],
   'ASEAN Open Club Teams' => [
-    26291],
+    26291,
+    48469,
+    54608, 54611, 54614, 54615, 54616, 54617, 54619, 54620, 54621, 
+    54623, 54633, 54634, 54640, 54641, 54646, 54648, 54650, 54653, 
+    54654, 54656, 54657, 54658, 54682, 54695, 54699, 54705, 54709,
+    84995, 85004, 85007, 85020],
   'Asenovgrad Open Teams' => [
     39259],
   'Australia Practice' => [
@@ -156,6 +178,8 @@ my %ORIGIN_ACCEPTS = (
      9846],
   'Bulgarian Anniversary Open Teams' => [
     76381],
+  'Bupati Badung Cup' => [
+    83865, 83867, 83874, 83879, 83880],
   'Cavendish Teams' => [
     25729, 25730,
     30860,
@@ -166,13 +190,17 @@ my %ORIGIN_ACCEPTS = (
     31160, 31170],
   'Chinese Inter-City Teams' => [
     19454,
-    24543, 24554, 24559, 24600],
+    24543, 24554, 24559, 24600,
+    84451, 84456, 84457, 84464],
   'Cliff Wake Challenge' => [
     31945],
   'Commonwealth Nations Bridge Championships' => [
     15693, 15696,
     35346, 35376,
     55626, 55633, 55635],
+  'Contra Open Cup' => [
+    78520, 78522, 78555, 78558, 78563, 78575, 78577,
+    83623, 83627, 83642, 83656, 83665, 83672],
   'Danish Open Teams' => [
     19140, 19147, 19161, 19174,
     29203, 29204, 29214, 29216, 29221, 29222,
@@ -213,7 +241,7 @@ my %ORIGIN_ACCEPTS = (
      2658,  2659,  2660,  2661,
      3768,
     44845,
-    51614, 51621, 51624, 51626, 51644],
+    51614, 51621, 51624, 51626, 51636, 51644],
   'Gabrial UI Bastaman Cup' => [
      1276,  1277,
     11895,
@@ -256,6 +284,8 @@ my %ORIGIN_ACCEPTS = (
     30778],
   'Indian Inter-State Teams' => [
     53077],
+  'Mavericks Premier League' => [
+    80258, 80287, 80289, 80295, 80311],
   'Indonesian Inter-Club Championship' => [
     35550, 35559, 35582, 35589,
     38871, 38900, 38901,
@@ -266,6 +296,8 @@ my %ORIGIN_ACCEPTS = (
   'Indonesian Premier League' => [
      9392,  9505,
     12580, 12766],
+  'Israel Festival Open Teams' => [
+    52026],
   'Israel Open Trials' => [
     22150, 22172, 22177, 22190, 22205, 22213],
   'Istanbul Winter Teams' => [
@@ -279,6 +311,8 @@ my %ORIGIN_ACCEPTS = (
     38385, 38396],
   'Jotun Open Teams' => [
     53638, 53640],
+  'Kemenpora Cup' => [
+    80501, 80512, 80533, 80535],
   "Kepri Governor's Cup" => [
      4116,
      8441,  8442,  8444,  8445,  8450,  8453,  8454,  8461,  8465,
@@ -287,7 +321,10 @@ my %ORIGIN_ACCEPTS = (
     19330, 19337,
     35169, 35178, 35203,
     40703, 40716, 40752, 40783, 40789,
-    46307, 46310, 46312],
+    46307, 46310, 46312,
+    53178, 53187,
+    65039, 65041, 65049, 65057, 65059, 65070, 65071, 65089, 65090, 
+    65092],
   'Krishnapatnam Port National Masters' => [
     46272, 46281, 46282, 46283, 46284],
   'Lederer Memorial Trophy' => [
@@ -298,8 +335,8 @@ my %ORIGIN_ACCEPTS = (
     37770, 37779,
     43442, 43496],
   'Lodz Twin Towns Open Teams' => [
-    83115, 83117, 83119, 83120, 83121, 83126, 83127, 83128, 83129,
-    83130, 83131],
+    83115, 83117, 83118, 83119, 83120, 83121, 83126, 83127, 83128, 
+    83129, 83130, 83131],
   'Lozenets Open Teams' => [
      9951],
   'Macabbi Games' => [
@@ -310,10 +347,18 @@ my %ORIGIN_ACCEPTS = (
     77129, 77213],
   'Maharashtra State Teams' => [
     78793, 78795, 78797, 78799, 78827, 78831, 78833],
+  'MBH Invitational Cup' => [
+    85068, 85071, 85073, 85075, 85078, 85079, 85081, 85082, 85090,
+    85095, 85096],
   'Menpora-Pertamina Cup' => [
     41513, 41528, 41551, 41555, 41559, 41587, 41591],
   'Mersin Patton Open Teams' => [
     35420, 35428, 35431],
+  'Milan Trophy' => [
+    60462,
+    67124, 67126, 67127, 67128, 67146, 67151],
+  'Minangkabau Open Teams' => [
+    85689, 85690, 85693, 85697, 85712],
   'NEC Cup' => [
      3086,
      8134,
@@ -333,7 +378,8 @@ my %ORIGIN_ACCEPTS = (
   'Norway Practice' => [
     22211, 22214],
   'Norwegian Open Teams' => [
-    34796, 34798],
+    34796, 34798,
+    52631, 52634, 52637],
   'Norwegian Swiss Teams' => [
      2573],
   'Norwegian Women Teams' => [
@@ -345,6 +391,8 @@ my %ORIGIN_ACCEPTS = (
      8534,
     13253,
     17448],
+  'Palace Teams Cup' => [
+    62589, 62611, 62614, 62626, 62632, 62673],
   'Patton de Monaco' => [
      4420,  4421,  4423,  4428,  4430,
     11487,
@@ -361,6 +409,8 @@ my %ORIGIN_ACCEPTS = (
     38566, 38571, 38585],
   'PLN Cup' => [
     41377, 41397, 41408, 41409],
+  'Poland Practice' => [
+    51264, 51266],
   'Prince Takamatsu Cup' => [
     84934, 84937, 84943, 84945],
   'Pula Open BAM Teams' => [
@@ -376,10 +426,13 @@ my %ORIGIN_ACCEPTS = (
     47267,
     84421, 84425, 84426, 84428],
   'Rosenblum Cup' => [
-    36069, 36072, 36081],
+    36069, 36072, 36081,
+    58923, 58929],
   'Russia Practice' => [
     69801, 69805,
     72425],
+  "SEA President's Cup" => [
+    54726, 54736, 54747, 54748, 54764],
   'Semen Padang Cup' => [
     24083, 24086, 24089, 24092, 24096],
   'Serdika Open Teams' => [
@@ -398,7 +451,8 @@ my %ORIGIN_ACCEPTS = (
   'Stara Zagora Open Teams' => [
     20362, 20367, 20370, 20371, 20379, 20370, 20379, 20386, 20394],
   'Sweden Practice' => [
-    53901, 53910, 53914, 53917, 53920, 53926],
+    53901, 53910, 53914, 53917, 53920, 53926,
+    74026, 74029, 74030, 74033],
   'Swedish Open Teams' => [
     44479, 44480, 44485, 44486, 44495, 44497, 44509, 44518],
   'Swedish Open Team Trials' => [
@@ -417,9 +471,9 @@ my %ORIGIN_ACCEPTS = (
     27779,
     33869, 33878, 33883, 33904, 33950,
     42046, 42048, 42053, 42059, 42067, 42070, 42093, 42109,
-    48209, 48181,
-    54220, 54221, 54223, 54224, 54225, 54239, 54246, 54252, 54257,
-    54278, 54284, 54291,
+    48209, 48281,
+    54220, 54221, 54223, 54224, 54225, 54239, 54243, 54246, 54252, 
+    54257, 54278, 54284, 54291,
     59910, 59915, 59940, 59957,
     66820,
     76932, 76944,
@@ -428,12 +482,15 @@ my %ORIGIN_ACCEPTS = (
      9946,  9964,  9988,  9995,
     39014,
     44818, 44830, 44843, 44849],
+  'Thailand Open Teams' => [
+    85411, 85413, 85426, 85426, 85428],
   'The Hague Bridge Experience' => [
     46355],
   'Thrace Club League' => [
     34398],
   'Torneo di Rastignano' => [
-    40753],
+    40753,
+    53200, 53201, 53202],
   'Torneo di Roma' => [
     30729, 30743, 30770],
   'Towns Cup' => [
@@ -443,19 +500,24 @@ my %ORIGIN_ACCEPTS = (
     33771,
     39222,
     44900],
-  'Tugu Mada Cup' => [
-    81660, 81666, 81667,
+  'Tugu Muda Cup' => [
+    81660, 81666, 81667, 81669, 81726,
     85737, 85741],
   'Turkish Club Championship' => [
     19580,
     25024],
   'Turkish Open Teams' => [
      9604,  9630],
+  'Turkish Winter Open Teams' => [
+    49681, 49692, 49694],
+  'UAE Open Teams' => [
+    54453, 54456, 54459, 54461],
   'Varna Titan Open Teams' => [
     29867, 29870, 29872,
     34923, 34924],
   'Vilnius Open Teams' => [
-    40788, 40791, 40795],
+    40788, 40791, 40795,
+    76464, 76471, 76473],
   'Western Mediterranean Club Teams' => [
     33891],
   'White House Interntional' => [
@@ -470,6 +532,9 @@ my %ORIGIN_ACCEPTS = (
   'Yeh Bros Cup' => [
      9119,  9120,  9133,
     27796, 27798, 27800, 27806, 27807, 27808, 27810, 27813],
+  'Yokohama Cup' => [
+    61534, 61539, 61541, 61545, 61576, 61586, 61595, 61618, 61624,
+    61628, 61634],
   'Zurich Open' => [
     22228],
 );
@@ -539,6 +604,7 @@ my %ZONE_COMPATIBILITY =
   'Asia Pacific' =>
   {
     Australia => 1,
+    Bangladesh => 1,
     China => 1,
     'Chinese Taipei' => 1,
     'French Polynesia' => 1,
@@ -574,6 +640,7 @@ my %ZONE_COMPATIBILITY =
   {
     Barbados => 1,
     Bermuda => 1,
+    'Costa Rica' => 1,
     'French Guyana' => 1,
     Guadeloupe => 1,
     'Netherlands Antilles' => 1,
@@ -706,6 +773,7 @@ my %ZONE_COMPATIBILITY =
     Japan => 1,
     'Macau' => 1,
     Taiwan => 1,
+    Thailand => 1
   },
   'South Pacific' =>
   {

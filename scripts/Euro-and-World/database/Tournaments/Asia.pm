@@ -429,7 +429,6 @@ my %MEETS_ASIA =
   'South East Asian Championship' =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
 
     EDITIONS =>
     {
@@ -2479,6 +2478,7 @@ my %TOURNAMENTS_ASIA =
       '2016' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -2492,6 +2492,7 @@ my %TOURNAMENTS_ASIA =
       '2017' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -2829,6 +2830,7 @@ my %TOURNAMENTS_ASIA =
       '2017' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3134,6 +3136,7 @@ my %TOURNAMENTS_ASIA =
       {
         MEET => 'South East Asian Championship',
         MEET_TAG => 2017,
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3159,6 +3162,7 @@ my %TOURNAMENTS_ASIA =
       '2017' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3279,6 +3283,7 @@ my %TOURNAMENTS_ASIA =
       '2022' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -3369,6 +3374,7 @@ my %TOURNAMENTS_ASIA =
       '2022' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -3382,6 +3388,7 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -3407,6 +3414,7 @@ my %TOURNAMENTS_ASIA =
       '2017' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3432,6 +3440,7 @@ my %TOURNAMENTS_ASIA =
       '2016' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -3445,6 +3454,7 @@ my %TOURNAMENTS_ASIA =
       '2017' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -3458,6 +3468,7 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -3483,6 +3494,7 @@ my %TOURNAMENTS_ASIA =
       '2022' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -3573,6 +3585,7 @@ my %TOURNAMENTS_ASIA =
       '2022' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -3586,6 +3599,7 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'South East Asian Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 

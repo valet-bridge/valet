@@ -615,7 +615,6 @@ my @MULTI_WORDS =
   'Kungshamns Sega Gubbar',
   'Kurt quo vadis',
   'Kusinerna från land',
-  'Kuvayi Milliye',
   'Kvalen og nissene',
   'Kwang-Hwa',
 
@@ -913,6 +912,7 @@ my @MULTI_WORDS =
   'Restricted Talent',
   'Rett opp i saksa',
   'Return the VI Counties',
+  'Reunion 207',
   'Rimstedt Minus',
   'Rimstedt Power!',
   'Rising Star',
@@ -1387,7 +1387,6 @@ my %MULTI_TYPOS =
   'Koos Bros' => ['Koos Bro´s', "koos bro's"],
   'Kuaile Huoniao' => ['Kuaile Houniao'],
   'Kungshamns Sega Gubbar' => ['kungshamns sega gub'],
-  'Kuvayi Milliye' => ['kuvai milliye'],
   'Kwang Hwa' => ['kwuang-hwua'],
 
   "L'Orange" => ["l' orange"],
@@ -1742,8 +1741,6 @@ my %SINGLE_TYPOS =
   'Jiangsu YY' => ['jsyy'],
   'Joy Division' => ['joydivision'],
   Jupiter => ['jupitor'],
-
-  'Kuvayi Milliye' => ['kuvaimilliye'],
 
   'Last Arrival' => ['lastarrival'],
   Lebensohl => ['lebenshol'],
