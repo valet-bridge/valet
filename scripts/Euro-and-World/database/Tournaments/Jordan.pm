@@ -95,21 +95,27 @@ my %MEETS_JORDAN =
       '2022' =>
       {
         # https://bridgescanner.com/event/annual-jordan-international-bridge-festival-2022
+        MEET_ORDINAL => 39,
         YEAR => 2022,
+        CITY => 'Amman',
         DATE_START => '2022-09-28',
         DATE_END => '2022-10-03'
       },
       '2023' =>
       {
         # https://bridgescanner.com/event/annual-jordan-international-bridge-festival-2023
+        MEET_ORDINAL => 40,
         YEAR => 2023,
+        CITY => 'Amman',
         DATE_START => '2023-09-27',
         DATE_END => '2023-10-02'
       },
       '2024' =>
       {
         # https://bridgescanner.com/event/annual-jordan-international-bridge-festival-2024
+        MEET_ORDINAL => 41,
         YEAR => 2024,
+        CITY => 'Amman',
         DATE_START => '2024-09-25',
         DATE_END => '2024-09-30'
       },
@@ -473,6 +479,7 @@ my %TOURNAMENTS_JORDAN =
           'C0' => 
           {
             YEAR => 2015,
+            major => 'SESSION|ROUND',
             DATE_START => '2015-05-19',
             DATE_END => '2015-05-21'
           },
@@ -507,6 +514,7 @@ my %TOURNAMENTS_JORDAN =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'SESSION|ROUND',
             DATE_START => '2019-06-13',
             DATE_END => '2019-06-13'
           } 

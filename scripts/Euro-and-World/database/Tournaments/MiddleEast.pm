@@ -157,6 +157,15 @@ my %MEETS_MIDDLEEAST =
         DATE_START => '2023-05-06',
         DATE_END => '2023-05-13'
       },
+      '2025' =>
+      {
+        MEET_ORDINAL => 23,
+        CITY => 'Dubai',
+        COUNTRY => 'UAE',
+        YEAR => 2025,
+        DATE_START => '2025-04-10',
+        DATE_END => '2025-04-18'
+      },
     }
   },
 

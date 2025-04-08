@@ -451,6 +451,7 @@ my %TOURNAMENTS_AFRICA =
           {
             YEAR => 2019,
             MOVEMENT => 'Barometer',
+            major => 'SESSION',
             DATE_START => '2019-04-12',
             DATE_END => '2019-04-12'
           },
