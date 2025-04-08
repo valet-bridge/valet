@@ -221,7 +221,6 @@ my @MULTI_WORDS =
   "Cai's Bird",
   'Californian Aces',
   'Can Am Express',
-  'Can Can',
   'Captain Blood',
   "Captain's Four",
   "Captain's Team",

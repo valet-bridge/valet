@@ -346,7 +346,6 @@ my %MEETS_INDONESIA =
   'Indonesian University Championship' =>
   {
     %GLOBAL,
-    ORIGIN => 'University',
 
     EDITIONS => 
     {
@@ -381,15 +380,18 @@ my %MEETS_INDONESIA =
       '2016' =>
       {
         MEET_ORDINAL => 18,
+        CITY => 'Jakarta',
         YEAR => 2016,
         DATE_START => '2016-11-13',
         DATE_END => '2016-11-20'
       },
       '2019' =>
       {
+        MEET_ORDINAL => 21,
+        CITY => 'Jakarta',
         YEAR => 2019,
         DATE_START => '2019-11-11',
-        DATE_END => '2019-11-13'
+        DATE_END => '2019-11-14'
       },
       '2024' =>
       {
@@ -1795,7 +1797,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2018,
             DATE_START => '2018-12-08',
-            DATE_END => '2018-12-15' 
+            DATE_END => '2018-12-14' 
           },
         }
       },
@@ -1940,7 +1942,6 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Men Teams' =>
   {
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Men',
@@ -1951,6 +1952,7 @@ my %TOURNAMENTS_INDONESIA =
       '2004' =>
       {
         MEET => 'Indonesian National Games',
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'C0' => 
@@ -1982,6 +1984,7 @@ my %TOURNAMENTS_INDONESIA =
       '2008' =>
       {
         MEET => 'Indonesian National Games',
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'C0' => 
@@ -2020,6 +2023,7 @@ my %TOURNAMENTS_INDONESIA =
       '2012' =>
       {
         MEET => 'Indonesian National Games',
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'C0' => 
@@ -2051,6 +2055,7 @@ my %TOURNAMENTS_INDONESIA =
       '2015' =>
       {
         MEET => 'Indonesian National Pre-Sports Week',
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'C0' => 
@@ -2074,6 +2079,7 @@ my %TOURNAMENTS_INDONESIA =
       '2016' =>
       {
         MEET => 'Indonesian National Games',
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'C0' => 
@@ -2530,9 +2536,10 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
-      '2018' =>
+      '2018A' =>
       {
         MEET => 'Indonesian Province Sports Week',
+        MEET_TAG => 2018,
         CHAPTERS =>
         {
           'C0' => 
@@ -2540,6 +2547,21 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2018,
             DATE_START => '2018-11-21',
             DATE_END => '2018-11-23',
+          },
+        }
+      },
+      '2018B' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        MEET_TAG => 2018,
+        ORIGIN => 'National',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-15',
+            DATE_END => '2018-12-15' 
           },
         }
       },
@@ -3610,6 +3632,7 @@ my %TOURNAMENTS_INDONESIA =
       '2012' =>
       {
         MEET => 'Indonesian University Championship',
+        ORIGIN => 'University',
         CHAPTERS =>
         {
           'C0' => 
@@ -3642,6 +3665,7 @@ my %TOURNAMENTS_INDONESIA =
       {
         # https://bridge.web.id/2014/kejurnas-mhs/
         MEET => 'Indonesian University Championship',
+        ORIGIN => 'University',
         ORDINAL => 16,
 
         CHAPTERS =>
@@ -3684,6 +3708,7 @@ my %TOURNAMENTS_INDONESIA =
       {
         # https://bridge.web.id/2015/kejurnas-mhs/
         MEET => 'Indonesian University Championship',
+        ORIGIN => 'University',
 
         CHAPTERS =>
         {
@@ -3724,6 +3749,7 @@ my %TOURNAMENTS_INDONESIA =
       '2016' =>
       {
         MEET => 'Indonesian University Championship',
+        ORIGIN => 'National',
 
         CHAPTERS =>
         {
@@ -3807,6 +3833,7 @@ my %TOURNAMENTS_INDONESIA =
       '2012' =>
       {
         MEET => 'Indonesian University Championship',
+        ORIGIN => 'University',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3822,6 +3849,7 @@ my %TOURNAMENTS_INDONESIA =
       '2014' =>
       {
         MEET => 'Indonesian University Championship',
+        ORIGIN => 'University',
         ORDINAL => 16,
         CHAPTERS =>
         {
@@ -3874,6 +3902,7 @@ my %TOURNAMENTS_INDONESIA =
       '2012' =>
       {
         MEET => 'Indonesian University Championship',
+        ORIGIN => 'University',
         CHAPTERS =>
         {
           'C0' => 
@@ -3905,6 +3934,7 @@ my %TOURNAMENTS_INDONESIA =
       '2014' =>
       {
         MEET => 'Indonesian University Championship',
+        ORIGIN => 'University',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3932,6 +3962,7 @@ my %TOURNAMENTS_INDONESIA =
       '2016' =>
       {
         MEET => 'Indonesian University Championship',
+        ORIGIN => 'University',
 
         CHAPTERS =>
         {
@@ -3946,6 +3977,7 @@ my %TOURNAMENTS_INDONESIA =
       '2019' =>
       {
         MEET => 'Indonesian University Championship',
+        ORIGIN => 'University',
 
         CHAPTERS =>
         {
@@ -3960,6 +3992,7 @@ my %TOURNAMENTS_INDONESIA =
       '2024' =>
       {
         MEET => 'Indonesian University Championship',
+        ORIGIN => 'University',
 
         CHAPTERS =>
         {

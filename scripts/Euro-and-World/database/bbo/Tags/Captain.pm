@@ -1019,7 +1019,7 @@ my @SINGLE_WORDS = qw(
   Delimpaltadakis Delmas Delpiano Demarco DeMartino Demir Demirbas 
   Demirev Demme Denning Deniz Denizci Deprati Desai Dessy Deutsch 
   Dexterzy Dialinas Dionysopoulos Dhir Dhondy Dialynas Diamond Dilks 
-  Dima Dinkin Dixon Dizdar Djurovic Dobbels Dobes Dobrescu Dobroiu 
+  Dima Dinkin Dixon Djurovic Dobbels Dobes Dobrescu Dobroiu 
   Doecke Dogan Dolla Don Donatella Donati Donde Donciu Donn Donner 
   Donzi Doria Dossena Douglas Dovell Doub Doussot Doxiadis Doyle 
   Drijver Driver Dubini Duckworth Dufau Duguet Duman Dumbovich 

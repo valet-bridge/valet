@@ -6191,7 +6191,6 @@ my %TOURNAMENTS_WORLD =
 
   'World U26 Women Teams' =>
   {
-    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -6202,9 +6201,10 @@ my %TOURNAMENTS_WORLD =
       '2018' =>
       {
         MEET => 'World Youth Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2018,
             DATE_START => '2018-08-10',
@@ -6215,13 +6215,28 @@ my %TOURNAMENTS_WORLD =
       '2023' =>
       {
         MEET => 'World Youth Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2023,
             DATE_START => '2023-08-01',
             DATE_END => '2023-08-07'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'World Youth Open Championships',
+        ORIGIN => 'Transnational',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-07-13',
+            DATE_END => '2024-07-13'
           },
         }
       },

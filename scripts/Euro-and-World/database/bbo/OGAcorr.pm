@@ -219,6 +219,8 @@ my %ORIGIN_ACCEPTS = (
     78225, 78227, 78228, 78233, 78236],
   "European Champions' Cup" => [
     31277, 31279],
+  'European Small Federation Games' => [
+    54206, 54213],
   'European Transnational Open Teams' => [
      4660,
     18883, 18885, 18912, 18940, 18946, 18950],
@@ -303,20 +305,25 @@ my %ORIGIN_ACCEPTS = (
     80258, 80287, 80289, 80295, 80311],
   'IKA UNDIP Open Teams' => [
     66484],
+  'Indonesian Inter-City Championship' => [
+    52415, 52416, 52417],
   'Indonesian Inter-Club Championship' => [
     35550, 35559, 35582, 35589,
     38871, 38900, 38901,
     44635, 44638, 44639, 44644, 44649, 44651, 44664, 44665, 44667,
-    44669, 44670, 44672, 44673, 44678, 44762, 44767],
+    44669, 44670, 44672, 44673, 44678, 44762, 44767,
+    52415, 52416, 52417],
   'Indonesian Open Teams' => [
     35616,
-    67372, 67375, 67383, 67385, 67415, 67421,
+    67372, 67375, 67383, 67385, 67415, 67419, 67421,
     80139, 80142, 80146, 80149, 80151, 80169, 80171, 80173, 80178,
     80185, 80187, 80211, 80212, 80240, 80246],
   'Indonesian Premier League' => [
      9392,  9505,
     12580, 12766,
     68693],
+  'Indonesian U26 Teams' => [
+    48084, 48085],
   'Israel Festival Open Teams' => [
     52026],
   'Israel Open Trials' => [
@@ -562,7 +569,10 @@ my %ORIGIN_ACCEPTS = (
   'Turkish Club Championship' => [
     19580,
     25024,
-    64648, 64651],
+    52541,
+    57964,
+    64648, 64651,
+    79955],
   'Turkish Open Teams' => [
      9604,  9630],
   'Turkish U26 Teams' => [
@@ -570,11 +580,14 @@ my %ORIGIN_ACCEPTS = (
   'Turkish Winter Open Teams' => [
     49331,
     49681, 49692, 49694,
-    49968],
+    49968,
+    56256],
   'Turkish Winter Women Teams' => [
     49599, 49622],
   'UAE Open Teams' => [
     54453, 54456, 54459, 54461],
+  'Varna Intercity Teams' => [
+    52757],
   'Varna Titan Open Teams' => [
     29867, 29870, 29872,
     34923, 34924],
@@ -596,11 +609,18 @@ my %ORIGIN_ACCEPTS = (
     10745, 10747, 10775, 10779,
     19615, 19621, 19641,
     75571, 75602],
+  'World Open Youngster Teams' => [
+    75633,
+    84226],
   'World Transnational Open Teams' => [
     65928, 65954, 65967, 65983, 65993],
   'Yeh Bros Cup' => [
      9119,  9120,  9133,
     27796, 27798, 27800, 27806, 27807, 27808, 27810, 27813],
+  "Young Chelsea Women's Swiss Teams" => [
+    59817,
+    66972,
+    77309],
   'Yokohama Cup' => [
     61534, 61539, 61541, 61545, 61576, 61586, 61595, 61618, 61624,
     61628, 61634],

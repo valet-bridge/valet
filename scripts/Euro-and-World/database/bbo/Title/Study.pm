@@ -1715,6 +1715,7 @@ my @LOCAL_SUBS =
   { START => 84137, END => 84215, 
     TEXT => 'U26W', CORR => 'U26 Women' },
   { START => 84169, END => 84254, TEXT => 'U23W', CORR => 'U23 Women' },
+  { START => 84194, END => 84231, TEXT => 'EYTC', CORR => 'WYOC' },
   { START => 84197, END => 84286, TEXT => 'WYTC', CORR => 'WYOC' },
   { START => 84257, END => 84284, 
     TEXT => 'U31Pairs', CORR => 'U31 Pairs' },

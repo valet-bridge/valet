@@ -41,7 +41,6 @@ my @MULTI_WORDS =
   'Alunand Plus',
   'Andrea L.',
   'Ar Tush',
-  'Arab Club',
   "Archie's",
   "Asha's 4",
   'Asketické samice',
@@ -99,7 +98,6 @@ my @MULTI_WORDS =
   'Daqin Xinghan',
   'Daqin Xinghua',
   'Daqing Xinghan',
-  'Dauna Winazza',
   'Deccan Chargers',
   'Deceptive AHM',
   'Delhi Diamonds',
@@ -426,7 +424,6 @@ my %MULTI_TYPOS =
 
   Crossfatek => ['cross fatek'],
 
-  'Dauna Winazza' => ['daunna winazza', 'dauna winazaa'],
   'Deceptive AHM' => ['deceptive  ahm'],
   'Delhi Gym Aces' => ['d g aces', 'dgc aces'],
   'DK Notus' => ['notus df'],

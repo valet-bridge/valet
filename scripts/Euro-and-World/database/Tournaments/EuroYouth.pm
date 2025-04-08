@@ -275,7 +275,7 @@ my %MEETS_EURO_YOUTH =
         CITY => 'Wroclaw',
         COUNTRY => 'Poland',
         DATE_START => '2024-07-07',
-        DATE_END => '2024-07-13'
+        DATE_END => '2024-07-12'
       }
     }
   }
@@ -629,7 +629,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 1996,
             MOVEMENT => 'Round-robin',
@@ -643,7 +643,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 1998,
             MOVEMENT => 'Round-robin',
@@ -657,7 +657,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2000,
             MOVEMENT => 'Round-robin',
@@ -671,7 +671,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2002,
             MOVEMENT => 'Round-robin',
@@ -685,7 +685,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2004,
             MOVEMENT => 'Round-robin',
@@ -699,7 +699,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2005,
             MOVEMENT => 'Round-robin',
@@ -714,7 +714,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2007,
             MOVEMENT => 'Round-robin',
@@ -728,7 +728,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2009,
             MOVEMENT => 'Round-robin',
@@ -743,7 +743,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
@@ -758,7 +758,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2013,
             MOVEMENT => 'Round-robin',
@@ -774,7 +774,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2015,
             MOVEMENT => 'Round-robin',
@@ -789,7 +789,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2017,
             MOVEMENT => 'Round-robin',
@@ -803,7 +803,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2019,
             MOVEMENT => 'Round-robin',
@@ -817,7 +817,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2022,
             MOVEMENT => 'Round-robin',
@@ -831,20 +831,13 @@ my %TOURNAMENTS_EURO_YOUTH =
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2024,
             MOVEMENT => 'Round-robin',
             DATE_START => '2024-07-07',
             DATE_END => '2024-07-12'
           },
-          'C1' => 
-          {
-            YEAR => 2024,
-            MOVEMENT => 'Swiss',
-            DATE_START => '2024-07-13',
-            DATE_END => '2024-07-13'
-          }
         }
       },
     }
@@ -1758,7 +1751,7 @@ my %TOURNAMENTS_EURO_YOUTH =
             YEAR => 2024,
             MOVEMENT => 'Round-robin',
             DATE_START => '2024-07-09',
-            DATE_END => '2024-07-13'
+            DATE_END => '2024-07-12'
           }
         }
       },
@@ -1811,7 +1804,7 @@ my %TOURNAMENTS_EURO_YOUTH =
         ORIGIN => 'International',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2022,
             MOVEMENT => 'Round-robin',
@@ -1827,20 +1820,13 @@ my %TOURNAMENTS_EURO_YOUTH =
         ORIGIN => 'Transnational',
         CHAPTERS => 
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2024,
             MOVEMENT => 'Round-robin',
             DATE_START => '2024-07-09',
             DATE_END => '2024-07-12'
           },
-          'C1' => 
-          {
-            YEAR => 2024,
-            MOVEMENT => 'Swiss',
-            DATE_START => '2024-07-13',
-            DATE_END => '2024-07-13'
-          }
         }
       },
     }

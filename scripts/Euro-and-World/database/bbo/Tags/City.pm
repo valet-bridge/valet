@@ -280,7 +280,7 @@ my @SINGLE_WORDS = qw(
   Pasuruan Pattaya Pau Pazar Pazardjik Pecs Peebles Pekanbaru Pelitli 
   Pelotas Penajam Pernik Perth Perula Pervera Pesaro Pescara Petersfield 
   Petrelik Philadelphia Phitsanulok Phokai Phuket Piedimonte Pijnacker 
-  Pisa Pitane Pittsburgh Pleven Plock Plovdiv Pontianak Popovo Porto 
+  Pisa Pitane Pittsburgh Pleven Pliska Plock Plovdiv Pontianak Popovo Porto 
   Potsdam Poznan Prague Preslav Priboi Primorsko Probolinggo Protaras 
   Ptuj Pula Pulawy Pune Puri Pushkar Puutalo
 

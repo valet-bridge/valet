@@ -614,7 +614,7 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'International',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1644,7 +1644,7 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'International',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3463,7 +3463,7 @@ my %TOURNAMENTS_ASIA =
       '2016' =>
       {
         MEET => 'South East Asian Championship',
-        ORIGIN => 'International',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
