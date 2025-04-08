@@ -834,6 +834,7 @@ my @LOCAL_SUBS =
     CORR => 'Sweden Friendly - Juniors' },
   { START => 51232, END => 51288, 
     TEXT => 'Senior USA2', CORR => 'US Senior Trials' },
+  { START => 51337, END => 51380, TEXT => 'III-rd', CORR => 'III' },
   { START => 51554, END => 51630, 
     TEXT => 'XVIII-th Bridge', CORR => '18th Bridge' },
   { START => 51741, END => 51760, 

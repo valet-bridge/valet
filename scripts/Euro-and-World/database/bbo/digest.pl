@@ -200,8 +200,6 @@ while ($entryT->read($fh))
 close $fh;
 exit if $debug_flag;
 
-exit;
-
 # for my $i (0 .. $#times)
 # {
   # printf "Time $i: %.3f seconds\n", $times[$i];
