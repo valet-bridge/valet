@@ -128,6 +128,8 @@ my %TOURNAMENTS_SPAIN =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2019-08-20',
             DATE_END => '2019-08-24'
           },
@@ -141,6 +143,7 @@ my %TOURNAMENTS_SPAIN =
           'SINGLE' =>
           {
             YEAR => 2020,
+            major => 'SESSION',
             DATE_START => '2020-08-13',
             DATE_END => '2020-08-15'
           },
@@ -153,6 +156,7 @@ my %TOURNAMENTS_SPAIN =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'SESSION',
             DATE_START => '2022-04-21',
             DATE_END => '2022-04-23'
           },
@@ -165,6 +169,7 @@ my %TOURNAMENTS_SPAIN =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'SESSION',
             DATE_START => '2022-09-29',
             DATE_END => '2022-10-01'
           },
@@ -189,6 +194,7 @@ my %TOURNAMENTS_SPAIN =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'SESSION',
             DATE_START => '2024-08-22',
             DATE_END => '2024-08-24'
           },
@@ -663,6 +669,7 @@ my %TOURNAMENTS_SPAIN =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
             major => 'ROUND',
             DATE_START => '2018-12-15',
             DATE_END => '2018-12-16'
@@ -677,7 +684,7 @@ my %TOURNAMENTS_SPAIN =
           'SINGLE' => 
           {
             YEAR => 2019,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-12-12',
             DATE_END => '2019-12-14'
           } 
