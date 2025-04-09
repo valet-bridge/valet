@@ -194,7 +194,6 @@ my %TOURNAMENTS_SINGAPORE =
           {
             YEAR => 2017,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '2017-08-06',
             DATE_END => '2017-08-06'
           },
@@ -202,7 +201,6 @@ my %TOURNAMENTS_SINGAPORE =
           {
             YEAR => 2017,
             STAGE => 'Final',
-            major => 'SEGMENT',
             DATE_START => '2017-08-06',
             DATE_END => '2017-08-06'
           } 
@@ -216,7 +214,6 @@ my %TOURNAMENTS_SINGAPORE =
           {
             YEAR => 2018,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '2018-08-05',
             DATE_END => '2018-08-05'
           },
@@ -224,7 +221,6 @@ my %TOURNAMENTS_SINGAPORE =
           {
             YEAR => 2018,
             STAGE => 'Final',
-            major => 'SEGMENT',
             DATE_START => '2018-08-05',
             DATE_END => '2018-08-05'
           } 

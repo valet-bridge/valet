@@ -203,9 +203,19 @@ my %TOURNAMENTS_MIDDLEEAST =
         MEET => 'Arab Nations Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-02-21',
+            DATE_END => '2019-02-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-02-21',
             DATE_END => '2019-02-25'
           } 
@@ -216,10 +226,28 @@ my %TOURNAMENTS_MIDDLEEAST =
         MEET => 'Arab Nations Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-11-12',
+            DATE_END => '2024-11-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-16',
+            DATE_END => '2024-11-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-17',
             DATE_END => '2024-11-17'
           } 
         }
@@ -241,10 +269,28 @@ my %TOURNAMENTS_MIDDLEEAST =
         MEET => 'Arab Nations Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
-            DATE_START => '2024-11-12',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2024-11-13',
+            DATE_END => '2024-11-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-16',
+            DATE_END => '2024-11-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-17',
             DATE_END => '2024-11-17'
           } 
         }
@@ -320,7 +366,17 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-06-24',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
+            DATE_START => '2019-06-26',
+            DATE_END => '2019-06-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-30',
             DATE_END => '2019-06-30'
           },
         }
@@ -333,8 +389,18 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2023-05-06',
-            DATE_END => '2023-05-13'
+            DATE_END => '2023-05-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-12',
+            DATE_END => '2023-05-12'
           },
         }
       },
@@ -508,7 +574,25 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2017-04-01',
+            DATE_END => '2017-04-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|MATCH',
+            DATE_START => '2017-04-09',
+            DATE_END => '2017-04-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-04-11',
             DATE_END => '2017-04-11'
           },
         }
@@ -521,7 +605,25 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-06-24',
+            DATE_END => '2019-06-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-28',
+            DATE_END => '2019-06-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-30',
             DATE_END => '2019-06-30'
           },
         }
@@ -534,7 +636,25 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2023-05-06',
+            DATE_END => '2023-05-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-11',
+            DATE_END => '2023-05-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-13',
             DATE_END => '2023-05-13'
           },
         }
@@ -619,8 +739,18 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2017,
-            DATE_START => '2017-04-01',
-            DATE_END => '2017-04-11'
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
+            DATE_START => '2017-04-06',
+            DATE_END => '2017-04-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|MATCH',
+            DATE_START => '2017-04-10',
+            DATE_END => '2017-04-10'
           },
         }
       },
@@ -632,7 +762,17 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-06-24',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-06-26',
+            DATE_END => '2019-06-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-30',
             DATE_END => '2019-06-30'
           },
         }
@@ -645,8 +785,18 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-05-06',
-            DATE_END => '2023-05-13'
+            DATE_END => '2023-05-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-12',
+            DATE_END => '2023-05-12'
           },
         }
       },
@@ -771,7 +921,25 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2017-04-01',
+            DATE_END => '2017-04-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|MATCH',
+            DATE_START => '2017-04-09',
+            DATE_END => '2017-04-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-04-11',
             DATE_END => '2017-04-11'
           },
         }
@@ -784,7 +952,17 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-06-24',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
+            DATE_START => '2019-06-26',
+            DATE_END => '2019-06-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-30',
             DATE_END => '2019-06-30'
           },
         }
@@ -797,7 +975,25 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-05-06',
+            DATE_END => '2023-05-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-11',
+            DATE_END => '2023-05-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-13',
             DATE_END => '2023-05-13'
           },
         }
@@ -947,10 +1143,28 @@ my %TOURNAMENTS_MIDDLEEAST =
         COUNTRY => 'Tunisia',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2016-10-26',
+            DATE_END => '2016-10-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-29',
+            DATE_END => '2016-10-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-29',
             DATE_END => '2016-10-30'
           } 
         }
@@ -959,10 +1173,28 @@ my %TOURNAMENTS_MIDDLEEAST =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2017-10-27',
+            DATE_END => '2017-10-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-28',
+            DATE_END => '2017-10-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-29',
             DATE_END => '2017-10-29'
           } 
         }
@@ -972,10 +1204,28 @@ my %TOURNAMENTS_MIDDLEEAST =
         ORDINAL => 10,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2018-10-24',
+            DATE_END => '2018-10-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-27',
+            DATE_END => '2018-10-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-28',
             DATE_END => '2018-10-28'
           } 
         }
@@ -985,10 +1235,28 @@ my %TOURNAMENTS_MIDDLEEAST =
         ORDINAL => 11,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-10-16',
+            DATE_END => '2019-10-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-19',
+            DATE_END => '2019-10-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-20',
             DATE_END => '2019-10-20'
           } 
         }
@@ -1003,7 +1271,6 @@ my %TOURNAMENTS_MIDDLEEAST =
           # TODO Unchecked
           'C0' => 
           {
-            # Looks like 2020-10-06 RR, maybe 2020-10-25 to 27 KO.
             YEAR => 2016,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
@@ -1083,6 +1350,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'ROUND|MATCH',
             DATE_START => '2019-04-25',
             DATE_END => '2019-04-25'
           },
@@ -1108,6 +1376,8 @@ my %TOURNAMENTS_MIDDLEEAST =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-12-03',
             DATE_END => '2017-12-03'
           },

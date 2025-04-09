@@ -58,6 +58,15 @@ my %TOURNAMENTS_SERBIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2022-04-20',
+            DATE_END => '2022-04-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
             DATE_START => '2022-04-20',
             DATE_END => '2022-04-21'
           },
@@ -240,6 +249,16 @@ my %TOURNAMENTS_SERBIA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-12-04',
+            DATE_END => '2016-12-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-12-04',
             DATE_END => '2016-12-04'
           },

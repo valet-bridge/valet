@@ -248,6 +248,8 @@ my %TOURNAMENTS_SOUTHAFRICA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-07-16',
             DATE_END => '2019-07-16'
           } 
@@ -261,6 +263,8 @@ my %TOURNAMENTS_SOUTHAFRICA =
           'SINGLE' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2020-03-10',
             DATE_END => '2020-03-14'
           } 
