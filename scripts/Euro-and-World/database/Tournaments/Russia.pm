@@ -390,7 +390,28 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            MOVEMENT => 'Goulash',
+            major => 'SEGMENT',
             DATE_START => '2016-10-15',
+            DATE_END => '2016-10-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            MOVEMENT => 'Goulash',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-15',
+            DATE_END => '2016-10-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            MOVEMENT => 'Goulash',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-16',
             DATE_END => '2016-10-16'
           },
         }
@@ -403,7 +424,28 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            MOVEMENT => 'Goulash',
+            major => 'SEGMENT',
             DATE_START => '2017-11-11',
+            DATE_END => '2017-11-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            MOVEMENT => 'Goulash',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-11',
+            DATE_END => '2017-11-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Goulash',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-12',
             DATE_END => '2017-11-12'
           },
         }
@@ -468,10 +510,20 @@ my %TOURNAMENTS_RUSSIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-12-07',
+            DATE_END => '2018-12-08'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-09',
             DATE_END => '2018-12-10'
           },
         }
@@ -483,6 +535,8 @@ my %TOURNAMENTS_RUSSIA =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-01-17',
             DATE_END => '2020-01-19'
           },
@@ -559,6 +613,8 @@ my %TOURNAMENTS_RUSSIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-03-31',
             DATE_END => '2018-04-01'
           },
@@ -568,10 +624,20 @@ my %TOURNAMENTS_RUSSIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2019-12-20',
+            DATE_END => '2019-12-21'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-21',
             DATE_END => '2019-12-22'
           },
         }
@@ -672,7 +738,7 @@ my %TOURNAMENTS_RUSSIA =
           {
             YEAR => 2018,
             STAGE => 'Bronze',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-09-16',
             DATE_END => '2018-09-16'
           },
@@ -712,22 +778,14 @@ my %TOURNAMENTS_RUSSIA =
       {
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2021,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2021-09-23',
-            DATE_END => '2021-09-25'
-          },
-          'C1' => 
-          {
-            YEAR => 2021,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2021-09-26',
             DATE_END => '2021-09-26'
-          } 
+          },
         }
       },
     }
@@ -751,6 +809,7 @@ my %TOURNAMENTS_RUSSIA =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-12-07',
             DATE_END => '2019-12-08'
           },
@@ -777,6 +836,7 @@ my %TOURNAMENTS_RUSSIA =
           'SINGLE' =>
           {
             YEAR => 2020,
+            major => 'SEGMENT',
             DATE_START => '2020-02-15',
             DATE_END => '2020-02-16'
           },
@@ -1055,58 +1115,6 @@ my %TOURNAMENTS_RUSSIA =
           } 
         }
       },
-      '2017' =>
-      {
-        ORDINAL => 15,
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2017,
-            DATE_START => '2017-02-24',
-            DATE_END => '2017-02-26'
-          },
-        }
-      },
-      '2018' =>
-      {
-        ORDINAL => 16,
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2018,
-            DATE_START => '2018-03-02',
-            DATE_END => '2018-03-04'
-          },
-        }
-      },
-      '2019' =>
-      {
-        ORDINAL => 17,
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2019,
-            DATE_START => '2019-03-08',
-            DATE_END => '2019-03-10'
-          },
-        }
-      },
-      '2020' =>
-      {
-        ORDINAL => 18,
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2020,
-            DATE_START => '2020-02-21',
-            DATE_END => '2020-02-23'
-          },
-        }
-      },
     }
   },
 
@@ -1130,6 +1138,8 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2017-02-24',
             DATE_END => '2017-02-26'
           },
@@ -1143,6 +1153,8 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2018-03-02',
             DATE_END => '2018-03-04'
           },
@@ -1156,6 +1168,8 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2019-03-08',
             DATE_END => '2019-03-10'
           },
@@ -1169,6 +1183,8 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2020,
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2020-02-21',
             DATE_END => '2020-02-23'
           },

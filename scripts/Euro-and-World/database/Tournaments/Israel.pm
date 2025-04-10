@@ -536,6 +536,22 @@ my %TOURNAMENTS_ISRAEL =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2017-07-05',
+            DATE_END => '2017-07-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            DATE_START => '2017-07-05',
+            DATE_END => '2017-07-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-07-05',
             DATE_END => '2017-07-05'
           },
@@ -546,9 +562,11 @@ my %TOURNAMENTS_ISRAEL =
         MEET => 'Israel Bridge Festival',
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-06-27',
             DATE_END => '2018-06-27'
           },
@@ -562,6 +580,23 @@ my %TOURNAMENTS_ISRAEL =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-05',
+            DATE_END => '2019-06-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            DATE_START => '2019-06-05',
+            DATE_END => '2019-06-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-06-05',
             DATE_END => '2019-06-05'
           },
@@ -791,6 +826,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-02-19',
             DATE_END => '2022-02-19'
           },
@@ -803,6 +840,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-01-14',
             DATE_END => '2023-01-14'
           },
@@ -815,6 +854,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-04-06',
             DATE_END => '2024-04-06'
           },
@@ -976,6 +1017,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT|ROUND',
             DATE_START => '2017-05-06',
             DATE_END => '2017-05-06'
           } 
@@ -988,6 +1031,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT|ROUND',
             DATE_START => '2018-05-12',
             DATE_END => '2018-05-12'
           } 
@@ -1000,6 +1045,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT|ROUND',
             DATE_START => '2019-04-13',
             DATE_END => '2019-04-13'
           } 
@@ -1166,6 +1213,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-01-07',
             DATE_END => '2017-01-07'
           } 
@@ -1178,6 +1227,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-01-06',
             DATE_END => '2018-01-06'
           } 
@@ -1187,10 +1238,20 @@ my %TOURNAMENTS_ISRAEL =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-12-14',
+            DATE_END => '2018-12-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-15',
             DATE_END => '2018-12-15'
           } 
         }
@@ -1202,6 +1263,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-12-21',
             DATE_END => '2019-12-21'
           } 
@@ -1381,6 +1444,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-09-02',
             DATE_END => '2017-09-02'
           } 
@@ -1393,6 +1458,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-08-18',
             DATE_END => '2018-08-18'
           } 
@@ -1405,6 +1472,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-08-03',
             DATE_END => '2019-08-03'
           } 
@@ -1499,6 +1568,7 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-01-26',
             DATE_END => '2018-01-27'
           } 
@@ -1511,6 +1581,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2020-01-17',
             DATE_END => '2020-01-18'
           } 
@@ -1523,6 +1595,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-05-01',
             DATE_END => '2022-05-01'
           } 
@@ -1535,6 +1609,8 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-01-20',
             DATE_END => '2024-01-20'
           } 
@@ -1588,6 +1664,7 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-01-12',
             DATE_END => '2018-01-13'
           },
@@ -1676,7 +1753,25 @@ my %TOURNAMENTS_ISRAEL =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-07-31',
+            DATE_END => '2019-08-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-02',
+            DATE_END => '2019-08-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-04',
             DATE_END => '2019-08-04'
           },
         }
@@ -1781,6 +1876,7 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'SESSION',
             DATE_START => '2016-11-16',
             DATE_END => '2016-11-17'
           } 
