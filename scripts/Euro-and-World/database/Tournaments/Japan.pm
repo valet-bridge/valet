@@ -190,6 +190,8 @@ my %TOURNAMENTS_JAPAN =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-09-08',
             DATE_END => '2022-09-09'
           },
@@ -199,10 +201,28 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-03-15',
+            DATE_END => '2023-03-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-03-17',
+            DATE_END => '2023-03-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-03-18',
             DATE_END => '2023-03-18'
           },
         }
@@ -211,11 +231,29 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-08-28',
-            DATE_END => '2023-09-01'
+            DATE_END => '2023-08-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-30',
+            DATE_END => '2023-08-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-31',
+            DATE_END => '2023-08-31'
           },
         }
       },
@@ -223,10 +261,28 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-03-15',
+            DATE_END => '2024-03-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-17',
+            DATE_END => '2024-03-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-18',
             DATE_END => '2024-03-19'
           },
         }
@@ -235,10 +291,29 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-09-05',
+            DATE_END => '2024-09-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-07',
+            DATE_END => '2024-09-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-08',
             DATE_END => '2024-09-08'
           },
         }
@@ -322,501 +397,9 @@ my %TOURNAMENTS_JAPAN =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'SEGMENT',
             DATE_START => '2022-08-26',
             DATE_END => '2022-08-28'
-          },
-        }
-      },
-    }
-  },
-
-  'NEC Cup' => 
-  {
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2001' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2001,
-            MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2001-02-08',
-            DATE_END => '2001-02-08'
-          },
-          'C1' => 
-          {
-            YEAR => 2001,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT|ROUND',
-            DATE_START => '2001-02-09',
-            DATE_END => '2001-02-09'
-          },
-          'C2' => 
-          {
-            YEAR => 2001,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT|ROUND',
-            DATE_START => '2001-02-10',
-            DATE_END => '2001-02-10'
-          },
-          'C3' => 
-          {
-            YEAR => 2001,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2001-02-11',
-            DATE_END => '2001-02-11'
-          } 
-        }
-      },
-      '2005' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2005,
-            MOVEMENT => 'Round-robin',
-            major => 'ROUND|MATCH',
-            DATE_START => '2005-02-08',
-            DATE_END => '2005-02-09'
-          },
-          'C1' => 
-          {
-            YEAR => 2005,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2005-02-10',
-            DATE_END => '2005-02-10'
-          },
-          'C2' => 
-          {
-            YEAR => 2005,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2005-02-11',
-            DATE_END => '2005-02-11'
-          },
-          'C3' => 
-          {
-            YEAR => 2005,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2005-02-12',
-            DATE_END => '2005-02-12'
-          },
-        }
-      },
-      '2006' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2006,
-            STAGE => 'Qualifying',
-            major => 'ROUND|MATCH',
-            DATE_START => '2006-02-07',
-            DATE_END => '2006-02-08'
-          },
-          'C1' => 
-          {
-            YEAR => 2006,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2006-02-09',
-            DATE_END => '2006-02-09'
-          },
-          'C2' => 
-          {
-            YEAR => 2006,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2006-02-10',
-            DATE_END => '2006-02-10'
-          },
-          'C3' => 
-          {
-            YEAR => 2006,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2006-02-11',
-            DATE_END => '2006-02-11'
-          },
-        }
-      },
-      '2007' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2007,
-            MOVEMENT => 'Round-robin',
-            major => 'MATCH',
-            DATE_START => '2007-02-08',
-            DATE_END => '2007-02-08'
-          },
-          'C1' => 
-          {
-            YEAR => 2007,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2007-02-09',
-            DATE_END => '2007-02-09'
-          },
-          'C2' => 
-          {
-            YEAR => 2007,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2007-02-10',
-            DATE_END => '2007-02-10'
-          },
-          'C3' => 
-          {
-            YEAR => 2007,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2007-02-11',
-            DATE_END => '2007-02-11'
-          } 
-        }
-      },
-      '2008' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2008,
-            MOVEMENT => 'Round-robin',
-            major => 'MATCH',
-            DATE_START => '2008-02-07',
-            DATE_END => '2008-02-07'
-          },
-          'C1' => 
-          {
-            YEAR => 2008,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2008-02-08',
-            DATE_END => '2008-02-08'
-          },
-          'C2' => 
-          {
-            YEAR => 2008,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2008-02-09',
-            DATE_END => '2008-02-09'
-          },
-          'C3' => 
-          {
-            YEAR => 2008,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2008-02-10',
-            DATE_END => '2008-02-10'
-          },
-        }
-      },
-      '2009' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2009,
-            STAGE => 'Qualifying',
-            major => 'MATCH',
-            DATE_START => '2009-02-12',
-            DATE_END => '2009-02-12'
-          },
-          'C1' => 
-          {
-            YEAR => 2009,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2009-02-12',
-            DATE_END => '2009-02-12'
-          },
-          'C2' => 
-          {
-            YEAR => 2009,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2009-02-13',
-            DATE_END => '2009-02-13'
-          },
-          'C3' => 
-          {
-            YEAR => 2009,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2009-02-13',
-            DATE_END => '2009-02-14'
-          },
-        }
-      },
-      '2010' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2010,
-            STAGE => 'Qualifying',
-            major => 'MATCH',
-            DATE_START => '2010-02-08',
-            DATE_END => '2010-02-11'
-          },
-          'C1' => 
-          {
-            YEAR => 2010,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2010-02-11',
-            DATE_END => '2010-02-12'
-          },
-          'C2' => 
-          {
-            YEAR => 2010,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2010-02-12',
-            DATE_END => '2010-02-12'
-          },
-          'C3' => 
-          {
-            YEAR => 2010,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2010-02-12',
-            DATE_END => '2010-02-13'
-          } 
-        }
-      },
-      '2011' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Qualifying',
-            major => 'MATCH',
-            DATE_START => '2011-02-07',
-            DATE_END => '2011-02-09'
-          },
-          'C1' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2011-02-10',
-            DATE_END => '2011-02-11'
-          },
-          'C2' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2011-02-11',
-            DATE_END => '2011-02-11'
-          },
-          'C3' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2011-02-11',
-            DATE_END => '2011-02-12'
-          },
-        }
-      },
-      '2012' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Qualifying',
-            major => 'ROUND',
-            DATE_START => '2012-02-06',
-            DATE_END => '2012-02-09'
-          },
-          'C1' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2012-02-09',
-            DATE_END => '2012-02-09'
-          },
-          'C2' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2012-02-10',
-            DATE_END => '2012-02-10'
-          },
-          'C3' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2012-02-10',
-            DATE_END => '2012-02-11'
-          },
-        }
-      },
-      '2013' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2013,
-            STAGE => 'Qualifying',
-            major => 'ROUND',
-            DATE_START => '2013-04-16',
-            DATE_END => '2013-04-18'
-          },
-          'C1' => 
-          {
-            YEAR => 2013,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2013-04-19',
-            DATE_END => '2013-04-19'
-          },
-          'C2' => 
-          {
-            YEAR => 2013,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2013-04-19',
-            DATE_END => '2013-04-19'
-          },
-          'C3' => 
-          {
-            YEAR => 2013,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2013-04-20',
-            DATE_END => '2013-04-20'
-          } 
-        }
-      },
-      '2014' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Qualifying',
-            major => 'ROUND',
-            DATE_START => '2014-02-11',
-            DATE_END => '2014-02-13'
-          },
-          'C1' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-02-14',
-            DATE_END => '2014-02-14'
-          },
-          'C2' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-02-14',
-            DATE_END => '2014-02-14'
-          },
-          'C3' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2014-02-15',
-            DATE_END => '2014-02-15'
-          },
-        }
-      },
-      '2015' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2015,
-            STAGE => 'Qualifying',
-            major => 'ROUND',
-            DATE_START => '2015-02-10',
-            DATE_END => '2015-02-12'
-          },
-          'C1' => 
-          {
-            YEAR => 2015,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2015-02-13',
-            DATE_END => '2015-02-13'
-          },
-          'C2' => 
-          {
-            YEAR => 2015,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2015-02-13',
-            DATE_END => '2015-02-13'
-          },
-          'C3' => 
-          {
-            YEAR => 2015,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2015-02-14',
-            DATE_END => '2015-02-14'
-          },
-        }
-      },
-      '2017' =>
-      {
-        MEET => 'Yokohama Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2017,
-            DATE_START => '2017-02-07',
-            DATE_END => '2017-02-11'
           },
         }
       },
@@ -1089,9 +672,19 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-25',
+            DATE_END => '2016-09-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-09-25',
             DATE_END => '2016-09-25'
           },
@@ -1101,9 +694,19 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-24',
+            DATE_END => '2017-09-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-09-24',
             DATE_END => '2017-09-24'
           },
@@ -1116,6 +719,8 @@ my %TOURNAMENTS_JAPAN =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-09-22',
             DATE_END => '2018-09-22'
           },
@@ -1125,9 +730,19 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-21',
+            DATE_END => '2019-09-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-09-21',
             DATE_END => '2019-09-21'
           },
@@ -1137,9 +752,19 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-09-20',
+            DATE_END => '2020-09-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-09-20',
             DATE_END => '2020-09-20'
           },
@@ -1149,9 +774,19 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2021-09-19',
+            DATE_END => '2021-09-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2021-09-19',
             DATE_END => '2021-09-19'
           },
@@ -1161,9 +796,19 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-18',
+            DATE_END => '2022-09-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-09-18',
             DATE_END => '2022-09-18'
           },
@@ -1173,9 +818,19 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-17',
+            DATE_END => '2023-09-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-09-17',
             DATE_END => '2023-09-17'
           },
@@ -1185,9 +840,19 @@ my %TOURNAMENTS_JAPAN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-21',
+            DATE_END => '2024-09-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-09-21',
             DATE_END => '2024-09-21'
           },
@@ -1210,21 +875,569 @@ my %TOURNAMENTS_JAPAN =
 
     EDITIONS =>
     {
+      '2001' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2001,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2001-02-08',
+            DATE_END => '2001-02-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2001-02-09',
+            DATE_END => '2001-02-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2001-02-10',
+            DATE_END => '2001-02-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2001-02-11',
+            DATE_END => '2001-02-11'
+          } 
+        }
+      },
+      '2005' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
+            DATE_START => '2005-02-08',
+            DATE_END => '2005-02-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-02-10',
+            DATE_END => '2005-02-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-02-11',
+            DATE_END => '2005-02-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-02-12',
+            DATE_END => '2005-02-12'
+          },
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Qualifying',
+            major => 'ROUND|MATCH',
+            DATE_START => '2006-02-07',
+            DATE_END => '2006-02-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-02-09',
+            DATE_END => '2006-02-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-02-10',
+            DATE_END => '2006-02-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-02-11',
+            DATE_END => '2006-02-11'
+          },
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            MOVEMENT => 'Round-robin',
+            major => 'MATCH',
+            DATE_START => '2007-02-08',
+            DATE_END => '2007-02-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-02-09',
+            DATE_END => '2007-02-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-02-10',
+            DATE_END => '2007-02-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-02-11',
+            DATE_END => '2007-02-11'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            MOVEMENT => 'Round-robin',
+            major => 'MATCH',
+            DATE_START => '2008-02-07',
+            DATE_END => '2008-02-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-02-08',
+            DATE_END => '2008-02-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-02-09',
+            DATE_END => '2008-02-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-02-10',
+            DATE_END => '2008-02-10'
+          },
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Qualifying',
+            major => 'MATCH',
+            DATE_START => '2009-02-12',
+            DATE_END => '2009-02-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-02-12',
+            DATE_END => '2009-02-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-02-13',
+            DATE_END => '2009-02-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-02-13',
+            DATE_END => '2009-02-14'
+          },
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Qualifying',
+            major => 'MATCH',
+            DATE_START => '2010-02-08',
+            DATE_END => '2010-02-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-02-11',
+            DATE_END => '2010-02-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-02-12',
+            DATE_END => '2010-02-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-02-12',
+            DATE_END => '2010-02-13'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Qualifying',
+            major => 'MATCH',
+            DATE_START => '2011-02-07',
+            DATE_END => '2011-02-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-02-10',
+            DATE_END => '2011-02-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-02-11',
+            DATE_END => '2011-02-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-02-11',
+            DATE_END => '2011-02-12'
+          },
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2012-02-06',
+            DATE_END => '2012-02-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-09',
+            DATE_END => '2012-02-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-10',
+            DATE_END => '2012-02-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-10',
+            DATE_END => '2012-02-11'
+          },
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2013-04-16',
+            DATE_END => '2013-04-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-04-19',
+            DATE_END => '2013-04-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-04-19',
+            DATE_END => '2013-04-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-04-20',
+            DATE_END => '2013-04-20'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2014-02-11',
+            DATE_END => '2014-02-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-02-14',
+            DATE_END => '2014-02-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-02-14',
+            DATE_END => '2014-02-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-02-15',
+            DATE_END => '2014-02-15'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2015-02-10',
+            DATE_END => '2015-02-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-13',
+            DATE_END => '2015-02-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-13',
+            DATE_END => '2015-02-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-14',
+            DATE_END => '2015-02-14'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        SPONSOR => 'NEC',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2017-02-07',
+            DATE_END => '2017-02-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-10',
+            DATE_END => '2017-02-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-10',
+            DATE_END => '2017-02-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-11',
+            DATE_END => '2017-02-11'
+          },
+        }
+      },
       '2019' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORDINAL => 22,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-02-19',
+            DATE_END => '2019-02-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-02-22',
+            DATE_END => '2019-02-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-02-22',
+            DATE_END => '2019-02-22'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-02-23',
             DATE_END => '2019-02-23'
           },
         }
       },
     }
   },
+
 );
 
 

@@ -19,7 +19,6 @@ my @MULTI_WORDS =
   'Japanese Open Trials',
   'Kanto Teams',
   'Kyoto University Teams',
-  'NEC Cup',
   'Prince Takamatsu Cup',
   'Yokohama Cup'
 );
@@ -32,15 +31,16 @@ my %MULTI_TYPOS =
     'japan spring intercollegiate championships',
     'japan spring youngster match',
     'summer japan intercollege championships'],
-  'Kyoto University Teams' => [
-    'kubc trial'],
   'Japanese Open Trials' => ['japanese open team trial',
     'japanese open team trials'],
-  'NEC Cup' => [
-    'nec cup bridge festival'],
+  'Kyoto University Teams' => [
+    'kubc trial'],
   'Prince Takamatsu Cup' => [
     'prince takamatsu memorial cup',
     'takamatsu cup'],
+  'Yokohama Cup' => [
+    'nec cup',
+    'nec cup bridge festival'],
 );
 
 my %SINGLE_TYPOS =
