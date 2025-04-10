@@ -313,9 +313,19 @@ my %TOURNAMENTS_CHILE =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-12-27',
+            DATE_END => '2016-12-27'
+          },
+          'C1' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-12-27',
             DATE_END => '2016-12-27'
           },
@@ -342,6 +352,7 @@ my %TOURNAMENTS_CHILE =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
             DATE_START => '2024-03-10',
             DATE_END => '2024-03-11'
           },
@@ -417,6 +428,8 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-03-03',
             DATE_END => '2018-03-05'
           },
@@ -495,6 +508,8 @@ my %TOURNAMENTS_CHILE =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-03-12',
             DATE_END => '2017-03-13'
           },
@@ -508,6 +523,8 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-12-09',
             DATE_END => '2018-12-09'
           },
@@ -521,6 +538,8 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-12-05',
             DATE_END => '2022-12-05'
           },
@@ -534,7 +553,17 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-03-01',
+            DATE_END => '2024-03-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-03',
             DATE_END => '2024-03-04'
           },
         }
@@ -582,6 +611,8 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-12-08',
             DATE_END => '2017-12-10'
           },
@@ -608,6 +639,8 @@ my %TOURNAMENTS_CHILE =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-03-05',
             DATE_END => '2017-03-06'
           },
@@ -699,6 +732,8 @@ my %TOURNAMENTS_CHILE =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-12-17',
             DATE_END => '2023-12-18'
           },
@@ -761,9 +796,19 @@ my %TOURNAMENTS_CHILE =
         # https://bridgevitacura.cl/resultados/2022-11-20.htm
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-20',
+            DATE_END => '2022-11-20'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-11-20',
             DATE_END => '2022-11-21'
           },
@@ -774,10 +819,20 @@ my %TOURNAMENTS_CHILE =
         # https://bridgevitacura.cl/resultados/2023-11-12f.htm
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-11-12',
+            DATE_END => '2023-11-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-13',
             DATE_END => '2023-11-13'
           },
         }
@@ -787,9 +842,17 @@ my %TOURNAMENTS_CHILE =
         # https://bridgevitacura.cl/resultados/2024-11-24f.htm
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            DATE_START => '2024-11-24',
+            DATE_END => '2024-11-24'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
             DATE_START => '2024-11-24',
             DATE_END => '2024-11-25'
           },
@@ -818,6 +881,8 @@ my %TOURNAMENTS_CHILE =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-11-12',
             DATE_END => '2023-11-13'
           },

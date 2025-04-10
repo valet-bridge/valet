@@ -38,6 +38,8 @@ my %TOURNAMENTS_COLOMBIA =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-07-01',
             DATE_END => '2018-07-01'
           } 
@@ -50,6 +52,8 @@ my %TOURNAMENTS_COLOMBIA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-09-29',
             DATE_END => '2019-09-29'
           } 

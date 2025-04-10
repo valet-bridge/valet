@@ -506,10 +506,20 @@ my %TOURNAMENTS_HUNGARY =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2019-05-18',
+            DATE_END => '2019-05-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-19',
             DATE_END => '2019-05-19'
           }
         }
@@ -750,6 +760,9 @@ my %TOURNAMENTS_HUNGARY =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-03-04',
             DATE_END => '2017-03-05'
           } 
@@ -762,6 +775,9 @@ my %TOURNAMENTS_HUNGARY =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-05-13',
             DATE_END => '2018-05-13'
           } 
@@ -838,6 +854,8 @@ my %TOURNAMENTS_HUNGARY =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-12-09',
             DATE_END => '2017-12-10'
           },
@@ -850,6 +868,8 @@ my %TOURNAMENTS_HUNGARY =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-02-03',
             DATE_END => '2018-02-04'
           },
@@ -890,6 +910,7 @@ my %TOURNAMENTS_HUNGARY =
           'SINGLE' =>
           {
             YEAR => 2016,
+            major => 'SEGMENT',
             DATE_START => '2016-12-16',
             DATE_END => '2016-12-16'
           },

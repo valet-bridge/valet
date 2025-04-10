@@ -553,7 +553,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2016,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2016-10-04',
             DATE_END => '2016-10-05'
           } 
@@ -595,7 +595,8 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2019,
-            major => 'ROUND',
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2019-10-04',
             DATE_END => '2019-10-05'
           } 
@@ -649,6 +650,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'SESSION',
             DATE_START => '2019-11-15',
             DATE_END => '2019-11-16'
           }
@@ -923,7 +925,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2016,
             MOVEMENT => 'Swiss',
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2016-11-11',
             DATE_END => '2016-11-13'
           } 
@@ -939,6 +941,7 @@ my %TOURNAMENTS_PORTUGAL =
             YEAR => 2017,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2017-11-10',
             DATE_END => '2017-11-12'
           } 
@@ -1014,6 +1017,7 @@ my %TOURNAMENTS_PORTUGAL =
             YEAR => 2022,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2022-11-11',
             DATE_END => '2022-11-13'
           } 
@@ -1070,6 +1074,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-05-26',
             DATE_END => '2017-05-28'
           },
@@ -1285,6 +1290,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-05-08',
             DATE_END => '2018-05-10'
           } 
@@ -1298,6 +1304,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-05-07',
             DATE_END => '2019-05-09'
           } 
@@ -1351,6 +1358,8 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-10-15',
             DATE_END => '2017-10-15'
           },
@@ -1374,10 +1383,20 @@ my %TOURNAMENTS_PORTUGAL =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-11-16',
+            DATE_END => '2018-11-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-17',
             DATE_END => '2018-11-19'
           },
         }
@@ -1389,6 +1408,8 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-01-11',
             DATE_END => '2020-01-13'
           },
@@ -1401,6 +1422,8 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-10-21',
             DATE_END => '2023-10-22'
           },
@@ -1707,6 +1730,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2016,
             STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2016-10-14',
             DATE_END => '2016-10-15'
           },
@@ -1735,6 +1759,7 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-05-19',
             DATE_END => '2017-05-21'
           },
@@ -1747,7 +1772,25 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2017-09-22',
+            DATE_END => '2017-09-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-23',
+            DATE_END => '2017-09-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-24',
             DATE_END => '2017-09-24'
           },
         }
@@ -1759,6 +1802,7 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-06-01',
             DATE_END => '2018-06-03'
           },
@@ -1771,7 +1815,25 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2018-10-12',
+            DATE_END => '2018-10-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-13',
+            DATE_END => '2018-10-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-14',
             DATE_END => '2018-10-14'
           },
         }
@@ -1783,7 +1845,25 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-10-19',
+            DATE_END => '2019-10-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-20',
+            DATE_END => '2019-10-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-02',
             DATE_END => '2019-11-03'
           },
         }
@@ -1795,7 +1875,25 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2021,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2021-11-13',
+            DATE_END => '2021-11-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2021-11-14',
+            DATE_END => '2021-11-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-11-20',
             DATE_END => '2021-11-21'
           },
         }
@@ -1807,6 +1905,8 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-05-27',
             DATE_END => '2023-05-28'
           },
@@ -1819,6 +1919,8 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-06-15',
             DATE_END => '2024-06-16'
           },
@@ -1939,12 +2041,16 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-10-12',
             DATE_END => '2019-10-14'
           },
           'C1' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-12-21',
             DATE_END => '2019-12-22'
           },
@@ -1957,18 +2063,22 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-10-07',
             DATE_END => '2023-10-08'
           },
           'C1' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-10-14',
             DATE_END => '2023-10-15'
           }
-        }
-      },
-    }
+        },
+      }
+    },
   },
 
   'Portuguese Northern Regional Open Teams',
@@ -2046,6 +2156,8 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-02-22',
             DATE_END => '2020-02-23'
           },
@@ -2156,6 +2268,16 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-09-19',
+            DATE_END => '2015-09-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2015-09-19',
             DATE_END => '2015-09-19'
           } 
@@ -2169,6 +2291,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2016-12-10',
             DATE_END => '2016-12-10'
           },
@@ -2176,6 +2299,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2016,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-12-10',
             DATE_END => '2016-12-10'
           } 
@@ -2188,6 +2312,16 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-09-30',
+            DATE_END => '2017-09-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-09-30',
             DATE_END => '2017-09-30'
           } 
