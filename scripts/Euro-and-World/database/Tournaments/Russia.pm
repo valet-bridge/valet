@@ -1115,6 +1115,21 @@ my %TOURNAMENTS_RUSSIA =
           } 
         }
       },
+      '2018' =>
+      {
+        ORDINAL => 16,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            ignore => 'TABLE',
+            DATE_START => '2018-03-02',
+            DATE_END => '2018-03-04'
+          },
+        }
+      },
     }
   },
 
@@ -1142,21 +1157,6 @@ my %TOURNAMENTS_RUSSIA =
             ignore => 'TABLE',
             DATE_START => '2017-02-24',
             DATE_END => '2017-02-26'
-          },
-        }
-      },
-      '2018' =>
-      {
-        ORDINAL => 16,
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2018,
-            major => 'ROUND',
-            ignore => 'TABLE',
-            DATE_START => '2018-03-02',
-            DATE_END => '2018-03-04'
           },
         }
       },

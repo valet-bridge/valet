@@ -1514,6 +1514,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2015,
+            STAGE => 'Final',
             DATE_START => '2015-04-24',
             DATE_END => '2015-04-26'
           },

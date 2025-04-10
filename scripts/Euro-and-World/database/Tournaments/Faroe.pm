@@ -104,6 +104,7 @@ my %TOURNAMENTS_FAROE =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2019-03-08',
             DATE_END => '2019-03-09'
           },
@@ -117,6 +118,7 @@ my %TOURNAMENTS_FAROE =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'SESSION|SECTION',
             DATE_START => '2020-03-06',
             DATE_END => '2020-03-07'
           },
@@ -130,6 +132,7 @@ my %TOURNAMENTS_FAROE =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2022-03-11',
             DATE_END => '2022-03-12'
           },

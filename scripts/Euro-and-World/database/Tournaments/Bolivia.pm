@@ -147,6 +147,8 @@ my %TOURNAMENTS_BOLIVIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-11-15',
             DATE_END => '2019-11-15'
           },
@@ -159,6 +161,16 @@ my %TOURNAMENTS_BOLIVIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-29',
+            DATE_END => '2023-09-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-09-29',
             DATE_END => '2023-09-29'
           },
@@ -185,6 +197,8 @@ my %TOURNAMENTS_BOLIVIA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-09-29',
             DATE_END => '2023-09-30'
           },

@@ -84,7 +84,7 @@ my %MEETS_GERMANY =
       },
       '2021' => 
       {
-        MEET_YEAR => 2021,
+        YEAR => 2021,
         DATE_START => '2021-08-14',
         DATE_END => '2021-08-22'
       },
@@ -953,7 +953,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_END => '2020-01-12',
             WEEKEND => 1,
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|SESSION',
             MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
@@ -962,7 +962,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_END => '2020-02-23',
             WEEKEND => 2,
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|SESSION',
             MOVEMENT => 'Round-robin'
           },
           'WEEKEND 3' =>
@@ -971,7 +971,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_END => '2021-10-10',
             WEEKEND => 3,
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|SESSION',
             MOVEMENT => 'Round-robin'
           } 
         }
@@ -992,7 +992,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_END => '2022-05-29',
             WEEKEND => 1,
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|SESSION',
             MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
@@ -1001,7 +1001,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_END => '2022-09-11',
             WEEKEND => 2,
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|SESSION',
             MOVEMENT => 'Round-robin'
           } 
         }
@@ -1357,15 +1357,15 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2016-11-19',
-            DATE_END => '2016-11-20'
+            DATE_END => '2016-11-19'
           },
           'C1' => 
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2016-11-19',
             DATE_END => '2016-11-20'
           } 
@@ -2384,6 +2384,7 @@ my %TOURNAMENTS_GERMANY =
             STAGE => 'Qualifying',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-04-29',
             DATE_END => '2023-04-30'
           },
@@ -2393,6 +2394,7 @@ my %TOURNAMENTS_GERMANY =
             STAGE => 'Final',
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-04-30',
             DATE_END => '2023-05-01'
           } 
@@ -2420,7 +2422,7 @@ my %TOURNAMENTS_GERMANY =
             YEAR => 2024,
             STAGE => 'Final',
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-04-13',
             DATE_END => '2024-04-14'
           } 

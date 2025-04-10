@@ -240,7 +240,7 @@ my %TOURNAMENTS_BELGIUM =
           {
             YEAR => 2019,
             STAGE => 'Final',
-            major => 'SEGMENT|SESSION',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-01-27',
             DATE_END => '2019-01-27'
           } 
