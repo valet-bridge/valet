@@ -1420,7 +1420,33 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-03-28',
+            DATE_END => '2022-04-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-04',
+            DATE_END => '2022-04-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-06',
+            DATE_END => '2022-04-08'
+          },
+          'C9' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-08',
             DATE_END => '2022-04-09'
           },
         }
@@ -1433,7 +1459,41 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-08-20',
+            DATE_END => '2023-08-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-28',
+            DATE_END => '2023-08-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-30',
+            DATE_END => '2023-08-31'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-01',
+            DATE_END => '2023-09-02'
+          },
+          'C4' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-01',
             DATE_END => '2023-09-02'
           },
         }
@@ -1705,7 +1765,41 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-08-09',
+            DATE_END => '2018-08-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-15',
+            DATE_END => '2018-08-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-16',
+            DATE_END => '2018-08-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-17',
+            DATE_END => '2018-08-18'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-17',
             DATE_END => '2018-08-18'
           },
         }
@@ -1718,8 +1812,34 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-07-31',
-            DATE_END => '2023-08-07'
+            DATE_END => '2023-08-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-05',
+            DATE_END => '2023-08-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-06',
+            DATE_END => '2023-08-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-06',
+            DATE_END => '2023-08-06'
           },
         }
       },
@@ -2029,6 +2149,54 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-08-13',
+            DATE_END => '2017-08-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-20',
+            DATE_END => '2017-08-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-22',
+            DATE_END => '2017-08-23'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-24',
+            DATE_END => '2017-08-26'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2017-08-24',
+            DATE_END => '2017-08-25'
+          } 
+        }
+      },
       '2019' =>
       {
         MEET => 'World Team Championships',
@@ -2037,9 +2205,44 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-09-15',
+            DATE_END => '2019-09-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-23',
+            DATE_END => '2019-09-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-25',
+            DATE_END => '2019-09-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-27',
             DATE_END => '2019-09-28'
           },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2019-09-27',
+            DATE_END => '2019-09-28'
+          } 
         }
       },
       '2022' =>
@@ -2050,7 +2253,33 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-03-28',
+            DATE_END => '2022-04-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-04',
+            DATE_END => '2022-04-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-06',
+            DATE_END => '2022-04-08'
+          },
+          'C9' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-08',
             DATE_END => '2022-04-09'
           },
         }
@@ -2063,7 +2292,33 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-08-20',
+            DATE_END => '2023-08-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-28',
+            DATE_END => '2023-08-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-30',
+            DATE_END => '2023-08-31'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-01',
             DATE_END => '2023-09-02'
           },
         }
@@ -2197,6 +2452,8 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2017-12-09',
             DATE_END => '2017-12-15'
           },
@@ -2237,6 +2494,8 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2017-12-09',
             DATE_END => '2017-12-15'
           },
@@ -2250,6 +2509,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2019-05-17',
             DATE_END => '2019-05-18'
           },
@@ -2298,8 +2559,26 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-12-09',
-            DATE_END => '2017-12-15'
+            DATE_END => '2017-12-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-11',
+            DATE_END => '2017-12-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-11',
+            DATE_END => '2017-12-11'
           },
         }
       },
@@ -2387,7 +2666,9 @@ my %TOURNAMENTS_WORLD =
         {
           'C0' => 
           {
-            DATE_START => '2017-12-09',
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2017-12-12',
             DATE_END => '2017-12-15'
           },
         }
@@ -2400,6 +2681,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2019-05-17',
             DATE_END => '2019-05-18'
           },
@@ -2499,6 +2782,8 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-10-18',
             DATE_END => '2017-10-21'
           },
@@ -2513,8 +2798,26 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-12-09',
-            DATE_END => '2017-12-15'
+            DATE_END => '2017-12-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-11',
+            DATE_END => '2017-12-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-11',
+            DATE_END => '2017-12-11'
           },
         }
       },
@@ -2683,11 +2986,29 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
-            DATE_START => '2018-09-23',
-            DATE_END => '2018-10-06'
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-25',
+            DATE_END => '2018-09-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-27',
+            DATE_END => '2018-09-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-29',
+            DATE_END => '2018-09-30'
           },
         }
       },
@@ -3367,11 +3688,61 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2018-09-22',
-            DATE_END => '2018-10-06'
+            DATE_END => '2018-09-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof64',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-09-24',
+            DATE_END => '2018-09-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-09-25',
+            DATE_END => '2018-09-25'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-26',
+            DATE_END => '2018-09-26'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-27',
+            DATE_END => '2018-09-27'
+          },
+          'C5' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-28',
+            DATE_END => '2018-09-28'
+          },
+          'C6' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-29',
+            DATE_END => '2018-09-30'
           },
         }
       },
@@ -3808,9 +4179,44 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-08-13',
-            DATE_END => '2017-08-25'
+            DATE_END => '2017-08-19'
           },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-20',
+            DATE_END => '2017-08-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-22',
+            DATE_END => '2017-08-23'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-24',
+            DATE_END => '2017-08-26'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2017-08-24',
+            DATE_END => '2017-08-25'
+          } 
         }
       },
       '2019' =>
@@ -3821,9 +4227,44 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-09-15',
+            DATE_END => '2019-09-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-23',
+            DATE_END => '2019-09-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-25',
+            DATE_END => '2019-09-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-27',
             DATE_END => '2019-09-28'
           },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2019-09-27',
+            DATE_END => '2019-09-28'
+          } 
         }
       },
       '2022' =>
@@ -3834,7 +4275,33 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-03-28',
+            DATE_END => '2022-04-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-04',
+            DATE_END => '2022-04-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-06',
+            DATE_END => '2022-04-08'
+          },
+          'C9' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-08',
             DATE_END => '2022-04-09'
           },
         }
@@ -3847,60 +4314,34 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-08-20',
+            DATE_END => '2023-08-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-28',
+            DATE_END => '2023-08-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-30',
+            DATE_END => '2023-08-31'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-01',
             DATE_END => '2023-09-02'
-          },
-        }
-      },
-    }
-  },
-
-  'WBG Open Pairs' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          },
-        }
-      },
-    }
-  },
-
-  'WBG Women Pairs' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
           },
         }
       },
@@ -3939,6 +4380,9 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'GROUP',
             DATE_START => '2023-09-30',
             DATE_END => '2023-10-01'
           },
@@ -3953,6 +4397,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2024-09-06',
             DATE_END => '2024-09-09'
           },
@@ -3974,28 +4420,66 @@ my %TOURNAMENTS_WORLD =
       '2022A' =>
       {
         MEET => 'World Bridge Tour',
-        MEET_TAG => '2022H',
+        MEET_TAG => '2022D',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
-            DATE_START => '2022-10-10',
-            DATE_END => '2022-10-14'
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2022-05-30',
+            DATE_END => '2022-06-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-06-03',
+            DATE_END => '2022-06-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-06-03',
+            DATE_END => '2022-06-03'
           },
         }
       },
       '2022B' =>
       {
         MEET => 'World Bridge Tour',
-        MEET_TAG => '2022D',
+        MEET_TAG => '2022H',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
-            DATE_START => '2022-05-30',
-            DATE_END => '2022-06-03'
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2022-10-10',
+            DATE_END => '2022-10-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-14',
+            DATE_END => '2022-10-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-14',
+            DATE_END => '2022-10-14'
           },
         }
       },
@@ -4005,10 +4489,29 @@ my %TOURNAMENTS_WORLD =
         MEET_TAG => '2023C',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-05-15',
+            DATE_END => '2023-05-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-19',
+            DATE_END => '2023-05-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-19',
             DATE_END => '2023-05-19'
           },
         }
@@ -4019,10 +4522,28 @@ my %TOURNAMENTS_WORLD =
         MEET_TAG => '2023E',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2023-10-16',
+            DATE_END => '2023-10-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-10-20',
+            DATE_END => '2023-10-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-10-20',
             DATE_END => '2023-10-20'
           },
         }
@@ -4033,10 +4554,20 @@ my %TOURNAMENTS_WORLD =
         MEET_TAG => '2024A',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-01-22',
+            DATE_END => '2024-01-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-25',
             DATE_END => '2024-01-25'
           },
         }
@@ -4050,6 +4581,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-05-20',
             DATE_END => '2024-05-23'
           },
@@ -4061,37 +4593,30 @@ my %TOURNAMENTS_WORLD =
         MEET_TAG => '2024D',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2024-10-07',
+            DATE_END => '2024-10-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            ignore => 'TABLE',
+            DATE_START => '2024-10-11',
             DATE_END => '2024-10-11'
           },
-        }
-      },
-    }
-  },
-
-  'WBT Open U31 Pairs' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' =>
+          'C2' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-11',
+            DATE_END => '2024-10-11'
           },
         }
       },
@@ -4143,9 +4668,19 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Youth Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-14',
+            DATE_END => '2018-08-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-08-14',
             DATE_END => '2018-08-15'
           } 
@@ -4237,6 +4772,9 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2018-10-05',
             DATE_END => '2018-10-06'
           },
@@ -4250,6 +4788,9 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2022-08-31',
             DATE_END => '2022-09-03'
           },
@@ -4332,14 +4873,127 @@ my %TOURNAMENTS_WORLD =
           },
         }
       },
+      '2016' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-09-04',
+            DATE_END => '2016-09-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-10',
+            DATE_END => '2016-09-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-12',
+            DATE_END => '2016-09-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-14',
+            DATE_END => '2016-09-15'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-16',
+            DATE_END => '2016-09-16'
+          },
+          'C5' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-16',
+            DATE_END => '2016-09-17'
+          },
+        }
+      },
       '2018' =>
       {
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2018-10-01',
+            DATE_END => '2018-10-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof64',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-10-03',
+            DATE_END => '2018-10-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-10-03',
+            DATE_END => '2018-10-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-10-04',
+            DATE_END => '2018-10-04'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-04',
+            DATE_END => '2018-10-04'
+          },
+          'C5' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-05',
+            DATE_END => '2018-10-05'
+          },
+          'C6' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-06',
+            DATE_END => '2018-10-06'
+          },
+          'C7' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-10-06',
             DATE_END => '2018-10-06'
           },
@@ -4350,10 +5004,52 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2022-08-28',
+            DATE_END => '2022-08-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-30',
+            DATE_END => '2022-08-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-30',
+            DATE_END => '2022-08-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-31',
+            DATE_END => '2022-08-31'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-01',
+            DATE_END => '2022-09-01'
+          },
+          'C5' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-02',
             DATE_END => '2022-09-03'
           },
         }
@@ -4424,10 +5120,28 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
-            DATE_START => '2016-09-17',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2016-09-11',
+            DATE_END => '2016-09-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2016-09-14',
+            DATE_END => '2016-09-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2016-09-16',
             DATE_END => '2016-09-17'
           },
         }
@@ -4440,6 +5154,9 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2018-09-29',
             DATE_END => '2018-09-30'
           },
@@ -4453,6 +5170,9 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2022-08-26',
             DATE_END => '2022-08-27'
           },
@@ -4476,10 +5196,52 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-09-04',
+            DATE_END => '2016-09-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-10',
+            DATE_END => '2016-09-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-12',
+            DATE_END => '2016-09-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-14',
+            DATE_END => '2016-09-15'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-16',
+            DATE_END => '2016-09-16'
+          },
+          'C5' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-16',
             DATE_END => '2016-09-17'
           },
         }
@@ -4489,10 +5251,52 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2022-08-20',
+            DATE_END => '2022-08-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-22',
+            DATE_END => '2022-08-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-23',
+            DATE_END => '2022-08-23'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-24',
+            DATE_END => '2022-08-24'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-25',
+            DATE_END => '2022-08-25'
+          },
+          'C5' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-26',
             DATE_END => '2022-08-27'
           },
         }
@@ -4502,10 +5306,44 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-10-22',
+            DATE_END => '2024-10-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-28',
+            DATE_END => '2024-10-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-29',
+            DATE_END => '2024-10-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-31',
+            DATE_END => '2024-11-01'
+          },
+          'C4' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-02',
             DATE_END => '2024-11-03'
           },
         }
@@ -4652,6 +5490,35 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2012-08-22',
             DATE_END => '2012-08-23'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Transnational Junior Teams' => 
+  {
+    ORIGIN => 'Transnational',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2024-07-15',
+            DATE_END => '2024-07-15'
           } 
         }
       },
@@ -4881,10 +5748,36 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Team Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2017-08-24',
+            DATE_END => '2017-08-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-25',
+            DATE_END => '2017-08-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-26',
+            DATE_END => '2017-08-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2017-08-26',
             DATE_END => '2017-08-26'
           } 
         }
@@ -4894,12 +5787,38 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Team Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-09-27',
+            DATE_END => '2019-09-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-27',
+            DATE_END => '2019-09-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-28',
             DATE_END => '2019-09-28'
-          } 
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-28',
+            DATE_END => '2019-09-28'
+          },
         }
       },
     }
@@ -4923,6 +5842,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-08-27',
             DATE_END => '2019-08-27'
           } 
@@ -4936,6 +5857,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-08-13',
             DATE_END => '2022-08-13'
           } 
@@ -4949,6 +5872,9 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-07-15',
             DATE_END => '2024-07-15'
           } 
@@ -4991,7 +5917,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'SESSION|ROUND',
             DATE_START => '2015-08-21',
             DATE_END => '2015-08-23'
           } 
@@ -5005,6 +5931,8 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SESSION|ROUND',
             DATE_START => '2024-07-18',
             DATE_END => '2024-07-18'
           },
@@ -5062,7 +5990,17 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-08-22',
+            DATE_END => '2017-08-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-23',
             DATE_END => '2017-08-23'
           },
         }
@@ -5176,8 +6114,10 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2017-08-18',
-            DATE_END => '2017-08-23'
+            DATE_END => '2017-08-18'
           } 
         }
       },
@@ -5189,6 +6129,9 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2019-08-23',
             DATE_END => '2019-08-24'
           } 
@@ -5202,7 +6145,10 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2022,
-            DATE_START => '2022-08-08',
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
+            DATE_START => '2022-08-10',
             DATE_END => '2022-08-10'
           },
         }
@@ -5215,8 +6161,10 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
             DATE_START => '2024-07-16',
-            DATE_END => '2024-07-18'
+            DATE_END => '2024-07-17'
           },
         }
       },
@@ -5424,7 +6372,33 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-08-18',
+            DATE_END => '2017-08-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-21',
+            DATE_END => '2017-08-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-22',
+            DATE_END => '2017-08-22'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-23',
             DATE_END => '2017-08-23'
           },
         }
@@ -5437,8 +6411,26 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2019-08-24',
-            DATE_END => '2019-08-27'
+            DATE_END => '2019-08-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-25',
+            DATE_END => '2019-08-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-26',
+            DATE_END => '2019-08-26'
           },
         }
       },
@@ -5450,8 +6442,26 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2022-08-11',
-            DATE_END => '2022-08-13'
+            DATE_END => '2022-08-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-12',
+            DATE_END => '2022-08-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-12',
+            DATE_END => '2022-08-12'
           },
         }
       },
@@ -5463,8 +6473,18 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2024-07-13',
-            DATE_END => '2024-07-18'
+            DATE_END => '2024-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-07-15',
+            DATE_END => '2024-07-15'
           },
         }
       },
@@ -5517,6 +6537,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
             DATE_START => '2022-08-08',
             DATE_END => '2022-08-09'
           } 
@@ -5527,10 +6549,20 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Youth Open Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
             DATE_START => '2024-07-16',
+            DATE_END => '2024-07-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2024-07-18',
             DATE_END => '2024-07-18'
           } 
         }
@@ -5556,6 +6588,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-08-08',
             DATE_END => '2022-08-13'
           } 
@@ -5570,8 +6604,19 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2024-07-13',
-            DATE_END => '2024-07-18'
+            DATE_END => '2024-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2024-07-15',
+            DATE_END => '2024-07-15'
           },
         }
       },
@@ -5955,7 +7000,17 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-08-22',
+            DATE_END => '2017-08-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-23',
             DATE_END => '2017-08-23'
           },
         }
@@ -5968,7 +7023,17 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-08-24',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-26',
+            DATE_END => '2019-08-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-27',
             DATE_END => '2019-08-27'
           },
         }
@@ -5981,7 +7046,17 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2022-08-12',
+            DATE_END => '2022-08-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-13',
             DATE_END => '2022-08-13'
           },
         }
@@ -5994,8 +7069,19 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2024-07-13',
-            DATE_END => '2024-07-18'
+            DATE_END => '2024-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'SEGMENT',
+            DATE_START => '2024-07-15',
+            DATE_END => '2024-07-15'
           },
         }
       },
@@ -6064,6 +7150,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2017-08-24',
             DATE_END => '2017-08-24'
           } 
@@ -6090,6 +7178,9 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2022-09-03',
             DATE_END => '2022-09-03'
           },
@@ -6113,23 +7204,84 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-09-04',
+            DATE_END => '2016-09-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-10',
+            DATE_END => '2016-09-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-12',
+            DATE_END => '2016-09-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-14',
+            DATE_END => '2016-09-15'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-16',
+            DATE_END => '2016-09-16'
+          },
+          'C5' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-16',
             DATE_END => '2016-09-17'
           },
         }
       },
       '2018' =>
       {
+        
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
-            DATE_START => '2018-09-26',
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-25',
+            DATE_END => '2018-09-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-27',
+            DATE_END => '2018-09-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-29',
             DATE_END => '2018-09-30'
           },
         }
@@ -6139,10 +7291,20 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
-            DATE_START => '2022-08-28',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-31',
+            DATE_END => '2022-08-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-01',
             DATE_END => '2022-09-01'
           },
         }
@@ -6152,10 +7314,44 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-10-22',
+            DATE_END => '2024-10-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-28',
+            DATE_END => '2024-10-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-29',
+            DATE_END => '2024-10-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-31',
+            DATE_END => '2024-11-01'
+          },
+          'C4' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-02',
             DATE_END => '2024-11-03'
           },
         }
@@ -6204,10 +7400,36 @@ my %TOURNAMENTS_WORLD =
         ORIGIN => 'International',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-08-10',
+            DATE_END => '2018-08-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-15',
+            DATE_END => '2018-08-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-16',
+            DATE_END => '2018-08-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-17',
             DATE_END => '2018-08-18'
           },
         }
@@ -6218,10 +7440,36 @@ my %TOURNAMENTS_WORLD =
         ORIGIN => 'International',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-08-01',
+            DATE_END => '2023-08-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-05',
+            DATE_END => '2023-08-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-06',
+            DATE_END => '2023-08-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-07',
             DATE_END => '2023-08-07'
           },
         }
@@ -6235,6 +7483,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-07-13',
             DATE_END => '2024-07-13'
           },
@@ -6287,7 +7537,36 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-07-31',
+            DATE_END => '2023-08-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            groupon => 'AUTO',
+            DATE_START => '2023-08-05',
+            DATE_END => '2023-08-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            groupon => 'AUTO',
+            DATE_START => '2023-08-06',
+            DATE_END => '2023-08-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            groupon => 'AUTO',
+            DATE_START => '2023-08-07',
             DATE_END => '2023-08-07'
           },
         }
@@ -6402,6 +7681,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-10-25',
             DATE_END => '2018-10-28'
           } 
@@ -6412,12 +7693,30 @@ my %TOURNAMENTS_WORLD =
         MEET => 'FISU World University Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2020-10-29',
+            DATE_END => '2020-10-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-10-29',
+            DATE_END => '2020-10-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-10-30',
             DATE_END => '2020-10-30'
-          } 
+          },
         }
       },
       '2022' =>
@@ -6428,6 +7727,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND|MATCH',
             DATE_START => '2022-09-12',
             DATE_END => '2022-09-17'
           } 
@@ -6438,10 +7738,28 @@ my %TOURNAMENTS_WORLD =
         MEET => 'FISU World University Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND|MATCH',
             DATE_START => '2024-06-25',
+            DATE_END => '2024-06-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-06-29',
+            DATE_END => '2024-06-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-06-29',
             DATE_END => '2024-06-30'
           } 
         }
@@ -6464,10 +7782,28 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
-            DATE_START => '2016-09-04',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2016-09-11',
+            DATE_END => '2016-09-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2016-09-14',
+            DATE_END => '2016-09-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2016-09-16',
             DATE_END => '2016-09-17'
           },
         }
@@ -6490,10 +7826,52 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-09-04',
+            DATE_END => '2016-09-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-10',
+            DATE_END => '2016-09-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-12',
+            DATE_END => '2016-09-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-14',
+            DATE_END => '2016-09-15'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-16',
+            DATE_END => '2016-09-16'
+          },
+          'C5' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-16',
             DATE_END => '2016-09-17'
           },
         }
@@ -6503,11 +7881,29 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2022-08-20',
-            DATE_END => '2022-08-27'
+            DATE_END => '2022-08-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-23',
+            DATE_END => '2022-08-23'
+          },
+          'C5' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-24',
+            DATE_END => '2022-08-25'
           },
         }
       },
@@ -6516,10 +7912,44 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-10-22',
+            DATE_END => '2024-10-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-28',
+            DATE_END => '2024-10-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-29',
+            DATE_END => '2024-10-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-31',
+            DATE_END => '2024-11-01'
+          },
+          'C4' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-02',
             DATE_END => '2024-11-03'
           },
         }
@@ -6738,7 +8168,33 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-08-09',
+            DATE_END => '2018-08-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-15',
+            DATE_END => '2018-08-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-16',
+            DATE_END => '2018-08-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-17',
             DATE_END => '2018-08-18'
           },
         }
@@ -6751,7 +8207,33 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-07-31',
+            DATE_END => '2023-08-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-05',
+            DATE_END => '2023-08-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-06',
+            DATE_END => '2023-08-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-07',
             DATE_END => '2023-08-07'
           },
         }
@@ -7837,6 +9319,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' =>
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-08-18',
             DATE_END => '2019-08-18'
           },
@@ -7911,7 +9395,33 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-03-28',
+            DATE_END => '2022-04-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-04',
+            DATE_END => '2022-04-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-06',
+            DATE_END => '2022-04-08'
+          },
+          'C9' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-08',
             DATE_END => '2022-04-09'
           },
         }
@@ -7924,7 +9434,33 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-08-20',
+            DATE_END => '2023-08-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-28',
+            DATE_END => '2023-08-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-30',
+            DATE_END => '2023-08-31'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-01',
             DATE_END => '2023-09-02'
           },
         }
