@@ -160,7 +160,6 @@ my %MEETS_WORLD =
   'IMSA World Masters Championships' =>
   {
     %GLOBAL,
-    ORIGIN => 'Transnational',
 
     EDITIONS =>
     {
@@ -2504,6 +2503,7 @@ my %TOURNAMENTS_WORLD =
       '2019' =>
       {
         MEET => 'IMSA World Masters Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2554,6 +2554,7 @@ my %TOURNAMENTS_WORLD =
       '2017' =>
       {
         MEET => 'IMSA Elite Mind Games',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2585,6 +2586,7 @@ my %TOURNAMENTS_WORLD =
       '2019' =>
       {
         MEET => 'IMSA World Masters Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2676,6 +2678,7 @@ my %TOURNAMENTS_WORLD =
       '2019' =>
       {
         MEET => 'IMSA World Masters Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2777,6 +2780,7 @@ my %TOURNAMENTS_WORLD =
       {
         MEET => 'IMSA World Masters Championships',
         MEET_TAG => 2017,
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -2793,6 +2797,7 @@ my %TOURNAMENTS_WORLD =
       {
         MEET => 'IMSA Elite Mind Games',
         MEET_TAG => 2017,
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2824,6 +2829,7 @@ my %TOURNAMENTS_WORLD =
       '2019' =>
       {
         MEET => 'IMSA World Masters Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -4801,7 +4807,7 @@ my %TOURNAMENTS_WORLD =
 
   'World Mixed Teams' => 
   {
-    ORIGIN => 'Transnational',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -5183,7 +5189,7 @@ my %TOURNAMENTS_WORLD =
 
   'World Open Teams' => 
   {
-    ORIGIN => 'Transnational',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -7813,7 +7819,7 @@ my %TOURNAMENTS_WORLD =
 
   'World Women Teams' => 
   {
-    ORIGIN => 'Transnational',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -9304,7 +9310,7 @@ my %TOURNAMENTS_WORLD =
   'World Online Juniors Teams' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -9331,7 +9337,7 @@ my %TOURNAMENTS_WORLD =
 
   'Wuhan Cup' =>
   {
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
