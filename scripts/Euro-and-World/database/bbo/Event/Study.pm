@@ -352,7 +352,7 @@ my @LOCAL_SUBS_INTERPOL =
   { START => 72441, END => 72455, TEXT => '(\d+):14', CORR => '$1 of 14' },
   { START => 72865, END => 72875, TEXT => '^(\d+):(\d)$', 
     CORR => 'Match $1 Segment $2' },
-  { START => 73386, END => 73409, TEXT => '^Q(\d)', 
+  { START => 73378, END => 73409, TEXT => '^Q(\d)', 
     CORR => 'Quarter $1 of 4' },
   { START => 73670, END => 73677, TEXT => '^(\d+):([12])$', 
     CORR => 'Match $1 Segment $2' },
@@ -404,6 +404,8 @@ my @LOCAL_SUBS_INTERPOL =
   { START => 84872, END => 84882, TEXT => '^Final (\d)-3$', 
     CORR => 'Final - Segment $1 of 3' },
   { START => 85831, END => 85860, TEXT => '^Q(\d) of 4$', 
+    CORR => 'Quarter $1 of 4' },
+  { START => 85774, END => 85826, TEXT => '^Q(\d) of 4$', 
     CORR => 'Quarter $1 of 4' },
 );
 

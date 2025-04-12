@@ -560,7 +560,7 @@ my %MEETS_USA =
         YEAR => 2017,
         CITY => 'Toronto',
         DATE_START => '2017-07-19',
-        DATE_END => '2017-07-30'
+        DATE_END => '2017-07-31'
       },
       '2017C' =>
       {
@@ -584,7 +584,7 @@ my %MEETS_USA =
         YEAR => 2018,
         CITY => 'Atlanta',
         DATE_START => '2018-07-25',
-        DATE_END => '2018-08-05'
+        DATE_END => '2018-08-06'
       },
       '2018C' =>
       {
@@ -608,7 +608,7 @@ my %MEETS_USA =
         YEAR => 2019,
         CITY => 'Las Vegas',
         DATE_START => '2019-07-17',
-        DATE_END => '2019-07-28'
+        DATE_END => '2019-07-29'
       },
       '2019C' =>
       {
@@ -640,7 +640,7 @@ my %MEETS_USA =
         YEAR => 2022,
         CITY => 'Providence',
         DATE_START => '2022-07-13',
-        DATE_END => '2022-07-24'
+        DATE_END => '2022-07-25'
       },
       '2022C' =>
       {
@@ -688,7 +688,7 @@ my %MEETS_USA =
         YEAR => 2024,
         CITY => 'Toronto',
         DATE_START => '2024-07-17',
-        DATE_END => '2024-07-28'
+        DATE_END => '2024-07-29'
       },
       '2024C' =>
       {
@@ -1291,7 +1291,25 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'ROUND|MATCH',
             DATE_START => '2017-07-22',
+            DATE_END => '2017-07-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-23',
+            DATE_END => '2017-07-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-24',
             DATE_END => '2017-07-24'
           },
         }
@@ -1305,7 +1323,25 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-08-04',
+            DATE_END => '2018-08-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-05',
+            DATE_END => '2018-08-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-05',
             DATE_END => '2018-08-05'
           },
         }
@@ -1319,7 +1355,25 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2019-07-26',
+            DATE_END => '2019-07-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-27',
+            DATE_END => '2019-07-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-27',
             DATE_END => '2019-07-27'
           },
         }
@@ -1333,6 +1387,8 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'HALF',
             DATE_START => '2022-07-23',
             DATE_END => '2022-07-23'
           },
@@ -1347,6 +1403,8 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'HALF',
             DATE_START => '2023-07-22',
             DATE_END => '2023-07-22'
           },
@@ -1535,7 +1593,17 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-07-22',
+            DATE_END => '2017-07-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-23',
             DATE_END => '2017-07-24'
           },
         }
@@ -1549,7 +1617,25 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2018-07-27',
+            DATE_END => '2018-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-28',
+            DATE_END => '2018-07-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-29',
             DATE_END => '2018-07-30'
           },
         }
@@ -1563,7 +1649,25 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-07-19',
+            DATE_END => '2019-07-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-20',
+            DATE_END => '2019-07-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-21',
             DATE_END => '2019-07-22'
           },
         }
@@ -1577,7 +1681,25 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-07-15',
+            DATE_END => '2022-07-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-07-16',
+            DATE_END => '2022-07-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-07-17',
             DATE_END => '2022-07-17'
           },
         }
@@ -1591,7 +1713,17 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2023-07-15',
+            DATE_END => '2023-07-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2023-07-16',
             DATE_END => '2023-07-17'
           },
         }
@@ -1605,7 +1737,17 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2024-07-20',
+            DATE_END => '2024-07-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-07-21',
             DATE_END => '2024-07-22'
           },
         }
@@ -1978,7 +2120,26 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
             DATE_START => '2016-12-03',
+            DATE_END => '2016-12-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2016-12-04',
+            DATE_END => '2016-12-04'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND',
+            ignore => 'GROUP',
+            DATE_START => '2016-12-04',
             DATE_END => '2016-12-05'
           },
         }
@@ -1992,7 +2153,26 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
             DATE_START => '2017-12-02',
+            DATE_END => '2017-12-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2017-12-03',
+            DATE_END => '2017-12-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND',
+            ignore => 'GROUP|SESSION|TABLE',
+            DATE_START => '2017-12-03',
             DATE_END => '2017-12-04'
           },
         }
@@ -2006,7 +2186,26 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-12-01',
+            DATE_END => '2018-12-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2018-12-02',
+            DATE_END => '2018-12-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            ignore => 'GROUP|SESSION',
+            DATE_START => '2018-12-02',
             DATE_END => '2018-12-03'
           },
         }
@@ -2020,7 +2219,26 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-12-07',
+            DATE_END => '2019-12-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'ROUND|MATCH',
+            DATE_START => '2019-12-08',
+            DATE_END => '2019-12-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
+            ignore => 'GROUP|SESSION',
+            DATE_START => '2019-12-08',
             DATE_END => '2019-12-09'
           },
         }
@@ -2034,7 +2252,26 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2022-12-03',
+            DATE_END => '2022-12-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2022-12-04',
+            DATE_END => '2022-12-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            ignore => 'GROUP',
+            DATE_START => '2022-12-04',
             DATE_END => '2022-12-05'
           },
         }
@@ -2048,7 +2285,25 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
             DATE_START => '2023-12-02',
+            DATE_END => '2023-12-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2023-12-03',
+            DATE_END => '2023-12-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2023-12-03',
             DATE_END => '2023-12-04'
           },
         }
@@ -2062,7 +2317,25 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-12-07',
+            DATE_END => '2024-12-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2024-12-08',
+            DATE_END => '2024-12-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2024-12-08',
             DATE_END => '2024-12-09'
           },
         }
@@ -2085,11 +2358,53 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2019C',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
             DATE_START => '2019-12-01',
+            DATE_END => '2019-12-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-02',
+            DATE_END => '2019-12-03'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-03',
+            DATE_END => '2019-12-04'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-04',
+            DATE_END => '2019-12-05'
+          },
+          'C4' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-05',
             DATE_END => '2019-12-06'
+          },
+          'D0' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-02',
+            DATE_END => '2019-12-03'
           },
         }
       },
@@ -2099,10 +2414,36 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2021C',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2021,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2021-11-29',
+            DATE_END => '2021-11-30'
+          },
+          'C1' =>
+          {
+            YEAR => 2021,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2021-11-30',
+            DATE_END => '2021-12-01'
+          },
+          'C2' =>
+          {
+            YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2021-12-01',
+            DATE_END => '2021-12-02'
+          },
+          'C3' =>
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2021-12-02',
             DATE_END => '2021-12-03'
           },
         }
@@ -2113,10 +2454,44 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2022C',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2022-11-27',
+            DATE_END => '2022-11-28'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-11-28',
+            DATE_END => '2022-11-29'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-11-29',
+            DATE_END => '2022-11-30'
+          },
+          'C3' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-11-30',
+            DATE_END => '2022-12-01'
+          },
+          'C4' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-12-01',
             DATE_END => '2022-12-02'
           },
         }
@@ -2127,10 +2502,44 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2023C',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-11-26',
+            DATE_END => '2023-11-27'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-11-27',
+            DATE_END => '2023-11-28'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-28',
+            DATE_END => '2023-11-29'
+          },
+          'C3' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-29',
+            DATE_END => '2023-11-30'
+          },
+          'C4' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-30',
             DATE_END => '2023-12-01'
           },
         }
@@ -2141,10 +2550,44 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2024C',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2024-12-01',
+            DATE_END => '2024-12-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-12-02',
+            DATE_END => '2024-12-03'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-12-03',
+            DATE_END => '2024-12-04'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-12-04',
+            DATE_END => '2024-12-05'
+          },
+          'C4' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-12-05',
             DATE_END => '2024-12-06'
           },
         }
@@ -2937,8 +3380,50 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2017-07-25',
+            DATE_END => '2017-07-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-26',
+            DATE_END => '2017-07-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-27',
+            DATE_END => '2017-07-28'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-28',
+            DATE_END => '2017-07-29'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-29',
             DATE_END => '2017-07-30'
+          },
+          'C5' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-30',
+            DATE_END => '2017-07-31'
           },
         }
       },
@@ -2951,8 +3436,50 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2018-07-31',
+            DATE_END => '2018-08-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-01',
+            DATE_END => '2018-08-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-02',
+            DATE_END => '2018-08-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-03',
+            DATE_END => '2018-08-04'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-04',
             DATE_END => '2018-08-05'
+          },
+          'C5' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-05',
+            DATE_END => '2018-08-06'
           },
         }
       },
@@ -2965,8 +3492,50 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2019-07-23',
+            DATE_END => '2019-07-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-24',
+            DATE_END => '2019-07-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-25',
+            DATE_END => '2019-07-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-26',
+            DATE_END => '2019-07-27'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-27',
             DATE_END => '2019-07-28'
+          },
+          'C5' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-28',
+            DATE_END => '2019-07-29'
           },
         }
       },
@@ -2979,8 +3548,50 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Rof64',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2022-07-19',
+            DATE_END => '2022-07-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-07-20',
+            DATE_END => '2022-07-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-07-21',
+            DATE_END => '2022-07-22'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-07-22',
+            DATE_END => '2022-07-23'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-07-23',
             DATE_END => '2022-07-24'
+          },
+          'C5' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-07-24',
+            DATE_END => '2022-07-25'
           },
         }
       },
@@ -2993,7 +3604,49 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Rof64',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2023-07-18',
+            DATE_END => '2023-07-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2023-07-19',
+            DATE_END => '2023-07-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2023-07-20',
+            DATE_END => '2023-07-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2023-07-21',
+            DATE_END => '2023-07-22'
+          },
+          'C4' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2023-07-22',
+            DATE_END => '2023-07-23'
+          },
+          'C5' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2023-07-23',
             DATE_END => '2023-07-24'
           },
         }
@@ -3007,8 +3660,50 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Rof64',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2024-07-23',
+            DATE_END => '2024-07-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-07-24',
+            DATE_END => '2024-07-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-07-25',
+            DATE_END => '2024-07-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-07-26',
+            DATE_END => '2024-07-27'
+          },
+          'C4' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-07-27',
             DATE_END => '2024-07-28'
+          },
+          'C5' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-07-28',
+            DATE_END => '2024-07-29'
           },
         }
       },
@@ -3089,6 +3784,8 @@ my %TOURNAMENTS_USA =
         {
           'SINGLE' => 
           {
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-12-30',
             DATE_END => '2017-12-31'
           } 
@@ -3099,9 +3796,18 @@ my %TOURNAMENTS_USA =
         MEET => 'United States Youth Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
+            STAGE => 'Qualifying',
+            major => 'SEGMENT',
             DATE_START => '2019-12-27',
+            DATE_END => '2019-12-28'
+          },
+          'C1' => 
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-30',
             DATE_END => '2019-12-31'
           } 
         }
@@ -3246,9 +3952,39 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2017-18',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
-            DATE_START => '2017-12-27',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-28',
+            DATE_END => '2017-12-29'
+          },
+          'C1' => 
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-29',
+            DATE_END => '2017-12-30'
+          },
+          'C2' => 
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-29',
+            DATE_END => '2017-12-30'
+          },
+          'C3' => 
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-30',
+            DATE_END => '2017-12-31'
+          },
+          'C4' => 
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-01',
             DATE_END => '2018-01-01'
           } 
         }
@@ -3259,11 +3995,41 @@ my %TOURNAMENTS_USA =
         MEET => 'United States Youth Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
-            DATE_START => '2019-12-27',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-28',
+            DATE_END => '2019-12-29'
+          }, 
+          'C1' => 
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-29',
+            DATE_END => '2019-12-30'
+          }, 
+          'C2' => 
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-30',
+            DATE_END => '2019-12-30'
+          }, 
+          'C3' => 
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-30',
+            DATE_END => '2019-12-31'
+          }, 
+          'C4' => 
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-31',
             DATE_END => '2020-01-01'
-          } 
+          }, 
         }
       },
       '2024-25' =>
@@ -4101,12 +4867,62 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2017A',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2017-04-30',
+            DATE_END => '2017-05-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-02',
+            DATE_END => '2017-05-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-04',
+            DATE_END => '2017-05-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-06',
+            DATE_END => '2017-05-07'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-07',
+            DATE_END => '2017-05-08'
+          },
+          'C5' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-08',
             DATE_END => '2017-05-10'
-          } 
+          },
+          'C6' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-10',
+            DATE_END => '2017-05-10'
+          },
         }
       },
       '2018' =>
@@ -4115,10 +4931,36 @@ my %TOURNAMENTS_USA =
         MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
-            DATE_START => '2018-05-11',
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-13',
+            DATE_END => '2018-05-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-15',
+            DATE_END => '2018-05-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-17',
+            DATE_END => '2018-05-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-19',
             DATE_END => '2018-05-20'
           } 
         }
@@ -4130,12 +4972,38 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2019A',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-05-10',
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-12',
+            DATE_END => '2019-05-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-14',
+            DATE_END => '2019-05-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-16',
+            DATE_END => '2019-05-18'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-18',
             DATE_END => '2019-05-19'
-          } 
+          },
         }
       },
       '2021' =>
@@ -4262,7 +5130,33 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-05-24',
+            DATE_END => '2019-05-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-24',
+            DATE_END => '2019-05-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-26',
+            DATE_END => '2019-05-28'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-28',
             DATE_END => '2019-05-29'
           },
         }
@@ -4615,8 +5509,34 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2016-11-26',
-            DATE_END => '2016-12-01'
+            DATE_END => '2016-11-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-27',
+            DATE_END => '2016-11-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-28',
+            DATE_END => '2016-11-29'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-29',
+            DATE_END => '2016-11-30'
           },
         }
       },
@@ -4629,7 +5549,33 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2017-11-25',
+            DATE_END => '2017-11-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-26',
+            DATE_END => '2017-11-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-27',
+            DATE_END => '2017-11-28'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-28',
             DATE_END => '2017-11-29'
           },
         }
@@ -4643,8 +5589,26 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-25',
+            DATE_END => '2018-11-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2018-11-26',
             DATE_END => '2018-11-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-27',
+            DATE_END => '2018-11-28'
           },
         }
       },
@@ -5134,12 +6098,54 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2017C',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2017-05-18',
+            DATE_END => '2017-05-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-20',
+            DATE_END => '2017-05-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-21',
+            DATE_END => '2017-05-23'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-21',
+            DATE_END => '2017-05-23'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-23',
+            DATE_END => '2017-05-24'
+          },
+          'C5' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-24',
             DATE_END => '2017-05-26'
-          } 
+          },
         }
       },
       '2019' =>
@@ -5149,12 +6155,54 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2019C',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-05-31',
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-02',
+            DATE_END => '2019-06-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-03',
+            DATE_END => '2019-06-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-05',
+            DATE_END => '2019-06-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-05',
+            DATE_END => '2019-06-06'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-06',
+            DATE_END => '2019-06-07'
+          },
+          'C5' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-08',
             DATE_END => '2019-06-09'
-          } 
+          },
         }
       },
       '2021' =>
@@ -5222,8 +6270,11 @@ my %TOURNAMENTS_USA =
         {
           'SINGLE' => 
           {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-12-29',
-            DATE_END => '2018-01-01'
+            DATE_END => '2017-12-31'
           },
         }
       },
@@ -5233,9 +6284,20 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2019-20',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-12-29',
+            DATE_END => '2019-12-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-01',
             DATE_END => '2020-01-01'
           },
         }
@@ -5664,12 +6726,46 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2017B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2017-05-04',
-            DATE_END => '2017-05-11'
-          } 
+            DATE_END => '2017-05-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-05',
+            DATE_END => '2017-05-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-06',
+            DATE_END => '2017-05-07'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-07',
+            DATE_END => '2017-05-08'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-09',
+            DATE_END => '2017-05-10'
+          },
         }
       },
       '2019' =>
@@ -5679,12 +6775,38 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2019A',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-05-14',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-16',
+            DATE_END => '2019-05-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-17',
+            DATE_END => '2019-05-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-18',
+            DATE_END => '2019-05-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-20',
             DATE_END => '2019-05-20'
-          } 
+          },
         }
       },
       '2023' =>
@@ -5833,9 +6955,28 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2017-18',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-12-29',
+            DATE_END => '2017-12-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-30',
+            DATE_END => '2017-12-31'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-01',
             DATE_END => '2018-01-01'
           },
         }
@@ -5846,9 +6987,27 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2019-20',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2019-12-29',
+            DATE_END => '2019-12-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-30',
+            DATE_END => '2019-12-31'
+          },
+          'C2' => 
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-01',
             DATE_END => '2020-01-01'
           },
         }
@@ -6558,7 +7717,43 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-03-14',
+            DATE_END => '2017-03-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-03-15',
+            DATE_END => '2017-03-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-16',
+            DATE_END => '2017-03-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-17',
+            DATE_END => '2017-03-18'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-18',
             DATE_END => '2017-03-19'
           },
         }
@@ -6572,7 +7767,51 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2018-03-13',
+            DATE_END => '2018-03-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-14',
+            DATE_END => '2018-03-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-15',
+            DATE_END => '2018-03-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-16',
+            DATE_END => '2018-03-17'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-17',
+            DATE_END => '2018-03-18'
+          },
+          'C5' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-18',
             DATE_END => '2018-03-18'
           },
         }
@@ -6586,7 +7825,51 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2019-03-26',
+            DATE_END => '2019-03-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-27',
+            DATE_END => '2019-03-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-28',
+            DATE_END => '2019-03-29'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-29',
+            DATE_END => '2019-03-30'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-30',
+            DATE_END => '2019-03-31'
+          },
+          'C5' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-31',
             DATE_END => '2019-03-31'
           },
         }
@@ -6600,7 +7883,43 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2022-03-15',
+            DATE_END => '2022-03-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-03-16',
+            DATE_END => '2022-03-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-03-17',
+            DATE_END => '2022-03-18'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-03-18',
+            DATE_END => '2022-03-19'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2022-03-19',
             DATE_END => '2022-03-20'
           },
         }
@@ -6614,7 +7933,43 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2023-03-14',
+            DATE_END => '2023-03-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2023-03-15',
+            DATE_END => '2023-03-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2023-03-16',
+            DATE_END => '2023-03-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2023-03-17',
+            DATE_END => '2023-03-18'
+          },
+          'C4' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2023-03-18',
             DATE_END => '2023-03-19'
           },
         }
@@ -6628,7 +7983,43 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2024-03-19',
+            DATE_END => '2024-03-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-03-20',
+            DATE_END => '2024-03-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-03-21',
+            DATE_END => '2024-03-22'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-03-22',
+            DATE_END => '2024-03-23'
+          },
+          'C4' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
+            DATE_START => '2024-03-23',
             DATE_END => '2024-03-24'
           },
         }
