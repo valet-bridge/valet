@@ -80,10 +80,20 @@ my %TOURNAMENTS_TAIPEI =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
-            DATE_START => '2017-06-27',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-29',
+            DATE_END => '2017-06-29'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-29',
             DATE_END => '2017-06-29'
           },
         }
@@ -95,6 +105,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-07-03',
             DATE_END => '2018-07-03'
           },
@@ -105,10 +117,20 @@ my %TOURNAMENTS_TAIPEI =
         ORDINAL => 15,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2019-07-01',
+            DATE_END => '2019-07-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-02',
             DATE_END => '2019-07-02'
           },
         }
@@ -435,7 +457,25 @@ my %TOURNAMENTS_TAIPEI =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2017-02-07',
+            DATE_END => '2017-02-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-08',
+            DATE_END => '2017-02-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-08',
             DATE_END => '2017-02-08'
           },
         }
@@ -447,7 +487,25 @@ my %TOURNAMENTS_TAIPEI =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2018-01-30',
+            DATE_END => '2018-01-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-31',
+            DATE_END => '2018-01-31'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-31',
             DATE_END => '2018-01-31'
           },
         }
@@ -459,7 +517,25 @@ my %TOURNAMENTS_TAIPEI =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-01-22',
+            DATE_END => '2019-01-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-23',
+            DATE_END => '2019-01-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-23',
             DATE_END => '2019-01-23'
           },
         }
@@ -471,7 +547,17 @@ my %TOURNAMENTS_TAIPEI =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2020-01-21',
+            DATE_END => '2020-01-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-22',
             DATE_END => '2020-01-22'
           },
         }
@@ -483,7 +569,17 @@ my %TOURNAMENTS_TAIPEI =
           'C0' => 
           {
             YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2021-01-20',
+            DATE_END => '2021-01-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-01-21',
             DATE_END => '2021-01-21'
           },
         }
@@ -495,7 +591,17 @@ my %TOURNAMENTS_TAIPEI =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-02-01',
+            DATE_END => '2023-02-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-02-02',
             DATE_END => '2023-02-02'
           },
         }
@@ -507,7 +613,17 @@ my %TOURNAMENTS_TAIPEI =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2024-01-24',
+            DATE_END => '2024-01-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2024-01-25',
             DATE_END => '2024-01-25'
           },
         }
@@ -533,6 +649,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2020-08-30',
             DATE_END => '2020-08-30'
           },
@@ -592,9 +710,19 @@ my %TOURNAMENTS_TAIPEI =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-14',
+            DATE_END => '2018-10-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-10-14',
             DATE_END => '2018-10-14'
           },
@@ -607,6 +735,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2020-10-18',
             DATE_END => '2020-10-18'
           },
@@ -647,6 +777,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-10-14',
             DATE_END => '2018-10-14'
           },
@@ -702,6 +834,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-12-05',
             DATE_END => '2020-12-06'
           },
@@ -714,6 +848,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2021-12-11',
             DATE_END => '2021-12-12'
           },
@@ -726,6 +862,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-12-10',
             DATE_END => '2022-12-11'
           },
@@ -738,6 +876,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-11-18',
             DATE_END => '2023-11-19'
           },
@@ -764,6 +904,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Knock-out',
+            major => 'SEGMENT',
             DATE_START => '2024-12-07',
             DATE_END => '2024-12-08'
           },
@@ -790,6 +932,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-11-21',
             DATE_END => '2020-11-22'
           },
@@ -802,6 +946,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2021-11-27',
             DATE_END => '2021-11-28'
           },
@@ -814,6 +960,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-11-19',
             DATE_END => '2022-11-20'
           },
@@ -826,6 +974,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-11-04',
             DATE_END => '2023-11-05'
           },
@@ -1005,6 +1155,8 @@ my %TOURNAMENTS_TAIPEI =
         {
           'SINGLE' => 
           {
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-12-31',
             DATE_END => '2017-01-01'
           } 
@@ -1017,6 +1169,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-01-06',
             DATE_END => '2018-01-07'
           } 
@@ -1029,6 +1183,7 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-12-01',
             DATE_END => '2018-12-02'
           } 
@@ -1041,6 +1196,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Knock-out',
+            major => 'ROUND',
             DATE_START => '2019-12-07',
             DATE_END => '2019-12-08'
           } 
@@ -1053,6 +1210,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Knock-out',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-11-23',
             DATE_END => '2024-11-24'
           } 
@@ -1079,6 +1238,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-01-13',
             DATE_END => '2018-01-14'
           },
@@ -1091,6 +1252,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-12-26',
             DATE_END => '2020-12-27'
           },
@@ -1103,6 +1266,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-01-08',
             DATE_END => '2022-01-09'
           },
@@ -1112,10 +1277,22 @@ my %TOURNAMENTS_TAIPEI =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-10-08',
+            DATE_END => '2022-10-08'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2022-10-09',
             DATE_END => '2022-10-10'
           },
         }
@@ -1156,6 +1333,7 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-12-29',
             DATE_END => '2019-12-29'
           },
@@ -1168,6 +1346,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Knock-out',
+            major => 'SEGMENT',
             DATE_START => '2022-10-30',
             DATE_END => '2022-10-31'
           },
@@ -1180,6 +1360,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2023,
+            STAGE => 'Knock-out',
+            major => 'SEGMENT',
             DATE_START => '2023-12-02',
             DATE_END => '2023-12-03'
           },
@@ -1192,6 +1374,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Knock-out',
+            major => 'SEGMENT',
             DATE_START => '2024-11-16',
             DATE_END => '2024-11-17'
           },
@@ -1218,6 +1402,8 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-01-01',
             DATE_END => '2022-01-02'
           },
@@ -1244,6 +1430,7 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-12-29',
             DATE_END => '2019-12-29'
           },

@@ -49,6 +49,7 @@ my %TOURNAMENTS_IRELAND =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'MATCH',
             DATE_START => '2019-05-25',
             DATE_END => '2019-05-26'
           },
@@ -134,6 +135,7 @@ my %TOURNAMENTS_IRELAND =
           'C0' => 
           {
             YEAR => 2017,
+            major => 'SESSION',
             DATE_START => '2017-10-06',
             DATE_END => '2017-10-08'
           },
@@ -251,6 +253,8 @@ my %TOURNAMENTS_IRELAND =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'MATCH',
+            minor => 'STANZA',
             DATE_START => '2016-10-14',
             DATE_END => '2016-10-16'
           } 
@@ -263,6 +267,8 @@ my %TOURNAMENTS_IRELAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|STANZA',
             DATE_START => '2018-01-20',
             DATE_END => '2018-01-28'
           } 
@@ -275,6 +281,7 @@ my %TOURNAMENTS_IRELAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'MATCH',
             DATE_START => '2019-10-26',
             DATE_END => '2019-10-28'
           } 
@@ -287,6 +294,8 @@ my %TOURNAMENTS_IRELAND =
           'SINGLE' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2023-02-05',
             DATE_END => '2023-02-05'
           } 
@@ -313,6 +322,7 @@ my %TOURNAMENTS_IRELAND =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'SESSION|STANZA',
             DATE_START => '2017-10-06',
             DATE_END => '2017-10-06'
           },
@@ -325,6 +335,8 @@ my %TOURNAMENTS_IRELAND =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'SESSION',
+            minor => 'SET',
             DATE_START => '2018-11-09',
             DATE_END => '2018-11-11'
           },
@@ -337,6 +349,8 @@ my %TOURNAMENTS_IRELAND =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'SESSION',
+            minor => 'SET',
             DATE_START => '2019-11-22',
             DATE_END => '2019-11-24'
           },
