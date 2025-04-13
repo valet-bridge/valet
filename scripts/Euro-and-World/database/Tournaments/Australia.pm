@@ -2136,10 +2136,20 @@ my %TOURNAMENTS_AUSTRALIA =
         CITY => 'Tweed Heads',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
-            DATE_START => '2016-11-25',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-27',
+            DATE_END => '2016-11-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-28',
             DATE_END => '2016-11-28'
           } 
         }
@@ -2150,10 +2160,20 @@ my %TOURNAMENTS_AUSTRALIA =
         CITY => 'Tweed Heads',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
-            DATE_START => '2017-11-24',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-26',
+            DATE_END => '2017-11-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-27',
             DATE_END => '2017-11-27'
           } 
         }
@@ -2164,10 +2184,20 @@ my %TOURNAMENTS_AUSTRALIA =
         CITY => 'Tweed Heads',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
-            DATE_START => '2018-11-30',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-02',
+            DATE_END => '2018-12-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-03',
             DATE_END => '2018-12-03'
           } 
         }
@@ -2178,12 +2208,22 @@ my %TOURNAMENTS_AUSTRALIA =
         CITY => 'Tweed Heads',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-11-29',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-12-01',
+            DATE_END => '2019-12-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-02',
             DATE_END => '2019-12-02'
-          } 
+          },
         }
       },
       '2021' =>
@@ -2206,10 +2246,12 @@ my %TOURNAMENTS_AUSTRALIA =
         CITY => 'Brisbane',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
-            DATE_START => '2022-11-25',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-28',
             DATE_END => '2022-11-28'
           } 
         }
@@ -2396,10 +2438,27 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2019A',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
             DATE_START => '2019-01-26',
+            DATE_END => '2019-01-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-01-27',
+            DATE_END => '2019-01-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-28',
             DATE_END => '2019-01-28'
           } 
         }
@@ -2421,10 +2480,20 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET => 'Australian Playoffs',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2020-01-26',
+            DATE_END => '2020-01-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-27',
             DATE_END => '2020-01-27'
           } 
         }
@@ -2435,12 +2504,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2022C',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2022-12-03',
+            DATE_END => '2022-12-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-05',
+            DATE_END => '2022-12-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-07',
             DATE_END => '2022-12-08'
-          } 
+          },
         }
       },
       '2023' =>
@@ -2449,12 +2536,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2023B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2023-12-09',
+            DATE_END => '2023-12-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-11',
+            DATE_END => '2023-12-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-13',
             DATE_END => '2023-12-14'
-          } 
+          },
         }
       },
       '2024' =>
@@ -2463,12 +2568,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2024C',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2024-12-07',
+            DATE_END => '2024-12-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-09',
+            DATE_END => '2024-12-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-11',
             DATE_END => '2024-12-12'
-          } 
+          },
         }
       },
     }
@@ -2892,7 +3015,27 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2017-01-20',
+            DATE_END => '2017-01-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2017-01-21',
+            DATE_END => '2017-01-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-01-22',
             DATE_END => '2017-01-22'
           },
         }
@@ -2905,7 +3048,27 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2018-01-19',
+            DATE_END => '2018-01-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-20',
+            DATE_END => '2018-01-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2018-01-21',
             DATE_END => '2018-01-21'
           },
         }
@@ -2918,7 +3081,27 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2019-01-18',
+            DATE_END => '2019-01-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-19',
+            DATE_END => '2019-01-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-20',
             DATE_END => '2019-01-20'
           },
         }
@@ -2931,7 +3114,27 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2020-01-17',
+            DATE_END => '2020-01-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-18',
+            DATE_END => '2020-01-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-19',
             DATE_END => '2020-01-19'
           },
         }
@@ -2944,7 +3147,27 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2023-01-20',
+            DATE_END => '2023-01-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2023-01-21',
+            DATE_END => '2023-01-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-01-22',
             DATE_END => '2023-01-22'
           },
         }
@@ -2957,7 +3180,27 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2024-01-19',
+            DATE_END => '2024-01-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-20',
+            DATE_END => '2024-01-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-21',
             DATE_END => '2024-01-21'
           },
         }
@@ -3152,7 +3395,18 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2017-01-14',
+            DATE_END => '2017-01-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-01-15',
             DATE_END => '2017-01-15'
           },
         }
@@ -3165,7 +3419,18 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2018-01-13',
+            DATE_END => '2018-01-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2018-01-14',
             DATE_END => '2018-01-14'
           },
         }
@@ -3178,7 +3443,18 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2019-01-12',
+            DATE_END => '2019-01-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-13',
             DATE_END => '2019-01-13'
           },
         }
@@ -3191,7 +3467,18 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2020-01-11',
+            DATE_END => '2020-01-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-12',
             DATE_END => '2020-01-12'
           },
         }
@@ -3390,7 +3677,17 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-01-14',
+            DATE_END => '2017-01-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-01-15',
             DATE_END => '2017-01-15'
           },
         }
@@ -3403,7 +3700,17 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-01-13',
+            DATE_END => '2018-01-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2018-01-14',
             DATE_END => '2018-01-14'
           },
         }
@@ -3416,7 +3723,17 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2019-01-12',
+            DATE_END => '2019-01-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-13',
             DATE_END => '2019-01-13'
           },
         }
@@ -3429,7 +3746,17 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2020-01-11',
+            DATE_END => '2020-01-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-12',
             DATE_END => '2020-01-12'
           },
         }
@@ -3611,6 +3938,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-07-21',
             DATE_END => '2017-07-21'
           } 
@@ -3621,10 +3950,20 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET => 'Australian ANC Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-08-02',
+            DATE_END => '2018-08-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-03',
             DATE_END => '2018-08-03'
           } 
         }
@@ -3695,6 +4034,10 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2017-11-15',
             DATE_END => '2017-11-16'
           } 
@@ -4003,10 +4346,20 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2016C',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
-            DATE_START => '2016-11-12',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-13',
+            DATE_END => '2016-11-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-16',
             DATE_END => '2016-11-17'
           } 
         }
@@ -4033,12 +4386,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2018A',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2018-11-10',
+            DATE_END => '2018-11-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-12',
+            DATE_END => '2018-11-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-14',
             DATE_END => '2018-11-15'
-          } 
+          },
         }
       },
       '2019' =>
@@ -4048,12 +4419,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2019B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-11-09',
+            DATE_END => '2019-11-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-11',
+            DATE_END => '2019-11-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-13',
             DATE_END => '2019-11-14'
-          } 
+          },
         }
       },
       '2022A' =>
@@ -4078,12 +4467,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2022B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2022-11-12',
+            DATE_END => '2022-11-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-14',
+            DATE_END => '2022-11-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-16',
             DATE_END => '2022-11-17'
-          } 
+          },
         }
       },
       '2023' =>
@@ -4093,12 +4500,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2023A',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2023-11-11',
+            DATE_END => '2023-11-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-13',
+            DATE_END => '2023-11-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-15',
             DATE_END => '2023-11-16'
-          } 
+          },
         }
       },
       '2024' =>
@@ -4108,12 +4533,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2024B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2024-11-16',
+            DATE_END => '2024-11-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-18',
+            DATE_END => '2024-11-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-20',
             DATE_END => '2024-11-21'
-          } 
+          },
         }
       },
     }
@@ -4137,6 +4580,9 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2017-12-06',
             DATE_END => '2017-12-07'
           } 
@@ -4579,10 +5025,20 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2016D',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
-            DATE_START => '2016-12-03',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-12-05',
+            DATE_END => '2016-12-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-12-07',
             DATE_END => '2016-12-08'
           } 
         }
@@ -4596,6 +5052,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-07-21',
             DATE_END => '2017-07-21'
           } 
@@ -4622,12 +5080,22 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => 2018,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-08-02',
+            DATE_END => '2018-08-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-03',
             DATE_END => '2018-08-03'
-          } 
+          },
         }
       },
       '2018B' =>
@@ -4637,12 +5105,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2018B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2018-12-08',
+            DATE_END => '2018-12-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-10',
+            DATE_END => '2018-12-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-12',
             DATE_END => '2018-12-13'
-          } 
+          },
         }
       },
       '2019A' =>
@@ -4668,12 +5154,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2019C',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-12-07',
+            DATE_END => '2019-12-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-09',
+            DATE_END => '2019-12-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-11',
             DATE_END => '2019-12-12'
-          } 
+          },
         }
       },
       '2022A' =>
@@ -4713,12 +5217,22 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2023',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-01-13',
+            DATE_END => '2023-01-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-01-14',
             DATE_END => '2023-01-15'
-          } 
+          },
         }
       },
       '2023B' =>
@@ -4743,10 +5257,20 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2024A',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
-            DATE_START => '2024-01-11',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-12',
+            DATE_END => '2024-01-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-14',
             DATE_END => '2024-01-14'
           } 
         }
@@ -4796,6 +5320,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-10-21',
             DATE_END => '2023-10-25'
           },
@@ -5022,7 +5548,18 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2016-10-22',
+            DATE_END => '2016-10-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-23',
             DATE_END => '2016-10-23'
           },
         }
@@ -5035,7 +5572,18 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-10-21',
+            DATE_END => '2017-10-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-22',
             DATE_END => '2017-10-22'
           },
         }
@@ -5048,7 +5596,18 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2018-10-20',
+            DATE_END => '2018-10-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-21',
             DATE_END => '2018-10-21'
           },
         }
@@ -5061,7 +5620,18 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2019-10-19',
+            DATE_END => '2019-10-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-20',
             DATE_END => '2019-10-20'
           },
         }
@@ -5074,7 +5644,18 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2022-10-22',
+            DATE_END => '2022-10-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-10-23',
             DATE_END => '2022-10-23'
           },
         }
@@ -5087,8 +5668,19 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-10-21',
-            DATE_END => '2023-10-25'
+            DATE_END => '2023-10-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-10-22',
+            DATE_END => '2023-10-22'
           },
         }
       },
@@ -5317,6 +5909,10 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2017-12-06',
             DATE_END => '2017-12-07'
           } 
@@ -5739,12 +6335,22 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2016D',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
-            DATE_START => '2016-12-03',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-12-05',
+            DATE_END => '2016-12-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-12-07',
             DATE_END => '2016-12-08'
-          } 
+          },
         }
       },
       '2017A' =>
@@ -5756,6 +6362,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-07-21',
             DATE_END => '2017-07-21'
           } 
@@ -5782,10 +6390,20 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => 2018,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-08-02',
+            DATE_END => '2018-08-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-03',
             DATE_END => '2018-08-03'
           } 
         }
@@ -5797,12 +6415,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2018B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2018-12-08',
+            DATE_END => '2018-12-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-10',
+            DATE_END => '2018-12-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-12',
             DATE_END => '2018-12-13'
-          } 
+          },
         }
       },
       '2019A' =>
@@ -5828,12 +6464,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2019C',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-12-07',
+            DATE_END => '2019-12-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-09',
+            DATE_END => '2019-12-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-11',
             DATE_END => '2019-12-12'
-          } 
+          },
         }
       },
       '2020' =>
@@ -5886,10 +6540,20 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2023',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-01-13',
+            DATE_END => '2023-01-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-01-15',
             DATE_END => '2023-01-15'
           } 
         }
@@ -5916,12 +6580,22 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2024A',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2024-01-11',
+            DATE_END => '2024-01-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-13',
             DATE_END => '2024-01-14'
-          } 
+          },
         }
       },
     }
@@ -6303,10 +6977,18 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => 2017,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-01-13',
+            DATE_END => '2017-01-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-01-14',
             DATE_END => '2017-01-14'
           } 
         }
@@ -6320,6 +7002,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-07-21',
             DATE_END => '2017-07-21'
           } 
@@ -6364,7 +7048,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2023,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-07-13',
             DATE_END => '2023-07-14'
           } 
@@ -7090,7 +7774,25 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2017-02-24',
+            DATE_END => '2017-02-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-24',
+            DATE_END => '2017-02-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-25',
             DATE_END => '2017-02-25'
           },
         }
@@ -7103,7 +7805,25 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2018-02-23',
+            DATE_END => '2018-02-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-23',
+            DATE_END => '2018-02-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-02-24',
             DATE_END => '2018-02-24'
           },
         }
@@ -7116,7 +7836,25 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-02-22',
+            DATE_END => '2019-02-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-02-22',
+            DATE_END => '2019-02-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-02-23',
             DATE_END => '2019-02-23'
           },
         }
@@ -7129,7 +7867,25 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2020-02-28',
+            DATE_END => '2020-02-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-02-28',
+            DATE_END => '2020-02-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-02-29',
             DATE_END => '2020-02-29'
           },
         }
@@ -7142,6 +7898,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-02-26',
             DATE_END => '2022-02-26'
           },
@@ -7155,6 +7913,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-02-25',
             DATE_END => '2023-02-25'
           },
@@ -7168,6 +7928,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-02-24',
             DATE_END => '2024-02-24'
           },
@@ -7238,6 +8000,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-02-24',
             DATE_END => '2017-02-24'
           } 
@@ -7266,6 +8030,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-02-22',
             DATE_END => '2019-02-22'
           } 
@@ -7673,6 +8439,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-12-01',
             DATE_END => '2016-12-01'
           },
@@ -7752,6 +8520,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2021-10-10',
             DATE_END => '2021-10-10'
           } 
@@ -7765,6 +8535,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-10-09',
             DATE_END => '2022-10-09'
           } 
@@ -7897,24 +8669,44 @@ my %TOURNAMENTS_AUSTRALIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-12-11',
+            DATE_END => '2023-12-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-18',
             DATE_END => '2023-12-18'
-          } 
+          },
         }
       },
       '2024' =>
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-12-02',
+            DATE_END => '2024-12-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-09',
             DATE_END => '2024-12-09'
-          } 
+          },
         }
       },
     }
@@ -8399,6 +9191,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
             DATE_START => '2017-04-09',
             DATE_END => '2017-04-09'
           } 
@@ -8645,7 +9439,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2017,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-11-18',
             DATE_END => '2017-11-18'
           } 
@@ -8857,7 +9651,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2017,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-05-25',
             DATE_END => '2017-05-25'
           },
