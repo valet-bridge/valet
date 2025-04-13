@@ -271,10 +271,16 @@ sub fix_of
   my ($self, $chapter_header, $map, $list) = @_;
 
   $self->get_assigned_fields($chapter_header);
+  my $error = 0;
   for my $entry (@$list)
   {
-    $entry->fix_of($self->{ASSIGNED}, $self->{OF});
+    if ($entry->fix_of($self->{ASSIGNED}, $self->{OF}))
+    {
+      $error = 1;
+    }
   }
+
+  warn '---' if $error;
 }
 
 

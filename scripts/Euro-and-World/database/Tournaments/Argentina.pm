@@ -259,7 +259,7 @@ my %TOURNAMENTS_ARGENTINA =
           {
             YEAR => 2023,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-12-09',
             DATE_END => '2023-12-09'
           },
@@ -267,7 +267,7 @@ my %TOURNAMENTS_ARGENTINA =
           {
             YEAR => 2023,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-12-10',
             DATE_END => '2023-12-10'
           } 
@@ -282,7 +282,7 @@ my %TOURNAMENTS_ARGENTINA =
           {
             YEAR => 2024,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-12-22',
             DATE_END => '2024-12-23'
           } 
@@ -758,7 +758,7 @@ my %TOURNAMENTS_ARGENTINA =
           'SINGLE' => 
           {
             YEAR => 2023,
-            SCORING => 'MP',
+            major => 'ROUND',
             DATE_START => '2023-06-02',
             DATE_END => '2023-06-03'
           },
@@ -773,7 +773,7 @@ my %TOURNAMENTS_ARGENTINA =
           'SINGLE' => 
           {
             YEAR => 2023,
-            SCORING => 'IMP',
+            major => 'ROUND',
             DATE_START => '2023-06-09',
             DATE_END => '2023-06-12'
           },
@@ -789,7 +789,7 @@ my %TOURNAMENTS_ARGENTINA =
           {
             YEAR => 2024,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-02-10',
             DATE_END => '2024-02-12'
           },
@@ -804,6 +804,8 @@ my %TOURNAMENTS_ARGENTINA =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-05-11',
             DATE_END => '2024-05-12'
           },
@@ -884,6 +886,7 @@ my %TOURNAMENTS_ARGENTINA =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2024-05-18',
@@ -990,12 +993,16 @@ my %TOURNAMENTS_ARGENTINA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-02-11',
             DATE_END => '2024-02-13'
           },
           'C1' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-05-12',
             DATE_END => '2024-05-12'
           },
@@ -1022,6 +1029,7 @@ my %TOURNAMENTS_ARGENTINA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-05-12',
             DATE_END => '2023-05-14'
           },

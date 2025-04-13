@@ -442,6 +442,7 @@ my %MEETS_ASIA =
       },
       '2017' =>
       {
+        # This might be two meets in one.
         MEET_ORDINAL => 2,
         CITY => 'Jakarta',
         COUNTRY => 'Indonesia',
@@ -563,11 +564,22 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'International',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            minor => 'ROUND',
             DATE_START => '2017-05-29',
-            DATE_END => '2017-06-06'
+            DATE_END => '2017-05-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2017-06-02',
+            DATE_END => '2017-06-04'
           } 
         }
       },
@@ -577,11 +589,30 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'Transnational',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SEGMENT',
             DATE_START => '2018-04-14',
-            DATE_END => '2018-04-20'
+            DATE_END => '2018-04-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-18',
+            DATE_END => '2018-04-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-19',
+            DATE_END => '2018-04-19'
           } 
         }
       },
@@ -591,12 +622,32 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'Transnational',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
             DATE_START => '2019-04-05',
+            DATE_END => '2019-04-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
+            DATE_START => '2019-04-07',
+            DATE_END => '2019-04-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-10',
             DATE_END => '2019-04-10'
-          } 
+          },
         }
       },
     }
@@ -620,8 +671,11 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2023,
-            DATE_START => '2023-05-14',
-            DATE_END => '2023-05-19'
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
+            DATE_START => '2023-05-17',
+            DATE_END => '2023-05-17'
           } 
         }
       },
@@ -790,11 +844,31 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'International',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            minor => 'ROUND',
             DATE_START => '2017-05-29',
-            DATE_END => '2017-06-06'
+            DATE_END => '2017-05-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
+            DATE_START => '2017-06-02',
+            DATE_END => '2017-06-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
+            DATE_START => '2017-06-04',
+            DATE_END => '2017-06-04'
           } 
         }
       },
@@ -804,11 +878,44 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'Transnational',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-04-14',
+            DATE_END => '2018-04-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-19',
+            DATE_END => '2018-04-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-20',
             DATE_END => '2018-04-20'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'APBF Youth Championships',
+        ORIGIN => 'Transnational',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-10',
+            DATE_END => '2019-04-10'
           } 
         }
       },
@@ -818,12 +925,32 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'International',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
             DATE_START => '2023-05-14',
+            DATE_END => '2023-05-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
+            DATE_START => '2023-05-18',
+            DATE_END => '2023-05-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-19',
             DATE_END => '2023-05-19'
-          } 
+          },
         }
       },
     }
@@ -847,8 +974,10 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-04-05',
-            DATE_END => '2019-04-10'
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2019-04-07',
+            DATE_END => '2019-04-07'
           } 
         }
       },
@@ -861,8 +990,11 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2023,
-            DATE_START => '2023-05-14',
-            DATE_END => '2023-05-19'
+            MOVEMENT => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2023-05-15',
+            DATE_END => '2023-05-17'
           } 
         }
       },
@@ -935,10 +1067,36 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-06-11',
+            DATE_END => '2019-06-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-06-15',
+            DATE_END => '2019-06-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-19',
+            DATE_END => '2019-06-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-20',
             DATE_END => '2019-06-20'
           } 
         }
@@ -948,10 +1106,19 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-06-09',
+            DATE_END => '2023-06-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2023-06-17',
             DATE_END => '2023-06-17'
           } 
         }
@@ -976,6 +1143,8 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' =>
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2019-06-20',
             DATE_END => '2019-06-20'
           },
@@ -1272,10 +1441,38 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
             DATE_START => '2017-05-29',
+            DATE_END => '2017-06-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
+            DATE_START => '2017-06-02',
+            DATE_END => '2017-06-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-06',
+            DATE_END => '2017-06-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-07',
             DATE_END => '2017-06-07'
           } 
         }
@@ -1285,10 +1482,28 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-06-11',
+            DATE_END => '2019-06-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-06-15',
+            DATE_END => '2019-06-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-19',
             DATE_END => '2019-06-20'
           } 
         }
@@ -1569,12 +1784,32 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
             DATE_START => '2017-05-29',
+            DATE_END => '2017-06-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
+            DATE_START => '2017-06-02',
+            DATE_END => '2017-06-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-06',
             DATE_END => '2017-06-06'
-          } 
+          },
         }
       },
       '2019' =>
@@ -1582,12 +1817,30 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-06-11',
-            DATE_END => '2019-06-20'
-          } 
+            DATE_END => '2019-06-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-06-15',
+            DATE_END => '2019-06-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-19',
+            DATE_END => '2019-06-19'
+          },
         }
       },
       '2023' =>
@@ -1621,10 +1874,21 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'Transnational',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SEGMENT',
             DATE_START => '2018-04-15',
+            DATE_END => '2018-04-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-18',
             DATE_END => '2018-04-18'
           } 
         }
@@ -1650,6 +1914,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2023-05-14',
             DATE_END => '2023-05-19'
           } 
@@ -1676,6 +1943,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2023-05-14',
             DATE_END => '2023-05-19'
           } 
@@ -1904,12 +2174,40 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
             DATE_START => '2017-05-29',
+            DATE_END => '2017-06-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
+            DATE_START => '2017-06-02',
+            DATE_END => '2017-06-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-06',
+            DATE_END => '2017-06-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-07',
             DATE_END => '2017-06-07'
-          } 
+          },
         }
       },
       '2019' =>
@@ -1917,10 +2215,44 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-06-11',
+            DATE_END => '2019-06-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-06-14',
+            DATE_END => '2019-06-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-06-16',
+            DATE_END => '2019-06-18'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-19',
+            DATE_END => '2019-06-19'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-20',
             DATE_END => '2019-06-20'
           } 
         }
@@ -1930,10 +2262,18 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
             DATE_START => '2023-06-09',
+            DATE_END => '2023-06-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2023-06-17',
             DATE_END => '2023-06-17'
           } 
         }
@@ -2069,11 +2409,24 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'International',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2017-05-29',
-            DATE_END => '2017-06-06'
+            DATE_END => '2017-05-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            ignore => 'SESSION',
+            DATE_START => '2017-06-02',
+            DATE_END => '2017-06-03'
           } 
         }
       },
@@ -2083,10 +2436,30 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'Transnational',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION|SEGMENT',
             DATE_START => '2018-04-14',
+            DATE_END => '2018-04-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION|SEGMENT',
+            DATE_START => '2018-04-16',
+            DATE_END => '2018-04-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-20',
             DATE_END => '2018-04-20'
           } 
         }
@@ -2097,11 +2470,23 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'International',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
             DATE_START => '2019-04-05',
-            DATE_END => '2019-04-10'
+            DATE_END => '2019-04-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
+            DATE_START => '2019-04-08',
+            DATE_END => '2019-04-09'
           } 
         }
       },
@@ -2114,6 +2499,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|SESSION',
             DATE_START => '2023-05-14',
             DATE_END => '2023-05-19'
           } 
@@ -2252,6 +2640,8 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2024-09-26',
             DATE_END => '2024-09-26'
           } 
@@ -2307,6 +2697,8 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2024,
             MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2024-09-25',
             DATE_END => '2024-09-25'
           } 
@@ -2507,7 +2899,17 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2016-12-09',
+            DATE_END => '2016-12-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2016-12-11',
             DATE_END => '2016-12-11'
           },
         }
@@ -2521,7 +2923,20 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2017-12-07',
+            DATE_END => '2017-12-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            ignore => 'TABLE',
+            DATE_START => '2017-12-10',
             DATE_END => '2017-12-10'
           },
         }
@@ -2534,7 +2949,20 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2024-09-27',
+            DATE_END => '2024-09-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            ignore => 'TABLE',
+            DATE_START => '2024-09-29',
             DATE_END => '2024-09-29'
           },
         }
@@ -2559,8 +2987,26 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-09-27',
-            DATE_END => '2024-09-29'
+            DATE_END => '2024-09-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2024-09-28',
+            DATE_END => '2024-09-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-28',
+            DATE_END => '2024-09-28'
           },
         }
       },
@@ -2584,7 +3030,25 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-09-27',
+            DATE_END => '2024-09-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2024-09-28',
+            DATE_END => '2024-09-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-29',
             DATE_END => '2024-09-29'
           },
         }
@@ -2609,6 +3073,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-06-29',
             DATE_END => '2024-06-30'
           } 
@@ -2631,11 +3096,21 @@ my %TOURNAMENTS_ASIA =
         MEET => 'ASEAN University Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-06-27',
-            DATE_END => '2024-06-30'
+            DATE_END => '2024-06-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2024-06-28',
+            DATE_END => '2024-06-28'
           } 
         }
       },
@@ -2659,6 +3134,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'SESSION',
             DATE_START => '2024-06-29',
             DATE_END => '2024-06-29'
           } 
@@ -2698,6 +3174,8 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-09-27',
             DATE_END => '2024-09-29'
           },
@@ -2727,6 +3205,21 @@ my %TOURNAMENTS_ASIA =
             major => 'SEGMENT',
             DATE_START => '2015-12-06',
             DATE_END => '2015-12-06'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'ASEAN Club Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-29',
+            DATE_END => '2024-09-29'
           } 
         }
       },
@@ -2791,10 +3284,29 @@ my %TOURNAMENTS_ASIA =
         MEET => 'Asian National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
-            DATE_START => '2018-08-19',
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            ignore => 'TABLE',
+            DATE_START => '2018-08-28',
+            DATE_END => '2018-08-29'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SESSION',
+            DATE_START => '2018-08-30',
+            DATE_END => '2018-08-31'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2018-08-31',
             DATE_END => '2018-09-01'
           },
         }
@@ -2820,7 +3332,26 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION|SEGMENT',
             DATE_START => '2018-06-05',
+            DATE_END => '2018-06-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-06-09',
+            DATE_END => '2018-06-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-06-10',
             DATE_END => '2018-06-10'
           },
         }
@@ -2833,7 +3364,35 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION|SEGMENT',
             DATE_START => '2022-10-20',
+            DATE_END => '2022-10-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            ignore => 'SESSION',
+            DATE_START => '2022-10-22',
+            DATE_END => '2022-10-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-24',
+            DATE_END => '2022-10-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-25',
             DATE_END => '2022-10-25'
           },
         }
@@ -2850,16 +3409,46 @@ my %TOURNAMENTS_ASIA =
 
     EDITIONS =>
     {
-      '2017' =>
+      '2017A' =>
       {
         MEET => 'South East Asian Championship',
+        MEET_TAG => 2017,
         ORIGIN => 'Transnational',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-11-29',
+            DATE_END => '2017-12-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-02',
+            DATE_END => '2017-12-02'
+          },
+        }
+      },
+      '2017B' =>
+      {
+        # This might be at a different meet.
+        MEET => 'South East Asian Championship',
+        MEET_TAG => 2017,
+        ORIGIN => 'Transnational',
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            ignore => 'TABLE',
+            DATE_START => '2017-12-07',
             DATE_END => '2017-12-07'
           },
         }
@@ -2931,7 +3520,25 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-06-05',
+            DATE_END => '2018-06-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-06-09',
+            DATE_END => '2018-06-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-06-10',
             DATE_END => '2018-06-10'
           },
         }
@@ -2944,7 +3551,35 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
             DATE_START => '2022-10-20',
+            DATE_END => '2022-10-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            ignore => 'SESSION',
+            DATE_START => '2022-10-22',
+            DATE_END => '2022-10-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-24',
+            DATE_END => '2022-10-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-25',
             DATE_END => '2022-10-25'
           },
         }
@@ -3001,7 +3636,25 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-06-05',
+            DATE_END => '2018-06-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-06-09',
+            DATE_END => '2018-06-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-06-10',
             DATE_END => '2018-06-10'
           },
         }
@@ -3014,7 +3667,34 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION',
             DATE_START => '2022-10-20',
+            DATE_END => '2022-10-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2022-10-23',
+            DATE_END => '2022-10-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-24',
+            DATE_END => '2022-10-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-25',
             DATE_END => '2022-10-25'
           },
         }
@@ -3086,7 +3766,25 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            minor => 'ROUND',
             DATE_START => '2018-06-05',
+            DATE_END => '2018-06-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-06-09',
+            DATE_END => '2018-06-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-06-10',
             DATE_END => '2018-06-10'
           },
         }
@@ -3099,7 +3797,35 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            ignore => 'SESSION',
             DATE_START => '2022-10-20',
+            DATE_END => '2022-10-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            ignore => 'SESSION',
+            DATE_START => '2022-10-22',
+            DATE_END => '2022-10-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-24',
+            DATE_END => '2022-10-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-25',
             DATE_END => '2022-10-25'
           },
         }
@@ -3121,10 +3847,29 @@ my %TOURNAMENTS_ASIA =
         MEET => 'Asian National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
-            DATE_START => '2018-08-19',
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            ignore => 'TABLE',
+            DATE_START => '2018-08-28',
+            DATE_END => '2018-08-29'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SESSION',
+            DATE_START => '2018-08-30',
+            DATE_END => '2018-08-31'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2018-08-31',
             DATE_END => '2018-09-01'
           },
         }
@@ -3150,6 +3895,8 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-07-15',
             DATE_END => '2017-07-16'
           },
@@ -3162,10 +3909,28 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'International',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-11-29',
+            DATE_END => '2017-11-30'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-02',
+            DATE_END => '2017-12-02'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-03',
             DATE_END => '2017-12-03'
           },
         }
@@ -3188,10 +3953,28 @@ my %TOURNAMENTS_ASIA =
         ORIGIN => 'International',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-11-29',
+            DATE_END => '2017-12-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-02',
+            DATE_END => '2017-12-02'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-03',
             DATE_END => '2017-12-03'
           },
         }
@@ -3298,7 +4081,26 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'SESSION|SEGMENT',
             DATE_START => '2018-08-19',
+            DATE_END => '2018-08-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-26',
+            DATE_END => '2018-08-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-27',
             DATE_END => '2018-08-27'
           },
         }
@@ -3312,8 +4114,9 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-12-20',
-            DATE_END => '2022-12-23'
+            DATE_END => '2022-12-20'
           },
         }
       },
@@ -3389,8 +4192,26 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            ignore => 'ROUND',
             DATE_START => '2018-08-20',
-            DATE_END => '2018-09-01'
+            DATE_END => '2018-08-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-26',
+            DATE_END => '2018-08-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-27',
+            DATE_END => '2018-08-27'
           },
         }
       },
@@ -3403,7 +4224,16 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2022,
-            DATE_START => '2022-12-20',
+            major => 'ROUND',
+            DATE_START => '2022-12-21',
+            DATE_END => '2022-12-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-12-23',
             DATE_END => '2022-12-23'
           },
         }
@@ -3417,7 +4247,16 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2023-12-13',
+            DATE_END => '2023-12-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            DATE_START => '2023-12-15',
             DATE_END => '2023-12-15'
           },
         }
@@ -3443,6 +4282,8 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' =>
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2017-12-11',
             DATE_END => '2017-12-12'
           },
@@ -3469,6 +4310,8 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2016-12-11',
             DATE_END => '2016-12-11'
           },
@@ -3497,6 +4340,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
             DATE_START => '2023-12-13',
             DATE_END => '2023-12-15'
           },
@@ -3523,6 +4367,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-12-20',
             DATE_END => '2022-12-23'
           },
@@ -3561,10 +4406,29 @@ my %TOURNAMENTS_ASIA =
         MEET => 'Asian National Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2018-08-28',
+            DATE_END => '2018-08-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SESSION',
+            DATE_START => '2018-08-30',
+            DATE_END => '2018-08-31'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2018-08-31',
             DATE_END => '2018-09-01'
           } 
         }
@@ -3614,6 +4478,8 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-12-23',
             DATE_END => '2022-12-23'
           },
@@ -3628,6 +4494,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
             DATE_START => '2023-12-13',
             DATE_END => '2023-12-15'
           },
@@ -4009,12 +4876,40 @@ my %TOURNAMENTS_ASIA =
         COUNTRY => 'Japan',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-07-03',
+            DATE_END => '2017-07-04'
+          },
+          'C1' =>
+          {
+            # Actually more complicated
+            # https://www.jcbl.or.jp/home/English/yehbros/conditions/tabid/1459/Default.aspx
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-05',
+            DATE_END => '2017-07-05'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-06',
+            DATE_END => '2017-07-06'
+          },
+          'C3' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-07',
             DATE_END => '2017-07-07'
-          }
+          },
         }
       },
       '2018' =>
@@ -4023,10 +4918,46 @@ my %TOURNAMENTS_ASIA =
         COUNTRY => 'China',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2018-07-01',
+            DATE_END => '2018-07-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Knock-out',
+            major => 'SEGMENT',
+            ignore => 'TABLE',
+            DATE_START => '2018-07-03',
+            DATE_END => '2018-07-03'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Knock-out',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-04',
+            DATE_END => '2018-07-04'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-05',
+            DATE_END => '2018-07-05'
+          },
+          'C4' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-05',
             DATE_END => '2018-07-05'
           }
         }
@@ -4037,10 +4968,30 @@ my %TOURNAMENTS_ASIA =
         COUNTRY => 'China',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2019-04-09',
+            DATE_END => '2019-04-10'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Knock-out',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2019-04-11',
+            DATE_END => '2019-04-12'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-13',
             DATE_END => '2019-04-13'
           }
         }

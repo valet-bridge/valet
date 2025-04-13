@@ -1034,12 +1034,13 @@ sub fix_of
 
   for my $field (@$field_map)
   {
-if (! exists $of_map->{$field})
-{
-  warn "Field $field has no OF map";
-  warn $self->str_as_read();
-  return;
-}
+    if (! exists $of_map->{$field})
+    {
+      warn "Field $field has no OF map";
+      warn $self->str_as_read();
+      return 1;
+    }
+
     next if $of_map->{$field} == 0;
     next unless exists $self->{COUNTER}{$field};
 
@@ -1049,6 +1050,7 @@ if (! exists $of_map->{$field})
       $self->{COUNTER}{$field} .= " of " . $of_map->{$field};
     }
   }
+  return 0;
 }
 
 
