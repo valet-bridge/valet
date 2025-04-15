@@ -358,6 +358,8 @@ my @LOCAL_SUBS_INTERPOL =
     CORR => 'Match $1 Segment $2' },
   { START => 73943, END => 74042, TEXT => 'Q *(\d) of 4$', 
     CORR => 'Quarter $1 of 4' },
+  { START => 74532, END => 74608, TEXT => 'ROUND (\d+)_[34]$', 
+    CORR => 'Round $1' },
   { START => 75149, END => 75165, TEXT => 'Q *(\d) of 4$', 
     CORR => 'Quarter $1 of 4' },
   { START => 75171, END => 75367, TEXT => 'Q *(\d) of 4$', 

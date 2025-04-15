@@ -1929,10 +1929,28 @@ my %TOURNAMENTS_POLAND =
         CITY => 'Elblag',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2017-03-01',
+            DATE_END => '2017-03-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-02',
+            DATE_END => '2017-03-02'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-02',
             DATE_END => '2017-03-02'
           },
         }
@@ -1944,10 +1962,28 @@ my %TOURNAMENTS_POLAND =
         CITY => 'Elblag',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2018-02-28',
+            DATE_END => '2018-02-28'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-01',
+            DATE_END => '2018-03-01'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-01',
             DATE_END => '2018-03-01'
           },
         }
@@ -1959,10 +1995,28 @@ my %TOURNAMENTS_POLAND =
         CITY => 'Elblag',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
-            DATE_START => '2019-03-03',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
+            DATE_START => '2019-03-06',
+            DATE_END => '2019-03-06'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-07',
+            DATE_END => '2019-03-07'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-07',
             DATE_END => '2019-03-07'
           },
         }
@@ -1972,10 +2026,28 @@ my %TOURNAMENTS_POLAND =
         MEET => 'Zulawski Congress',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2020-01-22',
+            DATE_END => '2020-01-22'
+          },
+          'C1' =>
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|MATCH',
+            DATE_START => '2020-01-23',
+            DATE_END => '2020-01-23'
+          },
+          'C2' =>
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-23',
             DATE_END => '2020-01-23'
           },
         }
@@ -2914,6 +2986,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2016-12-09',
             DATE_END => '2016-12-11'
           } 
@@ -2926,6 +3000,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION|ROUND',
             DATE_START => '2017-12-15',
             DATE_END => '2017-12-17'
           } 
@@ -2938,6 +3014,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SESSION|SEGMENT|ROUND',
             DATE_START => '2018-02-18',
             DATE_END => '2018-02-18'
           } 
@@ -2952,6 +3029,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2018-12-14',
             DATE_END => '2018-12-16'
           } 
@@ -2966,6 +3044,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2019-12-20',
             DATE_END => '2019-12-22'
           } 
@@ -2980,6 +3060,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2021,
+            major => 'SESSION',
             DATE_START => '2021-12-09',
             DATE_END => '2021-12-11'
           } 
@@ -2994,6 +3075,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2022-12-16',
             DATE_END => '2022-12-18'
           } 
@@ -3008,6 +3090,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2023-12-08',
             DATE_END => '2023-12-10'
           } 
@@ -3019,10 +3103,18 @@ my %TOURNAMENTS_POLAND =
         MEET_TAG => '2024',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            major => 'SESSION|SEGMENT|ROUND',
             DATE_START => '2024-12-13',
+            DATE_END => '2024-12-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            major => 'SESSION',
+            DATE_START => '2024-12-15',
             DATE_END => '2024-12-15'
           } 
         }
@@ -3476,7 +3568,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2015,
-            MOVEMENT => 'Round-robin',
+            STAGE => 'Qualifying',
             major => 'ROUND|MATCH',
             DATE_START => '2015-03-29',
             DATE_END => '2015-03-29'
@@ -3485,6 +3577,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2015,
             STAGE => 'Final',
+            major => 'ROUND|MATCH',
             DATE_START => '2015-03-29',
             DATE_END => '2015-03-29'
           } 
@@ -3511,7 +3604,15 @@ my %TOURNAMENTS_POLAND =
         MEET_TAG => '2016',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Qualifying',
+            major => 'MATCH',
+            DATE_START => '2016-05-14',
+            DATE_END => '2016-05-15'
+          },
+          'C1' => 
           {
             YEAR => 2016,
             STAGE => 'Final',
@@ -3611,6 +3712,16 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND|MATCH',
+            DATE_START => '2017-05-13',
+            DATE_END => '2017-05-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
             DATE_START => '2017-05-13',
             DATE_END => '2017-05-13'
           },
@@ -3625,7 +3736,17 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2017,
-            DATE_START => '2017-06-16',
+            STAGE => 'Qualifying',
+            major => 'ROUND|SEGMENT|MATCH',
+            DATE_START => '2017-06-17',
+            DATE_END => '2017-06-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2017-06-17',
             DATE_END => '2017-06-17'
           },
         }
@@ -3637,7 +3758,17 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-12-09',
+            DATE_END => '2017-12-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-10',
             DATE_END => '2017-12-10'
           },
         }
@@ -3649,6 +3780,16 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
+            DATE_START => '2018-02-16',
+            DATE_END => '2018-02-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
             DATE_START => '2018-02-17',
             DATE_END => '2018-02-17'
           },
@@ -3662,7 +3803,17 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2018-10-06',
+            DATE_END => '2018-10-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-07',
             DATE_END => '2018-10-07'
           },
         }
@@ -3674,7 +3825,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2018-12-07',
+            DATE_END => '2018-12-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-08',
+            DATE_END => '2018-12-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-09',
             DATE_END => '2018-12-09'
           },
         }
@@ -3688,7 +3857,32 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-04-05',
+            DATE_END => '2019-04-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-07',
+            DATE_END => '2019-04-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-07',
+            DATE_END => '2019-04-07'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-07',
             DATE_END => '2019-04-07'
           },
         }
@@ -3702,7 +3896,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-07-13',
+            DATE_END => '2019-07-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-13',
+            DATE_END => '2019-07-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-14',
             DATE_END => '2019-07-14'
           },
         }
@@ -3714,7 +3926,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-12-13',
+            DATE_END => '2019-12-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-14',
+            DATE_END => '2019-12-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-15',
             DATE_END => '2019-12-15'
           },
         }
@@ -3727,7 +3957,24 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
             DATE_START => '2021-09-17',
+            DATE_END => '2021-09-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2021-09-18',
+            DATE_END => '2021-09-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-09-19',
             DATE_END => '2021-09-19'
           },
         }
@@ -3739,7 +3986,24 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
             DATE_START => '2021-12-27',
+            DATE_END => '2021-12-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2021-12-29',
+            DATE_END => '2021-12-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-12-29',
             DATE_END => '2021-12-29'
           },
         }
@@ -3751,7 +4015,33 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2022-03-11',
+            DATE_END => '2022-03-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-03-12',
+            DATE_END => '2022-03-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-03-12',
+            DATE_END => '2022-03-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-03-12',
             DATE_END => '2022-03-13'
           },
         }
@@ -3765,6 +4055,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-05-21',
             DATE_END => '2022-05-21'
           },
@@ -3779,7 +4070,17 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2022-05-28',
+            DATE_END => '2022-05-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-05-29',
             DATE_END => '2022-05-29'
           },
         }
@@ -3791,7 +4092,26 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2022-12-09',
+            DATE_END => '2022-12-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-11',
+            DATE_END => '2022-12-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-11',
             DATE_END => '2022-12-11'
           },
         }
@@ -3803,8 +4123,34 @@ my %TOURNAMENTS_POLAND =
         {
           'C0' => 
           {
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             YEAR => 2023,
             DATE_START => '2023-03-31',
+            DATE_END => '2023-04-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-01',
+            DATE_END => '2023-04-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-01',
+            DATE_END => '2023-04-01'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-02',
             DATE_END => '2023-04-02'
           },
         }
@@ -3818,7 +4164,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2023-05-20',
+            DATE_END => '2023-05-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-20',
+            DATE_END => '2023-05-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-21',
             DATE_END => '2023-05-21'
           },
         }
@@ -3832,7 +4196,9 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2023,
-            DATE_START => '2023-07-31',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-01',
             DATE_END => '2023-08-01'
           },
         }
@@ -3846,6 +4212,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2023,
+            major => 'SEGMENT',
             DATE_START => '2023-08-27',
             DATE_END => '2023-08-27'
           },
@@ -3858,7 +4225,24 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2023,
+            major => 'ROUND|MATCH',
             DATE_START => '2023-12-15',
+            DATE_END => '2023-12-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-16',
+            DATE_END => '2023-12-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-17',
             DATE_END => '2023-12-17'
           },
         }
@@ -3871,7 +4255,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2024-03-23',
+            DATE_END => '2024-03-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-23',
+            DATE_END => '2024-03-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-24',
             DATE_END => '2024-03-24'
           },
         }
@@ -3885,6 +4287,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2024,
+            major => 'SEGMENT',
             DATE_START => '2024-07-31',
             DATE_END => '2024-07-31'
           },
@@ -3899,6 +4302,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-08-25',
             DATE_END => '2024-08-25'
           },
@@ -3911,6 +4315,8 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
             DATE_START => '2024-09-29',
             DATE_END => '2024-09-29'
           },
@@ -3923,7 +4329,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2024-12-20',
+            DATE_END => '2024-12-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-21',
+            DATE_END => '2024-12-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-22',
             DATE_END => '2024-12-22'
           },
         }
@@ -4046,10 +4470,28 @@ my %TOURNAMENTS_POLAND =
         ORDINAL => 2,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2023-06-09',
+            DATE_END => '2023-06-09'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-06-10',
+            DATE_END => '2023-06-10'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-06-10',
             DATE_END => '2023-06-10'
           },
         }
@@ -4059,10 +4501,36 @@ my %TOURNAMENTS_POLAND =
         ORDINAL => 3,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C9' =>
           {
             YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2024-05-31',
+            DATE_END => '2024-05-31'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-06-01',
+            DATE_END => '2024-06-01'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-06-01',
+            DATE_END => '2024-06-01'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-06-02',
             DATE_END => '2024-06-02'
           },
         }
@@ -4180,10 +4648,28 @@ my %TOURNAMENTS_POLAND =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            major => 'MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2024-04-03',
+            DATE_END => '2024-04-04'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-05',
+            DATE_END => '2024-04-05'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-05',
             DATE_END => '2024-04-05'
           },
         }
@@ -4303,6 +4789,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-04-26',
             DATE_END => '2019-04-26'
           },
@@ -4390,7 +4877,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH|SEGMENT',
             DATE_START => '2017-04-05',
+            DATE_END => '2017-04-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-04-08',
+            DATE_END => '2017-04-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-04-09',
             DATE_END => '2017-04-09'
           },
         }
@@ -4403,7 +4908,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2018-04-25',
+            DATE_END => '2018-04-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-28',
+            DATE_END => '2018-04-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-29',
             DATE_END => '2018-04-29'
           },
         }
@@ -4416,7 +4939,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-04-24',
+            DATE_END => '2019-04-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-27',
+            DATE_END => '2019-04-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-28',
             DATE_END => '2019-04-28'
           },
         }
@@ -4555,6 +5096,15 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2018-08-18',
+            DATE_END => '2018-08-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
             DATE_START => '2018-08-18',
             DATE_END => '2018-08-18'
           },
@@ -4567,6 +5117,16 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'ROUND|MATCH',
+            DATE_START => '2019-08-17',
+            DATE_END => '2019-08-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-08-17',
             DATE_END => '2019-08-17'
           },
@@ -4579,6 +5139,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND|MATCH',
             DATE_START => '2022-08-13',
             DATE_END => '2022-08-13'
           },
@@ -4591,6 +5152,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2024,
+            major => 'ROUND|MATCH',
             DATE_START => '2024-08-10',
             DATE_END => '2024-08-10'
           },
@@ -5203,6 +5765,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-05-01',
             DATE_END => '2017-05-01'
           } 
@@ -5229,6 +5792,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'ROUND|MATCH',
             DATE_START => '2022-02-26',
             DATE_END => '2022-02-27'
           },
@@ -5241,6 +5805,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-03-24',
             DATE_END => '2023-03-26'
           },
@@ -5264,10 +5829,19 @@ my %TOURNAMENTS_POLAND =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            major => 'SEGMENT',
             DATE_START => '2019-01-25',
+            DATE_END => '2019-01-25'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-26',
             DATE_END => '2019-01-27'
           },
         }
@@ -5306,10 +5880,27 @@ my %TOURNAMENTS_POLAND =
         MEET => 'Poznan Congress',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
             DATE_START => '2021-09-25',
+            DATE_END => '2021-09-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2021-09-26',
+            DATE_END => '2021-09-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-09-26',
             DATE_END => '2021-09-26'
           } 
         }
@@ -5323,6 +5914,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-04-22',
             DATE_END => '2022-04-24'
           } 
@@ -5333,12 +5925,30 @@ my %TOURNAMENTS_POLAND =
         MEET => 'Poznan Congress',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2023-04-30',
             DATE_END => '2023-04-30'
-          } 
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-30',
+            DATE_END => '2023-04-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-30',
+            DATE_END => '2023-04-30'
+          },
         }
       },
     }
@@ -5359,10 +5969,29 @@ my %TOURNAMENTS_POLAND =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Playoff',
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2022-01-21',
+            DATE_END => '2022-01-22'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-01-22',
+            DATE_END => '2022-01-22'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-01-22',
             DATE_END => '2022-01-23'
           },
         }
@@ -5630,6 +6259,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2017-05-02',
             DATE_END => '2017-05-03'
           } 
@@ -5644,6 +6275,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2018-05-02',
             DATE_END => '2018-05-03'
           } 
@@ -5658,6 +6291,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2019-05-02',
             DATE_END => '2019-05-03'
           } 
@@ -5672,6 +6306,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2021,
+            major => 'ROUND|SESSION',
             DATE_START => '2021-12-11',
             DATE_END => '2021-12-12'
           } 
@@ -5685,6 +6320,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2022-07-10',
             DATE_END => '2022-07-11'
           },
@@ -5699,6 +6335,8 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2023-05-02',
             DATE_END => '2023-05-02'
           },
@@ -5713,6 +6351,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-05-03',
             DATE_END => '2024-05-03'
           } 
@@ -6112,7 +6751,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
+            major => 'ROUND|MATCH',
             DATE_START => '2016-12-15',
+            DATE_END => '2016-12-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-12-16',
+            DATE_END => '2016-12-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-12-17',
             DATE_END => '2016-12-17'
           },
         }
@@ -6125,7 +6782,17 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-08-08',
+            DATE_END => '2017-08-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-09',
             DATE_END => '2017-08-09'
           },
         }
@@ -6139,7 +6806,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND|MATCH|SEGMENT',
             DATE_START => '2018-03-02',
+            DATE_END => '2018-03-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-03-02',
+            DATE_END => '2018-03-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|MATCH',
+            DATE_START => '2018-03-03',
             DATE_END => '2018-03-03'
           },
         }
@@ -6153,7 +6838,17 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-08-09',
+            DATE_END => '2018-08-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-10',
             DATE_END => '2018-08-10'
           },
         }
@@ -6167,8 +6862,34 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|MATCH',
+            DATE_START => '2019-03-08',
+            DATE_END => '2019-03-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Triangle',
+            major => 'MATCH',
+            DATE_START => '2019-03-09',
+            DATE_END => '2019-03-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|MATCH',
             DATE_START => '2019-03-08',
             DATE_END => '2019-03-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|MATCH',
+            DATE_START => '2019-03-09',
+            DATE_END => '2019-03-10'
           },
         }
       },
@@ -6181,7 +6902,17 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2019-08-07',
+            DATE_END => '2019-08-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-08',
             DATE_END => '2019-08-08'
           },
         }
@@ -6194,7 +6925,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|MATCH',
             DATE_START => '2020-01-24',
+            DATE_END => '2020-01-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'ROUND|MATCH',
+            DATE_START => '2020-01-24',
+            DATE_END => '2020-01-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
+            DATE_START => '2020-01-25',
             DATE_END => '2020-01-25'
           },
         }
@@ -6207,7 +6956,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2021,
+            STAGE => 'Qualifying',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2021-08-10',
+            DATE_END => '2021-08-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2021-08-10',
+            DATE_END => '2021-08-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-08-11',
             DATE_END => '2021-08-12'
           },
         }
@@ -6220,7 +6987,17 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2022-07-20',
+            DATE_END => '2022-07-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-21',
             DATE_END => '2022-07-21'
           },
         }
@@ -6233,6 +7010,8 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2024-03-01',
             DATE_END => '2024-03-02'
           },
@@ -6259,6 +7038,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-05-13',
             DATE_END => '2022-05-15'
           },
@@ -6271,6 +7051,8 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SESSION|SEGMENT',
             DATE_START => '2023-02-24',
             DATE_END => '2023-02-26'
           },
@@ -6489,13 +7271,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2017-05-18',
             DATE_END => '2017-05-21'
           },
           'C1' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-05-31',
+            DATE_END => '2017-06-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-02',
             DATE_END => '2017-06-04'
           },
         }
@@ -6507,7 +7301,17 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-04-09',
+            DATE_END => '2018-04-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-11',
             DATE_END => '2018-04-13'
           },
         }
@@ -6519,7 +7323,25 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-05-13',
+            DATE_END => '2019-05-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-14',
+            DATE_END => '2019-05-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-16',
             DATE_END => '2019-05-18'
           },
         }
@@ -6531,12 +7353,31 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
             DATE_START => '2021-06-20',
-            DATE_END => '2021-06-23'
+            DATE_END => '2021-06-21'
           },
           'C1' => 
           {
             YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2021-06-22',
+            DATE_END => '2021-06-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-06-22',
+            DATE_END => '2021-06-23'
+          },
+          'C3' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2021-07-28',
             DATE_END => '2021-07-30'
           },
@@ -6728,6 +7569,8 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2016-09-23',
             DATE_END => '2016-09-24'
           },
@@ -6741,7 +7584,15 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-07-31',
+            DATE_END => '2022-07-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND',
+            DATE_START => '2022-08-01',
             DATE_END => '2022-08-01'
           },
         }
@@ -7347,25 +8198,43 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2016-10-07',
             DATE_END => '2016-10-09'
           },
           'C1' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2017-01-06',
             DATE_END => '2017-01-08'
           },
           'C2' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2017-02-03',
             DATE_END => '2017-02-05'
           },
           'C3' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-05-05',
+            DATE_END => '2017-05-06'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-06',
             DATE_END => '2017-05-07'
           },
         }
@@ -7377,25 +8246,51 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2017-10-06',
             DATE_END => '2017-10-08'
           },
           'C1' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2018-01-05',
             DATE_END => '2018-01-07'
           },
           'C2' => 
           {
             YEAR => 2018,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
             DATE_START => '2018-01-26',
-            DATE_END => '2018-01-28'
+            DATE_END => '2018-01-27'
           },
           'C3' => 
           {
             YEAR => 2018,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-28',
+            DATE_END => '2018-01-28'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-05-04',
+            DATE_END => '2018-05-05'
+          },
+          'C5' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-05',
             DATE_END => '2018-05-06'
           },
         }
@@ -7407,25 +8302,76 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2018-10-12',
             DATE_END => '2018-10-14'
           },
           'C1' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT|MATCH',
             DATE_START => '2019-01-04',
             DATE_END => '2019-01-06'
           },
           'C2' => 
           {
             YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-02-01',
-            DATE_END => '2019-02-03'
+            DATE_END => '2019-02-01'
           },
           'C3' => 
           {
             YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-02-02',
+            DATE_END => '2019-02-02'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            major => 'SEGMENT',
+            DATE_START => '2019-02-03',
+            DATE_END => '2019-02-03'
+          },
+          'C5' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-06-06',
+            DATE_END => '2019-06-06'
+          },
+          'C6' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-07',
+            DATE_END => '2019-06-08'
+          },
+          'C7' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-08',
+            DATE_END => '2019-06-08'
+          },
+          'C8' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-08',
             DATE_END => '2019-06-09'
           },
         }
@@ -7437,25 +8383,43 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-10-04',
             DATE_END => '2019-10-06'
           },
           'C1' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2020-01-04',
             DATE_END => '2020-01-06'
           },
           'C2' => 
           {
             YEAR => 2020,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
             DATE_START => '2020-01-31',
             DATE_END => '2020-02-02'
           },
           'C3' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2020-06-26',
+            DATE_END => '2020-06-27'
+          },
+          'C4' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-06-27',
             DATE_END => '2020-06-28'
           },
         }
@@ -7467,25 +8431,59 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2020-10-02',
             DATE_END => '2020-10-04'
           },
           'C1' => 
           {
             YEAR => 2021,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2021-05-28',
             DATE_END => '2021-05-30'
           },
           'C2' => 
           {
             YEAR => 2021,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
             DATE_START => '2021-06-11',
-            DATE_END => '2021-06-13'
+            DATE_END => '2021-06-12'
           },
           'C3' => 
           {
             YEAR => 2021,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2021-06-13',
+            DATE_END => '2021-06-13'
+          },
+          'C4' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2021-09-02',
+            DATE_END => '2021-09-03'
+          },
+          'C5' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2021-09-03',
+            DATE_END => '2021-09-04'
+          },
+          'C6' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-09-03',
             DATE_END => '2021-09-05'
           },
         }
@@ -7497,25 +8495,59 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2021,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2021-11-19',
             DATE_END => '2021-11-21'
           },
           'C1' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2022-01-07',
             DATE_END => '2022-01-09'
           },
           'C2' => 
           {
             YEAR => 2022,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
             DATE_START => '2022-02-18',
-            DATE_END => '2022-02-20'
+            DATE_END => '2022-02-19'
           },
           'C3' => 
           {
             YEAR => 2022,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2022-02-20',
+            DATE_END => '2022-02-20'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2022-06-03',
+            DATE_END => '2022-06-04'
+          },
+          'C5' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2022-06-04',
+            DATE_END => '2022-06-05'
+          },
+          'C6' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-06-04',
             DATE_END => '2022-06-05'
           },
         }
@@ -7527,25 +8559,59 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2022-09-30',
             DATE_END => '2022-10-02'
           },
           'C1' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-01-06',
             DATE_END => '2023-01-08'
           },
           'C2' => 
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2023-02-10',
-            DATE_END => '2023-02-12'
+            DATE_END => '2023-02-11'
           },
           'C3' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-02-11',
+            DATE_END => '2023-02-12'
+          },
+          'C4' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-05-26',
+            DATE_END => '2023-05-27'
+          },
+          'C5' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-26',
+            DATE_END => '2023-05-27'
+          },
+          'C6' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-27',
             DATE_END => '2023-05-28'
           },
         }
@@ -7557,25 +8623,58 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'SEGMENT',
             DATE_START => '2023-10-06',
             DATE_END => '2023-10-08'
           },
           'C1' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2024-01-05',
             DATE_END => '2024-01-07'
           },
           'C2' => 
           {
             YEAR => 2024,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
             DATE_START => '2024-02-23',
-            DATE_END => '2024-02-25'
+            DATE_END => '2024-02-24'
           },
           'C3' => 
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-02-24',
+            DATE_END => '2024-02-25'
+          },
+          'C4' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2024-06-07',
+            DATE_END => '2024-06-08'
+          },
+          'C5' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2024-06-08',
+            DATE_END => '2024-06-09'
+          },
+          'C6' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-06-08',
             DATE_END => '2024-06-09'
           },
         }
@@ -7587,6 +8686,9 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2024-10-04',
             DATE_END => '2024-10-06'
           },
@@ -7727,6 +8829,9 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Playoff',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2017-05-28',
             DATE_END => '2017-05-28'
           } 
@@ -7752,6 +8857,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION|ROUND',
             DATE_START => '2017-04-29',
             DATE_END => '2017-04-29'
           },
@@ -7766,6 +8873,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2023-08-23',
             DATE_END => '2023-08-23'
           },
@@ -7780,7 +8888,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2024,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-08-21',
             DATE_END => '2024-08-21'
           } 
@@ -7821,6 +8929,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-02-10',
             DATE_END => '2018-02-11'
           } 
@@ -7833,6 +8943,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-01-19',
             DATE_END => '2020-01-21'
           } 
@@ -7871,9 +8983,19 @@ my %TOURNAMENTS_POLAND =
         REGION => 'Biala Podlaska',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-11',
+            DATE_END => '2017-03-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-03-11',
             DATE_END => '2017-03-12'
           },
@@ -7981,6 +9103,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-05-13',
             DATE_END => '2022-05-15'
           },
@@ -7993,6 +9116,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2023-03-11',
             DATE_END => '2023-03-12'
           },
@@ -8004,6 +9129,8 @@ my %TOURNAMENTS_POLAND =
         {
           'SINGLE' =>
           {
+            STAGE => 'Final',
+            major => 'ROUND',
             YEAR => 2024,
             DATE_START => '2024-04-19',
             DATE_END => '2024-04-21'
@@ -8031,6 +9158,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2023-03-10',
             DATE_END => '2023-03-11'
           },
@@ -8083,6 +9212,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
+            minor => 'SESSION|SEGMENT',
             DATE_START => '2018-03-02',
             DATE_END => '2018-03-04'
           },
@@ -8097,6 +9228,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'SESSION|ROUND',
             DATE_START => '2022-03-05',
             DATE_END => '2022-03-06'
           },
@@ -8111,6 +9243,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'SESSION|ROUND',
             DATE_START => '2023-03-10',
             DATE_END => '2023-03-12'
           },
@@ -8124,6 +9257,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'SESSION|SEGMENT|ROUND',
             DATE_START => '2024-06-05',
             DATE_END => '2024-06-06'
           },
@@ -8175,6 +9309,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-04-05',
             DATE_END => '2019-04-07'
           },
@@ -8187,6 +9322,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2020,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2020-02-21',
             DATE_END => '2020-02-23'
           },
@@ -8211,6 +9347,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-04-19',
             DATE_END => '2024-04-21'
           },
@@ -8237,6 +9374,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'ROUND|MATCH',
             DATE_START => '2024-02-16',
             DATE_END => '2024-02-18'
           },
@@ -8277,7 +9415,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2024,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-08-23',
             DATE_END => '2024-08-23'
           } 
@@ -8428,6 +9566,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-10-28',
             DATE_END => '2017-10-28'
           } 
@@ -8543,6 +9683,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND|SESSION',
             DATE_START => '2017-05-19',
             DATE_END => '2017-05-20'
           } 
@@ -8555,6 +9696,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-05-25',
             DATE_END => '2018-05-26'
           } 
@@ -8567,6 +9709,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-05-31',
             DATE_END => '2019-06-01'
           } 
@@ -8579,6 +9722,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2021,
+            major => 'ROUND|SEGMENT|MATCH',
             DATE_START => '2021-03-26',
             DATE_END => '2021-03-27'
           } 
@@ -8743,7 +9887,32 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND|MATCH',
             DATE_START => '2017-03-03',
+            DATE_END => '2017-03-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-04',
+            DATE_END => '2017-03-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-04',
+            DATE_END => '2017-03-04'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-04',
             DATE_END => '2017-03-04'
           },
         }
