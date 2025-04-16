@@ -262,6 +262,7 @@ my @LOCAL_SUBS =
     CORR => 'Indian Silver Open Teams ' },
   { START => 79784, END => 79791, TEXT => '^Gold ', 
     CORR => 'Indian Gold Open Teams ' },
+  { START => 80013, END => 80016, TEXT => '^1_8 ', CORR => 'QF ' },
   { START => 80031, END => 80043, TEXT => ' Mix ', 
     CORR => ' - Mixed Pairs - ' },
   { START => 80031, END => 80114, TEXT => '^U21', 
@@ -297,6 +298,7 @@ my @LOCAL_SUBS_INTERPOL =
 (
   { START => 49185, END => 49228, TEXT => '^Segment Q(\d_\d)', 
     CORR => 'Qualifying - Segment $1' },
+  { START => 50630, END => 50670, TEXT => '^Q(\d)$', CORR => 'Segment $1' },
   { START => 52291, END => 52298, TEXT => '^Junior U-(\d+)', 
     CORR => 'U$1' },
   { START => 52933, END => 52975, TEXT => '^BB\d+-', CORR => '' },

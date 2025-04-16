@@ -820,6 +820,8 @@ my @LOCAL_SUBS =
   { START => 50344, END => 50402, 
     TEXT => 'Italian Teams Championships', 
     CORR => 'Italian Open Teams' },
+  { START => 50630, END => 50670, 
+    TEXT => 'Knock[ -]out$', CORR => 'Rof32' },
   { START => 50651, END => 50869, 
     TEXT => 'ABF Zonals', CORR => 'African Zonal Championships' },
   { START => 50692, END => 50722, TEXT => '1_16', CORR => 'Rof16' },

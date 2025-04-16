@@ -588,8 +588,9 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Playoff',
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-07-07',
             DATE_END => '2017-07-09'
           } 
@@ -614,6 +615,8 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2023-07-09',
             DATE_END => '2023-07-09'
           } 
@@ -626,7 +629,17 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Elimination',
+            major => 'ROUND',
             DATE_START => '2024-07-06',
+            DATE_END => '2024-07-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2024-07-07',
             DATE_END => '2024-07-07'
           } 
         }
@@ -679,18 +692,32 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-05-01',
             DATE_END => '2017-05-01'
           },
           'C1' => 
           {
             YEAR => 2017,
-            DATE_START => '2017-05-15',
-            DATE_END => '2017-05-15'
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2017-05-01',
+            DATE_END => '2017-05-01'
           },
           'C2' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2017-05-15',
+            DATE_END => '2017-05-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Danish',
+            major => 'ROUND|MATCH',
             DATE_START => '2017-05-19',
             DATE_END => '2017-05-22'
           },
@@ -704,13 +731,14 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2018,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2018-05-11',
             DATE_END => '2018-05-13'
           },
           'C1' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Danish',
             major => 'ROUND',
             DATE_START => '2018-05-28',
             DATE_END => '2018-05-28'
@@ -718,8 +746,19 @@ my %TOURNAMENTS_TURKEY =
           'C2' => 
           {
             YEAR => 2018,
-            major => 'ROUND',
+            STAGE => 'Final',
+            MOVEMENT => 'Danish',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-06-01',
+            DATE_END => '2018-06-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            MOVEMENT => 'Danish',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2018-06-04',
             DATE_END => '2018-06-04'
           },
         }
@@ -731,14 +770,16 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2019,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-04-26',
             DATE_END => '2019-04-28'
           },
           'C1' => 
           {
             YEAR => 2019,
-            major => 'ROUND',
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2019-05-17',
             DATE_END => '2019-05-19'
           },
@@ -927,6 +968,8 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|MATCH',
             DATE_START => '2018-07-12',
             DATE_END => '2018-07-12'
           } 
@@ -950,10 +993,28 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT|MATCH',
             DATE_START => '2017-02-11',
+            DATE_END => '2017-02-11'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-12',
+            DATE_END => '2017-02-12'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-12',
             DATE_END => '2017-02-12'
           },
         }
@@ -962,10 +1023,20 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2018-01-19',
+            DATE_END => '2018-01-19'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2018-01-20',
             DATE_END => '2018-01-21'
           },
         }
@@ -974,10 +1045,20 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'ROUND|MATCH',
             DATE_START => '2018-12-22',
+            DATE_END => '2018-12-23'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
+            DATE_START => '2018-12-23',
             DATE_END => '2018-12-23'
           },
         }
@@ -989,6 +1070,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-01-04',
             DATE_END => '2019-01-06'
           },
@@ -1001,6 +1084,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'ROUND|MATCH',
             DATE_START => '2020-01-17',
             DATE_END => '2020-01-19'
           },
@@ -1010,9 +1095,24 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2023-01-22',
+            DATE_END => '2023-01-22'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            DATE_START => '2023-01-22',
+            DATE_END => '2023-01-22'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
             DATE_START => '2023-01-22',
             DATE_END => '2023-01-22'
           },
@@ -1192,18 +1292,24 @@ my %TOURNAMENTS_TURKEY =
           'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-11-21',
             DATE_END => '2019-11-21'
           },
           'C1' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
             DATE_START => '2019-11-28',
             DATE_END => '2019-11-28'
           },
           'C2' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
             DATE_START => '2019-12-05',
             DATE_END => '2019-12-05'
           },
@@ -1230,6 +1336,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2020,
+            major => 'SESSION',
             DATE_START => '2020-02-07',
             DATE_END => '2020-02-07'
           },
@@ -1256,18 +1363,24 @@ my %TOURNAMENTS_TURKEY =
           'C0' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-04-25',
             DATE_END => '2019-04-25'
           },
           'C1' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Danish',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-05-02',
             DATE_END => '2019-05-02'
           },
           'C2' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Danish',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-05-09',
             DATE_END => '2019-05-09'
           },
@@ -1364,6 +1477,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|MATCH',
             DATE_START => '2016-09-24',
             DATE_END => '2016-09-25'
           },
@@ -1488,6 +1603,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-06-02',
             DATE_END => '2018-06-03'
           },
@@ -1515,6 +1632,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Final',
+            major => 'ROUND|MATCH',
             DATE_START => '2015-04-24',
             DATE_END => '2015-04-26'
           },
@@ -1527,6 +1645,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-05-20',
             DATE_END => '2017-05-21'
           },
@@ -1536,10 +1656,22 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-05-25',
+            DATE_END => '2024-05-25'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Danish',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2024-05-26',
             DATE_END => '2024-05-26'
           },
         }
@@ -1725,6 +1857,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-02-11',
             DATE_END => '2017-02-12'
           } 
@@ -1734,12 +1868,37 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-02-24',
+            DATE_END => '2017-02-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof128',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-26',
+            DATE_END => '2017-02-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-27',
+            DATE_END => '2017-02-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-27',
             DATE_END => '2017-02-28'
-          } 
+          },
         }
       },
       '2018' =>
@@ -1749,6 +1908,9 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-01-20',
             DATE_END => '2018-01-21'
           } 
@@ -1761,6 +1923,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2019-01-19',
             DATE_END => '2019-01-20'
           } 
@@ -1773,6 +1937,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2020-01-18',
             DATE_END => '2020-01-19'
           } 
@@ -1785,6 +1951,9 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2022-03-19',
             DATE_END => '2022-03-20'
           } 
@@ -1797,6 +1966,9 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|MATCH',
             DATE_START => '2023-01-21',
             DATE_END => '2023-01-22'
           } 
@@ -1809,6 +1981,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH|SEGMENT',
             DATE_START => '2024-02-16',
             DATE_END => '2024-02-18'
           } 
@@ -1835,6 +2009,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-03-16',
             DATE_END => '2019-03-17'
           },
@@ -1858,10 +2033,20 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2020,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2020-02-01',
+            DATE_END => '2020-02-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2020,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2020-02-02',
             DATE_END => '2020-02-02'
           },
         }
@@ -1988,6 +2173,9 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-02-12',
             DATE_END => '2017-02-12'
           } 
@@ -2000,12 +2188,14 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-12-22',
             DATE_END => '2018-12-23'
           },
           'C1' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-01-05',
             DATE_END => '2019-01-06'
           } 
@@ -2018,12 +2208,16 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2019-12-21',
             DATE_END => '2019-12-22'
           },
           'C1' => 
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2020-01-05',
             DATE_END => '2020-01-05'
           } 
@@ -2033,10 +2227,19 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Playoff',
             DATE_START => '2022-03-19',
+            DATE_END => '2022-03-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2022-03-20',
             DATE_END => '2022-03-20'
           } 
         }
@@ -2060,6 +2263,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT|MATCH',
             DATE_START => '2024-02-18',
             DATE_END => '2024-02-18'
           } 
@@ -2095,9 +2300,19 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-03-05',
+            DATE_END => '2017-03-05'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
             DATE_START => '2017-03-05',
             DATE_END => '2017-03-05'
           },
@@ -2166,7 +2381,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2019,
-            major => 'ROUND',
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2019-05-18',
             DATE_END => '2019-05-19'
           },
@@ -2176,11 +2392,20 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2022-07-02',
+            DATE_END => '2022-07-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2022-07-03',
             DATE_END => '2022-07-03'
           },
         }
@@ -2189,11 +2414,19 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
-            major => 'ROUND',
+            STAGE => 'Elimination',
+            major => 'ROUND|MATCH',
             DATE_START => '2023-05-20',
+            DATE_END => '2023-05-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            MOVEMENT => 'Danish',
+            DATE_START => '2023-05-21',
             DATE_END => '2023-05-21'
           },
         }
@@ -2219,6 +2452,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SESSION',
             DATE_START => '2018-04-09',
             DATE_END => '2018-04-10'
           },
@@ -2232,6 +2466,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'SESSION',
             DATE_START => '2019-04-17',
             DATE_END => '2019-04-18'
           },
@@ -2245,6 +2480,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'SESSION',
             DATE_START => '2019-10-09',
             DATE_END => '2019-10-10'
           },
@@ -2270,6 +2506,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SESSION',
             DATE_START => '2018-04-10',
             DATE_END => '2018-04-12'
           },
@@ -2280,10 +2517,20 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Merit Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
             DATE_START => '2018-09-03',
+            DATE_END => '2018-09-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2018-09-05',
             DATE_END => '2018-09-06'
           },
         }
@@ -2296,6 +2543,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'SESSION',
             DATE_START => '2019-04-15',
             DATE_END => '2019-04-18'
           },
@@ -2309,6 +2557,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'SESSION',
             DATE_START => '2019-10-07',
             DATE_END => '2019-10-09'
           },
@@ -2512,7 +2761,6 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'SEGMENT',
             DATE_START => '2015-09-11',
             DATE_END => '2015-09-11'
           },
@@ -2526,6 +2774,31 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-02',
+            DATE_END => '2016-09-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2016-09-02',
+            DATE_END => '2016-09-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-02',
+            DATE_END => '2016-09-02'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-09-02',
             DATE_END => '2016-09-02'
           },
@@ -2549,9 +2822,20 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            ignore => 'MATCH',
+            DATE_START => '2017-01-15',
+            DATE_END => '2017-01-15'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-01-15',
             DATE_END => '2017-01-15'
           },
@@ -2564,30 +2848,39 @@ my %TOURNAMENTS_TURKEY =
           'C0' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-11-29',
             DATE_END => '2018-11-29'
           },
           'C1' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-12-06',
             DATE_END => '2018-12-06'
           },
           'C2' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-12-09',
             DATE_END => '2018-12-09'
           },
           'C3' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-12-13',
             DATE_END => '2018-12-13'
           },
           'C4' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-12-20',
             DATE_END => '2018-12-20'
           },
@@ -2751,10 +3044,52 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2024-03-18',
+            DATE_END => '2024-03-18'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-19',
+            DATE_END => '2024-03-19'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-20',
+            DATE_END => '2024-03-20'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-21',
+            DATE_END => '2024-03-21'
+          },
+          'C4' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-22',
+            DATE_END => '2024-03-22'
+          },
+          'C5' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-23',
             DATE_END => '2024-03-23'
           },
         }
@@ -2779,6 +3114,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2020-01-23',
             DATE_END => '2020-01-23'
           },
@@ -2850,6 +3187,8 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2016-09-27',
             DATE_END => '2016-09-28'
           },
@@ -3053,8 +3392,18 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-05-19',
+            DATE_END => '2017-05-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2017-05-21',
             DATE_END => '2017-05-21'
           },
         }
@@ -3079,8 +3428,17 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Elimination',
             major => 'ROUND',
             DATE_START => '2019-05-25',
+            DATE_END => '2019-05-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2019-05-27',
             DATE_END => '2019-05-27'
           },
         }
@@ -3561,91 +3919,378 @@ my %TOURNAMENTS_TURKEY =
       },
       '2016' =>
       {
-        # TODO Really the same tournament as above?
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-10-11',
+            DATE_END => '2016-10-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2016-10-13',
+            DATE_END => '2016-10-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2016-10-13',
+            DATE_END => '2016-10-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2016-10-15',
+            DATE_END => '2016-10-15'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2016-10-15',
+            DATE_END => '2016-10-15'
+          },
+          'C5' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Bronze',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2016-10-16',
+            DATE_END => '2016-10-16'
+          },
+          'C6' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2016-10-16',
             DATE_END => '2016-10-16'
           },
         }
       },
       '2017' =>
       {
-        # TODO Really the same tournament as above?
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-07-29',
+            DATE_END => '2017-07-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-31',
+            DATE_END => '2017-07-31'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-07-31',
+            DATE_END => '2017-08-01'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-01',
+            DATE_END => '2017-08-02'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-02',
+            DATE_END => '2017-08-02'
+          },
+          'C5' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-03',
             DATE_END => '2017-08-03'
           },
         }
       },
       '2018' =>
       {
-        # TODO Really the same tournament as above?
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-07-21',
+            DATE_END => '2018-07-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-23',
+            DATE_END => '2018-07-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-23',
+            DATE_END => '2018-07-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-24',
+            DATE_END => '2018-07-25'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-25',
+            DATE_END => '2018-07-25'
+          },
+          'C5' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-26',
             DATE_END => '2018-07-26'
           },
         }
       },
       '2019' =>
       {
-        # TODO Really the same tournament as above?
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2019,
+            major => 'ROUND|MATCH',
             DATE_START => '2019-07-20',
+            DATE_END => '2019-07-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-07-22',
+            DATE_END => '2019-07-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-07-22',
+            DATE_END => '2019-07-23'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-07-23',
+            DATE_END => '2019-07-24'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-24',
+            DATE_END => '2019-07-24'
+          },
+          'C5' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-25',
             DATE_END => '2019-07-25'
           },
         }
       },
       '2022' =>
       {
-        # TODO Really the same tournament as above?
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Elimination',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2022-08-06',
+            DATE_END => '2022-08-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-08-08',
+            DATE_END => '2022-08-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-08-08',
+            DATE_END => '2022-08-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-08-09',
+            DATE_END => '2022-08-10'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-08-10',
+            DATE_END => '2022-08-10'
+          },
+          'C5' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-08-11',
             DATE_END => '2022-08-11'
           },
         }
       },
       '2023' =>
       {
-        # TODO Really the same tournament as above?
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Elimination',
+            major => 'ROUND',
             DATE_START => '2023-07-22',
+            DATE_END => '2023-07-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-07-24',
+            DATE_END => '2023-07-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-07-24',
+            DATE_END => '2023-07-25'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-07-25',
+            DATE_END => '2023-07-26'
+          },
+          'C4' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-07-26',
+            DATE_END => '2023-07-26'
+          },
+          'C5' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-07-27',
             DATE_END => '2023-07-27'
           },
         }
       },
       '2024' =>
       {
-        # TODO Really the same tournament as above?
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
             DATE_START => '2024-08-26',
+            DATE_END => '2024-08-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-27',
+            DATE_END => '2024-08-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-28',
+            DATE_END => '2024-08-28'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-29',
+            DATE_END => '2024-08-29'
+          },
+          'C4' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-30',
             DATE_END => '2024-08-30'
           },
         }
@@ -3698,6 +4343,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-06-10',
             DATE_END => '2017-06-11'
           } 
@@ -3710,6 +4357,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2019-05-19',
             DATE_END => '2019-05-19'
           } 
@@ -3787,7 +4435,25 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-12-01',
+            DATE_END => '2018-12-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-03',
+            DATE_END => '2018-12-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-04',
             DATE_END => '2018-12-04'
           },
         }
@@ -3799,6 +4465,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2019,
+            major => 'ROUND|MATCH',
             DATE_START => '2019-11-08',
             DATE_END => '2019-11-17'
           },
@@ -3811,7 +4478,32 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2020,
+            major => 'ROUND|MATCH',
             DATE_START => '2020-01-11',
+            DATE_END => '2020-01-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-13',
+            DATE_END => '2020-01-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-13',
+            DATE_END => '2020-01-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-14',
             DATE_END => '2020-01-14'
           },
         }
@@ -3823,7 +4515,33 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Elimination',
+            major => 'MATCH|ROUND',
             DATE_START => '2022-03-14',
+            DATE_END => '2022-03-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-03-16',
+            DATE_END => '2022-03-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-03-17',
+            DATE_END => '2022-03-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-03-18',
             DATE_END => '2022-03-18'
           },
         }
@@ -3835,7 +4553,17 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Elimination',
+            major => 'ROUND|MATCH',
             DATE_START => '2023-12-13',
+            DATE_END => '2023-12-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-15',
             DATE_END => '2023-12-15'
           },
         }
@@ -3847,7 +4575,25 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-02-27',
+            DATE_END => '2024-02-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-02-28',
+            DATE_END => '2024-02-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-02-29',
             DATE_END => '2024-02-29'
           },
         }
@@ -3859,7 +4605,17 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Elimination',
+            major => 'ROUND',
             DATE_START => '2024-12-11',
+            DATE_END => '2024-12-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-13',
             DATE_END => '2024-12-13'
           },
         }
@@ -3928,6 +4684,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-12-14',
             DATE_END => '2016-12-16'
           } 
@@ -3940,6 +4697,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-12-13',
             DATE_END => '2017-12-15'
           } 
@@ -3952,6 +4710,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2018-12-12',
             DATE_END => '2018-12-14'
           } 
@@ -3961,10 +4721,19 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
             DATE_START => '2021-12-16',
+            DATE_END => '2021-12-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-12-17',
             DATE_END => '2021-12-17'
           } 
         }
@@ -3976,6 +4745,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-12-16',
             DATE_END => '2022-12-16'
           } 
@@ -4315,7 +5086,40 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-11-03',
+            DATE_END => '2017-11-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-11-04',
+            DATE_END => '2017-11-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-08',
+            DATE_END => '2017-11-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-09',
+            DATE_END => '2017-11-10'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-11-10',
             DATE_END => '2017-11-12'
           },
         }
@@ -4328,7 +5132,34 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'MATCH',
             DATE_START => '2019-09-14',
+            DATE_END => '2019-09-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-17',
+            DATE_END => '2019-09-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-18',
+            DATE_END => '2019-09-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-20',
             DATE_END => '2019-09-21'
           },
         }
@@ -4341,7 +5172,32 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'SESSION|ROUND',
             DATE_START => '2022-03-05',
+            DATE_END => '2022-03-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-03-07',
+            DATE_END => '2022-03-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-03-08',
+            DATE_END => '2022-03-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-03-09',
             DATE_END => '2022-03-10'
           },
         }
@@ -4354,7 +5210,33 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2024-01-22',
+            DATE_END => '2024-01-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-23',
+            DATE_END => '2024-01-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-24',
+            DATE_END => '2024-01-25'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-25',
             DATE_END => '2024-01-26'
           },
         }
@@ -4377,11 +5259,21 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-12-22',
-            DATE_END => '2017-12-23'
+            DATE_END => '2017-12-22'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-22',
+            DATE_END => '2017-12-24'
           },
         }
       },
@@ -4389,10 +5281,28 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2020-01-20',
+            DATE_END => '2020-01-21'
+          },
+          'C1' =>
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-22',
+            DATE_END => '2020-01-22'
+          },
+          'C2' =>
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-23',
             DATE_END => '2020-01-23'
           },
         }
@@ -4404,6 +5314,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-03-17',
             DATE_END => '2022-03-18'
           },
@@ -4416,6 +5328,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-02-12',
             DATE_END => '2024-02-12'
           },
@@ -4438,9 +5352,18 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2024-04-28',
+            DATE_END => '2024-04-28'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
             DATE_START => '2024-04-28',
             DATE_END => '2024-04-28'
           },
@@ -4466,8 +5389,50 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
             DATE_START => '2017-05-06',
-            DATE_END => '2017-05-11'
+            DATE_END => '2017-05-06'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-07',
+            DATE_END => '2017-05-07'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-08',
+            DATE_END => '2017-05-08'
+          },
+          'C3' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-09',
+            DATE_END => '2017-05-10'
+          },
+          'C4' =>
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|MATCH',
+            DATE_START => '2017-05-10',
+            DATE_END => '2017-05-10'
+          },
+          'C5' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-10',
+            DATE_END => '2017-05-10'
           },
         }
       },
@@ -4476,10 +5441,52 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-05-19',
+            DATE_END => '2018-05-20'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-21',
+            DATE_END => '2018-05-21'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2018-05-22',
+            DATE_END => '2018-05-22'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-23',
+            DATE_END => '2018-05-23'
+          },
+          'C4' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Bronze',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-05-23',
+            DATE_END => '2018-05-23'
+          },
+          'C5' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-23',
             DATE_END => '2018-05-24'
           },
         }
@@ -4489,10 +5496,20 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-05-11',
+            DATE_END => '2019-05-14'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Danish',
+            major => 'ROUND|MATCH',
+            DATE_START => '2019-05-15',
             DATE_END => '2019-05-15'
           },
         }
@@ -4502,10 +5519,20 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2022-05-21',
+            DATE_END => '2022-05-24'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2022-05-25',
             DATE_END => '2022-05-26'
           },
         }
@@ -4515,10 +5542,20 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2023-04-29',
+            DATE_END => '2023-05-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2023-05-03',
             DATE_END => '2023-05-03'
           },
         }
@@ -4531,6 +5568,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2024-04-29',
             DATE_END => '2024-05-02'
           },
@@ -4553,10 +5592,20 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Knock-out',
+            major => 'SEGMENT',
             DATE_START => '2017-05-10',
+            DATE_END => '2017-05-10'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|MATCH',
+            DATE_START => '2017-05-11',
             DATE_END => '2017-05-11'
           },
         }
@@ -4566,10 +5615,20 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Knock-out',
+            major => 'SEGMENT',
             DATE_START => '2019-05-14',
+            DATE_END => '2019-05-14'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-15',
             DATE_END => '2019-05-15'
           },
         }
@@ -4579,10 +5638,20 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2022-05-24',
+            DATE_END => '2022-05-24'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-05-25',
             DATE_END => '2022-05-25'
           },
         }
@@ -4592,10 +5661,20 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2023-05-01',
+            DATE_END => '2023-05-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-03',
             DATE_END => '2023-05-03'
           },
         }
@@ -4608,6 +5687,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-05-02',
             DATE_END => '2024-05-02'
           },
@@ -4631,10 +5712,51 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-02-10',
+            DATE_END => '2018-02-11'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-12',
+            DATE_END => '2018-02-12'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-12',
+            DATE_END => '2018-02-13'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-13',
+            DATE_END => '2018-02-14'
+          },
+          'C4' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-14',
+            DATE_END => '2018-02-14'
+          },
+          'C5' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-15',
             DATE_END => '2018-02-15'
           },
         }
@@ -4716,6 +5838,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2017-01-30',
             DATE_END => '2017-01-31'
           },
@@ -4780,6 +5904,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2017-01-29',
             DATE_END => '2017-01-29'
           },
@@ -4792,6 +5918,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2017-04-01',
             DATE_END => '2017-04-01'
           },
@@ -4843,6 +5971,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2016,
+            STAGE => 'Final',
             DATE_START => '2016-03-06',
             DATE_END => '2016-03-06'
           },
@@ -4857,6 +5986,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-07-27',
             DATE_END => '2018-07-27'
           },
@@ -4883,6 +6013,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION|MATCH',
             DATE_START => '2017-01-30',
             DATE_END => '2017-01-31'
           },
@@ -4935,6 +6067,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-03-03',
             DATE_END => '2020-03-03'
           },
@@ -4947,6 +6081,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-01-28',
             DATE_END => '2022-01-29'
           },
@@ -4959,6 +6094,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-05-21',
             DATE_END => '2023-05-21'
           },
@@ -5492,7 +6628,7 @@ my %TOURNAMENTS_TURKEY =
             # TODO Probably a different tournament
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|MATCH|SEGMENT',
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-07'
           },
@@ -5550,10 +6686,35 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-02-24',
+            DATE_END => '2017-02-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof128',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-26',
+            DATE_END => '2017-02-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-27',
+            DATE_END => '2017-02-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-27',
             DATE_END => '2017-02-28'
           },
         }
@@ -5564,10 +6725,36 @@ my %TOURNAMENTS_TURKEY =
         MEET_TAG => 2017,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-03-25',
+            DATE_END => '2017-03-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-26',
+            DATE_END => '2017-03-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-27',
+            DATE_END => '2017-03-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-28',
             DATE_END => '2017-03-28'
           },
         }
@@ -5579,6 +6766,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-01-06',
             DATE_END => '2018-01-07'
           },
@@ -5593,7 +6781,57 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Rof128',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-03-19',
+            DATE_END => '2018-03-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof64',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-03-19',
+            DATE_END => '2018-03-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-03-20',
+            DATE_END => '2018-03-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-03-21',
+            DATE_END => '2018-03-21'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-03-22',
+            DATE_END => '2018-03-22'
+          },
+          'C5' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-23',
+            DATE_END => '2018-03-23'
+          },
+          'C6' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-24',
             DATE_END => '2018-03-24'
           },
         }
@@ -5606,7 +6844,48 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Rof64',
             DATE_START => '2019-02-05',
+            DATE_END => '2019-02-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-02-05',
+            DATE_END => '2019-02-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-02-06',
+            DATE_END => '2019-02-07'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-02-07',
+            DATE_END => '2019-02-07'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-02-08',
+            DATE_END => '2019-02-08'
+          },
+          'C5' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-02-09',
             DATE_END => '2019-02-09'
           },
         }
@@ -5618,7 +6897,49 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Rof64',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2020-02-11',
+            DATE_END => '2020-02-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2020-02-11',
+            DATE_END => '2020-02-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2020-02-12',
+            DATE_END => '2020-02-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-02-13',
+            DATE_END => '2020-02-13'
+          },
+          'C4' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-02-14',
+            DATE_END => '2020-02-14'
+          },
+          'C5' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-02-15',
             DATE_END => '2020-02-15'
           },
         }
@@ -5630,7 +6951,56 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-04-09',
+            DATE_END => '2022-04-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-12',
+            DATE_END => '2022-04-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-12',
+            DATE_END => '2022-04-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-13',
+            DATE_END => '2022-04-14'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-14',
+            DATE_END => '2022-04-14'
+          },
+          'C5' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-15',
+            DATE_END => '2022-04-15'
+          },
+          'C6' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-04-16',
             DATE_END => '2022-04-16'
           },
         }
@@ -5642,7 +7012,49 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Rof64',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-03-27',
+            DATE_END => '2023-03-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-03-28',
+            DATE_END => '2023-03-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-03-29',
+            DATE_END => '2023-03-29'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-03-30',
+            DATE_END => '2023-03-30'
+          },
+          'C4' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-03-31',
+            DATE_END => '2023-03-31'
+          },
+          'C5' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-04-01',
             DATE_END => '2023-04-01'
           },
         }
@@ -5769,12 +7181,30 @@ my %TOURNAMENTS_TURKEY =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2017-03-16',
+            DATE_END => '2017-03-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2017-03-18',
+            DATE_END => '2017-03-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2017-03-19',
             DATE_END => '2017-03-19'
-          } 
+          },
         }
       },
     }
@@ -5832,6 +7262,9 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2017-11-08',
             DATE_END => '2017-11-08'
           } 
@@ -5845,6 +7278,8 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2023-03-04',
             DATE_END => '2023-03-05'
           },
@@ -5908,7 +7343,18 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'MATCH',
             DATE_START => '2019-09-14',
+            DATE_END => '2019-09-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-16',
             DATE_END => '2019-09-17'
           },
         }
@@ -5921,6 +7367,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND|SESSION',
             DATE_START => '2022-03-05',
             DATE_END => '2022-03-05'
           },
@@ -5934,6 +7381,8 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-02-05',
             DATE_END => '2024-02-05'
           },
@@ -6042,6 +7491,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND|MATCH',
             DATE_START => '2016-02-20',
             DATE_END => '2016-02-21'
           } 
@@ -6053,10 +7503,27 @@ my %TOURNAMENTS_TURKEY =
         ORIGIN => 'National',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-03-16',
+            DATE_END => '2017-03-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2017-03-18',
+            DATE_END => '2017-03-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2017-03-19',
             DATE_END => '2017-03-19'
           } 
         }
@@ -6070,6 +7537,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            ignore => 'MATCH|SEGMENT',
             DATE_START => '2018-01-13',
             DATE_END => '2018-01-14'
           } 
@@ -6081,12 +7550,22 @@ my %TOURNAMENTS_TURKEY =
         MEET_TAG => 2018,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Bronze',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-05-24',
             DATE_END => '2018-05-24'
-          } 
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-24',
+            DATE_END => '2018-05-24'
+          },
         }
       },
       '2019' =>
@@ -6098,6 +7577,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND|MATCH',
             DATE_START => '2019-01-15',
             DATE_END => '2019-01-18'
           } 
@@ -6109,10 +7589,20 @@ my %TOURNAMENTS_TURKEY =
         ORIGIN => 'National',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|MATCH',
             DATE_START => '2020-02-29',
+            DATE_END => '2020-03-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-03-03',
             DATE_END => '2020-03-03'
           } 
         }
@@ -6165,6 +7655,9 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Danish',
+            major => 'SEGMENT',
             DATE_START => '2024-05-03',
             DATE_END => '2024-05-03'
           },
