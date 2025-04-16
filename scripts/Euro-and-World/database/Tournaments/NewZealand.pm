@@ -418,12 +418,22 @@ my %TOURNAMENTS_NEWZEALAND =
         MEET => 'New Zealand Inter-Provincial Teams',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2016-11-25',
+            DATE_END => '2016-11-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2016-11-27',
             DATE_END => '2016-11-27'
-          } 
+          },
         }
       },
 
@@ -436,6 +446,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-11-24',
             DATE_END => '2017-11-26'
           } 
@@ -451,6 +463,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-11-23',
             DATE_END => '2018-11-26'
           } 
@@ -466,6 +480,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH|SESSION',
             DATE_START => '2019-11-22',
             DATE_END => '2019-11-25'
           } 
@@ -481,6 +497,9 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'MATCH',
             DATE_START => '2020-11-20',
             DATE_END => '2020-11-23'
           } 
@@ -539,6 +558,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2024-11-29',
             DATE_END => '2024-12-02'
           } 
@@ -564,6 +585,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-11-25',
             DATE_END => '2017-11-26'
           } 
@@ -577,6 +600,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-11-24',
             DATE_END => '2018-11-26'
           } 
@@ -590,6 +615,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-11-23',
             DATE_END => '2019-11-24'
           } 
@@ -603,6 +630,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'ROUND',
+            ignore => 'MATCH',
             DATE_START => '2020-11-20',
             DATE_END => '2020-11-23'
           } 
@@ -616,6 +645,7 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-11-29',
             DATE_END => '2024-12-02'
           } 
@@ -641,6 +671,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2016-11-25',
             DATE_END => '2016-11-27'
           } 
@@ -654,6 +686,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-11-25',
             DATE_END => '2017-11-26'
           } 
@@ -680,6 +714,8 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-11-22',
             DATE_END => '2019-11-24'
           } 
@@ -693,6 +729,7 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'ROUND|MATCH',
             DATE_START => '2020-11-21',
             DATE_END => '2020-11-22'
           } 
@@ -706,6 +743,7 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-11-29',
             DATE_END => '2024-12-02'
           } 
@@ -758,6 +796,7 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'SEGMENT|STANZA',
             DATE_START => '2024-03-03',
             DATE_END => '2024-03-04'
           },
@@ -814,6 +853,7 @@ my %TOURNAMENTS_NEWZEALAND =
           {
             YEAR => 2016,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-09-30',
             DATE_END => '2016-10-01'
           }
@@ -829,6 +869,7 @@ my %TOURNAMENTS_NEWZEALAND =
           {
             YEAR => 2017,
             STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-10-05',
             DATE_END => '2017-10-07'
           }
@@ -858,6 +899,7 @@ my %TOURNAMENTS_NEWZEALAND =
           {
             YEAR => 2018,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-10-05',
             DATE_END => '2018-10-06'
           }
@@ -887,6 +929,7 @@ my %TOURNAMENTS_NEWZEALAND =
           {
             YEAR => 2019,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-10-04',
             DATE_END => '2019-10-05'
           }
@@ -916,6 +959,7 @@ my %TOURNAMENTS_NEWZEALAND =
           {
             YEAR => 2023,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-09-29',
             DATE_END => '2023-09-30'
           }
@@ -930,7 +974,17 @@ my %TOURNAMENTS_NEWZEALAND =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2024-10-03',
+            DATE_END => '2024-10-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-04',
             DATE_END => '2024-10-05'
           },
         }
@@ -970,6 +1024,7 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SEGMENT|STANZA',
             DATE_START => '2018-11-09',
             DATE_END => '2018-11-11'
           } 
@@ -983,6 +1038,7 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'SEGMENT|STANZA',
             DATE_START => '2024-02-04',
             DATE_END => '2024-02-05'
           } 

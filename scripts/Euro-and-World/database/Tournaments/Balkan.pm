@@ -633,7 +633,17 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-10-05',
+            DATE_END => '2016-10-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-06',
             DATE_END => '2016-10-06'
           },
         }
@@ -646,7 +656,23 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-10-04',
+            DATE_END => '2017-10-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            DATE_START => '2017-10-05',
+            DATE_END => '2017-10-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            DATE_START => '2017-10-05',
             DATE_END => '2017-10-05'
           },
         }
@@ -659,7 +685,24 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-10-03',
+            DATE_END => '2018-10-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-04',
+            DATE_END => '2018-10-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-10-04',
             DATE_END => '2018-10-04'
           },
         }
@@ -672,7 +715,23 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-10-02',
+            DATE_END => '2019-10-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            DATE_START => '2019-10-03',
+            DATE_END => '2019-10-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            DATE_START => '2019-10-03',
             DATE_END => '2019-10-03'
           },
         }
@@ -685,7 +744,23 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2021,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2021-10-06',
+            DATE_END => '2021-10-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Semifinal',
+            DATE_START => '2021-10-07',
+            DATE_END => '2021-10-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            DATE_START => '2021-10-07',
             DATE_END => '2021-10-07'
           },
         }
@@ -698,7 +773,23 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-10-05',
+            DATE_END => '2022-10-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            DATE_START => '2022-10-06',
+            DATE_END => '2022-10-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            DATE_START => '2022-10-06',
             DATE_END => '2022-10-06'
           },
         }
@@ -711,7 +802,25 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-10-04',
+            DATE_END => '2023-10-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            ignore => 'TABLE',
+            DATE_START => '2023-10-05',
+            DATE_END => '2023-10-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            ignore => 'TABLE',
+            DATE_START => '2023-10-05',
             DATE_END => '2023-10-05'
           },
         }
@@ -724,7 +833,24 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-10-09',
+            DATE_END => '2024-10-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            ignore => 'TABLE',
+            DATE_START => '2024-10-10',
+            DATE_END => '2024-10-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            DATE_START => '2024-10-10',
             DATE_END => '2024-10-10'
           },
         }
