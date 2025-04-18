@@ -1629,6 +1629,8 @@ my @LOCAL_SUBS =
   { START => 81245, END => 81266, 
     TEXT => 'India All Star vs World All Star Team', 
     CORR => 'India Exhibition' },
+  { START => 81388, END => 81412, TEXT => '-OT$', 
+    CORR => ' - Open Teams' },
   { START => 81421, END => 81488, TEXT => '2024', CORR => '' },
   { START => 81427, END => 81445, 
     TEXT => '-OT$', CORR => ' - Open Teams' },

@@ -309,6 +309,7 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
             major => 'ROUND|SEGMENT',
             DATE_START => '2016-12-03',
             DATE_END => '2016-12-04'
@@ -316,6 +317,7 @@ my %TOURNAMENTS_DENMARK =
           'C1' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
             major => 'ROUND|SEGMENT',
             DATE_START => '2016-12-10',
             DATE_END => '2016-12-11'
@@ -331,6 +333,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
             major => 'ROUND|SEGMENT',
             DATE_START => '2017-01-20',
             DATE_END => '2017-01-22'
@@ -398,7 +401,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2016,
-            major => 'SECTION',
+            major => 'SESSION|SECTION',
             DATE_START => '2016-04-16',
             DATE_END => '2016-04-17'
           } 
@@ -411,7 +414,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2017,
-            major => 'SECTION',
+            major => 'SESSION|SECTION',
             DATE_START => '2017-04-22',
             DATE_END => '2017-04-23'
           } 
@@ -424,7 +427,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2019,
-            major => 'SECTION',
+            major => 'SESSION|SECTION',
             DATE_START => '2019-03-30',
             DATE_END => '2019-03-30'
           } 
@@ -464,7 +467,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2013,
-            major => 'ROUND',
+            major => 'SESSION|ROUND',
             DATE_START => '2013-02-21',
             DATE_END => '2013-02-21'
           } 
@@ -491,6 +494,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SESSION',
             DATE_START => '2017-01-19',
             DATE_END => '2017-01-19'
           } 
@@ -651,6 +655,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND|MATCH',
             DATE_START => '2016-10-29',
             DATE_END => '2016-10-30'
           } 
@@ -666,6 +671,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-10-28',
             DATE_END => '2017-10-29'
           } 
@@ -681,6 +687,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND|MATCH',
             DATE_START => '2018-10-27',
             DATE_END => '2018-10-28'
           } 
@@ -696,6 +703,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-10-26',
             DATE_END => '2019-10-27'
           } 
@@ -707,10 +715,20 @@ my %TOURNAMENTS_DENMARK =
         # https://www2.bridge.dk/Default.aspx?ID=25540#31135
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2020-10-24',
+            DATE_END => '2020-10-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2020-10-25',
             DATE_END => '2020-10-25'
           } 
         }
@@ -725,6 +743,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
             DATE_START => '2021-10-30',
             DATE_END => '2021-10-31'
           } 
@@ -740,6 +759,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-10-29',
             DATE_END => '2022-10-30'
           } 
@@ -755,6 +775,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-10-28',
             DATE_END => '2023-10-29'
           } 
@@ -771,6 +792,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-10-26',
             DATE_END => '2024-10-27'
           } 
@@ -998,6 +1020,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-09-24',
             DATE_END => '2016-09-24'
           },
@@ -1005,6 +1028,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2016,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-09-25',
             DATE_END => '2016-09-25'
           } 
@@ -1021,6 +1045,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2017,
             STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2017-09-03',
             DATE_END => '2017-09-03'
           },
@@ -1028,6 +1053,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2017,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-09-23',
             DATE_END => '2017-09-23'
           },
@@ -1035,6 +1061,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2017,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-09-24',
             DATE_END => '2017-09-24'
           } 
@@ -1057,6 +1084,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2018,
             STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-09-16',
             DATE_END => '2018-09-16'
           } 
@@ -1073,6 +1101,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2019,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2019-09-07',
             DATE_END => '2019-09-07'
           },
@@ -1080,6 +1109,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2019,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-09-08',
             DATE_END => '2019-09-08'
           } 
@@ -1096,6 +1126,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2021,
             STAGE => 'Semifinal',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2021-09-04',
             DATE_END => '2021-09-04'
           },
@@ -1103,6 +1134,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2021,
             STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2021-09-05',
             DATE_END => '2021-09-05'
           } 
@@ -1118,6 +1150,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2022,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2022-09-03',
             DATE_END => '2022-09-03'
           },
@@ -1125,6 +1158,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2022,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-09-04',
             DATE_END => '2022-09-04'
           } 
@@ -1140,6 +1174,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2023,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-09-09',
             DATE_END => '2023-09-09'
           },
@@ -1147,6 +1182,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2023,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-09-10',
             DATE_END => '2023-09-10'
           } 
@@ -1160,7 +1196,17 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2024-09-07',
+            DATE_END => '2024-09-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-08',
             DATE_END => '2024-09-08'
           },
         }
@@ -1685,6 +1731,8 @@ my %TOURNAMENTS_DENMARK =
             # Copenhagen
             YEAR => 2016,
             WEEKEND => 1,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2016-10-08',
             DATE_END => '2016-10-09'
           },
@@ -1692,6 +1740,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2016,
             WEEKEND => 2,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2016-11-19',
             DATE_END => '2016-11-20'
           },
@@ -1699,6 +1749,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2017,
             WEEKEND => 3,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2017-01-14',
             DATE_END => '2017-01-15'
           },
@@ -1707,6 +1759,8 @@ my %TOURNAMENTS_DENMARK =
             # Århus
             YEAR => 2017,
             WEEKEND => 4,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2017-03-04',
             DATE_END => '2017-03-05'
           },
@@ -1716,6 +1770,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2017,
             WEEKEND => 5,
             STAGE => 'Semifinal',
+            major => 'SEGMENT|SECTION',
             DATE_START => '2017-04-01',
             DATE_END => '2017-04-01'
           },
@@ -1725,6 +1780,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2017,
             WEEKEND => 5,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-04-02',
             DATE_END => '2017-04-02'
           }
@@ -1741,6 +1797,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2017,
             WEEKEND => 1,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2017-10-07',
             DATE_END => '2017-10-08'
           },
@@ -1748,6 +1806,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2017,
             WEEKEND => 2,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2017-11-18',
             DATE_END => '2017-11-19'
           },
@@ -1755,6 +1815,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2018,
             WEEKEND => 3,
+            major => 'ROUND',
+            minor => 'HALF|SEGMENT',
             DATE_START => '2018-01-13',
             DATE_END => '2018-01-14'
           },
@@ -1763,6 +1825,8 @@ my %TOURNAMENTS_DENMARK =
             # Århus
             YEAR => 2018,
             WEEKEND => 4,
+            major => 'ROUND|MATCH',
+            minor => 'HALF|SEGMENT',
             DATE_START => '2018-03-03',
             DATE_END => '2018-03-04'
           },
@@ -1772,6 +1836,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2018,
             WEEKEND => 5,
             STAGE => 'Semifinal',
+            major => 'SEGMENT|SECTION',
             DATE_START => '2018-04-07',
             DATE_END => '2018-04-07'
           },
@@ -1781,6 +1846,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2018,
             WEEKEND => 5,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-04-08',
             DATE_END => '2018-04-08'
           }
@@ -1798,6 +1864,8 @@ my %TOURNAMENTS_DENMARK =
             # Århus
             YEAR => 2018,
             WEEKEND => 1,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2018-11-17',
             DATE_END => '2018-11-18'
           },
@@ -1805,6 +1873,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2019,
             WEEKEND => 2,
+            major => 'ROUND',
             DATE_START => '2019-01-12',
             DATE_END => '2019-01-13'
           },
@@ -1813,6 +1882,8 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2019,
             WEEKEND => 3,
             DATE_START => '2019-03-02',
+            major => 'ROUND|MATCH',
+            minor => 'HALF|SEGMENT',
             DATE_END => '2019-03-03'
           },
           'C3' => 
@@ -1820,6 +1891,8 @@ my %TOURNAMENTS_DENMARK =
             # Copenhagen
             YEAR => 2019,
             WEEKEND => 4,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2019-04-06',
             DATE_END => '2019-04-07'
           },
@@ -1829,6 +1902,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2019,
             WEEKEND => 5,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2019-04-27',
             DATE_END => '2019-04-27'
           },
@@ -1838,6 +1912,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2019,
             WEEKEND => 5,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-04-28',
             DATE_END => '2019-04-28'
           }
@@ -1854,6 +1929,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2019,
             WEEKEND => 1,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2019-10-05',
             DATE_END => '2019-10-06'
           },
@@ -1861,6 +1938,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2019,
             WEEKEND => 2,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2019-11-16',
             DATE_END => '2019-11-17'
           },
@@ -1868,6 +1947,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2020,
             WEEKEND => 3,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2020-01-11',
             DATE_END => '2020-01-12'
           },
@@ -1876,6 +1957,8 @@ my %TOURNAMENTS_DENMARK =
             # Copenhagen
             YEAR => 2020,
             WEEKEND => 4,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2020-08-15',
             DATE_END => '2020-08-16'
           },
@@ -1885,6 +1968,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2020,
             WEEKEND => 5,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2020-08-29',
             DATE_END => '2020-08-29'
           },
@@ -1894,6 +1978,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2020,
             WEEKEND => 5,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-08-30',
             DATE_END => '2020-08-30'
           }
@@ -1908,6 +1993,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2020,
             WEEKEND => 1,
+            major => 'MATCH',
+            minor => 'HALF',
             DATE_START => '2020-10-03',
             DATE_END => '2020-10-04'
           },
@@ -1924,6 +2011,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2021,
             WEEKEND => 1,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2021-10-09',
             DATE_END => '2021-10-10'
           },
@@ -1931,6 +2020,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2021,
             WEEKEND => 2,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2021-11-13',
             DATE_END => '2021-11-14'
           },
@@ -1945,6 +2036,7 @@ my %TOURNAMENTS_DENMARK =
           {
             # Maybe a special match
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-02-03',
             DATE_END => '2022-02-03'
           },
@@ -1953,6 +2045,8 @@ my %TOURNAMENTS_DENMARK =
             # Copenhagen
             YEAR => 2022,
             WEEKEND => 4,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2022-03-05',
             DATE_END => '2022-03-06'
           },
@@ -1962,6 +2056,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2022,
             WEEKEND => 5,
             STAGE => 'Semifinal',
+            major => 'SEGMENT|SESSION|SECTION',
             DATE_START => '2022-04-23',
             DATE_END => '2022-04-23'
           },
@@ -1971,6 +2066,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2022,
             WEEKEND => 5,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-04-24',
             DATE_END => '2022-04-24'
           }
@@ -1994,6 +2090,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2022,
             WEEKEND => 2,
+            major => 'ROUND|MATCH',
+            minor => 'HALF|SEGMENT',
             DATE_START => '2022-11-19',
             DATE_END => '2022-11-20'
           },
@@ -2001,6 +2099,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2023,
             WEEKEND => 3,
+            major => 'ROUND|MATCH',
+            minor => 'HALF|SEGMENT',
             DATE_START => '2023-01-14',
             DATE_END => '2023-01-15'
           },
@@ -2009,6 +2109,8 @@ my %TOURNAMENTS_DENMARK =
             # Copenhagen
             YEAR => 2023,
             WEEKEND => 4,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2023-03-04',
             DATE_END => '2023-03-05'
           },
@@ -2018,6 +2120,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2023,
             WEEKEND => 5,
             STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND|SECTION',
             DATE_START => '2023-04-15',
             DATE_END => '2023-04-15'
           },
@@ -2027,6 +2130,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2023,
             WEEKEND => 5,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-04-16',
             DATE_END => '2023-04-16'
           }
@@ -2043,6 +2147,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2023,
             WEEKEND => 1,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2023-10-07',
             DATE_END => '2023-10-08'
           },
@@ -2050,6 +2156,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2023,
             WEEKEND => 2,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2023-11-18',
             DATE_END => '2023-11-19'
           },
@@ -2057,6 +2165,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2024,
             WEEKEND => 3,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2024-01-13',
             DATE_END => '2024-01-14'
           },
@@ -2065,6 +2175,8 @@ my %TOURNAMENTS_DENMARK =
             # Copenhagen
             YEAR => 2024,
             WEEKEND => 4,
+            major => 'ROUND',
+            minor => 'HALF|SEGMENT',
             DATE_START => '2024-03-02',
             DATE_END => '2024-03-03'
           },
@@ -2074,6 +2186,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2024,
             WEEKEND => 5,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2024-04-13',
             DATE_END => '2024-04-13'
           },
@@ -2083,6 +2196,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2024,
             WEEKEND => 5,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-04-14',
             DATE_END => '2024-04-14'
           }
@@ -2098,6 +2212,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2024,
             WEEKEND => 1,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2024-10-05',
             DATE_END => '2024-10-06'
           },
@@ -2105,6 +2221,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2024,
             WEEKEND => 2,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2024-11-09',
             DATE_END => '2024-11-10'
           },
@@ -2161,6 +2279,9 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2017-03-12',
             DATE_END => '2017-03-12'
           },
@@ -2173,6 +2294,8 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2024-03-16',
             DATE_END => '2024-03-17'
           },
@@ -2422,6 +2545,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2017,
             STAGE => 'Final',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2017-07-08',
             DATE_END => '2017-07-09'
           } 
@@ -2437,6 +2561,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2018,
             STAGE => 'Final',
+            major => 'SESSION|SECTION',
             DATE_START => '2018-07-08',
             DATE_END => '2018-07-09'
           } 
@@ -2452,6 +2577,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2019,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2019-07-06',
             DATE_END => '2019-07-07'
           } 
@@ -2466,6 +2592,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'SESSION',
             STAGE => 'Final',
             DATE_START => '2022-07-09',
             DATE_END => '2022-07-10'
@@ -2482,6 +2609,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2023,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2023-07-14',
             DATE_END => '2023-07-15'
           } 
@@ -2498,6 +2626,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2024,
             STAGE => 'Final',
+            ignore => 'SECTION',
             DATE_START => '2024-07-12',
             DATE_END => '2024-07-13'
           } 
@@ -2548,6 +2677,16 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-14',
+            DATE_END => '2017-05-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-05-14',
             DATE_END => '2017-05-14'
           },
@@ -2560,6 +2699,16 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-07',
+            DATE_END => '2023-05-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-05-07',
             DATE_END => '2023-05-07'
           },
@@ -2721,6 +2870,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'SECTION',
             DATE_START => '2016-07-16',
             DATE_END => '2016-07-17'
           } 
@@ -2735,6 +2885,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SESSION|SECTION',
             DATE_START => '2017-07-15',
             DATE_END => '2017-07-16'
           } 
@@ -2749,6 +2900,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SESSION|SECTION',
             DATE_START => '2018-07-14',
             DATE_END => '2018-07-15'
           } 
@@ -2763,6 +2915,8 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION|SECTION|SEGMENT',
             DATE_START => '2019-07-13',
             DATE_END => '2019-07-14'
           } 
@@ -2777,6 +2931,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'SESSION',
             DATE_START => '2022-07-17',
             DATE_END => '2022-07-17'
           } 
@@ -2791,6 +2946,8 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'SECTION',
+            ignore => 'ROUND',
             DATE_START => '2023-09-16',
             DATE_END => '2023-09-17'
           } 
@@ -2805,6 +2962,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'SECTION',
             DATE_START => '2024-09-21',
             DATE_END => '2024-09-22'
           } 
@@ -3088,6 +3246,7 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-03-09',
             DATE_END => '2019-03-10'
           },
@@ -3114,6 +3273,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-02-05',
             DATE_END => '2017-02-05'
           },
@@ -3138,6 +3298,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' =>
           {
             YEAR => 2020,
+            major => 'ROUND|MATCH',
             DATE_START => '2020-02-02',
             DATE_END => '2020-02-02'
           },
@@ -3150,6 +3311,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-02-06',
             DATE_END => '2022-02-06'
           },
@@ -3162,6 +3324,8 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2024-02-03',
             DATE_END => '2024-02-04'
           },
@@ -3245,6 +3409,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'ROUND|MATCH',
             DATE_START => '2017-08-27',
             DATE_END => '2017-08-27'
           },
@@ -3339,6 +3504,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'ROUND|MATCH',
             DATE_START => '2017-05-26',
             DATE_END => '2017-05-27'
           },

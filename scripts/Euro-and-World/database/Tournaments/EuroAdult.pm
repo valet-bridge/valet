@@ -2799,6 +2799,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2016,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'MATCH',
             DATE_START => '2016-11-02',
             DATE_END => '2016-11-04'
           } 
@@ -2870,12 +2871,20 @@ my %TOURNAMENTS_EUROADULT =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2021,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2021-09-28',
+            DATE_END => '2021-09-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-09-30',
             DATE_END => '2021-09-30'
           } 
         }
@@ -3176,6 +3185,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2017,
             STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2017-06-15',
             DATE_END => '2017-06-16'
           },
@@ -3666,7 +3677,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2017,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-06-12',
             DATE_END => '2017-06-12'
           },
@@ -3713,7 +3724,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2019,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-06-17',
             DATE_END => '2019-06-17'
           },
@@ -3721,7 +3732,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2019,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-06-17',
             DATE_END => '2019-06-17'
           },
@@ -3768,7 +3779,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2023,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-06-05',
             DATE_END => '2023-06-05'
           },
@@ -3776,7 +3787,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2023,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-06-06',
             DATE_END => '2023-06-06'
           },
@@ -4060,6 +4071,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2017,
             STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2017-06-23',
             DATE_END => '2017-06-24'
           },
@@ -4582,7 +4595,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2017,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-06-19',
             DATE_END => '2017-06-19'
           },
@@ -4629,7 +4642,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2019,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-06-24',
             DATE_END => '2019-06-24'
           },
@@ -4637,7 +4650,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2019,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-06-24',
             DATE_END => '2019-06-24'
           },
@@ -4684,7 +4697,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2023,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-06-13',
             DATE_END => '2023-06-13'
           },
@@ -4692,7 +4705,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2023,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-06-14',
             DATE_END => '2023-06-14'
           },
@@ -5154,6 +5167,9 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2017-06-22',
             DATE_END => '2017-06-22'
           },
@@ -5296,6 +5312,8 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-06-20',
             DATE_END => '2017-06-20'
           } 
@@ -5309,6 +5327,8 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-06-25',
             DATE_END => '2019-06-25'
           } 
@@ -5382,7 +5402,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2018,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'SESSION|ROUND',
+            ignore => 'TABLE',
             DATE_START => '2018-02-22',
             DATE_END => '2018-02-23'
           },
@@ -5406,7 +5427,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2020,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'SESSION|SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2020-03-05',
             DATE_END => '2020-03-05'
           },
@@ -5491,10 +5513,31 @@ my %TOURNAMENTS_EUROADULT =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            ignore => 'GROUP|TABLE',
             DATE_START => '2020-03-06',
+            DATE_END => '2020-03-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SESSION',
+            ignore => 'GROUP',
+            DATE_START => '2020-03-07',
+            DATE_END => '2020-03-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
+            DATE_START => '2020-03-08',
             DATE_END => '2020-03-08'
           },
         }
@@ -5610,7 +5653,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2018,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2018-02-23',
             DATE_END => '2018-02-23'
           },
@@ -5634,7 +5677,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2020,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2020-03-03',
             DATE_END => '2020-03-03'
           },
@@ -5690,7 +5733,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2023,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-04-24',
             DATE_END => '2023-04-24'
           },
@@ -5747,7 +5790,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2024,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-04-18',
             DATE_END => '2024-04-18'
           },
