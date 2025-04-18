@@ -269,7 +269,33 @@ my %TOURNAMENTS_HONGKONG =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-07-26',
+            DATE_END => '2017-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-28',
+            DATE_END => '2017-07-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-29',
+            DATE_END => '2017-07-29'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-30',
             DATE_END => '2017-07-30'
           },
         }
@@ -281,7 +307,34 @@ my %TOURNAMENTS_HONGKONG =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2018-07-17',
+            DATE_END => '2018-07-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-07-20',
+            DATE_END => '2018-07-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-07-20',
+            DATE_END => '2018-07-20'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-07-21',
             DATE_END => '2018-07-21'
           },
         }
@@ -293,7 +346,33 @@ my %TOURNAMENTS_HONGKONG =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-07-17',
+            DATE_END => '2019-07-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-20',
+            DATE_END => '2019-07-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-20',
+            DATE_END => '2019-07-20'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-21',
             DATE_END => '2019-07-21'
           },
         }
@@ -399,6 +478,8 @@ my %TOURNAMENTS_HONGKONG =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-03-07',
             DATE_END => '2020-03-08'
           },
@@ -413,6 +494,8 @@ my %TOURNAMENTS_HONGKONG =
           'SINGLE' =>
           {
             YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2021-01-21',
             DATE_END => '2021-01-24'
           },
@@ -472,10 +555,20 @@ my %TOURNAMENTS_HONGKONG =
         MEET_TAG => '2020A',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2020-02-09',
+            DATE_END => '2020-02-09'
+          },
+          'C1' =>
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-02-15',
             DATE_END => '2020-02-16'
           },
         }
@@ -489,6 +582,8 @@ my %TOURNAMENTS_HONGKONG =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2020-11-28',
             DATE_END => '2020-11-29'
           },
@@ -515,6 +610,8 @@ my %TOURNAMENTS_HONGKONG =
           'SINGLE' =>
           {
             YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2021-01-30',
             DATE_END => '2021-01-31'
           },
@@ -541,6 +638,8 @@ my %TOURNAMENTS_HONGKONG =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-07-23',
             DATE_END => '2024-07-23'
           },

@@ -216,7 +216,7 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2019,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-05-12',
             DATE_END => '2019-05-12'
           } 
@@ -812,7 +812,7 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2019,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-05-08',
             DATE_END => '2019-05-09'
           },
@@ -820,7 +820,7 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2019,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-05-09',
             DATE_END => '2019-05-10'
           } 
@@ -1536,7 +1536,7 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2019,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-05-07',
             DATE_END => '2019-05-07'
           } 

@@ -420,14 +420,22 @@ my %TOURNAMENTS_NORDIC =
         SCORING => 'IMP',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-04-14',
+            DATE_END => '2017-04-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-04-15',
             DATE_END => '2017-04-16'
-          } 
+          },
         }
       },
       '2019' =>
@@ -437,12 +445,20 @@ my %TOURNAMENTS_NORDIC =
         SCORING => 'IMP',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2019-04-19',
+            DATE_END => '2019-04-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-20',
             DATE_END => '2019-04-20'
           } 
         }
@@ -457,6 +473,8 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2023-05-31',
             DATE_END => '2023-06-01'
           } 
@@ -483,6 +501,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' =>
           {
             YEAR => 2016,
+            major => 'SEGMENT',
             DATE_START => '2016-09-24',
             DATE_END => '2016-09-24'
           },

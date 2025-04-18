@@ -165,6 +165,8 @@ my %TOURNAMENTS_BRAZIL =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-06-02',
             DATE_END => '2024-06-02'
           },
@@ -385,12 +387,30 @@ my %TOURNAMENTS_BRAZIL =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2016-11-03',
+            DATE_END => '2016-11-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-04',
+            DATE_END => '2016-11-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-04',
             DATE_END => '2016-11-05'
-          } 
+          },
         }
       },
       '2017' =>
@@ -400,6 +420,8 @@ my %TOURNAMENTS_BRAZIL =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-09-15',
             DATE_END => '2017-09-16'
           } 
@@ -409,48 +431,104 @@ my %TOURNAMENTS_BRAZIL =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-11-08',
+            DATE_END => '2018-11-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-09',
             DATE_END => '2018-11-10'
-          } 
+          },
         }
       },
       '2022' =>
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-10-10',
+            DATE_END => '2022-10-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-13',
+            DATE_END => '2022-10-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-14',
             DATE_END => '2022-10-15'
-          } 
+          },
         }
       },
       '2023' =>
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-10-26',
+            DATE_END => '2023-10-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-10-27',
             DATE_END => '2023-10-28'
-          } 
+          },
         }
       },
       '2024' =>
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2024-09-12',
+            DATE_END => '2024-09-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-12',
+            DATE_END => '2024-09-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-13',
             DATE_END => '2024-09-14'
-          } 
+          },
         }
       },
     }
@@ -731,7 +809,17 @@ my %TOURNAMENTS_BRAZIL =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-01-26',
+            DATE_END => '2017-01-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-01-27',
             DATE_END => '2017-01-29'
           },
         }
@@ -744,6 +832,15 @@ my %TOURNAMENTS_BRAZIL =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-01',
+            DATE_END => '2018-11-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
             DATE_START => '2018-11-01',
             DATE_END => '2018-11-01'
           },
@@ -757,7 +854,17 @@ my %TOURNAMENTS_BRAZIL =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2020-01-23',
+            DATE_END => '2020-01-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2020-01-24',
             DATE_END => '2020-01-25'
           },
         }
@@ -770,6 +877,8 @@ my %TOURNAMENTS_BRAZIL =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-01-23',
             DATE_END => '2023-01-24'
           },
@@ -783,6 +892,8 @@ my %TOURNAMENTS_BRAZIL =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-01-22',
             DATE_END => '2024-01-24'
           },
@@ -796,7 +907,17 @@ my %TOURNAMENTS_BRAZIL =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-05-27',
+            DATE_END => '2024-05-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-05-28',
             DATE_END => '2024-05-29'
           },
         }
@@ -1170,6 +1291,8 @@ my %TOURNAMENTS_BRAZIL =
           'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2015-12-05',
             DATE_END => '2015-12-05'
           },
@@ -1182,6 +1305,8 @@ my %TOURNAMENTS_BRAZIL =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-09-28',
             DATE_END => '2016-10-02'
           },
@@ -1194,6 +1319,8 @@ my %TOURNAMENTS_BRAZIL =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-11-18',
             DATE_END => '2017-11-19'
           },
@@ -1206,12 +1333,16 @@ my %TOURNAMENTS_BRAZIL =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-12-07',
             DATE_END => '2019-12-07'
           },
           'C1' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-12-11',
             DATE_END => '2019-12-11'
           },
@@ -1428,6 +1559,8 @@ my %TOURNAMENTS_BRAZIL =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-06-10',
             DATE_END => '2017-06-14'
           } 
@@ -1440,6 +1573,8 @@ my %TOURNAMENTS_BRAZIL =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-06-16',
             DATE_END => '2018-06-18'
           } 
@@ -1452,6 +1587,8 @@ my %TOURNAMENTS_BRAZIL =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-05-15',
             DATE_END => '2019-05-16'
           } 
@@ -1478,42 +1615,49 @@ my %TOURNAMENTS_BRAZIL =
           'C0' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-02-04',
             DATE_END => '2018-02-04'
           },
           'C1' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-02-07',
             DATE_END => '2018-02-07'
           },
           'C2' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-02-17',
             DATE_END => '2018-02-17'
           },
           'C3' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-02-21',
             DATE_END => '2018-02-21'
           },
           'C4' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-02-24',
             DATE_END => '2018-02-24'
           },
           'C5' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-02-28',
             DATE_END => '2018-02-28'
           },
           'C6' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-03-03',
             DATE_END => '2018-03-03'
           },

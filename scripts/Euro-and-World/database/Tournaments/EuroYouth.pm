@@ -413,6 +413,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2022,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-07-20',
             DATE_END => '2022-07-26'
           }
@@ -599,7 +600,9 @@ my %TOURNAMENTS_EURO_YOUTH =
           'C0' => 
           {
             YEAR => 2023,
-            MOVEMENT => 'Round-robin',
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2023-07-27',
             DATE_END => '2023-07-28'
           },
@@ -607,6 +610,8 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2023,
             STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2023-07-29',
             DATE_END => '2023-07-29'
           }
@@ -793,6 +798,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2017,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-07-09',
             DATE_END => '2017-07-15'
           }
@@ -807,6 +813,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2019,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-07-05',
             DATE_END => '2019-07-11'
           }
@@ -821,6 +828,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2022,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-07-20',
             DATE_END => '2022-07-26'
           }
@@ -835,6 +843,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2024,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-07-07',
             DATE_END => '2024-07-12'
           },
@@ -931,7 +940,9 @@ my %TOURNAMENTS_EURO_YOUTH =
           'C0' => 
           {
             YEAR => 2023,
-            MOVEMENT => 'Round-robin',
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2023-07-25',
             DATE_END => '2023-07-26'
           },
@@ -987,7 +998,9 @@ my %TOURNAMENTS_EURO_YOUTH =
           'C0' => 
           {
             YEAR => 2023,
-            MOVEMENT => 'Round-robin',
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2023-07-25',
             DATE_END => '2023-07-26'
           }
@@ -1137,7 +1150,9 @@ my %TOURNAMENTS_EURO_YOUTH =
           'C0' => 
           {
             YEAR => 2023,
-            MOVEMENT => 'Round-robin',
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2023-07-27',
             DATE_END => '2023-07-28'
           },
@@ -1145,6 +1160,8 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2023,
             STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2023-07-29',
             DATE_END => '2023-07-29'
           }
@@ -1332,6 +1349,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2017,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-07-09',
             DATE_END => '2017-07-15'
           }
@@ -1346,6 +1364,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2019,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-07-05',
             DATE_END => '2019-07-11'
           }
@@ -1360,6 +1379,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2024,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-07-07',
             DATE_END => '2024-07-12'
           }
@@ -1567,6 +1587,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2023,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2023-07-29',
             DATE_END => '2023-07-29'
           }
@@ -1705,6 +1726,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2017,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-07-09',
             DATE_END => '2017-07-15'
           }
@@ -1720,6 +1742,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2019,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-07-08',
             DATE_END => '2019-07-11'
           }
@@ -1735,6 +1758,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2022,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-07-20',
             DATE_END => '2022-07-26'
           }
@@ -1750,6 +1774,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2024,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-07-09',
             DATE_END => '2024-07-12'
           }
@@ -1775,7 +1800,8 @@ my %TOURNAMENTS_EURO_YOUTH =
           'C0' => 
           {
             YEAR => 2023,
-            MOVEMENT => 'Round-robin',
+            STAGE => 'Qualifying',
+            major => 'SESSION',
             DATE_START => '2023-07-27',
             DATE_END => '2023-07-28'
           },
@@ -1783,6 +1809,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2023,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2023-07-29',
             DATE_END => '2023-07-29'
           }
@@ -1808,6 +1835,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2022,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-07-20',
             DATE_END => '2022-07-26'
           }
@@ -1824,6 +1852,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2024,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-07-09',
             DATE_END => '2024-07-12'
           },
@@ -2017,6 +2046,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-09-21',
             DATE_END => '2017-09-24'
           },
@@ -2161,6 +2191,8 @@ my %TOURNAMENTS_EURO_YOUTH =
           'SINGLE' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-07-25',
             DATE_END => '2019-07-28'
           },

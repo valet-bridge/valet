@@ -281,6 +281,8 @@ my %TOURNAMENTS_FINLAND =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|HALF',
             DATE_START => '2017-07-28',
             DATE_END => '2017-07-28'
           } 
@@ -293,6 +295,8 @@ my %TOURNAMENTS_FINLAND =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-07-27',
             DATE_END => '2018-07-27'
           } 
@@ -305,6 +309,8 @@ my %TOURNAMENTS_FINLAND =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|HALF',
             DATE_START => '2019-07-21',
             DATE_END => '2019-07-21'
           } 
@@ -317,6 +323,7 @@ my %TOURNAMENTS_FINLAND =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Final',
             DATE_START => '2020-08-09',
             DATE_END => '2020-08-09'
           } 
@@ -329,6 +336,8 @@ my %TOURNAMENTS_FINLAND =
           'C0' => 
           {
             YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT|HALF',
             DATE_START => '2021-07-10',
             DATE_END => '2021-07-10'
           } 
@@ -341,6 +350,8 @@ my %TOURNAMENTS_FINLAND =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|HALF',
             DATE_START => '2022-07-16',
             DATE_END => '2022-07-16'
           } 
@@ -353,6 +364,8 @@ my %TOURNAMENTS_FINLAND =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|HALF',
             DATE_START => '2024-07-13',
             DATE_END => '2024-07-13'
           } 
@@ -379,6 +392,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'SESSION|ROUND',
             DATE_START => '2018-07-07',
             DATE_END => '2018-07-08'
           },
@@ -391,6 +405,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' =>
           {
             YEAR => 2021,
+            major => 'SESSION',
             DATE_START => '2021-10-30',
             DATE_END => '2021-10-31'
           },
@@ -566,6 +581,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SESSION',
             DATE_START => '2017-03-04',
             DATE_END => '2017-03-05'
           } 
@@ -578,6 +594,8 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2018-03-03',
             DATE_END => '2018-03-04'
           } 
@@ -590,6 +608,8 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION|ROUND',
             DATE_START => '2019-03-16',
             DATE_END => '2019-03-17'
           } 
@@ -602,6 +622,8 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2021-11-20',
             DATE_END => '2021-11-22'
           } 
@@ -614,6 +636,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'SESSION',
             DATE_START => '2022-11-26',
             DATE_END => '2022-11-27'
           } 
@@ -626,6 +649,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'SESSION',
             DATE_START => '2023-11-04',
             DATE_END => '2023-11-05'
           } 
@@ -638,6 +662,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'SESSION',
             DATE_START => '2024-11-23',
             DATE_END => '2024-11-24'
           } 
@@ -844,6 +869,8 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2016-12-10',
             DATE_END => '2016-12-11'
           } 
@@ -856,6 +883,9 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2017-12-09',
             DATE_END => '2017-12-10'
           } 
@@ -868,6 +898,9 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2018-12-08',
             DATE_END => '2018-12-09'
           } 
@@ -880,6 +913,9 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-12-14',
             DATE_END => '2019-12-15'
           } 
@@ -892,6 +928,8 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2020-09-19',
             DATE_END => '2020-09-20'
           } 
@@ -904,6 +942,8 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2022-04-02',
             DATE_END => '2022-04-03'
           } 
@@ -916,6 +956,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-05-06',
             DATE_END => '2023-05-07'
           } 
@@ -972,6 +1013,8 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION|ROUND',
             DATE_START => '2019-02-09',
             DATE_END => '2019-02-10'
           } 
@@ -1130,6 +1173,8 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2017-07-08',
             DATE_END => '2017-07-09'
           } 
@@ -1156,6 +1201,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'SESSION|ROUND',
             DATE_START => '2019-03-09',
             DATE_END => '2019-03-09'
           },
@@ -1168,6 +1214,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'SESSION',
             DATE_START => '2023-03-10',
             DATE_END => '2023-03-11'
           },
@@ -1209,6 +1256,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'SEGMENT|SESSION|ROUND',
             DATE_START => '2019-02-09',
             DATE_END => '2019-02-10'
           } 

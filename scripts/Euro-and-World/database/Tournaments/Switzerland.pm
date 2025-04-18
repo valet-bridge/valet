@@ -238,7 +238,7 @@ my %TOURNAMENTS_SWITZERLAND =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2016-12-04',
             DATE_END => '2016-12-04'
           } 
@@ -252,7 +252,6 @@ my %TOURNAMENTS_SWITZERLAND =
           {
             YEAR => 2017,
             STAGE => 'Final',
-            major => 'SEGMENT',
             DATE_START => '2017-12-03',
             DATE_END => '2017-12-03'
           } 
@@ -302,7 +301,7 @@ my %TOURNAMENTS_SWITZERLAND =
           {
             YEAR => 2021,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2021-11-06',
             DATE_END => '2021-11-06'
           },
@@ -310,7 +309,7 @@ my %TOURNAMENTS_SWITZERLAND =
           {
             YEAR => 2021,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2021-11-07',
             DATE_END => '2021-11-07'
           } 
@@ -355,6 +354,7 @@ my %TOURNAMENTS_SWITZERLAND =
             YEAR => 2023,
             STAGE => 'Final',
             major => 'SEGMENT',
+            ignore => 'MATCH',
             DATE_START => '2023-11-05',
             DATE_END => '2023-11-05'
           } 
@@ -521,6 +521,9 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'HALF',
+            minor => 'SEGMENT',
             DATE_START => '2017-06-11',
             DATE_END => '2017-06-11'
           } 
@@ -533,6 +536,8 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-06-03',
             DATE_END => '2018-06-03'
           } 
@@ -545,6 +550,8 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-06-16',
             DATE_END => '2019-06-16'
           } 
@@ -557,6 +564,8 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-07-09',
             DATE_END => '2022-07-09'
           } 
@@ -569,6 +578,8 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-07-09',
             DATE_END => '2023-07-09'
           } 
@@ -581,6 +592,8 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-06-08',
             DATE_END => '2024-06-08'
           } 
@@ -633,7 +646,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2017,
-            major => 'SESSION',
+            MOVEMENT => 'Barometer',
             DATE_START => '2017-03-03',
             DATE_END => '2017-03-03'
           },
@@ -725,6 +738,7 @@ my %TOURNAMENTS_SWITZERLAND =
         {
           'SINGLE' => 
           {
+            MOVEMENT => 'Swiss',
             YEAR => 2017,
             major => 'ROUND|MATCH',
             DATE_START => '2017-03-05',
@@ -739,6 +753,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
             major => 'ROUND|MATCH',
             DATE_START => '2018-03-18',
             DATE_END => '2018-03-18'
@@ -766,6 +781,8 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-02-22',
             DATE_END => '2020-02-23'
           },
