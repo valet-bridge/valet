@@ -1919,6 +1919,8 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2016,
+            MAJOR => 'ROUND|SESSION',
+            ignore => 'TABLE',
             DATE_START => '2016-09-18',
             DATE_END => '2016-09-22',
           },
@@ -5562,10 +5564,20 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2023-12-01',
+            DATE_END => '2023-12-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND|SESSION',
+            DATE_START => '2023-12-02',
             DATE_END => '2023-12-03'
           },
         }
@@ -5574,10 +5586,20 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2024-11-29',
+            DATE_END => '2024-11-30'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND|SESSION',
+            DATE_START => '2024-11-30',
             DATE_END => '2024-12-01'
           },
         }

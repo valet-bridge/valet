@@ -927,10 +927,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-11-16',
+            DATE_END => '2019-11-16'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-16',
+            DATE_END => '2019-11-16'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-17',
             DATE_END => '2019-11-17'
           },
         }
@@ -1085,6 +1103,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'SESSION',
             DATE_START => '2017-08-05',
             DATE_END => '2017-08-05'
           },
@@ -1101,6 +1120,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'SESSION',
             DATE_START => '2018-08-04',
             DATE_END => '2018-08-04'
           },
@@ -1115,6 +1135,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'SESSION',
             DATE_START => '2019-08-24',
             DATE_END => '2019-08-24'
           },
@@ -1128,6 +1149,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'SESSION|ROUND',
             DATE_START => '2022-08-13',
             DATE_END => '2022-08-13'
           },
@@ -1532,7 +1554,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2016-10-19',
+            DATE_END => '2016-10-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2016-10-21',
+            DATE_END => '2016-10-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-22',
+            DATE_END => '2016-10-22'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-23',
             DATE_END => '2016-10-23'
           },
         }
@@ -1545,7 +1593,49 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2017-09-12',
+            DATE_END => '2017-09-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-09-14',
+            DATE_END => '2017-09-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-15',
+            DATE_END => '2017-09-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-16',
+            DATE_END => '2017-09-16'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-17',
+            DATE_END => '2017-09-17'
+          },
+          'C5' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-16',
             DATE_END => '2017-09-17'
           },
         }
@@ -1558,8 +1648,42 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-10-31',
+            DATE_END => '2023-11-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-11-02',
+            DATE_END => '2023-11-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-03',
+            DATE_END => '2023-11-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-04',
             DATE_END => '2023-11-04'
+          },
+          'C4' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-04',
+            DATE_END => '2023-11-05'
           },
         }
       },
@@ -1649,6 +1773,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2017,
             STAGE => 'Final',
+            major => 'SESSION|ROUND',
             DATE_START => '2017-06-21',
             DATE_END => '2017-06-21'
           } 
@@ -1739,7 +1864,25 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2018-04-21',
+            DATE_END => '2018-04-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-21',
+            DATE_END => '2018-04-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-22',
             DATE_END => '2018-04-22'
           },
         }
@@ -1751,7 +1894,25 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-04-19',
+            DATE_END => '2019-04-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-20',
+            DATE_END => '2019-04-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-21',
             DATE_END => '2019-04-21'
           },
         }
@@ -1763,7 +1924,25 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2022-05-14',
+            DATE_END => '2022-05-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-05-14',
+            DATE_END => '2022-05-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-05-15',
             DATE_END => '2022-05-15'
           },
         }
@@ -1776,7 +1955,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-05-26',
+            DATE_END => '2023-05-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-26',
+            DATE_END => '2023-05-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-27',
+            DATE_END => '2023-05-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-05-28',
             DATE_END => '2023-05-28'
           },
         }
@@ -1789,7 +1994,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-04-12',
+            DATE_END => '2024-04-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-04-12',
+            DATE_END => '2024-04-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-04-14',
+            DATE_END => '2024-04-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-14',
             DATE_END => '2024-04-14'
           },
         }
@@ -1851,6 +2082,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2024-12-09',
             DATE_END => '2024-12-09'
           },
@@ -1877,6 +2110,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'SESSION|ROUND',
             DATE_START => '2017-03-19',
             DATE_END => '2017-03-19'
           },
@@ -2107,10 +2341,37 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-03-01',
+            DATE_END => '2019-03-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT|SESSION',
+            DATE_START => '2019-03-02',
+            DATE_END => '2019-03-02'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-03',
+            DATE_END => '2019-03-03'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-03',
             DATE_END => '2019-03-03'
           },
         }
@@ -2371,7 +2632,26 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-03-03',
+            DATE_END => '2017-03-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-05',
+            DATE_END => '2017-03-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-05',
             DATE_END => '2017-03-05'
           }
         }
@@ -2383,9 +2663,36 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-03-16',
+            DATE_END => '2018-03-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2018-03-17',
+            DATE_END => '2018-03-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-18',
             DATE_END => '2018-03-18'
-          }
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-18',
+            DATE_END => '2018-03-18'
+          },
         }
       },
       '2020' =>
@@ -2395,7 +2702,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2020-02-28',
+            DATE_END => '2020-02-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-02-29',
+            DATE_END => '2020-02-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-02-29',
+            DATE_END => '2020-02-29'
+          },
+          'C3' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-03-01',
             DATE_END => '2020-03-01'
           }
         }
@@ -2421,6 +2754,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
             DATE_START => '2023-05-24',
             DATE_END => '2023-05-24'
           },
@@ -2447,6 +2781,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2023-05-23',
             DATE_END => '2023-05-23'
           },
@@ -2471,10 +2807,20 @@ my %TOURNAMENTS_INDIA =
         ORDINAL => 3,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2023-03-02',
+            DATE_END => '2023-03-04'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-03-04',
             DATE_END => '2023-03-05'
           },
         }
@@ -2484,10 +2830,26 @@ my %TOURNAMENTS_INDIA =
         ORDINAL => 4,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-07-12',
+            DATE_END => '2024-07-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Playoff',
+            DATE_START => '2024-07-13',
+            DATE_END => '2024-07-13'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-07-13',
             DATE_END => '2024-07-14'
           },
         }
@@ -2561,6 +2923,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'SESSION|ROUND',
             DATE_START => '2024-09-22',
             DATE_END => '2024-09-22'
           },
@@ -2621,10 +2984,19 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Elimination',
+            major => 'SESSION',
             DATE_START => '2022-12-08',
+            DATE_END => '2022-12-08'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            DATE_START => '2022-12-09',
             DATE_END => '2022-12-09'
           },
         }
@@ -2647,10 +3019,45 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2018',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|SESSION',
             DATE_START => '2018-08-09',
+            DATE_END => '2018-08-10'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Pre-Quarterfinal',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2018-08-11',
+            DATE_END => '2018-08-11'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-12',
+            DATE_END => '2018-08-12'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-13',
+            DATE_END => '2018-08-13'
+          },
+          'C4' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-14',
             DATE_END => '2018-08-14'
           },
         }
@@ -2661,10 +3068,36 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2018',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2018-12-09',
+            DATE_END => '2018-12-10'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-11',
+            DATE_END => '2018-12-11'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-12',
+            DATE_END => '2018-12-12'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-13',
             DATE_END => '2018-12-13'
           },
         }
@@ -2675,10 +3108,36 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2019',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2019-06-02',
+            DATE_END => '2019-06-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-03',
+            DATE_END => '2019-06-03'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-04',
+            DATE_END => '2019-06-04'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-05',
             DATE_END => '2019-06-05'
           },
         }
@@ -2689,10 +3148,44 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2019',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-08-05',
+            DATE_END => '2019-08-06'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
+            DATE_START => '2019-08-07',
+            DATE_END => '2019-08-07'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-08',
+            DATE_END => '2019-08-08'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-09',
+            DATE_END => '2019-08-09'
+          },
+          'C4' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-10',
             DATE_END => '2019-08-10'
           },
         }
@@ -2703,10 +3196,36 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2019',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-12-10',
+            DATE_END => '2019-12-10'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-11',
+            DATE_END => '2019-12-11'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-12',
+            DATE_END => '2019-12-12'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-12',
             DATE_END => '2019-12-12'
           },
         }
@@ -2717,10 +3236,36 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2022',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2022-06-29',
+            DATE_END => '2022-06-29'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-06-30',
+            DATE_END => '2022-06-30'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-01',
+            DATE_END => '2022-07-01'
+          },
+          'C3' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-02',
             DATE_END => '2022-07-02'
           },
         }
@@ -2731,10 +3276,44 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2022',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-10-11',
+            DATE_END => '2022-10-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-10-13',
+            DATE_END => '2022-10-13'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-14',
+            DATE_END => '2022-10-14'
+          },
+          'C3' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-15',
+            DATE_END => '2022-10-15'
+          },
+          'C4' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-16',
             DATE_END => '2022-10-16'
           },
         }
@@ -2745,10 +3324,36 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2022',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2022-12-04',
+            DATE_END => '2022-12-04'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-05',
+            DATE_END => '2022-12-05'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-06',
+            DATE_END => '2022-12-06'
+          },
+          'C3' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-07',
             DATE_END => '2022-12-07'
           },
         }
@@ -2759,10 +3364,28 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2023',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2023-06-25',
+            DATE_END => '2023-06-25'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-06-26',
+            DATE_END => '2023-06-26'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-06-27',
             DATE_END => '2023-06-27'
           },
         }
@@ -2776,6 +3399,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-11-05',
             DATE_END => '2023-11-05'
           },
@@ -2787,10 +3412,36 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2024A',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2024-01-05',
+            DATE_END => '2024-01-05'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-06',
+            DATE_END => '2024-01-06'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-07',
+            DATE_END => '2024-01-07'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-07',
             DATE_END => '2024-01-07'
           },
         }
@@ -2801,10 +3452,35 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2024',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2024-06-11',
+            DATE_END => '2024-06-11'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-06-12',
+            DATE_END => '2024-06-12'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Playoff',
+            DATE_START => '2024-06-13',
+            DATE_END => '2024-06-13'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-06-13',
             DATE_END => '2024-06-13'
           },
         }
@@ -2815,10 +3491,52 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2024',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-09-16',
+            DATE_END => '2024-09-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
+            DATE_START => '2024-09-18',
+            DATE_END => '2024-09-18'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-19',
+            DATE_END => '2024-09-19'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-20',
+            DATE_END => '2024-09-20'
+          },
+          'C4' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-21',
+            DATE_END => '2024-09-21'
+          },
+          'C5' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-21',
             DATE_END => '2024-09-21'
           },
         }
@@ -2829,10 +3547,44 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2024B',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-12-12',
+            DATE_END => '2024-12-13'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-14',
+            DATE_END => '2024-12-14'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-15',
+            DATE_END => '2024-12-15'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-16',
+            DATE_END => '2024-12-16'
+          },
+          'C4' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-16',
             DATE_END => '2024-12-16'
           },
         }
@@ -3008,7 +3760,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-11-04',
+            DATE_END => '2016-11-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-04',
+            DATE_END => '2016-11-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-05',
+            DATE_END => '2016-11-05'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-06',
             DATE_END => '2016-11-06'
           },
         }
@@ -3022,7 +3800,25 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2017-09-02',
+            DATE_END => '2017-09-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-02',
+            DATE_END => '2017-09-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-03',
             DATE_END => '2017-09-03'
           },
         }
@@ -3035,7 +3831,25 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2018-09-07',
+            DATE_END => '2018-09-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-08',
+            DATE_END => '2018-09-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-09',
             DATE_END => '2018-09-09'
           },
         }
@@ -3048,7 +3862,25 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-09-06',
+            DATE_END => '2019-09-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-07',
+            DATE_END => '2019-09-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-08',
             DATE_END => '2019-09-08'
           },
         }
@@ -3061,7 +3893,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-09-14',
+            DATE_END => '2022-09-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-16',
+            DATE_END => '2022-09-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-17',
+            DATE_END => '2022-09-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-18',
             DATE_END => '2022-09-18'
           },
         }
@@ -3073,7 +3931,25 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2023-11-24',
+            DATE_END => '2023-11-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-25',
+            DATE_END => '2023-11-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-26',
             DATE_END => '2023-11-26'
           },
         }
@@ -3089,7 +3965,25 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2024-08-29',
+            DATE_END => '2024-08-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-30',
+            DATE_END => '2024-08-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-31',
             DATE_END => '2024-08-31'
           },
         }
@@ -3112,10 +4006,19 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-09-29',
+            DATE_END => '2022-10-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2022-10-02',
             DATE_END => '2022-10-02'
           },
         }
@@ -3138,10 +4041,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-11-27',
+            DATE_END => '2016-11-27'
+          },
+          'C1' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-27',
+            DATE_END => '2016-11-27'
+          },
+          'C2' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-27',
+            DATE_END => '2016-11-28'
+          },
+          'C3' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-29',
             DATE_END => '2016-11-29'
           },
         }
@@ -3151,10 +4080,20 @@ my %TOURNAMENTS_INDIA =
         CITY => 'Mumbai',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-11-06',
+            DATE_END => '2017-11-06'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-07',
             DATE_END => '2017-11-07'
           },
         }
@@ -3163,10 +4102,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2024-02-18',
+            DATE_END => '2024-02-18'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-02-19',
+            DATE_END => '2024-02-19'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-02-20',
             DATE_END => '2024-02-20'
           },
         }
@@ -3189,10 +4146,21 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-05-01',
+            DATE_END => '2024-05-03'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2024-05-04',
             DATE_END => '2024-05-07'
           },
         }
@@ -3217,6 +4185,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
             DATE_START => '2022-12-11',
             DATE_END => '2022-12-11'
           },
@@ -3228,10 +4197,18 @@ my %TOURNAMENTS_INDIA =
         SCORING => 'IMP',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Elimination',
             DATE_START => '2024-09-14',
+            DATE_END => '2024-09-14'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            DATE_START => '2024-09-15',
             DATE_END => '2024-09-15'
           },
         }
@@ -3254,10 +4231,30 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-05-08',
+            DATE_END => '2024-05-09'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2024-05-10',
+            DATE_END => '2024-05-11'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2024-05-12',
             DATE_END => '2024-05-12'
           },
         }
@@ -3446,7 +4443,17 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-02-03',
+            DATE_END => '2017-02-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-05',
             DATE_END => '2017-02-06'
           },
         }
@@ -3459,34 +4466,18 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-10-06',
-            DATE_END => '2017-10-08'
+            DATE_END => '2017-10-07'
           },
-        }
-      },
-    }
-  },
-
-  'Indian Senior Pair Trials' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' =>
+          'C1' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-08',
+            DATE_END => '2017-10-08'
           },
         }
       },
@@ -3634,6 +4625,8 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-02-07',
             DATE_END => '2017-02-09'
           },
@@ -3645,10 +4638,29 @@ my %TOURNAMENTS_INDIA =
         CLUB => 'WCG Mumbai',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 2,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-04-29',
+            DATE_END => '2018-04-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-30',
+            DATE_END => '2018-04-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-01',
             DATE_END => '2018-05-01'
           } 
         }
@@ -3658,12 +4670,22 @@ my %TOURNAMENTS_INDIA =
         CITY => 'Ahmedabad',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2021-10-25',
+            DATE_END => '2021-10-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-10-26',
             DATE_END => '2021-10-27'
-          } 
+          },
         }
       },
     }
@@ -3687,6 +4709,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-08-14',
             DATE_END => '2018-08-14'
           },
@@ -3701,6 +4725,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-12-13',
             DATE_END => '2018-12-13'
           },
@@ -3712,10 +4738,28 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => 2019,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-06-03',
+            DATE_END => '2019-06-03'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-04',
+            DATE_END => '2019-06-04'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-05',
             DATE_END => '2019-06-05'
           },
         }
@@ -3729,6 +4773,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-08-10',
             DATE_END => '2019-08-10'
           },
@@ -3743,6 +4789,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-12-12',
             DATE_END => '2019-12-12'
           },
@@ -3754,10 +4802,20 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => 2022,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2022-10-15',
+            DATE_END => '2022-10-15'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-16',
             DATE_END => '2022-10-16'
           },
         }
@@ -3768,10 +4826,20 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => 2022,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2022-12-06',
+            DATE_END => '2022-12-06'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-07',
             DATE_END => '2022-12-07'
           },
         }
@@ -3785,6 +4853,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-06-27',
             DATE_END => '2023-06-27'
           },
@@ -3799,6 +4869,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-11-05',
             DATE_END => '2023-11-05'
           },
@@ -3810,9 +4882,19 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2024A',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-01-06',
+            DATE_END => '2024-01-06'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-01-06',
             DATE_END => '2024-01-06'
           },
@@ -3827,6 +4909,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-09-21',
             DATE_END => '2024-09-21'
           },
@@ -3841,6 +4925,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-12-15',
             DATE_END => '2024-12-15'
           },
@@ -3951,6 +5037,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-05-13',
             DATE_END => '2024-05-16'
           },
@@ -4000,10 +5087,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2017-07-02',
+            DATE_END => '2017-07-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-02',
+            DATE_END => '2017-07-02'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-02',
+            DATE_END => '2017-07-02'
+          },
+          'C3' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-03',
             DATE_END => '2017-07-03'
           },
         }
@@ -4190,10 +5303,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'SESSION|ROUND',
             DATE_START => '2023-09-30',
+            DATE_END => '2023-09-30'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2023-10-01',
             DATE_END => '2023-10-02'
           },
         }
@@ -4216,10 +5339,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-09-19',
+            DATE_END => '2022-09-19'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2022-09-20',
             DATE_END => '2022-09-21'
           },
         }
@@ -4404,7 +5537,41 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2023-01-16',
+            DATE_END => '2023-01-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-01-16',
+            DATE_END => '2023-01-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-01-17',
+            DATE_END => '2023-01-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2023-01-18',
+            DATE_END => '2023-01-18'
+          },
+          'C4' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-01-18',
             DATE_END => '2023-01-18'
           },
         }
@@ -4457,11 +5624,29 @@ my %TOURNAMENTS_INDIA =
         SPONSOR => 'Dhampur Sugar',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2018-10-26',
-            DATE_END => '2018-10-28'
+            DATE_END => '2018-10-26'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-27',
+            DATE_END => '2018-10-27'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-28',
+            DATE_END => '2018-10-29'
           },
         }
       },
@@ -4469,10 +5654,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-10-20',
+            DATE_END => '2019-10-20'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-21',
+            DATE_END => '2019-10-21'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-22',
             DATE_END => '2019-10-22'
           },
         }
@@ -4481,10 +5684,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2022-11-04',
+            DATE_END => '2022-11-04'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-05',
+            DATE_END => '2022-11-05'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-06',
             DATE_END => '2022-11-06'
           },
         }
@@ -5181,7 +6402,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2017-01-06',
+            DATE_END => '2017-01-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-01-06',
+            DATE_END => '2017-01-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-01-07',
+            DATE_END => '2017-01-07'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-01-08',
             DATE_END => '2017-01-08'
           },
         }
@@ -5194,7 +6441,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2018-01-12',
+            DATE_END => '2018-01-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-12',
+            DATE_END => '2018-01-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-13',
+            DATE_END => '2018-01-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-14',
             DATE_END => '2018-01-14'
           },
         }
@@ -5207,7 +6480,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2019-01-11',
+            DATE_END => '2019-01-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-11',
+            DATE_END => '2019-01-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-12',
+            DATE_END => '2019-01-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-13',
             DATE_END => '2019-01-13'
           },
         }
@@ -5220,7 +6519,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2020-01-05',
+            DATE_END => '2020-01-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-05',
+            DATE_END => '2020-01-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-06',
+            DATE_END => '2020-01-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-01-07',
             DATE_END => '2020-01-07'
           },
         }
@@ -5234,7 +6559,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2023-12-17',
+            DATE_END => '2023-12-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-17',
+            DATE_END => '2023-12-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-19',
+            DATE_END => '2023-12-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-19',
             DATE_END => '2023-12-19'
           },
         }
@@ -5413,12 +6764,30 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Maharashtra State Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
-            DATE_START => '2017-02-17',
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-18',
             DATE_END => '2017-02-18'
-          } 
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-18',
+            DATE_END => '2017-02-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-18',
+            DATE_END => '2017-02-18'
+          },
         }
       },
       '2023' =>
@@ -5426,12 +6795,32 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Maharashtra State Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-04-14',
+            DATE_END => '2023-04-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2023-04-16',
             DATE_END => '2023-04-16'
-          } 
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2023-04-16',
+            DATE_END => '2023-04-16'
+          },
         }
       },
     }
@@ -5452,10 +6841,19 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2024B',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-12-17',
+            DATE_END => '2024-12-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2024-12-18',
             DATE_END => '2024-12-18'
           },
         }
@@ -5478,10 +6876,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-08-03',
+            DATE_END => '2023-08-04'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-04',
+            DATE_END => '2023-08-05'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-05',
             DATE_END => '2023-08-06'
           },
         }
@@ -5490,10 +6906,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-08-15',
+            DATE_END => '2024-08-16'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-16',
+            DATE_END => '2024-08-17'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-17',
             DATE_END => '2024-08-18'
           },
         }
@@ -5832,7 +7266,49 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2017-03-26',
+            DATE_END => '2017-03-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-26',
+            DATE_END => '2017-03-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-27',
+            DATE_END => '2017-03-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-27',
+            DATE_END => '2017-03-27'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-27',
+            DATE_END => '2017-03-27'
+          },
+          'C5' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-28',
             DATE_END => '2017-03-28'
           },
         }
@@ -5846,7 +7322,49 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2018-04-01',
+            DATE_END => '2018-04-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-01',
+            DATE_END => '2018-04-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-02',
+            DATE_END => '2018-04-02'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-02',
+            DATE_END => '2018-04-02'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-02',
+            DATE_END => '2018-04-02'
+          },
+          'C5' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-03',
             DATE_END => '2018-04-03'
           },
         }
@@ -5859,7 +7377,49 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2019-03-15',
+            DATE_END => '2019-03-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-15',
+            DATE_END => '2019-03-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-16',
+            DATE_END => '2019-03-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-16',
+            DATE_END => '2019-03-16'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-16',
+            DATE_END => '2019-03-16'
+          },
+          'C5' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-17',
             DATE_END => '2019-03-17'
           },
         }
@@ -5871,7 +7431,49 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2022-07-29',
+            DATE_END => '2022-07-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-29',
+            DATE_END => '2022-07-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-30',
+            DATE_END => '2022-07-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-30',
+            DATE_END => '2022-07-30'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-30',
+            DATE_END => '2022-07-30'
+          },
+          'C5' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-31',
             DATE_END => '2022-07-31'
           },
         }
@@ -5883,7 +7485,49 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2023-04-09',
+            DATE_END => '2023-04-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-09',
+            DATE_END => '2023-04-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-10',
+            DATE_END => '2023-04-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-10',
+            DATE_END => '2023-04-10'
+          },
+          'C4' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-10',
+            DATE_END => '2023-04-10'
+          },
+          'C5' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2023-04-11',
             DATE_END => '2023-04-11'
           },
         }
@@ -5895,7 +7539,48 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Rof64',
             DATE_START => '2024-03-29',
+            DATE_END => '2024-03-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-29',
+            DATE_END => '2024-03-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-30',
+            DATE_END => '2024-03-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-30',
+            DATE_END => '2024-03-30'
+          },
+          'C4' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-30',
+            DATE_END => '2024-03-30'
+          },
+          'C5' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-31',
             DATE_END => '2024-03-31'
           },
         }
@@ -5937,7 +7622,6 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2023,
             STAGE => 'Final',
-            major => 'SESSION',
             DATE_START => '2023-04-11',
             DATE_END => '2023-04-11'
           } 
@@ -6108,6 +7792,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-02-22',
             DATE_END => '2019-02-24'
           },
@@ -6122,6 +7807,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2020,
+            major => 'ROUND',
             DATE_START => '2020-02-21',
             DATE_END => '2020-02-23'
           },
@@ -6134,6 +7820,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-02-24',
             DATE_END => '2023-02-26'
           },
@@ -6146,6 +7833,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-02-23',
             DATE_END => '2024-02-25'
           },
@@ -6169,10 +7857,19 @@ my %TOURNAMENTS_INDIA =
         MEET_TAG => '2024B',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-12-10',
+            DATE_END => '2024-12-10'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2024-12-11',
             DATE_END => '2024-12-11'
           },
         }
@@ -7176,10 +8873,36 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-12-15',
+            DATE_END => '2016-12-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-12-16',
+            DATE_END => '2016-12-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-12-17',
+            DATE_END => '2016-12-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-12-18',
             DATE_END => '2016-12-18'
           },
         }
@@ -7189,10 +8912,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2017-12-18',
+            DATE_END => '2017-12-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-19',
+            DATE_END => '2017-12-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-20',
             DATE_END => '2017-12-20'
           },
         }
@@ -7247,6 +8988,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2017,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-12-20',
             DATE_END => '2017-12-20'
           } 
@@ -7273,6 +9015,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-09-23',
             DATE_END => '2023-09-23'
           },
@@ -7392,7 +9136,25 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2017-07-22',
+            DATE_END => '2017-07-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-22',
+            DATE_END => '2017-07-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-23',
             DATE_END => '2017-07-23'
           },
         }
@@ -7405,7 +9167,25 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-07-21',
+            DATE_END => '2018-07-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-21',
+            DATE_END => '2018-07-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-22',
             DATE_END => '2018-07-22'
           },
         }
@@ -7418,7 +9198,26 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2019-07-20',
+            DATE_END => '2019-07-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-20',
+            DATE_END => '2019-07-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-21',
             DATE_END => '2019-07-21'
           },
         }
@@ -7444,6 +9243,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
             DATE_START => '2024-03-27',
             DATE_END => '2024-03-27'
           },
@@ -7597,7 +9397,19 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-06-10',
+            DATE_END => '2017-06-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-11',
             DATE_END => '2017-06-11'
           },
         }
@@ -7946,7 +9758,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2017-06-18',
+            DATE_END => '2017-06-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-19',
+            DATE_END => '2017-06-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-20',
+            DATE_END => '2017-06-20'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-21',
             DATE_END => '2017-06-21'
           },
         }
@@ -7959,7 +9797,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2018-06-25',
+            DATE_END => '2018-06-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-06-26',
+            DATE_END => '2018-06-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-06-27',
+            DATE_END => '2018-06-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-06-28',
             DATE_END => '2018-06-28'
           },
         }
@@ -8232,10 +10096,20 @@ my %TOURNAMENTS_INDIA =
         MEET => 'West Bengal State Championship',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-11-12',
+            DATE_END => '2022-11-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2022-11-13',
             DATE_END => '2022-11-13'
           },
         }
@@ -8245,10 +10119,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'West Bengal State Championship',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2023-11-18',
+            DATE_END => '2023-11-18'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-18',
+            DATE_END => '2023-11-18'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-19',
             DATE_END => '2023-11-19'
           },
         }
@@ -8261,6 +10153,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2024-07-21',
             DATE_END => '2024-07-21'
           },
@@ -8271,10 +10165,36 @@ my %TOURNAMENTS_INDIA =
         MEET => 'West Bengal State Championship',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2024-11-09',
+            DATE_END => '2024-11-09'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-09',
+            DATE_END => '2024-11-09'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-10',
+            DATE_END => '2024-11-10'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-10',
             DATE_END => '2024-11-10'
           },
         }
@@ -8300,6 +10220,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-05-18',
             DATE_END => '2024-05-19'
           },
@@ -8356,13 +10277,23 @@ my %TOURNAMENTS_INDIA =
         ORDINAL => 3,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
             MOVEMENT => 'Swiss',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-01-27',
+            DATE_END => '2017-01-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2017-01-29',
             DATE_END => '2017-01-29'
-          } 
+          },
         }
       },
       '2018' =>
@@ -8374,6 +10305,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2018,
             MOVEMENT => 'Swiss',
+            major => 'ROUND|SESSION',
             DATE_START => '2018-01-26',
             DATE_END => '2018-01-28'
           } 
@@ -8388,6 +10320,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2019,
             MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2019-01-25',
             DATE_END => '2019-01-27'
           } 
@@ -8398,13 +10331,22 @@ my %TOURNAMENTS_INDIA =
         ORDINAL => 6,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2020,
             MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2020-01-24',
+            DATE_END => '2020-01-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2020-01-26',
             DATE_END => '2020-01-26'
-          } 
+          },
         }
       },
       '2022' =>
@@ -8425,11 +10367,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
             MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2023-01-27',
+            DATE_END => '2023-01-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2023-01-29',
             DATE_END => '2023-01-29'
           } 
         }
@@ -8438,11 +10389,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
             MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2024-01-26',
+            DATE_END => '2024-01-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2024-01-28',
             DATE_END => '2024-01-28'
           } 
         }
