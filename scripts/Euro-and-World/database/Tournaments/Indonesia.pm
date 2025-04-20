@@ -423,10 +423,28 @@ my %TOURNAMENTS_INDONESIA =
         CITY => 'Padang',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-09-21',
+            DATE_END => '2019-09-23'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2019-09-27',
+            DATE_END => '2019-09-28'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2019-09-28',
             DATE_END => '2019-09-29'
           },
         }
@@ -480,10 +498,20 @@ my %TOURNAMENTS_INDONESIA =
         ORDINAL => 11,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-04-29',
+            DATE_END => '2017-04-30'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2017-04-30',
             DATE_END => '2017-05-01'
           },
         }
@@ -507,10 +535,20 @@ my %TOURNAMENTS_INDONESIA =
         ORDINAL => 15,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-07-13',
+            DATE_END => '2018-07-14'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|SESSION',
+            DATE_START => '2018-07-14',
             DATE_END => '2018-07-15'
           },
         }
@@ -533,10 +571,28 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2024-06-13',
+            DATE_END => '2024-06-13'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-06-14',
+            DATE_END => '2024-06-14'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT|SESSION',
+            DATE_START => '2024-06-14',
             DATE_END => '2024-06-15'
           },
         }
@@ -559,10 +615,20 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-08-16',
+            DATE_END => '2024-08-16'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-17',
             DATE_END => '2024-08-18'
           },
         }
@@ -585,10 +651,27 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            major => 'SESSION',
             DATE_START => '2023-02-17',
+            DATE_END => '2023-02-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'ROUND|STANZA',
+            DATE_START => '2023-02-18',
+            DATE_END => '2023-02-18'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND|SESSION',
+            DATE_START => '2023-02-18',
             DATE_END => '2023-02-19'
           },
         }
@@ -616,6 +699,8 @@ my %TOURNAMENTS_INDONESIA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-11-10',
             DATE_END => '2023-11-14'
           },
@@ -626,10 +711,20 @@ my %TOURNAMENTS_INDONESIA =
         ORDINAL => 23,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2024-11-12',
+            DATE_END => '2024-11-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-13',
             DATE_END => '2024-11-13'
           },
         }
@@ -759,8 +854,18 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2019-04-26',
             DATE_END => '2019-04-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-27',
+            DATE_END => '2019-04-28'
           },
         }
       },
@@ -772,7 +877,24 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2022-07-22',
+            DATE_END => '2022-07-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            DATE_START => '2022-07-23',
+            DATE_END => '2022-07-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-23',
             DATE_END => '2022-07-23'
           },
         }
@@ -785,7 +907,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2023,
-            DATE_START => '2023-06-21',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2023-06-23',
+            DATE_END => '2023-06-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-06-24',
+            DATE_END => '2023-06-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-06-24',
             DATE_END => '2023-06-24'
           },
         }
@@ -812,6 +952,8 @@ my %TOURNAMENTS_INDONESIA =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2022-07-24',
             DATE_END => '2022-07-24'
           },
@@ -1112,10 +1254,20 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-11-01',
+            DATE_END => '2019-11-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2019-11-02',
             DATE_END => '2019-11-03'
           },
         }
@@ -1276,8 +1428,61 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2017-07-21',
+            DATE_END => '2017-07-23' 
+          },
+          'C1' => 
+          {
+            # Two overlapping tournaments?
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-24',
             DATE_END => '2017-07-25' 
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-24',
+            DATE_END => '2017-07-25' 
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'GROUP|MATCH',
+            DATE_START => '2018-12-11',
+            DATE_END => '2018-12-13' 
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            ignore => 'MATCH',
+            DATE_START => '2018-12-14',
+            DATE_END => '2018-12-14' 
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-14',
+            DATE_END => '2018-12-14' 
           },
         }
       },
@@ -1782,7 +1987,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2017-07-17',
+            DATE_END => '2017-07-18' 
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-18',
+            DATE_END => '2017-07-19' 
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-19',
             DATE_END => '2017-07-19' 
           },
         }
@@ -1796,8 +2019,28 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'MATCH',
             DATE_START => '2018-12-08',
-            DATE_END => '2018-12-14' 
+            DATE_END => '2018-12-09' 
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            ignore => 'MATCH',
+            DATE_START => '2018-12-09',
+            DATE_END => '2018-12-10' 
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-10',
+            DATE_END => '2018-12-10' 
           },
         }
       },
@@ -1919,7 +2162,7 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2016,
-            MAJOR => 'ROUND|SESSION',
+            major => 'ROUND|SESSION',
             ignore => 'TABLE',
             DATE_START => '2016-09-18',
             DATE_END => '2016-09-22',
@@ -1934,7 +2177,16 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-09-09',
+            DATE_END => '2024-09-11',
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2024-09-12',
             DATE_END => '2024-09-12',
           },
         }
@@ -2087,7 +2339,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-09-22',
+            DATE_END => '2016-09-26',
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-27',
+            DATE_END => '2016-09-27',
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-09-28',
             DATE_END => '2016-09-28',
           },
         }
@@ -2100,7 +2370,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-12-05',
+            DATE_END => '2019-12-08',
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-09',
+            DATE_END => '2019-12-09',
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2019-12-09',
             DATE_END => '2019-12-09',
           },
         }
@@ -2113,7 +2401,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-07-25',
+            DATE_END => '2023-07-27',
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-07-28',
+            DATE_END => '2023-07-28',
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-07-29',
             DATE_END => '2023-07-29',
           },
         }
@@ -2126,7 +2432,33 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-09-13',
+            DATE_END => '2024-09-14',
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2024-09-15',
+            DATE_END => '2024-09-16',
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-17',
+            DATE_END => '2024-09-17',
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-18',
             DATE_END => '2024-09-18',
           },
         }
@@ -2314,6 +2646,8 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-12-12',
             DATE_END => '2019-12-13',
           },
@@ -2327,8 +2661,18 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-11-26',
-            DATE_END => '2022-11-29'
+            DATE_END => '2022-11-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-28',
+            DATE_END => '2022-11-28'
           } 
         }
       },
@@ -2340,7 +2684,17 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-07-28',
+            DATE_END => '2023-07-28',
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-07-29',
             DATE_END => '2023-07-29',
           },
         }
@@ -2353,7 +2707,33 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-09-13',
+            DATE_END => '2024-09-14',
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2024-09-15',
+            DATE_END => '2024-09-16',
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-17',
+            DATE_END => '2024-09-17',
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-18',
             DATE_END => '2024-09-18',
           },
         }
@@ -2547,7 +2927,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-11-21',
+            DATE_END => '2018-11-22',
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-22',
+            DATE_END => '2018-11-22',
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-23',
             DATE_END => '2018-11-23',
           },
         }
@@ -2562,6 +2960,14 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            DATE_START => '2018-12-15',
+            DATE_END => '2018-12-15' 
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
             DATE_START => '2018-12-15',
             DATE_END => '2018-12-15' 
           },
@@ -2575,7 +2981,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-12-10',
+            DATE_END => '2019-12-11',
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-12',
+            DATE_END => '2019-12-12',
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-13',
             DATE_END => '2019-12-13',
           },
         }
@@ -2589,9 +3013,67 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-11-25',
+            DATE_END => '2022-11-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-27',
+            DATE_END => '2022-11-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-29',
+            DATE_END => '2022-11-29'
+          },
+        }
+      },
+      '2022B' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        MEET_TAG => 2022,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2022-11-30',
+            DATE_END => '2022-12-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-03',
+            DATE_END => '2022-12-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-03',
             DATE_END => '2022-12-04'
-          } 
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-04',
+            DATE_END => '2022-12-04'
+          },
         }
       },
       '2023' =>
@@ -2601,7 +3083,17 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-07-31',
+            DATE_END => '2023-08-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2023-08-02',
             DATE_END => '2023-08-03'
           } 
         }
@@ -2662,6 +3154,7 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-06-30',
             DATE_END => '2022-07-01'
           },
@@ -2688,6 +3181,8 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2022-06-30',
             DATE_END => '2022-07-01'
           },
@@ -2714,8 +3209,18 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2022-06-26',
-            DATE_END => '2022-07-01'
+            DATE_END => '2022-06-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2022-06-27',
+            DATE_END => '2022-06-27'
           },
         }
       },
@@ -2739,6 +3244,15 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2018-11-20',
+            DATE_END => '2018-11-20',
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2018-11-20',
             DATE_END => '2018-11-20',
           },
@@ -2764,8 +3278,26 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2023-09-09',
-            DATE_END => '2023-09-15'
+            DATE_END => '2023-09-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-10',
+            DATE_END => '2023-09-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-11',
+            DATE_END => '2023-09-11'
           },
         }
       },
@@ -2790,7 +3322,18 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Elimination',
+            major => 'ROUND',
             DATE_START => '2022-06-28',
+            DATE_END => '2022-06-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2022-06-29',
             DATE_END => '2022-06-29'
           },
         }
@@ -2815,6 +3358,7 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2018,
+            major => 'SESSION',
             DATE_START => '2018-11-19',
             DATE_END => '2018-11-19',
           },
@@ -2829,6 +3373,16 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SESSION|ROUND',
+            DATE_START => '2022-11-10',
+            DATE_END => '2022-11-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2022-11-10',
             DATE_END => '2022-11-10'
           },
@@ -2854,7 +3408,30 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2019-07-12',
+            DATE_END => '2019-07-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2019-07-12',
+            DATE_END => '2019-07-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            DATE_START => '2019-07-13',
+            DATE_END => '2019-07-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            DATE_START => '2019-07-13',
             DATE_END => '2019-07-13'
           },
         }
@@ -2868,8 +3445,20 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2022-11-11',
-            DATE_END => '2022-11-15'
+            DATE_END => '2022-11-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2022-11-11',
+            DATE_END => '2022-11-11'
           },
         }
       },
@@ -2881,7 +3470,33 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2023,
-            DATE_START => '2023-09-09',
+            STAGE => 'Elimination',
+            major => 'ROUND',
+            DATE_START => '2023-09-14',
+            DATE_END => '2023-09-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-15',
+            DATE_END => '2023-09-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-15',
+            DATE_END => '2023-09-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-15',
             DATE_END => '2023-09-15'
           },
         }
@@ -2907,6 +3522,17 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2022-11-11',
+            DATE_END => '2022-11-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'ROUND|SESSION',
             DATE_START => '2022-11-12',
             DATE_END => '2022-11-12'
           },
@@ -2919,7 +3545,6 @@ my %TOURNAMENTS_INDONESIA =
   {
     FORM => 'Pairs',
     SCORING => 'MP',
-    MOVEMENT => 'Swiss',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -2934,6 +3559,9 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2022-11-13',
             DATE_END => '2022-11-13'
           },
@@ -2959,7 +3587,30 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2019-07-08',
+            DATE_END => '2019-07-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2019-07-09',
+            DATE_END => '2019-07-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            DATE_START => '2019-07-09',
+            DATE_END => '2019-07-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            DATE_START => '2019-07-09',
             DATE_END => '2019-07-09'
           },
         }
@@ -2973,7 +3624,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
-            DATE_START => '2022-11-11',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2022-11-14',
+            DATE_END => '2022-11-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-11-15',
+            DATE_END => '2022-11-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-11-16',
             DATE_END => '2022-11-16'
           },
         }
@@ -2999,8 +3668,10 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
-            DATE_START => '2022-11-25',
-            DATE_END => '2022-11-29'
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-27',
+            DATE_END => '2022-11-27'
           } 
         }
       },
@@ -3024,7 +3695,30 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2019-07-08',
+            DATE_END => '2019-07-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2019-07-09',
+            DATE_END => '2019-07-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            DATE_START => '2019-07-09',
+            DATE_END => '2019-07-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            DATE_START => '2019-07-09',
             DATE_END => '2019-07-09'
           },
         }
@@ -3037,8 +3731,26 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2023,
-            DATE_START => '2023-09-09',
-            DATE_END => '2023-09-15'
+            STAGE => 'Elimination',
+            major => 'ROUND',
+            DATE_START => '2023-09-10',
+            DATE_END => '2023-09-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-11',
+            DATE_END => '2023-09-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-11',
+            DATE_END => '2023-09-11'
           },
         }
       },
@@ -3164,6 +3876,8 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2020-02-29',
             DATE_END => '2020-03-01'
           },
@@ -3176,19 +3890,43 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SESSION',
+            ignore => 'SEGMENT',
             DATE_START => '2022-08-21',
             DATE_END => '2022-08-21'
           },
           'C1' => 
           {
             YEAR => 2022,
-            DATE_START => '2022-09-10',
-            DATE_END => '2022-09-11'
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SESSION',
+            ignore => 'SEGMENT',
+            DATE_START => '2022-08-22',
+            DATE_END => '2022-08-22'
           },
           'C2' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT|SESSION',
+            DATE_START => '2022-09-10',
+            DATE_END => '2022-09-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2022-09-24',
+            DATE_END => '2022-09-24'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-25',
             DATE_END => '2022-09-25'
           },
         }
@@ -3277,10 +4015,22 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SESSION',
+            ignore => 'TABLE',
             DATE_START => '2016-11-08',
+            DATE_END => '2016-11-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SESSION',
+            ignore => 'TABLE',
+            DATE_START => '2016-11-13',
             DATE_END => '2016-11-16'
           },
         }
@@ -3570,6 +4320,8 @@ my %TOURNAMENTS_INDONESIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-07-20',
             DATE_END => '2017-07-20'
           }
@@ -3758,7 +4510,33 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2016-11-18',
+            DATE_END => '2016-11-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-19',
+            DATE_END => '2016-11-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-19',
+            DATE_END => '2016-11-20'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-20',
             DATE_END => '2016-11-20'
           },
         }
@@ -3771,6 +4549,8 @@ my %TOURNAMENTS_INDONESIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-07-20',
             DATE_END => '2017-07-20'
           }
@@ -3971,7 +4751,33 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2016-11-13',
+            DATE_END => '2016-11-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-14',
+            DATE_END => '2016-11-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-15',
+            DATE_END => '2016-11-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-15',
             DATE_END => '2016-11-15'
           },
         }
@@ -3986,7 +4792,33 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-11-11',
+            DATE_END => '2019-11-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-12',
+            DATE_END => '2019-11-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-13',
+            DATE_END => '2019-11-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-13',
             DATE_END => '2019-11-13'
           },
         }
@@ -4001,7 +4833,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2024-11-15',
+            DATE_END => '2024-11-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Knock-out',
+            DATE_START => '2024-11-15',
+            DATE_END => '2024-11-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-16',
             DATE_END => '2024-11-16'
           },
         }
@@ -4054,7 +4904,16 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-09-09',
+            DATE_END => '2024-09-11',
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2024-09-12',
             DATE_END => '2024-09-12',
           },
         }
@@ -4224,7 +5083,17 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-09-22',
+            DATE_END => '2016-09-26',
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2016-09-27',
             DATE_END => '2016-09-28',
           },
         }
@@ -4237,8 +5106,26 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-07-25',
-            DATE_END => '2023-07-29',
+            DATE_END => '2023-07-27',
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-07-28',
+            DATE_END => '2023-07-28',
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-07-28',
+            DATE_END => '2023-07-28',
           },
         }
       },
@@ -4250,7 +5137,33 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-09-13',
+            DATE_END => '2024-09-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2024-09-15',
+            DATE_END => '2024-09-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-17',
+            DATE_END => '2024-09-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-09-18',
             DATE_END => '2024-09-18'
           },
         }
@@ -4301,10 +5214,28 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2023-08-25',
+            DATE_END => '2023-08-26'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-26',
+            DATE_END => '2023-08-26'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-26',
             DATE_END => '2023-08-27'
           },
         }
@@ -4624,11 +5555,21 @@ my %TOURNAMENTS_INDONESIA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-09-08',
-            DATE_END => '2017-09-20'
+            DATE_END => '2017-09-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT',
+            DATE_START => '2017-09-08',
+            DATE_END => '2017-09-09'
           } 
         }
       },
@@ -4656,10 +5597,20 @@ my %TOURNAMENTS_INDONESIA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-08-23',
+            DATE_END => '2019-08-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT|ROUND',
+            DATE_START => '2019-08-24',
             DATE_END => '2019-08-25'
           } 
         }
@@ -4682,9 +5633,17 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            DATE_START => '2023-10-15',
+            DATE_END => '2023-10-15'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
             DATE_START => '2023-10-15',
             DATE_END => '2023-10-15'
           },
@@ -4744,10 +5703,22 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND|SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2024-09-30',
+            DATE_END => '2024-10-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            ignore => 'TABLE',
+            DATE_START => '2024-10-01',
             DATE_END => '2024-10-02'
           },
         }
@@ -4770,10 +5741,21 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-08-01',
+            DATE_END => '2019-08-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2019-08-02',
             DATE_END => '2019-08-03'
           },
         }
@@ -4796,10 +5778,28 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2024-11-19',
+            DATE_END => '2024-11-19'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-22',
+            DATE_END => '2024-11-23'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-23',
             DATE_END => '2024-11-24'
           },
         }
@@ -4839,10 +5839,27 @@ my %TOURNAMENTS_INDONESIA =
         ORDINAL => 28,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2016-12-17',
+            DATE_END => '2016-12-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Playoff',
+            DATE_START => '2016-12-17',
+            DATE_END => '2016-12-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2016-12-18',
             DATE_END => '2016-12-18'
           },
         }
@@ -4851,10 +5868,27 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-11-18',
+            DATE_END => '2017-11-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Playoff',
+            DATE_START => '2017-11-18',
+            DATE_END => '2017-11-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-19',
             DATE_END => '2017-11-19'
           },
         }
@@ -4867,6 +5901,7 @@ my %TOURNAMENTS_INDONESIA =
           'SINGLE' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
             DATE_START => '2021-11-20',
             DATE_END => '2021-11-21'
           },
@@ -5011,7 +6046,17 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-08-03',
+            DATE_END => '2018-08-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION|ROUND|SEGMENT',
+            DATE_START => '2018-08-04',
             DATE_END => '2018-08-05'
           },
         }
@@ -5108,7 +6153,17 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2016-10-05',
+            DATE_END => '2016-10-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND|SESSION|SEGMENT',
+            DATE_START => '2016-10-08',
             DATE_END => '2016-10-10'
           },
         }
@@ -5121,6 +6176,8 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2022-07-08',
             DATE_END => '2022-07-08'
           },
@@ -5134,7 +6191,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2024-08-02',
+            DATE_END => '2024-08-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-03',
+            DATE_END => '2024-08-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-03',
             DATE_END => '2024-08-03'
           },
         }
@@ -5443,12 +6518,22 @@ my %TOURNAMENTS_INDONESIA =
         CITY => 'Bandung',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2016-12-02',
+            DATE_END => '2016-12-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2016-12-03',
             DATE_END => '2016-12-04'
-          } 
+          },
         }
       },
       '2017' =>
@@ -5457,12 +6542,23 @@ my %TOURNAMENTS_INDONESIA =
         CITY => 'Bandung',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-11-24',
+            DATE_END => '2017-11-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2017-11-25',
             DATE_END => '2017-11-26'
-          } 
+          },
         }
       },
       '2018' =>
@@ -5471,12 +6567,23 @@ my %TOURNAMENTS_INDONESIA =
         CITY => 'Jakarta',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-11-15',
+            DATE_END => '2018-11-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2018-11-16',
             DATE_END => '2018-11-17'
-          } 
+          },
         }
       },
       '2019' =>
@@ -5485,12 +6592,23 @@ my %TOURNAMENTS_INDONESIA =
         CITY => 'Jakarta',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-11-15',
+            DATE_END => '2019-11-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT|SESSION',
+            DATE_START => '2019-11-16',
             DATE_END => '2019-11-17'
-          } 
+          },
         }
       },
       '2022' =>
@@ -5499,10 +6617,21 @@ my %TOURNAMENTS_INDONESIA =
         CITY => 'Jakarta',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2022-10-28',
+            DATE_END => '2022-10-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2022-10-29',
             DATE_END => '2022-10-30'
           } 
         }
@@ -5512,12 +6641,22 @@ my %TOURNAMENTS_INDONESIA =
         CITY => 'Jakarta',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2023-10-13',
+            DATE_END => '2023-10-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2023-10-14',
             DATE_END => '2023-10-15'
-          } 
+          },
         }
       },
     }
@@ -5538,10 +6677,21 @@ my %TOURNAMENTS_INDONESIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-08-05',
+            DATE_END => '2019-08-06'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2019-08-06',
             DATE_END => '2019-08-07'
           },
         }
@@ -5597,6 +6747,13 @@ my %TOURNAMENTS_INDONESIA =
           'C1' =>
           {
             YEAR => 2024,
+            STAGE => 'Playoff',
+            DATE_START => '2024-11-30',
+            DATE_END => '2024-12-01'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
             STAGE => 'Final',
             major => 'ROUND|SESSION',
             DATE_START => '2024-11-30',
@@ -5626,6 +6783,7 @@ my %TOURNAMENTS_INDONESIA =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'SESSION',
             DATE_START => '2022-05-29',
             DATE_END => '2022-05-29'
           },
@@ -5653,8 +6811,26 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-10-06',
-            DATE_END => '2018-10-14'
+            DATE_END => '2018-10-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-07',
+            DATE_END => '2018-10-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-08',
+            DATE_END => '2018-10-08'
           },
         }
       },
@@ -5746,7 +6922,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2018,
-            DATE_START => '2018-10-06',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2018-10-11',
+            DATE_END => '2018-10-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-13',
+            DATE_END => '2018-10-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-13',
             DATE_END => '2018-10-14'
           },
         }
@@ -5773,8 +6967,10 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2018,
-            DATE_START => '2018-10-06',
-            DATE_END => '2018-10-14'
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2018-10-12',
+            DATE_END => '2018-10-12'
           },
         }
       },
@@ -5798,10 +6994,37 @@ my %TOURNAMENTS_INDONESIA =
         REGION => 'Sintang',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2016,
-            DATE_START => '2016-10-21',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-10-28',
+            DATE_END => '2016-10-29'
+          },
+          'C1' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-29',
+            DATE_END => '2016-10-29'
+          },
+          'C2' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-29',
+            DATE_END => '2016-10-29'
+          },
+          'C3' =>
+          {
+            # Different tournament?
+            YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2016-10-30',
             DATE_END => '2016-10-30'
           },
         }

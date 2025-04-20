@@ -229,6 +229,7 @@ my @LOCAL_SUBS =
   { START => 65928, END => 66003, TEXT => '^TN-', 
     CORR => "Transnational " },
   { START => 66027, END => 66063, TEXT => '^LM ', CORR => 'Open Teams ' },
+  { START => 66686, END => 66742, TEXT => '^M ', CORR => '' },
   { START => 66696, END => 66918, TEXT => '^Men ', CORR => 'Open ' },
   { START => 67132, END => 67230, TEXT => '^K_O_ ', CORR => 'KO ' },
   { START => 67400, END => 67411, TEXT => '^Gold ', 
@@ -315,6 +316,8 @@ my @LOCAL_SUBS =
 
 my @LOCAL_SUBS_INTERPOL =
 (
+  { START => 47933, END => 48068, TEXT => '^RR2_(\d+) T\d+$', 
+    CORR => 'RR - Round $1 of 21' },
   { START => 49185, END => 49228, TEXT => '^Segment Q(\d_\d)', 
     CORR => 'Qualifying - Segment $1' },
   { START => 50630, END => 50670, TEXT => '^Q(\d)$', CORR => 'Segment $1' },
@@ -430,6 +433,8 @@ my @LOCAL_SUBS_INTERPOL =
     CORR => '$1 of $2' },
   { START => 84472, END => 84500, TEXT => '^(\d+):(\d+)$', 
     CORR => '$1 of $2' },
+  { START => 84796, END => 84839, TEXT => '^RR2_(\d)-7$', 
+    CORR => 'RR - Round $1 of 7' },
   { START => 84872, END => 84882, TEXT => '^Final (\d)-3$', 
     CORR => 'Final - Segment $1 of 3' },
   { START => 85831, END => 85860, TEXT => '^Q(\d) of 4$', 
