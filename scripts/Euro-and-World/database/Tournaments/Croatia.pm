@@ -369,6 +369,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND|MATCH',
             DATE_START => '2022-09-11',
             DATE_END => '2022-09-11'
@@ -699,9 +700,16 @@ my %TOURNAMENTS_CROATIA =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'ROUND',
-            minor => 'MATCH',
+            major => 'ROUND|MATCH',
             DATE_START => '2016-09-07',
+            DATE_END => '2016-09-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
+            DATE_START => '2016-09-09',
             DATE_END => '2016-09-09'
           },
         }
@@ -715,8 +723,8 @@ my %TOURNAMENTS_CROATIA =
           {
             YEAR => 2017,
             STAGE => 'Final',
-            major => 'ROUND',
             minor => 'MATCH',
+            ignore => 'ROUND',
             DATE_START => '2017-09-06',
             DATE_END => '2017-09-08'
           },
@@ -731,9 +739,16 @@ my %TOURNAMENTS_CROATIA =
           {
             YEAR => 2018,
             STAGE => 'Final',
-            major => 'ROUND',
-            minor => 'MATCH',
+            major => 'MATCH',
             DATE_START => '2018-09-12',
+            DATE_END => '2018-09-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'MATCH',
+            DATE_START => '2018-09-14',
             DATE_END => '2018-09-14'
           },
         }
@@ -747,9 +762,16 @@ my %TOURNAMENTS_CROATIA =
           {
             YEAR => 2019,
             STAGE => 'Final',
-            major => 'ROUND',
-            minor => 'MATCH',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-09-11',
+            DATE_END => '2019-09-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-13',
             DATE_END => '2019-09-13'
           },
         }
@@ -763,9 +785,18 @@ my %TOURNAMENTS_CROATIA =
           {
             YEAR => 2022,
             STAGE => 'Final',
-            major => 'ROUND',
-            minor => 'MATCH',
+            MOVEMENT => 'Round-robin',
+            major => 'SEGMENT',
+            ignore => 'ROUND',
             DATE_START => '2022-09-14',
+            DATE_END => '2022-09-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-16',
             DATE_END => '2022-09-16'
           },
         }
@@ -780,8 +811,15 @@ my %TOURNAMENTS_CROATIA =
             YEAR => 2023,
             STAGE => 'Final',
             major => 'ROUND',
-            minor => 'MATCH',
             DATE_START => '2023-09-13',
+            DATE_END => '2023-09-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2023-09-15',
             DATE_END => '2023-09-15'
           },
         }
@@ -795,9 +833,18 @@ my %TOURNAMENTS_CROATIA =
           {
             YEAR => 2024,
             STAGE => 'Final',
-            major => 'ROUND',
-            minor => 'MATCH',
+            MOVEMENT => 'Round-robin',
+            major => 'MATCH|SEGMENT',
+            ignore => 'ROUND',
             DATE_START => '2024-09-18',
+            DATE_END => '2024-09-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
+            DATE_START => '2024-09-20',
             DATE_END => '2024-09-20'
           },
         }

@@ -449,6 +449,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-04-27',
             DATE_END => '2019-04-28'
           } 
@@ -521,6 +522,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-04-24',
             DATE_END => '2019-04-26'
           } 
@@ -905,7 +907,18 @@ my %TOURNAMENTS_SUPRA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2017-02-17',
+            DATE_END => '2017-02-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
+            DATE_START => '2017-02-19',
             DATE_END => '2017-02-19'
           },
         }
@@ -919,7 +932,19 @@ my %TOURNAMENTS_SUPRA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            minor => 'SESSION|SEGMENT',
             DATE_START => '2019-02-06',
+            DATE_END => '2019-02-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SESSION',
+            DATE_START => '2019-02-08',
             DATE_END => '2019-02-08'
           },
         }
@@ -1223,7 +1248,33 @@ my %TOURNAMENTS_SUPRA =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2017-02-14',
+            DATE_END => '2017-02-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-16',
+            DATE_END => '2017-02-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Consolation',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-02-16',
+            DATE_END => '2017-02-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-02-16',
             DATE_END => '2017-02-16'
           },
         }
@@ -1236,7 +1287,33 @@ my %TOURNAMENTS_SUPRA =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2019-02-03',
+            DATE_END => '2019-02-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-02-05',
+            DATE_END => '2019-02-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Bronze',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-02-05',
+            DATE_END => '2019-02-05'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-02-05',
             DATE_END => '2019-02-05'
           },
         }
@@ -1374,6 +1451,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2016-12-17',
             DATE_END => '2016-12-17'
           } 
@@ -1388,6 +1467,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2017-12-15',
             DATE_END => '2017-12-16'
           } 
@@ -1402,6 +1483,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-12-14',
             DATE_END => '2018-12-16'
           } 
@@ -1416,6 +1498,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-12-20',
             DATE_END => '2019-12-22'
           } 
@@ -1432,6 +1515,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-03-11',
             DATE_END => '2022-03-13'
           } 
@@ -1448,6 +1532,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'SEGMENT',
             DATE_START => '2022-12-16',
             DATE_END => '2022-12-18'
           } 
@@ -1462,6 +1547,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-12-15',
             DATE_END => '2023-12-15'
           } 
@@ -1476,6 +1563,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND|MATCH',
             DATE_START => '2024-12-14',
             DATE_END => '2024-12-14'
           } 
@@ -1579,6 +1667,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND|STANZA',
+            ignore => 'GROUP|MATCH',
             DATE_START => '2016-12-16',
             DATE_END => '2016-12-18'
           } 
@@ -1593,6 +1683,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2017-12-15',
             DATE_END => '2017-12-17'
           } 
@@ -1607,6 +1699,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-12-14',
             DATE_END => '2018-12-16'
           } 
@@ -1621,6 +1714,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-12-20',
             DATE_END => '2019-12-22'
           } 
@@ -1636,6 +1730,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2021,
+            major => 'ROUND|MATCH',
             DATE_START => '2021-12-17',
             DATE_END => '2021-12-19'
           } 
@@ -1652,6 +1747,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND|MATCH',
             DATE_START => '2022-03-11',
             DATE_END => '2022-03-13'
           } 
@@ -1668,6 +1764,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2022-12-16',
             DATE_END => '2022-12-18'
           } 
@@ -1683,6 +1780,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-12-15',
             DATE_END => '2023-12-17'
           } 
@@ -1698,6 +1797,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND|MATCH',
             DATE_START => '2024-12-13',
             DATE_END => '2024-12-15'
           } 
@@ -1785,6 +1885,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2016-12-17',
             DATE_END => '2016-12-17'
           } 
@@ -1799,6 +1901,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2017-12-16',
             DATE_END => '2017-12-16'
           } 
@@ -1813,6 +1917,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-12-14',
             DATE_END => '2018-12-16'
           } 
@@ -1827,6 +1932,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-12-21',
             DATE_END => '2019-12-21'
           } 
@@ -1843,6 +1949,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-03-13',
             DATE_END => '2022-03-13'
           } 
@@ -1859,6 +1966,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2022-12-16',
             DATE_END => '2022-12-18'
           } 
@@ -1874,6 +1982,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-12-15',
             DATE_END => '2023-12-17'
           } 
@@ -1889,6 +1999,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-12-13',
             DATE_END => '2024-12-15'
           } 
@@ -2050,6 +2161,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-05-06',
             DATE_END => '2017-05-07'
           } 
@@ -2063,6 +2175,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-05-19',
             DATE_END => '2018-05-20'
           } 
@@ -2076,6 +2190,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-05-04',
             DATE_END => '2019-05-05'
           } 
@@ -2129,6 +2244,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-05-06',
             DATE_END => '2017-05-07'
           } 
@@ -2142,6 +2258,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-05-04',
             DATE_END => '2019-05-05'
           } 
@@ -2245,6 +2362,23 @@ my %TOURNAMENTS_SUPRA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
+            DATE_START => '2016-09-22',
+            DATE_END => '2016-09-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            DATE_START => '2016-09-22',
+            DATE_END => '2016-09-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
             DATE_START => '2016-09-22',
             DATE_END => '2016-09-22'
           },
@@ -2362,6 +2496,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-01-14',
             DATE_END => '2017-01-14'
           } 

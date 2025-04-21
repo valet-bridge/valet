@@ -164,6 +164,8 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2022-09-03',
             DATE_END => '2022-09-04'
           },
@@ -360,6 +362,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2024-01-25',
@@ -718,6 +721,8 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-09-02',
             DATE_END => '2017-09-03'
           },
@@ -730,8 +735,17 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2018,
-            major => 'ROUND',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-09-08',
+            DATE_END => '2018-09-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-09-09',
             DATE_END => '2018-09-09'
           },
         }
@@ -743,7 +757,17 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-09-07',
+            DATE_END => '2019-09-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-09-08',
             DATE_END => '2019-09-08'
           },
         }
@@ -755,7 +779,17 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2020-08-29',
+            DATE_END => '2020-08-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2020-08-30',
             DATE_END => '2020-08-30'
           },
         }
@@ -767,7 +801,17 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2021-09-18',
+            DATE_END => '2021-09-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2021-09-19',
             DATE_END => '2021-09-19'
           },
         }
@@ -779,19 +823,32 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Rof16',
             DATE_START => '2022-07-28',
             DATE_END => '2022-07-28'
           },
           'C1' => 
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|HALF',
             DATE_START => '2022-09-13',
             DATE_END => '2022-09-13'
           },
           'C2' => 
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2022-09-17',
+            DATE_END => '2022-09-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-18',
             DATE_END => '2022-09-18'
           },
         }
@@ -803,12 +860,16 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|HALF',
             DATE_START => '2023-09-03',
             DATE_END => '2023-09-03'
           },
           'C1' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-09-17',
             DATE_END => '2023-09-17'
           },
@@ -821,6 +882,8 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-09-22',
             DATE_END => '2024-09-22'
           },
@@ -847,6 +910,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-10-23',
             DATE_END => '2022-10-23'
           },
@@ -859,12 +923,15 @@ my %TOURNAMENTS_ICELAND =
           'C0' =>
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-10-21',
             DATE_END => '2023-10-22'
           },
           'C1' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-11-19',
             DATE_END => '2023-11-19'
           },
@@ -877,12 +944,15 @@ my %TOURNAMENTS_ICELAND =
           'C0' =>
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-10-20',
             DATE_END => '2024-10-20'
           },
           'C1' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-11-24',
             DATE_END => '2024-11-24'
           },
@@ -1136,9 +1206,9 @@ my %TOURNAMENTS_ICELAND =
           {
             YEAR => 2017,
             STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2017-04-24',
-            DATE_END => '2017-04-24'
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-04-23',
+            DATE_END => '2017-04-23'
           },
         }
       },
@@ -1180,7 +1250,7 @@ my %TOURNAMENTS_ICELAND =
           {
             YEAR => 2019,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-04-28',
             DATE_END => '2019-04-28'
           },
@@ -1206,6 +1276,7 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-04-01',
             DATE_END => '2023-04-02'
           },
@@ -1218,25 +1289,55 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-04-20',
             DATE_END => '2023-04-23'
           },
         }
       },
-      '2024' =>
+      '2024A' =>
       {
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-03-24',
             DATE_END => '2024-03-24'
           },
           'C1' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-24',
+            DATE_END => '2024-03-24'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-04-24',
+            DATE_END => '2024-04-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-04-28',
             DATE_END => '2024-04-28'
           },
         }
@@ -1396,7 +1497,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2020,
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2020-01-30',
             DATE_END => '2020-02-01'
           } 
@@ -1464,6 +1565,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-01-27',
             DATE_END => '2018-01-28'
           } 
@@ -1477,6 +1579,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2019-02-02',
             DATE_END => '2019-02-03'
           } 
@@ -1490,6 +1593,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'ROUND',
             DATE_START => '2020-02-01',
             DATE_END => '2020-02-02'
           } 
@@ -1503,6 +1607,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-01-28',
             DATE_END => '2023-01-29'
           } 
