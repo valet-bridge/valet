@@ -318,6 +318,8 @@ my @LOCAL_SUBS_INTERPOL =
 (
   { START => 47933, END => 48068, TEXT => '^RR2_(\d+) T\d+$', 
     CORR => 'RR - Round $1 of 21' },
+  { START => 49105, END => 49112, TEXT => '^round (\d)$', 
+    CORR => 'Qualifying - Round $1' },
   { START => 49185, END => 49228, TEXT => '^Segment Q(\d_\d)', 
     CORR => 'Qualifying - Segment $1' },
   { START => 50630, END => 50670, TEXT => '^Q(\d)$', CORR => 'Segment $1' },

@@ -1000,6 +1000,7 @@ my @LOCAL_SUBS =
     CORR => 'Turkey Practice - Seniors' },
   { START => 57046, END => 57089, 
     TEXT => 'France _ Italie', CORR => 'France Friendly' },
+  { START => 57305, END => 57353, TEXT => '^3-rd ', CORR => '3rd ' },
   { START => 57310, END => 57369, 
     TEXT => 'Hakan Peksen Marmara Kuluplerarasi Final', 
     CORR => 'Hakan Peksen Open Teams - Marmara - Final' },

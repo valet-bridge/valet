@@ -920,7 +920,8 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2020,
-            major => 'ROUND',
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2020-07-05',
             DATE_END => '2020-07-05'
           } 
@@ -934,7 +935,8 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2021,
-            major => 'ROUND',
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2021-07-04',
             DATE_END => '2021-07-04'
           } 
@@ -945,11 +947,22 @@ my %TOURNAMENTS_BULGARIA =
         MEET => 'Albena Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2022-07-01',
+            DATE_END => '2022-07-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2022-07-02',
             DATE_END => '2022-07-03'
           } 
         }
@@ -959,11 +972,20 @@ my %TOURNAMENTS_BULGARIA =
         MEET => 'Albena Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2023-07-07',
+            DATE_END => '2023-07-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2023-07-09',
             DATE_END => '2023-07-09'
           } 
         }
@@ -973,13 +995,14 @@ my %TOURNAMENTS_BULGARIA =
         MEET => 'Albena Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2024-07-05',
             DATE_END => '2024-07-07'
-          } 
+          },
         }
       },
     }
@@ -1060,6 +1083,8 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2016-10-29',
             DATE_END => '2016-10-30'
           },
@@ -1083,10 +1108,26 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-09-17',
+            DATE_END => '2022-09-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-18',
+            DATE_END => '2022-09-18'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            DATE_START => '2022-09-18',
             DATE_END => '2022-09-18'
           },
         }
@@ -1109,10 +1150,20 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2022-12-09',
+            DATE_END => '2022-12-10'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-12-10',
             DATE_END => '2022-12-11'
           },
         }
@@ -1124,13 +1175,25 @@ my %TOURNAMENTS_BULGARIA =
           'C0' =>
           {
             YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-09-22',
             DATE_END => '2023-09-24'
           },
           'C1' =>
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-12-08',
+            DATE_END => '2023-12-09'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-09',
             DATE_END => '2023-12-10'
           },
         }
@@ -1139,10 +1202,20 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2024-11-15',
+            DATE_END => '2024-11-16'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-16',
             DATE_END => '2024-11-17'
           },
         }
@@ -1152,7 +1225,6 @@ my %TOURNAMENTS_BULGARIA =
 
   'Bulgarian Open Cup' =>
   {
-    # TODO Related to Club Teams?
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Teams',
@@ -1166,10 +1238,31 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            ignore => 'GROUP',
             DATE_START => '2022-11-18',
+            DATE_END => '2022-11-19'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Consolation',
+            major => 'SEGMENT|ROUND',
+            ignore => 'GROUP',
+            DATE_START => '2022-11-19',
+            DATE_END => '2022-11-19'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            ignore => 'GROUP',
+            DATE_START => '2022-11-19',
             DATE_END => '2022-11-20'
           },
         }
@@ -1178,10 +1271,20 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-11-17',
+            DATE_END => '2023-11-18'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-18',
             DATE_END => '2023-11-19'
           },
         }
@@ -1367,6 +1470,9 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-04-20',
             DATE_END => '2017-04-23'
           },
@@ -1381,6 +1487,9 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-04-26',
             DATE_END => '2018-04-29'
           },
@@ -1395,6 +1504,9 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2019-04-04',
             DATE_END => '2019-04-07'
           },
@@ -1409,6 +1521,9 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2021,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2021-05-13',
             DATE_END => '2021-05-16'
           },
@@ -1423,6 +1538,9 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2021,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2021-09-23',
             DATE_END => '2021-09-26'
           },
@@ -1437,6 +1555,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-03-18',
             DATE_END => '2022-03-20'
           },
@@ -1447,10 +1566,26 @@ my %TOURNAMENTS_BULGARIA =
         MEET => 'Vitosha Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2023-05-27',
+            DATE_END => '2023-05-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            DATE_START => '2023-05-28',
+            DATE_END => '2023-05-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            DATE_START => '2023-05-28',
             DATE_END => '2023-05-28'
           },
         }
@@ -1464,6 +1599,8 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-04-19',
             DATE_END => '2024-04-21'
           },
@@ -1583,9 +1720,19 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-01-13',
+            DATE_END => '2018-01-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-01-13',
             DATE_END => '2018-01-14'
           },
@@ -1598,6 +1745,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'ROUND',
             DATE_START => '2020-02-01',
             DATE_END => '2020-02-02'
           },
@@ -1610,6 +1758,9 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2022-09-23',
             DATE_END => '2022-09-25'
           },
@@ -1688,10 +1839,20 @@ my %TOURNAMENTS_BULGARIA =
         ORDINAL => 1,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2023-08-18',
+            DATE_END => '2023-08-19'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2023-08-19',
             DATE_END => '2023-08-20'
           },
         }
@@ -1761,6 +1922,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-08-26',
             DATE_END => '2017-08-27'
           },
@@ -1774,6 +1936,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-11-16',
             DATE_END => '2019-11-17'
           },
@@ -1857,11 +2020,20 @@ my %TOURNAMENTS_BULGARIA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2017-04-08',
+            DATE_END => '2017-04-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2017-04-09',
             DATE_END => '2017-04-09'
           } 
         }
@@ -1888,6 +2060,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-09-17',
             DATE_END => '2016-09-18'
           },
@@ -2058,6 +2231,34 @@ my %TOURNAMENTS_BULGARIA =
     }
   },
 
+  'Kaylaka Cup' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2016-11-09',
+            DATE_END => '2016-11-10'
+          },
+        }
+      }
+    }
+  },
+
   'Kaylaka Open Teams' =>
   {
     %GLOBAL,
@@ -2073,10 +2274,20 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-11-10',
+            DATE_END => '2016-11-11'
+          },
+          'C1' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-11',
             DATE_END => '2016-11-11'
           },
         }
@@ -2085,10 +2296,26 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-11-15',
+            DATE_END => '2018-11-16'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            DATE_START => '2018-11-16',
+            DATE_END => '2018-11-16'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-11-16',
             DATE_END => '2018-11-16'
           },
         }
@@ -2097,11 +2324,27 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-11-07',
-            DATE_END => '2019-11-10'
+            DATE_END => '2019-11-08'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            DATE_START => '2019-11-08',
+            DATE_END => '2019-11-08'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            DATE_START => '2019-11-08',
+            DATE_END => '2019-11-08'
           },
         }
       },
@@ -2110,10 +2353,26 @@ my %TOURNAMENTS_BULGARIA =
         ORDINAL => 5,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2021,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2021-11-04',
+            DATE_END => '2021-11-05'
+          },
+          'C1' =>
+          {
+            YEAR => 2021,
+            STAGE => 'Semifinal',
+            DATE_START => '2021-11-05',
+            DATE_END => '2021-11-05'
+          },
+          'C2' =>
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            DATE_START => '2021-11-05',
             DATE_END => '2021-11-05'
           },
         }
@@ -2196,6 +2455,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-06-10',
             DATE_END => '2017-06-11'
           } 
@@ -2218,10 +2478,20 @@ my %TOURNAMENTS_BULGARIA =
         MEET => 'Pavel Banya Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2018-01-06',
+            DATE_END => '2018-01-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2018-01-07',
             DATE_END => '2018-01-07'
           } 
         }
@@ -2234,6 +2504,8 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-01-05',
             DATE_END => '2019-01-06'
           } 
@@ -2244,10 +2516,20 @@ my %TOURNAMENTS_BULGARIA =
         MEET => 'Pavel Banya Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2020-01-04',
+            DATE_END => '2020-01-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2020-01-05',
             DATE_END => '2020-01-05'
           } 
         }
@@ -2257,9 +2539,11 @@ my %TOURNAMENTS_BULGARIA =
         MEET => 'Pavel Banya Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2020-01-18',
             DATE_END => '2020-01-19'
           } 
@@ -2273,6 +2557,8 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2021,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2021-03-13',
             DATE_END => '2021-03-14'
           } 
@@ -2300,6 +2586,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-10-22',
             DATE_END => '2016-10-23'
           },
@@ -2313,6 +2600,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-10-21',
             DATE_END => '2017-10-22'
           },
@@ -2326,6 +2614,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-10-20',
             DATE_END => '2018-10-21'
           },
@@ -2395,13 +2684,22 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2016-11-12',
+            DATE_END => '2016-11-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2016-11-13',
             DATE_END => '2016-11-13'
-          } 
+          },
         }
       },
       '2018' =>
@@ -2411,6 +2709,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2018-11-17',
             DATE_END => '2018-11-18'
@@ -2425,6 +2724,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2021,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2021-11-06',
             DATE_END => '2021-11-07'
@@ -2533,7 +2833,17 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2021,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2021-05-29',
+            DATE_END => '2021-05-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2021-05-30',
             DATE_END => '2021-05-30'
           },
         }
@@ -2547,6 +2857,8 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-03-05',
             DATE_END => '2022-03-06'
           },
@@ -2570,10 +2882,40 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-02-11',
+            DATE_END => '2017-02-11'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Rof16',
+            DATE_START => '2017-02-11',
+            DATE_END => '2017-02-11'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2017-02-12',
+            DATE_END => '2017-02-12'
+          },
+          'C3' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            DATE_START => '2017-02-12',
+            DATE_END => '2017-02-12'
+          },
+          'C4' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            DATE_START => '2017-02-12',
             DATE_END => '2017-02-12'
           },
         }
@@ -2599,6 +2941,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-07-21',
             DATE_END => '2018-07-22'
           },
@@ -2624,6 +2967,9 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2019-05-15',
             DATE_END => '2019-05-15'
           } 
@@ -2705,12 +3051,30 @@ my %TOURNAMENTS_BULGARIA =
         MEET => 'Serdika Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-05-16',
+            DATE_END => '2019-05-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-18',
+            DATE_END => '2019-05-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-19',
             DATE_END => '2019-05-19'
-          } 
+          },
         }
       },
     }
@@ -2791,6 +3155,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-11-05',
             DATE_END => '2016-11-06'
           },
@@ -2804,6 +3169,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-10-28',
             DATE_END => '2017-10-29'
           },
@@ -2832,6 +3198,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-07-28',
             DATE_END => '2018-07-29'
           },
@@ -3112,7 +3479,23 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-10-08',
+            DATE_END => '2016-10-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            DATE_START => '2016-10-09',
+            DATE_END => '2016-10-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-10-09',
             DATE_END => '2016-10-09'
           },
         }
@@ -3125,7 +3508,24 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-10-07',
+            DATE_END => '2017-10-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-08',
+            DATE_END => '2017-10-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            DATE_START => '2017-10-08',
             DATE_END => '2017-10-08'
           },
         }
@@ -3138,7 +3538,23 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-10-06',
+            DATE_END => '2018-10-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            DATE_START => '2018-10-07',
+            DATE_END => '2018-10-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-10-07',
             DATE_END => '2018-10-07'
           },
         }
@@ -3151,7 +3567,23 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-10-05',
+            DATE_END => '2019-10-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            DATE_START => '2019-10-06',
+            DATE_END => '2019-10-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            DATE_START => '2019-10-06',
             DATE_END => '2019-10-06'
           },
         }
@@ -3164,7 +3596,23 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2020-10-03',
+            DATE_END => '2020-10-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            DATE_START => '2020-10-04',
+            DATE_END => '2020-10-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            DATE_START => '2020-10-04',
             DATE_END => '2020-10-04'
           },
         }
@@ -3177,7 +3625,16 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2024-10-12',
+            DATE_END => '2024-10-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            DATE_START => '2024-10-13',
             DATE_END => '2024-10-13'
           },
         }
@@ -3203,6 +3660,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-06-02',
             DATE_END => '2018-06-03'
           },
@@ -3273,6 +3731,14 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            DATE_START => '2017-08-16',
+            DATE_END => '2017-08-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
             DATE_START => '2017-08-16',
             DATE_END => '2017-08-16'
           },
@@ -3287,6 +3753,7 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
             DATE_START => '2018-08-15',
             DATE_END => '2018-08-15'
           },
@@ -3301,6 +3768,14 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            DATE_START => '2019-08-14',
+            DATE_END => '2019-08-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
             DATE_START => '2019-08-14',
             DATE_END => '2019-08-14'
           },
@@ -3431,6 +3906,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-08-18',
             DATE_END => '2018-08-19'
           } 
@@ -3444,6 +3920,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-08-17',
             DATE_END => '2019-08-18'
           } 
@@ -3457,6 +3934,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2020-08-08',
             DATE_END => '2020-08-09'
           } 
@@ -3470,6 +3948,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
             DATE_START => '2021-08-14',
             DATE_END => '2021-08-15'
           } 
@@ -3483,6 +3962,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-08-13',
             DATE_END => '2022-08-14'
           } 
@@ -3496,6 +3976,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-08-12',
             DATE_END => '2023-08-13'
           } 
@@ -3509,6 +3990,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-08-10',
             DATE_END => '2024-08-11'
           } 

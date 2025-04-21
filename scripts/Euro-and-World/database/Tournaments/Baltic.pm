@@ -728,10 +728,28 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Baltic Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-04-22',
+            DATE_END => '2017-04-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-04-23',
+            DATE_END => '2017-04-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-04-23',
             DATE_END => '2017-04-23'
           } 
         }
@@ -741,9 +759,19 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Baltic Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-28',
+            DATE_END => '2019-04-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-04-28',
             DATE_END => '2019-04-29'
           } 
@@ -754,10 +782,20 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Baltic Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'ROUND|MATCH|SEGMENT',
             DATE_START => '2023-09-20',
+            DATE_END => '2023-09-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH|SEGMENT',
+            DATE_START => '2023-09-21',
             DATE_END => '2023-09-21'
           } 
         }
@@ -783,6 +821,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-03-30',
             DATE_END => '2024-03-31'
           },
@@ -935,6 +974,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-04-07',
             DATE_END => '2018-04-08'
           } 
@@ -947,6 +987,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-04-06',
             DATE_END => '2019-04-07'
           } 
@@ -997,6 +1038,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-10-07',
             DATE_END => '2017-10-08'
           } 
@@ -1009,6 +1051,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-10-05',
             DATE_END => '2019-10-06'
           } 
@@ -1155,6 +1198,8 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-01-29',
             DATE_END => '2023-01-29'
           },
@@ -1167,6 +1212,8 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-02-11',
             DATE_END => '2024-02-11'
           },
@@ -1584,7 +1631,15 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2017,
-            DATE_START => '2017-08-09',
+            STAGE => 'Semifinal',
+            DATE_START => '2017-08-11',
+            DATE_END => '2017-08-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            DATE_START => '2017-08-11',
             DATE_END => '2017-08-11'
           },
         }
@@ -1597,7 +1652,15 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2018,
-            DATE_START => '2018-08-15',
+            STAGE => 'Semifinal',
+            DATE_START => '2018-08-17',
+            DATE_END => '2018-08-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-08-17',
             DATE_END => '2018-08-17'
           },
         }
@@ -1610,7 +1673,15 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-08-14',
+            STAGE => 'Semifinal',
+            DATE_START => '2019-08-16',
+            DATE_END => '2019-08-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            DATE_START => '2019-08-16',
             DATE_END => '2019-08-16'
           },
         }
@@ -1623,6 +1694,14 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            DATE_START => '2020-08-14',
+            DATE_END => '2020-08-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
             DATE_START => '2020-08-14',
             DATE_END => '2020-08-14'
           },
@@ -1636,7 +1715,15 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2021,
-            DATE_START => '2021-08-11',
+            STAGE => 'Semifinal',
+            DATE_START => '2021-08-13',
+            DATE_END => '2021-08-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            DATE_START => '2021-08-13',
             DATE_END => '2021-08-13'
           },
         }
@@ -1649,6 +1736,14 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            DATE_START => '2022-08-12',
+            DATE_END => '2022-08-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
             DATE_START => '2022-08-12',
             DATE_END => '2022-08-12'
           },
@@ -1662,7 +1757,16 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2023,
-            DATE_START => '2023-09-06',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-08',
+            DATE_END => '2023-09-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            DATE_START => '2023-09-08',
             DATE_END => '2023-09-08'
           },
         }
@@ -1675,7 +1779,15 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2024,
-            DATE_START => '2024-08-21',
+            STAGE => 'Semifinal',
+            DATE_START => '2024-08-23',
+            DATE_END => '2024-08-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            DATE_START => '2024-08-23',
             DATE_END => '2024-08-23'
           },
         }
@@ -2028,8 +2140,22 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2017,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2017-05-26',
+            DATE_END => '2017-05-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            DATE_START => '2017-05-28',
+            DATE_END => '2017-05-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            DATE_START => '2017-05-28',
             DATE_END => '2017-05-28'
           },
         }
@@ -2044,6 +2170,20 @@ my %TOURNAMENTS_BALTIC =
             YEAR => 2018,
             major => 'ROUND',
             DATE_START => '2018-05-25',
+            DATE_END => '2018-05-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            DATE_START => '2018-05-26',
+            DATE_END => '2018-05-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-05-27',
             DATE_END => '2018-05-27'
           },
         }
@@ -2575,7 +2715,34 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2017-09-13',
+            DATE_END => '2017-09-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-14',
+            DATE_END => '2017-09-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-14',
+            DATE_END => '2017-09-14'
+          },
+          'C3' => 
+          {
+            # Maybe something else
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2017-09-17',
             DATE_END => '2017-09-17'
           },
         }
@@ -2588,7 +2755,25 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-10-17',
+            DATE_END => '2018-10-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-18',
+            DATE_END => '2018-10-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-18',
             DATE_END => '2018-10-18'
           },
         }
@@ -2601,7 +2786,17 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-10-14',
+            DATE_END => '2019-10-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'MATCH|SEGMENT',
+            DATE_START => '2019-10-15',
             DATE_END => '2019-10-15'
           },
         }
@@ -2614,6 +2809,8 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2022-09-25',
             DATE_END => '2022-09-25'
           },

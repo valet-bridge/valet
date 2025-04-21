@@ -32,6 +32,7 @@ my @MULTI_WORDS =
   'Haskovski Mineralni Bani Open Teams',
   'Karlovo Open Pairs',
   'Karlovo Open Teams',
+  'Kaylaka Cup',
   'Kaylaka Open Teams',
   'Lozenets Open Teams',
   'Panagyurishte Open Teams',
@@ -96,9 +97,9 @@ my %MULTI_TYPOS =
   'Karlovo Open Teams' => [
     'karlovo teams',
     'vasil levski cup'],
+  'Kaylaka Cup' => [
+    'kailaka cup'],
   'Kaylaka Open Teams' => [
-    'kailaka cup',
-    'kaylaka cup',
     'kaylaka masters'],
   'Pleven Open Teams' => [
     "bridge tournament \"gabi\"",
