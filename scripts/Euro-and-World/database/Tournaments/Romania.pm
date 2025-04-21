@@ -76,6 +76,7 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-05-02',
             DATE_END => '2019-05-03'
           },
@@ -152,10 +153,36 @@ my %TOURNAMENTS_ROMANIA =
         ORDINAL => 1,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2023-03-23',
+            DATE_END => '2023-03-24'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-03-25',
+            DATE_END => '2023-03-25'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-03-25',
+            DATE_END => '2023-03-25'
+          },
+          'C3' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-03-26',
             DATE_END => '2023-03-26'
           },
         }
@@ -165,10 +192,36 @@ my %TOURNAMENTS_ROMANIA =
         ORDINAL => 2,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2024-05-23',
+            DATE_END => '2024-05-24'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-05-25',
+            DATE_END => '2024-05-25'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-05-25',
+            DATE_END => '2024-05-25'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-05-26',
             DATE_END => '2024-05-26'
           },
         }
@@ -191,10 +244,25 @@ my %TOURNAMENTS_ROMANIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-04-22',
+            DATE_END => '2017-04-22'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            DATE_START => '2017-04-23',
+            DATE_END => '2017-04-23'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            DATE_START => '2017-04-23',
             DATE_END => '2017-04-23'
           },
         }
@@ -203,10 +271,26 @@ my %TOURNAMENTS_ROMANIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-04-14',
+            DATE_END => '2018-04-14'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-15',
+            DATE_END => '2018-04-15'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-04-15',
             DATE_END => '2018-04-15'
           },
         }
@@ -215,9 +299,18 @@ my %TOURNAMENTS_ROMANIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-21',
+            DATE_END => '2019-04-21'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
             DATE_START => '2019-04-21',
             DATE_END => '2019-04-21'
           },
@@ -241,10 +334,28 @@ my %TOURNAMENTS_ROMANIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SESSION|ROUND|SEGMENT',
             DATE_START => '2017-01-27',
+            DATE_END => '2017-01-27'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-01-28',
+            DATE_END => '2017-01-28'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Danish',
+            DATE_START => '2017-01-29',
             DATE_END => '2017-01-29'
           },
         }
@@ -256,6 +367,7 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-01-27',
             DATE_END => '2018-01-28'
           },
@@ -268,6 +380,8 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            ignore => 'TABLE',
             DATE_START => '2024-01-27',
             DATE_END => '2024-01-27'
           },
@@ -294,6 +408,8 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2018-11-18',
             DATE_END => '2018-11-18'
           },
@@ -454,6 +570,7 @@ my %TOURNAMENTS_ROMANIA =
           'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-03-03',
             DATE_END => '2017-03-05'
           } 
@@ -480,6 +597,7 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2016,
+            major => 'SESSION',
             DATE_START => '2016-11-12',
             DATE_END => '2016-11-13'
           },
@@ -492,6 +610,8 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION|ROUND',
             DATE_START => '2017-11-12',
             DATE_END => '2017-11-12'
           },
@@ -504,34 +624,10 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2018-12-02',
             DATE_END => '2018-12-02'
-          },
-        }
-      },
-    }
-  },
-
-  'Romanian Mixed Teams' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Mixed',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
           },
         }
       },
@@ -553,10 +649,20 @@ my %TOURNAMENTS_ROMANIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
             DATE_START => '2017-04-29',
+            DATE_END => '2017-04-29'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
+            DATE_START => '2017-04-30',
             DATE_END => '2017-04-30'
           },
         }
@@ -568,6 +674,8 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2018-06-02',
             DATE_END => '2018-06-03'
           },
@@ -580,6 +688,9 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2019-06-09',
             DATE_END => '2019-06-09'
           },
@@ -592,6 +703,7 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
             DATE_START => '2024-06-15',
             DATE_END => '2024-06-15'
           },
@@ -778,14 +890,14 @@ my %TOURNAMENTS_ROMANIA =
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2016-06-03',
-            DATE_END => '2016-06-05'
+            DATE_END => '2016-06-04'
           },
           'C1' => 
           {
             YEAR => 2016,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2016-06-03',
+            DATE_START => '2016-06-04',
             DATE_END => '2016-06-05'
           } 
         }
@@ -797,6 +909,7 @@ my %TOURNAMENTS_ROMANIA =
           'C0' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-11-04',
             DATE_END => '2016-11-06'
           },
@@ -809,144 +922,139 @@ my %TOURNAMENTS_ROMANIA =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-06-02',
+            DATE_END => '2017-06-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-03',
             DATE_END => '2017-06-04'
           },
         }
       },
-      '2017B' =>
+      '2017-18' =>
       {
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-11-24',
             DATE_END => '2017-11-26'
-          },
-        }
-      },
-      '2018A' =>
-      {
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2018,
-            DATE_START => '2018-02-23',
-            DATE_END => '2018-02-25'
           },
           'C1' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2018-02-23',
+            DATE_END => '2018-02-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-03-03',
             DATE_END => '2018-03-04'
           },
         }
       },
-      '2018' =>
+      '2018-19' =>
       {
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-11-02',
             DATE_END => '2018-11-04'
           },
-        }
-      },
-      '2019A' =>
-      {
-        CHAPTERS =>
-        {
-          'C0' => 
+          'C1' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-02-15',
             DATE_END => '2019-02-17'
           },
         }
       },
-      '2019B' =>
+      '2019-20' =>
       {
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-11-29',
             DATE_END => '2019-12-01'
           },
-        }
-      },
-      '2020' =>
-      {
-        CHAPTERS =>
-        {
-          'C0' => 
+          'C1' => 
           {
             YEAR => 2020,
+            major => 'ROUND',
             DATE_START => '2020-02-21',
             DATE_END => '2020-02-23'
           },
         }
       },
-      '2022' =>
+      '2022-23' =>
       {
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-12-16',
             DATE_END => '2022-12-18'
           },
-        }
-      },
-      '2023A' =>
-      {
-        CHAPTERS =>
-        {
-          'C0' => 
+          'C1' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-02-10',
             DATE_END => '2023-02-12'
           },
         }
       },
-      '2023B' =>
+      '2023-24' =>
       {
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-11-03',
             DATE_END => '2023-11-05'
           },
-        }
-      },
-      '2024A' =>
-      {
-        CHAPTERS =>
-        {
-          'C0' => 
+          'C1' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-03-01',
             DATE_END => '2024-03-03'
           },
         }
       },
-      '2024B' =>
+      '2024-25' =>
       {
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-11-08',
             DATE_END => '2024-11-10'
           },
@@ -1052,18 +1160,22 @@ my %TOURNAMENTS_ROMANIA =
           'C0' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-01-20',
             DATE_END => '2018-01-21'
           },
           'C1' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-02-03',
             DATE_END => '2018-02-04'
           },
           'C2' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-03-17',
             DATE_END => '2018-03-18'
           },
@@ -1076,12 +1188,15 @@ my %TOURNAMENTS_ROMANIA =
           'C0' => 
           {
             YEAR => 2020,
+            major => 'ROUND',
             DATE_START => '2020-02-07',
             DATE_END => '2020-02-09'
           },
           'C1' => 
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2020-02-14',
             DATE_END => '2020-02-15'
           },
@@ -1094,6 +1209,7 @@ my %TOURNAMENTS_ROMANIA =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-02-25',
             DATE_END => '2022-02-27'
           },
@@ -1106,7 +1222,24 @@ my %TOURNAMENTS_ROMANIA =
           'C0' => 
           {
             YEAR => 2024,
+            major => 'ROUND|SESSION',
             DATE_START => '2024-02-02',
+            DATE_END => '2024-02-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-02-09',
+            DATE_END => '2024-02-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-02-10',
             DATE_END => '2024-02-11'
           },
         }
@@ -1172,6 +1305,7 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-03-16',
             DATE_END => '2024-03-17'
           },
@@ -1198,6 +1332,8 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-06-02',
             DATE_END => '2017-06-03'
           },
@@ -1210,6 +1346,8 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-03-30',
             DATE_END => '2019-03-31'
           },
@@ -1222,6 +1360,8 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2020,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2020-10-03',
             DATE_END => '2020-10-04'
           },
@@ -1234,6 +1374,9 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2022-05-28',
             DATE_END => '2022-05-29'
           },
@@ -1246,6 +1389,9 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-05-06',
             DATE_END => '2023-05-07'
           },
@@ -1258,6 +1404,7 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-06-01',
             DATE_END => '2024-06-02'
           },
@@ -1284,6 +1431,7 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-03-16',
             DATE_END => '2024-03-17'
           },
@@ -1306,9 +1454,17 @@ my %TOURNAMENTS_ROMANIA =
         MEET => 'Tusnad Festival',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            DATE_START => '2023-04-30',
+            DATE_END => '2023-04-30'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
             DATE_START => '2023-04-30',
             DATE_END => '2023-04-30'
           },

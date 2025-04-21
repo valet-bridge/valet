@@ -363,7 +363,24 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2017-04-06',
+            DATE_END => '2017-04-08'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            DATE_START => '2017-04-09',
+            DATE_END => '2017-04-09'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-04-09',
             DATE_END => '2017-04-09'
           },
         }
@@ -376,7 +393,24 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2019-03-31',
+            DATE_END => '2019-04-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            DATE_START => '2019-04-03',
+            DATE_END => '2019-04-03'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-03',
             DATE_END => '2019-04-03'
           },
         }
@@ -401,8 +435,18 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-03-19',
-            DATE_END => '2017-03-21'
+            DATE_END => '2017-03-19'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-03-19',
+            DATE_END => '2017-03-19'
           },
         }
       },
@@ -414,7 +458,33 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-03-22',
+            DATE_END => '2018-03-22'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-22',
+            DATE_END => '2018-03-22'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-23',
+            DATE_END => '2018-03-23'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-23',
             DATE_END => '2018-03-23'
           },
         }
@@ -427,8 +497,34 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-05-15',
-            DATE_END => '2019-05-18'
+            DATE_END => '2019-05-15'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-05-15',
+            DATE_END => '2019-05-15'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-05-16',
+            DATE_END => '2019-05-16'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-05-16',
+            DATE_END => '2019-05-16'
           },
         }
       },
@@ -440,8 +536,25 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Qualifying',
             DATE_START => '2022-08-01',
-            DATE_END => '2022-08-04'
+            DATE_END => '2022-08-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-02',
+            DATE_END => '2022-08-02'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-02',
+            DATE_END => '2022-08-02'
           },
         }
       },
@@ -453,8 +566,34 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2023-03-28',
-            DATE_END => '2023-03-31'
+            DATE_END => '2023-03-28'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-03-28',
+            DATE_END => '2023-03-28'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-03-29',
+            DATE_END => '2023-03-29'
+          },
+          'C3' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-03-29',
+            DATE_END => '2023-03-29'
           },
         }
       },
@@ -466,8 +605,26 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-03-26',
-            DATE_END => '2024-03-29'
+            DATE_END => '2024-03-26'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-03-27',
+            DATE_END => '2024-03-27'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-03-27',
+            DATE_END => '2024-03-27'
           },
         }
       },
@@ -491,7 +648,17 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2017,
-            DATE_START => '2017-03-19',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-03-21',
+            DATE_END => '2017-03-21'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-03-21',
             DATE_END => '2017-03-21'
           },
         }
@@ -504,7 +671,25 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2018,
-            DATE_START => '2018-03-22',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2018-03-24',
+            DATE_END => '2018-03-24'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-24',
+            DATE_END => '2018-03-24'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-25',
             DATE_END => '2018-03-25'
           },
         }
@@ -517,7 +702,33 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2019,
-            DATE_START => '2019-05-15',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2019-05-17',
+            DATE_END => '2019-05-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-05-17',
+            DATE_END => '2019-05-17'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-05-18',
+            DATE_END => '2019-05-18'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-05-18',
             DATE_END => '2019-05-18'
           },
         }
@@ -530,7 +741,17 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2022,
-            DATE_START => '2022-08-01',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-04',
+            DATE_END => '2022-08-04'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-04',
             DATE_END => '2022-08-04'
           },
         }
@@ -544,7 +765,25 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2023,
-            DATE_START => '2023-03-28',
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-03-30',
+            DATE_END => '2023-03-30'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-03-31',
+            DATE_END => '2023-03-31'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-03-31',
             DATE_END => '2023-03-31'
           },
         }
@@ -558,6 +797,8 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2023-09-02',
             DATE_END => '2023-09-02'
           },
@@ -571,7 +812,33 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2024,
-            DATE_START => '2024-03-26',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2024-03-28',
+            DATE_END => '2024-03-28'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-03-28',
+            DATE_END => '2024-03-28'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-03-29',
+            DATE_END => '2024-03-29'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-03-29',
             DATE_END => '2024-03-29'
           },
         }
@@ -609,7 +876,33 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2018,
-            DATE_START => '2018-03-22',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2018-03-24',
+            DATE_END => '2018-03-24'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-24',
+            DATE_END => '2018-03-24'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-25',
+            DATE_END => '2018-03-25'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-25',
             DATE_END => '2018-03-25'
           },
         }
@@ -622,7 +915,33 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2019,
-            DATE_START => '2019-05-15',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2019-05-17',
+            DATE_END => '2019-05-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-05-17',
+            DATE_END => '2019-05-17'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-05-18',
+            DATE_END => '2019-05-18'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-05-18',
             DATE_END => '2019-05-18'
           },
         }
@@ -635,7 +954,25 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2022,
-            DATE_START => '2022-08-01',
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-03',
+            DATE_END => '2022-08-03'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-04',
+            DATE_END => '2022-08-04'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-04',
             DATE_END => '2022-08-04'
           },
         }
@@ -648,7 +985,25 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2023,
-            DATE_START => '2023-03-28',
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-03-30',
+            DATE_END => '2023-03-30'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-03-31',
+            DATE_END => '2023-03-31'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-03-31',
             DATE_END => '2023-03-31'
           },
         }
@@ -661,7 +1016,33 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2024,
-            DATE_START => '2024-03-26',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2024-03-28',
+            DATE_END => '2024-03-28'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-03-28',
+            DATE_END => '2024-03-28'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-03-29',
+            DATE_END => '2024-03-29'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-03-29',
             DATE_END => '2024-03-29'
           },
         }
@@ -698,11 +1079,37 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-06-24',
-            DATE_END => '2017-06-26'
+            DATE_END => '2017-06-24'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-25',
+            DATE_END => '2017-06-25'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-06-25',
+            DATE_END => '2017-06-25'
+          },
+          'C3' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-06-25',
+            DATE_END => '2017-06-25'
           },
         }
       },
@@ -711,10 +1118,28 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-11-20',
+            DATE_END => '2018-11-21'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-11-21',
+            DATE_END => '2018-11-21'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-11-22',
             DATE_END => '2018-11-22'
           },
         }
@@ -724,9 +1149,17 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            DATE_START => '2022-03-19',
+            DATE_END => '2022-03-19'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
             DATE_START => '2022-03-19',
             DATE_END => '2022-03-20'
           },
@@ -737,10 +1170,36 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2023-08-16',
+            DATE_END => '2023-08-16'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-08-16',
+            DATE_END => '2023-08-16'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-08-17',
+            DATE_END => '2023-08-17'
+          },
+          'C3' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-08-18',
             DATE_END => '2023-08-18'
           },
         }
@@ -750,10 +1209,36 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2024-12-12',
+            DATE_END => '2024-12-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-12-13',
+            DATE_END => '2024-12-13'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-12-14',
+            DATE_END => '2024-12-14'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-12-14',
             DATE_END => '2024-12-14'
           },
         }
@@ -779,6 +1264,8 @@ my %TOURNAMENTS_THAILAND =
           'SINGLE' =>
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-03-10',
             DATE_END => '2019-03-10'
           },
@@ -836,6 +1323,21 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2016-10-09',
+            DATE_END => '2016-10-09'
+          },
+          'C1' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            DATE_START => '2016-10-09',
+            DATE_END => '2016-10-09'
+          },
+          'C2' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
             DATE_START => '2016-10-09',
             DATE_END => '2016-10-09'
           },
@@ -847,10 +1349,36 @@ my %TOURNAMENTS_THAILAND =
         MEET_TAG => 2017,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
-            DATE_START => '2017-06-24',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2017-06-26',
+            DATE_END => '2017-06-26'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-06-27',
+            DATE_END => '2017-06-27'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-06-27',
+            DATE_END => '2017-06-27'
+          },
+          'C3' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2017-06-28',
             DATE_END => '2017-06-28'
           },
         }
@@ -861,10 +1389,26 @@ my %TOURNAMENTS_THAILAND =
         MEET_TAG => 2017,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2017-11-11',
+            DATE_END => '2017-11-11'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            DATE_START => '2017-11-12',
+            DATE_END => '2017-11-12'
+          },
+          'C2' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            DATE_START => '2017-11-12',
             DATE_END => '2017-11-12'
           },
         }
@@ -874,10 +1418,28 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
-            DATE_START => '2018-11-20',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2018-11-22',
+            DATE_END => '2018-11-22'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-11-23',
+            DATE_END => '2018-11-23'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-11-24',
             DATE_END => '2018-11-24'
           },
         }
@@ -891,7 +1453,23 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-03-21',
+            DATE_END => '2022-03-21'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            DATE_START => '2022-03-21',
+            DATE_END => '2022-03-21'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            DATE_START => '2022-03-22',
             DATE_END => '2022-03-22'
           },
         }
@@ -906,7 +1484,25 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2022-09-17',
+            DATE_END => '2022-09-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-18',
+            DATE_END => '2022-09-18'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-09-18',
             DATE_END => '2022-09-18'
           },
         }
@@ -920,7 +1516,33 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2023,
-            DATE_START => '2023-08-16',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2023-08-18',
+            DATE_END => '2023-08-18'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-08-19',
+            DATE_END => '2023-08-19'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-08-19',
+            DATE_END => '2023-08-19'
+          },
+          'C3' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-08-20',
             DATE_END => '2023-08-20'
           },
         }
@@ -934,7 +1556,17 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2023,
-            DATE_START => '2023-09-02',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-09-03',
+            DATE_END => '2023-09-03'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-09-04',
             DATE_END => '2023-09-04'
           },
         }
@@ -948,7 +1580,25 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2024-11-02',
+            DATE_END => '2024-11-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-11-03',
+            DATE_END => '2024-11-03'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-11-03',
             DATE_END => '2024-11-03'
           },
         }
@@ -962,7 +1612,33 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2024-12-14',
+            DATE_END => '2024-12-14'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-12-15',
+            DATE_END => '2024-12-15'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-12-16',
+            DATE_END => '2024-12-16'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-12-16',
             DATE_END => '2024-12-16'
           },
         }
@@ -987,6 +1663,8 @@ my %TOURNAMENTS_THAILAND =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-02-24',
             DATE_END => '2017-02-24'
           },
@@ -997,10 +1675,27 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-01-23',
+            DATE_END => '2018-01-23'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            DATE_START => '2018-01-24',
+            DATE_END => '2018-01-24'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-01-24',
             DATE_END => '2018-01-24'
           },
         }
@@ -1010,11 +1705,29 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-01-12',
-            DATE_END => '2019-01-16'
+            DATE_END => '2019-01-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-01-13',
+            DATE_END => '2019-01-13'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-01-13',
+            DATE_END => '2019-01-14'
           },
         }
       },
@@ -1023,10 +1736,28 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2020,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2020-01-13',
+            DATE_END => '2020-01-13'
+          },
+          'C1' =>
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2020-01-13',
+            DATE_END => '2020-01-14'
+          },
+          'C2' =>
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2020-01-14',
             DATE_END => '2020-01-14'
           },
         }
@@ -1036,10 +1767,28 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2023-01-24',
+            DATE_END => '2023-01-24'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-01-24',
+            DATE_END => '2023-01-25'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-01-25',
             DATE_END => '2023-01-25'
           },
         }
@@ -1061,10 +1810,25 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-01-25',
+            DATE_END => '2018-01-25'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            DATE_START => '2018-01-26',
+            DATE_END => '2018-01-26'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-01-26',
             DATE_END => '2018-01-26'
           },
         }
@@ -1074,10 +1838,28 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-01-14',
+            DATE_END => '2019-01-15'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-01-15',
+            DATE_END => '2019-01-15'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-01-16',
             DATE_END => '2019-01-16'
           },
         }
@@ -1087,10 +1869,28 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2020,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2020-01-15',
+            DATE_END => '2020-01-15'
+          },
+          'C1' =>
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2020-01-16',
+            DATE_END => '2020-01-16'
+          },
+          'C2' =>
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2020-01-17',
             DATE_END => '2020-01-17'
           },
         }
@@ -1113,11 +1913,29 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2023-01-25',
-            DATE_END => '2023-01-27'
+            DATE_END => '2023-01-26'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-01-25',
+            DATE_END => '2023-01-26'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-01-26',
+            DATE_END => '2023-01-26'
           },
         }
       },
@@ -1126,10 +1944,28 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2024-01-31',
+            DATE_END => '2024-02-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-02-01',
+            DATE_END => '2024-02-01'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-02-02',
             DATE_END => '2024-02-02'
           },
         }
@@ -1151,10 +1987,26 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-01-25',
+            DATE_END => '2018-01-25'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            DATE_START => '2018-01-26',
+            DATE_END => '2018-01-26'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-01-26',
             DATE_END => '2018-01-26'
           },
         }
@@ -1164,10 +2016,20 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-01-14',
+            DATE_END => '2019-01-14'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-01-16',
             DATE_END => '2019-01-16'
           },
         }
@@ -1177,10 +2039,20 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2020,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2020-01-15',
+            DATE_END => '2020-01-16'
+          },
+          'C1' =>
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2020-01-17',
             DATE_END => '2020-01-17'
           },
         }
@@ -1190,10 +2062,18 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
             DATE_START => '2022-03-21',
+            DATE_END => '2022-03-21'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            DATE_START => '2022-03-22',
             DATE_END => '2022-03-22'
           },
         }
@@ -1203,10 +2083,28 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2023-01-25',
+            DATE_END => '2023-01-25'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-01-26',
+            DATE_END => '2023-01-26'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-01-27',
             DATE_END => '2023-01-27'
           },
         }
@@ -1216,10 +2114,28 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand University Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2024-01-31',
+            DATE_END => '2024-02-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-02-01',
+            DATE_END => '2024-02-01'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-02-02',
             DATE_END => '2024-02-02'
           },
         }
@@ -1256,10 +2172,12 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
-            DATE_START => '2017-06-24',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2017-06-26',
             DATE_END => '2017-06-26'
           },
         }
@@ -1269,11 +2187,21 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
-            DATE_START => '2018-11-20',
-            DATE_END => '2018-11-24'
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2018-11-22',
+            DATE_END => '2018-11-22'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-11-23',
+            DATE_END => '2018-11-23'
           },
         }
       },
@@ -1285,7 +2213,15 @@ my %TOURNAMENTS_THAILAND =
           'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
             DATE_START => '2022-03-21',
+            DATE_END => '2022-03-21'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            DATE_START => '2022-03-22',
             DATE_END => '2022-03-22'
           },
         }
@@ -1295,11 +2231,21 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2023-08-18',
-            DATE_END => '2023-08-20'
+            DATE_END => '2023-08-18'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-19',
+            DATE_END => '2023-08-19'
           },
         }
       },
@@ -1308,10 +2254,36 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2024-12-14',
+            DATE_END => '2024-12-14'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-12-15',
+            DATE_END => '2024-12-15'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-12-16',
+            DATE_END => '2024-12-16'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-12-16',
             DATE_END => '2024-12-16'
           },
         }
