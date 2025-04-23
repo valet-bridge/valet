@@ -660,6 +660,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-10-14',
             DATE_END => '2017-10-15'
           },
@@ -771,6 +772,7 @@ my %TOURNAMENTS_NORWAY =
             YEAR => 2024,
             STAGE => 'Qualifying',
             major => 'SESSION',
+            ignore => 'SEGMENT',
             DATE_START => '2024-05-24',
             DATE_END => '2024-05-24'
           },
@@ -779,6 +781,7 @@ my %TOURNAMENTS_NORWAY =
             YEAR => 2024,
             STAGE => 'Final',
             major => 'SESSION',
+            ignore => 'SEGMENT',
             DATE_START => '2024-05-25',
             DATE_END => '2024-05-26'
           } 
@@ -874,14 +877,12 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2020,
-            major => 'ROUND',
             DATE_START => '2020-08-29',
             DATE_END => '2020-08-31'
           },
           'C1' => 
           {
             YEAR => 2020,
-            major => 'ROUND',
             DATE_START => '2020-09-11',
             DATE_END => '2020-09-11'
           } 
@@ -1106,6 +1107,9 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-05-30',
             DATE_END => '2019-06-01'
           } 
@@ -1118,6 +1122,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2020-10-15',
             DATE_END => '2020-10-18'
           } 
@@ -1130,6 +1136,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-05-26',
             DATE_END => '2023-05-29'
           } 
@@ -1142,6 +1150,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2024-05-30',
             DATE_END => '2024-06-02'
           } 
@@ -1320,6 +1330,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2017-08-10',
             DATE_END => '2017-08-11'
@@ -1390,7 +1401,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2022,
-            major => 'SESSION',
+            major => 'SESSION|MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2022-08-06',
             DATE_END => '2022-08-07'
           } 
@@ -1431,6 +1443,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-11-17',
             DATE_END => '2018-11-18'
           },
@@ -2028,6 +2041,9 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2017-05-25',
             DATE_END => '2017-05-27'
           },
@@ -2042,6 +2058,8 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2017-08-06',
             DATE_END => '2017-08-08'
           },
@@ -2054,6 +2072,8 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2018-05-10',
             DATE_END => '2018-05-13'
           },
@@ -2067,6 +2087,7 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-08-09',
             DATE_END => '2019-08-10'
           },
@@ -2078,8 +2099,19 @@ my %TOURNAMENTS_NORWAY =
         {
           'C0' => 
           {
+            # Unclear
             YEAR => 2020,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2020-09-02',
+            DATE_END => '2020-09-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2020-09-06',
             DATE_END => '2020-09-06'
           },
         }
@@ -2091,6 +2123,8 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2021-09-16',
             DATE_END => '2021-09-19'
           },
@@ -2103,6 +2137,8 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2022-05-19',
             DATE_END => '2022-05-22'
           },
@@ -2128,6 +2164,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' =>
           {
             YEAR => 2020,
+            major => 'ROUND',
             DATE_START => '2020-08-03',
             DATE_END => '2020-08-03'
           },
@@ -2512,6 +2549,8 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2018-10-17',
             DATE_END => '2018-10-17'
           },
@@ -2778,6 +2817,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'SESSION',
             DATE_START => '2017-08-09',
             DATE_END => '2017-08-10'
           } 
@@ -2792,6 +2833,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'SESSION',
             DATE_START => '2018-08-07',
             DATE_END => '2018-08-08'
           } 
@@ -2806,6 +2849,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'SESSION',
             DATE_START => '2019-08-06',
             DATE_END => '2019-08-07'
           } 
@@ -2820,6 +2865,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2021,
+            MOVEMENT => 'Swiss',
+            major => 'SESSION',
             DATE_START => '2021-08-03',
             DATE_END => '2021-08-04'
           } 
@@ -2834,6 +2881,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'SESSION',
             DATE_START => '2022-08-09',
             DATE_END => '2022-08-10'
           } 
@@ -2848,6 +2897,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'SESSION',
             DATE_START => '2024-08-06',
             DATE_END => '2024-08-07'
           } 
@@ -3337,6 +3388,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2018-03-10',
             DATE_END => '2018-03-11'
@@ -3934,32 +3986,6 @@ my %TOURNAMENTS_NORWAY =
             DATE_START => '2011-11-26',
             DATE_END => '2011-11-26'
           } 
-        }
-      },
-    }
-  },
-
-  'Telemark Club Pairs' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Pairs',
-    SCORING => 'MP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2020' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2020,
-            DATE_START => '2020-09-11',
-            DATE_END => '2020-09-11'
-          },
         }
       },
     }

@@ -53,7 +53,6 @@ my @MULTI_WORDS =
   'Rosfjord Swiss Teams',
   'Ruter 7 Open Pairs',
   'Snåsa Pairs Cup',
-  'Telemark Club Pairs',
   'Trondheim Pairs Cup',
   'Trondheim Teams Cup',
   'Vest-Agder Regional Team Championship',
@@ -104,6 +103,8 @@ my %MULTI_TYPOS =
     'marit sveås ibt',
     'marit sveaas ibt'],
   'Namsos Pairs Cup' => ['namsos cup'],
+  'Norwegian Club PAirs' => [
+    'km par telemark'],
   'Norwegian Club Teams' => [
     'codan cup',  
     'codan teams cup',
@@ -256,8 +257,6 @@ my %MULTI_TYPOS =
     'ruter 7 open'],
   'Snåsa Pairs Cup' => [
     'snåsa cup'],
-  'Telemark Club Pairs' => [
-    'km par telemark'],
   'Trondheim Pairs Cup' => ['trondheim cup swiss pairs'],
   'Trondheim Teams Cup' => [
     'trondheim cup swiss teams',

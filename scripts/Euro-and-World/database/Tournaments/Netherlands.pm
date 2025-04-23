@@ -179,6 +179,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-09-29',
             DATE_END => '2018-09-29'
           },
@@ -191,6 +192,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-09-28',
             DATE_END => '2019-09-28'
           },
@@ -595,12 +597,16 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-01-14',
             DATE_END => '2017-01-15'
           },
           'C1' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-01-28',
             DATE_END => '2017-01-29'
           } 
@@ -613,12 +619,16 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-01-13',
             DATE_END => '2018-01-14'
           },
           'C1' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-01-27',
             DATE_END => '2018-01-28'
           } 
@@ -631,12 +641,16 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2019-01-12',
             DATE_END => '2019-01-13'
           },
           'C1' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2019-01-26',
             DATE_END => '2019-01-27'
           } 
@@ -649,12 +663,16 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2020-01-11',
             DATE_END => '2020-01-12'
           },
           'C1' => 
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2020-01-25',
             DATE_END => '2020-01-26'
           } 
@@ -667,7 +685,17 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2022-05-14',
+            DATE_END => '2022-05-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-05-15',
             DATE_END => '2022-05-15'
           },
         }
@@ -679,12 +707,16 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2023-01-14',
             DATE_END => '2023-01-15'
           },
           'C1' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-01-28',
             DATE_END => '2023-01-29'
           } 
@@ -697,12 +729,16 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2024-02-03',
             DATE_END => '2024-02-04'
           },
           'C1' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-02-24',
             DATE_END => '2024-02-25'
           } 
@@ -1257,7 +1293,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2017,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2017-03-04',
             DATE_END => '2017-03-05'
           } 
@@ -1272,7 +1308,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2018,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-03-03',
             DATE_END => '2018-03-04'
           } 
@@ -1287,7 +1323,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2019,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2019-03-02',
             DATE_END => '2019-03-03'
           } 
@@ -1317,7 +1353,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2023,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2023-03-04',
             DATE_END => '2023-03-05'
           } 
@@ -1331,6 +1367,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND|SESSION',
             DATE_START => '2024-03-09',
             DATE_END => '2024-03-10'
           } 
@@ -1801,7 +1839,41 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-03-27',
+            DATE_END => '2017-03-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-29',
+            DATE_END => '2017-03-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-30',
+            DATE_END => '2017-03-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-30',
+            DATE_END => '2017-03-30'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-30',
             DATE_END => '2017-03-31'
           },
         }
@@ -1814,7 +1886,41 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-03-26',
+            DATE_END => '2018-03-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-28',
+            DATE_END => '2018-03-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-29',
+            DATE_END => '2018-03-29'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-29',
+            DATE_END => '2018-03-29'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-03-30',
             DATE_END => '2018-03-30'
           },
         }
@@ -1827,8 +1933,42 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-03-25',
+            DATE_END => '2019-03-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-27',
+            DATE_END => '2019-03-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-27',
+            DATE_END => '2019-03-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-28',
             DATE_END => '2019-03-29'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-29',
+            DATE_END => '2019-03-30'
           },
         }
       },
