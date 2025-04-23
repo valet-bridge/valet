@@ -175,12 +175,18 @@ my %MEETS_ITALY =
         DATE_START => '2019-04-04',
         DATE_END => '2019-04-07'
       },
-      '2020' =>
+      '2020A' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-02-20',
+        DATE_END => '2020-02-22'
+      },
+      '2020B' =>
       {
         # https://www.federbridge.it/campionati/2019/CSSASBSC/indice.asp
         YEAR => 2020,
         CITY => 'Salsomaggiore',
-        DATE_START => '2020-02-20',
+        DATE_START => '2020-09-17',
         DATE_END => '2020-09-27'
       },
       # Nothing in 2021?
@@ -456,6 +462,7 @@ my %TOURNAMENTS_ITALY =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND|MATCH',
             DATE_START => '2018-04-25',
             DATE_END => '2018-04-27'
           },
@@ -781,7 +788,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             ignore => 'TABLE',
             DATE_START => '2015-06-18',
@@ -840,6 +847,8 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-04-01',
             DATE_END => '2017-04-01'
           },
@@ -854,7 +863,7 @@ my %TOURNAMENTS_ITALY =
           {
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2017-05-18',
             DATE_END => '2017-05-19'
           },
@@ -883,7 +892,7 @@ my %TOURNAMENTS_ITALY =
           {
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2018-04-05',
             DATE_END => '2018-04-06'
           },
@@ -912,7 +921,6 @@ my %TOURNAMENTS_ITALY =
           {
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
             DATE_START => '2019-04-04',
             DATE_END => '2019-04-06'
           },
@@ -925,7 +933,7 @@ my %TOURNAMENTS_ITALY =
           }
         }
       },
-      '2020' =>
+      '2020A' =>
       {
         MEET => 'Italian Club Championship',
         CHAPTERS => 
@@ -934,14 +942,20 @@ my %TOURNAMENTS_ITALY =
           {
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
             DATE_START => '2020-02-20',
             DATE_END => '2020-02-22'
           },
-          'C1' =>
+        }
+      },
+      '2020B' =>
+      {
+        MEET => 'Italian Club Championship',
+        CHAPTERS => 
+        {
+          'C0' =>
           {
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2020-09-19',
             DATE_END => '2020-09-20'
           },
@@ -956,7 +970,6 @@ my %TOURNAMENTS_ITALY =
           {
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
             DATE_START => '2022-09-22',
             DATE_END => '2022-09-24'
           },
@@ -978,7 +991,6 @@ my %TOURNAMENTS_ITALY =
           {
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
             DATE_START => '2023-02-23',
             DATE_END => '2023-02-25'
           },
@@ -1000,7 +1012,6 @@ my %TOURNAMENTS_ITALY =
           {
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
             DATE_START => '2024-02-29',
             DATE_END => '2024-03-02'
           },
@@ -1162,7 +1173,7 @@ my %TOURNAMENTS_ITALY =
           {
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'ROUND',
             DATE_START => '2019-04-04',
             DATE_END => '2019-04-05'
           },
@@ -1182,7 +1193,7 @@ my %TOURNAMENTS_ITALY =
           }
         }
       },
-      '2020' =>
+      '2020A' =>
       {
         MEET => 'Italian Club Championship',
         CHAPTERS => 
@@ -1195,6 +1206,13 @@ my %TOURNAMENTS_ITALY =
             DATE_START => '2020-02-20',
             DATE_END => '2020-02-22'
           },
+        }
+      },
+      '2020B' =>
+      {
+        MEET => 'Italian Club Championship',
+        CHAPTERS => 
+        {
           'C1' =>
           {
             STAGE => 'Final',
@@ -1472,7 +1490,30 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-12-14',
+            DATE_END => '2017-12-14'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-15',
+            DATE_END => '2017-12-15'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-15',
+            DATE_END => '2017-12-16'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-16',
             DATE_END => '2017-12-17'
           },
         }
@@ -1483,7 +1524,30 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-11-17',
+            DATE_END => '2022-11-17'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-18',
+            DATE_END => '2022-11-18'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-18',
+            DATE_END => '2022-11-19'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-19',
             DATE_END => '2022-11-20'
           },
         }
@@ -1495,7 +1559,37 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-12-07',
+            DATE_END => '2023-12-07'
+          },
+          'C1' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2023-12-07',
+            DATE_END => '2023-12-08'
+          },
+          'C2' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-08',
+            DATE_END => '2023-12-08'
+          },
+          'C3' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-08',
+            DATE_END => '2023-12-09'
+          },
+          'C4' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-09',
             DATE_END => '2023-12-10'
           },
         }
@@ -1509,7 +1603,41 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-12-12',
+            DATE_END => '2024-12-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-12-12',
+            DATE_END => '2024-12-13'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-13',
+            DATE_END => '2024-12-13'
+          },
+          'C3' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-13',
+            DATE_END => '2024-12-14'
+          },
+          'C4' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-13',
             DATE_END => '2024-12-15'
           },
         }
@@ -1618,14 +1746,15 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
+            ignore => 'GROUP',
             DATE_START => '2016-10-28',
             DATE_END => '2016-10-28'
           },
           'C1' =>
           {
             STAGE => => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-10-28',
             DATE_END => '2016-10-29'
           },
@@ -1660,14 +1789,14 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-10-28',
             DATE_END => '2017-10-28'
           },
           'C1' =>
           {
             STAGE => => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-10-28',
             DATE_END => '2017-10-29'
           },
@@ -1702,14 +1831,14 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND|SESSION',
             DATE_START => '2018-10-31',
             DATE_END => '2018-10-31'
           },
           'C1' =>
           {
             STAGE => => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND|SESSION',
             DATE_START => '2018-10-31',
             DATE_END => '2018-11-01'
           },
@@ -1744,14 +1873,14 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-10-30',
             DATE_END => '2019-10-30'
           },
           'C1' =>
           {
             STAGE => => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-10-30',
             DATE_END => '2019-10-31'
           },
@@ -1827,7 +1956,37 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-10-28',
+            DATE_END => '2022-10-28'
+          },
+          'C1' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-10-28',
+            DATE_END => '2022-10-29'
+          },
+          'C2' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-29',
+            DATE_END => '2022-10-29'
+          },
+          'C3' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-29',
+            DATE_END => '2022-10-30'
+          },
+          'C4' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-30',
             DATE_END => '2022-10-30'
           },
         }
@@ -1840,14 +1999,14 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-10-28',
             DATE_END => '2023-10-28'
           },
           'C1' =>
           {
             STAGE => => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-10-28',
             DATE_END => '2023-10-29'
           },
@@ -1880,7 +2039,37 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-04-24',
+            DATE_END => '2024-04-24'
+          },
+          'C1' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-04-24',
+            DATE_END => '2024-04-25'
+          },
+          'C2' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-25',
+            DATE_END => '2024-04-25'
+          },
+          'C3' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-25',
+            DATE_END => '2024-04-26'
+          },
+          'C4' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-26',
             DATE_END => '2024-04-26'
           },
         }
@@ -1944,6 +2133,7 @@ my %TOURNAMENTS_ITALY =
           {
             STAGE => 'Final',
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2016-10-31',
             DATE_END => '2016-11-01'
           }
@@ -1962,6 +2152,7 @@ my %TOURNAMENTS_ITALY =
           {
             STAGE => 'Final',
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2017-10-31',
             DATE_END => '2017-11-01'
           }
@@ -2033,7 +2224,8 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2023-10-31',
             DATE_END => '2023-11-01'
           }
@@ -2048,6 +2240,10 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Final',
+            major => 'SESSION|SEGMENT',
+            ignore => 'TABLE',
+            DATE_START => '2023-10-31',
             DATE_START => '2024-04-27',
             DATE_END => '2024-04-28'
           }
@@ -2071,10 +2267,21 @@ my %TOURNAMENTS_ITALY =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2022-02-17',
+            DATE_END => '2022-02-20'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-02-25',
             DATE_END => '2022-02-27'
           },
         }
@@ -2304,6 +2511,8 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-06-02',
             DATE_END => '2022-06-05'
           }
@@ -2386,10 +2595,36 @@ my %TOURNAMENTS_ITALY =
         MEET => 'Italy Cup',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-09-13',
+            DATE_END => '2018-09-13'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-13',
+            DATE_END => '2018-09-14'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-14',
+            DATE_END => '2018-09-15'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-15',
             DATE_END => '2018-09-16'
           },
         }
@@ -2399,10 +2634,44 @@ my %TOURNAMENTS_ITALY =
         MEET => 'Italy Cup',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-10-10',
+            DATE_END => '2019-10-10'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-10-10',
+            DATE_END => '2019-10-11'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-11',
+            DATE_END => '2019-10-11'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-11',
+            DATE_END => '2019-10-12'
+          },
+          'C4' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-12',
             DATE_END => '2019-10-13'
           },
         }
@@ -2424,10 +2693,44 @@ my %TOURNAMENTS_ITALY =
         MEET => 'Italy Cup',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-10-12',
+            DATE_END => '2022-10-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-10-12',
+            DATE_END => '2022-10-13'
+          },
+          'C2' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-13',
+            DATE_END => '2022-10-13'
+          },
+          'C3' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-13',
+            DATE_END => '2022-10-14'
+          },
+          'C4' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-10-14',
             DATE_END => '2022-10-14'
           },
         }
@@ -2437,10 +2740,36 @@ my %TOURNAMENTS_ITALY =
         MEET => 'Italy Cup',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-09-28',
+            DATE_END => '2023-09-28'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-28',
+            DATE_END => '2023-09-29'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-29',
+            DATE_END => '2023-09-30'
+          },
+          'C3' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-09-30',
             DATE_END => '2023-10-01'
           },
         }
@@ -2791,7 +3120,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-12-08',
             DATE_END => '2016-12-08'
           },
@@ -2805,14 +3134,14 @@ my %TOURNAMENTS_ITALY =
           'C2' =>
           {
             STAGE => 'Semifinal',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2016-12-09',
             DATE_END => '2016-12-10'
           },
           'C3' =>
           {
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2016-12-10',
             DATE_END => '2016-12-11'
           }
@@ -2861,7 +3190,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-11-15',
             DATE_END => '2018-11-15'
           },
@@ -2896,7 +3225,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-11-21',
             DATE_END => '2019-11-21'
           },
@@ -2930,7 +3259,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-11-17',
             DATE_END => '2022-11-17'
           },
@@ -2965,14 +3294,14 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-12-07',
             DATE_END => '2023-12-07'
           },
           'C1' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-12-07',
             DATE_END => '2023-12-08'
           },
@@ -3057,7 +3386,16 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2021-10-14',
+            DATE_END => '2021-10-15'
+          },
+          'C1' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-10-16',
             DATE_END => '2021-10-17'
           },
         }
@@ -3324,7 +3662,17 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2023-03-23',
+            DATE_END => '2023-03-24'
+          },
+          'C1' =>
+          {
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2023-03-25',
             DATE_END => '2023-03-26'
           }
         }
@@ -3352,6 +3700,8 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2024-04-11',
             DATE_END => '2024-04-14'
           }
@@ -3500,7 +3850,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-09-21',
             DATE_END => '2017-09-21'
           },
@@ -3696,7 +4046,37 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-10-10',
+            DATE_END => '2024-10-10'
+          },
+          'C1' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-10-10',
+            DATE_END => '2024-10-11'
+          },
+          'C2' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-11',
+            DATE_END => '2024-10-11'
+          },
+          'C3' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-11',
+            DATE_END => '2024-10-12'
+          },
+          'C4' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-12',
             DATE_END => '2024-10-12'
           },
         }
@@ -3761,7 +4141,17 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2021-11-04',
+            DATE_END => '2021-11-05'
+          },
+          'C1' =>
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-11-06',
             DATE_END => '2021-11-07'
           },
         }
@@ -3787,6 +4177,8 @@ my %TOURNAMENTS_ITALY =
           'SINGLE' =>
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-04-15',
             DATE_END => '2017-04-15'
           },
@@ -3974,7 +4366,7 @@ my %TOURNAMENTS_ITALY =
           {
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2017-05-18',
             DATE_END => '2017-05-19'
           },
@@ -4070,6 +4462,8 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2022-05-19',
             DATE_END => '2022-05-22'
           },
@@ -4082,7 +4476,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-11-17',
             DATE_END => '2022-11-17'
           },
@@ -4117,14 +4511,14 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-12-07',
             DATE_END => '2023-12-07'
           },
           'C1' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2023-12-07',
             DATE_END => '2023-12-08'
           },
@@ -4159,6 +4553,8 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-12-14',
             DATE_END => '2024-12-14'
           },
@@ -4185,12 +4581,16 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-02-24',
             DATE_END => '2018-02-26'
           },
           'C1' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-03-09',
             DATE_END => '2018-03-11'
           },
@@ -4203,6 +4603,8 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-01-21',
             DATE_END => '2022-01-23'
           },
@@ -4285,6 +4687,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            major => 'ROUND',
             DATE_START => '2018-12-07',
             DATE_END => '2018-12-09'
           }
@@ -4297,6 +4700,9 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            MOVEMENT => 'Swiss',
+            major => 'SESSION|SEGMENT',
+            minor => 'ROUND',
             DATE_START => '2019-12-06',
             DATE_END => '2019-12-08'
           }
@@ -4309,6 +4715,8 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2024-12-06',
             DATE_END => '2024-12-08'
           }
@@ -4472,6 +4880,8 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2016-09-03',
             DATE_END => '2016-09-03'
           },
@@ -4485,6 +4895,15 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2017-09-09',
+            DATE_END => '2017-09-09'
+          },
+          'C1' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-09-09',
             DATE_END => '2017-09-09'
           },
@@ -4498,6 +4917,8 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-09-08',
             DATE_END => '2018-09-08'
           },
@@ -4617,7 +5038,16 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2017-11-10',
+            DATE_END => '2017-11-10'
+          },
+          'C1' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-11',
             DATE_END => '2017-11-11'
           }
         }
@@ -4630,7 +5060,16 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2019-04-13',
+            DATE_END => '2019-04-13'
+          },
+          'C1' =>
+          {
+            STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2019-04-14',
             DATE_END => '2019-04-14'
           }
         }

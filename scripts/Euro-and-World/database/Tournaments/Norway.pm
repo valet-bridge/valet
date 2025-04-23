@@ -702,6 +702,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2017,
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2017-08-04',
             DATE_END => '2017-08-06'
           } 
@@ -718,6 +719,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2018,
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2018-06-29',
             DATE_END => '2018-07-01'
           } 
@@ -734,6 +736,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2019,
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2019-07-05',
             DATE_END => '2019-07-07'
           } 
@@ -749,7 +752,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2022,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2022-05-27',
             DATE_END => '2022-05-29'
           } 
@@ -762,11 +766,20 @@ my %TOURNAMENTS_NORWAY =
         CITY => 'Bodø',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
             major => 'SESSION',
             DATE_START => '2024-05-24',
+            DATE_END => '2024-05-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2024-05-25',
             DATE_END => '2024-05-26'
           } 
         }
@@ -1764,6 +1777,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2016-09-23',
             DATE_END => '2016-09-25'
           } 
@@ -1777,6 +1791,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SESSION',
             DATE_START => '2017-09-22',
             DATE_END => '2017-09-24'
           } 
@@ -1790,6 +1805,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SESSION',
             DATE_START => '2018-09-21',
             DATE_END => '2018-09-23'
           } 
@@ -1803,6 +1819,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2019-09-20',
             DATE_END => '2019-09-22'
           } 
@@ -1816,6 +1834,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'SESSION',
             DATE_START => '2020-09-18',
             DATE_END => '2020-09-20'
           } 
@@ -1829,6 +1848,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2021-10-02',
             DATE_END => '2021-10-03'
           } 
@@ -1842,6 +1863,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'SESSION',
             DATE_START => '2022-09-23',
             DATE_END => '2022-09-25'
           } 
@@ -1855,6 +1877,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'SESSION',
             DATE_START => '2023-09-22',
             DATE_END => '2023-09-24'
           } 
@@ -1868,6 +1891,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'SESSION',
             DATE_START => '2024-09-20',
             DATE_END => '2024-09-22'
           } 
@@ -2440,12 +2464,18 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2016-10-29',
             DATE_END => '2016-10-30'
           },
           'C1' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2017-02-11',
             DATE_END => '2017-02-12'
           },
@@ -2458,12 +2488,18 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2017-10-28',
             DATE_END => '2017-10-29'
           },
           'C1' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2018-02-10',
             DATE_END => '2018-02-11'
           },
@@ -2476,12 +2512,22 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2018,
-            DATE_START => '2018-10-27',
-            DATE_END => '2018-10-28'
+            DATE_START => '2018-10-17',
+            DATE_END => '2018-10-17'
           },
           'C1' => 
           {
+            YEAR => 2018,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2018-10-27',
+            DATE_END => '2018-10-28'
+          },
+          'C2' => 
+          {
             YEAR => 2019,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-02-09',
             DATE_END => '2019-02-10'
           },
@@ -2500,12 +2546,16 @@ my %TOURNAMENTS_NORWAY =
           'C1' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-11-09',
             DATE_END => '2019-11-10'
           },
           'C2' => 
           {
             YEAR => 2020,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2020-02-15',
             DATE_END => '2020-02-16'
           },
@@ -2518,12 +2568,16 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2021-10-29',
             DATE_END => '2021-10-31'
           },
           'C1' => 
           {
             YEAR => 2022,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2022-04-22',
             DATE_END => '2022-04-24'
           },
@@ -2536,12 +2590,16 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-10-27',
             DATE_END => '2023-10-29'
           },
           'C1' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2024-02-02',
             DATE_END => '2024-02-04'
           },
@@ -2554,6 +2612,8 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2024-11-15',
             DATE_END => '2024-11-17'
           },
