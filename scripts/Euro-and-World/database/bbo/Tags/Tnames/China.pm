@@ -50,6 +50,7 @@ my @MULTI_WORDS =
   'Guangzhou-HK-Macau Interport',
   'HNA Mixed Teams',
   'HNA Open Teams',
+  'HNA Swiss Teams',
   'Haikou Fitness Day',
   'High-Tech Zone Workers Invitational',
   'JPD Open Cup',

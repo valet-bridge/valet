@@ -340,7 +340,25 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-05-10',
+            DATE_END => '2018-05-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-12',
+            DATE_END => '2018-05-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-13',
             DATE_END => '2018-05-13'
           },
         }
@@ -353,6 +371,8 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-05-25',
             DATE_END => '2022-05-26'
           },
@@ -376,9 +396,19 @@ my %TOURNAMENTS_SOUTHAMERICA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-10-29',
+            DATE_END => '2022-10-29'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-10-29',
             DATE_END => '2022-10-30'
           },
@@ -476,6 +506,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
             YEAR => 2017,
             STAGE => 'Final',
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2017-05-07',
             DATE_END => '2017-05-07'
           } 
@@ -498,10 +529,37 @@ my %TOURNAMENTS_SOUTHAMERICA =
         MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-05-14',
+            DATE_END => '2018-05-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-18',
+            DATE_END => '2018-05-18'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-18',
+            DATE_END => '2018-05-19'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-19',
             DATE_END => '2018-05-19'
           },
         }
@@ -902,7 +960,36 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2017-05-08',
+            DATE_END => '2017-05-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            ignore => 'TABLE',
+            DATE_START => '2017-05-10',
+            DATE_END => '2017-05-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            ignore => 'TABLE',
+            DATE_START => '2017-05-11',
+            DATE_END => '2017-05-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-12',
             DATE_END => '2017-05-13'
           },
         }
@@ -915,7 +1002,17 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2022-05-26',
+            DATE_END => '2022-05-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-05-27',
             DATE_END => '2022-05-29'
           },
         }
@@ -954,6 +1051,8 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-10-15',
             DATE_END => '2022-10-16'
           },
@@ -1022,6 +1121,8 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-05-10',
             DATE_END => '2018-05-12'
           },
@@ -1070,11 +1171,38 @@ my %TOURNAMENTS_SOUTHAMERICA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-05-27',
+            DATE_END => '2019-05-29'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-30',
+            DATE_END => '2019-05-30'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-31',
             DATE_END => '2019-06-01'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-06-01',
+            DATE_END => '2019-06-02'
           },
         }
       },
@@ -1082,10 +1210,37 @@ my %TOURNAMENTS_SOUTHAMERICA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2023,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2023-04-14',
+            DATE_END => '2023-04-16'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-17',
+            DATE_END => '2023-04-17'
+          },
+          'C2' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-18',
+            DATE_END => '2023-04-18'
+          },
+          'C3' =>
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-19',
             DATE_END => '2023-04-19'
           },
         }
@@ -1095,10 +1250,28 @@ my %TOURNAMENTS_SOUTHAMERICA =
         MEET => 'South American Zonal Trials',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2024-04-11',
+            DATE_END => '2024-04-12'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-12',
+            DATE_END => '2024-04-13'
+          },
+          'C2' =>
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-13',
             DATE_END => '2024-04-14'
           },
         }
@@ -1124,8 +1297,10 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2019,
-            DATE_START => '2019-05-27',
-            DATE_END => '2019-06-01'
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-05-30',
+            DATE_END => '2019-05-30'
           },
         }
       },
@@ -1136,6 +1311,8 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2023-04-14',
             DATE_END => '2023-04-19'
           },
@@ -1331,7 +1508,17 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2017,
-            DATE_START => '2017-05-08',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-05-09',
+            DATE_END => '2017-05-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-12',
             DATE_END => '2017-05-13'
           },
         }
@@ -1344,6 +1531,8 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-05-19',
             DATE_END => '2018-05-19'
           },
@@ -1409,10 +1598,20 @@ my %TOURNAMENTS_SOUTHAMERICA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2022-10-15',
+            DATE_END => '2022-10-15'
+          },
+          'C1' =>
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2022-10-16',
             DATE_END => '2022-10-16'
           },
         }
@@ -1463,6 +1662,8 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-05-22',
             DATE_END => '2019-05-22'
           },
@@ -1476,8 +1677,10 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2023,
-            DATE_START => '2023-04-10',
-            DATE_END => '2023-04-13'
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2023-04-11',
+            DATE_END => '2023-04-11'
           },
         }
       },
@@ -1501,8 +1704,11 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2017-05-14',
-            DATE_END => '2017-05-18'
+            DATE_END => '2017-05-17'
           },
         }
       },
@@ -1511,10 +1717,20 @@ my %TOURNAMENTS_SOUTHAMERICA =
         MEET => 'South American Zonal Trials',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-05-21',
+            DATE_END => '2019-05-24'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-24',
             DATE_END => '2019-05-25'
           },
         }
@@ -1527,6 +1743,8 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'ROUND',
+            ignore => 'SEGMENT',
             DATE_START => '2023-04-10',
             DATE_END => '2023-04-13'
           },
@@ -1552,7 +1770,10 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2017,
-            DATE_START => '2017-05-14',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'TABLE',
+            DATE_START => '2017-05-15',
             DATE_END => '2017-05-18'
           },
         }
@@ -1565,6 +1786,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2023-04-10',
             DATE_END => '2023-04-13'
           },
@@ -1590,8 +1812,10 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2017,
-            DATE_START => '2017-05-14',
-            DATE_END => '2017-05-18'
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-05-15',
+            DATE_END => '2017-05-17'
           },
         }
       },
@@ -1600,11 +1824,21 @@ my %TOURNAMENTS_SOUTHAMERICA =
         MEET => 'South American Zonal Trials',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
-            DATE_START => '2019-05-21',
-            DATE_END => '2019-05-25'
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-05-22',
+            DATE_END => '2019-05-23'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-24',
+            DATE_END => '2019-05-24'
           },
         }
       },
@@ -1616,6 +1850,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-04-10',
             DATE_END => '2023-04-13'
           },
@@ -1629,6 +1864,8 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' =>
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2024-04-07',
             DATE_END => '2024-04-08'
           },

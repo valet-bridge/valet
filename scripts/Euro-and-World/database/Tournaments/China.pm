@@ -490,10 +490,44 @@ my %TOURNAMENTS_CHINA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-12-06',
+            DATE_END => '2018-12-07'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-07',
+            DATE_END => '2018-12-07'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-07',
+            DATE_END => '2018-12-08'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-08',
+            DATE_END => '2018-12-08'
+          },
+          'C4' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-08',
             DATE_END => '2018-12-09'
           },
         }
@@ -580,6 +614,8 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-11-10',
             DATE_END => '2019-11-12'
           } 
@@ -603,10 +639,36 @@ my %TOURNAMENTS_CHINA =
         MEET => 'China Elite Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-11-09',
+            DATE_END => '2019-11-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-10',
+            DATE_END => '2019-11-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Bronze',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-11-11',
+            DATE_END => '2019-11-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-11',
             DATE_END => '2019-11-11'
           } 
         }
@@ -629,12 +691,37 @@ my %TOURNAMENTS_CHINA =
         MEET => 'China Elite Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-11-10',
+            DATE_END => '2019-11-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-13',
+            DATE_END => '2019-11-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-13',
+            DATE_END => '2019-11-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            DATE_START => '2019-11-14',
             DATE_END => '2019-11-15'
-          } 
+          },
         }
       },
     }
@@ -700,12 +787,38 @@ my %TOURNAMENTS_CHINA =
         MEET => 'China Elite Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-11-11',
+            DATE_END => '2019-11-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-14',
+            DATE_END => '2019-11-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-14',
+            DATE_END => '2019-11-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-15',
             DATE_END => '2019-11-16'
-          } 
+          },
         }
       },
     }
@@ -726,12 +839,22 @@ my %TOURNAMENTS_CHINA =
         MEET => 'China Elite Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-11-11',
+            DATE_END => '2019-11-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-15',
             DATE_END => '2019-11-16'
-          } 
+          },
         }
       },
     }
@@ -1030,7 +1153,33 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2024-08-07',
+            DATE_END => '2024-08-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2024-08-09',
+            DATE_END => '2024-08-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-10',
+            DATE_END => '2024-08-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-11',
             DATE_END => '2024-08-11'
           },
         }
@@ -1057,8 +1206,17 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2024,
-            major => 'ROUND',
-            DATE_START => '2024-08-07',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-09',
+            DATE_END => '2024-08-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-10',
             DATE_END => '2024-08-10'
           },
         }
@@ -1238,7 +1396,25 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2018-10-17',
+            DATE_END => '2018-10-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-21',
+            DATE_END => '2018-10-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-23',
             DATE_END => '2018-10-24'
           },
         }
@@ -1251,7 +1427,41 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2018,
+            major => 'MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2018-11-14',
+            DATE_END => '2018-11-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-15',
+            DATE_END => '2018-11-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-17',
+            DATE_END => '2018-11-18'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-19',
+            DATE_END => '2018-11-19'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-20',
             DATE_END => '2018-11-21'
           },
         }
@@ -1264,6 +1474,8 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-07-05',
             DATE_END => '2019-07-09'
           },
@@ -1276,7 +1488,41 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
             DATE_START => '2019-12-12',
+            DATE_END => '2019-12-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-13',
+            DATE_END => '2019-12-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-15',
+            DATE_END => '2019-12-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-16',
+            DATE_END => '2019-12-17'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-12-18',
             DATE_END => '2019-12-19'
           },
         }
@@ -1343,10 +1589,36 @@ my %TOURNAMENTS_CHINA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            ignore => 'GROUP',
             DATE_START => '2019-01-12',
+            DATE_END => '2019-01-13'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-14',
+            DATE_END => '2019-01-15'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-16',
+            DATE_END => '2019-01-17'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-01-18',
             DATE_END => '2019-01-19'
           },
         }
@@ -1404,7 +1676,33 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-05-09',
+            DATE_END => '2019-05-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-10',
+            DATE_END => '2019-05-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-11',
+            DATE_END => '2019-05-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-12',
             DATE_END => '2019-05-12'
           },
         }
@@ -1444,6 +1742,8 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Knock-out',
+            major => 'ROUND',
             DATE_START => '2019-12-07',
             DATE_END => '2019-12-07'
           } 
@@ -1471,6 +1771,8 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2018-07-23',
             DATE_END => '2018-07-29'
           },
@@ -1498,34 +1800,10 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2018-07-23',
             DATE_END => '2018-07-29'
-          },
-        }
-      },
-    }
-  },
-
-  'Chinese University Teams' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
           },
         }
       },
@@ -1583,8 +1861,10 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2018,
-            DATE_START => '2018-10-21',
-            DATE_END => '2018-10-24'
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-22',
+            DATE_END => '2018-10-22'
           },
         }
       },
@@ -1596,7 +1876,25 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-08-10',
+            DATE_END => '2019-08-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-13',
+            DATE_END => '2019-08-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-14',
             DATE_END => '2019-08-15'
           },
         }
@@ -1684,7 +1982,25 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-05-07',
+            DATE_END => '2019-05-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-07',
+            DATE_END => '2019-05-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-08',
             DATE_END => '2019-05-08'
           },
         }
@@ -1886,10 +2202,28 @@ my %TOURNAMENTS_CHINA =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-04-15',
+            DATE_END => '2019-04-18'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-19',
+            DATE_END => '2019-04-19'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-20',
             DATE_END => '2019-04-21'
           },
         }
@@ -1957,6 +2291,7 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-07-14',
             DATE_END => '2018-07-15'
           },
@@ -2168,7 +2503,40 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2017-11-06',
+            DATE_END => '2017-11-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-08',
+            DATE_END => '2017-11-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-08',
+            DATE_END => '2017-11-08'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Bronze',
+            DATE_START => '2017-11-10',
+            DATE_END => '2017-11-10'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-11',
             DATE_END => '2017-11-11'
           },
         }
@@ -2181,8 +2549,34 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-11-03',
+            DATE_END => '2018-11-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-05',
+            DATE_END => '2018-11-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-06',
             DATE_END => '2018-11-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-07',
+            DATE_END => '2018-11-08'
           },
         }
       },
@@ -2329,7 +2723,49 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2016-10-22',
+            DATE_END => '2016-10-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-24',
+            DATE_END => '2016-10-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-24',
+            DATE_END => '2016-10-25'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-25',
+            DATE_END => '2016-10-26'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-26',
+            DATE_END => '2016-10-26'
+          },
+          'C5' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-27',
             DATE_END => '2016-10-27'
           },
         }
@@ -2342,7 +2778,49 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2017-10-28',
+            DATE_END => '2017-10-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-30',
+            DATE_END => '2017-10-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-30',
+            DATE_END => '2017-10-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-31',
+            DATE_END => '2017-10-31'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-31',
+            DATE_END => '2017-11-01'
+          },
+          'C5' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-01',
             DATE_END => '2017-11-01'
           },
         }
@@ -2355,8 +2833,42 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-10-26',
-            DATE_END => '2018-11-08'
+            DATE_END => '2018-10-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-28',
+            DATE_END => '2018-10-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-29',
+            DATE_END => '2018-10-29'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-29',
+            DATE_END => '2018-10-29'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-30',
+            DATE_END => '2018-10-30'
           },
         }
       },
@@ -2368,11 +2880,66 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2019,
-            DATE_START => '2019-09-29',
-            DATE_END => '2019-10-05'
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2019-09-30',
+            DATE_END => '2019-10-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Knock-out',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2019-10-02',
+            DATE_END => '2019-10-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-03',
+            DATE_END => '2019-10-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-04',
+            DATE_END => '2019-10-04'
           },
         }
       },
+    }
+  },
+
+  'HNA Swiss Teams' =>
+  {
+    # TODO Could be at Sanya Bridge Festival
+    SPONSOR => 'Hainan Air',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2019-10-05',
+            DATE_END => '2019-10-05'
+          },
+        }
+      }
     }
   },
 
@@ -2394,6 +2961,7 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-12-08',
             DATE_END => '2018-12-08'
           },
@@ -2417,10 +2985,28 @@ my %TOURNAMENTS_CHINA =
         MEET_TAG => '2018B',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-11-16',
+            DATE_END => '2018-11-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Relegation',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-18',
+            DATE_END => '2018-11-18'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-19',
             DATE_END => '2018-11-19'
           },
         }
@@ -2431,10 +3017,28 @@ my %TOURNAMENTS_CHINA =
         ORIGIN => 'National',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2019-10-17',
+            DATE_END => '2019-10-19'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-19',
+            DATE_END => '2019-10-19'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-19',
             DATE_END => '2019-10-20'
           },
         }
@@ -2763,10 +3367,36 @@ my %TOURNAMENTS_CHINA =
         MEET => 'Sanya Nanshan Festival',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2016-10-29',
+            DATE_END => '2016-10-30'
+          },
+          'C1' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-31',
+            DATE_END => '2016-10-31'
+          },
+          'C2' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-31',
+            DATE_END => '2016-10-31'
+          },
+          'C3' =>
+          {
+            YEAR => 2016,
+            STAGE => 'Bronze',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2016-11-02',
             DATE_END => '2016-11-02'
           },
         }
@@ -2779,6 +3409,8 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-11-09',
             DATE_END => '2018-11-09'
           },
@@ -2789,10 +3421,44 @@ my %TOURNAMENTS_CHINA =
         MEET => 'Sanya Nanshan Festival',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-10-09',
+            DATE_END => '2019-10-10'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-10-11',
+            DATE_END => '2019-10-11'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-12',
+            DATE_END => '2019-10-12'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-12',
+            DATE_END => '2019-10-12'
+          },
+          'C4' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-10-13',
             DATE_END => '2019-10-13'
           },
         }
@@ -2817,6 +3483,8 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-11-09',
             DATE_END => '2018-11-09'
           },
@@ -2856,6 +3524,8 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' =>
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2016-11-03',
             DATE_END => '2016-11-05'
           },
@@ -2945,10 +3615,44 @@ my %TOURNAMENTS_CHINA =
         ORDINAL => 4,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2018-11-29',
+            DATE_END => '2018-11-30'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-30',
+            DATE_END => '2018-11-30'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-01',
+            DATE_END => '2018-12-01'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-01',
+            DATE_END => '2018-12-01'
+          },
+          'C4' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-12-01',
             DATE_END => '2018-12-02'
           },
         }
@@ -2958,10 +3662,44 @@ my %TOURNAMENTS_CHINA =
         ORDINAL => 5,
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
-            DATE_START => '2019-11-17',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2019-11-21',
+            DATE_END => '2019-11-22'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-22',
+            DATE_END => '2019-11-22'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-23',
+            DATE_END => '2019-11-23'
+          },
+          'C3' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-23',
+            DATE_END => '2019-11-23'
+          },
+          'C4' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-23',
             DATE_END => '2019-11-24'
           },
         }
