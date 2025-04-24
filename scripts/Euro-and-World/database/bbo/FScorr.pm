@@ -1005,7 +1005,7 @@ my %FORM_CORRECTIONS = (
   'Northern Territory Gold Swiss Pairs' => [
      1242,  1244,  1245,  1246,  1247,  1248],
   'Norwegian Club Pairs' => [
-    70029, 70034, 70046, 70071, 70162],
+    70029, 70034, 70046, 70071, 70162, 70164, 70165],
   'Norwegian Mixed Pairs' => [
      6085,  6095,  6108,
      8013,

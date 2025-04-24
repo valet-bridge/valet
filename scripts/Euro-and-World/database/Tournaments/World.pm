@@ -4815,70 +4815,6 @@ my %TOURNAMENTS_WORLD =
 
     EDITIONS =>
     {
-      '2014' =>
-      {
-        MEET => 'World Series',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2014,
-            MOVEMENT => 'Swiss',
-            major => 'ROUND',
-            DATE_START => '2014-10-11',
-            DATE_END => '2014-10-11'
-          },
-          'C1' => 
-          {
-            # Confusing to call this a semifinal
-            YEAR => 2014,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-10-12',
-            DATE_END => '2014-10-12'
-          },
-          'C2' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Rof32',
-            major => 'SEGMENT',
-            DATE_START => '2014-10-13',
-            DATE_END => '2014-10-13'
-          },
-          'C3' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2014-10-13',
-            DATE_END => '2014-10-13'
-          },
-          'C4' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-10-14',
-            DATE_END => '2014-10-14'
-          },
-          'C5' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-10-14',
-            DATE_END => '2014-10-14'
-          },
-          'C6' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2014-10-15',
-            DATE_END => '2014-10-15'
-          },
-        }
-      },
       '2016' =>
       {
         MEET => 'World Series',
@@ -4931,132 +4867,6 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2016-09-16',
             DATE_END => '2016-09-17'
-          },
-        }
-      },
-      '2018' =>
-      {
-        MEET => 'World Series',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2018,
-            MOVEMENT => 'Swiss',
-            major => 'ROUND',
-            DATE_START => '2018-10-01',
-            DATE_END => '2018-10-02'
-          },
-          'C1' => 
-          {
-            YEAR => 2018,
-            STAGE => 'Rof64',
-            major => 'SEGMENT|ROUND',
-            DATE_START => '2018-10-03',
-            DATE_END => '2018-10-03'
-          },
-          'C2' => 
-          {
-            YEAR => 2018,
-            STAGE => 'Rof32',
-            major => 'SEGMENT|ROUND',
-            DATE_START => '2018-10-03',
-            DATE_END => '2018-10-03'
-          },
-          'C3' => 
-          {
-            YEAR => 2018,
-            STAGE => 'Rof16',
-            major => 'SEGMENT|ROUND',
-            DATE_START => '2018-10-04',
-            DATE_END => '2018-10-04'
-          },
-          'C4' => 
-          {
-            YEAR => 2018,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2018-10-04',
-            DATE_END => '2018-10-04'
-          },
-          'C5' => 
-          {
-            YEAR => 2018,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2018-10-05',
-            DATE_END => '2018-10-05'
-          },
-          'C6' => 
-          {
-            YEAR => 2018,
-            STAGE => 'Playoff',
-            major => 'SEGMENT',
-            DATE_START => '2018-10-06',
-            DATE_END => '2018-10-06'
-          },
-          'C7' => 
-          {
-            YEAR => 2018,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2018-10-06',
-            DATE_END => '2018-10-06'
-          },
-        }
-      },
-      '2022' =>
-      {
-        MEET => 'World Series',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2022,
-            MOVEMENT => 'Swiss',
-            major => 'ROUND',
-            DATE_START => '2022-08-28',
-            DATE_END => '2022-08-29'
-          },
-          'C1' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Rof32',
-            major => 'SEGMENT',
-            DATE_START => '2022-08-30',
-            DATE_END => '2022-08-30'
-          },
-          'C2' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2022-08-30',
-            DATE_END => '2022-08-30'
-          },
-          'C3' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2022-08-31',
-            DATE_END => '2022-08-31'
-          },
-          'C4' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2022-09-01',
-            DATE_END => '2022-09-01'
-          },
-          'C5' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2022-09-02',
-            DATE_END => '2022-09-03'
           },
         }
       },
@@ -5252,61 +5062,6 @@ my %TOURNAMENTS_WORLD =
           },
         }
       },
-      '2022' =>
-      {
-        MEET => 'World Series',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2022,
-            MOVEMENT => 'Swiss',
-            major => 'ROUND',
-            DATE_START => '2022-08-20',
-            DATE_END => '2022-08-21'
-          },
-          'C1' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Rof32',
-            major => 'SEGMENT',
-            DATE_START => '2022-08-22',
-            DATE_END => '2022-08-22'
-          },
-          'C2' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2022-08-23',
-            DATE_END => '2022-08-23'
-          },
-          'C3' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2022-08-24',
-            DATE_END => '2022-08-24'
-          },
-          'C4' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2022-08-25',
-            DATE_END => '2022-08-25'
-          },
-          'C5' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2022-08-26',
-            DATE_END => '2022-08-27'
-          },
-        }
-      },
       '2024' =>
       {
         MEET => 'World Series',
@@ -5497,6 +5252,196 @@ my %TOURNAMENTS_WORLD =
             DATE_START => '2012-08-22',
             DATE_END => '2012-08-23'
           } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2014-10-11',
+            DATE_END => '2014-10-11'
+          },
+          'C1' => 
+          {
+            # Confusing to call this a semifinal
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-12',
+            DATE_END => '2014-10-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-13',
+            DATE_END => '2014-10-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-13',
+            DATE_END => '2014-10-13'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-14',
+            DATE_END => '2014-10-14'
+          },
+          'C5' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-14',
+            DATE_END => '2014-10-14'
+          },
+          'C6' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-15',
+            DATE_END => '2014-10-15'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2018-10-01',
+            DATE_END => '2018-10-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof64',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-10-03',
+            DATE_END => '2018-10-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-10-03',
+            DATE_END => '2018-10-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-10-04',
+            DATE_END => '2018-10-04'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-04',
+            DATE_END => '2018-10-04'
+          },
+          'C5' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-05',
+            DATE_END => '2018-10-05'
+          },
+          'C6' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-06',
+            DATE_END => '2018-10-06'
+          },
+          'C7' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-10-06',
+            DATE_END => '2018-10-06'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2022-08-28',
+            DATE_END => '2022-08-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-30',
+            DATE_END => '2022-08-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-30',
+            DATE_END => '2022-08-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-31',
+            DATE_END => '2022-08-31'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-01',
+            DATE_END => '2022-09-01'
+          },
+          'C5' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-09-02',
+            DATE_END => '2022-09-03'
+          },
         }
       },
     }
@@ -5824,6 +5769,105 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2019-09-28',
             DATE_END => '2019-09-28'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2022-08-20',
+            DATE_END => '2022-08-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-22',
+            DATE_END => '2022-08-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-23',
+            DATE_END => '2022-08-23'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-24',
+            DATE_END => '2022-08-24'
+          },
+          'C4' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-25',
+            DATE_END => '2022-08-25'
+          },
+          'C5' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-26',
+            DATE_END => '2022-08-27'
+          },
+        }
+      },
+    }
+  },
+
+  'World Transnational Women Teams' => 
+  {
+    ORIGIN => 'Transnational',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2022-08-20',
+            DATE_END => '2022-08-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-23',
+            DATE_END => '2022-08-23'
+          },
+          'C5' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-24',
+            DATE_END => '2022-08-25'
           },
         }
       },
@@ -7879,37 +7923,6 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2016-09-16',
             DATE_END => '2016-09-17'
-          },
-        }
-      },
-      '2022' =>
-      {
-        MEET => 'World Series',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2022,
-            MOVEMENT => 'Swiss',
-            major => 'ROUND',
-            DATE_START => '2022-08-20',
-            DATE_END => '2022-08-22'
-          },
-          'C1' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2022-08-23',
-            DATE_END => '2022-08-23'
-          },
-          'C5' => 
-          {
-            YEAR => 2022,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2022-08-24',
-            DATE_END => '2022-08-25'
           },
         }
       },

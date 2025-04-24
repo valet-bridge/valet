@@ -3274,10 +3274,28 @@ my %TOURNAMENTS_FRIENDLY =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-10-11',
+            DATE_END => '2017-10-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-12',
+            DATE_END => '2017-10-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-13',
             DATE_END => '2017-10-13'
           } 
         }

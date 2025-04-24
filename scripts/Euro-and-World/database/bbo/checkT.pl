@@ -100,10 +100,17 @@ my %IGNORE_MEETS = (
     'Goa Bridge Festival',
   'All India Bangur Cement Hindusthan Club|2015|C1' =>
     'Goa Bridge Festival',
+  'Indonesian Prima Pair Programme|2016|C1' => 
+    'Indonesian University Championship',
   'Israel Open Teams Cup|2010|SINGLE' => 'Israel Grand Prix',
   'Italian Mixed Teams|2024|C0' => 'Italy Cup', # For now
   'Izmir Winter Teams Cup|2016|SINGLE' => 'Sivrioglu Festival',
-  'Turkey Friendly|2018A|SINGLE' => 'Turkey Practice'
+  'Portuguese Open Teams|2019|C2' => 'Madeira Internationa Festival',
+  'South Australia Open Teams|2023B|C0' => 'Australian Playoffs',
+  'South Australia Open Teams|2024C|C1' => 'Australian Playoffs',
+  'Turkey Friendly|2018A|SINGLE' => 'Turkey Practice',
+  'Turkish Senior Team Trials|2020|C2' => 'Turkish Winter Championships',
+  'Yeh Bros Cup|2019|C0' => 'YPBF Youth Championships'
 );
 
 
