@@ -2255,7 +2255,21 @@ my %TOURNAMENTS_BULGARIA =
             DATE_END => '2016-11-10'
           },
         }
-      }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2019-11-09',
+            DATE_END => '2019-11-10'
+          },
+        }
+      },
     }
   },
 

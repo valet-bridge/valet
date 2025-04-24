@@ -21,7 +21,6 @@ my @MULTI_WORDS =
   'Chinese University Championships',
   'Hainan Bridge Festival',
   'JPD Cup',
-  'Sanya Nanshan Festival',
 );
 
 my %MULTI_TYPOS =
@@ -45,7 +44,8 @@ my %MULTI_TYPOS =
   'Chinese University Championships' => [
     'chinese university teams',
     'china university bridge championships'],
-  'Sanya Nanshan Festival' => [
+  'Hainan Bridge Festival' => [
+    'sanya nanshan festival',
     'sanya nanshan international bridge festival'],
 );
 

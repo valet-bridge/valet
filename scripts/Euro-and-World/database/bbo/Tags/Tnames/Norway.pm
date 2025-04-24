@@ -103,7 +103,7 @@ my %MULTI_TYPOS =
     'marit sveås ibt',
     'marit sveaas ibt'],
   'Namsos Pairs Cup' => ['namsos cup'],
-  'Norwegian Club PAirs' => [
+  'Norwegian Club Pairs' => [
     'km par telemark'],
   'Norwegian Club Teams' => [
     'codan cup',  

@@ -20,7 +20,6 @@ my @MULTI_WORDS =
   'Commonwealth Nations Bridge Championships',
   'Corn Cairdis Match',
   'Crockfords Cup',
-  'English Mixed Teams',
   'English Mixed Trials',
   'English Open Trials',
   'English Open Pair Trials',
@@ -75,8 +74,6 @@ my %MULTI_TYPOS =
     'commonwealth bridge championship'],
   'Corn Cairdis Match' => ['corn cairdis'],
   'Crockfords Cup' => ["crockford's cup"],
-  'English Mixed Teams' => [
-    'ebu mixed teams'],
   'English Mixed Trials' => [
     'ebu european mixed teams trial',
     'ebu mixed teams trials',

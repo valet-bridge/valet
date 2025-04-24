@@ -2424,6 +2424,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2010,
+            major => 'ROUND|SESSION',
             DATE_START => '2010-01-22',
             DATE_END => '2010-01-24'
           },
@@ -2437,6 +2438,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2011,
+            major => 'ROUND|MATCH',
             DATE_START => '2011-01-21',
             DATE_END => '2011-01-23'
           },
@@ -2450,6 +2452,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2012,
+            major => 'ROUND|SESSION',
             DATE_START => '2012-01-13',
             DATE_END => '2012-01-15'
           },
@@ -2463,6 +2466,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2013,
+            major => 'ROUND|SET',
             DATE_START => '2013-01-25',
             DATE_END => '2013-01-27'
           },
@@ -2476,6 +2480,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2014,
+            major => 'ROUND|SESSION',
             DATE_START => '2014-01-24',
             DATE_END => '2014-01-26'
           },
@@ -2489,6 +2494,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2015,
+            major => 'ROUND|SESSION',
             DATE_START => '2015-01-23',
             DATE_END => '2015-01-25'
           },
@@ -2502,6 +2508,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2016,
+            major => 'ROUND|SESSION|SET',
             DATE_START => '2016-01-22',
             DATE_END => '2016-01-24'
           },

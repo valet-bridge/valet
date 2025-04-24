@@ -232,6 +232,7 @@ my %MEETS_CHINA =
     # TODO Same as Sanya Bridge Festival?
     %GLOBAL,
     ORIGIN => 'Transnational',
+    REGION => 'Hainan',
 
     EDITIONS =>
     {
@@ -239,7 +240,7 @@ my %MEETS_CHINA =
       {
         YEAR => 2016,
         DATE_START => '2016-10-22',
-        DATE_END => '2016-10-27'
+        DATE_END => '2016-11-02'
       },
       '2017' =>
       {
@@ -251,13 +252,13 @@ my %MEETS_CHINA =
       {
         YEAR => 2018,
         DATE_START => '2018-10-26',
-        DATE_END => '2018-11-08'
+        DATE_END => '2018-11-09'
       },
       '2019' =>
       {
         YEAR => 2019,
         DATE_START => '2019-09-29',
-        DATE_END => '2019-10-05'
+        DATE_END => '2019-10-13'
       },
     }
   },
@@ -275,34 +276,6 @@ my %MEETS_CHINA =
         YEAR => 2006,
         DATE_START => '2006-03-29',
         DATE_END => '2006-03-31'
-      },
-    }
-  },
-
-  'Sanya Nanshan Festival' =>
-  {
-    ORIGIN => 'National',
-    REGION => 'Hainan',
-
-    EDITIONS =>
-    {
-      '2016' =>
-      {
-        YEAR => 2016,
-        DATE_START => '2016-10-29',
-        DATE_END => '2016-11-02'
-      },
-      '2018' =>
-      {
-        YEAR => 2018,
-        DATE_START => '2018-11-09',
-        DATE_END => '2018-11-09'
-      },
-      '2019' =>
-      {
-        YEAR => 2019,
-        DATE_START => '2019-09-29',
-        DATE_END => '2019-10-13'
       },
     }
   },
@@ -2928,6 +2901,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2019' =>
       {
+        MEET => 'Hainan Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3364,7 +3338,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2016' =>
       {
-        MEET => 'Sanya Nanshan Festival',
+        MEET => 'Hainan Bridge Festival',
         CHAPTERS =>
         {
           'C0' =>
@@ -3403,7 +3377,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2018' =>
       {
-        MEET => 'Sanya Nanshan Festival',
+        MEET => 'Hainan Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3418,7 +3392,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2019' =>
       {
-        MEET => 'Sanya Nanshan Festival',
+        MEET => 'Hainan Bridge Festival',
         CHAPTERS =>
         {
           'C0' =>
@@ -3477,7 +3451,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2018' =>
       {
-        MEET => 'Sanya Nanshan Festival',
+        MEET => 'Hainan Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -3492,7 +3466,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2019' =>
       {
-        MEET => 'Sanya Nanshan Festival',
+        MEET => 'Hainan Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' =>

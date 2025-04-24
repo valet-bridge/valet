@@ -1785,7 +1785,7 @@ my %MEETS_POLAND =
         MEET_ORDINAL => 21,
         CITY => 'Elblag',
         YEAR => 2018,
-        DATE_START => '2018-03-01',
+        DATE_START => '2018-02-28',
         DATE_END => '2018-03-04'
       },
       '2019' =>
@@ -1794,7 +1794,7 @@ my %MEETS_POLAND =
         MEET_ORDINAL => 22,
         CITY => 'Elblag',
         YEAR => 2019,
-        DATE_START => '2019-03-07',
+        DATE_START => '2019-03-06',
         DATE_END => '2019-03-10'
       },
       '2020' =>
@@ -1957,9 +1957,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2018' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
-        CITY => 'Elblag',
+        MEET => 'Zulawski Congress',
         CHAPTERS =>
         {
           'C0' =>
@@ -1990,9 +1988,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2019' =>
       {
-        %GLOBAL,
-        ORIGIN => 'National',
-        CITY => 'Elblag',
+        MEET => 'Zulawski Congress',
         CHAPTERS =>
         {
           'C0' =>
@@ -3577,7 +3573,6 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'ROUND|MATCH',
             DATE_START => '2015-03-29',
             DATE_END => '2015-03-29'
           } 
@@ -3610,7 +3605,7 @@ my %TOURNAMENTS_POLAND =
             STAGE => 'Qualifying',
             major => 'MATCH',
             DATE_START => '2016-05-14',
-            DATE_END => '2016-05-15'
+            DATE_END => '2016-05-14'
           },
           'C1' => 
           {

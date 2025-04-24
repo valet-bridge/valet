@@ -858,6 +858,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-09-30',
             DATE_END => '2016-10-01'
           },
@@ -874,6 +875,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SEGMENT',
             DATE_START => '2017-12-11',
             DATE_END => '2017-12-12'
           },
@@ -887,6 +889,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SEGMENT|STANZA',
             DATE_START => '2018-10-05',
             DATE_END => '2018-10-06'
           },
@@ -1198,6 +1201,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-06-25',
             DATE_END => '2023-06-25'
           } 
@@ -1224,6 +1228,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'SEGMENT',
             DATE_START => '2016-10-18',
             DATE_END => '2016-10-19'
           },
@@ -1236,6 +1241,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SEGMENT',
             DATE_START => '2018-11-22',
             DATE_END => '2018-11-24'
           },
@@ -1251,6 +1257,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-10-15',
             DATE_END => '2019-10-15'
           },
@@ -1266,6 +1273,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-10-15',
             DATE_END => '2019-10-15'
           },
@@ -1382,6 +1390,8 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SECTION',
+            minor => 'ROUND',
             DATE_START => '2018-01-20',
             DATE_END => '2018-01-21'
           } 
@@ -1397,6 +1407,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-01-20',
             DATE_END => '2019-01-20'
           } 
@@ -1412,6 +1423,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-03-09',
             DATE_END => '2019-03-09'
           } 
@@ -1427,6 +1439,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-08-31',
             DATE_END => '2019-09-01'
           } 
@@ -1442,6 +1455,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'ROUND',
             DATE_START => '2020-02-22',
             DATE_END => '2020-02-23'
           } 
@@ -1457,6 +1471,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-02-25',
             DATE_END => '2023-02-26'
           } 
@@ -1486,6 +1501,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SESSION|SECTION',
             DATE_START => '2017-11-11',
             DATE_END => '2017-11-12'
           } 
@@ -1516,6 +1532,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'SESSION',
             DATE_START => '2024-04-20',
             DATE_END => '2024-04-20'
           } 
@@ -1709,6 +1726,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SEGMENT|SESSION',
             DATE_START => '2017-04-21',
             DATE_END => '2017-04-23'
           } 
@@ -1724,6 +1742,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SEGMENT|SESSION',
             DATE_START => '2017-05-10',
             DATE_END => '2017-05-12'
           } 
@@ -1739,6 +1758,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SEGMENT|ROUND',
             DATE_START => '2018-05-15',
             DATE_END => '2018-05-16'
           } 
@@ -1754,6 +1774,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-04-29',
             DATE_END => '2019-05-01'
           } 
@@ -1769,6 +1790,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'SEGMENT|SESSION|ROUND',
             DATE_START => '2020-01-24',
             DATE_END => '2020-01-26'
           } 
@@ -1784,6 +1806,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-01-26',
             DATE_END => '2024-01-28'
           } 
@@ -1799,6 +1822,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'SEGMENT|ROUND',
             DATE_START => '2024-02-02',
             DATE_END => '2024-02-03'
           } 
@@ -2129,6 +2153,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SEGMENT|ROUND',
             DATE_START => '2017-06-11',
             DATE_END => '2017-06-11'
           } 
@@ -2146,6 +2171,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-04-07',
             DATE_END => '2023-04-08'
           } 
@@ -2202,6 +2228,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND|MATCH',
             DATE_START => '2023-01-28',
             DATE_END => '2023-01-29'
           },
@@ -2486,6 +2513,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND|MATCH',
             DATE_START => '2023-01-30',
             DATE_END => '2023-01-31'
           },
@@ -2512,6 +2540,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-08-06',
             DATE_END => '2023-08-06'
           },
@@ -2525,6 +2554,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'SEGMENT|SESSION',
             DATE_START => '2023-10-29',
             DATE_END => '2023-10-30'
           },
@@ -2585,6 +2615,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-06-26',
             DATE_END => '2018-06-26'
           },
@@ -2611,6 +2642,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-02-08',
             DATE_END => '2019-02-08'
           },
@@ -3196,6 +3228,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-03-17',
             DATE_END => '2017-03-18'
           } 
@@ -3208,10 +3241,28 @@ my %TOURNAMENTS_FRIENDLY =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2017-10-11',
+            DATE_END => '2017-10-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-12',
+            DATE_END => '2017-10-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-10-13',
             DATE_END => '2017-10-13'
           } 
         }
@@ -3241,6 +3292,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-04-04',
             DATE_END => '2018-04-06'
           } 
@@ -3256,6 +3308,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-04-20',
             DATE_END => '2018-04-22'
           } 
@@ -3271,6 +3324,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-05-09',
             DATE_END => '2018-05-09'
           } 
@@ -3286,6 +3340,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-02-22',
             DATE_END => '2019-02-24'
           } 
@@ -3302,6 +3357,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-04-12',
             DATE_END => '2019-04-12'
           } 
@@ -3318,6 +3374,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-04-19',
             DATE_END => '2019-04-21'
           } 
@@ -3334,6 +3391,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-05-10',
             DATE_END => '2019-05-12'
           } 
@@ -3350,6 +3408,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-05-17',
             DATE_END => '2019-05-19'
           } 
@@ -3365,6 +3424,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-05-26',
             DATE_END => '2023-05-27'
           } 
@@ -3722,6 +3782,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-03-19',
             DATE_END => '2017-03-19'
           } 
@@ -3737,6 +3798,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-05-12',
             DATE_END => '2017-05-14'
           } 
@@ -3752,6 +3814,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-06-09',
             DATE_END => '2017-06-11'
           } 
@@ -3767,6 +3830,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-07-04',
             DATE_END => '2017-07-04'
           } 
@@ -3783,6 +3847,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-10-14',
             DATE_END => '2018-10-18'
           } 
@@ -3799,6 +3864,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2018-11-30',
             DATE_END => '2018-12-02'
           } 
@@ -3815,6 +3881,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-01-18',
             DATE_END => '2019-01-20'
           } 
@@ -3830,6 +3897,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-04-05',
             DATE_END => '2019-04-05'
           } 
@@ -3846,6 +3914,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-04-12',
             DATE_END => '2019-04-14'
           } 
@@ -3861,6 +3930,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-04-20',
             DATE_END => '2024-04-20'
           } 
@@ -3876,6 +3946,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-05-17',
             DATE_END => '2024-05-19'
           } 
@@ -4042,6 +4113,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'SEGMENT',
             DATE_START => '2018-04-14',
             DATE_END => '2018-04-15'
           } 
@@ -4181,6 +4253,7 @@ my %TOURNAMENTS_FRIENDLY =
           'C0' => 
           {
             YEAR => 2017,
+            major => 'SEGMENT',
             DATE_START => '2017-05-24',
             DATE_END => '2017-05-24'
           },
@@ -4275,6 +4348,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' =>
           {
             YEAR => 2020,
+            major => 'SEGMENT',
             DATE_START => '2020-08-04',
             DATE_END => '2020-08-04'
           },
@@ -4289,6 +4363,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' =>
           {
             YEAR => 2021,
+            STAGE => 'Final',
             DATE_START => '2021-08-04',
             DATE_END => '2021-08-04'
           },
@@ -4301,6 +4376,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'SEGMENT',
             DATE_START => '2022-08-03',
             DATE_END => '2022-08-03'
           },
@@ -4524,6 +4600,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-01-02',
             DATE_END => '2016-01-03'
           } 
@@ -4609,6 +4686,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-05-20',
             DATE_END => '2017-05-21'
           } 
@@ -4624,6 +4702,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SEGMENT|SESSION|ROUND',
             DATE_START => '2017-11-25',
             DATE_END => '2017-11-26'
           } 
@@ -4671,6 +4750,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SEGMENT|MATCH|ROUND',
             DATE_START => '2017-11-04',
             DATE_END => '2017-11-05'
           } 
@@ -4686,6 +4766,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'SEGMENT',
             DATE_START => '2022-03-19',
             DATE_END => '2022-03-19'
           } 
@@ -4701,6 +4782,8 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2023-04-01',
             DATE_END => '2023-04-02'
           } 
@@ -4787,6 +4870,8 @@ my %TOURNAMENTS_FRIENDLY =
     {
       '2018' =>
       {
+        MEET => 'Practice Match',
+        MEET_TAG => '2018A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4795,9 +4880,10 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-05-11',
             DATE_END => '2018-05-13'
-          },
+          } 
         }
       },
     }
@@ -4850,7 +4936,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2018A' =>
+      '2018' =>
       {
         MEET => 'Practice Match',
         MEET_TAG => '2018A',
@@ -4862,6 +4948,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND|MATCH',
             DATE_START => '2018-05-11',
             DATE_END => '2018-05-13'
           } 

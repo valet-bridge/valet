@@ -23,7 +23,6 @@ my @MULTI_WORDS =
   'Romanian Individual',
   'Romanian League',
   'Romanian Mixed Pairs',
-  'Romanian Mixed Teams',
   'Romanian Open Pairs',
   'Romanian Open Teams',
   'Romanian Open Trials',
