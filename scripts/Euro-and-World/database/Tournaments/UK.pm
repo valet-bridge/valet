@@ -38,10 +38,20 @@ my %TOURNAMENTS_UK =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
             DATE_START => '2017-12-16',
+            DATE_END => '2017-12-16'
+          },
+          'C1' =>
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2017-12-17',
             DATE_END => '2017-12-17'
           },
         }
@@ -50,10 +60,21 @@ my %TOURNAMENTS_UK =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2019-02-16',
+            DATE_END => '2019-02-16'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2019-02-17',
             DATE_END => '2019-02-17'
           },
         }
@@ -65,6 +86,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
             DATE_START => '2020-02-21',
             DATE_END => '2020-02-21'
           },
@@ -375,10 +397,22 @@ my %TOURNAMENTS_UK =
         ORDINAL => 81,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2016-10-08',
+            DATE_END => '2016-10-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-09',
             DATE_END => '2016-10-09'
           },
         }
@@ -389,10 +423,21 @@ my %TOURNAMENTS_UK =
         ORDINAL => 80,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|SET|STANZA',
             DATE_START => '2017-10-07',
+            DATE_END => '2017-10-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2017-10-08',
             DATE_END => '2017-10-08'
           },
         }
@@ -403,10 +448,21 @@ my %TOURNAMENTS_UK =
         ORDINAL => 81,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|SET|STANZA',
             DATE_START => '2018-10-13',
+            DATE_END => '2018-10-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|SET|STANZA',
+            DATE_START => '2018-10-14',
             DATE_END => '2018-10-14'
           },
         }
@@ -417,10 +473,21 @@ my %TOURNAMENTS_UK =
         ORDINAL => 82,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2019-10-12',
+            DATE_END => '2019-10-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2019-10-13',
             DATE_END => '2019-10-13'
           },
         }
@@ -432,10 +499,21 @@ my %TOURNAMENTS_UK =
         CITY => 'Online',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2020,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2020-12-05',
+            DATE_END => '2020-12-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2020-12-06',
             DATE_END => '2020-12-06'
           },
         }
@@ -446,10 +524,21 @@ my %TOURNAMENTS_UK =
         ORDINAL => 84,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2021,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2021-10-09',
+            DATE_END => '2021-10-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2021-10-10',
             DATE_END => '2021-10-10'
           },
         }
@@ -460,10 +549,21 @@ my %TOURNAMENTS_UK =
         ORDINAL => 85,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2022-10-08',
+            DATE_END => '2022-10-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2022-10-09',
             DATE_END => '2022-10-09'
           },
         }
@@ -474,10 +574,21 @@ my %TOURNAMENTS_UK =
         ORDINAL => 86,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2023-10-07',
+            DATE_END => '2023-10-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2023-10-08',
             DATE_END => '2023-10-08'
           },
         }
@@ -488,10 +599,21 @@ my %TOURNAMENTS_UK =
         ORDINAL => 87,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
             DATE_START => '2024-10-05',
+            DATE_END => '2024-10-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-06',
             DATE_END => '2024-10-06'
           },
         }
@@ -865,7 +987,7 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2017,
-            major => 'MATCH',
+            major => 'ROUND|MATCH',
             minor => 'SEGMENT|STANZA',
             DATE_START => '2017-01-06',
             DATE_END => '2017-01-08'
@@ -873,7 +995,9 @@ my %TOURNAMENTS_UK =
           'C1' => 
           {
             YEAR => 2017,
-            major => 'MATCH',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'MATCH',
             DATE_START => '2017-03-03',
             DATE_END => '2017-03-05'
           } 
@@ -895,6 +1019,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2018,
             major => 'MATCH',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2018-04-06',
             DATE_END => '2018-04-08'
           } 
@@ -907,15 +1032,17 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2019,
-            major => 'MATCH',
-            minor => 'SEGMENT|STANZA',
+            major => 'MATCH|ROUND',
+            ignore => 'GROUP',
             DATE_START => '2019-01-04',
             DATE_END => '2019-01-06'
           },
           'C1' => 
           {
             YEAR => 2019,
-            major => 'MATCH',
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|STANZA',
+            ignore => 'GROUP',
             DATE_START => '2019-03-01',
             DATE_END => '2019-03-03'
           } 
@@ -928,15 +1055,17 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2020,
-            major => 'MATCH',
-            minor => 'SEGMENT|STANZA',
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2020-01-10',
             DATE_END => '2020-01-12'
           },
           'C1' => 
           {
             YEAR => 2020,
+            STAGE => 'Final',
             major => 'MATCH',
+            ignore => 'TABLE',
             DATE_START => '2020-03-06',
             DATE_END => '2020-03-08'
           } 
@@ -1072,10 +1201,36 @@ my %TOURNAMENTS_UK =
         CITY => 'Gold Coast',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2018-02-14',
+            DATE_END => '2018-02-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-17',
+            DATE_END => '2018-02-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-17',
+            DATE_END => '2018-02-18'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-18',
             DATE_END => '2018-02-18'
           },
         }
@@ -1128,6 +1283,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
             DATE_START => '2018-09-01',
             DATE_END => '2018-09-02'
           },
@@ -1140,6 +1297,9 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2019-08-31',
             DATE_END => '2019-09-01'
           },
@@ -1152,34 +1312,11 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2023-09-23',
             DATE_END => '2023-09-24'
-          },
-        }
-      },
-    }
-  },
-
-  'English Mixed Teams' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Mixed',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
           },
         }
       },
@@ -1204,13 +1341,24 @@ my %TOURNAMENTS_UK =
           'C0' =>
           {
             YEAR => 2018,
+            major => 'ROUND|MATCH',
             DATE_START => '2018-09-07',
             DATE_END => '2018-09-09'
           },
           'C1' =>
           {
             YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2018-12-08',
+            DATE_END => '2018-12-08'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-12-09',
             DATE_END => '2018-12-09'
           },
         }
@@ -1219,10 +1367,21 @@ my %TOURNAMENTS_UK =
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2020,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
+            ignore => 'MATCH',
             DATE_START => '2020-02-07',
+            DATE_END => '2020-02-08'
+          },
+          'C1' =>
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-02-09',
             DATE_END => '2020-02-09'
           },
         }
@@ -1234,6 +1393,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2021,
+            major => 'ROUND|MATCH',
             DATE_START => '2021-12-10',
             DATE_END => '2021-12-12'
           },
@@ -1260,6 +1420,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND|MATCH|STANZA',
             DATE_START => '2018-01-12',
             DATE_END => '2018-01-15'
           },
@@ -1272,12 +1433,16 @@ my %TOURNAMENTS_UK =
           'C0' =>
           {
             YEAR => 2019,
+            major => 'ROUND|MATCH',
+            ignore => 'PHASE',
             DATE_START => '2019-11-01',
             DATE_END => '2019-11-03'
           },
           'C1' =>
           {
             YEAR => 2019,
+            major => 'ROUND',
+            ignore => 'PHASE',
             DATE_START => '2019-11-22',
             DATE_END => '2019-11-24'
           },
@@ -1290,6 +1455,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2020,
+            STAGE => 'Final',
+            major => 'ROUND|MATCH',
             DATE_START => '2020-01-03',
             DATE_END => '2020-01-06'
           },
@@ -1302,12 +1469,16 @@ my %TOURNAMENTS_UK =
           'C0' =>
           {
             YEAR => 2021,
+            major => 'ROUND|MATCH',
+            ignore => 'PHASE',
             DATE_START => '2021-09-24',
             DATE_END => '2021-09-26'
           },
           'C1' =>
           {
             YEAR => 2021,
+            major => 'ROUND|MATCH',
+            ignore => 'PHASE',
             DATE_START => '2021-11-19',
             DATE_END => '2021-11-22'
           },
@@ -1320,6 +1491,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'ROUND|MATCH|STANZA|SESSION',
+            ignore => 'TABLE',
             DATE_START => '2024-01-12',
             DATE_END => '2024-01-15'
           },
@@ -1476,8 +1649,17 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2020,
-            major => 'MATCH|ROUND',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SESSION',
             DATE_START => '2020-03-14',
+            DATE_END => '2020-03-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2020-03-16',
             DATE_END => '2020-03-17'
           },
         }
@@ -1489,7 +1671,7 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2022,
-            major => 'MATCH|ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2022-12-17',
             DATE_END => '2022-12-17'
           },
@@ -1502,7 +1684,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2024,
-            major => 'MATCH|ROUND',
+            major => 'MATCH|ROUND|SESSION',
             DATE_START => '2024-04-29',
             DATE_END => '2024-04-29'
           },
@@ -1773,7 +1955,7 @@ my %TOURNAMENTS_UK =
           'C1' => 
           {
             YEAR => 2016,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2016-10-29',
             DATE_END => '2016-10-30'
           },
@@ -1847,7 +2029,7 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2019,
-            major => 'MATCH',
+            major => 'MATCH|SESSION|SET',
             DATE_START => '2019-10-05',
             DATE_END => '2019-10-06'
           },
@@ -1955,7 +2137,7 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2024,
-            major => 'MATCH',
+            major => 'MATCH|SESSION',
             DATE_START => '2024-09-07',
             DATE_END => '2024-09-08'
           },
@@ -2093,6 +2275,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'MATCH|ROUND',
             DATE_START => '2016-12-17',
             DATE_END => '2016-12-18'
           },
@@ -2105,6 +2288,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'MATCH|ROUND',
             DATE_START => '2017-12-16',
             DATE_END => '2017-12-17'
           },
@@ -2117,6 +2301,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Playoff',
+            major => 'SEGMENT|SESSION|STANZA',
             DATE_START => '2018-03-10',
             DATE_END => '2018-03-11'
           },
@@ -2129,6 +2315,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'MATCH',
             DATE_START => '2018-12-15',
             DATE_END => '2018-12-16'
           },
@@ -2141,6 +2328,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'MATCH',
             DATE_START => '2019-12-14',
             DATE_END => '2019-12-14'
           },
@@ -2153,6 +2341,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2020,
+            major => 'MATCH|STANZA',
             DATE_START => '2020-02-01',
             DATE_END => '2020-02-02'
           },
@@ -2165,18 +2354,22 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2024,
+            major => 'MATCH',
             DATE_START => '2024-03-08',
             DATE_END => '2024-03-09'
           },
           'C1' => 
           {
             YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'MATCH|SET|STANZA',
             DATE_START => '2024-04-06',
             DATE_END => '2024-04-07'
           },
           'C2' => 
           {
             YEAR => 2024,
+            major => 'MATCH|STANZA',
             DATE_START => '2024-06-08',
             DATE_END => '2024-06-09'
           },
@@ -2322,6 +2515,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'ROUND|SESSION|MATCH',
             DATE_START => '2017-01-27',
             DATE_END => '2017-01-29'
           },
@@ -2335,6 +2529,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND|MATCH',
             DATE_START => '2018-01-26',
             DATE_END => '2018-01-28'
           },
@@ -2348,12 +2543,15 @@ my %TOURNAMENTS_UK =
           'C0' =>
           {
             YEAR => 2019,
+            major => 'ROUND|MATCH|SET',
             DATE_START => '2019-01-11',
             DATE_END => '2019-01-13'
           },
           'C1' =>
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'MATCH',
             DATE_START => '2019-02-02',
             DATE_END => '2019-02-03'
           },
@@ -2367,18 +2565,21 @@ my %TOURNAMENTS_UK =
           'C0' =>
           {
             YEAR => 2020,
+            major => 'ROUND|SESSION',
             DATE_START => '2020-01-11',
             DATE_END => '2020-01-12'
           },
           'C1' =>
           {
             YEAR => 2020,
+            major => 'ROUND|MATCH',
             DATE_START => '2020-01-17',
             DATE_END => '2020-01-20'
           },
           'C2' =>
           {
             YEAR => 2020,
+            major => 'ROUND|MATCH|STANZA',
             DATE_START => '2020-01-25',
             DATE_END => '2020-01-26'
           },
@@ -2392,6 +2593,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'ROUND',
             DATE_START => '2022-12-09',
             DATE_END => '2022-12-11'
           },
@@ -2405,6 +2607,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'ROUND',
             DATE_START => '2023-12-08',
             DATE_END => '2023-12-10'
           },
@@ -2418,6 +2621,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-02-09',
             DATE_END => '2024-02-11'
           },
@@ -2590,7 +2794,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2018,
-            major => 'SESSION|SET',
+            major => 'MATCH',
+            minor => 'SESSION|SET|STANZA',
             DATE_START => '2018-03-04',
             DATE_END => '2018-03-05'
           },
@@ -2603,7 +2808,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2022,
-            major => 'SESSION|SET',
+            major => 'SEGMENT|MATCH|ROUND',
             DATE_START => '2022-12-16',
             DATE_END => '2022-12-18'
           },
@@ -2616,7 +2821,7 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2024,
-            major => 'MATCH|ROUND',
+            major => 'SESSION|SET',
             DATE_START => '2024-03-02',
             DATE_END => '2024-03-03'
           },
@@ -2823,6 +3028,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2022-05-21',
             DATE_END => '2022-05-21'
           },
@@ -2998,7 +3205,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2017,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2017-02-17',
             DATE_END => '2017-02-19'
           },
@@ -3011,7 +3218,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2018,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2018-02-16',
             DATE_END => '2018-02-18'
           },
@@ -3024,7 +3231,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2019,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2019-02-15',
             DATE_END => '2019-02-17'
           },
@@ -3037,7 +3244,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2020,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2020-02-14',
             DATE_END => '2020-02-16'
           },
@@ -3247,7 +3454,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2017,
             major => 'MATCH',
-            minor => 'SEGMENT|STANZA',
+            minor => 'SEGMENT|STANZA|SESSION',
             DATE_START => '2017-04-21',
             DATE_END => '2017-04-23'
           },
@@ -3260,8 +3467,10 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2018,
-            major => 'MATCH',
-            minor => 'SEGMENT|STANZA',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
+            ignore => 'GROUP',
             DATE_START => '2018-04-13',
             DATE_END => '2018-04-15'
           },
@@ -3275,7 +3484,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2019,
             major => 'MATCH',
-            minor => 'SEGMENT|STANZA',
+            minor => 'SEGMENT|STANZA|SESSION',
             DATE_START => '2019-04-12',
             DATE_END => '2019-04-14'
           },
@@ -3460,7 +3669,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2017,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2017-02-25',
             DATE_END => '2017-02-26'
           },
@@ -3499,7 +3708,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2020,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2020-02-22',
             DATE_END => '2020-02-23'
           },
@@ -3512,7 +3721,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2022,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2022-02-26',
             DATE_END => '2022-02-27'
           },
@@ -3525,7 +3734,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2023,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2023-02-25',
             DATE_END => '2023-02-26'
           },
@@ -3792,6 +4001,8 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2016-12-17',
             DATE_END => '2016-12-17'
           },
@@ -3804,6 +4015,8 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2018-03-10',
             DATE_END => '2018-03-10'
           },
@@ -3816,6 +4029,8 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2019-03-16',
             DATE_END => '2019-03-16'
           },
@@ -3829,6 +4044,8 @@ my %TOURNAMENTS_UK =
           {
             # The final for the year 2019!
             YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2021-10-31',
             DATE_END => '2021-10-31'
           },
@@ -3841,6 +4058,8 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2023-12-16',
             DATE_END => '2023-12-16'
           },
@@ -3853,6 +4072,8 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2024-12-14',
             DATE_END => '2024-12-14'
           },
@@ -4196,7 +4417,26 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2017-05-01',
+            DATE_END => '2017-05-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2017-05-01',
+            DATE_END => '2017-05-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2017-05-02',
             DATE_END => '2017-05-02'
           },
         }
@@ -4208,7 +4448,26 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2018-05-07',
+            DATE_END => '2018-05-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2018-05-07',
+            DATE_END => '2018-05-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2018-05-08',
             DATE_END => '2018-05-08'
           },
         }
@@ -4220,7 +4479,34 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2019-05-06',
+            DATE_END => '2019-05-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2019-05-06',
+            DATE_END => '2019-05-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2019-05-06',
+            DATE_END => '2019-05-07'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2019-05-07',
             DATE_END => '2019-05-07'
           },
         }
@@ -4232,7 +4518,34 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2022-05-02',
+            DATE_END => '2022-05-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2022-05-02',
+            DATE_END => '2022-05-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2022-05-02',
+            DATE_END => '2022-05-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2022-05-03',
             DATE_END => '2022-05-03'
           },
         }
@@ -4244,7 +4557,34 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            minor => 'SEGMENT|STANZA|SET',
             DATE_START => '2024-05-06',
+            DATE_END => '2024-05-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT|STANZA|SET',
+            DATE_START => '2024-05-06',
+            DATE_END => '2024-05-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|STANZA|SET',
+            DATE_START => '2024-05-06',
+            DATE_END => '2024-05-07'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA|SESSION',
+            DATE_START => '2024-05-07',
             DATE_END => '2024-05-07'
           },
         }
@@ -4381,11 +4721,10 @@ my %TOURNAMENTS_UK =
         {
           'SINGLE' => 
           {
-            # TODO Range too large
             YEAR => 2017,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2017-05-11',
+            major => 'ROUND|MATCH',
+            DATE_START => '2017-05-19',
             DATE_END => '2017-05-21'
           },
         }
@@ -4416,6 +4755,7 @@ my %TOURNAMENTS_UK =
             YEAR => 2019,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2019-04-05',
             DATE_END => '2019-04-07'
           },
@@ -4971,6 +5311,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'SESSION',
             DATE_START => '2017-07-22',
             DATE_END => '2017-07-23'
           },
@@ -5134,6 +5475,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'ROUND|MATCH',
             DATE_START => '2017-09-16',
             DATE_END => '2017-09-17'
           },
@@ -5146,7 +5488,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2018,
-            DATE_START => '2018-11-10',
+            major => 'ROUND|MATCH',
+            DATE_START => '2018-11-09',
             DATE_END => '2018-11-11'
           },
         }
@@ -5158,6 +5501,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2019,
+            major => 'ROUND|MATCH',
             DATE_START => '2019-11-23',
             DATE_END => '2019-11-24'
           },
@@ -5170,6 +5514,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'ROUND|MATCH',
             DATE_START => '2022-11-19',
             DATE_END => '2022-11-20'
           },
@@ -5182,6 +5527,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' =>
           {
             YEAR => 2023,
+            major => 'ROUND|MATCH',
             DATE_START => '2023-11-18',
             DATE_END => '2023-11-19'
           },

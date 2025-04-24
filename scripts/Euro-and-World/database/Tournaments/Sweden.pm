@@ -481,7 +481,33 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2017-08-01',
+            DATE_END => '2017-08-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-02',
+            DATE_END => '2017-08-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-03',
+            DATE_END => '2017-08-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-03',
             DATE_END => '2017-08-03'
           },
         }
@@ -494,7 +520,23 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Quarterfinal',
             DATE_START => '2018-07-31',
+            DATE_END => '2018-07-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-08-01',
+            DATE_END => '2018-08-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-08-02',
             DATE_END => '2018-08-02'
           },
         }
@@ -507,7 +549,33 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2019-07-30',
+            DATE_END => '2019-07-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-31',
+            DATE_END => '2019-07-31'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Bronze',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-08-01',
+            DATE_END => '2019-08-01'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-08-01',
             DATE_END => '2019-08-01'
           },
         }
@@ -520,7 +588,25 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2022-08-02',
+            DATE_END => '2022-08-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-03',
+            DATE_END => '2022-08-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-08-04',
             DATE_END => '2022-08-04'
           },
         }
@@ -533,7 +619,25 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2023-08-01',
+            DATE_END => '2023-08-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-02',
+            DATE_END => '2023-08-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-08-03',
             DATE_END => '2023-08-03'
           },
         }
@@ -546,7 +650,25 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2024-07-30',
+            DATE_END => '2024-07-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-07-31',
+            DATE_END => '2024-07-31'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-08-01',
             DATE_END => '2024-08-01'
           },
         }
@@ -571,6 +693,7 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'ROUND|MATCH',
             DATE_START => '2017-07-15',
             DATE_END => '2017-07-16'
           },
@@ -584,6 +707,7 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'ROUND|MATCH',
             DATE_START => '2018-07-14',
             DATE_END => '2018-07-15'
           },
@@ -623,6 +747,7 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' =>
           {
             YEAR => 2018,
+            major => 'SESSION|ROUND',
             DATE_START => '2018-07-15',
             DATE_END => '2018-07-16'
           },
@@ -1086,10 +1211,34 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Rof16',
             DATE_START => '2016-11-10',
+            DATE_END => '2016-11-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-10',
+            DATE_END => '2016-11-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-11',
+            DATE_END => '2016-11-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-11-12',
             DATE_END => '2016-11-13'
           } 
         }
@@ -1101,12 +1250,38 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2017-11-16',
+            DATE_END => '2017-11-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-16',
+            DATE_END => '2017-11-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-17',
+            DATE_END => '2017-11-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-18',
             DATE_END => '2017-11-19'
-          } 
+          },
         }
       },
       '2018' =>
@@ -1116,12 +1291,36 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2018,
+            STAGE => 'Rof16',
             DATE_START => '2018-11-15',
+            DATE_END => '2018-11-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2018-11-15',
+            DATE_END => '2018-11-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-11-16',
+            DATE_END => '2018-11-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2018-11-17',
             DATE_END => '2018-11-18'
-          } 
+          },
         }
       },
       '2019' =>
@@ -1131,12 +1330,38 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Rof16',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-11-14',
+            DATE_END => '2019-11-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-14',
+            DATE_END => '2019-11-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-15',
+            DATE_END => '2019-11-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-11-16',
             DATE_END => '2019-11-17'
-          } 
+          },
         }
       },
       '2020' =>
@@ -1161,12 +1386,38 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2021,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2021-11-11',
+            DATE_END => '2021-11-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2021-11-11',
+            DATE_END => '2021-11-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2021-11-12',
+            DATE_END => '2021-11-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-11-13',
             DATE_END => '2021-11-14'
-          } 
+          },
         }
       },
       '2022' =>
@@ -1176,12 +1427,38 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2022-11-10',
+            DATE_END => '2022-11-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-11',
+            DATE_END => '2022-11-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-11',
+            DATE_END => '2022-11-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-12',
             DATE_END => '2022-11-13'
-          } 
+          },
         }
       },
       '2023' =>
@@ -1191,12 +1468,38 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2023,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2023-11-16',
+            DATE_END => '2023-11-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-16',
+            DATE_END => '2023-11-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-17',
+            DATE_END => '2023-11-18'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-18',
             DATE_END => '2023-11-19'
-          } 
+          },
         }
       },
       '2024' =>
@@ -1206,12 +1509,36 @@ my %TOURNAMENTS_SWEDEN =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2024,
+            STAGE => 'Rof16',
             DATE_START => '2024-11-07',
+            DATE_END => '2024-11-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2024-11-07',
+            DATE_END => '2024-11-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-08',
+            DATE_END => '2024-11-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-11-09',
             DATE_END => '2024-11-10'
-          } 
+          },
         }
       },
     }
@@ -1380,6 +1707,7 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' =>
           {
             YEAR => 2017,
+            major => 'SEGMENT',
             DATE_START => '2017-04-30',
             DATE_END => '2017-04-30'
           },
@@ -1608,6 +1936,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' =>
           {
             YEAR => 2022,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2022-02-12',
             DATE_END => '2022-02-13'
           },
@@ -1643,24 +1973,60 @@ my %TOURNAMENTS_SWEDEN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2019,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2019-07-13',
+            DATE_END => '2019-07-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-14',
             DATE_END => '2019-07-14'
-          } 
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-14',
+            DATE_END => '2019-07-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-07-14',
+            DATE_END => '2019-07-14'
+          },
         }
       },
       '2022' =>
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2022-07-17',
             DATE_END => '2022-07-17'
-          } 
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-07-17',
+            DATE_END => '2022-07-17'
+          },
         }
       },
     }
@@ -1943,6 +2309,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2017-05-25',
             DATE_END => '2017-05-28'
           } 
@@ -1957,6 +2325,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2018-05-10',
             DATE_END => '2018-05-13'
           } 
@@ -1971,6 +2341,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-05-30',
             DATE_END => '2019-06-02'
           } 
@@ -1999,6 +2371,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2022-05-26',
             DATE_END => '2022-05-29'
           } 
@@ -2013,6 +2387,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-05-18',
             DATE_END => '2023-05-21'
           } 
@@ -2027,6 +2403,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2024-05-09',
             DATE_END => '2024-05-12'
           } 
@@ -2082,6 +2460,7 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-02-10',
             DATE_END => '2017-02-12'
           } 
@@ -2095,6 +2474,7 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-02-09',
             DATE_END => '2018-02-11'
           } 
@@ -2164,6 +2544,7 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
             DATE_START => '2018-02-10',
             DATE_END => '2018-02-11'
           } 
@@ -2176,6 +2557,7 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
             DATE_START => '2019-01-26',
             DATE_END => '2019-01-27'
           } 
@@ -2188,12 +2570,14 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2024,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2024-01-19',
             DATE_END => '2024-01-21'
           },
           'C1' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
             DATE_START => '2024-03-08',
             DATE_END => '2024-03-10'
           } 
@@ -2345,6 +2729,8 @@ my %TOURNAMENTS_SWEDEN =
           'C1' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2016-10-21',
             DATE_END => '2016-10-23'
           } 
@@ -2358,12 +2744,15 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2017-09-02',
             DATE_END => '2017-09-03'
           },
           'C1' => 
           {
             YEAR => 2017,
+            major => 'ROUND',
             DATE_START => '2017-10-27',
             DATE_END => '2017-10-29'
           } 
@@ -2379,12 +2768,16 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2018-09-01',
             DATE_END => '2018-09-02'
           },
           'C1' => 
           {
             YEAR => 2018,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2018-10-19',
             DATE_END => '2018-10-21'
           } 
@@ -2399,12 +2792,16 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-08-31',
             DATE_END => '2019-09-01'
           },
           'C1' => 
           {
             YEAR => 2019,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-10-18',
             DATE_END => '2019-10-20'
           } 
@@ -2420,12 +2817,16 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2021-09-03',
             DATE_END => '2021-09-05'
           },
           'C1' => 
           {
             YEAR => 2021,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2021-10-15',
             DATE_END => '2021-10-17'
           } 
@@ -2441,12 +2842,16 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2022-09-09',
             DATE_END => '2022-09-11'
           },
           'SINGLE' => 
           {
             YEAR => 2022,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2022-10-14',
             DATE_END => '2022-10-16'
           } 
@@ -2462,12 +2867,16 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-09-15',
             DATE_END => '2023-09-17'
           },
           'C1' => 
           {
             YEAR => 2023,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2023-10-06',
             DATE_END => '2023-10-08'
           } 
@@ -2483,12 +2892,16 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2024-09-04',
             DATE_END => '2024-09-08'
           },
           'C1' => 
           {
             YEAR => 2024,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2024-09-27',
             DATE_END => '2024-09-29'
           } 
@@ -2571,19 +2984,29 @@ my %TOURNAMENTS_SWEDEN =
           } 
         }
       },
-      '2016' =>
+      '2016A' =>
       {
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-05-16',
             DATE_END => '2016-05-18'
           },
-          'C1' => 
+        }
+      },
+      '2016B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2016-12-12',
             DATE_END => '2016-12-14'
           } 
@@ -2596,12 +3019,15 @@ my %TOURNAMENTS_SWEDEN =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
             DATE_START => '2017-04-01',
             DATE_END => '2017-04-01'
           },
           'C1' => 
           {
             YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2017-05-17',
             DATE_END => '2017-05-22'
           } 
@@ -2611,10 +3037,20 @@ my %TOURNAMENTS_SWEDEN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2017-12-06',
+            DATE_END => '2017-12-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-12-11',
             DATE_END => '2017-12-13'
           } 
         }
@@ -2626,6 +3062,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2018-05-21',
             DATE_END => '2018-05-23'
           } 
@@ -2638,6 +3076,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2018-12-10',
             DATE_END => '2018-12-12'
           } 
@@ -2650,6 +3090,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2019-05-20',
             DATE_END => '2019-05-22'
           } 
@@ -2662,6 +3104,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2019,
+            major => 'MATCH|ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2019-12-09',
             DATE_END => '2019-12-11'
           } 
@@ -2674,6 +3118,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT|HALF',
             DATE_START => '2022-05-18',
             DATE_END => '2022-05-18'
           } 
