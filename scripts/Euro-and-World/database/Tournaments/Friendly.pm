@@ -11,6 +11,12 @@ package Tournaments::Friendly;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+# The idea is:
+# * Friendly is International (except Zulawski Friendly).
+# * Practice is National.
+# * Challenge is Transnational.
+# * Exhibition is National.
+
 my %MEETS_FRIENDLY =
 (
   'Challenge Match' =>
@@ -813,7 +819,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'AuBF',
     COUNTRY => 'Australia',
-    ORIGIN => 'National',
+    ORIGIN => 'Supranational',
     ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -844,7 +850,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'AuBF',
     COUNTRY => 'Australia',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
 
@@ -1166,7 +1172,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'CCBA',
     COUNTRY => 'China',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1545,7 +1551,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'FFB',
     COUNTRY => 'France',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1761,38 +1767,6 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'SEGMENT|ROUND',
             DATE_START => '2018-05-15',
             DATE_END => '2018-05-16'
-          } 
-        }
-      },
-      '2019' =>
-      {
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2019,
-            major => 'SEGMENT|ROUND',
-            DATE_START => '2019-04-29',
-            DATE_END => '2019-05-01'
-          } 
-        }
-      },
-      '2020' =>
-      {
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2020,
-            major => 'SEGMENT|SESSION|ROUND',
-            DATE_START => '2020-01-24',
-            DATE_END => '2020-01-26'
           } 
         }
       },
@@ -2159,6 +2133,38 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2019' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2019-04-29',
+            DATE_END => '2019-05-01'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            major => 'SEGMENT|SESSION|ROUND',
+            DATE_START => '2020-01-24',
+            DATE_END => '2020-01-26'
+          } 
+        }
+      },
       '2023' =>
       {
         ORIGIN => 'National',
@@ -2272,7 +2278,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'HKCBA',
     COUNTRY => 'Hong Kong',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2404,7 +2410,7 @@ my %TOURNAMENTS_FRIENDLY =
     CITY => 'Budapest',
     COUNTRY => 'Hungary',
     CITY => 'Budapest',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2499,7 +2505,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'IceBF',
     COUNTRY => 'Iceland',
-    ORIGIN => 'Supranational',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2567,7 +2573,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'IBU',
     COUNTRY => 'Ireland',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2599,7 +2605,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'IBF',
     COUNTRY => 'Israel',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
 
@@ -2725,7 +2731,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'FIGB',
     COUNTRY => 'Italy',
-    ORIGIN => 'International',
+    ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2757,7 +2763,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'FRM',
     COUNTRY => 'Morocco',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'African Zone',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -3241,6 +3247,70 @@ my %TOURNAMENTS_FRIENDLY =
 
         CHAPTERS =>
         {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-03-19',
+            DATE_END => '2017-03-19'
+          } 
+        }
+      },
+      '2017C' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-05-12',
+            DATE_END => '2017-05-14'
+          } 
+        }
+      },
+      '2017D' =>
+      {
+        GENDER => 'Open',
+        AGE => 'U20',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-06-09',
+            DATE_END => '2017-06-11'
+          } 
+        }
+      },
+      '2017E' =>
+      {
+        GENDER => 'Open',
+        AGE => 'U26',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-07-04',
+            DATE_END => '2017-07-04'
+          } 
+        }
+      },
+      '2017F' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
           'C0' => 
           {
             YEAR => 2017,
@@ -3267,7 +3337,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2017C' =>
+      '2017G' =>
       {
         GENDER => 'Women',
         AGE => 'Open',
@@ -3348,7 +3418,58 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2018D' =>
+      {
+        CLUB => "'t Onstein",
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-10-14',
+            DATE_END => '2018-10-18'
+          } 
+        }
+      },
+      '2018E' =>
+      {
+        CLUB => "'t Onstein",
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2018-11-30',
+            DATE_END => '2018-12-02'
+          } 
+        }
+      },
       '2019A' =>
+      {
+        CLUB => "'t Onstein",
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-01-18',
+            DATE_END => '2019-01-20'
+          } 
+        }
+      },
+      '2019B' =>
       {
         GENDER => 'Women',
         AGE => 'Open',
@@ -3364,7 +3485,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2019B' =>
+      '2019C' =>
       {
         CLUB => "'t Onstein",
         GENDER => 'Women',
@@ -3377,11 +3498,11 @@ my %TOURNAMENTS_FRIENDLY =
             YEAR => 2019,
             major => 'ROUND',
             DATE_START => '2019-04-12',
-            DATE_END => '2019-04-12'
+            DATE_END => '2019-04-14'
           } 
         }
       },
-      '2019C' =>
+      '2019D' =>
       {
         CLUB => "'t Onstein",
         GENDER => 'Open',
@@ -3398,7 +3519,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2019D' =>
+      '2019E' =>
       {
         CLUB => "'t Onstein",
         GENDER => 'Women',
@@ -3415,7 +3536,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2019E' =>
+      '2019F' =>
       {
         CLUB => "'t Onstein",
         GENDER => 'Open',
@@ -3445,6 +3566,22 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2023-05-26',
             DATE_END => '2023-05-27'
+          } 
+        }
+      },
+      '2024B' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            major => 'ROUND',
+            DATE_START => '2024-05-17',
+            DATE_END => '2024-05-19'
           } 
         }
       },
@@ -3790,121 +3927,6 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2017A' =>
-      {
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2017,
-            major => 'ROUND',
-            DATE_START => '2017-03-19',
-            DATE_END => '2017-03-19'
-          } 
-        }
-      },
-      '2017B' =>
-      {
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2017,
-            major => 'ROUND',
-            DATE_START => '2017-05-12',
-            DATE_END => '2017-05-14'
-          } 
-        }
-      },
-      '2017C' =>
-      {
-        GENDER => 'Open',
-        AGE => 'U20',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2017,
-            major => 'ROUND',
-            DATE_START => '2017-06-09',
-            DATE_END => '2017-06-11'
-          } 
-        }
-      },
-      '2017D' =>
-      {
-        GENDER => 'Open',
-        AGE => 'U26',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2017,
-            major => 'ROUND',
-            DATE_START => '2017-07-04',
-            DATE_END => '2017-07-04'
-          } 
-        }
-      },
-      '2018A' =>
-      {
-        CLUB => "'t Onstein",
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2018,
-            major => 'ROUND',
-            DATE_START => '2018-10-14',
-            DATE_END => '2018-10-18'
-          } 
-        }
-      },
-      '2018B' =>
-      {
-        CLUB => "'t Onstein",
-        GENDER => 'Women',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2018,
-            major => 'ROUND|SEGMENT',
-            DATE_START => '2018-11-30',
-            DATE_END => '2018-12-02'
-          } 
-        }
-      },
-      '2019A' =>
-      {
-        CLUB => "'t Onstein",
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2019,
-            major => 'ROUND',
-            DATE_START => '2019-01-18',
-            DATE_END => '2019-01-20'
-          } 
-        }
-      },
       '2019B' =>
       {
         GENDER => 'Open',
@@ -3921,23 +3943,6 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2019C' =>
-      {
-        CLUB => "'t Onstein",
-        GENDER => 'Women',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2019,
-            major => 'ROUND',
-            DATE_START => '2019-04-12',
-            DATE_END => '2019-04-14'
-          } 
-        }
-      },
       '2024A' =>
       {
         GENDER => 'Open',
@@ -3951,22 +3956,6 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2024-04-20',
             DATE_END => '2024-04-20'
-          } 
-        }
-      },
-      '2024B' =>
-      {
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2024,
-            major => 'ROUND',
-            DATE_START => '2024-05-17',
-            DATE_END => '2024-05-19'
           } 
         }
       },
@@ -4061,7 +4050,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -4284,7 +4273,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'FPB',
     COUNTRY => 'Portugal',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -4453,7 +4442,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'SBU',
     COUNTRY => 'Scotland',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -4583,7 +4572,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'AEB',
     COUNTRY => 'Spain',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -4631,7 +4620,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'SBF',
     COUNTRY => 'Sweden',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -4694,23 +4683,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2017A' =>
-      {
-        GENDER => 'Open',
-        AGE => 'U26',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2017,
-            major => 'ROUND',
-            DATE_START => '2017-05-20',
-            DATE_END => '2017-05-21'
-          } 
-        }
-      },
-      '2017B' =>
+      '2017' =>
       {
         GENDER => 'Open',
         AGE => 'U21',
@@ -4758,7 +4731,23 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2017' =>
+      '2017A' =>
+      {
+        GENDER => 'Open',
+        AGE => 'U26',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-05-20',
+            DATE_END => '2017-05-21'
+          } 
+        }
+      },
+      '2017B' =>
       {
         GENDER => 'Open',
         AGE => 'Open',
@@ -4847,7 +4836,7 @@ my %TOURNAMENTS_FRIENDLY =
     ORGANIZATION => 'SBF',
     CITY => 'Hammamet',
     COUNTRY => 'Tunisia',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'African Zone',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -4879,7 +4868,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'FFB',
     COUNTRY => 'Turkey',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -4954,24 +4943,6 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2018' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2018A',
-        GENDER => 'Open',
-        AGE => 'Seniors',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2018,
-            major => 'ROUND|MATCH',
-            DATE_START => '2018-05-11',
-            DATE_END => '2018-05-13'
-          } 
-        }
-      },
     }
   },
 
@@ -4979,7 +4950,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
-    ORIGIN => 'National',
+    ORIGIN => 'Intercity',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
