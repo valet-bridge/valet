@@ -109,6 +109,7 @@ my %MEETS_FRIENDLY =
         DATE_START => '2004-05-09',
         DATE_END => '2004-05-10'
       },
+
       '2005A' =>
       {
         YEAR => 2005,
@@ -133,6 +134,7 @@ my %MEETS_FRIENDLY =
         DATE_START => '2005-09-01',
         DATE_END => '2005-09-01'
       },
+
       '2006A' =>
       {
         YEAR => 2006,
@@ -151,96 +153,101 @@ my %MEETS_FRIENDLY =
         DATE_START => '2006-05-14',
         DATE_END => '2006-05-14'
       },
-      '2007AAA' =>
+
+      '2007A' =>
       {
         YEAR => 2007,
         DATE_START => '2007-01-24',
         DATE_END => '2007-01-24'
       },
-      '2007AA' =>
+      '2007B' =>
       {
         YEAR => 2007,
         DATE_START => '2007-03-05',
         DATE_END => '2007-03-06'
       },
-      '2007AB' =>
+      '2007C' =>
       {
         YEAR => 2007,
         DATE_START => '2007-04-16',
         DATE_END => '2007-04-16'
       },
-      '2007AC' =>
+      '2007D' =>
       {
         YEAR => 2007,
         DATE_START => '2007-05-05',
         DATE_END => '2007-05-06'
       },
-      '2007A' =>
+      '2007E' =>
       {
         YEAR => 2007,
         DATE_START => '2007-05-15',
         DATE_END => '2007-05-15'
       },
-      '2007B' =>
+      '2007F' =>
       {
         YEAR => 2007,
         DATE_START => '2007-06-02',
         DATE_END => '2007-06-05'
       },
-      '2007C' =>
+      '2007G' =>
       {
         YEAR => 2007,
         DATE_START => '2007-09-02',
         DATE_END => '2007-09-02'
       },
-      '2007O' =>
+      '2007H' =>
       {
         YEAR => 2007,
         DATE_START => '2007-12-10',
         DATE_END => '2007-12-10'
       },
-      '2008AA' => 
+
+      '2008A' => 
       {
         YEAR => 2008,
         DATE_START => '2008-05-04',
         DATE_END => '2008-05-04'
       },
-      '2008A' =>
+      '2008B' =>
       {
         YEAR => 2008,
         DATE_START => '2008-06-21',
         DATE_END => '2008-06-21'
       },
+
       '2009A' =>
       {
         YEAR => 2009,
         DATE_START => '2009-05-22',
         DATE_END => '2009-05-24'
       },
-      '2010AA' =>
+
+      '2010A' =>
       {
         YEAR => 2010,
         DATE_START => '2010-03-03',
         DATE_END => '2010-03-03'
       },
-      '2010A' =>
+      '2010B' =>
       {
         YEAR => 2010,
         DATE_START => '2010-04-09',
         DATE_END => '2010-04-11'
       },
-      '2010B' =>
+      '2010C' =>
       {
         YEAR => 2010,
         DATE_START => '2010-04-23',
         DATE_END => '2010-04-25'
       },
-      '2010C' =>
+      '2010D' =>
       {
         YEAR => 2010,
         DATE_START => '2010-06-04',
         DATE_END => '2010-06-05'
       },
+
       '2011A' =>
       {
         YEAR => 2011,
@@ -265,61 +272,63 @@ my %MEETS_FRIENDLY =
         DATE_START => '2011-05-20',
         DATE_END => '2011-05-22'
       },
-      '2011DA' =>
+      '2011E' =>
       {
         YEAR => 2011,
         DATE_START => '2011-09-02',
         DATE_END => '2011-09-03'
       },
-      '2011E' =>
+      '2011F' =>
       {
         YEAR => 2011,
         DATE_START => '2011-10-08',
         DATE_END => '2011-10-09'
       },
-      '2012B' =>
+
+      '2012A' =>
       {
         YEAR => 2012,
         DATE_START => '2012-02-24',
         DATE_END => '2012-02-26'
       },
-      '2012C' =>
+      '2012B' =>
       {
         YEAR => 2012,
         DATE_START => '2012-04-06',
         DATE_END => '2012-04-07'
       },
-      '2012D' =>
+      '2012C' =>
       {
         YEAR => 2012,
         DATE_START => '2012-04-20',
         DATE_END => '2012-04-22'
       },
-      '2012E' =>
+      '2012D' =>
       {
         YEAR => 2012,
         DATE_START => '2012-05-03',
         DATE_END => '2012-05-04'
       },
-      '2012F' =>
+      '2012E' =>
       {
         YEAR => 2012,
         DATE_START => '2012-06-01',
         DATE_END => '2012-06-01'
       },
-      '2012G' =>
+      '2012F' =>
       {
         YEAR => 2012,
         DATE_START => '2012-06-05',
         DATE_END => '2012-06-05'
       },
-      '2013AA' =>
+
+      '2013A' =>
       {
         YEAR => 2013,
         DATE_START => '2013-01-19',
         DATE_END => '2013-01-20'
       },
-      '2013A' =>
+      '2013B' =>
       {
         YEAR => 2013,
         DATE_START => '2013-05-24',
@@ -337,293 +346,917 @@ my %MEETS_FRIENDLY =
         DATE_START => '2013-06-22',
         DATE_END => '2013-06-25'
       },
-      '2014AA' =>
+
+      '2014A' =>
       {
         YEAR => 2014,
         DATE_START => '2014-01-18',
         DATE_END => '2014-01-19'
       },
-      '2014A' =>
+      '2014B' =>
       {
         YEAR => 2014,
         DATE_START => '2014-02-14',
         DATE_END => '2014-02-15'
       },
-      '2014B' =>
+      '2014C' =>
       {
         YEAR => 2014,
         DATE_START => '2014-03-27',
         DATE_END => '2014-03-29'
       },
-      '2014C' =>
+      '2014D' =>
       {
         YEAR => 2014,
         DATE_START => '2014-04-18',
         DATE_END => '2014-04-20'
       },
-      '2014D' =>
+      '2014E' =>
       {
         YEAR => 2014,
         DATE_START => '2014-05-10',
         DATE_END => '2014-05-11'
       },
-      '2014E' =>
+      '2014F' =>
       {
         YEAR => 2014,
         DATE_START => '2014-05-16',
         DATE_END => '2014-05-18'
       },
-      '2014F' =>
+      '2014G' =>
       {
         YEAR => 2014,
         DATE_START => '2014-05-24',
         DATE_END => '2014-05-25'
       },
-      '2014G' =>
+      '2014H' =>
       {
         YEAR => 2014,
         DATE_START => '2014-06-08',
         DATE_END => '2014-06-08'
       },
-      '2014H' =>
+      '2014I' =>
       {
         YEAR => 2014,
         DATE_START => '2014-11-02',
         DATE_END => '2014-11-02'
       },
-      '2015AAAAA' =>
+
+      '2015A' =>
       {
         YEAR => 2015,
         DATE_START => '2015-05-16',
         DATE_END => '2015-05-17'
       },
-      '2015AA' =>
+      '2015B' =>
       {
         YEAR => 2015,
         DATE_START => '2015-06-03',
         DATE_END => '2015-06-03'
       },
-      '2015AAA' =>
+      '2015C' =>
       {
         YEAR => 2015,
         DATE_START => '2015-06-05',
         DATE_END => '2015-06-07'
       },
-      '2015AAAA' =>
+      '2015D' =>
       {
         YEAR => 2015,
         DATE_START => '2015-06-13',
         DATE_END => '2015-06-14'
       },
-      '2015BB' =>
+      '2015E' =>
       {
         YEAR => 2015,
         DATE_START => '2015-06-27',
         DATE_END => '2015-06-28'
       },
-      '2015BBB' =>
+      '2015F' =>
       {
         YEAR => 2015,
         DATE_START => '2015-09-05',
         DATE_END => '2015-09-06'
       },
-      '2015A' =>
+      '2015G' =>
       {
         YEAR => 2015,
         DATE_START => '2015-10-18',
         DATE_END => '2015-10-18'
       },
-      '2015AAX' =>
+      '2015H' =>
       {
         YEAR => 2015,
         DATE_START => '2015-10-30',
         DATE_END => '2015-11-01'
       },
-      '2015C' =>
+      '2015I' =>
       {
         YEAR => 2015,
         DATE_START => '2015-11-02',
         DATE_END => '2015-11-02'
       },
-      '2016AA' =>
+
+      '2016A' =>
       {
         YEAR => 2016,
         DATE_START => '2016-01-02',
         DATE_END => '2016-01-03'
       },
-      '2016A' =>
+      '2016B' =>
       {
         YEAR => 2016,
         DATE_START => '2016-02-19',
         DATE_END => '2016-02-21'
       },
-      '2016B' =>
+      '2016C' =>
       {
         YEAR => 2016,
         DATE_START => '2016-03-03',
         DATE_END => '2016-03-03'
       },
-      '2016C' =>
+      '2016D' =>
       {
         YEAR => 2016,
         DATE_START => '2016-03-25',
         DATE_END => '2016-03-28'
       },
-      '2016D' =>
+      '2016E' =>
       {
         YEAR => 2016,
         DATE_START => '2016-04-16',
         DATE_END => '2016-04-18'
       },
-      '2016DD' =>
+      '2016F' =>
       {
         YEAR => 2016,
         DATE_START => '2016-05-14',
         DATE_END => '2016-05-15'
       },
-      '2016DDD' =>
+      '2016G' =>
       {
         YEAR => 2016,
         DATE_START => '2016-05-19',
         DATE_END => '2016-05-19'
       },
-      '2016EE' =>
+      '2016H' =>
       {
         YEAR => 2016,
         DATE_START => '2016-05-20',
         DATE_END => '2016-05-22'
       },
-      '2016E' =>
+      '2016I' =>
       {
         YEAR => 2016,
         DATE_START => '2016-07-01',
         DATE_END => '2016-07-03'
       },
-      '2016F' =>
+      '2016J' =>
       {
         YEAR => 2016,
         DATE_START => '2016-09-30',
         DATE_END => '2016-10-01'
       },
+
       '2017A' =>
       {
         YEAR => 2017,
         DATE_START => '2017-03-17',
         DATE_END => '2017-03-18'
       },
-      '2017AA' =>
+      '2017B' =>
       {
         YEAR => 2017,
         DATE_START => '2017-03-19',
         DATE_END => '2017-03-19'
       },
-      '2017B' =>
+      '2017C' =>
       {
         YEAR => 2017,
         DATE_START => '2017-04-21',
         DATE_END => '2017-04-23'
       },
-      '2017C' =>
+      '2017D' =>
       {
         YEAR => 2017,
         DATE_START => '2017-05-10',
         DATE_END => '2017-05-12'
       },
-      '2017D' =>
+      '2017E' =>
       {
         YEAR => 2017,
         DATE_START => '2017-05-13',
         DATE_END => '2017-05-14'
       },
-      '2017E' =>
+      '2017F' =>
       {
         YEAR => 2017,
         DATE_START => '2017-06-09',
         DATE_END => '2017-06-11'
       },
-      '2017EE' =>
+      '2017G' =>
       {
         YEAR => 2017,
         DATE_START => '2017-07-04',
         DATE_END => '2017-07-04'
       },
-      '2017FF' =>
+      '2017H' =>
       {
         YEAR => 2017,
         DATE_START => '2017-10-11',
         DATE_END => '2017-10-13'
       },
-      '2017FFF' =>
+      '2017I' =>
       {
         YEAR => 2017,
         DATE_START => '2017-11-25',
         DATE_END => '2017-11-26'
       },
-      '2017F' =>
+      '2017J' =>
       {
         YEAR => 2017,
         DATE_START => '2017-12-11',
         DATE_END => '2017-12-12'
       },
-      '2018B' =>
+
+      '2018A' =>
       {
         YEAR => 2018,
         DATE_START => '2018-04-04',
         DATE_END => '2018-04-06'
       },
-      '2018BBB' =>
+      '2018B' =>
       {
         YEAR => 2018,
         DATE_START => '2018-04-14',
         DATE_END => '2018-04-15'
       },
-      '2018BB' =>
+      '2018C' =>
       {
         YEAR => 2018,
         DATE_START => '2018-04-20',
         DATE_END => '2018-04-22'
       },
-      '2018CC' =>
+      '2018D' =>
       {
         YEAR => 2018,
         DATE_START => '2018-05-09',
         DATE_END => '2018-05-09'
       },
-      '2018AZ' =>
+      '2018E' =>
       {
         YEAR => 2018,
         DATE_START => '2018-05-11',
         DATE_END => '2018-05-13'
       },
-      '2018C' =>
+      '2018F' =>
       {
         YEAR => 2018,
         DATE_START => '2018-05-15',
         DATE_END => '2018-05-16'
       },
-      '2018D' =>
+      '2018G' =>
       {
         YEAR => 2018,
         DATE_START => '2018-06-26',
         DATE_END => '2018-06-26'
       },
-      '2018F' =>
+      '2018H' =>
       {
         YEAR => 2018,
         DATE_START => '2018-10-05',
         DATE_END => '2018-10-06'
       },
-      '2018G' =>
+      '2018I' =>
       {
         YEAR => 2018,
         DATE_START => '2018-10-14',
         DATE_END => '2018-10-18'
       },
-      '2018H' =>
+      '2018J' =>
       {
         YEAR => 2018,
         DATE_START => '2018-11-30',
         DATE_END => '2018-12-02'
+      },
+
+      '2019A' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-01-18',
+        DATE_END => '2019-01-20'
+      },
+      '2019B' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-02-22',
+        DATE_END => '2019-02-24'
+      },
+      '2019C' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-04-12',
+        DATE_END => '2019-04-14'
+      },
+      '2019D' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-04-19',
+        DATE_END => '2019-04-21'
+      },
+      '2019E' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-05-10',
+        DATE_END => '2019-05-12'
+      },
+      '2019F' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-05-17',
+        DATE_END => '2019-05-19'
+      },
+
+      '2023A' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-01-30',
+        DATE_END => '2023-01-31'
+      },
+      '2023B' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-05-26',
+        DATE_END => '2023-05-27'
+      },
+      '2023C' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-06-25',
+        DATE_END => '2023-06-25'
+      },
+
+      '2024A' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-01-26',
+        DATE_END => '2024-01-28'
+      },
+      '2024B' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-02-02',
+        DATE_END => '2024-02-03'
+      },
+      '2024C' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-05-17',
+        DATE_END => '2024-05-19'
+      },
+    }
+  },
+
+  'Friendly Match' =>
+  {
+    EDITIONS => 
+    {
+      '2004' =>
+      {
+        YEAR => 2004,
+        DATE_START => '2004-05-09',
+        DATE_END => '2004-05-10'
+      },
+
+      '2005A' =>
+      {
+        YEAR => 2005,
+        DATE_START => '2005-02-17',
+        DATE_END => '2005-02-17'
+      },
+      '2005B' =>
+      {
+        YEAR => 2005,
+        DATE_START => '2005-03-20',
+        DATE_END => '2005-03-20'
+      },
+      '2005C' =>
+      {
+        YEAR => 2005,
+        DATE_START => '2005-06-13',
+        DATE_END => '2005-06-13'
+      },
+      '2005D' =>
+      {
+        YEAR => 2005,
+        DATE_START => '2005-09-01',
+        DATE_END => '2005-09-01'
+      },
+
+      '2006A' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-04-23',
+        DATE_END => '2006-04-23'
+      },
+      '2006B' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-05-06',
+        DATE_END => '2006-05-08'
+      },
+      '2006C' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-05-14',
+        DATE_END => '2006-05-14'
+      },
+
+      '2007A' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-01-24',
+        DATE_END => '2007-01-24'
+      },
+      '2007B' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-03-05',
+        DATE_END => '2007-03-06'
+      },
+      '2007C' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-04-16',
+        DATE_END => '2007-04-16'
+      },
+      '2007D' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-05-05',
+        DATE_END => '2007-05-06'
+      },
+      '2007E' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-05-15',
+        DATE_END => '2007-05-15'
+      },
+      '2007F' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-06-02',
+        DATE_END => '2007-06-05'
+      },
+      '2007G' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-09-02',
+        DATE_END => '2007-09-02'
+      },
+      '2007H' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-12-10',
+        DATE_END => '2007-12-10'
+      },
+
+      '2008A' => 
+      {
+        YEAR => 2008,
+        DATE_START => '2008-05-04',
+        DATE_END => '2008-05-04'
+      },
+      '2008B' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-06-21',
+        DATE_END => '2008-06-21'
+      },
+
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-05-22',
+        DATE_END => '2009-05-24'
+      },
+
+      '2010A' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-03-03',
+        DATE_END => '2010-03-03'
+      },
+      '2010B' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-04-09',
+        DATE_END => '2010-04-11'
+      },
+      '2010C' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-04-23',
+        DATE_END => '2010-04-25'
+      },
+      '2010D' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-06-04',
+        DATE_END => '2010-06-05'
+      },
+
+      '2011A' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-04-06',
+        DATE_END => '2011-04-07'
+      },
+      '2011B' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-04-08',
+        DATE_END => '2011-04-10'
+      },
+      '2011C' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-05-14',
+        DATE_END => '2011-05-14'
+      },
+      '2011D' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-05-20',
+        DATE_END => '2011-05-22'
+      },
+      '2011E' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-09-02',
+        DATE_END => '2011-09-03'
+      },
+      '2011F' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-10-08',
+        DATE_END => '2011-10-09'
+      },
+
+      '2012A' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-02-24',
+        DATE_END => '2012-02-26'
+      },
+      '2012B' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-04-06',
+        DATE_END => '2012-04-07'
+      },
+      '2012C' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-04-20',
+        DATE_END => '2012-04-22'
+      },
+      '2012D' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-05-03',
+        DATE_END => '2012-05-04'
+      },
+      '2012E' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-06-01',
+        DATE_END => '2012-06-01'
+      },
+      '2012F' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-06-05',
+        DATE_END => '2012-06-05'
+      },
+
+      '2013A' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-01-19',
+        DATE_END => '2013-01-20'
+      },
+      '2013B' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-05-24',
+        DATE_END => '2013-05-24'
+      },
+      '2013C' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-06-07',
+        DATE_END => '2013-06-09'
+      },
+      '2013D' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-06-22',
+        DATE_END => '2013-06-25'
+      },
+
+      '2014A' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-01-18',
+        DATE_END => '2014-01-19'
+      },
+      '2014B' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-02-14',
+        DATE_END => '2014-02-15'
+      },
+      '2014C' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-03-27',
+        DATE_END => '2014-03-29'
+      },
+      '2014D' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-04-18',
+        DATE_END => '2014-04-20'
+      },
+      '2014E' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-05-10',
+        DATE_END => '2014-05-11'
+      },
+      '2014F' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-05-16',
+        DATE_END => '2014-05-18'
+      },
+      '2014G' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-05-24',
+        DATE_END => '2014-05-25'
+      },
+      '2014H' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-06-08',
+        DATE_END => '2014-06-08'
+      },
+      '2014I' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-11-02',
+        DATE_END => '2014-11-02'
+      },
+
+      '2015A' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-05-16',
+        DATE_END => '2015-05-17'
+      },
+      '2015B' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-03',
+        DATE_END => '2015-06-03'
+      },
+      '2015C' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-05',
+        DATE_END => '2015-06-07'
+      },
+      '2015D' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-13',
+        DATE_END => '2015-06-14'
+      },
+      '2015E' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-27',
+        DATE_END => '2015-06-28'
+      },
+      '2015F' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-09-05',
+        DATE_END => '2015-09-06'
+      },
+      '2015G' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-10-18',
+        DATE_END => '2015-10-18'
+      },
+      '2015H' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-10-30',
+        DATE_END => '2015-11-01'
+      },
+      '2015I' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-11-02',
+        DATE_END => '2015-11-02'
+      },
+
+      '2016A' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-01-02',
+        DATE_END => '2016-01-03'
+      },
+      '2016B' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-02-19',
+        DATE_END => '2016-02-21'
+      },
+      '2016C' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-03-03',
+        DATE_END => '2016-03-03'
+      },
+      '2016D' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-03-25',
+        DATE_END => '2016-03-28'
+      },
+      '2016E' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-04-16',
+        DATE_END => '2016-04-18'
+      },
+      '2016F' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-14',
+        DATE_END => '2016-05-15'
+      },
+      '2016G' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-19',
+        DATE_END => '2016-05-19'
+      },
+      '2016H' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-20',
+        DATE_END => '2016-05-22'
+      },
+      '2016I' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-07-01',
+        DATE_END => '2016-07-03'
+      },
+      '2016J' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-09-30',
+        DATE_END => '2016-10-01'
+      },
+
+      '2017A' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-03-17',
+        DATE_END => '2017-03-18'
+      },
+      '2017B' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-03-19',
+        DATE_END => '2017-03-19'
+      },
+      '2017C' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-04-21',
+        DATE_END => '2017-04-23'
+      },
+      '2017D' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-05-10',
+        DATE_END => '2017-05-12'
+      },
+      '2017E' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-05-13',
+        DATE_END => '2017-05-14'
+      },
+      '2017F' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-06-09',
+        DATE_END => '2017-06-11'
+      },
+      '2017G' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-07-04',
+        DATE_END => '2017-07-04'
+      },
+      '2017H' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-10-11',
+        DATE_END => '2017-10-13'
+      },
+      '2017I' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-11-25',
+        DATE_END => '2017-11-26'
+      },
+      '2017J' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-12-11',
+        DATE_END => '2017-12-12'
+      },
+
+      '2018A' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-04-04',
+        DATE_END => '2018-04-06'
+      },
+      '2018B' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-04-14',
+        DATE_END => '2018-04-15'
+      },
+      '2018C' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-04-20',
+        DATE_END => '2018-04-22'
+      },
+      '2018D' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-05-09',
+        DATE_END => '2018-05-09'
+      },
+      '2018E' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-05-11',
+        DATE_END => '2018-05-13'
+      },
+      '2018F' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-05-15',
+        DATE_END => '2018-05-16'
+      },
+      '2018G' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-06-26',
+        DATE_END => '2018-06-26'
+      },
+      '2018H' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-10-05',
+        DATE_END => '2018-10-06'
+      },
+      '2018I' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-10-14',
+        DATE_END => '2018-10-18'
+      },
+      '2018J' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-11-30',
+        DATE_END => '2018-12-02'
+
       },
       '2019A' =>
       {
@@ -661,37 +1294,39 @@ my %MEETS_FRIENDLY =
         DATE_START => '2019-05-17',
         DATE_END => '2019-05-19'
       },
+
       '2023A' =>
       {
         YEAR => 2023,
         DATE_START => '2023-01-30',
         DATE_END => '2023-01-31'
       },
-      '2023E' =>
+      '2023B' =>
       {
         YEAR => 2023,
         DATE_START => '2023-05-26',
         DATE_END => '2023-05-27'
       },
-      '2023F' =>
+      '2023C' =>
       {
         YEAR => 2023,
         DATE_START => '2023-06-25',
         DATE_END => '2023-06-25'
       },
-      '2024B' =>
+
+      '2024A' =>
       {
         YEAR => 2024,
         DATE_START => '2024-01-26',
         DATE_END => '2024-01-28'
       },
-      '2024C' =>
+      '2024B' =>
       {
         YEAR => 2024,
         DATE_START => '2024-02-02',
         DATE_END => '2024-02-03'
       },
-      '2024D' =>
+      '2024C' =>
       {
         YEAR => 2024,
         DATE_START => '2024-05-17',
@@ -1244,7 +1879,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2013' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2013AA',
+        MEET_TAG => '2013A',
         GENDER => 'Open',
         AGE => 'U21',
 
@@ -1262,7 +1897,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2014AA',
+        MEET_TAG => '2014A',
         GENDER => 'Open',
         AGE => 'U21',
 
@@ -1280,7 +1915,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016F',
+        MEET_TAG => '2016J',
         ZONE => 'South Pacific',
         CHAPTERS =>
         {
@@ -1296,7 +1931,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2017' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2017F',
+        MEET_TAG => '2017J',
         ZONE => 'World',
         GENDER => 'Open',
         AGE => 'U21',
@@ -1315,7 +1950,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2018' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2018F',
+        MEET_TAG => '2018H',
         ZONE => 'South Pacific',
         CHAPTERS =>
         {
@@ -1493,7 +2128,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2015BB',
+        MEET_TAG => '2015E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1511,7 +2146,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2015BB',
+        MEET_TAG => '2015E',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1576,7 +2211,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2023' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2023F',
+        MEET_TAG => '2023C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1706,7 +2341,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016A',
+        MEET_TAG => '2016B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2001,7 +2636,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2007AA',
+        MEET_TAG => '2007B',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -2020,7 +2655,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2007A',
+        MEET_TAG => '2007E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2038,7 +2673,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2010C',
+        MEET_TAG => '2010D',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -2056,7 +2691,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2010C',
+        MEET_TAG => '2010D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2075,7 +2710,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2012B',
+        MEET_TAG => '2012A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2093,7 +2728,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2012E',
+        MEET_TAG => '2012D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2111,7 +2746,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2015BBB',
+        MEET_TAG => '2015F',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -2130,7 +2765,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2015AAX',
+        MEET_TAG => '2015H',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2148,7 +2783,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015C' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2015C',
+        MEET_TAG => '2015I',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -2167,7 +2802,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016C',
+        MEET_TAG => '2016D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2185,7 +2820,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016C' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016EE',
+        MEET_TAG => '2016H',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2203,7 +2838,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016D' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016E',
+        MEET_TAG => '2016I',
         GENDER => 'Open',
         AGE => 'U21',
 
@@ -2221,7 +2856,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2017A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2017B',
+        MEET_TAG => '2017C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2239,7 +2874,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2017B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2017C',
+        MEET_TAG => '2017D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2257,7 +2892,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2018' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2018C',
+        MEET_TAG => '2018F',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2275,7 +2910,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2024A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2024B',
+        MEET_TAG => '2024A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2293,7 +2928,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2024B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2024C',
+        MEET_TAG => '2024B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2812,7 +3447,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2014C',
+        MEET_TAG => '2014D',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -2997,7 +3632,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2018' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2018D',
+        MEET_TAG => '2018G',
         GENDER => 'Open',
         AGE => 'U26',
 
@@ -3058,7 +3693,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2014C',
+        MEET_TAG => '2014D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3076,7 +3711,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2015A',
+        MEET_TAG => '2015G',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3140,7 +3775,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2014B',
+        MEET_TAG => '2014C',
         GENDER => 'Open',
         AGE => 'Open',
         CITY => 'Hammamet',
@@ -3296,7 +3931,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2007AAA',
+        MEET_TAG => '2007A',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -3315,7 +3950,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2007AB',
+        MEET_TAG => '2007C',
         CLUB => "'t Onstein",
         GENDER => 'Women',
         AGE => 'Open',
@@ -3334,7 +3969,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007C' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2007AC',
+        MEET_TAG => '2007D',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -3353,7 +3988,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007D' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2007B',
+        MEET_TAG => '2007F',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'U21',
@@ -3372,7 +4007,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007E' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2007C',
+        MEET_TAG => '2007G',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -3391,7 +4026,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007F' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2007C',
+        MEET_TAG => '2007G',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'U21',
@@ -3410,7 +4045,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007G' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2007O',
+        MEET_TAG => '2007H',
         CLUB => "'t Onstein",
         GENDER => 'Women',
         AGE => 'Open',
@@ -3429,7 +4064,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2008A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2008AA',
+        MEET_TAG => '2008A',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -3448,7 +4083,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2008B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2008A',
+        MEET_TAG => '2008B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3466,7 +4101,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2009A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2009A',
+        MEET_TAG => 2009,
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3484,7 +4119,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2010A',
+        MEET_TAG => '2010B',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -3503,7 +4138,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2010B',
+        MEET_TAG => '2010C',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -3598,7 +4233,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011E' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2011DA',
+        MEET_TAG => '2011E',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -3616,7 +4251,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2012C',
+        MEET_TAG => '2012B',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -3634,7 +4269,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2012D',
+        MEET_TAG => '2012C',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -3671,7 +4306,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2014A',
+        MEET_TAG => '2014B',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -3689,7 +4324,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2014E',
+        MEET_TAG => '2014F',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3707,7 +4342,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2015AAAAA',
+        MEET_TAG => '2015A',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -3725,7 +4360,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2015AAA',
+        MEET_TAG => '2015C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3743,7 +4378,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016A',
+        MEET_TAG => '2016B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3761,7 +4396,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016C',
+        MEET_TAG => '2016D',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -3779,7 +4414,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016C' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016C',
+        MEET_TAG => '2016D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3798,7 +4433,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016D' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016D',
+        MEET_TAG => '2016E',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -3816,7 +4451,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016E' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016D',
+        MEET_TAG => '2016E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3835,7 +4470,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016F' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016DDD',
+        MEET_TAG => '2016G',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3872,7 +4507,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2017B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2017AA',
+        MEET_TAG => '2017B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3890,7 +4525,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2017C' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2017D',
+        MEET_TAG => '2017E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3908,7 +4543,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2017D' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2017E',
+        MEET_TAG => '2017F',
         GENDER => 'Open',
         AGE => 'U20',
 
@@ -3926,7 +4561,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2017E' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2017EE',
+        MEET_TAG => '2017G',
         GENDER => 'Open',
         AGE => 'U26',
 
@@ -3944,7 +4579,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2017F' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2017FF',
+        MEET_TAG => '2017H',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3979,7 +4614,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2017G' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2017FF',
+        MEET_TAG => '2017H',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -4014,7 +4649,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2018A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2018B',
+        MEET_TAG => '2018A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4032,7 +4667,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2018B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2018BB',
+        MEET_TAG => '2018C',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -4050,7 +4685,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2018C' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2018CC',
+        MEET_TAG => '2018D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4068,7 +4703,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2018D' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2018G',
+        MEET_TAG => '2018I',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -4087,7 +4722,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2018E' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2018H',
+        MEET_TAG => '2018J',
         CLUB => "'t Onstein",
         GENDER => 'Women',
         AGE => 'Open',
@@ -4219,7 +4854,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2023' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2023E',
+        MEET_TAG => '2023B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4237,7 +4872,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2024B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2024D',
+        MEET_TAG => '2024C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4524,7 +5159,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2013' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2013A',
+        MEET_TAG => '2013B',
         GENDER => 'Open',
         AGE => 'U26',
 
@@ -4542,7 +5177,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2015AA',
+        MEET_TAG => '2015B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4560,7 +5195,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2018' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2018BBB',
+        MEET_TAG => '2018B',
         GENDER => 'Women',
         AGE => 'U26',
 
@@ -4716,7 +5351,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2014F',
+        MEET_TAG => '2014G',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4734,7 +5369,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2015AAAA',
+        MEET_TAG => '2015D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4904,7 +5539,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2010AA',
+        MEET_TAG => '2010A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -5013,10 +5648,10 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2014B' =>
+      '2014' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2014H',
+        MEET_TAG => '2014I',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -5034,7 +5669,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016AA',
+        MEET_TAG => '2016A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -5066,7 +5701,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2011E',
+        MEET_TAG => '2011F',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -5086,7 +5721,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2012F',
+        MEET_TAG => '2012E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -5104,7 +5739,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2014D',
+        MEET_TAG => '2014E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -5122,7 +5757,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2017' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2017FFF',
+        MEET_TAG => '2017I',
         GENDER => 'Open',
         AGE => 'U21',
 
@@ -5306,7 +5941,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016DD',
+        MEET_TAG => '2016F',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -5324,7 +5959,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2018A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2018AZ',
+        MEET_TAG => '2018E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -5342,7 +5977,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2018B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2018AZ',
+        MEET_TAG => '2018E',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -5408,7 +6043,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2016B',
+        MEET_TAG => '2016C',
 
         CHAPTERS =>
         {
