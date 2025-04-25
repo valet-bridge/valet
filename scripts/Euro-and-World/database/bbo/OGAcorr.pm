@@ -242,6 +242,7 @@ my %ORIGIN_ACCEPTS = (
   'Forest Trophy' => [
     18138, 18142, 18147],
   'France Friendly' => [
+     3158,  3159,  3160,  3161,  3162,  3163,
      4789],
   'France Practice' => [
      2658,  2659,  2660,  2661,
@@ -297,6 +298,8 @@ my %ORIGIN_ACCEPTS = (
       719,  720,  722,  723,  724],
   'Iceland Express Teams' => [
     16611],
+  'Iceland Friendly' => [
+    8168],
   'IMSA Elite Women Teams' => [
     30778],
   'Indian Inter-State Teams' => [

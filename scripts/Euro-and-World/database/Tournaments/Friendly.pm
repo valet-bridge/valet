@@ -41,17 +41,11 @@ my %MEETS_FRIENDLY =
         DATE_START => '2013-05-18',
         DATE_END => '2013-05-18'
       },
-      '2014A' =>
+      '2014' =>
       {
         YEAR => 2014,
         DATE_START => '2014-05-18',
         DATE_END => '2014-05-18'
-      },
-      '2014B' =>
-      {
-        YEAR => 2014,
-        DATE_START => '2014-11-02',
-        DATE_END => '2014-11-02'
       },
       '2015' =>
       {
@@ -72,13 +66,7 @@ my %MEETS_FRIENDLY =
         DATE_START => '2004-11-29',
         DATE_END => '2004-11-29'
       },
-      '2005A' =>
-      {
-        YEAR => 2005,
-        DATE_START => '2005-02-17',
-        DATE_END => '2005-02-17'
-      },
-      '2005B' =>
+      '2005' =>
       {
         YEAR => 2005,
         DATE_START => '2005-05-22',
@@ -90,6 +78,18 @@ my %MEETS_FRIENDLY =
         DATE_START => '2007-08-19',
         DATE_END => '2007-08-19'
       },
+      '2023A' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-08-06',
+        DATE_END => '2023-08-06'
+      },
+      '2023B' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-10-29',
+        DATE_END => '2023-10-30'
+      },
     }
   },
 
@@ -100,16 +100,22 @@ my %MEETS_FRIENDLY =
       '2005A' =>
       {
         YEAR => 2005,
+        DATE_START => '2005-02-17',
+        DATE_END => '2005-02-17'
+      },
+      '2005B' =>
+      {
+        YEAR => 2005,
         DATE_START => '2005-03-20',
         DATE_END => '2005-03-20'
       },
-      '2005B' =>
+      '2005C' =>
       {
         YEAR => 2005,
         DATE_START => '2005-06-13',
         DATE_END => '2005-06-13'
       },
-      '2005C' =>
+      '2005D' =>
       {
         YEAR => 2005,
         DATE_START => '2005-09-01',
@@ -133,6 +139,30 @@ my %MEETS_FRIENDLY =
         DATE_START => '2006-05-14',
         DATE_END => '2006-05-14'
       },
+      '2007AAA' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-01-24',
+        DATE_END => '2007-01-24'
+      },
+      '2007AA' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-03-05',
+        DATE_END => '2007-03-06'
+      },
+      '2007AB' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-04-16',
+        DATE_END => '2007-04-16'
+      },
+      '2007AC' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-05-05',
+        DATE_END => '2007-05-06'
+      },
       '2007A' =>
       {
         YEAR => 2007,
@@ -151,6 +181,12 @@ my %MEETS_FRIENDLY =
         DATE_START => '2007-09-02',
         DATE_END => '2007-09-02'
       },
+      '2008AA' => 
+      {
+        YEAR => 2008,
+        DATE_START => '2008-05-04',
+        DATE_END => '2008-05-04'
+      },
       '2008A' =>
       {
         YEAR => 2008,
@@ -162,6 +198,12 @@ my %MEETS_FRIENDLY =
         YEAR => 2009,
         DATE_START => '2009-05-22',
         DATE_END => '2009-05-24'
+      },
+      '2010AA' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-03-03',
+        DATE_END => '2010-03-03'
       },
       '2010A' =>
       {
@@ -180,12 +222,6 @@ my %MEETS_FRIENDLY =
         YEAR => 2010,
         DATE_START => '2010-06-04',
         DATE_END => '2010-06-05'
-      },
-      '2010D' =>
-      {
-        YEAR => 2010,
-        DATE_START => '2010-11-27',
-        DATE_END => '2010-11-27'
       },
       '2011A' =>
       {
@@ -210,6 +246,12 @@ my %MEETS_FRIENDLY =
         YEAR => 2011,
         DATE_START => '2011-05-20',
         DATE_END => '2011-05-22'
+      },
+      '2011DA' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-09-02',
+        DATE_END => '2011-09-03'
       },
       '2011E' =>
       {
@@ -259,47 +301,17 @@ my %MEETS_FRIENDLY =
         DATE_START => '2012-06-05',
         DATE_END => '2012-06-05'
       },
-      '2012H' =>
-      {
-        YEAR => 2012,
-        DATE_START => '2012-09-12',
-        DATE_END => '2012-09-13'
-      },
       '2013A' =>
       {
         YEAR => 2013,
         DATE_START => '2013-05-24',
         DATE_END => '2013-05-24'
       },
-      '2013B' =>
-      {
-        YEAR => 2013,
-        DATE_START => '2013-06-11',
-        DATE_END => '2013-06-11'
-      },
-      '2013C' =>
-      {
-        YEAR => 2013,
-        DATE_START => '2013-06-18',
-        DATE_END => '2013-06-18'
-      },
       '2013D' =>
       {
         YEAR => 2013,
         DATE_START => '2013-06-22',
         DATE_END => '2013-06-25'
-      },
-      '2013E' =>
-      {
-        YEAR => 2013,
-        DATE_START => '2013-06-25',
-        DATE_END => '2013-06-25'
-      },
-      '2013F' =>
-      {
-        YEAR => 2013,
-        DATE_START => '2013-10-06',
-        DATE_END => '2013-10-06'
       },
       '2014A' =>
       {
@@ -343,13 +355,55 @@ my %MEETS_FRIENDLY =
         DATE_START => '2014-06-08',
         DATE_END => '2014-06-08'
       },
+      '2014H' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-11-02',
+        DATE_END => '2014-11-02'
+      },
+      '2015AAAAA' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-05-16',
+        DATE_END => '2015-05-17'
+      },
+      '2015AA' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-03',
+        DATE_END => '2015-06-03'
+      },
+      '2015AAA' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-05',
+        DATE_END => '2015-06-07'
+      },
+      '2015AAAA' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-13',
+        DATE_END => '2015-06-14'
+      },
+      '2015BB' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-27',
+        DATE_END => '2015-06-28'
+      },
+      '2015BBB' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-09-05',
+        DATE_END => '2015-09-06'
+      },
       '2015A' =>
       {
         YEAR => 2015,
         DATE_START => '2015-10-18',
         DATE_END => '2015-10-18'
       },
-      '2015B' =>
+      '2015AAX' =>
       {
         YEAR => 2015,
         DATE_START => '2015-10-30',
@@ -382,8 +436,26 @@ my %MEETS_FRIENDLY =
       '2016D' =>
       {
         YEAR => 2016,
-        DATE_START => '2016-04-17',
+        DATE_START => '2016-04-16',
         DATE_END => '2016-04-18'
+      },
+      '2016DD' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-14',
+        DATE_END => '2016-05-15'
+      },
+      '2016DDD' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-19',
+        DATE_END => '2016-05-19'
+      },
+      '2016EE' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-20',
+        DATE_END => '2016-05-22'
       },
       '2016E' =>
       {
@@ -435,41 +507,17 @@ my %MEETS_FRIENDLY =
         DATE_START => '2004-05-09',
         DATE_END => '2004-05-10'
       },
-      '2007A' =>
-      {
-        YEAR => 2007,
-        DATE_START => '2007-01-24',
-        DATE_END => '2007-01-24'
-      },
       '2007B' =>
       {
         YEAR => 2007,
         DATE_START => '2007-02-22',
         DATE_END => '2007-02-22'
       },
-      '2007C' =>
-      {
-        YEAR => 2007,
-        DATE_START => '2007-03-05',
-        DATE_END => '2007-03-06'
-      },
       '2007D' =>
       {
         YEAR => 2007,
         DATE_START => '2007-04-15',
         DATE_END => '2007-04-15'
-      },
-      '2007E' =>
-      {
-        YEAR => 2007,
-        DATE_START => '2007-04-16',
-        DATE_END => '2007-04-16'
-      },
-      '2007F' =>
-      {
-        YEAR => 2007,
-        DATE_START => '2007-05-05',
-        DATE_END => '2007-05-06'
       },
       '2007G' =>
       {
@@ -531,12 +579,6 @@ my %MEETS_FRIENDLY =
         DATE_START => '2008-04-16',
         DATE_END => '2008-04-16'
       },
-      '2008B' => 
-      {
-        YEAR => 2008,
-        DATE_START => '2008-05-04',
-        DATE_END => '2008-05-04'
-      },
       '2008C' =>
       {
         YEAR => 2008,
@@ -555,17 +597,17 @@ my %MEETS_FRIENDLY =
         DATE_START => '2009-05-13',
         DATE_END => '2009-05-13'
       },
-      '2010A' =>
-      {
-        YEAR => 2010,
-        DATE_START => '2010-03-03',
-        DATE_END => '2010-03-03'
-      },
       '2010B' =>
       {
         YEAR => 2010,
         DATE_START => '2010-05-20',
         DATE_END => '2010-05-22'
+      },
+      '2010C' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-11-27',
+        DATE_END => '2010-11-27'
       },
       '2011A' =>
       {
@@ -578,12 +620,6 @@ my %MEETS_FRIENDLY =
         YEAR => 2011,
         DATE_START => '2011-08-23',
         DATE_END => '2011-08-23'
-      },
-      '2011C' =>
-      {
-        YEAR => 2011,
-        DATE_START => '2011-09-02',
-        DATE_END => '2011-09-03'
       },
       '2011D' =>
       {
@@ -609,6 +645,12 @@ my %MEETS_FRIENDLY =
         DATE_START => '2012-04-20',
         DATE_END => '2012-04-21'
       },
+      '2012D' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-09-12',
+        DATE_END => '2012-09-13'
+      },
       '2013A' =>
       {
         YEAR => 2013,
@@ -621,11 +663,35 @@ my %MEETS_FRIENDLY =
         DATE_START => '2013-01-27',
         DATE_END => '2013-01-27'
       },
+      '2013CCC' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-06-11',
+        DATE_END => '2013-06-11'
+      },
+      '2013CC' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-06-25',
+        DATE_END => '2013-06-25'
+      },
       '2013C' =>
       {
         YEAR => 2013,
         DATE_START => '2013-06-07',
         DATE_END => '2013-06-09'
+      },
+      '2013EE' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-06-18',
+        DATE_END => '2013-06-18'
+      },
+      '2013E' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-10-06',
+        DATE_END => '2013-10-06'
       },
       '2014A' =>
       {
@@ -663,42 +729,6 @@ my %MEETS_FRIENDLY =
         DATE_START => '2015-02-21',
         DATE_END => '2015-02-22'
       },
-      '2015B' =>
-      {
-        YEAR => 2015,
-        DATE_START => '2015-05-16',
-        DATE_END => '2015-05-17'
-      },
-      '2015C' =>
-      {
-        YEAR => 2015,
-        DATE_START => '2015-06-03',
-        DATE_END => '2015-06-03'
-      },
-      '2015D' =>
-      {
-        YEAR => 2015,
-        DATE_START => '2015-06-05',
-        DATE_END => '2015-06-07'
-      },
-      '2015E' =>
-      {
-        YEAR => 2015,
-        DATE_START => '2015-06-13',
-        DATE_END => '2015-06-14'
-      },
-      '2015F' =>
-      {
-        YEAR => 2015,
-        DATE_START => '2015-06-27',
-        DATE_END => '2015-06-28'
-      },
-      '2015G' =>
-      {
-        YEAR => 2015,
-        DATE_START => '2015-09-05',
-        DATE_END => '2015-09-06'
-      },
       '2016A' =>
       {
         YEAR => 2016,
@@ -716,24 +746,6 @@ my %MEETS_FRIENDLY =
         YEAR => 2016,
         DATE_START => '2016-04-19',
         DATE_END => '2016-04-21'
-      },
-      '2016D' =>
-      {
-        YEAR => 2016,
-        DATE_START => '2016-05-14',
-        DATE_END => '2016-05-15'
-      },
-      '2016E' =>
-      {
-        YEAR => 2016,
-        DATE_START => '2016-05-19',
-        DATE_END => '2016-05-19'
-      },
-      '2016F' =>
-      {
-        YEAR => 2016,
-        DATE_START => '2016-05-20',
-        DATE_END => '2016-05-22'
       },
       '2016G' =>
       {
@@ -819,7 +831,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'AuBF',
     COUNTRY => 'Australia',
-    ORIGIN => 'Supranational',
+    ORIGIN => 'Transnational',
     ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -856,6 +868,42 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
+      '2013' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2013A',
+        GENDER => 'Open',
+        AGE => 'U21',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-01-19',
+            DATE_END => '2013-01-20'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2014A',
+        GENDER => 'Open',
+        AGE => 'U21',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-01-18',
+            DATE_END => '2014-01-19'
+          } 
+        }
+      },
       '2016' =>
       {
         ZONE => 'South Pacific',
@@ -915,42 +963,6 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2013' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2013A',
-        GENDER => 'Open',
-        AGE => 'U21',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            major => 'ROUND',
-            DATE_START => '2013-01-19',
-            DATE_END => '2013-01-20'
-          } 
-        }
-      },
-      '2014' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2014A',
-        GENDER => 'Open',
-        AGE => 'U21',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            major => 'ROUND',
-            DATE_START => '2014-01-18',
-            DATE_END => '2014-01-19'
-          } 
-        }
-      },
       '2016' =>
       {
         MEET => 'Practice Match',
@@ -1018,7 +1030,6 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Challenge Match',
-        MEET_TAG => '2014A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1085,7 +1096,7 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
-  'Canada Practice' => 
+  'Canada Friendly' => 
   {
     ORGANIZATION => 'CBF',
     COUNTRY => 'Canada',
@@ -1098,8 +1109,8 @@ my %TOURNAMENTS_FRIENDLY =
     {
       '2015A' =>
       {
-        MEET => 'Practice Match',
-        MEET_TAG => '2015F',
+        MEET => 'Friendly Match',
+        MEET_TAG => '2015BB',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1116,8 +1127,8 @@ my %TOURNAMENTS_FRIENDLY =
       },
       '2015B' =>
       {
-        MEET => 'Practice Match',
-        MEET_TAG => '2015F',
+        MEET => 'Friendly Match',
+        MEET_TAG => '2015BB',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1179,24 +1190,6 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2012' =>
-      {
-        MEET => 'Friendly Match',
-        MEET_TAG => '2012H',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            major => 'SEGMENT',
-            DATE_START => '2012-09-12',
-            DATE_END => '2012-09-13'
-          } 
-        }
-      },
       '2023' =>
       {
         GENDER => 'Open',
@@ -1227,6 +1220,24 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
+      '2012' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2012D',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'SEGMENT',
+            DATE_START => '2012-09-12',
+            DATE_END => '2012-09-13'
+          } 
+        }
+      },
       '2016' =>
       {
         CHAPTERS =>
@@ -1576,7 +1587,26 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2007' =>
+      '2007A' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2007AA',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'MATCH',
+            minor => 'SEGMENT',
+            DATE_START => '2007-03-05',
+            DATE_END => '2007-03-06'
+          } 
+        }
+      },
+      '2007B' =>
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2007A',
@@ -1670,7 +1700,26 @@ my %TOURNAMENTS_FRIENDLY =
       '2015A' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2015B',
+        MEET_TAG => '2015BBB',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-09-05',
+            DATE_END => '2015-09-06'
+          } 
+        }
+      },
+      '2015B' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2015AAX',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1685,7 +1734,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2015B' =>
+      '2015C' =>
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2015C',
@@ -1704,7 +1753,43 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2016' =>
+      '2016A' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2016A',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SEGMENT',
+            DATE_START => '2016-03-26',
+            DATE_END => '2016-03-27'
+          } 
+        }
+      },
+      '2016C' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2016B',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-04-16',
+            DATE_END => '2016-04-17'
+          },
+        }
+      },
+      '2016D' =>
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2016E',
@@ -1847,26 +1932,6 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2007A' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2007C',
-        ORIGIN => 'Supranational',
-        GENDER => 'Women',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            major => 'MATCH',
-            minor => 'SEGMENT',
-            DATE_START => '2007-03-05',
-            DATE_END => '2007-03-06'
-          } 
-        }
-      },
       '2007B' =>
       {
         MEET => 'Practice Match',
@@ -2001,87 +2066,10 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2015' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2015G',
-        ORIGIN => 'National',
-        GENDER => 'Women',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2015-09-05',
-            DATE_END => '2015-09-06'
-          } 
-        }
-      },
-      '2016A' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2016A',
-        ORIGIN => 'National',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            major => 'SEGMENT',
-            DATE_START => '2016-03-26',
-            DATE_END => '2016-03-27'
-          } 
-        }
-      },
-      '2016B' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2016B',
-        ORIGIN => 'National',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            major => 'ROUND',
-            DATE_START => '2016-04-16',
-            DATE_END => '2016-04-17'
-          },
-        }
-      },
-      '2016C' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2016B',
-        ORIGIN => 'National',
-        GENDER => 'Women',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            major => 'ROUND',
-            DATE_START => '2016-04-16',
-            DATE_END => '2016-04-17'
-          },
-        }
-      },
       '2016D' =>
       {
-        MEET => 'Practice Match',
-        MEET_TAG => '2016F',
+        MEET => 'Friendly Match',
+        MEET_TAG => '2016EE',
         ORIGIN => 'National',
         GENDER => 'Open',
         AGE => 'Open',
@@ -2274,12 +2262,12 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
-  'Hong Kong Friendly' => 
+  'Hong Kong Practice' => 
   {
     ORGANIZATION => 'HKCBA',
     COUNTRY => 'Hong Kong',
-    ORIGIN => 'International',
-    ZONE => 'Europe',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
 
@@ -2287,8 +2275,8 @@ my %TOURNAMENTS_FRIENDLY =
     {
       '2013A' =>
       {
-        MEET => 'Friendly Match',
-        MEET_TAG => '2013B',
+        MEET => 'Practice Match',
+        MEET_TAG => '2013CCC',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2305,8 +2293,8 @@ my %TOURNAMENTS_FRIENDLY =
       },
       '2013B' =>
       {
-        MEET => 'Friendly Match',
-        MEET_TAG => '2013C',
+        MEET => 'Practice Match',
+        MEET_TAG => '2013EE',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2323,8 +2311,8 @@ my %TOURNAMENTS_FRIENDLY =
       },
       '2013C' =>
       {
-        MEET => 'Friendly Match',
-        MEET_TAG => '2013E',
+        MEET => 'Practice Match',
+        MEET_TAG => '2013CC',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2470,11 +2458,11 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
-  'Iceland Exhibition' => 
+  'Iceland Friendly' => 
   {
     ORGANIZATION => 'IceBF',
     COUNTRY => 'Iceland',
-    ORIGIN => 'Supranational',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2483,7 +2471,7 @@ my %TOURNAMENTS_FRIENDLY =
     {
       '2005' =>
       {
-        MEET => 'Exhibition Match',
+        MEET => 'Friendly Match',
         MEET_TAG => '2005A',
         GENDER => 'Open',
         AGE => 'Open',
@@ -2498,20 +2486,6 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-    }
-  },
-
-  'Iceland Friendly' => 
-  {
-    ORGANIZATION => 'IceBF',
-    COUNTRY => 'Iceland',
-    ORIGIN => 'International',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-
-    EDITIONS =>
-    {
       '2023' =>
       {
         CHAPTERS =>
@@ -2531,6 +2505,7 @@ my %TOURNAMENTS_FRIENDLY =
   'India Exhibition' => 
   {
     ORGANIZATION => 'BFI',
+    ORIGIN => 'Transnational',
     COUNTRY => 'India',
     ZONE => 'Asia Pacific',
     FORM => 'Teams',
@@ -2540,7 +2515,8 @@ my %TOURNAMENTS_FRIENDLY =
     {
       '2023A' =>
       {
-        ORIGIN => 'Transnational',
+        MEET => 'Exhibition Match',
+        MEET_TAG => '2023A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2554,7 +2530,8 @@ my %TOURNAMENTS_FRIENDLY =
       },
       '2023B' =>
       {
-        ORIGIN => 'Transnational',
+        MEET => 'Exhibition Match',
+        MEET_TAG => '2023B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2686,25 +2663,6 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2014B' =>
-      {
-        ORIGIN => 'International',
-        MEET => 'Friendly Match',
-        MEET_TAG => '2014G',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            major => 'SEGMENT',
-            DATE_START => '2014-06-08',
-            DATE_END => '2014-06-08'
-          } 
-        }
-      },
       '2015A' =>
       {
         ORIGIN => 'Transnational',
@@ -2792,6 +2750,39 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Netherlands Challenge' => 
+  {
+    ORGANIZATION => 'NBB',
+    COUNTRY => 'Netherlands',
+    ORIGIN => 'Transnational',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2010A' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2010B',
+        CLUB => "'t Onstein",
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-05-20',
+            DATE_END => '2010-05-22'
+          } 
+        }
+      },
+    }
+  },
+
   'Netherlands Friendly' => 
   {
     ORGANIZATION => 'NBB',
@@ -2806,6 +2797,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2005A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2005B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2823,6 +2815,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2005B' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2005C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2840,6 +2833,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2005C' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2005D',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -2893,6 +2887,63 @@ my %TOURNAMENTS_FRIENDLY =
       '2007A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2007AAA',
+        CLUB => "'t Onstein",
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-01-24',
+            DATE_END => '2007-01-24'
+          } 
+        }
+      },
+      '2007B' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2007AB',
+        CLUB => "'t Onstein",
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT',
+            DATE_START => '2007-04-16',
+            DATE_END => '2007-04-16'
+          } 
+        }
+      },
+      '2007C' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2007AC',
+        CLUB => "'t Onstein",
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2007-05-05',
+            DATE_END => '2007-05-06'
+          } 
+        }
+      },
+      '2007D' =>
+      {
+        MEET => 'Friendly Match',
         MEET_TAG => '2007B',
         CLUB => "'t Onstein",
         GENDER => 'Open',
@@ -2909,7 +2960,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2007B' =>
+      '2007E' =>
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2007C',
@@ -2928,7 +2979,64 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2007F' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2007M',
+        CLUB => "'t Onstein",
+        GENDER => 'Open',
+        AGE => 'U21',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-09-02',
+            DATE_END => '2007-09-02'
+          } 
+        }
+      },
+      '2007G' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2007O',
+        CLUB => "'t Onstein",
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT',
+            DATE_START => '2007-12-10',
+            DATE_END => '2007-12-10'
+          } 
+        }
+      },
       '2008A' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2008AA',
+        CLUB => "'t Onstein",
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'MATCH',
+            DATE_START => '2008-05-04',
+            DATE_END => '2008-05-04'
+          } 
+        }
+      },
+      '2008B' =>
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2008A',
@@ -3078,6 +3186,24 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2011E' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2011DA',
+        GENDER => 'Open',
+        AGE => 'Seniors',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-09-02',
+            DATE_END => '2011-09-03'
+          } 
+        }
+      },
       '2012A' =>
       {
         MEET => 'Friendly Match',
@@ -3115,6 +3241,24 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2013' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2013C',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-06-07',
+            DATE_END => '2013-06-09'
+          } 
+        }
+      },
       '2014A' =>
       {
         MEET => 'Friendly Match',
@@ -3129,6 +3273,60 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'SESSION',
             DATE_START => '2014-02-14',
             DATE_END => '2014-02-15'
+          } 
+        }
+      },
+      '2014B' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2014E',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-05-16',
+            DATE_END => '2014-05-18'
+          } 
+        }
+      },
+      '2015A' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2015AAAAA',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-05-16',
+            DATE_END => '2015-05-17'
+          } 
+        }
+      },
+      '2015B' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2015AAA',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-06-05',
+            DATE_END => '2015-06-07'
           } 
         }
       },
@@ -3200,7 +3398,7 @@ my %TOURNAMENTS_FRIENDLY =
           {
             YEAR => 2016,
             major => 'ROUND',
-            DATE_START => '2016-04-17',
+            DATE_START => '2016-04-16',
             DATE_END => '2016-04-17'
           } 
         }
@@ -3221,6 +3419,25 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2016-04-18',
             DATE_END => '2016-04-18'
+          } 
+        }
+      },
+      '2016F' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2016DDD',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2016-05-19',
+            DATE_END => '2016-05-19'
           } 
         }
       },
@@ -3631,24 +3848,6 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2007A' =>
-      {
-        MEET => 'Practice Match',
-        CLUB => "'t Onstein",
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            major => 'ROUND',
-            DATE_START => '2007-01-24',
-            DATE_END => '2007-01-24'
-          } 
-        }
-      },
       '2007B' =>
       {
         MEET => 'Practice Match',
@@ -3663,138 +3862,6 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'SEGMENT',
             DATE_START => '2007-02-22',
             DATE_END => '2007-02-22'
-          } 
-        }
-      },
-      '2007C' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2007E',
-        CLUB => "'t Onstein",
-        GENDER => 'Women',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            major => 'SEGMENT',
-            DATE_START => '2007-04-16',
-            DATE_END => '2007-04-16'
-          } 
-        }
-      },
-      '2007D' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2007F',
-        CLUB => "'t Onstein",
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            major => 'SEGMENT|ROUND',
-            DATE_START => '2007-05-05',
-            DATE_END => '2007-05-06'
-          } 
-        }
-      },
-      '2007E' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2007M',
-        CLUB => "'t Onstein",
-        GENDER => 'Open',
-        AGE => 'U21',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            major => 'ROUND',
-            DATE_START => '2007-09-02',
-            DATE_END => '2007-09-02'
-          } 
-        }
-      },
-      '2007F' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2007O',
-        CLUB => "'t Onstein",
-        GENDER => 'Women',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            major => 'SEGMENT',
-            DATE_START => '2007-12-10',
-            DATE_END => '2007-12-10'
-          } 
-        }
-      },
-      '2008' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2008B',
-        CLUB => "'t Onstein",
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2008,
-            major => 'MATCH',
-            DATE_START => '2008-05-04',
-            DATE_END => '2008-05-04'
-          } 
-        }
-      },
-      '2010A' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2010B',
-        CLUB => "'t Onstein",
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            major => 'ROUND',
-            DATE_START => '2010-05-20',
-            DATE_END => '2010-05-22'
-          } 
-        }
-      },
-      '2011A' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2011C',
-        GENDER => 'Open',
-        AGE => 'Seniors',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            major => 'ROUND',
-            DATE_START => '2011-09-02',
-            DATE_END => '2011-09-03'
           } 
         }
       },
@@ -3816,44 +3883,6 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2012' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2012C',
-        CLUB => "'t Onstein",
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            major => 'ROUND',
-            DATE_START => '2012-04-20',
-            DATE_END => '2012-04-21'
-          } 
-        }
-      },
-      '2013' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2013C',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            major => 'ROUND',
-            minor => 'TABLE',
-            DATE_START => '2013-06-07',
-            DATE_END => '2013-06-09'
-          } 
-        }
-      },
       '2014' =>
       {
         MEET => 'Practice Match',
@@ -3869,61 +3898,6 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2014-05-16',
             DATE_END => '2014-05-18'
-          } 
-        }
-      },
-      '2015A' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2015B',
-        GENDER => 'Women',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            major => 'ROUND',
-            DATE_START => '2015-05-16',
-            DATE_END => '2015-05-17'
-          } 
-        }
-      },
-      '2015B' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2015D',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            major => 'ROUND',
-            DATE_START => '2015-06-05',
-            DATE_END => '2015-06-07'
-          } 
-        }
-      },
-      '2016' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2016E',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            major => 'ROUND',
-            minor => 'SEGMENT',
-            DATE_START => '2016-05-19',
-            DATE_END => '2016-05-19'
           } 
         }
       },
@@ -4014,7 +3988,7 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
-  'Online Friendly' => 
+  'Online Practice' => 
   {
     ORGANIZATION => 'BrBaOn',
     ORIGIN => 'Transnational',
@@ -4026,8 +4000,8 @@ my %TOURNAMENTS_FRIENDLY =
     {
       '2013' =>
       {
-        MEET => 'Friendly Match',
-        MEET_TAG => '2013F',
+        MEET => 'Practice Match',
+        MEET_TAG => '2013E',
         SPONSOR => 'Bridge Winners',
         GENDER => 'Open',
         AGE => 'Open',
@@ -4057,6 +4031,23 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
+      '2004' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            major => 'SESSION',
+            DATE_START => '2004-05-09',
+            DATE_END => '2004-05-10'
+          } 
+        }
+      },
       '2006' =>
       {
         MEET => 'Friendly Match',
@@ -4075,23 +4066,6 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2012' =>
-      {
-        MEET => 'Friendly Match',
-        MEET_TAG => '2012A',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            DATE_START => '2012-02-11',
-            DATE_END => '2012-02-11'
-          } 
-        }
-      },
       '2013' =>
       {
         MEET => 'Friendly Match',
@@ -4107,6 +4081,24 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'SEGMENT',
             DATE_START => '2013-05-24',
             DATE_END => '2013-05-24'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2015AA',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SEGMENT',
+            DATE_START => '2015-06-03',
+            DATE_END => '2015-06-03'
           } 
         }
       },
@@ -4171,9 +4163,10 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2004' =>
+      '2012' =>
       {
-        MEET => 'Practice Match',
+        MEET => 'Friendly Match',
+        MEET_TAG => '2012A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4181,10 +4174,9 @@ my %TOURNAMENTS_FRIENDLY =
         {
           'SINGLE' => 
           {
-            YEAR => 2004,
-            major => 'SESSION',
-            DATE_START => '2004-05-09',
-            DATE_END => '2004-05-10'
+            YEAR => 2012,
+            DATE_START => '2012-02-11',
+            DATE_END => '2012-02-11'
           } 
         }
       },
@@ -4203,24 +4195,6 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'MATCH',
             DATE_START => '2014-07-08',
             DATE_END => '2014-07-08'
-          } 
-        }
-      },
-      '2015' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2015C',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            major => 'SEGMENT',
-            DATE_START => '2015-06-03',
-            DATE_END => '2015-06-03'
           } 
         }
       },
@@ -4298,6 +4272,24 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2015' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2015AAAA',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-06-13',
+            DATE_END => '2015-06-14'
+          } 
+        }
+      },
     }
   },
 
@@ -4312,10 +4304,10 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2015' =>
+      '2014' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2015E',
+        MEET_TAG => '2014B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4323,10 +4315,10 @@ my %TOURNAMENTS_FRIENDLY =
         {
           'SINGLE' => 
           {
-            YEAR => 2015,
+            YEAR => 2014,
             major => 'ROUND',
-            DATE_START => '2015-06-13',
-            DATE_END => '2015-06-14'
+            DATE_START => '2014-05-16',
+            DATE_END => '2014-05-18'
           } 
         }
       },
@@ -4420,7 +4412,6 @@ my %TOURNAMENTS_FRIENDLY =
       '2005' =>
       {
         MEET => 'Exhibition Match',
-        MEET_TAG => '2005B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4452,7 +4443,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2010D',
+        MEET_TAG => '2010AA',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4461,9 +4452,8 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2010,
-            major => 'SESSION',
-            DATE_START => '2010-11-27',
-            DATE_END => '2010-11-27'
+            DATE_START => '2010-03-03',
+            DATE_END => '2010-03-03'
           } 
         }
       },
@@ -4502,7 +4492,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2010A',
+        MEET_TAG => '2010C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4511,8 +4501,9 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2010,
-            DATE_START => '2010-03-03',
-            DATE_END => '2010-03-03'
+            major => 'SESSION',
+            DATE_START => '2010-11-27',
+            DATE_END => '2010-11-27'
           } 
         }
       },
@@ -4547,24 +4538,6 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2014' =>
-      {
-        MEET => 'Challenge Match',
-        MEET_TAG => '2014B',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            major => 'SEGMENT|ROUND',
-            DATE_START => '2014-11-02',
-            DATE_END => '2014-11-02'
-          } 
-        }
-      },
     }
   },
 
@@ -4579,10 +4552,10 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2014' =>
+      '2014B' =>
       {
         MEET => 'Friendly Match',
-        MEET_TAG => '2014E',
+        MEET_TAG => '2014H',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -4591,9 +4564,9 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'ROUND',
-            DATE_START => '2014-05-16',
-            DATE_END => '2014-05-18'
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2014-11-02',
+            DATE_END => '2014-11-02'
           } 
         }
       },
@@ -4647,7 +4620,25 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2012' =>
+      '2012A' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2012B',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-04-06',
+            DATE_END => '2012-04-07'
+          } 
+        }
+      },
+      '2012B' =>
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2012F',
@@ -4713,24 +4704,6 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2012' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2012B',
-        GENDER => 'Women',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            major => 'ROUND',
-            DATE_START => '2012-04-06',
-            DATE_END => '2012-04-07'
-          } 
-        }
-      },
       '2017A' =>
       {
         GENDER => 'Open',
@@ -4875,7 +4848,25 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2018' =>
+      '2016' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2016DD',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-05-14',
+            DATE_END => '2016-05-15'
+          } 
+        }
+      },
+      '2018A' =>
       {
         MEET => 'Practice Match',
         MEET_TAG => '2018A',
@@ -4888,6 +4879,24 @@ my %TOURNAMENTS_FRIENDLY =
           {
             YEAR => 2018,
             major => 'ROUND',
+            DATE_START => '2018-05-11',
+            DATE_END => '2018-05-13'
+          } 
+        }
+      },
+      '2018B' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2018A',
+        GENDER => 'Open',
+        AGE => 'Seniors',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND|MATCH',
             DATE_START => '2018-05-11',
             DATE_END => '2018-05-13'
           } 
@@ -4923,24 +4932,6 @@ my %TOURNAMENTS_FRIENDLY =
             DATE_START => '2016-04-19',
             DATE_END => '2016-04-21'
           },
-        }
-      },
-      '2016B' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2016D',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            major => 'SESSION',
-            DATE_START => '2016-05-14',
-            DATE_END => '2016-05-15'
-          } 
         }
       },
     }
