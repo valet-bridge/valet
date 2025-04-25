@@ -19,6 +19,7 @@ my @MULTI_WORDS =
   'Friendly Match',
   'Friendly Pairs',
   'Practice Match',
+  'Practice Pairs',
 );
 
 my %MULTI_TYPOS =
