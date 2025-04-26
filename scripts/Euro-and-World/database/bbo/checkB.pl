@@ -22,14 +22,20 @@ use ParseT;
 use EntryT;
 
 my %PRACTICE_OK = (
+  'ASEAN University Teams|2024' => 1,
+  'ASEAN Youngsters Club Teams|2024' => 1,
+  'Asian University Championship|2009' => 1,
   'Australia Challenge|2007' => 1,
   'Australia Practice|2016' => 1,
+  'Bolivian Open Teams|2004' => 1,
+  'Bolivian Open Teams|2023' => 1,
   'Chile Practice|2009' => 1,
   'Commonwealth Nations Bridge Championships|2018' => 1,
   'Danish Open Team Trials|2010' => 1,
   'Denmark Practice|2013' => 1,
   'Denmark Practice|2014' => 1,
   'Denmark Practice|2015' => 1,
+  'European University Team Championship|2016' => 1,
   'France Practice|2007E' => 1,
   'France Practice|2008B' => 1,
   'France Practice|2017' => 1,
@@ -39,13 +45,19 @@ my %PRACTICE_OK = (
   'Israel Festival Open Teams|2011' => 1,
   'Israel Practice|2019' => 1,
   'Italy Practice|2014' => 1,
+  "Kepri Governor's Cup|2005" => 1,
+  'Pan Arab Inter-Club Championship|2013' => 1,
+  'Pan Arab Inter-Club Championship|2014' => 1,
   'Poland Practice|2017' => 1,
+  'Rosenblum Cup|1998' => 1,
   'Russia Practice|2020' => 1,
   'Russia Practice|2021' => 1,
   'Sweden Practice|2017B' => 1,
   'Sweden Practice|2022' => 1,
   'Swedish Open Team Trials|2019' => 1,
   'Taiwan Practice|2007' => 1,
+  'World Open Junior Teams|2011' => 1,
+  'World Transnational Women Junior Teams|2024' => 1
 );
 
 

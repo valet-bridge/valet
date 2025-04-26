@@ -724,6 +724,7 @@ my %ZONE_COMPATIBILITY =
     Macau => 1,
     Malaysia => 1,
     Mongolia => 1,
+    'New Caledonia' => 1,
     'New Zealand' => 1,
     Pakistan => 1,
     Palestine => 1,

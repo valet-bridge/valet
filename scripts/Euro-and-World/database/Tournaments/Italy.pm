@@ -447,7 +447,7 @@ my %TOURNAMENTS_ITALY =
   'Altea Cup' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

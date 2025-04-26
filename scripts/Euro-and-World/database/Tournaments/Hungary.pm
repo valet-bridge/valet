@@ -29,7 +29,7 @@ my %TOURNAMENTS_HUNGARY =
   'Balaton Invitational Teams',
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     CITY => 'Balaton',
     FORM => 'Teams',
     SCORING => 'IMP',

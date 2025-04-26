@@ -257,6 +257,7 @@ my %TOURNAMENTS_MIDDLEEAST =
 
   'Arab Nations Women Teams' => 
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -267,7 +268,6 @@ my %TOURNAMENTS_MIDDLEEAST =
       '2024' =>
       {
         MEET => 'Arab Nations Championship',
-        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 

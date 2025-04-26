@@ -1975,6 +1975,7 @@ my %TOURNAMENTS_ISRAEL =
       '2009' =>
       {
         MEET => 'Red Sea International Festival',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1991,6 +1992,7 @@ my %TOURNAMENTS_ISRAEL =
       '2015' =>
       {
         MEET => 'Red Sea International Festival',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 

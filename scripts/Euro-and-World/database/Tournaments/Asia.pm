@@ -515,6 +515,7 @@ my %TOURNAMENTS_ASIA =
 (
   'APBF Girl Teams' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -525,7 +526,6 @@ my %TOURNAMENTS_ASIA =
       '2013' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -542,7 +542,6 @@ my %TOURNAMENTS_ASIA =
       '2015' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -559,7 +558,6 @@ my %TOURNAMENTS_ASIA =
       '2017' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -584,7 +582,6 @@ my %TOURNAMENTS_ASIA =
       '2018' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -617,7 +614,6 @@ my %TOURNAMENTS_ASIA =
       '2019' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 

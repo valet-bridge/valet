@@ -33,7 +33,7 @@ my %COUNTRY_TO_REGION =
     'suzhou taihu', 'tianya', 'tinglin', 'wujin', 'xizang', 'xinjiang', 
     'yongjia', 'yongjiang', 'yunnan', 'zhejiang', 'zhongshan'],
   Denmark => ['bogø', 'bornholm', 'fjends', 'midtsjælland', 'sydvest'],
-  France => ['corsica', 'new caledonia'],
+  France => ['corsica'],
   Greece => ['crete', 'rhodes','thassos'],
   Iceland => ['eyjafjallajokull', 'kaldbakur'],
   Hungary => ['hegyvidék'],

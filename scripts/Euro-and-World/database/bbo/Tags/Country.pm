@@ -24,6 +24,7 @@ my @MULTI_WORDS =
   'Hong Kong',
   'Isle of Man',
   'Netherlands Antilles',
+  'New Caledonia',
   'New Zealand',
   'North America',
   'North Macedonia',

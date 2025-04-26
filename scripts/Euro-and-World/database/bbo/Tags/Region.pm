@@ -87,7 +87,6 @@ my @MULTI_WORDS =
   'Nakhon Sawan',
   'Nakhon Si Thammarat',
   'National Capital Region',
-  'New Caledonia',
   'New South Wales',
   'Nord Trøndelag',
   'Nord-Norge Omegn',
