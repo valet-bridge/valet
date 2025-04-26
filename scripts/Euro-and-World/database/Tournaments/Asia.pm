@@ -22,7 +22,6 @@ my %MEETS_ASIA =
   {
     # https://www.hkcba.org/apbf.php
     %GLOBAL,
-    ORIGIN => 'Transnational',
 
     EDITIONS =>
     {
@@ -362,7 +361,6 @@ my %MEETS_ASIA =
   'Asia Cup' =>
   {
     %GLOBAL,
-    ORIGIN => 'Transnational',
 
     EDITIONS =>
     {
@@ -655,6 +653,7 @@ my %TOURNAMENTS_ASIA =
 
   'APBF Junior Mixed Teams' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -665,7 +664,6 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -711,6 +709,7 @@ my %TOURNAMENTS_ASIA =
       '2010' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -734,6 +733,7 @@ my %TOURNAMENTS_ASIA =
       '2011' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -758,6 +758,7 @@ my %TOURNAMENTS_ASIA =
       '2012' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -906,7 +907,7 @@ my %TOURNAMENTS_ASIA =
       '2019' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'Transnational',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1013,6 +1014,7 @@ my %TOURNAMENTS_ASIA =
       '2009' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1026,6 +1028,7 @@ my %TOURNAMENTS_ASIA =
       '2011' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1039,6 +1042,7 @@ my %TOURNAMENTS_ASIA =
       '2013' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1052,6 +1056,7 @@ my %TOURNAMENTS_ASIA =
       '2015' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1065,6 +1070,7 @@ my %TOURNAMENTS_ASIA =
       '2019' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1104,6 +1110,7 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1138,6 +1145,7 @@ my %TOURNAMENTS_ASIA =
       '2019' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' =>
@@ -1165,6 +1173,7 @@ my %TOURNAMENTS_ASIA =
       '2005' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1206,6 +1215,7 @@ my %TOURNAMENTS_ASIA =
       '2006' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1222,6 +1232,7 @@ my %TOURNAMENTS_ASIA =
       '2007' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1256,6 +1267,7 @@ my %TOURNAMENTS_ASIA =
       {
         # Suspect -- PABF rather than APBF?
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1287,6 +1299,7 @@ my %TOURNAMENTS_ASIA =
       '2009' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1311,6 +1324,7 @@ my %TOURNAMENTS_ASIA =
       '2010' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1326,6 +1340,7 @@ my %TOURNAMENTS_ASIA =
       '2011' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1351,6 +1366,7 @@ my %TOURNAMENTS_ASIA =
       '2012' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1382,6 +1398,7 @@ my %TOURNAMENTS_ASIA =
       '2013' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1414,6 +1431,7 @@ my %TOURNAMENTS_ASIA =
       '2015' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1439,6 +1457,7 @@ my %TOURNAMENTS_ASIA =
       '2017' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1480,6 +1499,7 @@ my %TOURNAMENTS_ASIA =
       '2019' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1511,6 +1531,7 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1553,6 +1574,7 @@ my %TOURNAMENTS_ASIA =
       '2007' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1581,6 +1603,7 @@ my %TOURNAMENTS_ASIA =
       '2006' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1597,6 +1620,7 @@ my %TOURNAMENTS_ASIA =
       '2007' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1623,6 +1647,7 @@ my %TOURNAMENTS_ASIA =
       {
         # Suspect -- PABF rather than APBF?
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1646,6 +1671,7 @@ my %TOURNAMENTS_ASIA =
       '2009' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1662,6 +1688,7 @@ my %TOURNAMENTS_ASIA =
       '2010' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1677,6 +1704,7 @@ my %TOURNAMENTS_ASIA =
       '2011' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1702,6 +1730,7 @@ my %TOURNAMENTS_ASIA =
       '2012' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1733,6 +1762,7 @@ my %TOURNAMENTS_ASIA =
       '2013' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1757,6 +1787,7 @@ my %TOURNAMENTS_ASIA =
       '2015' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1782,6 +1813,7 @@ my %TOURNAMENTS_ASIA =
       '2017' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1815,6 +1847,7 @@ my %TOURNAMENTS_ASIA =
       '2019' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1846,6 +1879,7 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1898,6 +1932,7 @@ my %TOURNAMENTS_ASIA =
 
   'APBF U26 Women Teams' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1908,7 +1943,6 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1966,6 +2000,7 @@ my %TOURNAMENTS_ASIA =
       '2006' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1982,6 +2017,7 @@ my %TOURNAMENTS_ASIA =
       '2007' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2015,6 +2051,7 @@ my %TOURNAMENTS_ASIA =
       {
         # Suspect -- PABF rather than APBF?
         MEET => 'APBF Championships',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -2038,6 +2075,7 @@ my %TOURNAMENTS_ASIA =
       '2009' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2062,6 +2100,7 @@ my %TOURNAMENTS_ASIA =
       '2010' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2076,6 +2115,7 @@ my %TOURNAMENTS_ASIA =
       '2011' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2100,6 +2140,7 @@ my %TOURNAMENTS_ASIA =
       '2012' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2131,6 +2172,7 @@ my %TOURNAMENTS_ASIA =
       '2013' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2147,6 +2189,7 @@ my %TOURNAMENTS_ASIA =
       '2015' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2172,6 +2215,7 @@ my %TOURNAMENTS_ASIA =
       '2017' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2213,6 +2257,7 @@ my %TOURNAMENTS_ASIA =
       '2019' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2260,6 +2305,7 @@ my %TOURNAMENTS_ASIA =
       '2023' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2293,6 +2339,7 @@ my %TOURNAMENTS_ASIA =
       '2007' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2310,6 +2357,7 @@ my %TOURNAMENTS_ASIA =
       {
         # Suspect -- PABF rather than APBF?
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2333,6 +2381,7 @@ my %TOURNAMENTS_ASIA =
       '2010' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2348,6 +2397,7 @@ my %TOURNAMENTS_ASIA =
       '2011' =>
       {
         MEET => 'APBF Championships',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -3228,6 +3278,7 @@ my %TOURNAMENTS_ASIA =
 
   'Asia Junior Teams Cup' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3316,6 +3367,7 @@ my %TOURNAMENTS_ASIA =
 
   'Asia Mixed Teams Cup' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -3413,7 +3465,7 @@ my %TOURNAMENTS_ASIA =
       {
         MEET => 'South East Asian Championship',
         MEET_TAG => 2017,
-        ORIGIN => 'Transnational',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' =>
@@ -3458,6 +3510,7 @@ my %TOURNAMENTS_ASIA =
 
   'Asia Open Teams Cup' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3589,6 +3642,7 @@ my %TOURNAMENTS_ASIA =
 
   'Asia Senior Teams Cup' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3704,6 +3758,7 @@ my %TOURNAMENTS_ASIA =
 
   'Asia Women Teams Cup' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

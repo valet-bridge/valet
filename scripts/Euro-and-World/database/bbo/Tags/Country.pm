@@ -140,7 +140,7 @@ my @SINGLE_WORDS = qw(
   Reunion Romania Russia
   Scotland Serbia Singapore Slovenia Slovakia Spain Sweden Switzerland Syria
   Taiwan Tanzania Thailand Tunisia Turkey Turkmenistan
-  Uganda Ukraine Uruguay USA
+  Uganda Ukraine Universal Uruguay USA
   Venezuela
   Wales
   Yugoslavia

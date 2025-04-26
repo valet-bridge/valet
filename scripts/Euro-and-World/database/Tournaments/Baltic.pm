@@ -1131,6 +1131,7 @@ my %TOURNAMENTS_BALTIC =
   'Latvia Invites' =>
   {
     ORGANIZATION => 'LaBF',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     COUNTRY => 'Latvia',
     FORM => 'Teams',

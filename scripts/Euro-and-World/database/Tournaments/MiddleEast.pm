@@ -21,7 +21,6 @@ my %MEETS_MIDDLEEAST =
   'Arab Nations Championship' =>
   {
     %GLOBAL,
-    ORIGIN => 'Transnational',
 
     EDITIONS =>
     {
@@ -191,6 +190,7 @@ my %TOURNAMENTS_MIDDLEEAST =
 (
   'Arab Nations Open Teams' => 
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -267,6 +267,7 @@ my %TOURNAMENTS_MIDDLEEAST =
       '2024' =>
       {
         MEET => 'Arab Nations Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 

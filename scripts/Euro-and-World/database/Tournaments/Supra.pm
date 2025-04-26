@@ -2103,6 +2103,7 @@ my %TOURNAMENTS_SUPRA =
 
   'Neighbor Challenge Open Teams' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2201,6 +2202,7 @@ my %TOURNAMENTS_SUPRA =
 
   'Neighbor Challenge Women Teams' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -2389,6 +2391,7 @@ my %TOURNAMENTS_SUPRA =
 
   'Paris Youth Open Teams' =>
   {
+    ORIGIN => 'International',
     CITY => 'Paris',
     COUNTRY => 'France',
     FORM => 'Teams',

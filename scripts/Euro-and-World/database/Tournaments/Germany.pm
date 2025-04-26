@@ -420,7 +420,6 @@ my %TOURNAMENTS_GERMANY =
     CLUB => 'BC Bonn',
     COUNTRY => 'Germany',
     CITY => 'Bonn',
-    ORIGIN => 'Supranational',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -432,6 +431,7 @@ my %TOURNAMENTS_GERMANY =
       '2004' =>
       {
         ORDINAL => 19,
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' =>
@@ -456,6 +456,7 @@ my %TOURNAMENTS_GERMANY =
       '2005' =>
       {
         ORDINAL => 20,
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' =>
@@ -479,6 +480,7 @@ my %TOURNAMENTS_GERMANY =
       '2006' =>
       {
         ORDINAL => 21,
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' =>
@@ -512,6 +514,7 @@ my %TOURNAMENTS_GERMANY =
       '2007' =>
       {
         ORDINAL => 22,
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' =>
@@ -536,6 +539,7 @@ my %TOURNAMENTS_GERMANY =
       '2008' =>
       {
         ORDINAL => 23,
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' =>
@@ -560,6 +564,7 @@ my %TOURNAMENTS_GERMANY =
       '2009' =>
       {
         ORDINAL => 24,
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' =>
@@ -584,6 +589,7 @@ my %TOURNAMENTS_GERMANY =
       '2010' =>
       {
         ORDINAL => 25,
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' =>
@@ -608,6 +614,7 @@ my %TOURNAMENTS_GERMANY =
       '2011' =>
       {
         ORDINAL => 26,
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' =>
@@ -633,6 +640,7 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=222&site=0&kl=0
         ORDINAL => 27,
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' =>

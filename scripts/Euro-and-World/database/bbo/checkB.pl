@@ -59,6 +59,8 @@ $parseT->init_links($debug_division, $division_flag);
 open my $fh, '<', $file or die "Cannot read tfile: $!";
 
 my $entryT = EntryT->new();
+my %origin_stats;
+
 while ($entryT->read($fh))
 {
   $entryT->format();
@@ -100,10 +102,15 @@ while ($entryT->read($fh))
 
   $entryT->prune_using($header_entry, $chapter_entry);
 
-  $entryT->check_fields($header_entry, $chapter_entry);
+  $entryT->check_fields($header_entry, $chapter_entry,
+    $edition, \%origin_stats);
 }
 
 close $fh;
+
+find_likely_internationals(\%origin_stats);
+
+
 exit;
 
 
@@ -130,3 +137,25 @@ sub set_linksT
 }
 
 
+
+sub find_likely_internationals
+{
+  my $origin_stats = pop;
+
+  for my $tname (sort keys %$origin_stats)
+  {
+    for my $edition (sort keys %{$origin_stats->{$tname}})
+    {
+      my $nationals = $origin_stats->{$tname}{$edition}[0] // 0;
+      next if $nationals == 0;
+
+      my $others = $origin_stats->{$tname}{$edition}[1] // 0;
+
+      if ($others == 0 || $nationals >= 4 * $others)
+      {
+        print "Candidate for International $tname, $edition " .
+          "($nationals vs $others)\n";
+      }
+    }
+  }
+}

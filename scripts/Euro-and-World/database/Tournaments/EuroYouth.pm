@@ -1767,7 +1767,7 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2024' =>
       {
         MEET => 'European Youth Team Championships',
-        ORIGIN => 'Transnational',
+        ORIGIN => 'International',
         CHAPTERS => 
         {
           'C0' => 
@@ -1820,6 +1820,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U31 Open Teams',
   {
+    ORIGIN => 'International',
     GENDER => 'Open',
     AGE => 'U31',
 
@@ -1828,7 +1829,6 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2022' =>
       {
         MEET => 'European Youth Team Championships',
-        ORIGIN => 'International',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -1845,7 +1845,6 @@ my %TOURNAMENTS_EURO_YOUTH =
       '2024' =>
       {
         MEET => 'European Youth Team Championships',
-        ORIGIN => 'Transnational',
         CHAPTERS => 
         {
           'SINGLE' => 

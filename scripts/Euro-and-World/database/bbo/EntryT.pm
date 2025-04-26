@@ -1169,9 +1169,27 @@ sub check_gender_age
 }
 
 
+sub accumulate_origin_stats
+{
+  my ($self, $tname, $edition, $origin_stats) = @_;
+
+  for my $team (qw(TEAM1 TEAM2))
+  {
+    if (exists $self->{$team}{COUNTRY})
+    {
+      $origin_stats->{$tname}{$edition}[0]++;
+    }
+    else
+    {
+      $origin_stats->{$tname}{$edition}[1]++;
+    }
+  }
+}
+
+
 sub check_fields
 {
-  my ($self, $header, $chapter) = @_;
+  my ($self, $header, $chapter, $edition, $origin_stats) = @_;
 
   if (exists $header->{ORIGIN} &&
       OGAcorr::origin_checkable($header->{ORIGIN}))
@@ -1185,6 +1203,13 @@ sub check_fields
   }
 
   $self->check_gender_age($header, $chapter);
+
+  if (! exists $header->{ORIGIN}  ||
+      $header->{ORIGIN} ne 'International')
+  {
+    $self->accumulate_origin_stats($header->{TOURNAMENT_NAME}, $edition,
+      $origin_stats);
+  }
 }
 
 

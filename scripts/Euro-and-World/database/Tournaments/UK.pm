@@ -3767,7 +3767,7 @@ my %TOURNAMENTS_UK =
   {
     # https://www.ebu.co.uk/internationals/peggy-bayer-trophy-home-internationals-history
     ORGANIZATION => 'EBU',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',

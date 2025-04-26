@@ -204,7 +204,7 @@ my %TOURNAMENTS_NETHERLANDS =
   'Carrousel Cup',
   {
     %GLOBAL,
-    ORIGIN => 'Supranational',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -751,7 +751,6 @@ my %TOURNAMENTS_NETHERLANDS =
   {
     %GLOBAL,
     SPONSOR => 'Forbo',
-    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -762,6 +761,7 @@ my %TOURNAMENTS_NETHERLANDS =
       '1997' =>
       {
         ORDINAL => 5,
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -776,6 +776,7 @@ my %TOURNAMENTS_NETHERLANDS =
       '1998' =>
       {
         ORDINAL => 6,
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -789,6 +790,7 @@ my %TOURNAMENTS_NETHERLANDS =
       '1999' =>
       {
         ORDINAL => 7,
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -804,6 +806,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2000' =>
       {
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -818,6 +821,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2001' =>
       {
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -832,6 +836,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2002' =>
       {
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 

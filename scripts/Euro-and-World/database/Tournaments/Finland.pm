@@ -24,7 +24,6 @@ my %MEETS_FINLAND =
   'Jyväskylä Easter Bridge Festival' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
     CITY => 'Jyväskylä',
 
     EDITIONS =>
@@ -1339,6 +1338,7 @@ my %TOURNAMENTS_FINLAND =
       '2018' =>
       {
         MEET => 'Jyväskylä Easter Bridge Festival',
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'C0' => 
@@ -1364,6 +1364,7 @@ my %TOURNAMENTS_FINLAND =
       '2005' =>
       {
         MEET => 'Jyväskylä Easter Bridge Festival',
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1378,6 +1379,7 @@ my %TOURNAMENTS_FINLAND =
       '2008' =>
       {
         MEET => 'Jyväskylä Easter Bridge Festival',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1391,6 +1393,7 @@ my %TOURNAMENTS_FINLAND =
       '2009' =>
       {
         MEET => 'Jyväskylä Easter Bridge Festival',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 

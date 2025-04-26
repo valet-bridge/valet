@@ -220,7 +220,6 @@ my %MEETS_SOUTHAMERICA =
   'South American Zonal Trials' =>
   {
     %GLOBAL,
-    ORIGIN => 'Transnational',
 
     EDITIONS =>
     {
@@ -1248,6 +1247,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2024' =>
       {
         MEET => 'South American Zonal Trials',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' =>
@@ -1649,6 +1649,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Zonal Mixed Teams' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -1691,6 +1692,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Zonal Open Teams' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1757,6 +1759,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Zonal Senior Teams' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1799,6 +1802,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Zonal Women Teams' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

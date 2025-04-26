@@ -1702,7 +1702,7 @@ my %TOURNAMENTS_ISRAEL =
   'Maccabi Games' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

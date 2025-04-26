@@ -1518,7 +1518,7 @@ my %TOURNAMENTS_TURKEY =
   {
     %GLOBAL,
     CITY => 'Gelibolu',
-    ORIGIN => 'Supranational',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

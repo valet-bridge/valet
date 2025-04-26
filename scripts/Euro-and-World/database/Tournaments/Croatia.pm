@@ -159,7 +159,7 @@ my %MEETS_CROATIA =
   'Samobor Bridge Meeting' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     CITY => 'Samobor',
 
     EDITIONS =>
@@ -195,7 +195,7 @@ my %TOURNAMENTS_CROATIA =
   'Atlantic Trade Bridge Cup' => 
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

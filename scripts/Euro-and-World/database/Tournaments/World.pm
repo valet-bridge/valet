@@ -7241,7 +7241,6 @@ my %TOURNAMENTS_WORLD =
 
   'World Senior Teams' => 
   {
-    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -7252,6 +7251,7 @@ my %TOURNAMENTS_WORLD =
       '2016' =>
       {
         MEET => 'World Series',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -7308,6 +7308,7 @@ my %TOURNAMENTS_WORLD =
       {
         
         MEET => 'World Series',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -7339,6 +7340,7 @@ my %TOURNAMENTS_WORLD =
       '2022' =>
       {
         MEET => 'World Series',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -7362,6 +7364,7 @@ my %TOURNAMENTS_WORLD =
       '2024' =>
       {
         MEET => 'World Series',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -8523,7 +8526,7 @@ my %TOURNAMENTS_WORLD =
 
   'WMG Open Teams' => 
   {
-    ORIGIN => 'Transnational',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
