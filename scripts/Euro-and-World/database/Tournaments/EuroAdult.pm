@@ -23,7 +23,6 @@ my %MEETS_EUROADULT =
   "European Champions' Cup" =>
   {
     %GLOBAL,
-    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
 
@@ -636,6 +635,7 @@ my %TOURNAMENTS_EUROADULT =
       '2003' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -667,6 +667,7 @@ my %TOURNAMENTS_EUROADULT =
       '2004' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -698,6 +699,7 @@ my %TOURNAMENTS_EUROADULT =
       '2005' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -730,6 +732,7 @@ my %TOURNAMENTS_EUROADULT =
       '2006' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -770,6 +773,7 @@ my %TOURNAMENTS_EUROADULT =
       '2007' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -811,6 +815,7 @@ my %TOURNAMENTS_EUROADULT =
       '2008' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -851,6 +856,7 @@ my %TOURNAMENTS_EUROADULT =
       '2009' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -891,6 +897,7 @@ my %TOURNAMENTS_EUROADULT =
       '2010' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -939,6 +946,7 @@ my %TOURNAMENTS_EUROADULT =
       '2011' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -980,6 +988,7 @@ my %TOURNAMENTS_EUROADULT =
       '2012' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1011,6 +1020,7 @@ my %TOURNAMENTS_EUROADULT =
       '2013' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1050,6 +1060,7 @@ my %TOURNAMENTS_EUROADULT =
       '2014' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1081,6 +1092,7 @@ my %TOURNAMENTS_EUROADULT =
       '2015' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1112,6 +1124,7 @@ my %TOURNAMENTS_EUROADULT =
       '2016' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1151,6 +1164,7 @@ my %TOURNAMENTS_EUROADULT =
       '2017' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1182,6 +1196,7 @@ my %TOURNAMENTS_EUROADULT =
       '2018' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1213,6 +1228,7 @@ my %TOURNAMENTS_EUROADULT =
       '2019' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1244,6 +1260,7 @@ my %TOURNAMENTS_EUROADULT =
       '2021' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1275,6 +1292,7 @@ my %TOURNAMENTS_EUROADULT =
       '2022' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1306,6 +1324,7 @@ my %TOURNAMENTS_EUROADULT =
       '2023' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -5833,6 +5852,7 @@ my %TOURNAMENTS_EUROADULT =
       '2023' =>
       {
         MEET => "European Champions' Cup",
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 

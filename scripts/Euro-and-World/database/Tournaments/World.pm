@@ -2521,6 +2521,7 @@ my %TOURNAMENTS_WORLD =
 
   'IMSA Elite Open Teams' => 
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2554,7 +2555,6 @@ my %TOURNAMENTS_WORLD =
       '2017' =>
       {
         MEET => 'IMSA Elite Mind Games',
-        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2586,7 +2586,6 @@ my %TOURNAMENTS_WORLD =
       '2019' =>
       {
         MEET => 'IMSA World Masters Championships',
-        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2696,6 +2695,7 @@ my %TOURNAMENTS_WORLD =
 
   'IMSA Elite Women Teams' => 
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -2780,7 +2780,6 @@ my %TOURNAMENTS_WORLD =
       {
         MEET => 'IMSA World Masters Championships',
         MEET_TAG => 2017,
-        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -2797,7 +2796,6 @@ my %TOURNAMENTS_WORLD =
       {
         MEET => 'IMSA Elite Mind Games',
         MEET_TAG => 2017,
-        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2829,7 +2827,6 @@ my %TOURNAMENTS_WORLD =
       '2019' =>
       {
         MEET => 'IMSA World Masters Championships',
-        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 

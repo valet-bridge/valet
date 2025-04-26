@@ -2271,7 +2271,6 @@ my %TOURNAMENTS_SUPRA =
 
   'NYSA Euroregion Nations Cup' =>
   {
-    ORIGIN => 'Transnational',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2282,6 +2281,7 @@ my %TOURNAMENTS_SUPRA =
     {
       '2013' =>
       {
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -2302,6 +2302,7 @@ my %TOURNAMENTS_SUPRA =
       },
       '2014' =>
       {
+        ORIGIN => 'International',
         ORDINAL => 2,
         CHAPTERS =>
         {
@@ -2330,6 +2331,7 @@ my %TOURNAMENTS_SUPRA =
       },
       '2015' =>
       {
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2358,6 +2360,7 @@ my %TOURNAMENTS_SUPRA =
       },
       '2016' =>
       {
+        ORIGIN => 'International',
         CITY => 'Boleslawiec',
         CHAPTERS =>
         {

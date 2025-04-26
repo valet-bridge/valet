@@ -1076,7 +1076,6 @@ my %TOURNAMENTS_UK =
 
   'Commonwealth Nations Bridge Championships' => 
   {
-    ORIGIN => 'Transnational',
     ZONE => 'Commonwealth',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1087,6 +1086,7 @@ my %TOURNAMENTS_UK =
     {
       '2006' =>
       {
+        ORIGIN => 'International',
         COUNTRY => 'Australia',
         CITY => 'Melbourne',
         CHAPTERS =>
@@ -1112,6 +1112,7 @@ my %TOURNAMENTS_UK =
       '2010' =>
       {
         ORDINAL => 3,
+        ORIGIN => 'Transnational',
         COUNTRY => 'India',
         CITY => 'Delhi',
         CHAPTERS =>
@@ -1144,6 +1145,7 @@ my %TOURNAMENTS_UK =
       },
       '2014' =>
       {
+        ORIGIN => 'Transnational',
         COUNTRY => 'Scotland',
         CITY => 'Glasgow',
         CHAPTERS =>

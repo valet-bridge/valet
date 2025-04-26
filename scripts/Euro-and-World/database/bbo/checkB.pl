@@ -21,6 +21,34 @@ use Connections::Matrix;
 use ParseT;
 use EntryT;
 
+my %PRACTICE_OK = (
+  'Australia Challenge|2007' => 1,
+  'Australia Practice|2016' => 1,
+  'Chile Practice|2009' => 1,
+  'Commonwealth Nations Bridge Championships|2018' => 1,
+  'Danish Open Team Trials|2010' => 1,
+  'Denmark Practice|2013' => 1,
+  'Denmark Practice|2014' => 1,
+  'Denmark Practice|2015' => 1,
+  'France Practice|2007E' => 1,
+  'France Practice|2008B' => 1,
+  'France Practice|2017' => 1,
+  'France Practice|2023' => 1,
+  'French Women Trials|2015' => 1,
+  'Grand Prix of Poland Teams|2013E' => 1,
+  'Israel Festival Open Teams|2011' => 1,
+  'Israel Practice|2019' => 1,
+  'Italy Practice|2014' => 1,
+  'Poland Practice|2017' => 1,
+  'Russia Practice|2020' => 1,
+  'Russia Practice|2021' => 1,
+  'Sweden Practice|2017B' => 1,
+  'Sweden Practice|2022' => 1,
+  'Swedish Open Team Trials|2019' => 1,
+  'Taiwan Practice|2007' => 1,
+);
+
+
 use Whole;
 my $whole = Whole->new();
 $whole->init_hashes();
@@ -146,6 +174,9 @@ sub find_likely_internationals
   {
     for my $edition (sort keys %{$origin_stats->{$tname}})
     {
+      my $concat = "$tname|$edition";
+      next if exists $PRACTICE_OK{$concat};
+
       my $nationals = $origin_stats->{$tname}{$edition}[0] // 0;
       next if $nationals == 0;
 

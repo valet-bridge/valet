@@ -568,7 +568,6 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Open Teams',
   {
-    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -579,6 +578,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2004' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -602,6 +602,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2005' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -625,6 +626,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2006' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -648,6 +650,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2007' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -671,6 +674,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2008' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -694,6 +698,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2009' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -718,6 +723,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2010' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -741,6 +747,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2011' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -765,6 +772,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2012' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -796,6 +804,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2013' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -836,6 +845,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2014' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         ORDINAL => 5,
         CHAPTERS =>
         {
@@ -867,6 +877,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2015A' =>
       {
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -883,6 +894,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       {
         MEET => 'South American Bridge Championship',
         MEET_TAG => '2015',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -914,6 +926,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2016' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -954,6 +967,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2017' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -996,6 +1010,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2022' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1323,7 +1338,6 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Women Teams',
   {
-    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1334,6 +1348,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2005' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1349,6 +1364,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2009' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1364,6 +1380,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2010' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1387,6 +1404,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2011' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1402,6 +1420,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2013' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1425,6 +1444,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2014' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         ORDINAL => 5,
         CHAPTERS =>
         {
@@ -1440,6 +1460,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2015A' =>
       {
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           # Could be Trials
@@ -1457,6 +1478,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       {
         MEET => 'South American Bridge Championship',
         MEET_TAG => '2015',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -1488,6 +1510,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2016' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1503,6 +1526,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2017' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1526,6 +1550,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2018' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1621,7 +1646,6 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Youth Teams' =>
   {
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1632,6 +1656,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2016' =>
       {
         MEET => 'South American Bridge Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' =>

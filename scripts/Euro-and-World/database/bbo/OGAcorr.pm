@@ -178,12 +178,16 @@ my %ORIGIN_ACCEPTS = (
     30864, 30882, 31017],
   'Bonn Nations Cup' => [
      2637,
-     8891,
-     9846],
+     6147,  6152,
+     8885,  8890,  8891,
+     9846,  9850],
   'Bulgarian Anniversary Open Teams' => [
     76381],
   'Bupati Badung Cup' => [
     83865, 83867, 83874, 83879, 83880],
+  'Carrousel Cup' => [
+     6342,  6344,  6348,  6349,  6350,  6351,  6352,  6354,  6355,
+     6356,  6357,  6358],
   'Cavendish Teams' => [
     25729, 25730,
     30860,
@@ -238,7 +242,8 @@ my %ORIGIN_ACCEPTS = (
   'Finnish Open Teams' => [
     38282],
   'Forbo-Krommenie Nations Cup' => [
-     6987],
+     6987,
+     7561,  7562,  7563,  7565,  7566],
   'Forest Trophy' => [
     18138, 18142, 18147],
   'France Friendly' => [
@@ -255,6 +260,9 @@ my %ORIGIN_ACCEPTS = (
      1276,  1277,
     11895,
     14815, 14835],
+  'Gelibolu Peace Teams' => [
+     2246,
+     3840],
   'Geologi Cup' => [
      3673,  3674,
     12213, 12219, 12235,
@@ -604,8 +612,14 @@ my %ORIGIN_ACCEPTS = (
   'White House International' => [
      8188,  8199],
   'White House Juniors' => [
+    13162, 13165, 13190, 13204, 13206, 13207, 13210, 13214,
+    17126, 17138, 17142, 17143, 17144, 17156, 17157,
+    27317, 27322, 27325, 27333, 27341, 27343, 27347, 27362, 27363, 
+    27365,
+    32762, 32766, 32781,
     49763,
-    61999],
+    56324, 56327, 56331,
+    61997, 61998, 61999, 62001, 62006, 62015, 62041, 62045],
   'White House Top 16' => [
      1329],
   'World Open Junior Teams' => [
@@ -696,6 +710,7 @@ my %ZONE_COMPATIBILITY =
   'Asia Pacific' =>
   {
     Australia => 1,
+    Bahrain => 1,
     Bangladesh => 1,
     China => 1,
     'Chinese Taipei' => 1,
@@ -704,13 +719,18 @@ my %ZONE_COMPATIBILITY =
     India => 1,
     Indonesia => 1,
     Japan => 1,
+    Jordan => 1,
+    Kuwait => 1,
     Macau => 1,
     Malaysia => 1,
     Mongolia => 1,
     'New Zealand' => 1,
+    Pakistan => 1,
+    Palestine => 1,
     Philippines => 1,
     Singapore => 1,
     'South Korea' => 1,
+    'Sri Lanka' => 1,
     Taiwan => 1,
     Thailand => 1,
   },
@@ -722,6 +742,7 @@ my %ZONE_COMPATIBILITY =
     Croatia => 1,
     Greece => 1,
     Israel => 1,
+    Montenegro => 1,
     'North Macedonia' => 1,
     Romania => 1,
     Serbia => 1,
@@ -816,6 +837,7 @@ my %ZONE_COMPATIBILITY =
     Turkey => 1,
     'United Kingdom' => 1,
     Ukraine => 1,
+    Universal => 1,
     Wales => 1,
     Yugoslavia => 1,
   },
@@ -828,6 +850,7 @@ my %ZONE_COMPATIBILITY =
     Jordan => 1,
     Kuwait => 1,
     Lebanon => 1,
+    Morocco => 1,
     Pakistan => 1,
     Palestine => 1,
     Qatar => 1,

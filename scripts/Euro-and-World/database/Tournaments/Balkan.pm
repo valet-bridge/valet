@@ -15,7 +15,6 @@ my %MEETS_BALKAN =
 (
   'Balkan Championship' =>
   {
-    ORIGIN => 'Transnational',
     ZONE => 'Balkan',
 
     EDITIONS => 
@@ -442,6 +441,7 @@ my %TOURNAMENTS_BALKAN =
       '2006' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -457,6 +457,7 @@ my %TOURNAMENTS_BALKAN =
       '2007' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -472,6 +473,7 @@ my %TOURNAMENTS_BALKAN =
       '2008' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -486,6 +488,7 @@ my %TOURNAMENTS_BALKAN =
       '2009' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -526,6 +529,7 @@ my %TOURNAMENTS_BALKAN =
       '2010' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -555,6 +559,7 @@ my %TOURNAMENTS_BALKAN =
       '2011' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -569,6 +574,7 @@ my %TOURNAMENTS_BALKAN =
       '2013' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -598,6 +604,7 @@ my %TOURNAMENTS_BALKAN =
       '2015' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -628,6 +635,7 @@ my %TOURNAMENTS_BALKAN =
       '2016' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -651,6 +659,7 @@ my %TOURNAMENTS_BALKAN =
       '2017' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -680,6 +689,7 @@ my %TOURNAMENTS_BALKAN =
       '2018' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -710,6 +720,7 @@ my %TOURNAMENTS_BALKAN =
       '2019' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -739,6 +750,7 @@ my %TOURNAMENTS_BALKAN =
       '2021' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -768,6 +780,7 @@ my %TOURNAMENTS_BALKAN =
       '2022' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -797,6 +810,7 @@ my %TOURNAMENTS_BALKAN =
       '2023' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -828,6 +842,7 @@ my %TOURNAMENTS_BALKAN =
       '2024' =>
       {
         MEET => 'Balkan Championship',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 

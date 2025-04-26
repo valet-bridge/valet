@@ -894,8 +894,10 @@ my %TOURNAMENTS_HUNGARY =
 
   'Hungarian Santa Invitational' =>
   {
-    %GLOBAL,
-    ORIGIN => 'Invitational',
+    ORGANIZATION => 'MBSZ',
+    COUNTRY => 'Hungary',
+    ZONE => 'World',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

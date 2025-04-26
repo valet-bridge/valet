@@ -1547,6 +1547,7 @@ my %TOURNAMENTS_ASIA =
 
   'APBF School Teams' =>
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1557,7 +1558,6 @@ my %TOURNAMENTS_ASIA =
       '2006' =>
       {
         MEET => 'APBF Youth Championships',
-        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1574,7 +1574,6 @@ my %TOURNAMENTS_ASIA =
       '2007' =>
       {
         MEET => 'APBF Championships',
-        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4639,8 +4638,7 @@ my %TOURNAMENTS_ASIA =
 
   'Yeh Bros Cup' =>
   {
-    ORIGIN => 'Invitational',
-    ZONE => 'South East Asia',
+    ZONE => 'World',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4651,6 +4649,7 @@ my %TOURNAMENTS_ASIA =
       '2004' =>
       {
         # Not present in data
+        ORIGIN => 'International',
         CITY => 'Beijing',
         COUNTRY => 'China',
         CHAPTERS =>
@@ -4665,6 +4664,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2006' =>
       {
+        ORIGIN => 'International',
         CITY => 'Kaohsiung',
         COUNTRY => 'Taiwan',
         CHAPTERS =>
@@ -4698,6 +4698,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2007' =>
       {
+        ORIGIN => 'International',
         CITY => 'Shenzhen',
         COUNTRY => 'China',
         CHAPTERS =>
@@ -4731,6 +4732,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2008' =>
       {
+        ORIGIN => 'International',
         CITY => 'Kaohsiung',
         COUNTRY => 'Taiwan',
         CHAPTERS =>
@@ -4764,6 +4766,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2009' =>
       {
+        ORIGIN => 'International',
         CITY => 'Broadbeach',
         COUNTRY => 'Australia',
         CHAPTERS =>
@@ -4817,6 +4820,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2011' =>
       {
+        ORIGIN => 'International',
         CITY => 'Wuxi',
         COUNTRY => 'China',
         CHAPTERS =>
@@ -4851,6 +4855,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2013' =>
       {
+        ORIGIN => 'International',
         CITY => 'Yokohama',
         COUNTRY => 'Japan',
         CHAPTERS =>
@@ -4892,6 +4897,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2015' =>
       {
+        ORIGIN => 'International',
         CITY => 'Shanghai',
         COUNTRY => 'China',
         CHAPTERS =>
@@ -4926,6 +4932,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2017' =>
       {
+        ORIGIN => 'Invitational',
         ORDINAL => 11,
         CITY => 'Tokyo',
         COUNTRY => 'Japan',
@@ -4969,6 +4976,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2018' =>
       {
+        ORIGIN => 'International',
         CITY => 'Beijing',
         COUNTRY => 'China',
         CHAPTERS =>
@@ -5019,6 +5027,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2019' =>
       {
+        ORIGIN => 'Invitational',
         CITY => 'Shanghai',
         COUNTRY => 'China',
         CHAPTERS =>

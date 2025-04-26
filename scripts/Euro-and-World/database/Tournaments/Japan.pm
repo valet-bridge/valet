@@ -21,8 +21,8 @@ my %MEETS_JAPAN =
 (
   'Yokohama Bridge Festival' =>
   {
-    %GLOBAL,
-    ORIGIN => 'Transnational',
+    ORGANIZATION => 'JCBL',
+    COUNTRY => 'Japan',
     CITY => 'Yokohama',
 
     EDITIONS => 
@@ -868,6 +868,7 @@ my %TOURNAMENTS_JAPAN =
 
   'Yokohama Cup' => 
   {
+    ZONE => 'World',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -878,6 +879,7 @@ my %TOURNAMENTS_JAPAN =
       '2001' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'Transnational',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -918,6 +920,7 @@ my %TOURNAMENTS_JAPAN =
       '2005' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'International',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -958,6 +961,7 @@ my %TOURNAMENTS_JAPAN =
       '2006' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'Transnational',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -998,6 +1002,7 @@ my %TOURNAMENTS_JAPAN =
       '2007' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'International',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -1038,6 +1043,7 @@ my %TOURNAMENTS_JAPAN =
       '2008' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'Transnational',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -1078,6 +1084,7 @@ my %TOURNAMENTS_JAPAN =
       '2009' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'International',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -1118,6 +1125,7 @@ my %TOURNAMENTS_JAPAN =
       '2010' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'Transnational',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -1158,6 +1166,7 @@ my %TOURNAMENTS_JAPAN =
       '2011' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'Transnational',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -1198,6 +1207,7 @@ my %TOURNAMENTS_JAPAN =
       '2012' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'Transnational',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -1238,6 +1248,7 @@ my %TOURNAMENTS_JAPAN =
       '2013' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'Transnational',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -1278,6 +1289,7 @@ my %TOURNAMENTS_JAPAN =
       '2014' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'Transnational',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -1318,6 +1330,7 @@ my %TOURNAMENTS_JAPAN =
       '2015' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'Transnational',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -1358,6 +1371,7 @@ my %TOURNAMENTS_JAPAN =
       '2017' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'Transnational',
         SPONSOR => 'NEC',
         CHAPTERS =>
         {
@@ -1398,6 +1412,7 @@ my %TOURNAMENTS_JAPAN =
       '2019' =>
       {
         MEET => 'Yokohama Bridge Festival',
+        ORIGIN => 'Transnational',
         ORDINAL => 22,
         CHAPTERS =>
         {

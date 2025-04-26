@@ -2054,7 +2054,6 @@ my %TOURNAMENTS_POLAND =
   'Forest Trophy' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2064,6 +2063,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2009' =>
       {
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -2084,6 +2084,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2011' =>
       {
+        ORIGIN => 'National',
         CHAPTERS =>
         {
           'SINGLE' => 

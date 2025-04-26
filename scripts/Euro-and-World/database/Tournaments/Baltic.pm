@@ -19,7 +19,6 @@ my %MEETS_BALTIC =
   'Baltic Cup' =>
   {
     ORGANIZATION => 'LiBA',
-    ORIGIN => 'Transnational',
     ZONE => 'Europe',
 
     EDITIONS =>
@@ -564,6 +563,7 @@ my %TOURNAMENTS_BALTIC =
       '2011' =>
       {
         MEET => 'Baltic Cup',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -596,6 +596,7 @@ my %TOURNAMENTS_BALTIC =
         # This is not Baltic Cup, but something like
         # Baltic Teams Cup.
         # http://bridge.ee/BL/BTC12.htm
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -627,6 +628,7 @@ my %TOURNAMENTS_BALTIC =
       '2013' =>
       {
         MEET => 'Baltic Cup',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -650,6 +652,7 @@ my %TOURNAMENTS_BALTIC =
       '2014' =>
       {
         MEET => 'Baltic Cup',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'C0' => 
@@ -680,6 +683,7 @@ my %TOURNAMENTS_BALTIC =
       '2015' =>
       {
         MEET => 'Baltic Cup',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -711,6 +715,7 @@ my %TOURNAMENTS_BALTIC =
       '2016' =>
       {
         MEET => 'Baltic Cup',
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -726,6 +731,7 @@ my %TOURNAMENTS_BALTIC =
       '2017' =>
       {
         MEET => 'Baltic Cup',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -757,6 +763,7 @@ my %TOURNAMENTS_BALTIC =
       '2019' =>
       {
         MEET => 'Baltic Cup',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -780,6 +787,7 @@ my %TOURNAMENTS_BALTIC =
       '2023' =>
       {
         MEET => 'Baltic Cup',
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 

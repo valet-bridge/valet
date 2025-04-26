@@ -1468,7 +1468,7 @@ my %TOURNAMENTS_NETHERLANDS =
   'White House Juniors',
   {
     %GLOBAL,
-    ORIGIN => 'Supranational',
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

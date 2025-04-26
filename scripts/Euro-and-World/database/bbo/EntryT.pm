@@ -1067,6 +1067,8 @@ sub check_origin
       next if $field eq 'AGE' || $field eq 'GENDER'; 
 
       my $tname = $header->{TOURNAMENT_NAME} // '';
+      my $country = $self->{$team}{COUNTRY} // '';
+
       if ($tname &&
         OGAcorr::origin_fixable($tname, $self->bbono()))
       {
@@ -1082,6 +1084,10 @@ sub check_origin
         OGAcorr::origin_org_ok($tname))
       {
         # Camrose has an extra host team, for example.
+      }
+      elsif ($origin eq 'International' && $country ne '')
+      {
+        # Allow some other stuff in as long as there is a country.
       }
       else
       {

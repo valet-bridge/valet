@@ -96,6 +96,7 @@ my @LOCAL_SUBS =
     CORR => 'Chinese Team Championships' },
   { START => 3729, END => 3738, TEXT => 'Stara Zagora 2007 Open Teams',
     CORR => 'Stara Zagora Open Teams 2007' },
+  { START => 4057, END => 4078, TEXT => 'Invitation\b', CORR => '' },
   { START => 4118, END => 4133, TEXT => 'GP of Poland\s*-?\s*BAM',
     CORR => 'Polish BAM Cup' },
   { START => 4315, END => 4318, TEXT => 'Czech Teams Champ_',
