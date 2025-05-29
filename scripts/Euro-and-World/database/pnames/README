@@ -1,0 +1,92 @@
+ParseEBL should also be able to write its file
+Make a diff to the original one
+Get back the few names that we deleted manually
+
+Store by NAME_PREFERRED, then NAME, not NAME_DEPRECATED I guess
+Deal with EBL_DEPRECATED
+
+
+* Read all Tournaments, or the specific country we're investigating
+  - Can include a wbf list of numbers
+
+* Read the output of digest.pl
+  - By TNAME
+  - Can recover header, chapters...
+  - Skip onles that are not in Tournaments
+
+* Read a file of BBO lin names (.lin and .ref parsed)
+  - Read the most recent number from a directory
+  - In the rare cases with more than one pn line, flag
+  - Can be w:12345 rather than a name
+  - Be able to write to the next higher-numbered file
+
+* Read the names file corresponding to wbf numbers (should only be
+  one file even if multiple numbers), or if not present, the master
+  names file
+  - Hash by names
+  - Also by country/countries of origin
+
+* Read the boards file of each wbfno
+  - Keep track of round, board, pairs
+  - Can associate to country if a national tournament
+  - Or to team name in general?
+
+* Loop over Tournaments
+  - Loop over Edition
+    - Skip unless wbfno
+    - Tabulate players and their partnerso
+
+* Interactive loop
+  - stats: Table such as
+
+        Total   Matched     %
+Files
+Names
+
+  - changes: Number of changes in this invocation
+  - tournaments: Numbered list of tournaments
+  - active: Skip the OK ones
+  - players match-string [makes list; these are EBL names]
+  - tags match-string [these are unrecognized ones]
+    - When selecting, get the tournaments and partners for each
+    - Automatic suggestion as below
+    - Ability to fix and prompt for next name
+
+                Files   Matched         Names   Matched         OK?
+Tournament1
+Tournament2
+
+  - select [tno]
+  - editions; Similar tables
+  - active: Skip the OK ones
+  - select [eno or ename]
+  - suggest (gives top proposal)
+  - missing (list lin numbers with 1+ missing players,
+    try to guess from the results files who they were,
+    show that rest of table makes sense, including NS/EW orientation
+    within pairs ideally)
+
+String          meckstroth
+Teams           100 USA
+                  2 sth else
+Partners        100 x (string or WBF + string)
+                  4 y
+
+Candidates by similarity
+
+Jeff MECKSTROTH
+(his profile)
+General partnerships
+
+Match only if age, gender suitable?  Or give all, prioritized
+                
+Fix? [Ynq]
+
+This recalculates, keeps track of # changes, and resuggests next
+that hasnt' been n'ed already
+
+When q, back out to list of editions (table, select prompt)
+
+When q, back to list of tournaments
+
+w: Write file, reset stats

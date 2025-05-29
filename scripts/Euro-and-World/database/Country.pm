@@ -16,6 +16,7 @@ my %COUNTRIES = (
   Aruba => "ARU", ARU => "ARU", # Not standard
   Australia => "AUS", AUS => "AUS",
   Austria => "AUT", AUT => "AUT",
+  Bahamas => "BHS", BHS => "BHS",
   Bahrain => "BHR", BHR => "BHR",
   Bangladesh => "BAN", BAN => "BAN", # Not standard
   Barbados => "BAR", BAR => "BAR", # Not standard
@@ -26,12 +27,14 @@ my %COUNTRIES = (
   Botswana => "BOT", BOT => "BOT", # Not standard
   Brazil => "BRA", BRA => "BRA",
   Bulgaria => "BUL", BUL => "BUL", # Not standard
+  Cameroon => "CMR", CMR => "CMR",
   Canada => "CAN", CAN => "CAN",
   Chile => "CHI", CHI => "CHI", # Not standard
   China => "CHN", CHN => "CHN",
   "Chinese Taipei" => "TPE", TPE => "TPE", 
     "Taiwan" => "TPE",
   Colombia => "COL", COL => "COL",
+  Congo => "COG", COG => "COG",
   "Costa Rica" => "CRC", CRC => "CRC",
   Croatia => "CRO", CRO => "CRO", # Not standard
   Cuba => "CUB", CUB => "CUB",
@@ -53,6 +56,7 @@ my %COUNTRIES = (
   Guadeloupe => "GLP", GLP => "GLP",
   Guatemala => "GUA", GUA => "GUA",
   Guyana => "GUY", GUY => "GUY",
+  Haiti => "HTI", HTI => "HTI",
   "Hong Kong" => "HKG", HKG => "HKG", "Hong Kong China" => "HKG",
   Hungary => "HUN", HUN => "HUN",
   Iceland => "ISL", ISL => "ISL",
@@ -98,6 +102,7 @@ my %COUNTRIES = (
   Pakistan => "PAK", PAK => "PAK",
   Palestine => "PLE", PLE => "PLE",
   Panama => "PAN", PAN => "PAN",
+  Paraguay => "PRY", PRY => "PRY",
   Peru => "PER", PER => "PER",
   Philippines => "PHI", PHI => "PHI", # Not standard
   Poland => "POL", POL => "POL",
@@ -117,6 +122,7 @@ my %COUNTRIES = (
   "South Africa" => "RSA", RSA => "RSA", # Not standard
   Spain => "ESP", ESP => "ESP",
   "Sri Lanka" => "SRI", SRI => "SRI", # Not standard
+  Suriname => "SUR", SUR => "SUR",
   Sweden => "SWE", SWE => "SWE",
   Switzerland => "SUI", SUI => "SUI", # Not standard
   Syria => "SYR", SYR => "SYR",
@@ -130,6 +136,7 @@ my %COUNTRIES = (
   Uruguay => "URU", URU => "URU", # Not standard
   USA => "USA", "U.S.A." => "USA",
   "US Virgin Islands" => "VUS", VUS => "VUS", # Not standard
+  Uzbekistan => "UZB", UZB => "UZB",
   Venezuela => "VEN", VEN => "VEN",
   Wales => "WAL", WAL => "WAL", # Not standard
   "Yugoslavia" => "YUG", YUG => "YUG",
