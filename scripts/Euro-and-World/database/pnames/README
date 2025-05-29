@@ -1,9 +1,40 @@
-ParseEBL should also be able to write its file
-Make a diff to the original one
-Get back the few names that we deleted manually
+When multiple names:
+- Married name (same first, different last)
+- Jr
+- Initials, Peter Jr L PIGOT
+- Ron E. ANDERSEN, Ron Andersen
+- Jennifer Christina EWALD, Jenny EWALD
+- DE: Thierry DE SAINTE MARIE, EL in Arabic
+- Variant, e.g. special letter
 
+TITLE, e.g. Captain
+
+Name:
+FIRST_FULL
+FIRST_VARIANT
+FIRST_SHORT
+FIRST_INITIAL
+
+MIDDLE_FULL
+MIDDLE_SHORT
+MIDDLE_INITIAL
+
+SERIES_JR
+SERIES_SR
+
+LAST_PARTICLE
+
+LAST_FULL
+LAST_VARIANT
+LAST_EARLIER1
+LAST_EARLIER2
+
+PlayerEBL: first(), last(), first_middle(), junior(), senior(),
+short_first()
+Flag if no first, only an initial, capitalization wrong
+
+Print players 
 Store by NAME_PREFERRED, then NAME, not NAME_DEPRECATED I guess
-Deal with EBL_DEPRECATED
 
 
 * Read all Tournaments, or the specific country we're investigating

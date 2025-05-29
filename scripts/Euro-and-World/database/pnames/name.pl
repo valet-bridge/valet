@@ -4,14 +4,14 @@ use v5.10;
 use strict;
 use warnings;
 use utf8;
-use open ':std', ':encoding(UTF-8)';
+use open ':std', ':encoding(iso-8859-1)';
 use Time::HiRes qw(time);
 
 use lib '.';
 use lib '../bbo';
 
 use ParseT;
-use parseEBL;
+use ParseEBL;
 
 # Full EBL data: Names and some tournaments the players played in.
 my $EBL_FILE = 'full/EBL/names.txt';
@@ -48,7 +48,13 @@ my $parseEBL = ParseEBL->new();
 $parseEBL->read($EBL_FILE);
 $times[1] += time() - $t0;
 
-printf("parseT  \t%6.2f seconds\n", $times[0]);
+my $s = $parseEBL->str();
+
+# open my $fo, '>', '/tmp/ebl.txt' or die "Can't write to /tmp_ebl.txt";
+# print $fo $s;
+# close $fo;
+
+# printf("parseT  \t%6.2f seconds\n", $times[0]);
 printf("parseEBL\t%6.2f seconds\n", $times[1]);
 
 exit;

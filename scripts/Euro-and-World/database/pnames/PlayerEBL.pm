@@ -13,13 +13,15 @@ use lib '..';
 use Country;
 my $country = Country->new();
 
+use Analysis;
+
 my @FIELDS = qw(
-  EBL 
-  WBF WBF_DEPRECATED
-  NAME NAME_DEPRECATED NAME_PREFERRED
-  COUNTRY COUNTRY_DEPRECATED
+  NAME NAME_PREFERRED NAME_DEPRECATED
   BIRTH_EXACT
   DEATH_EXACT
+  COUNTRY COUNTRY_DEPRECATED
+  EBL 
+  WBF WBF_DEPRECATED
   GENDER 
   TOURNAMENT);
 
@@ -70,8 +72,13 @@ sub set_by_chunk
 
   $self->set_tournaments($chunk, $fname, $lno);
 
-  for my $key (keys %$chunk)
+  $self->{ANALYSIS} = Analysis->new();
+  for my $key (qw(NAME NAME_DEPRECATED NAME_PREFERRED))
   {
+    for my $v (@{$self->{$key}})
+    {
+      $self->{ANALYSIS}->add($key, $v);
+    }
   }
 }
 
@@ -163,9 +170,9 @@ sub set_gender
 sub set_tournaments
 {
   my ($self, $chunk, $fname, $lno) = @_;
-  return unless exists $chunk->{TOURNAMENTS};
+  return unless exists $chunk->{TOURNAMENT};
 
-  for my $value (@{$chunk->{TOURNAMENTS}})
+  for my $value (@{$chunk->{TOURNAMENT}})
   {
     if ($value !~ /^(\d+)\|(\d+)\|(.+)$/)
     {
@@ -173,8 +180,35 @@ sub set_tournaments
     }
     
     # WBF tournament number, year, tag (partner, team name, ...)
-    push @{$self->{TOURNAMENTS}}, [$1, $2, $3];
+    push @{$self->{TOURNAMENT}}, [$1, $2, $3];
   }
+}
+
+
+sub str
+{
+  my ($self) = @_;
+
+  my $s = '';
+  for my $key (@FIELDS)
+  {
+    next unless exists $self->{$key};
+    if ($key eq 'TOURNAMENT')
+    {
+      for my $i (0 .. $#{$self->{$key}})
+      {
+        $s .= $key . ' ' . join('|', @{$self->{$key}[$i]}) . "\n";
+      }
+    }
+    else
+    {
+      for my $version (@{$self->{$key}})
+      {
+        $s .= "$key $version\n";
+      }
+    }
+  }
+  return $s;
 }
 
 

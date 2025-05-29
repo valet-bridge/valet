@@ -162,7 +162,28 @@ sub alias_chunk
     }
   }
 
-  $self->{ALIAS}{$chunk->{EBL_PREFERRED}} = $chunk->{EBL};
+  $self->{ALIAS}{$chunk->{EBL_PREFERRED}[0]} = $chunk->{EBL}[0];
 }
+
+
+sub str
+{
+  my ($self) = @_;
+
+  my $s = '';
+  for my $ebl (sort { $a <=> $b } keys %{$self->{EBL}})
+  {
+    $s .= $self->{EBL}{$ebl}->str() . "\n";
+  }
+
+  for my $ebl_pref (sort { $a <=> $b } keys %{$self->{ALIAS}})
+  {
+    $s .= "EBL " . $self->{ALIAS}{$ebl_pref} . "\n";
+    $s .= "EBL_PREFERRED " . $ebl_pref . "\n\n";
+  }
+
+  return $s;
+}
+
 
 1;

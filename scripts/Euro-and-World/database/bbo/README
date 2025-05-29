@@ -1,10 +1,12 @@
 2025-04-12
 
-One of the check?.pl should check: If many countries, is it International?
-
+Build:
 Look for skips and duplicates in digest output
+(once we have names)
 
-Go back to opening bids in Build (pass and openings)
+Check (a,b,c) values? E.g. skip
+
+RS_REPLACE in .ref sometimes less generic
 
 Next steps
 ==========
@@ -97,6 +99,13 @@ checks internal consistency of Tournament and Meet.
 perl checkB.pl t
 checks BBO entry field values vs. Tournament and Meet.
 
+To look for skips:
+./reader -I ../../../bbo2 -Q 9=4=0=0 -e > op2
+Then
+perl contain.pl 73441 73443
+Then look for the master file (gets the modifications)
+and the slave file (gets the SKIP line from op2).
+
 
 Nice-to-have
 ============
@@ -109,6 +118,3 @@ Misc.
 - Multiple attempts at same segment of a match
   23000, 23004, 23005 (candidates for skip files)
 - Tname date ranges as tight as possible? (Deviations noted but OK)
-- If only countries, should be International
-
-Check the .ref files that modify qx against boards, lines from BBO
