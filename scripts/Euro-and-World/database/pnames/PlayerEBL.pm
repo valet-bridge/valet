@@ -77,7 +77,7 @@ sub set_by_chunk
   {
     for my $v (@{$self->{$key}})
     {
-      $self->{ANALYSIS}->add($key, $v);
+      $self->{ANALYSIS}->add($key, $v, $self->{COUNTRY}[0]);
     }
   }
 }
