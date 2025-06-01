@@ -153,83 +153,93 @@ my %SPECIALS =
 # This is used to verify that middle names are like first names.
 my @FIRST_NAMES =
 qw(
-  Aaron Abbas Abdel Abdullah Abel Adrian Ahmad Ahmed Ake Alain 
-  Albert Alberto Alejandra Alejandro Alex Alexander Alexandra Alexandre
-  Alexandru Alfredo Ali Anders Andre Andrea Andreas Andreea 
-  Andrei Andres Andrias Andrzej Angel Angela Angelica Angelo Angelova
-  Anker Anil Anita Ann Anne Annette Anthonius Anthony Anton Antonia 
-  Antonio Ara Are Ariel Aril Arild Arne Arthur Arturo Arve Asbjorn
-  Aulia Aulid
-  Bambang Barbosa Barki Battista Beate Beatrice Belle Benedict 
+  Aaron Aas Abbas Abdel Abdullah Abel Adie Adrian Agnieszka Ahmad Ahmed 
+  Ake Alain Albert Alberto Alejandra Alejandro Alex Alexander Alexandra 
+  Alexandre Alexandru Alfredo Ali Alvares Anders Andre Andrea Andreas 
+  Andreea Andrei Andres Andrias Andrzej Anfinn Angel Angela Angelica 
+  Angelo Angelova Anil Anikovich Anita Anker Ann Anne Annette Anthonius 
+  Anthony Anton Antonia Antonio Ara Are Ariel Aril Arild Arne Arthur 
+  Arturo Arve Asbjorn Aslam Atle Aulia Aulid
+  Bagus Bambang Barbosa Barki Battista Beate Beatrice Belle Benedict 
   Beniamino Berkay Bertram Birgitte Bjoerk Bjoernar Bjorn Bogdan 
-  Borgar Borissova Brian Brita Britt Bruna Bruno
-  Carla Carlo Carlos Carmen Carol Carolina Cato Cecilia Celia 
+  Borgar Borissova Breves Brian Brita Britt Bruna Bruno
+  Carla Carlo Carlos Carmen Carol Carolina Cata Cato Cecilia Celia 
   Celina Cesare Chandra Charles Charlie Charllene Charlotte Christer 
   Christian Christina Christine Christopher Claude Claudiu Christa 
-  Cosmo Craig Cristian Cristina
-  Daniel Daniela Dario David Delfina Diana Didier Dirk Dolores 
-  Domenico Dumitru
-  Edmund Edoardo Eduardo Edward Egil Eidur Einar Eirik Eivind Elena 
-  Elia Eline Elisa Elise Elizabeth Elvin Elvira Emil Emilie Emmanuel 
-  Endre Enrica Enrique Erdem Erik Eriks Erling Esther Eugenia Eugenio
+  Cosmo Costanza Craig Cristian Cristina
+  Dana Daniel Daniela Dario David Delfina Diana Didier Dimitar
+  Dirk Doga Dolores Domenico Dumitru
+  Ebrahim Edmund Edoardo Eduardo Edward Egil Eidur Einar Eirik Eivind 
+  Elena Elia Eline Elisa Elise Elizabeth Elvansyah Elvin Elvira Emil 
+  Emilie Emmanuel Endre Enok Enrica Enrique Erdem Erik Eriks Erling 
+  Esther Ethem Eufke Eugenia Eugenio Ezequiel
   Fay Federico Felicia Felipe Fernando Filippo Florencia Fold Frances 
-  Francesco Francis Francisco Francois Francoise Fraser Frederic 
-  Frederik Fredrik Frode
-  Gabriel Gabriela Gabryjela Gail Gautur Georg Georges Gerard 
-  Gheorghe Gigello Giovanni Giulio Gisella Gisli Giuseppe Gracio 
-  Grazia Graziela Gudlaug Gundega Gunnar Gustaaf
-  Haakon Hallvard Harald Hasan Hassan Haugen Helen Helena Helene 
-  Helge Helvijs Hendrik Henrik Henry Hersir Holmar Hove Hugo Hussain
-  Ian Idland Ignacio Ilari Inge Inger Ingvald Ioulios Irene Irvin 
-  Isabel Ivan Ivar Ivonne
+  Francesco Francis Francisco Francois Francoise Franke Fraser Frederic 
+  Frederik Fredrik Freyr Frimaco Frode Funda
+  Gabizo Gabriel Gabriela Gabryjela Gail Gaute Gautur Georg Georges 
+  Gerard Gheorghe Gigello Giovanni Giulio Gisella Gisli Giuseppe 
+  Gracio Grazia Graziela Gudlaug Guimar Guldamla Gundega Gunnar Gurcan
+  Gursel
+  Gustaaf
+  Haakon Hallvard Harald Hasan Hassan Haugen Hefny Hein Helen Helena 
+  Helene 
+  Helge Helvijs Hendrik Henrik Henry Hersir Holmar Hove Hronn Hugo 
+  Hussain
+  Ian Ibrahim Idland Ignacio Ilari Ildeniz Inge Inger Ingi Ingvald 
+  Ioulios Irene Irvin Isabel Iskander Ivan Ivar Ivonne
   Jack Jacob Jacques Jakob Jakup James Jan Jane Janneth Javier 
   Jason Jean Jeffry Jeremiah Jerry Joan Joana Joao Joaquin Joergen 
   Johan Johan Johannes John Jona Jonny Jorge Jorgen Jose Joseph 
-  Judith Juan Juhan
-  Kaare Kare Karim Karin Karl Kate Kay Kayzen Keith Kenyon Kjellaug 
-  Konstantinos Kristen Kristian Kristine Kristjan Kubilay Kumar
-  Laurentiu Lee Lena Lene Leon Leonardo Leslie Lija Lilian Lily 
-  Lionel Lisa Lise Lou Louis Louisa Louise Luca Lucette Lucia Lucian 
-  Luigi Luis Luisa Luiza Lygre Lynn
-  Maciej Mae Magnus Mahmood Manuel Marcelo Marc Marcelin Marek 
-  Margaret Margarita Margrethe Mari Maria Marian Marie Marina Mario 
-  Marit Mark Marius Marques Martin Massimo Matias Mauricio Merete 
-  Meta Mette Micael Michael Michel Miguel Mihaela Mihai Mihail 
-  Mihaylova Mikael Mirabelle Miranda Mirta Mohamed Monica Mora Morten 
-  Mustafa
-  Nicholas Nicoletta Nicolle Nika Niklas Noeline Noelle
-  Odile Octavian Odin Olai Olafs Olav Ole Olha Olivier Olof Omar 
-  Omer Orn Osman Osnes Otto Ove Ovidiu Owen
+  Judith Juan Juhan Justus
+  Kaare Kare Karim Karin Karl Kate Kay Kayzen Keith Kelly Kenyon 
+  Khan Kjellaug Konstantinos Kristen Kristian Kristine Kristjan 
+  Kubilay Kumar
+  Laurentiu Lavinia Lee Lena Lene Leon Leonardo Leslie Lia Lija 
+  Lilian Lily Lionel Lisa Lise Lou Louis Louisa Louise Luca Lucasz 
+  Lucette Lucia Lucian Luigi Luis Luisa Luiza Luz Lygre Lynn
+  Machado Maciej Mae Magnus Mahmood Manuel Marcelo Marc Marcelin Marek 
+  Margaret Margarita Margrethe Mari Maria Marian Marie Marina Marinh
+  Marino Mario Marit Mark Marius Marques Martin Martins Massimo Matias 
+  Mauricio Merete Meta Mette Micael Michael Michel Miguel Mihaela 
+  Mihai Mihail Mihaylova Mikael Mirabelle Miranda Mirta Mohamed 
+  Mohan Monica Mora Morten Muhamm Muhammad Mustafa Muthu Muzharul
+  Nafiz Nazar Nicholas Nicoletta Nicolle Nika Niklas Noeline Noelle
+  Odile Octavian Odin Oktem Olai Olafs Oland Olav Ole Olha Olivier 
+  Olof Omar 
+  Omer Onggani Orn Osman Osnes Otto Ove Ovidiu Owen Ozer
   Pablo Pall Paola Paoli Patrick Paul Paula Pauli Paulo Pawel 
   Pedro Peter Petronia Petter Philip Philippe Pia Pierre Pino 
-  Prakash Priscilla
-  Rachel Rafael Ragnar Raiko Ramon Raphaela Ricardo Richard 
-  Ricquier Riswan Rita Roar Robert Roberto Rodolfo Roger Ronald 
-  Ronaldo Rosa Rosanna Rosaria Roxana Roy Runar Ruth Ryan
-  Sabine Saeed Said Sartje Sebastian Sergio Sergiu Shankar Sigurd 
-  Silvio Simon Simona Singh Siri Sivert Soerlie Sofia Sofie Sophia 
-  Sophie Stephen Steven Stewart Sue Susana Swaray Sydney
-  Teresa Terje Theo Theodore Thomas Thora Titus Toar Tomas Tor Tore 
-  Torgeir 
-  Tove Trine Triumf Tua Tybring
+  Prakash Prasad Priscilla
+  Rabie Rachel Rafael Ragnar Rahman Raiko Ramon Raphaela Rianto
+  Ricardo Richard Ricquier Riswan Rita Roar Robert Roberto Rodolfo 
+  Roger Rom Romano Ronald Ronaldo Rosa Rosanna Rosaria Roxana Roy Ruiz
+  Runar Ruth Ryan
+  Sabine Saeed Said Sajid Sales Sartje Sattar Saverio Saz Sebastian 
+  Septimiu Sergio Sergiu Shankar Shirazi Sigurd Sila Silvio Simon Simona 
+  Singh Siri Sivert Skarhol Smari Soerlie Sofia Sofie Sophia 
+  Sophie Sorin Spike 
+  Stephen Steven Stewart Sture Sue Supeno Susana Swaray Sydney
+  Teresa Terje Theo Theodore Thomas Thora Titus Toar Tomas Tor Tora
+  Tore Torgeir Torio Tove Trine Triumf Tua Tybring
   Uffe Ugur Ulrik Ursin
-  Vala Valentin Valerie Veronica Victor Victoria Virgil Virginia 
-  Vittorio
+  Vala Valentin Valerie Vegard Venkata Veronica Victor Victoria 
+  Virgil Virginia Vittorio
   Walter Werner Wilhemina Willem William Willy Wojciech
   Xavier
-  Yves Yvonne
+  Yehia Yoland Yves Yvonne
+  Zahir Zsolt
 );
 
 # This is used to verify that middle names are like first names.
 my @LAST_NAMES =
 qw(
-  AASAND ABOU AGUADO ALBERTI ALTMANN AMMENDOLIA ARGAYNE ARMIJO 
+  AASAND ABATE ABOU AGUADO ALBERTI ALTMANN AMMENDOLIA ARGAYNE ARMIJO 
   ASPLUND ATTARD
-  BACCHI BAJOS BALLERINO BALLI BANG BAPTISTA BARCOS BARRERA BASELGA
-  BATALLA BATZIA BEIRAO BELLERIO BELLUSSI BELLOCQ BELRHITI BENDER 
-  BENSBY BETTENCOURT BETTI BILDE BJOERBEKK BO BONADIES BORDALLO 
-  BORSARELLI BOSCARO BRENDERFORD BRENNA BRITO BRORHOLT BRUN BRYDE 
-  BUELENS BULLARD BUUS
+  BACCHI BAJOS BALLERINO BALLI BANG BAPTISTA BARCOS BARDEN BARRERA 
+  BASELGA BATALLA BATZIA BEIRAO BELLERIO BELLUSSI BELLOCQ BELRHITI 
+  BENDER BENSBY BETTENCOURT BETTI BILDE BJOERBEKK BO BONADIES 
+  BORDALLO BORSARELLI BOSCARO BRENDERFORD BRENNA BRITO BRORHOLT 
+  BRUN BRYDE BUELENS BULLARD BUUS
   CANALI CANDUCCI CANESSA CAPBERN CAPELLI CAPION CASALE CASTELLO 
   CASTRO CATASTINI CATTANEO CESARI CESATI CHACON CHAMORRO CHAVES 
   CHINDEMI CILLEBORG CIVIDIN COLOMBO COLONNA CORREA CORSICO 
@@ -238,32 +248,35 @@ qw(
   DWYER DYBVIK
   ECK EDWARDS ERTBJERG
   FABBRI FANTONI FARINA FERLAZZO FERNANDES FERNANDEZ FINCHELTUB 
-  FOLLIERO FRANCES
+  FOLLIERO FRANCES FRANCISCI
   HALD HANSEN HARALDSDOTTIR HARLAND HAYMAN HERRERA HJORTH HOEL HOLM
   HOLTZ HVIDBERG 
   GANDINI GARCIA GARRIGOU GARRONE GERMANETTI GIACCHINI GLAZER 
   GOETZ GOMES GOMEZ GONCALVES GONZALES GRASHOLT GRAYSON GULDBRAND
   HELDAL HINZ HOLM HUC
+  ISRAELI
   JEITZ JIMENEZ JONES JUCHIMOWICZ JUHL JUL JUST JUUL
-  KEITH KERLERO KIRKEGAARD KOFOED KORRE KRAFT KRAGH KROGH KRUSE
+  KEITH KERLERO KIRKEGAARD KOCH KOFOED KORRE KRAFT KRAGH KROGH KRUSE
   LANZOTTI LAUGE LEMAITRE LIAQUAT LINDAAS LINTRUP LOENBERG LOPES 
   LOPEZ LORENTE LOSCHI LUND LUZ LYNGE
-  MARANI MARTINEZ MARSH MATHE MAURY MAZZADI MICALI MOELLER MOLLER 
-  MONTEIRO MORCK MOREIRA MUSCAT
-  NIELSEN NIKOLOV NOERHAVE NYHEIM
+  MARANI MARITI MARTINEZ MARSH MATHE MAURY MAZE MAZZADI MICALI MIER 
+  MOELLER MOLLER MONTEIRO MORCK MOREIRA MUSCAT
+  NIELSEN NIKOLOV NOERHAVE NORMAN NYHEIM
   OLIVEIRA
   PABIS PALANCA PARASIAN PELAEZ PEREZ POLIMENI PONCE PORTANTI PRATO
   QUERAN
-  RAMIREZ RANDLE RASK RASMUSSEN RAULUND REY REYES RICCI ROCABERG
-  ROSEN ROUANET ROZPIDE RUZ
+  RAHTJEN RAMIREZ RANDLE RASK RASMUSSEN RAULUND REY REYES RICCI 
+  ROCABERG ROSEN ROUANET ROZPIDE RUZ
   SANCHEZ SANTOS SCHMIDT SCHNETZER SEGURA SELLAN SEQUI SERCY 
   SERRANO SGOLOMBIS SHLESINGER SILVA SILVERMAN SKOGLY SMADILO 
-  SPINOLA STAMATOV STAUGAARD STEEN STEIGER STEWART STRANDE
-  THEISS THRANE THUNBO TOCCO TORKELSEN TORNBERG TURLETTI TVEDEN
+  SOLLI SPINOLA STAMATOV STAUGAARD STEEN STEIGER STEWART STRANDE
+  SUNGUR
+  THEISS THRANE THUNBO TOCCO TORKELSEN TORNBERG TURLETTI TUTTOBENE
+  TVEDEN
   VAGN VAISBICH VALENZUELA VEEL VERDI VERMEHREN VIGORELLI VILBORG 
   VINBERG VIVARELLI
   WANG WEISS WHEATLEY WICKBE WINGAARD
-  ZAIDENBERG ZAMMIT ZEDDA
+  ZACK ZAIDENBERG ZAMMIT ZEDDA
 );
 
 my %FIRST_NAMES_HASH;
