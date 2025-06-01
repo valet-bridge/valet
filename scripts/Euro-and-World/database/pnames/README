@@ -1,13 +1,8 @@
-Ideas:
-- (1) etc at end of line -> DUPL_COUNTER, remove from list
-- Titles, remove from list
-
-- First Initial Last, Initial store as X.
+CAPITALIZED, INITIAL +, ALLCAPS: First, middle, last
 
 
 When multiple names:
-- Jr
-- Initials, Peter Jr L PIGOT
+- Initials, Peter L PIGOT
 - Ron E. ANDERSEN, Ron Andersen
 - Jennifer Christina EWALD, Jenny EWALD
 - DE: Thierry DE SAINTE MARIE, EL in Arabic
@@ -15,25 +10,8 @@ When multiple names:
 
 TITLE, e.g. Captain
 
-Name:
-FIRST_FULL
-FIRST_VARIANT
-FIRST_SHORT
-FIRST_INITIAL
-
 MIDDLE_FULL
-MIDDLE_SHORT
 MIDDLE_INITIAL
-
-SERIES_JR
-SERIES_SR
-
-LAST_PARTICLE
-
-LAST_FULL
-LAST_VARIANT
-LAST_EARLIER1
-LAST_EARLIER2
 
 PlayerEBL: first(), last(), first_middle(), junior(), senior(),
 short_first()
