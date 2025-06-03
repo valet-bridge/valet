@@ -6,12 +6,10 @@
 # 2. Multiple names in () -> recognize
 # 3. E and Y can be both INITIAL and PARTICLE
 # 4. Geoffrey S Jade Barrett, just need an initial somewhere
-# 5. The non-character set outputs
-# 6. Make a TITLES and a TITLES_HASH
-# 7. Write a str_line method
+# 5. Write a str_line method
 #    - Check that all fields used, no conflicts
-# 8. Compare it with the original string
-# 9. Write a str_lines method
+# 6. Compare it with the original string
+# 7. Write a str_lines method
 
 package Analysis;
 
@@ -207,6 +205,35 @@ my %SPECIALS =
   }
 );
 
+my %TITLES =
+(
+  TITLE_GENERAL =>
+  {
+    Baron => {Baron => 1},
+    'Brigadier General' => {'Brig-Gen.' => 1},
+    'Captain' => {Capt => 1, 'Capt.' => 1},
+    Count => {Count => 1},
+    'Dr.' => {Dr => 1, 'Dr.' => 1},
+    Lady => {Lady => 1, LADY => 1},
+    Major => {'Maj.' => 1},
+    Marquess => {Marquess => 1},
+    Princess => {Prinzessin => 1},
+
+  },
+
+  TITLE_SPECIFIC =>
+  {
+    Baron => 1,
+    Count => 1
+  }
+);
+
+my %TITLES_HASH;
+for my $k1 (keys %{$TITLES{TITLE_GENERAL}})
+{
+  $TITLES_HASH{$_} = $k1 for keys %{$TITLES{TITLE_GENERAL}{$k1}};
+}
+
 # The first one is used to verify that middle names are like first names.
 # This last one used to verify that middle names are like last names.
 
@@ -232,14 +259,15 @@ qw(
   Bindi Birgitte Birol Bjoerk Bjoernar Bjorn Bogdan Borgar Borissova 
   Brarne Breves Brian Brita Britt Bruce Bruna Bruno Buke Bye 
 
-  Cagan Cagdas Cai Can Carla Carlo Carlos Carmen Carol Carolina Cata 
-  Catalin Cato Cecilia Celal Celia Celina Cem Cemal Ceren Cesare 
-  Chaerani Chairudin Chakravarthy Chand Chander Chandra Chang Charles 
-  Charlie Charlline Charlotte Charya Chen Cheng Cheong Cheung 
-  Chhotelal Chi Chieng Chih Chin Ching Chiu Choi Choo Chou Choudary 
-  Choukri Chow Chris Christa Christer Christian Christina Christine 
-  Christopher Chuan Chul Chun Chung Cici Cing Claude Claudiu Coomer 
-  Cosmo Costanza Craig Cristian Cristina Cristy Cruz Cyprian 
+  Cagan Cagdas Cai Can Candelaria Carla Carlo Carlos Carmen Carol 
+  Carolina Cata Catalin Cato Cecilia Celal Celia Celina Cem Cemal 
+  Ceren Cesare Chaerani Chairudin Chakravarthy Chand Chander Chandra 
+  Chang Charles Charlie Charlline Charlotte Charya Chen Cheng Cheong 
+  Cheung Chhotelal Chi Chieng Chih Chin Ching Chiu Choi Choo Chou 
+  Choudary Choukri Chow Chris Christa Christer Christian Christina 
+  Christine Christopher Chuan Chul Chun Chung Cici Cing Claude 
+  Claudiu Coomer Cosmo Costanza Craig Cristian Cristina Cristy Cruz 
+  Cyprian 
 
   Daldoul Dan Dana Daniel Daniela Dario Darma David Del Delfina Deng 
   Denis Deniz Desi Dev Devchand Devi Devshi Dey Dharma Dhishan Di 
@@ -384,6 +412,7 @@ qw(
   Zhang Zhazha Zhen Zhi Zhong Zhou Zhu Zia-Ul Ziaullah Zoe Zorana Zou 
   Zsolt 
 );
+
 my @LAST_NAMES =
 qw(
   AASAND ABATE ABI ABOU ABREU AGUADO AIT AJI ALBERTI ALTMANN ALVARADO 
@@ -605,57 +634,21 @@ sub remove_various
       splice @$words, $i, 1;
       next;
     }
-    if ($w =~ /^Dr\.*$/)
+
+    if (exists $TITLES_HASH{$w})
     {
-      $self->{TITLE} = 'Dr.';
-      splice @$words, $i, 1;
-      next;
+      my $title = $TITLES_HASH{$w};
+      if (! exists $TITLES{TITLE_SPECIFIC}{$title} || $i == 0)
+      {
+        $self->{TITLE} = $title;
+        splice @$words, $i, 1;
+        next;
+      }
     }
-    if ($w =~ /^Capt\.*$/)
-    {
-      $self->{TITLE} = 'Captain';
-      splice @$words, $i, 1;
-      next;
-    }
-    if ($w =~ /^Maj\.+$/)
-    {
-      $self->{TITLE} = 'Major';
-      splice @$words, $i, 1;
-      next;
-    }
-    if ($w eq 'Prinzessin')
-    {
-      $self->{TITLE} = 'Princess';
-      splice @$words, $i, 1;
-      next;
-    }
-    if ($w eq 'Marquess')
-    {
-      $self->{TITLE} = 'Marquess';
-      splice @$words, $i, 1;
-      next;
-    }
-    if ($w eq 'Brig-Gen')
-    {
-      $self->{TITLE} = 'Brigadier General';
-      splice @$words, $i, 1;
-      next;
-    }
-    if ($w eq 'LADY')
-    {
-      $self->{TITLE} = 'Lady';
-      splice @$words, $i, 1;
-      next;
-    }
+
     if ($w eq 'II' || $w eq 'III')
     {
       $self->{DYNAST} = $w;
-      splice @$words, $i, 1;
-      next;
-    }
-    if ($i == 0 && ($w eq 'Baron' || $w eq 'Count'))
-    {
-      $self->{TITLE} = $w;
       splice @$words, $i, 1;
       next;
     }
@@ -730,8 +723,8 @@ sub get_capitalization
   my ($text) = @_;
 
   return INITIAL if $text =~ /^[A-Z]\.{0,1}$/;
-  return ALLCAPS if $text =~ /^[A-Z]+$/;
-  return CAPITALIZED if $text =~ /^[A-Z][a-z]+$/;
+  return ALLCAPS if $text =~ /^[\p{Lu}]+$/;
+  return CAPITALIZED if $text =~ /^[A-Z][\p{Ll}]+$/;
   return ALLCAPS if $text =~ /^[DOL]'[A-Z]+$/; # D'ANIELLO
   return ALLCAPS if $text =~ /^Ma{0,1}c[A-Z]+$/; # MacMAHON, McDONALD
 
@@ -772,7 +765,7 @@ sub add
   # reprint_list(\@LAST_NAMES, 'LAST_NAMES');
   # die;
 
-  if ($text =~ /^Jannes/)
+  if ($text =~ /^Robert Dr/)
   {
     # print "HERE\n";
   }
