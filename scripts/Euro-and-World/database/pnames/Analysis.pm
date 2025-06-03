@@ -1,15 +1,13 @@
 #!perl
 
 # TODO
-# 0. First and last names with dashes -> EXCEPTIONS
 # 1. Last name in parenthesis -> EARLIER{1,2}
 # 2. Multiple names in () -> recognize
 # 3. E and Y can be both INITIAL and PARTICLE
 # 4. Geoffrey S Jade Barrett, just need an initial somewhere
-# 5. Write a str_line method
-#    - Check that all fields used, no conflicts
-# 6. Compare it with the original string
-# 7. Write a str_lines method
+# 5. Test str_line against original string, identical or |length diff|
+# 6. Write a str_lines method
+# 7. finish() method that makes a first list, middle list and last list?
 
 package Analysis;
 
@@ -33,6 +31,7 @@ my %EXCEPTIONS =
   'Chien-I' => CAPITALIZED,
   "DALL'AGLIO" => ALLCAPS,
   "DELL'ARMI" => ALLCAPS,
+  'El-Salam' => CAPITALIZED,
   "GUINVARC'H" => ALLCAPS,
   'Jérôme' => CAPITALIZED,
   'Jan-e-Alam' => CAPITALIZED,
@@ -41,9 +40,17 @@ my %EXCEPTIONS =
   'I-Ming' => CAPITALIZED,
   LaLa => CAPITALIZED,
   'María' => CAPITALIZED,
+  'Mai-Brit' => CAPITALIZED,
   "O'KEEFFE-BROWN" => ALLCAPS,
   "O'REILLY-POL" => ALLCAPS,
-  "Ra'ad" => CAPITALIZED
+  'Pei-En' => CAPITALIZED,
+  'Pik-Kin' => CAPITALIZED,
+  "Ra'ad" => CAPITALIZED,
+  'Sze-Ching' => CAPITALIZED,
+  'Sze-Wing' => CAPITALIZED,
+  'Ul-Ain' => CAPITALIZED,
+  'Zia-Ul' => CAPITALIZED,
+  'ZUR-CAMPANILE' => ALLCAPS
 );
 
 my %SPECIALS =
@@ -275,7 +282,7 @@ qw(
   Donas Dong Dora Douglas Dumitru 
 
   Ebrahim Edmund Edoardo Eduardo Edward Efe Egemen Egil Eidur Einar 
-  Eirik Eivind Eka El-Salam Elena Elia Elida Eline Elisa Elise 
+  Eirik Eivind Eka Elena Elia Elida Eline Elisa Elise 
   Elizabeth Elvansyah Elvin Elvira Emil Emilie Emin Emine Emir 
   Emmanuel Emre En Endras Endre Enoch Enok Enrica Enrique Enver 
   Ercolian Erdem Erik Eriks Erling Erol Ersan Esra Esther Ethem Eufke 
@@ -329,7 +336,7 @@ qw(
   Lu Luca Lucasz Lucette Lucia Lucian Luie Luigi Luis Luisa Luiza 
   Lujon Lun Lung Luz Lygre Lynn 
 
-  Machado Maciej Madeira Mae Magnus Mahbubul Mahmood Mai-Brit Malcom 
+  Machado Maciej Madeira Mae Magnus Mahbubul Mahmood Malcom 
   Man Manaf Manasseh Mangapul Mani Manuel Mao Mar Marc Marcelin 
   Marcelo Marek Margaret Margarita Margrethe Mari Maria Marian 
   Mariano Marie Marina Marinh Marino Mario Marit Marius Mark Marques 
@@ -353,9 +360,9 @@ qw(
   Osman Osnes Otto Ove Ovidiu Owen Ozer Ozgur Ozkan 
 
   Pablo Pada Pall Palmelia Pan Paola Paoli Parakrama Parningotan 
-  Patrick Paul Paula Pauli Paulo Pawel Paz Ped Pedro Pei-En Pelin 
+  Patrick Paul Paula Pauli Paulo Pawel Paz Ped Pedro Pelin 
   Peng Pennaf Percival Perry Perwez Peter Pethraj Petronia Petter Peu 
-  Pham Pheng Philip Philippe Pia Pierre Pik-Kin Pin Ping Pino Plinio 
+  Pham Pheng Philip Philippe Pia Pierre Pin Ping Pino Plinio 
   Pok Pong Ponniah Prabakar Prakash Prasad Premsagar Pretty Priscilla 
   Purushottam Putri Putu 
 
@@ -382,8 +389,7 @@ qw(
   Sorin Spike Sreedharan Sreekanth Sridar Srinivasa Stephen Steven 
   Stewart Stirling Sture Su Suba Subari Subbarao Subramanian Suci Sue 
   Suheda Sujauddin Sule Suleiman Sultana Sum Sunra Sup Supeno 
-  Surendra Surya Suryakant Susana Svarup Swaray Sydney Syed Sze-Ching 
-  Sze-Wing 
+  Surendra Surya Suryakant Susana Svarup Swaray Sydney Syed
 
   Ta Tan Tang Tao Tarikul Tat Taymour Teck Teiji Teixeira Teng 
   Terence Teresa Terje Theo Theodore Theoman Thiruvenkata Thomas 
@@ -391,7 +397,7 @@ qw(
   Tor Tora Tore Torgeir Torio Tove Tri Trine Triumf Tshepo Tua Tugce 
   Tugrul Tumo Tunc Tuncay Tung Tungga Tybring Tyr 
 
-  Ud Uffe Ufuk Ugur Ul-Ain Ulrik Ulvi Umair Umit Ursin Usman Utku 
+  Ud Uffe Ufuk Ugur Ulrik Ulvi Umair Umit Ursin Usman Utku 
   Uttamchand Uz 
 
   Vadumangudi Vala Valentin Valerie Vaman Vegard Venkata Venkatraman 
@@ -409,7 +415,7 @@ qw(
   Yvonne 
 
   Zafar Zafer Zahid Zahir Zahra Zaman Zaverchand Zeki Zen Zeynep 
-  Zhang Zhazha Zhen Zhi Zhong Zhou Zhu Zia-Ul Ziaullah Zoe Zorana Zou 
+  Zhang Zhazha Zhen Zhi Zhong Zhou Zhu Ziaullah Zoe Zorana Zou 
   Zsolt 
 );
 
@@ -507,7 +513,7 @@ qw(
 
   YEH 
 
-  ZACK ZAIDENBERG ZAMMIT ZAMORA ZEDDA ZUNIGA ZUR-CAMPANILE 
+  ZACK ZAIDENBERG ZAMMIT ZAMORA ZEDDA ZUNIGA
 );
 
 my %FIRST_NAMES_HASH;
@@ -723,7 +729,7 @@ sub get_capitalization
   my ($text) = @_;
 
   return INITIAL if $text =~ /^[A-Z]\.{0,1}$/;
-  return ALLCAPS if $text =~ /^[\p{Lu}]+$/;
+  return ALLCAPS if $text =~ /^[\p{Lu}']+$/;
   return CAPITALIZED if $text =~ /^[A-Z][\p{Ll}]+$/;
   return ALLCAPS if $text =~ /^[DOL]'[A-Z]+$/; # D'ANIELLO
   return ALLCAPS if $text =~ /^Ma{0,1}c[A-Z]+$/; # MacMAHON, McDONALD
@@ -806,14 +812,16 @@ sub add
       $self->add_last($key, $words[0]);
       return;
     }
-    elsif ($words[0] eq '-' || $words[1] eq '-')
+    elsif ($words[0] eq '-')
     {
-      print "$text YYY\n";
+      $self->{FIRST_MISSING} = 1;
+      $self->add_last($key, $words[1]);
       return;
     }
-    else
+    elsif ($words[1] eq '-')
     {
-      print "$text ZZZ\n";
+      $self->{FIRST_MISSING} = 1;
+      $self->add_last($key, $words[0]);
       return;
     }
   }
@@ -991,6 +999,14 @@ sub add_with_first_initials
 {
   my ($self, $key, $words, $caps) = @_;
 
+  if ($words->[0] eq '-')
+  {
+    $self->{FIRST_MISSING} = 1;
+    my $last = join(' ', @{$words}[1 .. $#$words]);
+    $self->add_last($key, $last);
+    return 1;
+  }
+
   # Start with an initial
   return 0 unless $caps->[0] eq INITIAL;
 
@@ -1115,22 +1131,29 @@ sub add_with_split
 
   for my $i (1 .. $p_first)
   {
-if (! exists $FIRST_NAMES_HASH{$words->[$i]})
+    my $w = $words->[$i];
+if (! exists $FIRST_NAMES_HASH{$words->[$i]} &&
+   (! exists $EXCEPTIONS{$w} || $EXCEPTIONS{$w} != CAPITALIZED))
 {
-  print "MISSF $words->[$i]\n";
+  print "MISSF $w\n";
 }
-    return 0 unless exists $FIRST_NAMES_HASH{$words->[$i]};
+    return 0 unless 
+      (exists $FIRST_NAMES_HASH{$w} ||
+      (exists $EXCEPTIONS{$w} && $EXCEPTIONS{$w} == CAPITALIZED));
   }
 
   for my $i ($p_last .. $len-1)
   {
+    my $w = $words->[$i];
 if (! exists $LAST_NAMES_HASH{$words->[$i]} &&
-   $particles->[$i] ne PARTICLE)
+   (! exists $EXCEPTIONS{$w} || $EXCEPTIONS{$w} != ALLCAPS) &&
+   $particles->[$i] != PARTICLE)
 {
   print "MISSL $words->[$i]\n";
 }
     return 0 unless 
       exists $LAST_NAMES_HASH{$words->[$i]} || 
+      (exists $EXCEPTIONS{$w} && $EXCEPTIONS{$w} == ALLCAPS) ||
       $particles->[$i] == PARTICLE;
   }
 
@@ -1149,7 +1172,56 @@ sub str_full
   my ($self) = @_;
 
   my $s = '';
-  # TODO
+  $s .= $self->{TITLE} . ' ' if exists $self->{TITLE};
+
+  my $c = 0;
+  $c++ if exists $self->{FIRST_FULL};
+  $c++ if exists $self->{FIRST_INITIAL};
+  $c++ if exists $self->{FIRST_MISSING};
+  die "First names compromised" unless $c == 1;
+
+  $s .= $self->{FIRST_FULL} if exists $self->{FIRST_FULL};
+  $s .= $self->{FIRST_INITIAL} if exists $self->{FIRST_INITIAL};
+  $s .= '-' if exists $self->{FIRST_FULL};
+
+  $s .= ' ' . $self->{MIDDLE_INITIAL} if exists $self->{MIDDLE_INITIAL};
+
+  $c = 0;
+  for (qw(SHORT NICKNAME RENAME VARIANT))
+  {
+    $c++ if exists $self->{$_};
+  }
+  die "Too many first versions" unless $c <= 1;
+  if ($c == 1)
+  {
+    for my $key (qw(SHORT NICKNAME RENAME VARIANT))
+    {
+      $s .= ' (' . $self->{$key} . ')' if exists $self->{$key};
+    }
+  }
+
+  die "No full last name" unless exists $self->{LAST_FULL};
+  $s .= ' ' . $self->{LAST_FULL} if exists $self->{LAST_FULL};
+
+  $c = 0;
+  for (qw(LAST_VARIANT LAST_EARLIER1 LAST_EARLIER2))
+  {
+    $c++ if exists $self->{$_};
+  }
+  die "Too many last versions" unless $c <= 1;
+  if ($c == 1)
+  {
+    for my $key (qw(LAST_VARIANT LAST_EARLIER1 LAST_EARLIER2))
+    {
+      $s .= ' (' . $self->{$key} . ')' if exists $self->{$key};
+    }
+  }
+
+  $s .= ' Jr.' if exists $self->{JUNIOR};
+  $s .= ' Sr.' if exists $self->{SENIOR};
+  $s .= $self->{DYNAST} if exists $self->{DYNAST};
+  $s .= ' (' . $self->{COUNTER} . ')' if exists $self->{COUNTER};
+
   return $s;
 }
 
