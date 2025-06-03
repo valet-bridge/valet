@@ -88,7 +88,7 @@ my %SPECIALS =
     Akis => {Zafiris => 1},
     Denis => {Darko => 1},
     Dimmie => {Irene => 1},
-    Joice => {'Julietta Grace' => 1},
+    Joice => {'Julita Grace' => 1},
     Kojak => {'William J.' => 1},
     Mavi => {'Maria Vittoria' => 1},
     Memo => {Giampietro => 1},
@@ -103,6 +103,8 @@ my %SPECIALS =
 
   RENAME =>
   {
+    Abby => {'Wai-Lap' => 1},
+    Bob => {Xinyu => 1},
     Brian => {'Ho Yin' => 1},
     Catherine => {Runmei => 1},
     Chris => {'Tze Him' => 1},
@@ -110,15 +112,18 @@ my %SPECIALS =
     'Costa-Foru' => {Constantin => 1},
     Derek => {'Wei Peu' => 1},
     Gloria => {'Ching-Shan' => 1},
+    Henry => {'Wai-Kit' => 1},
     Jack => {Jie => 1},
     Jerry => {'Li Min' => 1},
     Jimmy => {'Saleem Ud' => 1, Zhuo => 1},
     John => {'Hao Zhen' => 1},
+    Kelvin => {Yisheng => 1},
     Kevin => {Yuxiang => 1},
     Max => {Ziyu => 1},
     Nicky => {Kulbir => 1},
     Oak => {Wattanai => 1},
     Timothy => {Kaiti => 1},
+    Wendy => {Guangli => 1}
   },
   
   VARIANT =>
@@ -157,17 +162,19 @@ qw(
   Adele Adie Adji Adnane Adrian Ae Agha Agnieszka Agus Ahasan Ahmad 
   Ahmed Ahmer Ake Akhtar Akter Alain Albert Alberto Alejandra 
   Alejandro Alex Alexander Alexandra Alexandre Alexandru Alfredo Ali 
-  Almeida Alper Alta Altan Alvares Ameer Aminur Amita An Anand Anant 
-  Anders Andre Andrea Andreas Andreea Andrei Andres Andrias Andrzej 
-  Anfinn Angel Angela Angelica Angelo Angelova Anikovich Anil Anis 
-  Anita Anker Ann Anne Annette Anthonius Anthony Anton Antonia 
-  Antonio Ara Ardiansyah Are Ariel Aril Arild Arne Arslan Arthur 
-  Arturo Arve Arvind Arya Arzum Asbjorn Asfandiyar Asghar Aslam 
-  Aslihan Assis Atle Aulia Aulid Avsar Ayeska Aysen Ayu Ayyampalayam 
-  Azat 
+  Almeida Alp Alper Alta Altan Alvares Ameer Amenhoteps 
+  Aminur Amita An Anand 
+  Anant Anders Andre Andrea Andreas Andreea Andrei Andres Andrias 
+  Andrzej Anfinn Angel Angela Angelica Angelo Angelova Anikovich 
+  Anil Anis Anita Anker Ann Anne Annette Anthonius Anthony Anton 
+  Antonia Antonio Anwen Ara Ardiansyah Are Ariel Aril Arild Arne Arni 
+  Arslan Arthur Arturo Arve Arvind Arya Arzum Asbjorn Asfandiyar 
+  Asghar Aslam Aslihan Assis Atle Aulia Aulid Avsar Awuy Ayeska Aysen 
+  Ayu Ayyampalayam Azat Azizul
 
-  Babu Bae Bagus Baliram Bambang Barbosa Barki Barkin Bas Battista 
+  Babu Bae Bagus Baliram Bambang Barbosa Barki Barkin Baron Bas Battista 
   Beate Beatrice Belle Benedict Beniamino Berka Berkay Berkim Bertram 
+  Besour
   Bey Bhan Bharadhan Birgitte Birol Bjoerk Bjoernar Bjorn Bogdan 
   Borgar Borissova Brarne Breves Brian Brita Britt Bruce Bruna Bruno 
   Buke Bye 
@@ -175,18 +182,18 @@ qw(
   Cagan Cagdas Cai Can Carla Carlo Carlos Carmen Carol Carolina Cata 
   Catalin Cato Cecilia Celal Celia Celina Cem Cemal Ceren Cesare 
   Chairudin Chakravarthy Chand Chander Chandra Chang Charles Charlie 
-  Charllene Charlotte Charya Chen Cheng Chhotelal Chi Chih Chin Chiu 
+  Charlline Charlotte Charya Chen Cheng Chhotelal Chi Chih Chin Chiu 
   Choi Choo Chou Choudary Choukri Chow Christa Christer Christian 
   Christina Christine Christopher Chuan Chul Chun Chung Cici Cing 
-  Claude Claudiu Cosmo Costanza Craig Cristian Cristina Cruz Cyprian 
+  Claude Claudiu Coomer Cosmo Costanza Craig Cristian Cristina Cruz Cyprian 
 
   Daldoul Dan Dana Daniel Daniela Dario Darma David Delfina Deng 
-  Deniz Devchand Devshi Dey Diana Dicle Didem Didier Dimitar Dirk 
+  Deniz Devchand Devshi Dey Di Diana Dicle Didem Didier Dimitar Dirk 
   Doga Dolores Domenico Dong Dumitru 
 
   Ebrahim Edmund Edoardo Eduardo Edward Efe Egemen Egil Eidur Einar 
-  Eirik Eivind Eka Elena Elia Eline Elisa Elise Elizabeth Elvansyah 
-  Elvin Elvira Emil Emilie Emin Emine Emir Emmanuel Emre En Endre 
+  Eirik Eivind Eka Elena Elia Elida Eline Elisa Elise Elizabeth Elvansyah 
+  Elvin Elvira Emil Emilie Emin Emine Emir Emmanuel Emre En Endras Endre 
   Enok Enrica Enrique Enver Ercolian Erdem Erik Eriks Erling Erol 
   Ersan Esra Esther Ethem Eufke Eugenia Eugenio Ezequiel Ezz 
 
@@ -204,13 +211,15 @@ qw(
   Gursel Gurunath Gustaaf 
 
   Haakon Habibul Hacer Hae Hai Hakan Hakim Hakki Halidun Hallvard 
-  Haluk Hamadeh Hameed Hamit Han Hang Hao Harald Harris Hasan Hassan 
-  Haugan Haugen Hazem He Hee Hefny Hein Helen Helena Helene Helgard 
-  Helge Helvijs Hendrik Heng Henrik Henry Hermon Hersir Hieu Him Hin 
-  Ho Hock Holmar Hong Hongxuan Hoong Hove Hronn Hsien Hsin Hsuan Hua 
-  Huai Hugo Hui Hun Hung Huseyin Hussain Hussein Hyder Hyoung 
+  Haluk Hamadeh Hameed Hamit Han Hang Hao Harald Harianto Hariram
+  Harris Hasan Hassan 
+  Haugan Haugen Hazel Hazem He Hee Hefny Hein Helen Helena Helene 
+  Helgard Helge Helvijs Hendrik Heng Henrik Henry Hermon Hersir Hieu 
+  Him Hin Hjalmar Ho Hock Holmar Hong Hongxuan Hoong Hove Hronn Hsien 
+  Hsin Hsuan Hua Huai Hugo Hui Hun Hung Huseyin Hussain Hussein Hyder 
+  Hyoung 
 
-  Ian Ibrahim Idland Ignacio Ijaz Ik Ilan Ilari Ildeniz Indra Inge 
+  Ian Ibrahim Idland Ignacio Ijaz Ik Ilan Ilari Ildeniz In Indra Inge 
   Inger Ingi Ingvald Ionis Ioulios Iqbal Irene Iriantha Irvin Isabel 
   Isin Iskandar Iskander Isyana Ivan Ivar Ivonne Izzet 
 
@@ -222,8 +231,8 @@ qw(
 
   Kaare Kahraman Kai Kang Kant Kanti Kapulu Kare Kareem Karim Karin 
   Karl Karna Kashinath Kate Kaur Kay Kayzen Kee Keith Kelly Kenyon 
-  Kenzo Keung Khan Khimji Khurrum Kieren Kimar Kin King Kinman 
-  Kirankumar Kishore Kit Kjellaug Konstantinos Korkut Krishna 
+  Kenzo Kerem Keung Khan Khimji Khurrum Ki Kieren Kimar Kin King Kinman 
+  Kirankumar Kishore Kit Kjellaug Kong Konstantinos Korkut Krishna 
   Krishnan Kristen Kristian Kristine Kristjan Kubilay Kui Kumar 
   Kumari Kun Kursad Kyoung Kyung 
 
@@ -233,15 +242,16 @@ qw(
   Lucia Lucian Luie Luigi Luis Luisa Luiza Lujon Lun Lung Luz Lygre 
   Lynn 
 
-  Machado Maciej Mae Magnus Mahbubul Mahmood Man Manaf Mani Manuel 
-  Mao Mar Marc Marcelin Marcelo Marek Margaret Margarita Margrethe 
-  Mari Maria Marian Marie Marina Marinh Marino Mario Marit Marius 
-  Mark Marques Marthen Martin Martins Massimo Matias Mauricio Mayo 
-  Mecbure Mei Melih Meng Merete Meta Mette Micael Michael Michailov 
-  Michel Miguel Mihaela Mihai Mihail Mihaylova Mikael Min Ming 
-  Mirabelle Miranda Mirta Mitra Mo Moazzem Mobinul Moen Mohamed 
-  Mohammad Mohan Mohon Moin Monica Monirul Mora Moran Morten Mou 
-  Mozez Muammer Muhamm Muhammad Muhsin Mui Mumtaz Murat Murthy 
+  Machado Maciej Mae Magnus Mahbubul Mahmood Malcom Man Manaf Mani 
+  Manuel Mao Mar Marc Marcelin Marcelo Marek Margaret Margarita 
+  Margrethe Mari Maria Marian Marie Marina Marinh Marino Mario Marit 
+  Marius Mark Marques Marthen Martin Martins Massimo Matias Mauricio 
+  May Mayo Mecbure Mei Melih Meng Merete Meta Mette Micael Michael 
+  Michailov Michel Miguel Mihaela Mihai Mihail Mihaylova Mikael Min 
+  Ming Mirabelle Miranda Mirta Mitra Mo Moazzem Mobinul Moen Mohamed 
+  Mohammad Mohan Mohon Mohsen Moin Monica Monirul Mora Moran Morten Mou 
+  Mounir
+  Mozez Muammer Mubashir Muhamm Muhammad Muhsin Mui Mumtaz Murat Murthy 
   Mushtaq Mustafa Muthu Muzharul 
 
   Nabi Naci Nafiz Naidu Najee Namineni Nan Narayan Narayana Narayanan 
@@ -249,32 +259,33 @@ qw(
   Nicholas Nicoletta Nicolle Nigar Nihat Nika Niklas No Nobre Noeline 
   Noelle Noervita Npeng Nualsri Nur Nurdan Nurhan 
 
-  Octavian Odile Odin Oi Oktem Olafs Olai Oland Olav Ole Olha Olivier 
+  Octavian Odile Odin Oi Oktem Olafs Olai Oland Olav Olcay Ole Olha Olivier 
   Olof Omar Omer Onder Onggani Onur Orhan Orn Oruc Osman Osnes Otto 
   Ove Ovidiu Owen Ozer Ozgur Ozkan 
 
   Pablo Pada Pall Palmelia Pan Paola Paoli Parakrama Parningotan 
-  Patrick Paul Paula Pauli Paulo Pawel Paz Pedro Pei-en Pelin Peng 
+  Patrick Paul Paula Pauli Paulo Pawel Paz Ped Pedro Pei-en Pelin Peng 
   Pennaf Perwez Peter Pethraj Petronia Petter Pham Pheng Philip 
   Philippe Pia Pierre Pin Ping Pino Pong Ponniah Prabakar Prakash 
   Prasad Premsagar Pretty Priscilla Purushottam 
 
   Qamar Qasim Qian Qiang Qing 
 
-  Rabie Rachel Rafael Ragnar Rahman Raiko Ramanathan Ramon Ran Ranjan 
+  Rabie Rachel Rafael Ragnar Rahman Raiko Raman Ramanathan Ramon Ran Ranjan 
   Ransani Rao Raphaela Rashebul Rashedul Rashid Rashmikant Rasiklal 
-  Raveen Ray Razzak Recep Reddi Rehman Remzi Rengasamy Resit Reynir 
-  Reza Ri Rianto Ricardo Richard Ricquier Rifat Rimnong Ristu Riswan 
+  Raveen Ray Razzak Recep Reddi Reese Rehman Remzi Rengasamy Resit Reynir 
+  Reza Ri Rianto Riaz Ricardo Richard Ricquier Rifat Rimnong Ristu Riswan 
   Rita Roar Robert Roberto Rock Rodolfo Roger Rom Romano Ronald 
   Ronaldo Rong Rosa Rosanna Rosaria Roxana Roy Ru Ruhi Rui Ruiz Runar 
-  Ruth Ryan Ryung 
+  Ruth Ruzgar Ryan Ryk Ryung 
 
   Saad Saadat Sabine Saeed Safak Safari Sai Said Sajid Saktia Sales 
   Salih Salman Samuel Samy San Sangwon Santoso Sarathi Sartika Sartje 
   Sastry Sattar Sau Saverio Saz Sebastian Seda Sekhar Selim Sencer 
   Sener Seng Seniha Senol Septimiu Serap Sergio Sergiu Serhat Serif 
-  Setyo Sevgi Seyhan Shahbana Shaihan Shaker Shakil Shamin Shan 
+  Setyo Sevgi Seyhan Shahbana Shahidul Shaihan Shaker Shakil Shamin Shan 
   Shankar Shanker Shantilal Shauq Shen Sheng Sherif Shi Shing Shirazi 
+  Shohdy
   Si Sigurd Sila Silvio Sim Sima Simoes Simon Simona Singh Siok Siri 
   Sirin Sivert Skarhol Smari Sobhagchand Soerlie Sofia Sofie Somchand 
   Sonya Soon Sophia Sophie Sorin Spike Sreedharan Sreekanth Srinivasa 
@@ -283,7 +294,7 @@ qw(
   Sup Supeno Surya Suryakant Susana Svarup Swaray Sydney Syed 
   Sze-Ching Sze-Wing 
 
-  Ta Tao Tat Taymour Teck Teixeira Teng Teresa Terje Theo Theodore 
+  Ta Tan Tao Tat Taymour Teck Teixeira Teng Teresa Terje Theo Theodore 
   Theoman Thiruvenkata Thomas Thora Tie Tin Tinas Ting Titus Toar 
   Tobing Tolga Tomas Tong Tor Tora Tore Torgeir Torio Tove Tri Trine 
   Triumf Tua Tugce Tugrul Tumo Tunc Tuncay Tung Tybring Tyr 
@@ -292,7 +303,7 @@ qw(
 
   Vadumangudi Vala Valentin Valerie Vaman Vegard Venkata Venkatraman 
   Venugopal Verona Veronica Vicenzo Victor Victoria Vidar Vijayanand 
-  Vince Virgil Virginia Vishnawath Vittorio Vogg Vural 
+  Vince Virgil Virginia Vishwanath Vittorio Vogg Vural 
 
   Wahyu Wai Walter Wardhani Watrap Wei Wen Werner Wilhemina Willem 
   William Willy Winarno Wisolus Wojciech Wook 
@@ -303,65 +314,71 @@ qw(
   Yoland Yong Young Yp Yu Yuan Yue Yun Yung Yves Yvonne 
 
   Zafer Zahir Zahra Zaman Zaverchand Zeki Zen Zeynep Zhen Zhi Zhong 
-  Zhou Zhu Zia-ul Ziaullah Zou Zsolt 
+  Zhou Zhu Zia-ul Ziaullah Zorana Zou Zsolt 
 );
 
 # This is used to verify that middle names are like first names.
 my @LAST_NAMES =
 qw(
-  AASAND ABATE ABI ABOU AGUADO AIT ALBERTI ALTMANN AMMENDOLIA ANAVI 
-  ARGAYNE ARMIJO ASHAK ASPLUND ATTARD
-  BACCHI BAJOS BALLERINO BALLI BANG BAPTISTA BARCOS BARDEN BARRERA 
-  BASELGA BATALLA BATZIA BAYRAK BEIRAO BELLERIO BELLUSSI BELLOCQ BELRHITI 
+  AASAND ABATE ABI ABOU ABREU AGUADO AIT AJI ALBERTI ALTMANN 
+  AMMENDOLIA ANAVI ANG
+  ARAUJO ARGAYNE ARMIJO ASHAK ASPLUND ATTARD AZZALI
+  BACCHI BAJOS BALLERINO BALLI BANG BAPTISTA BARCOS BARDEN BARONE BARRERA 
+  BASELGA BATALLA BATZIA BAUCK BAYRAK BEIRAO BELLERIO BELLUSSI BELLOCQ BELRHITI 
+  BENATAR
   BENDER BENSBY BETTENCOURT BETTI BILDE BJOERBEKK BO BONADIES BONANOMI
   BORDALLO BORSARELLI BOSCARO BOU BREDIUS BRENDERFORD BRENNA BRITO BRIX
+  BROEKSTEEG
   BRORHOLT BRUN BRYDE BUELENS BUI BULLARD BUUS
-  CABANNE CADI CANALI CANDUCCI CANERCANESSA CAPBERN CAPELLI CAPION 
+  CABANNE CADI CAMARGO CANALI CANDUCCI CANER CANESSA CANESSA
+  CAPBERN CAPELLI CAPION 
   CARINI CASALE CASTELLO CASTRO CATASTINI CATTANEO CESARI CESATI 
   CHACON CHAMACHERIL CHAMORRO CHAN CHAVES CHIN CHINDEMI CILLEBORG 
-  CIVIDIN COLOMBO 
+  CIVIDIN COLOMBO COOK
   COLONNA CORREA CORSICO COSIGNANI COSSU COSTA CREDAZZI CRISAFULLI 
   CROCI CUBILLO CUERVO
-  D'ANDREA D'OREY DALEMARK DAM DARNISA DELLADIO DELPIANO DENEGRI DIAZ 
-  DIEZ DIMITROV DONG DOUER DRINOVEC DWYER DYBVIK
-  ECK EDWARDS ERTBJERG
+  D'ANDREA D'OREY DAL DALDOUL DALEMARK DAM DARNISA DELLADIO DELPIANO DENEGRI DIAZ 
+  DIEZ DIMITROV DOBREVA DONG DOUER DRINOVEC DWYER DYBVIK
+  ECK EDWARDS ERICH ERTBJERG
   FABBRI FAHMY FANTONI FARINA FARHANI FERLAZZO FERNANDES FERNANDEZ 
-  FINCHELTUB FOLLIERO FOO FRANCES FRANCISCI
-  HALD HANSEN HARALDSDOTTIR HARLAND HAYMAN HERRERA HJORTH HOEL HOLM
-  HOLTZ HVIDBERG 
+  FINCHELTUB FLORIN FOLLIERO FOO FRANCES FRANCISCI
+  HALD HANSEN HARALDSDOTTIR HARLAND HAYMAN HERNANDEZ HERRERA HJORTH 
+  HOEL HOLM HOLMEN HOLTZ HVIDBERG 
   GAMIO GANDINI GARCIA GARRIGOU GARRONE GATT GERMANETTI GIACCHINI GLAZER 
-  GOETZ GOLDFARB GOMES GOMEZ GONCALVES GONZALES GRASHOLT GRAYSON 
+  GOETZ GOLDFARB GOMES GOMEZ GONCALVES GONZALES GONZALEZ GRASHOLT GRAYSON 
   GUANG GULDBRAND GUPPU
-  HELDAL HINZ HOLM HUC
-  IVANES ISRAELI
+  HAMADEH HELDAL HINZ HOLM HUC
+  IVANES ISRAEL ISRAELI
   JANSE JEITZ JIMENEZ JONES JUCHIMOWICZ JUHL JUL JUST JUUL
-  KAELIN KEITH KERLERO KIRK KIRKEGAARD KOCH KOFOED KORRE KRAFT KRAGH 
-  KROGH KRUSE KUREK
-  LANZOTTI LAUGE LEMAITRE LI LIAQUAT LINDAAS LINTRUP LOENBERG LOPES 
+  KAELIN KEITH KERLERO KIRK KIRKEGAARD KOCH KOFOED KONDAKCI 
+  KORRE KRAFT KRAGH KROGH KRUSE KUREK
+  LANZOTTI LAUGE LEMAITRE LEVY LI LIAQUAT LINDAAS LINTRUP LOENBERG LOPES 
   LOPEZ LORENTE LOSCHI LOVEJI LUND LUZ LYBECH LYNGE
-  MARANI MARITI MARTINEZ MARSH MATHE MAURY MAZE MAZZADI MICALI MIER 
+  MARANI MARTHEN MARITI MARTINEZ MARSH MATEO
+  MATHE MAURY MAZE MAZZADI MICALI MIER 
   MILESI MOELLER MOLLER MONTEIRO MORCK MOREIRA MUSCAT
-  NIELSEN NIKOLOV NOERHAVE NORMAN NYHEIM
+  NEGRIN NIELSEN NIKOLOV NOEL NOERHAVE NORMAN NYHEIM NYVANG
   OLIVEIRA
-  PABIS PALANCA PALMA PARASIAN PELAEZ PEREIRA PEREZ PINTO POLIMENI 
-  POMARES PONCE PORTANTI PORTO PRASETYO PRATO PUIG
+  PABIS PALANCA PALMA PAOLI PARASIAN PELAEZ PEREIRA PEREZ PINTO POLIMENI 
+  POMARES PONCE PORTANTI PORTO POWELL PRASETYO PRATO PUIG
   QUERAN
-  RAHTJEN RAIKO RAMIREZ RANDLE RASK RASMUSSEN RAULUND REY REYES 
-  RIBEYRO RICCI ROCABERG ROSEN ROUANET ROZPIDE RUMOR RUZ
+  RAHTJEN RAIKO RAMIREZ RANDLE RASK RASMUSSEN RAULUND REDDY REY REYES 
+  RIBEYRO RICCI ROBERT ROCABERT ROSEN ROUANET ROZPIDE RUMOR RUZ
   SALAZAR SANCHEZ SANCHO SANTOS SATHYAMANGALAM SCHMIDT SCHNETZER SEGURA 
   SELLAN SEQUI SERCY 
-  SERRANO SGOLOMBIS SHAUQ SHLESINGER SIANIPAR SILVA SILVERMAN SKAK 
+  SERRANO SGOLOMBIS SHAUQ SHLESINGER SIANIPAR SILVA SILVERMAN SIMON SKAK 
+  SKAUG
   SKOGLY SMADILO SOLLI SPINOLA STAMATOV STAUGAARD STEEN STEIGER 
   STEWART STRANDE SUNGUR
-  T'KINT TEKTURK THEISS THITTAI THRANE THUNBO TJON TOCCO TORKELSEN 
+  T'KINT TANEV TEKTURK THEISS THITTAI THRANE THUNBO TJON TOCCO TORKELSEN 
   TORNBERG TRAN TRONCHETTI TURLETTI TUTTOBENE TVEDEN
-  URIBE
-  VAGN VAISBICH VALENZUELA VARGAS VEEL VELANDO VERDI VERMEHREN 
+  URIBE USBER
+  VADUMANGUDI VAGN VAISBICH VALENZUELA VARGAS VEEL VELANDO VERDI VERMEHREN 
   VIGORELLI VILA VILBORG VINBERG VIVARELLI
   WAN WANG WEI WEISS WHEATLEY WICKBE WILLE WINGAARD
   XIAO
   YEH
-  ZACK ZAIDENBERG ZAMMIT ZEDDA
+  ZACK ZAIDENBERG ZAMMIT ZEDDA ZUNIGA ZUR-CAMPANILE
 );
 
 my %FIRST_NAMES_HASH;
@@ -394,12 +411,14 @@ my %PARTICLES =
   LA => 1,
   LE => 1,
   LO => 1,
+  MAC => 1,
   SAINT => 1,
   SANTA => 1,
   ST => 1,
   TEN => 1,
   TER => 1,
   VAN => 1,
+  "VAN'T" => 1,
   VON => 1,
   Y => 1,
   ZU => 1
@@ -512,6 +531,12 @@ sub remove_various
     if ($w eq 'LADY')
     {
       $self->{TITLE} = 'Lady';
+      splice @$words, $i, 1;
+      next;
+    }
+    if ($w eq 'II' || $w eq 'III')
+    {
+      $self->{DYNAST} = $w;
       splice @$words, $i, 1;
       next;
     }
@@ -670,13 +695,13 @@ sub add
     }
     elsif ($caps[0] == INITIAL && $caps[1] == ALLCAPS)
     {
-      $self->add_first_initial($key, $words[0]);
+      $self->add_middle_initial($key, $words[0]);
       $self->add_last($key, $words[1]);
       return;
     }
     elsif ($caps[0] == ALLCAPS && $caps[1] == INITIAL)
     {
-      $self->add_first_initial($key, $words[1]);
+      $self->add_middle_initial($key, $words[1]);
       $self->add_last($key, $words[0]);
       return;
     }
@@ -702,6 +727,7 @@ sub add
     }
 
     return if $self->add_with_particle($key, \@words, \@caps, \@particles);
+    return if $self->add_with_initials($key, \@words, \@caps, \@particles);
   }
 
   if ($#caps == 2 && $caps[0] == CAPITALIZED && $caps[2] == ALLCAPS)
@@ -721,12 +747,12 @@ sub add
     if ($caps[1] == INITIAL)
     {
       $self->add_first($key, $words[0]);
-      $self->add_first_initial($key, $words[1]);
+      $self->add_middle_initial($key, $words[1]);
       $self->add_last($key, $words[2]);
       return;
     }
 
-    print "$text YYY\n";
+    print "$text YYY($#caps)\n";
     return;
   }
     
@@ -832,6 +858,20 @@ sub add_first_initial
 }
 
 
+sub add_middle_initial
+{
+  my ($self, $key, $text) = @_;
+
+  # This is a middle initial (or initials).
+  if (exists $self->{MIDDLE_INITIAL})
+  {
+    die "Already have a middle initial when adding $text";
+  }
+
+  $self->{MIDDLE_INITIAL} = $text;
+}
+
+
 sub add_last
 {
   my ($self, $key, $text) = @_;
@@ -899,6 +939,60 @@ sub add_with_particle
 
   $self->add_first($key, $first);
   $self->add_last($key, $last);
+  return 1;
+}
+
+
+sub add_with_initials
+{
+  my ($self, $key, $words, $caps) = @_;
+
+  my $len = $#$words;
+  my $p_first = 99;
+  for my $i (0 .. $len)
+  {
+    if ($caps->[$i] eq INITIAL)
+    {
+      $p_first = $i;
+      last;
+    }
+  }
+
+  my $p_last = -1;
+  for my $i (reverse 0 .. $len)
+  {
+    if ($caps->[$i] eq INITIAL)
+    {
+      $p_last = $i;
+      last;
+    }
+  }
+
+  return 0 unless $p_first <= $p_last;
+  return 0 unless $p_first >= 0 && $p_last < $len;
+
+  for my $i (0 .. $p_first-1)
+  {
+    return 0 unless $caps->[$i] eq CAPITALIZED;
+  }
+
+  for my $i ($p_last+1 .. $len)
+  {
+    return 0 unless $caps->[$i] eq ALLCAPS;
+  }
+
+  my $first = '';
+  if ($p_first > 0)
+  {
+    my $first = join(' ', @{$words}[0 .. $p_first-1]);
+    $self->add_first($key, $first);
+  }
+
+  my $initials = join(' ', @{$words}[$p_first .. $p_last]);
+  my $last = join(' ', @{$words}[$p_last+1 .. $len]);
+  $self->add_middle_initial($key, $initials);
+  $self->add_last($key, $last);
+
   return 1;
 }
 
