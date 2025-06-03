@@ -153,129 +153,214 @@ my %SPECIALS =
 # This is used to verify that middle names are like first names.
 my @FIRST_NAMES =
 qw(
-  Aaron Aas Abbas Abdel Abdullah Abel Adie Adrian Agnieszka Ahmad Ahmed 
-  Ake Alain Albert Alberto Alejandra Alejandro Alex Alexander Alexandra 
-  Alexandre Alexandru Alfredo Ali Alvares Anders Andre Andrea Andreas 
-  Andreea Andrei Andres Andrias Andrzej Anfinn Angel Angela Angelica 
-  Angelo Angelova Anil Anikovich Anita Anker Ann Anne Annette Anthonius 
-  Anthony Anton Antonia Antonio Ara Are Ariel Aril Arild Arne Arthur 
-  Arturo Arve Asbjorn Aslam Atle Aulia Aulid
-  Bagus Bambang Barbosa Barki Battista Beate Beatrice Belle Benedict 
-  Beniamino Berkay Bertram Birgitte Bjoerk Bjoernar Bjorn Bogdan 
-  Borgar Borissova Breves Brian Brita Britt Bruna Bruno
-  Carla Carlo Carlos Carmen Carol Carolina Cata Cato Cecilia Celia 
-  Celina Cesare Chandra Charles Charlie Charllene Charlotte Christer 
-  Christian Christina Christine Christopher Claude Claudiu Christa 
-  Cosmo Costanza Craig Cristian Cristina
-  Dana Daniel Daniela Dario David Delfina Diana Didier Dimitar
-  Dirk Doga Dolores Domenico Dumitru
-  Ebrahim Edmund Edoardo Eduardo Edward Egil Eidur Einar Eirik Eivind 
-  Elena Elia Eline Elisa Elise Elizabeth Elvansyah Elvin Elvira Emil 
-  Emilie Emmanuel Endre Enok Enrica Enrique Erdem Erik Eriks Erling 
-  Esther Ethem Eufke Eugenia Eugenio Ezequiel
-  Fay Federico Felicia Felipe Fernando Filippo Florencia Fold Frances 
-  Francesco Francis Francisco Francois Francoise Franke Fraser Frederic 
-  Frederik Fredrik Freyr Frimaco Frode Funda
-  Gabizo Gabriel Gabriela Gabryjela Gail Gaute Gautur Georg Georges 
-  Gerard Gheorghe Gigello Giovanni Giulio Gisella Gisli Giuseppe 
-  Gracio Grazia Graziela Gudlaug Guimar Guldamla Gundega Gunnar Gurcan
-  Gursel
-  Gustaaf
-  Haakon Hallvard Harald Hasan Hassan Haugen Hefny Hein Helen Helena 
-  Helene 
-  Helge Helvijs Hendrik Henrik Henry Hersir Holmar Hove Hronn Hugo 
-  Hussain
-  Ian Ibrahim Idland Ignacio Ilari Ildeniz Inge Inger Ingi Ingvald 
-  Ioulios Irene Irvin Isabel Iskander Ivan Ivar Ivonne
-  Jack Jacob Jacques Jakob Jakup James Jan Jane Janneth Javier 
-  Jason Jean Jeffry Jeremiah Jerry Joan Joana Joao Joaquin Joergen 
-  Johan Johan Johannes John Jona Jonny Jorge Jorgen Jose Joseph 
-  Judith Juan Juhan Justus
-  Kaare Kare Karim Karin Karl Kate Kay Kayzen Keith Kelly Kenyon 
-  Khan Kjellaug Konstantinos Kristen Kristian Kristine Kristjan 
-  Kubilay Kumar
-  Laurentiu Lavinia Lee Lena Lene Leon Leonardo Leslie Lia Lija 
-  Lilian Lily Lionel Lisa Lise Lou Louis Louisa Louise Luca Lucasz 
-  Lucette Lucia Lucian Luigi Luis Luisa Luiza Luz Lygre Lynn
-  Machado Maciej Mae Magnus Mahmood Manuel Marcelo Marc Marcelin Marek 
-  Margaret Margarita Margrethe Mari Maria Marian Marie Marina Marinh
-  Marino Mario Marit Mark Marius Marques Martin Martins Massimo Matias 
-  Mauricio Merete Meta Mette Micael Michael Michel Miguel Mihaela 
-  Mihai Mihail Mihaylova Mikael Mirabelle Miranda Mirta Mohamed 
-  Mohan Monica Mora Morten Muhamm Muhammad Mustafa Muthu Muzharul
-  Nafiz Nazar Nicholas Nicoletta Nicolle Nika Niklas Noeline Noelle
-  Odile Octavian Odin Oktem Olai Olafs Oland Olav Ole Olha Olivier 
-  Olof Omar 
-  Omer Onggani Orn Osman Osnes Otto Ove Ovidiu Owen Ozer
-  Pablo Pall Paola Paoli Patrick Paul Paula Pauli Paulo Pawel 
-  Pedro Peter Petronia Petter Philip Philippe Pia Pierre Pino 
-  Prakash Prasad Priscilla
-  Rabie Rachel Rafael Ragnar Rahman Raiko Ramon Raphaela Rianto
-  Ricardo Richard Ricquier Riswan Rita Roar Robert Roberto Rodolfo 
-  Roger Rom Romano Ronald Ronaldo Rosa Rosanna Rosaria Roxana Roy Ruiz
-  Runar Ruth Ryan
-  Sabine Saeed Said Sajid Sales Sartje Sattar Saverio Saz Sebastian 
-  Septimiu Sergio Sergiu Shankar Shirazi Sigurd Sila Silvio Simon Simona 
-  Singh Siri Sivert Skarhol Smari Soerlie Sofia Sofie Sophia 
-  Sophie Sorin Spike 
-  Stephen Steven Stewart Sture Sue Supeno Susana Swaray Sydney
-  Teresa Terje Theo Theodore Thomas Thora Titus Toar Tomas Tor Tora
-  Tore Torgeir Torio Tove Trine Triumf Tua Tybring
-  Uffe Ugur Ulrik Ursin
-  Vala Valentin Valerie Vegard Venkata Veronica Victor Victoria 
-  Virgil Virginia Vittorio
-  Walter Werner Wilhemina Willem William Willy Wojciech
-  Xavier
-  Yehia Yoland Yves Yvonne
-  Zahir Zsolt
+  Aaron Aas Abbas Abdel Abdimulia Abdul Abdullah Abel Abulrahman 
+  Adele Adie Adji Adnane Adrian Ae Agha Agnieszka Agus Ahasan Ahmad 
+  Ahmed Ahmer Ake Akhtar Akter Alain Albert Alberto Alejandra 
+  Alejandro Alex Alexander Alexandra Alexandre Alexandru Alfredo Ali 
+  Almeida Alper Alta Altan Alvares Ameer Aminur Amita An Anand Anant 
+  Anders Andre Andrea Andreas Andreea Andrei Andres Andrias Andrzej 
+  Anfinn Angel Angela Angelica Angelo Angelova Anikovich Anil Anis 
+  Anita Anker Ann Anne Annette Anthonius Anthony Anton Antonia 
+  Antonio Ara Ardiansyah Are Ariel Aril Arild Arne Arslan Arthur 
+  Arturo Arve Arvind Arya Arzum Asbjorn Asfandiyar Asghar Aslam 
+  Aslihan Assis Atle Aulia Aulid Avsar Ayeska Aysen Ayu Ayyampalayam 
+  Azat 
+
+  Babu Bae Bagus Baliram Bambang Barbosa Barki Barkin Bas Battista 
+  Beate Beatrice Belle Benedict Beniamino Berka Berkay Berkim Bertram 
+  Bey Bhan Bharadhan Birgitte Birol Bjoerk Bjoernar Bjorn Bogdan 
+  Borgar Borissova Brarne Breves Brian Brita Britt Bruce Bruna Bruno 
+  Buke Bye 
+
+  Cagan Cagdas Cai Can Carla Carlo Carlos Carmen Carol Carolina Cata 
+  Catalin Cato Cecilia Celal Celia Celina Cem Cemal Ceren Cesare 
+  Chairudin Chakravarthy Chand Chander Chandra Chang Charles Charlie 
+  Charllene Charlotte Charya Chen Cheng Chhotelal Chi Chih Chin Chiu 
+  Choi Choo Chou Choudary Choukri Chow Christa Christer Christian 
+  Christina Christine Christopher Chuan Chul Chun Chung Cici Cing 
+  Claude Claudiu Cosmo Costanza Craig Cristian Cristina Cruz Cyprian 
+
+  Daldoul Dan Dana Daniel Daniela Dario Darma David Delfina Deng 
+  Deniz Devchand Devshi Dey Diana Dicle Didem Didier Dimitar Dirk 
+  Doga Dolores Domenico Dong Dumitru 
+
+  Ebrahim Edmund Edoardo Eduardo Edward Efe Egemen Egil Eidur Einar 
+  Eirik Eivind Eka Elena Elia Eline Elisa Elise Elizabeth Elvansyah 
+  Elvin Elvira Emil Emilie Emin Emine Emir Emmanuel Emre En Endre 
+  Enok Enrica Enrique Enver Ercolian Erdem Erik Eriks Erling Erol 
+  Ersan Esra Esther Ethem Eufke Eugenia Eugenio Ezequiel Ezz 
+
+  Fa Fai Falah Falk Fang Fanly Faruk Fawzy Fay Federico Fei Felicia 
+  Felipe Feng Fernando Ferruh Fethi Fikret Filippo Florencia Florin 
+  Fold Frances Francesco Francis Francisco Francois Francoise Franke 
+  Fraser Frederic Frederik Fredrik Freyr Frimaco Frode Fu Fuad Funda 
+  Furkan Fusun 
+
+  Gabizo Gabriel Gabriela Gabryjela Gail Gama Gamze Gan Gautama Gaute 
+  Gautur Ge Georg Georges Gerard Ghaffar Gheorghe Ghias Gigello 
+  Giovanni Gisella Gisli Giulio Giuseppe Glen Gokhan Gopal 
+  Gopalakrishna Gorkem Gracio Grazia Graziela Gro Gu Guang Gudlaug 
+  Guimar Guirguis Gul Guldamla Gulen Gundega Guney Gunnar Guo Gurcan 
+  Gursel Gurunath Gustaaf 
+
+  Haakon Habibul Hacer Hae Hai Hakan Hakim Hakki Halidun Hallvard 
+  Haluk Hamadeh Hameed Hamit Han Hang Hao Harald Harris Hasan Hassan 
+  Haugan Haugen Hazem He Hee Hefny Hein Helen Helena Helene Helgard 
+  Helge Helvijs Hendrik Heng Henrik Henry Hermon Hersir Hieu Him Hin 
+  Ho Hock Holmar Hong Hongxuan Hoong Hove Hronn Hsien Hsin Hsuan Hua 
+  Huai Hugo Hui Hun Hung Huseyin Hussain Hussein Hyder Hyoung 
+
+  Ian Ibrahim Idland Ignacio Ijaz Ik Ilan Ilari Ildeniz Indra Inge 
+  Inger Ingi Ingvald Ionis Ioulios Iqbal Irene Iriantha Irvin Isabel 
+  Isin Iskandar Iskander Isyana Ivan Ivar Ivonne Izzet 
+
+  Ja Jack Jacob Jacques Jakob Jakup James Jan Jane Janneth Jason 
+  Javier Jean Jeffry Jen Jeng Jeremiah Jerry Jia Jiang Jie Jin Jing 
+  Joan Joana Joao Joaquin Joergen Johan Johannes John Jona Jonny Joo 
+  Jorge Jorgen Jose Joseph Juan Jubilate Judith Juhan Jul Jun Jung 
+  Justus 
+
+  Kaare Kahraman Kai Kang Kant Kanti Kapulu Kare Kareem Karim Karin 
+  Karl Karna Kashinath Kate Kaur Kay Kayzen Kee Keith Kelly Kenyon 
+  Kenzo Keung Khan Khimji Khurrum Kieren Kimar Kin King Kinman 
+  Kirankumar Kishore Kit Kjellaug Konstantinos Korkut Krishna 
+  Krishnan Kristen Kristian Kristine Kristjan Kubilay Kui Kumar 
+  Kumari Kun Kursad Kyoung Kyung 
+
+  Lal Lam Lan Lao Lata Lau Laurentiu Lavinia Lee Lei Lena Lene Leon 
+  Leonardo Leslie Li Lia Liang Lija Lilian Lily Lin Lionel Lisa Lise 
+  Lliker Lok Long Lou Louis Louisa Louise Lu Luca Lucasz Lucette 
+  Lucia Lucian Luie Luigi Luis Luisa Luiza Lujon Lun Lung Luz Lygre 
+  Lynn 
+
+  Machado Maciej Mae Magnus Mahbubul Mahmood Man Manaf Mani Manuel 
+  Mao Mar Marc Marcelin Marcelo Marek Margaret Margarita Margrethe 
+  Mari Maria Marian Marie Marina Marinh Marino Mario Marit Marius 
+  Mark Marques Marthen Martin Martins Massimo Matias Mauricio Mayo 
+  Mecbure Mei Melih Meng Merete Meta Mette Micael Michael Michailov 
+  Michel Miguel Mihaela Mihai Mihail Mihaylova Mikael Min Ming 
+  Mirabelle Miranda Mirta Mitra Mo Moazzem Mobinul Moen Mohamed 
+  Mohammad Mohan Mohon Moin Monica Monirul Mora Moran Morten Mou 
+  Mozez Muammer Muhamm Muhammad Muhsin Mui Mumtaz Murat Murthy 
+  Mushtaq Mustafa Muthu Muzharul 
+
+  Nabi Naci Nafiz Naidu Najee Namineni Nan Narayan Narayana Narayanan 
+  Nasir Nath Nayer Naz Nazan Nazar Nazif Nazli Nazmul Nedim Ngin Nian 
+  Nicholas Nicoletta Nicolle Nigar Nihat Nika Niklas No Nobre Noeline 
+  Noelle Noervita Npeng Nualsri Nur Nurdan Nurhan 
+
+  Octavian Odile Odin Oi Oktem Olafs Olai Oland Olav Ole Olha Olivier 
+  Olof Omar Omer Onder Onggani Onur Orhan Orn Oruc Osman Osnes Otto 
+  Ove Ovidiu Owen Ozer Ozgur Ozkan 
+
+  Pablo Pada Pall Palmelia Pan Paola Paoli Parakrama Parningotan 
+  Patrick Paul Paula Pauli Paulo Pawel Paz Pedro Pei-en Pelin Peng 
+  Pennaf Perwez Peter Pethraj Petronia Petter Pham Pheng Philip 
+  Philippe Pia Pierre Pin Ping Pino Pong Ponniah Prabakar Prakash 
+  Prasad Premsagar Pretty Priscilla Purushottam 
+
+  Qamar Qasim Qian Qiang Qing 
+
+  Rabie Rachel Rafael Ragnar Rahman Raiko Ramanathan Ramon Ran Ranjan 
+  Ransani Rao Raphaela Rashebul Rashedul Rashid Rashmikant Rasiklal 
+  Raveen Ray Razzak Recep Reddi Rehman Remzi Rengasamy Resit Reynir 
+  Reza Ri Rianto Ricardo Richard Ricquier Rifat Rimnong Ristu Riswan 
+  Rita Roar Robert Roberto Rock Rodolfo Roger Rom Romano Ronald 
+  Ronaldo Rong Rosa Rosanna Rosaria Roxana Roy Ru Ruhi Rui Ruiz Runar 
+  Ruth Ryan Ryung 
+
+  Saad Saadat Sabine Saeed Safak Safari Sai Said Sajid Saktia Sales 
+  Salih Salman Samuel Samy San Sangwon Santoso Sarathi Sartika Sartje 
+  Sastry Sattar Sau Saverio Saz Sebastian Seda Sekhar Selim Sencer 
+  Sener Seng Seniha Senol Septimiu Serap Sergio Sergiu Serhat Serif 
+  Setyo Sevgi Seyhan Shahbana Shaihan Shaker Shakil Shamin Shan 
+  Shankar Shanker Shantilal Shauq Shen Sheng Sherif Shi Shing Shirazi 
+  Si Sigurd Sila Silvio Sim Sima Simoes Simon Simona Singh Siok Siri 
+  Sirin Sivert Skarhol Smari Sobhagchand Soerlie Sofia Sofie Somchand 
+  Sonya Soon Sophia Sophie Sorin Spike Sreedharan Sreekanth Srinivasa 
+  Stephen Steven Stewart Stirling Sture Su Suba Subari Subbarao 
+  Subramanian Sue Suheda Sujauddin Sule Suleiman Sultana Sum Sunra 
+  Sup Supeno Surya Suryakant Susana Svarup Swaray Sydney Syed 
+  Sze-Ching Sze-Wing 
+
+  Ta Tao Tat Taymour Teck Teixeira Teng Teresa Terje Theo Theodore 
+  Theoman Thiruvenkata Thomas Thora Tie Tin Tinas Ting Titus Toar 
+  Tobing Tolga Tomas Tong Tor Tora Tore Torgeir Torio Tove Tri Trine 
+  Triumf Tua Tugce Tugrul Tumo Tunc Tuncay Tung Tybring Tyr 
+
+  Uffe Ufuk Ugur Ulrik Ulvi Umair Umit Ursin Usman Utku Uttamchand 
+
+  Vadumangudi Vala Valentin Valerie Vaman Vegard Venkata Venkatraman 
+  Venugopal Verona Veronica Vicenzo Victor Victoria Vidar Vijayanand 
+  Vince Virgil Virginia Vishnawath Vittorio Vogg Vural 
+
+  Wahyu Wai Walter Wardhani Watrap Wei Wen Werner Wilhemina Willem 
+  William Willy Winarno Wisolus Wojciech Wook 
+
+  Xavier Xi Xian Xiang Xin Xing Xinying Xiong Xu Xuan 
+
+  Yan Yang Yao Yasin Yau Yb Ye Yehia Yen Yeung Yi Yigit Yin Ying 
+  Yoland Yong Young Yp Yu Yuan Yue Yun Yung Yves Yvonne 
+
+  Zafer Zahir Zahra Zaman Zaverchand Zeki Zen Zeynep Zhen Zhi Zhong 
+  Zhou Zhu Zia-ul Ziaullah Zou Zsolt 
 );
 
 # This is used to verify that middle names are like first names.
 my @LAST_NAMES =
 qw(
-  AASAND ABATE ABOU AGUADO ALBERTI ALTMANN AMMENDOLIA ARGAYNE ARMIJO 
-  ASPLUND ATTARD
+  AASAND ABATE ABI ABOU AGUADO AIT ALBERTI ALTMANN AMMENDOLIA ANAVI 
+  ARGAYNE ARMIJO ASHAK ASPLUND ATTARD
   BACCHI BAJOS BALLERINO BALLI BANG BAPTISTA BARCOS BARDEN BARRERA 
-  BASELGA BATALLA BATZIA BEIRAO BELLERIO BELLUSSI BELLOCQ BELRHITI 
-  BENDER BENSBY BETTENCOURT BETTI BILDE BJOERBEKK BO BONADIES 
-  BORDALLO BORSARELLI BOSCARO BRENDERFORD BRENNA BRITO BRORHOLT 
-  BRUN BRYDE BUELENS BULLARD BUUS
-  CANALI CANDUCCI CANESSA CAPBERN CAPELLI CAPION CASALE CASTELLO 
-  CASTRO CATASTINI CATTANEO CESARI CESATI CHACON CHAMORRO CHAVES 
-  CHINDEMI CILLEBORG CIVIDIN COLOMBO COLONNA CORREA CORSICO 
-  COSIGNANI COSSU COSTA CREDAZZI CRISAFULLI CROCI CUBILLO CUERVO
-  DALEMARK DAM DELLADIO DELPIANO DENEGRI DIAZ DIEZ DIMITROV DRINOVEC
-  DWYER DYBVIK
+  BASELGA BATALLA BATZIA BAYRAK BEIRAO BELLERIO BELLUSSI BELLOCQ BELRHITI 
+  BENDER BENSBY BETTENCOURT BETTI BILDE BJOERBEKK BO BONADIES BONANOMI
+  BORDALLO BORSARELLI BOSCARO BOU BREDIUS BRENDERFORD BRENNA BRITO BRIX
+  BRORHOLT BRUN BRYDE BUELENS BUI BULLARD BUUS
+  CABANNE CADI CANALI CANDUCCI CANERCANESSA CAPBERN CAPELLI CAPION 
+  CARINI CASALE CASTELLO CASTRO CATASTINI CATTANEO CESARI CESATI 
+  CHACON CHAMACHERIL CHAMORRO CHAN CHAVES CHIN CHINDEMI CILLEBORG 
+  CIVIDIN COLOMBO 
+  COLONNA CORREA CORSICO COSIGNANI COSSU COSTA CREDAZZI CRISAFULLI 
+  CROCI CUBILLO CUERVO
+  D'ANDREA D'OREY DALEMARK DAM DARNISA DELLADIO DELPIANO DENEGRI DIAZ 
+  DIEZ DIMITROV DONG DOUER DRINOVEC DWYER DYBVIK
   ECK EDWARDS ERTBJERG
-  FABBRI FANTONI FARINA FERLAZZO FERNANDES FERNANDEZ FINCHELTUB 
-  FOLLIERO FRANCES FRANCISCI
+  FABBRI FAHMY FANTONI FARINA FARHANI FERLAZZO FERNANDES FERNANDEZ 
+  FINCHELTUB FOLLIERO FOO FRANCES FRANCISCI
   HALD HANSEN HARALDSDOTTIR HARLAND HAYMAN HERRERA HJORTH HOEL HOLM
   HOLTZ HVIDBERG 
-  GANDINI GARCIA GARRIGOU GARRONE GERMANETTI GIACCHINI GLAZER 
-  GOETZ GOMES GOMEZ GONCALVES GONZALES GRASHOLT GRAYSON GULDBRAND
+  GAMIO GANDINI GARCIA GARRIGOU GARRONE GATT GERMANETTI GIACCHINI GLAZER 
+  GOETZ GOLDFARB GOMES GOMEZ GONCALVES GONZALES GRASHOLT GRAYSON 
+  GUANG GULDBRAND GUPPU
   HELDAL HINZ HOLM HUC
-  ISRAELI
-  JEITZ JIMENEZ JONES JUCHIMOWICZ JUHL JUL JUST JUUL
-  KEITH KERLERO KIRKEGAARD KOCH KOFOED KORRE KRAFT KRAGH KROGH KRUSE
-  LANZOTTI LAUGE LEMAITRE LIAQUAT LINDAAS LINTRUP LOENBERG LOPES 
-  LOPEZ LORENTE LOSCHI LUND LUZ LYNGE
+  IVANES ISRAELI
+  JANSE JEITZ JIMENEZ JONES JUCHIMOWICZ JUHL JUL JUST JUUL
+  KAELIN KEITH KERLERO KIRK KIRKEGAARD KOCH KOFOED KORRE KRAFT KRAGH 
+  KROGH KRUSE KUREK
+  LANZOTTI LAUGE LEMAITRE LI LIAQUAT LINDAAS LINTRUP LOENBERG LOPES 
+  LOPEZ LORENTE LOSCHI LOVEJI LUND LUZ LYBECH LYNGE
   MARANI MARITI MARTINEZ MARSH MATHE MAURY MAZE MAZZADI MICALI MIER 
-  MOELLER MOLLER MONTEIRO MORCK MOREIRA MUSCAT
+  MILESI MOELLER MOLLER MONTEIRO MORCK MOREIRA MUSCAT
   NIELSEN NIKOLOV NOERHAVE NORMAN NYHEIM
   OLIVEIRA
-  PABIS PALANCA PARASIAN PELAEZ PEREZ POLIMENI PONCE PORTANTI PRATO
+  PABIS PALANCA PALMA PARASIAN PELAEZ PEREIRA PEREZ PINTO POLIMENI 
+  POMARES PONCE PORTANTI PORTO PRASETYO PRATO PUIG
   QUERAN
-  RAHTJEN RAMIREZ RANDLE RASK RASMUSSEN RAULUND REY REYES RICCI 
-  ROCABERG ROSEN ROUANET ROZPIDE RUZ
-  SANCHEZ SANTOS SCHMIDT SCHNETZER SEGURA SELLAN SEQUI SERCY 
-  SERRANO SGOLOMBIS SHLESINGER SILVA SILVERMAN SKOGLY SMADILO 
-  SOLLI SPINOLA STAMATOV STAUGAARD STEEN STEIGER STEWART STRANDE
-  SUNGUR
-  THEISS THRANE THUNBO TOCCO TORKELSEN TORNBERG TURLETTI TUTTOBENE
-  TVEDEN
-  VAGN VAISBICH VALENZUELA VEEL VERDI VERMEHREN VIGORELLI VILBORG 
-  VINBERG VIVARELLI
-  WANG WEISS WHEATLEY WICKBE WINGAARD
+  RAHTJEN RAIKO RAMIREZ RANDLE RASK RASMUSSEN RAULUND REY REYES 
+  RIBEYRO RICCI ROCABERG ROSEN ROUANET ROZPIDE RUMOR RUZ
+  SALAZAR SANCHEZ SANCHO SANTOS SATHYAMANGALAM SCHMIDT SCHNETZER SEGURA 
+  SELLAN SEQUI SERCY 
+  SERRANO SGOLOMBIS SHAUQ SHLESINGER SIANIPAR SILVA SILVERMAN SKAK 
+  SKOGLY SMADILO SOLLI SPINOLA STAMATOV STAUGAARD STEEN STEIGER 
+  STEWART STRANDE SUNGUR
+  T'KINT TEKTURK THEISS THITTAI THRANE THUNBO TJON TOCCO TORKELSEN 
+  TORNBERG TRAN TRONCHETTI TURLETTI TUTTOBENE TVEDEN
+  URIBE
+  VAGN VAISBICH VALENZUELA VARGAS VEEL VELANDO VERDI VERMEHREN 
+  VIGORELLI VILA VILBORG VINBERG VIVARELLI
+  WAN WANG WEI WEISS WHEATLEY WICKBE WILLE WINGAARD
+  XIAO
+  YEH
   ZACK ZAIDENBERG ZAMMIT ZEDDA
 );
 
@@ -305,13 +390,18 @@ my %PARTICLES =
   DO => 1,
   DU => 1,
   EL => 1,
+  IBN => 1,
   LA => 1,
   LE => 1,
   LO => 1,
+  SAINT => 1,
+  SANTA => 1,
+  ST => 1,
   TEN => 1,
   TER => 1,
   VAN => 1,
   VON => 1,
+  Y => 1,
   ZU => 1
 );
 
@@ -321,6 +411,51 @@ sub new
   my $class = shift;
   my $self = bless {}, $class;
   return $self;
+}
+
+
+sub reprint_list
+{
+  my ($list, $name) = @_;
+  my @unique_sorted = sort { lc($a) cmp lc($b) } do 
+  {
+    my %seen;
+    grep { !$seen{lc $_}++ } @$list;
+  };
+
+  # Reprint in formatted style
+  print "my \@$name =\nqw(\n";
+
+  my $indent = "  ";
+  my $line = $indent;
+  my $prev_initial = '';
+
+  foreach my $name (@unique_sorted) 
+  {
+    my $initial = uc substr($name, 0, 1);
+
+    # Add blank line when initial changes
+    if ($prev_initial ne '' && $initial ne $prev_initial) 
+    {
+      print "$line\n" if $line =~ /\S/;
+      print "\n";
+      $line = $indent;
+    }
+
+  # Check if adding the name exceeds 70 columns
+  if (length($line) + length($name) + 1 > 70) 
+  {
+    print "$line\n";
+    $line = $indent;
+  }
+
+  $line .= "$name ";
+  $prev_initial = $initial;
+}
+
+  # Print any remaining names in the buffer
+  print "$line\n" if $line =~ /\S/;
+  print ");\n";
 }
 
 
@@ -356,9 +491,33 @@ sub remove_various
       splice @$words, $i, 1;
       next;
     }
-    if ($w =~ /^Maj\.*$/)
+    if ($w =~ /^Maj\.+$/)
     {
       $self->{TITLE} = 'Major';
+      splice @$words, $i, 1;
+      next;
+    }
+    if ($w eq 'Prinzessin')
+    {
+      $self->{TITLE} = 'Princess';
+      splice @$words, $i, 1;
+      next;
+    }
+    if ($w eq 'Brig-Gen')
+    {
+      $self->{TITLE} = 'Brigadier General';
+      splice @$words, $i, 1;
+      next;
+    }
+    if ($w eq 'LADY')
+    {
+      $self->{TITLE} = 'Lady';
+      splice @$words, $i, 1;
+      next;
+    }
+    if ($i == 0 && ($w eq 'Baron' || $w eq 'Count'))
+    {
+      $self->{TITLE} = $w;
       splice @$words, $i, 1;
       next;
     }
@@ -482,6 +641,9 @@ sub add
 {
   my ($self, $key, $text, $country) = @_;
 
+  # reprint_list(\@FIRST_NAMES, 'FIRST_NAMES');
+  # die;
+
   my @words = split /\s+/, $text;
 
   $self->remove_various(\@words);
@@ -563,6 +725,9 @@ sub add
       $self->add_last($key, $words[2]);
       return;
     }
+
+    print "$text YYY\n";
+    return;
   }
     
 
