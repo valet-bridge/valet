@@ -48,6 +48,7 @@ my %SPECIALS =
     Chris => {Krzysztof => 1},
     Conny => {Catharine => 1},
     Dave => {David => 1},
+    Denny => {'Deny Jacob' => 1},
     Desi => {'Desislava Borissova' => 1},
     Det => {Bernadette => 1},
     Dick => {Richard => 1, 'Richard J.' => 1},
@@ -57,6 +58,7 @@ my %SPECIALS =
     Henk => {Hendrik => 1},
     Hovik => {Hovhannes => 1},
     'Jean-Jacque' => {'Jean-Jacques' => 1},
+    Jenny => {'Jennifer Christina' => 1},
     Jerem => {Jeremi => 1},
     Jim => {James => 1, 'James E.' => 1},
     Katie => {Catherine => 1},
@@ -67,6 +69,7 @@ my %SPECIALS =
     Maggie => {Margaret => 1},
     Mandy => {Adamantia => 1},
     Manos => {Emmanuel => 1},
+    Mansur => {'Mansoor Ghulam' => 1},
     Matt => {Matthew => 1},
     Mauri => {Maurizio => 1},
     Natasha => {Nataliya => 1},
@@ -91,6 +94,7 @@ my %SPECIALS =
     Charles => {'Ka Ning' => 1},
     Denis => {Darko => 1},
     Dimmie => {Irene => 1},
+    Gautam => {'Subhash Chander' => 1},
     Himmy => {'Pak Him' => 1},
     Joice => {'Julita Grace' => 1},
     Kojak => {'William J.' => 1},
@@ -98,7 +102,6 @@ my %SPECIALS =
     Memo => {Giampietro => 1},
     Mino => {Jacomo => 1},
     Moti => {Mordechay => 1},
-    'Nancy Marie' => {'Pek See' => 1},
     Nina => {Planinka => 1},
     Nitsa => {Antonia => 1},
     Pinuccia => {Giuseppina => 1},
@@ -108,9 +111,11 @@ my %SPECIALS =
 
   RENAME =>
   {
-    Adam => {'Tsz Nam' => 1},
     Aaron => {'Shiu Cheong' => 1},
+    Adam => {'Tsz Nam' => 1},
+    Andy => {'Pei-En' => 1},
     Abby => {'Wai-Lap' => 1},
+    Ben => {'Chun Pong' => 1},
     Bob => {Xinyu => 1},
     Brian => {'Ho Yin' => 1},
     Calvin => {'Ching Fung' => 1},
@@ -129,7 +134,7 @@ my %SPECIALS =
     Gary => {'Po Tang' => 1},
     Gloria => {'Ching-Shan' => 1},
     Harry => {'Tsz Fung' => 1},
-    Henry => {'Wai-Kit' => 1},
+    Henry => {'Hon Shing' => 1, 'Wai-Kit' => 1},
     Jack => {Jie => 1},
     Jerry => {'Li Min' => 1},
     Jimmy => {'Saleem Ud' => 1, Zhuo => 1},
@@ -139,6 +144,7 @@ my %SPECIALS =
     Kevin => {Yuxiang => 1},
     Marvin => {'Yong Chieng' => 1},
     Max => {Ziyu => 1},
+    Nancy => {'Wai Fong' => 1},
     'Nancy Marie' => {'Pek See' => 1},
     Nicky => {Kulbir => 1},
     Oak => {Wattanai => 1},
@@ -147,7 +153,9 @@ my %SPECIALS =
     Romulus => {'Yuan Xing' => 1},
     Ronald => {'Cheuk Him' => 1},
     Ruby => {'Ka Yee' => 1},
+    Simon => {'Chi Kwong' => 1},
     Timothy => {'Jian Zhong' => 1, Kaiti => 1},
+    Tony => {'Pik-Kin' => 1},
     Vincent => {'Hoi Yuen' => 1},
     Vonny => {'Siti Chaerani' => 1},
     Wendy => {Guangli => 1},
@@ -165,7 +173,6 @@ my %SPECIALS =
     Jiaxiang => {'Jia Xiang' => 1},
     Jingsheng => {Jinsheng => 1},
     Kamales => {Kamles => 1},
-    Mansur => {Mansoor => 1},
     Marco => {Marcos => 1},
     Michael => {Mikhail => 1},
     Michele => {Michelle => 1},
@@ -250,7 +257,7 @@ qw(
   Helen Helena Helene Helgard Helge Helvijs Hendrik Heng Henrik Henry 
   Hermon Hersir Hieu Him Hin Hjalmar Ho Hock Holmar Hong Hongxuan 
   Hoong Hove Hronn Hsien Hsin Hsuan Hua Huai Hugo Hui Hun Hung 
-  Huseyin Hussain Hussein Hyder Hyoung 
+  Huseyin Hussain Hussein Hyder Hyoung
 
   Ian Ibrahim Idland Ignacio Ijaz Ik Ilan Ilari Ildeniz Imran In 
   Indra Inge Inger Ingi Ingvald Ionis Ioulios Iqbal Irene Iriantha 
@@ -271,7 +278,12 @@ qw(
   Faroque Teiji Kurnia Basuki Ramzi Madeira Ramadan Suci Kirti
   Devi Moazzem Hean Guadalupe Audiary Gangadhara Yunief Mariano
   Denis Haerul Md Grace El-Salam Del Rosario Helal Cheong Sing
-  Rama
+  Rama Kwong Nishino Rangan Tungga Qi Ching Tilak Dhishan
+  Alamsyah Sridar Cristy Mendes Plinio Percival Yuen Douglas
+  Vrat Kamal Franz Quirino Dhishan Dora Jian Ghulam Gui Adam
+  Vitor Medina Bibiana Maula Giovanna Zia-Ul Liz Pik-Kin Chris
+  Bernardo Jimmy Ud Chieng Tang Keshav Peu Fong See Zhang Islam
+  Sakharam Donas Indah Putri
 
   Kaare Kahraman Kai Kang Kant Kanti Kapulu Kare Kareem Karim Karin 
   Karl Karna Kashinath Kate Kaur Kay Kayzen Kee Keith Kelly Kenneth 
@@ -308,7 +320,7 @@ qw(
   Osnes Otto Ove Ovidiu Owen Ozer Ozgur Ozkan 
 
   Pablo Pada Pall Palmelia Pan Paola Paoli Parakrama Parningotan 
-  Patrick Paul Paula Pauli Paulo Pawel Paz Ped Pedro Pei-en Pelin 
+  Patrick Paul Paula Pauli Paulo Pawel Paz Ped Pedro Pei-En Pelin 
   Peng Pennaf Perry Perwez Peter Pethraj Petronia Petter Pham Pheng 
   Philip Philippe Pia Pierre Pin Ping Pino Pong Ponniah Prabakar 
   Prakash Prasad Premsagar Pretty Priscilla Purushottam 
@@ -327,7 +339,7 @@ qw(
   Salih Salman Samuel Samy San Sangwon Santoso Sarathi Sartika Sartje 
   Sastry Sattar Sau Saverio Saz Sebastian Seda Sekhar Selim Sencer 
   Sener Seng Seniha Senol Septimiu Serap Sergio Sergiu Serhat Serif 
-  Setyo Sevgi Seyhan Shahbana Shahidul Shaihan Shaker Shakil Shamin 
+  Setyo Sevgi Seyhan Shahbana Shaihan Shaker Shakil Shamin 
   Shan Shankar Shanker Shantilal Shauq Shen Sheng Sherif Shi Shing 
   Shirazi Shohdy Si Sigurd Sila Silvio Sim Sima Simoes Simon Simona 
   Singh Siok Siri Sirin Sivert Skarhol Smari Sobhagchand Soerlie 
@@ -349,7 +361,7 @@ qw(
   Vince Vincent Virgil Virginia Vishwanath Vittoria Vittorio Vogg 
   Vural 
 
-  Wahyu Wai Walter Wardhani Watrap Wei Wen Werner Wilhemina Willem 
+  Wahyu Wai Walter Wardhani Watrap Wei Wen Werner Wilhelmina Willem 
   William Willy Winarno Wisolus Wojciech Wook 
 
   Xavier Xi Xian Xiang Xin Xing Xinying Xiong Xu Xuan 
@@ -390,7 +402,11 @@ qw(
   SHAMS VYDT PHAM LAM STRAND SAINZ ARREAGA LUO BONNY PERSIVALE
   SEVERIN LAMA TIRTA BASHEER BRITO MEW BRUM POMARES FUNG KEE
   MOUSTAFA ROCHA ALVARES ALVAREZ TROELS SAAID LA'O ANDRADE ROGVU
-  HELAL
+  HELAL SAINTE KORDY SCHENK POLI RUSSO MARCHESE HELLENBERG
+  MAGALHAES HAM VILLE BEMMEL CARME LOURDES PAULI ROLD BELLIS
+  CHERIF LOURES AVILES BARROS JELLOULI SEABRA TAN SYDNEY UD IN
+  MOHD FIGUEIRA BUENO PAES PEREIRA CORREIRA BERG RICHARD KURTOGLU
+  SHAHIDUL KUMAR DASH
 
   FABBRI FAHMY FANTONI FARHANI FARINA FERLAZZO FERNANDES FERNANDEZ 
   FINCHELTUB FLORIN FOLLIERO FOO FRANCES FRANCISCI 
@@ -466,6 +482,7 @@ $LAST_NAMES_HASH{$_} = 1 for @LAST_NAMES;
 
 my %PARTICLES =
 (
+  ABD => 1,
   ABU => 1,
   AL => 1,
   BEN => 1,
@@ -488,8 +505,10 @@ my %PARTICLES =
   EL => 1,
   IBN => 1,
   LA => 1,
+  LAS => 1,
   LE => 1,
   LO => 1,
+  LOS => 1,
   MAC => 1,
   SAINT => 1,
   SANTA => 1,
@@ -500,7 +519,8 @@ my %PARTICLES =
   "'T" => 1,
   VON => 1,
   Y => 1,
-  ZU => 1
+  ZU => 1,
+  ZUR => 1
 );
 
 
@@ -650,26 +670,23 @@ sub remove_various
       $i++;
       next;
     }
-    if ($w =~ /^\(([A-Z][a-z]+)\)$/)
+    if ($w =~ /^\(([A-Z][a-z]+)\)$/ ||
+       ($w =~ /^\(([A-Z].+)\)$/ && exists $FIRST_NAMES_HASH{$1}))
     {
       my $inner = $1;
-      if (exists $SPECIALS{SHORT}{$inner})
+      for my $key (qw(SHORT NICKNAME RENAME VARIANT))
       {
-        $self->{SHORT} = $inner;
-        splice @$words, $i, 1;
-        next;
-      }
-      if (exists $SPECIALS{NICKNAME}{$inner})
-      {
-        $self->{NICKNAME} = $inner;
-        splice @$words, $i, 1;
-        next;
-      }
-      if (exists $SPECIALS{RENAME}{$inner})
-      {
-        $self->{RENAME} = $inner;
-        splice @$words, $i, 1;
-        next;
+        # Check that the first names are what they should be.
+        if (exists $SPECIALS{$key}{$inner})
+        {
+          my $firsts = join(' ', @{$words}[0 .. $i-1]);
+          if (exists $SPECIALS{$key}{$inner}{$firsts})
+          {
+            $self->{$key} = $inner;
+            splice @$words, $i, 1;
+            next;
+          }
+        }
       }
     }
 
@@ -747,10 +764,10 @@ sub add
   # reprint_list(\@LAST_NAMES, 'LAST_NAMES');
   # die;
 
-  # if ($text =~ /Marquess/)
-  # {
-    # print "HERE\n";
-  # }
+  if ($text =~ /Hani G/)
+  {
+    print "HERE\n";
+  }
 
   my @words = split /\s+/, $text;
 
@@ -790,7 +807,7 @@ sub add
     }
     elsif ($words[0] eq '-' || $words[1] eq '-')
     {
-      print "$text WWW\n";
+      print "$text YYY\n";
       return;
     }
     else
@@ -809,37 +826,12 @@ sub add
       push @particles, get_particle($v);
     }
 
-    return if $self->add_with_particle($key, \@words, \@caps, \@particles);
-    return if $self->add_with_initials($key, \@words, \@caps, \@particles);
+    return if $self->add_with_first_initials(
+      $key, \@words, \@caps, \@particles);
+    return if $self->add_with_middle_initials(
+      $key, \@words, \@caps, \@particles);
     return if $self->add_with_split($key, \@words, \@caps, \@particles);
   }
-
-  if ($#caps == 2 && $caps[0] == CAPITALIZED && $caps[2] == ALLCAPS)
-  {
-    if (exists $FIRST_NAMES_HASH{$words[1]})
-    {
-      $self->add_first($key, "$words[0] $words[1]");
-      $self->add_last($key, $words[2]);
-      return;
-    }
-    if (exists $LAST_NAMES_HASH{$words[1]})
-    {
-      $self->add_first($key, $words[0]);
-      $self->add_last($key, "$words[1] $words[2]");
-      return;
-    }
-    if ($caps[1] == INITIAL)
-    {
-      $self->add_first($key, $words[0]);
-      $self->add_middle_initial($key, $words[1]);
-      $self->add_last($key, $words[2]);
-      return;
-    }
-
-    print "$text YYY($#caps)\n";
-    return;
-  }
-    
 
   print "$text XXX\n";
 }
@@ -994,54 +986,45 @@ sub add_last
 }
 
 
-sub add_with_particle
+sub add_with_first_initials
 {
-  my ($self, $key, $words, $caps, $particles) = @_;
+  my ($self, $key, $words, $caps) = @_;
+
+  # Start with an initial
+  return 0 unless $caps->[0] eq INITIAL;
 
   my $len = $#$words;
   my $p_first = 99;
   for my $i (0 .. $len)
   {
-    if ($particles->[$i] eq PARTICLE)
+    if ($caps->[$i] ne INITIAL && $caps->[$i] ne CAPITALIZED)
     {
       $p_first = $i;
       last;
     }
   }
 
-  my $p_last = -1;
-  for my $i (reverse 0 .. $len)
+  return 0 unless $p_first <= $len;
+
+  for my $i ($p_first .. $len)
   {
-    if ($particles->[$i] eq PARTICLE)
+    if ($caps->[$i] ne ALLCAPS)
     {
-      $p_last = $i;
-      last;
+      return 0;
     }
   }
 
-  return 0 unless $p_first <= $p_last;
-  return 0 unless $p_first > 0 && $p_last < $len;
-
-  for my $i (0 .. $p_first-1)
-  {
-    return 0 unless $caps->[$i] eq CAPITALIZED;
-  }
-
-  for my $i ($p_last+1 .. $len)
-  {
-    return 0 unless $caps->[$i] eq ALLCAPS;
-  }
-
   my $first = join(' ', @{$words}[0 .. $p_first-1]);
-  my $last = join(' ', @{$words}[$p_first .. $len]);
-
   $self->add_first($key, $first);
+
+  my $last = join(' ', @{$words}[$p_first .. $len]);
   $self->add_last($key, $last);
+
   return 1;
 }
 
 
-sub add_with_initials
+sub add_with_middle_initials
 {
   my ($self, $key, $words, $caps) = @_;
 
@@ -1097,10 +1080,6 @@ sub add_with_initials
 
 sub add_with_split
 {
-  # Potentially this is a more powerful version of add_with_particle.
-  # TODO Try without add_with_particle and also without the
-  # special 3-element version further up
-
   # There should be a first name in front and a last name at the end.
   # Can we split somewhere along the way such that particles and
   # known last names go in the last name, and the rest in the first
@@ -1137,7 +1116,7 @@ sub add_with_split
   {
 if (! exists $FIRST_NAMES_HASH{$words->[$i]})
 {
-  print "MISS $words->[$i]\n";
+  print "MISSF $words->[$i]\n";
 }
     return 0 unless exists $FIRST_NAMES_HASH{$words->[$i]};
   }
@@ -1147,7 +1126,7 @@ if (! exists $FIRST_NAMES_HASH{$words->[$i]})
 if (! exists $LAST_NAMES_HASH{$words->[$i]} &&
    $particles->[$i] ne PARTICLE)
 {
-  print "MISS $words->[$i]\n";
+  print "MISSL $words->[$i]\n";
 }
     return 0 unless 
       exists $LAST_NAMES_HASH{$words->[$i]} || 
