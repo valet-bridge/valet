@@ -1,5 +1,18 @@
 #!perl
 
+# TODO
+# 0. First and last names with dashes -> EXCEPTIONS
+# 1. Last name in parenthesis -> EARLIER{1,2}
+# 2. Multiple names in () -> recognize
+# 3. E and Y can be both INITIAL and PARTICLE
+# 4. Geoffrey S Jade Barrett, just need an initial somewhere
+# 5. The non-character set outputs
+# 6. Make a TITLES and a TITLES_HASH
+# 7. Write a str_line method
+#    - Check that all fields used, no conflicts
+# 8. Compare it with the original string
+# 9. Write a str_lines method
+
 package Analysis;
 
 use strict;
@@ -199,270 +212,265 @@ my %SPECIALS =
 
 my @FIRST_NAMES =
 qw(
-  Aaron Aas Abbas Abdel Abdimulia Abdul Abdullah Abel Abulrahman 
+  Aaron Aas Abbas Abdel Abdimulia Abdul Abdullah Abel Abulrahman Adam 
   Adele Adie Adji Adnane Adrian Ae Agha Agnieszka Agus Ahasan Ahmad 
-  Ahmed Ahmer Ake Akhtar Akter Alain Alan Albert Alberto Alejandra 
-  Alejandro Alex Alexander Alexandra Alexandre Alexandru Alfredo Ali 
-  Almeida Alp Alper Alta Altan Ameer Amenhoteps Aminur Amita 
-  An Anand Anant Anders Andre Andrea Andreas Andreea Andrei Andres 
-  Andrias Andrzej Anfinn Angel Angela Angelica Angelo Angelova 
-  Anikovich Anil Anis Anita Anker Ann Anne Annette Anthonius Anthony 
-  Anton Antonia Antonieta Antonio Anwen Ara Ardiansyah Are Ariel Aril 
-  Arild Arne Arni Aron Arslan Arthur Arturo Arve Arvind Arya Arzum 
-  Asbjorn Asfandiyar Asghar Aslam Aslihan Assis Atle Aulia Aulid 
-  Avsar Awuy Ayeska Aysen Ayu Ayyampalayam Azat Azizul 
+  Ahmed Ahmer Ake Akhtar Akten Akter Alain Alamsyah Alan Albert 
+  Alberto Aleixo Alejandra Alejandro Alex Alexander Alexandra 
+  Alexandre Alexandru Alfredo Ali Almeida Alp Alper Alta Altan Ameer 
+  Amenhoteps Aminur Amirul Amita An Anand Anant Anders Andre Andrea 
+  Andreas Andreea Andrei Andres Andrias Andrzej Anfinn Angel Angela 
+  Angelica Angelo Angelova Anikovich Anil Anis Anisul Anita Anker Ann 
+  Anne Annette Anthonius Anthony Anton Antonia Antonieta Antonio 
+  Anwen Ara Ardiansyah Are Ariel Aril Arild Arman Arne Arni Aron 
+  Arslan Arthur Arturo Arve Arvind Arya Arzum Asbjorn Asfandiyar 
+  Asghar Asifur Aslam Aslihan Assis Atle Audiary Aulia Aulid Avsar 
+  Awuy Ayeska Aysen Ayu Ayyampalayam Azat Azizul 
 
   Babu Bae Bagus Baliram Bambang Barbosa Barki Barkin Baron Bas 
-  Battista Beate Beatrice Belle Benedict Beniamino Berka Berkay 
-  Berkim Bertram Besour Bey Bhan Bharadhan Bindi Birgitte Birol 
-  Bjoerk Bjoernar Bjorn Bogdan Borgar Borissova Brarne Breves Brian 
-  Brita Britt Bruce Bruna Bruno Buke Bye 
+  Basuki Battista Beate Beatrice Belle Benedict Beniamino Berka 
+  Berkay Berkim Bernardo Bertram Besour Bey Bhan Bharadhan Bibiana 
+  Bindi Birgitte Birol Bjoerk Bjoernar Bjorn Bogdan Borgar Borissova 
+  Brarne Breves Brian Brita Britt Bruce Bruna Bruno Buke Bye 
 
   Cagan Cagdas Cai Can Carla Carlo Carlos Carmen Carol Carolina Cata 
   Catalin Cato Cecilia Celal Celia Celina Cem Cemal Ceren Cesare 
-  Chairudin Chakravarthy Chand Chander Chandra Chang Charles Charlie 
-  Charlline Charlotte Charya Chen Cheng Chhotelal Chi Chih Chin Chiu 
-  Choi Choo Chou Choudary Choukri Chow Christa Christer Christian 
-  Christina Christine Christopher Chuan Chul Chun Chung Cici Cing 
-  Claude Claudiu Coomer Cosmo Costanza Craig Cristian Cristina Cruz 
-  Cyprian 
+  Chaerani Chairudin Chakravarthy Chand Chander Chandra Chang Charles 
+  Charlie Charlline Charlotte Charya Chen Cheng Cheong Cheung 
+  Chhotelal Chi Chieng Chih Chin Ching Chiu Choi Choo Chou Choudary 
+  Choukri Chow Chris Christa Christer Christian Christina Christine 
+  Christopher Chuan Chul Chun Chung Cici Cing Claude Claudiu Coomer 
+  Cosmo Costanza Craig Cristian Cristina Cristy Cruz Cyprian 
 
-  Daldoul Dan Dana Daniel Daniela Dario Darma David Delfina Deng 
-  Deniz Devchand Devshi Dey Di Diana Dicle Didem Didier Dimitar Dirk 
-  Doga Dolores Domenico Dong Dumitru 
+  Daldoul Dan Dana Daniel Daniela Dario Darma David Del Delfina Deng 
+  Denis Deniz Desi Dev Devchand Devi Devshi Dey Dharma Dhishan Di 
+  Diana Dicle Didem Didier Dimitar Dirk Doga Dolores Domenico Don 
+  Donas Dong Dora Douglas Dumitru 
 
   Ebrahim Edmund Edoardo Eduardo Edward Efe Egemen Egil Eidur Einar 
-  Eirik Eivind Eka Elena Elia Elida Eline Elisa Elise Elizabeth 
-  Elvansyah Elvin Elvira Emil Emilie Emin Emine Emir Emmanuel Emre En 
-  Endras Endre Enoch Enok Enrica Enrique Enver Ercolian Erdem Erik 
-  Eriks Erling Erol Ersan Esra Esther Ethem Eufke Eugenia Eugenio 
-  Ezequiel Ezz 
+  Eirik Eivind Eka El-Salam Elena Elia Elida Eline Elisa Elise 
+  Elizabeth Elvansyah Elvin Elvira Emil Emilie Emin Emine Emir 
+  Emmanuel Emre En Endras Endre Enoch Enok Enrica Enrique Enver 
+  Ercolian Erdem Erik Eriks Erling Erol Ersan Esra Esther Ethem Eufke 
+  Eugenia Eugenio Ezequiel Ezz 
 
-  Fa Fai Falah Falk Fang Fanly Faruk Fawzy Fay Federico Fei Felicia 
-  Felipe Felix Feng Fernando Ferruh Fethi Fikret Filippo Florencia 
-  Florin Fold Frances Francesco Francis Francisco Francois Francoise 
-  Franke Fraser Frederic Frederik Fredrik Freyr Frimaco Frode Fu Fuad 
-  Funda Furkan Fusun 
+  Fa Fai Falah Falk Fang Fanly Faroque Faruk Fawzy Fay Federico Fei 
+  Felicia Felipe Felix Feng Fernando Ferruh Fethi Fikret Filippo 
+  Flora Florencia Florin Fold Fong Frances Francesco Francis 
+  Francisco Francois Francoise Franke Franz Fraser Frederic Frederik 
+  Fredrik Freyr Frimaco Frode Fu Fuad Funda Fung Furkan Fusun 
 
-  Gabizo Gabriel Gabriela Gabryjela Gail Gama Gamze Gan Gautama Gaute 
-  Gautur Ge Georg Georges Gerard Ghaffar Gheorghe Ghias Gigello 
-  Giovanni Gisella Gisli Giulio Giuseppe Glen Gokhan Gopal 
-  Gopalakrishna Gorkem Gracio Grazia Graziela Gro Gu Guang Gudlaug 
-  Guimar Guirguis Gul Guldamla Gulen Gundega Guney Gunnar Guo Gurcan 
-  Gursel Gurunath Gustaaf 
+  Gabizo Gabriel Gabriela Gabryjela Gail Gama Gamze Gan Gangadhara 
+  Gautama Gaute Gautur Ge Georg Georges Gerard Ghaffar Ghalib 
+  Gheorghe Ghias Ghulam Gigello Giovanna Giovanni Gisella Gisli 
+  Giulio Giuseppe Glen Gokhan Gopal Gopalakrishna Gorkem Grace Gracio 
+  Grazia Graziela Gro Gu Guadalupe Guang Gudlaug Gui Guimar Guirguis 
+  Gul Guldamla Gulen Gundega Guney Gunnar Guo Gurcan Gursel Gurunath 
+  Gustaaf 
 
-  Haakon Habibul Hacer Hae Hai Hakan Hakim Hakki Halidun Hallvard 
-  Haluk Hamadeh Hameed Hamit Han Hang Hao Harald Harianto Hariram 
-  Harris Hasan Hassan Haugan Haugen Hazel Hazem He Hee Hefny Hein 
-  Helen Helena Helene Helgard Helge Helvijs Hendrik Heng Henrik Henry 
-  Hermon Hersir Hieu Him Hin Hjalmar Ho Hock Holmar Hong Hongxuan 
-  Hoong Hove Hronn Hsien Hsin Hsuan Hua Huai Hugo Hui Hun Hung 
-  Huseyin Hussain Hussein Hyder Hyoung
+  Haakon Habibul Hacer Hae Haerul Hai Hakan Hakim Hakki Halidun 
+  Hallvard Haluk Hamadeh Hameed Hamit Han Hang Hao Harald Harianto 
+  Hariram Harris Hasan Hassan Haugan Haugen Hayk Hazel Hazem He Hean 
+  Hee Hefny Hein Helal Helen Helena Helene Helgard Helge Helvijs 
+  Hendrik Heng Henrik Henry Hermon Hersir Hieu Him Hin Hjalmar Ho 
+  Hock Hoi Holmar Hong Hongxuan Hoong Hossain Hove Howard Hronn Hsien 
+  Hsin Hsuan Hua Huai Hugo Hui Hun Hung Huseyin Hussain Hussein Hyder 
+  Hyoung 
 
   Ian Ibrahim Idland Ignacio Ijaz Ik Ilan Ilari Ildeniz Imran In 
-  Indra Inge Inger Ingi Ingvald Ionis Ioulios Iqbal Irene Iriantha 
-  Irvin Isabel Isin Iskandar Iskander Isyana Ivan Ivar Ivonne Izzet 
+  Indah Indra Inge Inger Ingi Ingvald Ionis Ioulios Iqbal Irene 
+  Iriantha Irvin Isabel Isin Iskandar Iskander Islam Isyana Ivan Ivar 
+  Ivonne Izzet 
 
   Ja Jack Jacob Jacques Jake Jakob Jakup James Jan Jane Janneth Jason 
-  Javier Jean Jeffry Jen Jeng Jeremiah Jerry Jia Jiang Jie Jin Jing 
-  Joan Joana Joao Joaquin Joergen Johan Johannes John Jona Jonny Joo 
-  Jorge Jorgen Jose Joseph Juan Jubilate Judith Juhan Jul Jun Jung 
-  Justus 
+  Javier Jean Jeffry Jen Jeng Jeremiah Jerry Jia Jian Jiang Jie Jimmy 
+  Jin Jing Joan Joana Joao Joaquin Joergen Joffani Johan Johannes 
+  John Jona Jonny Joo Jorge Jorgen Jose Joseph Juan Jubilate Judith 
+  Juhan Jul Jun Jung Justus 
 
-  Oaitse Ong Tshepo Yusuf Chaerani Wa Nam Surendra Cheung Hoi Fung
-  Ning Wilson Asifur Kei Shiu Howard Flora Roman Ram Zhazha Kaligis
-  Mai-Brit Don Lai Ghalib Pok Yee Lazarus Uz Putu Monteiro
-  Roberto Dharma Tarikul Mehedi Dev Lorand Kemal Ramana Amirul
-  Hossain Arman Desi Mijanul Moshiur Anisul Zahid Aleixo Khanh
-  Ul-Ain Manasseh Rica Mangapul Noel Hayk Mirna Zafar Akten Joffani
-  Faroque Teiji Kurnia Basuki Ramzi Madeira Ramadan Suci Kirti
-  Devi Moazzem Hean Guadalupe Audiary Gangadhara Yunief Mariano
-  Denis Haerul Md Grace El-Salam Del Rosario Helal Cheong Sing
-  Rama Kwong Nishino Rangan Tungga Qi Ching Tilak Dhishan
-  Alamsyah Sridar Cristy Mendes Plinio Percival Yuen Douglas
-  Vrat Kamal Franz Quirino Dhishan Dora Jian Ghulam Gui Adam
-  Vitor Medina Bibiana Maula Giovanna Zia-Ul Liz Pik-Kin Chris
-  Bernardo Jimmy Ud Chieng Tang Keshav Peu Fong See Zhang Islam
-  Sakharam Donas Indah Putri
+  Kaare Kahraman Kai Kaligis Kamal Kang Kant Kanti Kapulu Kare Kareem 
+  Karim Karin Karl Karna Kashinath Kate Kaur Kay Kayzen Kee Kei Keith 
+  Kelly Kemal Kenneth Kenyon Kenzo Kerem Keshav Keung Khan Khanh 
+  Khimji Khurrum Ki Kieren Kimar Kin King Kinman Kirankumar Kirti 
+  Kishore Kit Kjellaug Kong Konstantinos Korkut Krishna Krishnan 
+  Kristen Kristian Kristine Kristjan Kubilay Kui Kumar Kumari Kun 
+  Kurnia Kursad Kwong Kyoung Kyung 
 
-  Kaare Kahraman Kai Kang Kant Kanti Kapulu Kare Kareem Karim Karin 
-  Karl Karna Kashinath Kate Kaur Kay Kayzen Kee Keith Kelly Kenneth 
-  Kenyon Kenzo Kerem Keung Khan Khimji Khurrum Ki Kieren Kimar Kin 
-  King Kinman Kirankumar Kishore Kit Kjellaug Kong Konstantinos 
-  Korkut Krishna Krishnan Kristen Kristian Kristine Kristjan Kubilay 
-  Kui Kumar Kumari Kun Kursad Kyoung Kyung 
+  Lai Lal Lam Lan Lao Lata Lau Laurentiu Lavinia Lazarus Lee Lei Lena 
+  Lene Leon Leonardo Leonel Leslie Li Lia Liang Lija Lilian Lily Lin 
+  Lionel Lisa Lise Liz Lliker Lok Long Lorand Lou Louis Louisa Louise 
+  Lu Luca Lucasz Lucette Lucia Lucian Luie Luigi Luis Luisa Luiza 
+  Lujon Lun Lung Luz Lygre Lynn 
 
-  Lal Lam Lan Lao Lata Lau Laurentiu Lavinia Lee Lei Lena Lene Leon 
-  Leonardo Leonel Leslie Li Lia Liang Lija Lilian Lily Lin Lionel 
-  Lisa Lise Lliker Lok Long Lou Louis Louisa Louise Lu Luca Lucasz 
-  Lucette Lucia Lucian Luie Luigi Luis Luisa Luiza Lujon Lun Lung Luz 
-  Lygre Lynn 
+  Machado Maciej Madeira Mae Magnus Mahbubul Mahmood Mai-Brit Malcom 
+  Man Manaf Manasseh Mangapul Mani Manuel Mao Mar Marc Marcelin 
+  Marcelo Marek Margaret Margarita Margrethe Mari Maria Marian 
+  Mariano Marie Marina Marinh Marino Mario Marit Marius Mark Marques 
+  Marta Marthen Martin Martins Massimo Matias Maula Mauricio May Mayo 
+  Md Mecbure Medina Mehedi Mei Melih Melissa Mendes Meng Merete Meta 
+  Mette Micael Michael Michailov Michel Miguel Mihaela Mihai Mihail 
+  Mihaylova Mijanul Mikael Min Ming Mirabelle Miranda Mirna Mirta 
+  Mitra Mo Moazzem Mobinul Moen Mohamed Mohammad Mohan Mohon Mohsen 
+  Moin Monica Monirul Monteiro Mora Moran Morten Moshiur Mou Mounir 
+  Mozez Muammer Mubashir Muhamm Muhammad Muhsin Mui Mumtaz Murat 
+  Murthy Mushtaq Mustafa Muthu Muzharul 
 
-  Machado Maciej Mae Magnus Mahbubul Mahmood Malcom Man Manaf Mani 
-  Manuel Mao Mar Marc Marcelin Marcelo Marek Margaret Margarita 
-  Margrethe Mari Maria Marian Marie Marina Marinh Marino Mario Marit 
-  Marius Mark Marques Marta Marthen Martin Martins Massimo Matias 
-  Mauricio May Mayo Mecbure Mei Melih Melissa Meng Merete Meta Mette 
-  Micael Michael Michailov Michel Miguel Mihaela Mihai Mihail 
-  Mihaylova Mikael Min Ming Mirabelle Miranda Mirta Mitra Mo Moazzem 
-  Mobinul Moen Mohamed Mohammad Mohan Mohon Mohsen Moin Monica 
-  Monirul Mora Moran Morten Mou Mounir Mozez Muammer Mubashir Muhamm 
-  Muhammad Muhsin Mui Mumtaz Murat Murthy Mushtaq Mustafa Muthu 
-  Muzharul 
+  Nabi Naci Nafiz Naidu Najee Nam Namineni Nan Narayan Narayana 
+  Narayanan Nasir Nath Naz Nazan Nazar Nazif Nazli Nazmul Nedim Neil 
+  Ngin Nian Nicholas Nick Nicoletta Nicolle Nigar Nihat Nika Niklas 
+  Nina Ning Nishino No Nobre Noel Noeline Noelle Noervita Npeng 
+  Nualsri Nur Nurdan Nurhan 
 
-  Nabi Naci Nafiz Naidu Najee Namineni Nan Narayan Narayana Narayanan 
-  Nasir Nath Naz Nazan Nazar Nazif Nazli Nazmul Nedim Neil Ngin Nian 
-  Nicholas Nick Nicoletta Nicolle Nigar Nihat Nika Niklas Nina No 
-  Nobre Noeline Noelle Noervita Npeng Nualsri Nur Nurdan Nurhan 
-
-  Octavian Odile Odin Oi Oktem Olafs Olai Oland Olav Olcay Ole Olha 
-  Olivier Olof Omar Omer Onder Onggani Onur Orhan Orn Oruc Osman 
-  Osnes Otto Ove Ovidiu Owen Ozer Ozgur Ozkan 
+  Oaitse Octavian Odile Odin Oi Oktem Olafs Olai Oland Olav Olcay Ole 
+  Olha Olivier Olof Omar Omer Onder Ong Onggani Onur Orhan Orn Oruc 
+  Osman Osnes Otto Ove Ovidiu Owen Ozer Ozgur Ozkan 
 
   Pablo Pada Pall Palmelia Pan Paola Paoli Parakrama Parningotan 
   Patrick Paul Paula Pauli Paulo Pawel Paz Ped Pedro Pei-En Pelin 
-  Peng Pennaf Perry Perwez Peter Pethraj Petronia Petter Pham Pheng 
-  Philip Philippe Pia Pierre Pin Ping Pino Pong Ponniah Prabakar 
-  Prakash Prasad Premsagar Pretty Priscilla Purushottam 
+  Peng Pennaf Percival Perry Perwez Peter Pethraj Petronia Petter Peu 
+  Pham Pheng Philip Philippe Pia Pierre Pik-Kin Pin Ping Pino Plinio 
+  Pok Pong Ponniah Prabakar Prakash Prasad Premsagar Pretty Priscilla 
+  Purushottam Putri Putu 
 
-  Qamar Qasim Qian Qiang Qing 
+  Qamar Qasim Qi Qian Qiang Qing Quirino 
 
-  Rabie Rachel Rafael Ragnar Rahman Raiko Raman Ramanathan Ramon Ran 
-  Ranjan Ransani Rao Raphaela Rashebul Rashedul Rashid Rashmikant 
-  Rasiklal Raveen Ray Razzak Recep Reddi Reese Rehman Remzi Rengasamy 
-  Resit Reynir Reza Ri Rianto Riaz Ricardo Richard Ricky Ricquier 
-  Rifat Rimnong Ristu Riswan Rita Roar Robert Roberto Rock Rodolfo 
-  Roger Rom Romano Ronald Ronaldo Rong Rosa Rosanna Rosaria Roxana 
-  Roy Ru Ruhi Rui Ruiz Runar Ruth Ruzgar Ryan Ryk Ryung 
+  Rabie Rachel Rafael Ragnar Rahman Raiko Ram Rama Ramadan Raman 
+  Ramana Ramanathan Ramon Ramzi Ran Rangan Ranjan Ransani Rao 
+  Raphaela Rashebul Rashedul Rashid Rashmikant Rasiklal Raveen Ray 
+  Razzak Recep Reddi Reese Rehman Remzi Rengasamy Resit Reynir Reza 
+  Ri Rianto Riaz Rica Ricardo Richard Ricky Ricquier Rifat Rimnong 
+  Ristu Riswan Rita Roar Robert Roberto Rock Rodolfo Roger Rom Roman 
+  Romano Ronald Ronaldo Rong Rosa Rosanna Rosaria Rosario Roxana Roy 
+  Ru Ruhi Rui Ruiz Runar Ruth Ruzgar Ryan Ryk Ryung 
 
-  Saad Saadat Sabine Saeed Safak Safari Sai Said Sajid Saktia Sales 
-  Salih Salman Samuel Samy San Sangwon Santoso Sarathi Sartika Sartje 
-  Sastry Sattar Sau Saverio Saz Sebastian Seda Sekhar Selim Sencer 
-  Sener Seng Seniha Senol Septimiu Serap Sergio Sergiu Serhat Serif 
-  Setyo Sevgi Seyhan Shahbana Shaihan Shaker Shakil Shamin 
-  Shan Shankar Shanker Shantilal Shauq Shen Sheng Sherif Shi Shing 
-  Shirazi Shohdy Si Sigurd Sila Silvio Sim Sima Simoes Simon Simona 
-  Singh Siok Siri Sirin Sivert Skarhol Smari Sobhagchand Soerlie 
-  Sofia Sofie Somchand Sonya Soon Sophia Sophie Sorin Spike 
-  Sreedharan Sreekanth Srinivasa Stephen Steven Stewart Stirling 
-  Sture Su Suba Subari Subbarao Subramanian Sue Suheda Sujauddin Sule 
-  Suleiman Sultana Sum Sunra Sup Supeno Surya Suryakant Susana Svarup 
-  Swaray Sydney Syed Sze-Ching Sze-Wing 
+  Saad Saadat Sabine Saeed Safak Safari Sai Said Sajid Sakharam 
+  Saktia Sales Salih Salman Samuel Samy San Sangwon Santoso Sarathi 
+  Sartika Sartje Sastry Sattar Sau Saverio Saz Sebastian Seda See 
+  Sekhar Selim Sencer Sener Seng Seniha Senol Septimiu Serap Sergio 
+  Sergiu Serhat Serif Setyo Sevgi Seyhan Shahbana Shaihan Shaker 
+  Shakil Shamin Shan Shankar Shanker Shantilal Shauq Shen Sheng 
+  Sherif Shi Shing Shirazi Shiu Shohdy Si Sigurd Sila Silvio Sim Sima 
+  Simoes Simon Simona Sing Singh Siok Siri Sirin Sivert Skarhol Smari 
+  Sobhagchand Soerlie Sofia Sofie Somchand Sonya Soon Sophia Sophie 
+  Sorin Spike Sreedharan Sreekanth Sridar Srinivasa Stephen Steven 
+  Stewart Stirling Sture Su Suba Subari Subbarao Subramanian Suci Sue 
+  Suheda Sujauddin Sule Suleiman Sultana Sum Sunra Sup Supeno 
+  Surendra Surya Suryakant Susana Svarup Swaray Sydney Syed Sze-Ching 
+  Sze-Wing 
 
-  Ta Tan Tao Tat Taymour Teck Teixeira Teng Terence Teresa Terje Theo 
-  Theodore Theoman Thiruvenkata Thomas Thora Tie Tin Tinas Ting Titus 
-  Toar Tobing Tolga Tomas Tong Tor Tora Tore Torgeir Torio Tove Tri 
-  Trine Triumf Tua Tugce Tugrul Tumo Tunc Tuncay Tung Tybring Tyr 
+  Ta Tan Tang Tao Tarikul Tat Taymour Teck Teiji Teixeira Teng 
+  Terence Teresa Terje Theo Theodore Theoman Thiruvenkata Thomas 
+  Thora Tie Tilak Tin Tinas Ting Titus Toar Tobing Tolga Tomas Tong 
+  Tor Tora Tore Torgeir Torio Tove Tri Trine Triumf Tshepo Tua Tugce 
+  Tugrul Tumo Tunc Tuncay Tung Tungga Tybring Tyr 
 
-  Uffe Ufuk Ugur Ulrik Ulvi Umair Umit Ursin Usman Utku Uttamchand 
+  Ud Uffe Ufuk Ugur Ul-Ain Ulrik Ulvi Umair Umit Ursin Usman Utku 
+  Uttamchand Uz 
 
   Vadumangudi Vala Valentin Valerie Vaman Vegard Venkata Venkatraman 
   Venugopal Verona Veronica Vicenzo Victor Victoria Vidar Vijayanand 
-  Vince Vincent Virgil Virginia Vishwanath Vittoria Vittorio Vogg 
-  Vural 
+  Vince Vincent Virgil Virginia Vishwanath Vitor Vittoria Vittorio 
+  Vogg Vrat Vural 
 
-  Wahyu Wai Walter Wardhani Watrap Wei Wen Werner Wilhelmina Willem 
-  William Willy Winarno Wisolus Wojciech Wook 
+  Wa Wahyu Wai Walter Wardhani Watrap Wei Wen Werner Wilhelmina 
+  Willem William Willy Wilson Winarno Wisolus Wojciech Wook 
 
   Xavier Xi Xian Xiang Xin Xing Xinying Xiong Xu Xuan 
 
-  Yan Yang Yao Yasin Yau Yb Ye Yehia Yen Yeung Yi Yigit Yin Ying 
-  Yoland Yong Young Yp Yu Yuan Yue Yun Yung Yves Yvonne 
+  Yan Yang Yao Yasin Yau Yb Ye Yee Yehia Yen Yeung Yi Yigit Yin Ying 
+  Yoland Yong Young Yp Yu Yuan Yue Yuen Yun Yung Yunief Yusuf Yves 
+  Yvonne 
 
-  Zafer Zahir Zahra Zaman Zaverchand Zeki Zen Zeynep Zhen Zhi Zhong 
-  Zhou Zhu Zia-ul Ziaullah Zoe Zorana Zou Zsolt 
+  Zafar Zafer Zahid Zahir Zahra Zaman Zaverchand Zeki Zen Zeynep 
+  Zhang Zhazha Zhen Zhi Zhong Zhou Zhu Zia-Ul Ziaullah Zoe Zorana Zou 
+  Zsolt 
 );
-
 my @LAST_NAMES =
 qw(
   AASAND ABATE ABI ABOU ABREU AGUADO AIT AJI ALBERTI ALTMANN ALVARADO 
-  AMMENDOLIA ANAVI ANCHISI ANDERSON ANG ARAUJO ARGAYNE ARMIJO ARREAGE 
-  ASHAK ASPLUND ATTARD AZZALI 
+  ALVARES ALVAREZ AMMENDOLIA ANAVI ANCHISI ANDERSON ANDRADE ANG 
+  ARAUJO ARGAYNE ARMIJO ARREAGA ARREAGE ASHAK ASPLUND ATTARD AVILES 
+  AZZALI 
 
   BACCHI BAJOS BALLERINO BALLI BANG BAPTISTA BARCOS BARDEN BARONE 
-  BARRERA BASELGA BATALLA BATZIA BAUCK BAYRAK BEIRAO BELLERIO BELLOCQ 
-  BELLUSSI BELRHITI BENATAR BENDER BENSBY BETTENCOURT BETTI BILDE 
-  BJOERBEKK BO BONADIES BONANOMI BORDALLO BORSARELLI BOSCARO BOU 
-  BREDIUS BRENDERFORD BRENNA BRITO BRIX BROEKSTEEG BRORHOLT BRUGNONI 
-  BRUN BRYDE BUELENS BUI BULLARD BUUS 
+  BARRERA BARROS BASELGA BASHEER BATALLA BATZIA BAUCK BAYRAK BEIRAO 
+  BELLERIO BELLIS BELLOCQ BELLUSSI BELRHITI BEMMEL BENATAR BENDER 
+  BENSBY BERG BETTENCOURT BETTI BILDE BJOERBEKK BO BONADIES BONANOMI 
+  BONNY BORDALLO BORSARELLI BOSCARO BOU BREDIUS BRENDERFORD BRENNA 
+  BRITO BRIX BROEKSTEEG BRORHOLT BRUGNONI BRUM BRUN BRYDE BUELENS 
+  BUENO BUI BULLARD BUUS 
 
   CABANNE CADI CALVO CAMARGO CANALI CANDUCCI CANER CANESSA CAPBERN 
-  CAPELLI CAPION CARINI CASALE CASTELLO CASTRO CATASTINI CATTANEO 
-  CESARI CESATI CHACON CHAMACHERIL CHAMORRO CHAN CHAVES CHIN CHINDEMI 
-  CILLEBORG CIVIDIN CLASSEN COLOMBO COLONNA COOK CORREA CORSICO 
-  COSIGNANI COSSU COSTA COUTINHO CREDAZZI CRIADO CRISAFULLI CROCI 
-  CUBILLO CUERVO CUEVA
+  CAPELLI CAPION CARINI CARME CASALE CASTELLO CASTRO CATASTINI 
+  CATTANEO CESARI CESATI CHACON CHAMACHERIL CHAMORRO CHAN CHAVES 
+  CHERIF CHIN CHINDEMI CILLEBORG CIVIDIN CLASSEN COLOMBO COLONNA COOK 
+  CORREA CORREIRA CORSICO COSIGNANI COSSU COSTA COUTINHO CREDAZZI 
+  CRIADO CRISAFULLI CROCI CUBILLO CUERVO CUEVA 
 
-  D'ANDREA D'OREY DAL DALDOUL DALEMARK DAM DARNISA DELLADIO DELPIANO 
-  DENEGRI DIAZ DIEZ DIMITROV DOBREVA DONG DOUER DRINOVEC DUQUE DWYER 
-  DYBVIK 
+  D'ANDREA D'AVE D'OREY DAL DALDOUL DALEMARK DAM DARNISA DASH 
+  DELLADIO DELPIANO DENEGRI DIAZ DIEZ DIMITROV DOBREVA DONG DOUER 
+  DRINOVEC DUQUE DWYER DYBVIK 
 
-  ECK EDWARDS ERICH ERTBJERG ESCOBAR 
+  ECK EDWARDS ELDON ERICH ERTBJERG ESCOBAR 
 
-  SHAMS VYDT PHAM LAM STRAND SAINZ ARREAGA LUO BONNY PERSIVALE
-  SEVERIN LAMA TIRTA BASHEER BRITO MEW BRUM POMARES FUNG KEE
-  MOUSTAFA ROCHA ALVARES ALVAREZ TROELS SAAID LA'O ANDRADE ROGVU
-  HELAL SAINTE KORDY SCHENK POLI RUSSO MARCHESE HELLENBERG
-  MAGALHAES HAM VILLE BEMMEL CARME LOURDES PAULI ROLD BELLIS
-  CHERIF LOURES AVILES BARROS JELLOULI SEABRA TAN SYDNEY UD IN
-  MOHD FIGUEIRA BUENO PAES PEREIRA CORREIRA BERG RICHARD KURTOGLU
-  SHAHIDUL KUMAR DASH
-
-  FABBRI FAHMY FANTONI FARHANI FARINA FERLAZZO FERNANDES FERNANDEZ 
-  FINCHELTUB FLORIN FOLLIERO FOO FRANCES FRANCISCI 
+  FABBRI FAHMY FANTONI FARHANI FARINA FERGUSON FERLAZZO FERNANDES 
+  FERNANDEZ FIGUEIRA FINCHELTUB FLORIN FOLLIERO FOO FRANCES FRANCISCI 
+  FUN FUNG 
 
   GAMIO GANDINI GARCIA GARRIGOU GARRONE GATT GERMANETTI GIACCHINI 
   GLAZER GOETZ GOLDFARB GOLFARELLI GOMES GOMEZ GONCALVES GONZALES 
   GONZALEZ GRASHOLT GRAYSON GUANG GULDBRAND GUPPU 
 
-  HALD HAMADEH HANSEN HARALDSDOTTIR HARLAND HAYMAN HELDAL HERNANDEZ 
-  HERRERA HINZ HJORTH HOEL HOLM HOLMEN HOLTZ HUC HVIDBERG 
+  HALD HAM HAMADEH HANSEN HARALDSDOTTIR HARLAND HAYMAN HELAL HELDAL 
+  HELLENBERG HERNANDEZ HERRERA HINZ HJORTH HOEL HOLM HOLMEN HOLTZ HUC 
+  HVIDBERG 
 
-  INDHU ISRAEL ISRAELI IVANES 
+  IN INDHU ISRAEL ISRAELI IVANES 
 
-  JANSE JARAMILLO JEITZ JIMENEZ JONES JUCHIMOWICZ JUHL JUL JUST JUUL 
+  JANSE JARAMILLO JEITZ JELLOULI JIMENEZ JONES JUCHIMOWICZ JUHL JUL 
+  JUST JUUL 
 
-  KLIBI FUN MELLADO D'AVE FERGUSON ELDON ROSELL CUBILLO MENDOZA
+  KAELIN KAI KEE KEITH KERLERO KIRK KIRKEGAARD KLIBI KOCH KOFOED 
+  KONDAKCI KORDY KORRE KRAFT KRAGH KROGH KRUSE KUMAR KUREK KURTOGLU 
 
-  KAELIN KAI KEITH KERLERO KIRK KIRKEGAARD KOCH KOFOED KONDAKCI KORRE 
-  KRAFT KRAGH KROGH KRUSE KUREK 
+  LA'O LAM LAMA LANZOTTI LAUGE LECIS LEMAITRE LEVY LI LIAQUAT LINDAAS 
+  LINTRUP LOENBERG LOPES LOPEZ LORENTE LOSCHI LOURDES LOURES LOVEJI 
+  LUCA LUND LUO LUZ LYBECH LYNGE 
 
-  LANZOTTI LAUGE LECIS LEMAITRE LEVY LI LIAQUAT LINDAAS LINTRUP 
-  LOENBERG LOPES LOPEZ LORENTE LOSCHI LOVEJI LUCA LUND LUZ LYBECH 
-  LYNGE 
-
-  MARANI MARITI MARSH MARTHEN MARTINEZ MATEO MATHE MAURY MAZE MAZZADI 
-  MEJIA MENDES MICALI MIER MILESI MIQUELEZ MOELLER MOLLER MONTEIRO 
-  MONTES MORCK MOREIRA MUSCAT 
+  MAGALHAES MARANI MARCHESE MARITI MARSH MARTHEN MARTINEZ MATEO MATHE 
+  MAURY MAZE MAZZADI MEJIA MELLADO MENDES MENDOZA MEW MICALI MIER 
+  MILESI MIQUELEZ MOELLER MOHD MOLLER MONTEIRO MONTES MORCK MOREIRA 
+  MOUSTAFA MUSCAT 
 
   NAAS NAYER NEGRIN NIELSEN NIKOLOV NOEL NOERHAVE NORMAN NYHEIM 
   NYVANG 
 
   OLIVEIRA 
 
-  PABIS PALANCA PALMA PAOLI PARASIAN PAZ PELAEZ PENNINO PEREIRA PEREZ 
-  PINTO POLIMENI POMARES PONCE PORTANTI PORTO POWELL PRASETYO PRATO 
-  PUIG 
+  PABIS PAES PALANCA PALMA PAOLI PARASIAN PAULI PAZ PELAEZ PENNINO 
+  PEREIRA PEREZ PERSIVALE PHAM PINTO POLI POLIMENI POMARES PONCE 
+  PORTANTI PORTO POWELL PRASETYO PRATO PUIG 
 
   QUERAN 
 
   RAHTJEN RAIKO RAMIREZ RANDLE RASK RASMUSSEN RAULUND REDDY REIMER 
-  REY REYES RIBEYRO RICCI ROBERT ROCABERT ROSEN ROUANET ROZPIDE RUMOR 
-  RUZ 
+  REY REYES RIBEYRO RICCI RICHARD ROBERT ROCABERT ROCHA ROGVU ROLD 
+  ROSELL ROSEN ROUANET ROZPIDE RUMOR RUSSO RUZ 
 
-  SALAZAR SANCHEZ SANCHO SANTOS SATHYAMANGALAM SCHMIDT SCHNETZER 
-  SEGURA SELLAN SEQUI SERCY SERRANO SGOLOMBIS SHAUQ SHLESINGER 
-  SIANIPAR SILVA SILVERMAN SIMON SKAK SKAUG SKOGLY SMADILO SOLLI 
-  SOUSA SPINOLA STAMATOV STAUGAARD STEEN STEIGER STEWART STRANDE 
-  SUAREZ SUNGUR 
+  SAAID SAINTE SAINZ SALAZAR SANCHEZ SANCHO SANTOS SATHYAMANGALAM 
+  SCHENK SCHMIDT SCHNETZER SEABRA SEGURA SELLAN SEQUI SERCY SERRANO 
+  SEVERIN SGOLOMBIS SHAHIDUL SHAMS SHAUQ SHLESINGER SIANIPAR SILVA 
+  SILVERMAN SIMON SKAK SKAUG SKOGLY SMADILO SOLLI SOUSA SPINOLA 
+  STAMATOV STAUGAARD STEEN STEIGER STEWART STRAND STRANDE SUAREZ 
+  SUNGUR SYDNEY 
 
-  T'KINT TANEV TEKTURK THEISS THITTAI THRANE THUNBO TJON TOCCO 
-  TORKELSEN TORNBERG TRAN TRONCHETTI TURLETTI TUTTOBENE TVEDEN 
+  T'KINT TAN TANEV TEKTURK THEISS THITTAI THRANE THUNBO TIRTA TJON 
+  TOCCO TORKELSEN TORNBERG TRAN TROELS TRONCHETTI TURLETTI TUTTOBENE 
+  TVEDEN 
 
-  URIBE USBER 
+  UD URIBE USBER 
 
   VADUMANGUDI VAGN VAISBICH VALENTI VALENZUELA VARGAS VEEL VELANDO 
-  VERDI VERMEHREN VIGORELLI VILA VILBORG VINBERG VIVARELLI 
+  VERDI VERMEHREN VIGORELLI VILA VILBORG VILLE VINBERG VIVARELLI VYDT 
 
   WAN WANG WEI WEISS WHEATLEY WICKBE WILLE WINGAARD WONG 
 
@@ -764,9 +772,9 @@ sub add
   # reprint_list(\@LAST_NAMES, 'LAST_NAMES');
   # die;
 
-  if ($text =~ /Hani G/)
+  if ($text =~ /^Jannes/)
   {
-    print "HERE\n";
+    # print "HERE\n";
   }
 
   my @words = split /\s+/, $text;
@@ -1103,7 +1111,7 @@ sub add_with_split
   my $p_first = -1;
   for my $i (reverse 0 .. $len)
   {
-    if ($caps->[$i] ne ALLCAPS)
+    if ($caps->[$i] ne ALLCAPS && $particles->[$i] ne PARTICLE)
     {
       $p_first = $i;
       last;
