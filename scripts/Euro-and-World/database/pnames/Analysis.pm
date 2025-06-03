@@ -39,6 +39,7 @@ my %EXCEPTIONS =
   'I-Hung' => CAPITALIZED,
   'I-Ming' => CAPITALIZED,
   LaLa => CAPITALIZED,
+  "LA'O" => ALLCAPS,
   'María' => CAPITALIZED,
   'Mai-Brit' => CAPITALIZED,
   "O'KEEFFE-BROWN" => ALLCAPS,
@@ -188,6 +189,7 @@ my %SPECIALS =
     Isabella => {Isabelle => 1},
     Jacob => {Yaacov => 1},
     Jeniffer => {Jennifer => 1},
+    Jerome => {'Jérôme' => 1},
     Jiaxiang => {'Jia Xiang' => 1},
     Jingsheng => {Jinsheng => 1},
     Kamales => {Kamles => 1},
@@ -654,9 +656,13 @@ sub remove_various
 
     if ($w eq 'II' || $w eq 'III')
     {
-      $self->{DYNAST} = $w;
-      splice @$words, $i, 1;
-      next;
+      if ($i != 1 || $words->[0] ne 'Yasuaki')
+      {
+        # Kludge.
+        $self->{DYNAST} = $w;
+        splice @$words, $i, 1;
+        next;
+      }
     }
     if ($w =~ /^\((\d)\)$/)
     {
@@ -757,7 +763,7 @@ sub get_particle
   # Not a class method
   my ($text) = @_;
 
-  return PARTICLE if exists $PARTICLES{uc($text)};
+  return PARTICLE if exists $PARTICLES{$text};
 
   return GENERAL;
 }
@@ -771,7 +777,7 @@ sub add
   # reprint_list(\@LAST_NAMES, 'LAST_NAMES');
   # die;
 
-  if ($text =~ /^Robert Dr/)
+  if ($text =~ /^Yasuaki/)
   {
     # print "HERE\n";
   }
@@ -784,6 +790,13 @@ sub add
   for my $v (@words)
   {
     push @caps, get_capitalization($v);
+  }
+
+  if ($#caps == 0 && $caps[0] == ALLCAPS)
+  {
+    $self->{FIRST_MISSING} = 1;
+    $self->add_last($key, $words[0]);
+    return;
   }
 
   if ($#caps == 1)
