@@ -1,19 +1,18 @@
 #!perl
 
 # TODO
-# 1. Last name in parenthesis -> EARLIER{1,2}
-# 2. Multiple names in () -> recognize
-# 3. E and Y can be both INITIAL and PARTICLE
-# 4. Geoffrey S Jade Barrett, just need an initial somewhere
-# 5. Test str_line against original string, identical or |length diff|
-# 6. Write a str_lines method
-# 7. finish() method that makes a first list, middle list and last list?
+# 1. Test str_line against original string, identical or |length diff|
+# 2. Write a str_lines method
+# 3. finish() method that makes a first list, middle list and last list?
 
 package Analysis;
 
 use strict;
 use warnings;
 use v5.10;
+
+use utf8;
+use Encode qw(decode);
 
 use lib '.';
 
@@ -53,6 +52,9 @@ my %EXCEPTIONS =
   'Zia-Ul' => CAPITALIZED,
   'ZUR-CAMPANILE' => ALLCAPS
 );
+
+# Ugh
+my $JEROME = decode('iso-8859-1', 'Jérôme');
 
 my %SPECIALS =
 (
@@ -189,7 +191,7 @@ my %SPECIALS =
     Isabella => {Isabelle => 1},
     Jacob => {Yaacov => 1},
     Jeniffer => {Jennifer => 1},
-    Jerome => {'Jérôme' => 1},
+    Jerome => {$JEROME => 1},
     Jiaxiang => {'Jia Xiang' => 1},
     Jingsheng => {Jinsheng => 1},
     Kamales => {Kamles => 1},
@@ -318,11 +320,11 @@ qw(
   Iriantha Irvin Isabel Isin Iskandar Iskander Islam Isyana Ivan Ivar 
   Ivonne Izzet 
 
-  Ja Jack Jacob Jacques Jake Jakob Jakup James Jan Jane Janneth Jason 
-  Javier Jean Jeffry Jen Jeng Jeremiah Jerry Jia Jian Jiang Jie Jimmy 
-  Jin Jing Joan Joana Joao Joaquin Joergen Joffani Johan Johannes 
-  John Jona Jonny Joo Jorge Jorgen Jose Joseph Juan Jubilate Judith 
-  Juhan Jul Jun Jung Justus 
+  Ja Jack Jacob Jacques Jade Jake Jakob Jakup James Jan Jane Janneth 
+  Jason Javier Jean Jeffry Jen Jeng Jeremiah Jerry Jia Jian Jiang Jie 
+  Jimmy Jin Jing Joan Joana Joao Joaquin Joergen Joffani Johan 
+  Johannes John Jona Jonny Joo Jorge Jorgen Jose Joseph Juan Jubilate 
+  Judith Juhan Jul Jun Jung Justus 
 
   Kaare Kahraman Kai Kaligis Kamal Kang Kant Kanti Kapulu Kare Kareem 
   Karim Karin Karl Karna Kashinath Kate Kaur Kay Kayzen Kee Kei Keith 
@@ -423,10 +425,10 @@ qw(
 
 my @LAST_NAMES =
 qw(
-  AASAND ABATE ABI ABOU ABREU AGUADO AIT AJI ALBERTI ALTMANN ALVARADO 
-  ALVARES ALVAREZ AMMENDOLIA ANAVI ANCHISI ANDERSON ANDRADE ANG 
-  ARAUJO ARGAYNE ARMIJO ARREAGA ARREAGE ASHAK ASPLUND ATTARD AVILES 
-  AZZALI 
+  AASAND ABATE ABI ABOU ABREU AGUADO AIT AJI ALBERTI ALMEIDA ALTMANN 
+  ALVARADO ALVARES ALVAREZ AMMENDOLIA ANAVI ANCHISI ANDERSON ANDRADE 
+  ANG ARAUJO ARGAYNE ARMIJO ARREAGA ARREAGE ASHAK ASPLUND ATTARD 
+  AVILES AZZALI 
 
   BACCHI BAJOS BALLERINO BALLI BANG BAPTISTA BARCOS BARDEN BARONE 
   BARRERA BARROS BASELGA BASHEER BATALLA BATZIA BAUCK BAYRAK BEIRAO 
@@ -672,19 +674,23 @@ sub remove_various
     }
     if ($w =~ /^[A-Z]\.$/)
     {
-      # A single initial with a point.
       $i++;
       next;
     }
     if ($w =~ /^[A-Z]$/)
     {
       # Add point to a single letter.
-      $words->[$i] .= '.';
-      $i++;
-      next;
+      if ($w ne 'E' && $w ne 'Y')
+      {
+        # Manually edited so these initials always have dots.
+        $words->[$i] .= '.';
+        $i++;
+        next;
+      }
     }
-    if ($w =~ /^\(([A-Z][a-z]+)\)$/ ||
-       ($w =~ /^\(([A-Z].+)\)$/ && exists $FIRST_NAMES_HASH{$1}))
+
+    # First name(s) in brackets.
+    if ($w =~ /^\(([A-Z].+[a-z])\)$/)
     {
       my $inner = $1;
       for my $key (qw(SHORT NICKNAME RENAME VARIANT))
@@ -777,12 +783,12 @@ sub add
   # reprint_list(\@LAST_NAMES, 'LAST_NAMES');
   # die;
 
-  if ($text =~ /^Yasuaki/)
+  if ($text =~ /CLAESSENS/)
   {
     # print "HERE\n";
   }
 
-  my @words = split /\s+/, $text;
+  my @words = $text =~ /\([^)]+\)|\S+/g;
 
   $self->remove_various(\@words);
 
@@ -1123,7 +1129,7 @@ sub add_with_split
   my $p_last = 99;
   for my $i (0 .. $len)
   {
-    if ($caps->[$i] ne CAPITALIZED)
+    if ($caps->[$i] ne CAPITALIZED && $caps->[$i] ne INITIAL)
     {
       $p_last = $i;
       last;
@@ -1146,13 +1152,15 @@ sub add_with_split
   {
     my $w = $words->[$i];
 if (! exists $FIRST_NAMES_HASH{$words->[$i]} &&
-   (! exists $EXCEPTIONS{$w} || $EXCEPTIONS{$w} != CAPITALIZED))
+   (! exists $EXCEPTIONS{$w} || $EXCEPTIONS{$w} != CAPITALIZED) &&
+   $caps->[$i] != INITIAL)
 {
   print "MISSF $w\n";
 }
     return 0 unless 
       (exists $FIRST_NAMES_HASH{$w} ||
-      (exists $EXCEPTIONS{$w} && $EXCEPTIONS{$w} == CAPITALIZED));
+      (exists $EXCEPTIONS{$w} && $EXCEPTIONS{$w} == CAPITALIZED) ||
+      $caps->[$i] == INITIAL);
   }
 
   for my $i ($p_last .. $len-1)
