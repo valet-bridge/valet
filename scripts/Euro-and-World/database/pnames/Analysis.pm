@@ -1,10 +1,5 @@
 #!perl
 
-# TODO
-# 1. Test str_line against original string, identical or |length diff|
-# 2. Write a str_lines method
-# 3. finish() method that makes a first list, middle list and last list?
-
 package Analysis;
 
 use strict;
@@ -12,7 +7,7 @@ use warnings;
 use v5.10;
 
 use utf8;
-use Encode qw(decode);
+use Encode qw(decode encode);
 
 use lib '.';
 
@@ -48,6 +43,7 @@ my %EXCEPTIONS =
   "Ra'ad" => CAPITALIZED,
   'Sze-Ching' => CAPITALIZED,
   'Sze-Wing' => CAPITALIZED,
+  'TJON-A-TSOI' => ALLCAPS,
   'Ul-Ain' => CAPITALIZED,
   'Zia-Ul' => CAPITALIZED,
   'ZUR-CAMPANILE' => ALLCAPS
@@ -213,6 +209,15 @@ my %SPECIALS =
     Zijian => {'Zi Jian' => 1},
     Wojciech => {Wojtek => 1},
     Woyciech => {Wojtek => 1},
+  },
+
+  LAST_VARIANT =>
+  {
+    AGRAWAL => {AGARWAL => 1},
+    JAERUP => {JARUP => 1},
+    KHIUPPUNEN => {KHYUPPENEN => 1},
+    ROSENBLUM => {ROZENBLYUM => 1},
+    THOMA => {TOMA => 1},
   }
 );
 
@@ -783,7 +788,7 @@ sub add
   # reprint_list(\@LAST_NAMES, 'LAST_NAMES');
   # die;
 
-  if ($text =~ /CLAESSENS/)
+  if ($text =~ /TSOI$/)
   {
     # print "HERE\n";
   }
@@ -869,11 +874,7 @@ sub add_first
 {
   my ($self, $key, $text) = @_;
 
-  if (! exists $self->{FIRST_FULL} &&
-      ! exists $self->{VARIANT} &&
-      ! exists $self->{NICKNAME} &&
-      ! exists $self->{RENAME} &&
-      ! exists $self->{SHORT})
+  if (! exists $self->{FIRST_FULL})
   {
     # Assume it's a full-form name, even if we know that it could
     # be a variant.
@@ -911,8 +912,8 @@ sub add_first
       else
       {
         # It's a new special form.
-        $self->{$tag} = $text;
-        return;
+        # $self->{$tag} = $text;
+        # return;
       }
     }
     elsif (exists $self->{FIRST_FULL} &&
@@ -997,11 +998,21 @@ sub add_last
 
   if ($key eq 'NAME_DEPRECATED')
   {
+    if (exists $SPECIALS{LAST_VARIANT} &&
+        exists $SPECIALS{LAST_VARIANT}{$text} &&
+        exists $self->{LAST_FULL} &&
+        exists $SPECIALS{LAST_VARIANT}{$text}{$self->{LAST_FULL}})
+    {
+      $self->{LAST_VARIANT} = $text;
+      return;
+    }
+
     if (! exists $self->{LAST_EARLIER1})
     {
       $self->{LAST_EARLIER1} = $text;
       return;
     }
+
     if (! exists $self->{LAST_EARLIER2})
     {
       $self->{LAST_EARLIER2} = $text;
@@ -1188,24 +1199,51 @@ if (! exists $LAST_NAMES_HASH{$words->[$i]} &&
 }
 
 
-sub str_full
+sub complete
 {
   my ($self) = @_;
 
-  my $s = '';
-  $s .= $self->{TITLE} . ' ' if exists $self->{TITLE};
+  for my $key (qw(FIRST_FULL FIRST_INITIAL MIDDLE_INITIAL LAST_FULL))
+  {
+    if (exists $self->{$key})
+    {
+      @{$self->{LISTS}{$key}} = split ' ', $self->{$key};
+    }
+  }
 
+  my (@accumf, %seenf);
+  for my $key (qw(SHORT NICKNAME RENAME VARIANT)) 
+  {
+    if (exists $self->{$key}) 
+    {
+      my @words = split ' ', $self->{$key};
+      push @accumf, @words;
+    }
+  }
+
+  # Remove duplicates
+  @{$self->{LISTS}{FIRST_OTHER}} = do { grep { !$seenf{$_}++ } @accumf; };
+
+  my (@accuml, %seenl);
+  for my $key (qw(LAST_VARIANT LAST_EARLIER1 LAST_EARLIER2)) 
+  {
+    if (exists $self->{$key}) 
+    {
+      my @words = split ' ', $self->{$key};
+      push @accuml, @words;
+    }
+  }
+
+  # Remove duplicates
+  @{$self->{LISTS}{LAST_OTHER}} = do { grep { !$seenl{$_}++ } @accuml; };
+
+
+  # Check for consistency.
   my $c = 0;
   $c++ if exists $self->{FIRST_FULL};
   $c++ if exists $self->{FIRST_INITIAL};
   $c++ if exists $self->{FIRST_MISSING};
   die "First names compromised" unless $c == 1;
-
-  $s .= $self->{FIRST_FULL} if exists $self->{FIRST_FULL};
-  $s .= $self->{FIRST_INITIAL} if exists $self->{FIRST_INITIAL};
-  $s .= '-' if exists $self->{FIRST_FULL};
-
-  $s .= ' ' . $self->{MIDDLE_INITIAL} if exists $self->{MIDDLE_INITIAL};
 
   $c = 0;
   for (qw(SHORT NICKNAME RENAME VARIANT))
@@ -1213,6 +1251,42 @@ sub str_full
     $c++ if exists $self->{$_};
   }
   die "Too many first versions" unless $c <= 1;
+
+  die "No full last name" unless exists $self->{LAST_FULL};
+
+  $self->{COMPLETE} = 1;
+}
+
+
+sub str_line
+{
+  my ($self) = @_;
+
+  $self->complete() unless exists $self->{COMPLETE};
+
+  my $s = '';
+  $s .= $self->{TITLE} . ' ' if exists $self->{TITLE};
+
+  $s .= $self->{FIRST_FULL} if exists $self->{FIRST_FULL};
+
+  if (exists $self->{FIRST_INITIAL})
+  {
+    $s .= ' ' unless $s eq '';
+    $s .= $self->{FIRST_INITIAL};
+  }
+  if (exists $self->{FIRST_MISSING})
+  {
+    $s .= ' ' unless $s eq '';
+    $s .= '-';
+  };
+
+  $s .= ' ' . $self->{MIDDLE_INITIAL} if exists $self->{MIDDLE_INITIAL};
+
+  my $c = 0;
+  for (qw(SHORT NICKNAME RENAME VARIANT))
+  {
+    $c++ if exists $self->{$_};
+  }
   if ($c == 1)
   {
     for my $key (qw(SHORT NICKNAME RENAME VARIANT))
@@ -1221,7 +1295,6 @@ sub str_full
     }
   }
 
-  die "No full last name" unless exists $self->{LAST_FULL};
   $s .= ' ' . $self->{LAST_FULL} if exists $self->{LAST_FULL};
 
   $c = 0;
@@ -1229,8 +1302,7 @@ sub str_full
   {
     $c++ if exists $self->{$_};
   }
-  die "Too many last versions" unless $c <= 1;
-  if ($c == 1)
+  if ($c >= 1)
   {
     for my $key (qw(LAST_VARIANT LAST_EARLIER1 LAST_EARLIER2))
     {
@@ -1240,10 +1312,43 @@ sub str_full
 
   $s .= ' Jr.' if exists $self->{JUNIOR};
   $s .= ' Sr.' if exists $self->{SENIOR};
-  $s .= $self->{DYNAST} if exists $self->{DYNAST};
+  $s .= ' ' . $self->{DYNAST} if exists $self->{DYNAST};
   $s .= ' (' . $self->{COUNTER} . ')' if exists $self->{COUNTER};
 
   return $s;
+}
+
+
+sub str_verbose
+{
+  my ($self) = @_;
+
+  $self->complete() unless exists $self->{COMPLETE};
+
+  my $s = '';
+  for my $key (qw(TITLE FIRST_FULL FIRST_INITIAL FIRST_MISSING
+    MIDDLE_INITIAL SHORT NICKNAME RENAME VARIANT
+    LAST_FULL LAST_VARIANT LAST_EARLIER1 LAST_EARLIER2
+    JUNIOR SENIOR DYNAST COUNTER))
+  {
+    $s .= "$key $self->{$key}\n" if exists $self->{$key};
+  }
+
+  $s .= "\n";
+
+
+  for my $key (qw(FIRST_FULL FIRST_INITIAL FIRST_OTHER
+    MIDDLE_INITIAL LAST_FULL LAST_OTHER))
+  {
+    if (exists $self->{LISTS}{$key} &&
+      $#{$self->{LISTS}{$key}} >= 0)
+    {
+      $s .= "LIST $key " . (join ' ', @{$self->{LISTS}{$key}}) . "\n";
+    }
+  }
+
+  # return encode("iso-8859-1", "$s\n", Encode::FB_CROAK);
+  return "$s\n";
 }
 
 

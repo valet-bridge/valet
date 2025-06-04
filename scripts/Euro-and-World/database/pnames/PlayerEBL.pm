@@ -80,6 +80,16 @@ sub set_by_chunk
       $self->{ANALYSIS}->add($key, $v, $self->{COUNTRY}[0]);
     }
   }
+
+  # binmode(STDOUT, ":encoding(iso-8859-1)");
+  # my $str_orig = $self->{NAME}[0];
+  # my $str_anal = $self->{ANALYSIS}->str_verbose();
+  # print $str_anal;
+
+  # if ($str_orig ne $str_anal)
+  # {
+    # print "DIFF $str_orig || $str_anal\n";
+  # }
 }
 
 
