@@ -10,7 +10,46 @@ use utf8;
 use v5.10;
 
 use Exporter 'import';
-our @EXPORT = qw(reprint);
+our @EXPORT = qw(dedup reprint);
+
+
+sub dedup
+{
+  my ($list1, $list2, $name1, $name2) = @_;
+
+  my (%hash1, %hash2, %dup);
+  $hash1{lc($_)} = $_ for @$list1;
+  $hash2{lc($_)} = $_ for @$list2;
+
+  for my $k (keys %hash1)
+  {
+    if (exists $hash2{$k})
+    {
+      $dup{FIRST}{$hash1{$k}} = 1;
+      $dup{SECOND}{$hash2{$k}} = 1;
+    }
+  }
+
+  # To get the original capitalization.
+  my @both1 = sort keys %{$dup{FIRST}};
+  my @both2 = sort keys %{$dup{SECOND}};
+
+  reprint(\@both1, $name1);
+  reprint(\@both2, $name2);
+
+  my (@reduced1, @reduced2);
+  for my $v (@$list1)
+  {
+    push @reduced1, $v unless exists $dup{FIRST}{$v};
+  }
+  for my $v (@$list2)
+  {
+    push @reduced2, $v unless exists $dup{SECOND}{$v};
+  }
+
+  reprint(\@reduced1, 'FIRST_MID_NAMES');
+  reprint(\@reduced2, 'LAST_MID_NAMES');
+}
 
 
 sub reprint
@@ -23,7 +62,7 @@ sub reprint
   };
 
   # Reprint in formatted style
-  print "my \@$name =\nqw(\n";
+  print "our \@$name =\nqw(\n";
 
   my $indent = "  ";
   my $line = $indent;

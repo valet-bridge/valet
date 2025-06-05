@@ -1,6 +1,8 @@
 Manip.pm: 
-Get reprint_list
+Read into guess.pl
+
 Can also read a .txt file
+- Read what it matches, either complete lower-case or first cap
 Can capitalize first letter or all letters
 
 

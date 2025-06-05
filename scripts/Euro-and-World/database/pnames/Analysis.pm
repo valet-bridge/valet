@@ -13,6 +13,7 @@ use lib '.';
 
 use FirstMid;
 use LastMid;
+use Both;
 use Manip;
 
 use constant
@@ -259,9 +260,11 @@ for my $k1 (keys %{$TITLES{TITLE_GENERAL}})
 
 my %FIRST_NAMES_HASH;
 $FIRST_NAMES_HASH{$_} = 1 for @FIRST_MID_NAMES;
+$FIRST_NAMES_HASH{$_} = 1 for @BOTH_FIRST;
 
 my %LAST_NAMES_HASH;
 $LAST_NAMES_HASH{$_} = 1 for @LAST_MID_NAMES;
+$LAST_NAMES_HASH{$_} = 1 for @BOTH_LAST;
 
 
 my %PARTICLES =
@@ -307,6 +310,7 @@ my %PARTICLES =
   ZUR => 1
 );
 
+my @FIRST_FIRST;
 
 sub new
 {
@@ -483,6 +487,14 @@ sub add
   my @words = $text =~ /\([^)]+\)|\S+/g;
 
   $self->remove_various(\@words);
+
+# for my $ww (@words)
+# {
+  # if ($ww =~ /[A-Z]/ && $ww !~ /[a-z]/ && $ww !~ /^[A-Z]\.*$/)
+  # {
+    # print "  $ww\n";
+  # }
+# }
 
   my @caps;
   for my $v (@words)
