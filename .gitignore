@@ -63,6 +63,7 @@ scripts/Euro-and-World/database/bbo/URL/*.txt
 scripts/Euro-and-World/database/bbo/dates/*.txt
 scripts/Euro-and-World/database/bbo/dates/*.xlsx
 scripts/Euro-and-World/database/Tournaments/DATED/*.pm
+scripts/Euro-and-World/database/pnames/full/EBL/*.txt
 
 scripts/cluster/data/20*
 scripts/cluster/*.txt

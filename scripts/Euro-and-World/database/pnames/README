@@ -1,25 +1,11 @@
-CAPITALIZED, INITIAL +, ALLCAPS: First, middle, last
+Manip.pm: 
+Get reprint_list
+Can also read a .txt file
+Can capitalize first letter or all letters
 
 
-When multiple names:
-- Initials, Peter L PIGOT
-- Ron E. ANDERSEN, Ron Andersen
-- Jennifer Christina EWALD, Jenny EWALD
-- DE: Thierry DE SAINTE MARIE, EL in Arabic
-- Variant, e.g. special letter
 
-TITLE, e.g. Captain
-
-MIDDLE_FULL
-MIDDLE_INITIAL
-
-PlayerEBL: first(), last(), first_middle(), junior(), senior(),
-short_first()
-Flag if no first, only an initial, capitalization wrong
-
-Print players 
-Store by NAME_PREFERRED, then NAME, not NAME_DEPRECATED I guess
-
+---
 
 * Read all Tournaments, or the specific country we're investigating
   - Can include a wbf list of numbers
