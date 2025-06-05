@@ -7,8 +7,11 @@ use lib '../..';
 
 use FirstFirst;
 use FirstMid;
+use FirstBBO;
+
 use LastMid;
 use LastLast;
+use LastBBO;
 
 use Country;
 my $country = Country->new();
@@ -27,34 +30,41 @@ my @SKIP_WORDS = qw(
   null
   other Other
   privado privat private prive privato Privat Private PRIVATE
+  request
+  speak
 );
 
 my %SKIP_HASH;
 $SKIP_HASH{$_} = 1 for @SKIP_WORDS;
 
 my @SYSTEM_WORDS = qw(
-  aces accept acol against alert asking attitude
-  better bicolor blackwood blw
+  1nt 2d 2nt 15-17 15-18 16-18 16-19 19-20 20-21 20-22 21-23
+  0314 1430 5542
+  5cm 5crd 5major
+  aces accept acol against akol alert asking attitude
+  beginner better bicolor blackwood blw
   capaletti capp card carding cards checkback clubs cue cuebid
   dbl diamonds discard drury
-  enc encourage encouraging exclusion
-  faible fnt forcing free fsf
+  enc encourage encouraging exclusion expert
+  faible fnt forcing free fsf fuerte
   gadgets gambling gerber game gf
   hand hcp hearts high
   inverted
   jac jacoby
   keycard
   landy lead leb lebensohl low
-  major majors minimum minor muiderberg multi multicolor
+  major majors master minimum minor muiderberg multi multicolor
   negative nmf
   ogust opening overcall overcalls
-  points prec precision preempt puppet
-  raise raises relay resp response reverse rkc rkcb rusinow
-  sayc short small smolen spades splinter standard standart stayman 
+  partner play player points prec precision preempt pts puppet
+  raise raises relay resp response reverse revdrury rkc rkcb 
+  rusinow sayc short small smolen spades splinter standard standart 
+  stayman 
   std strng strong strongest suit suits supp support
-  transf transfer transfers transfert trefles trf trnsf trsf twos
-  udca upside
-  weak
+  transf transfer transfers transfert trèfle trefles trf trnsf 
+  trsf twos
+  udca undo undos upside
+  weak waiting
   xfer
 );
 
@@ -68,7 +78,7 @@ my @CONVENTIONS = qw(
   english
   jacobi jacoby
   gerber ghestem goren
-  landy
+  landy lightner
   michaels
   ogust
   smolen stayman
@@ -83,14 +93,17 @@ my $SYSTEMRE = qr/\b(?:@{[ join '|', @SYSTEM_WORDS ]})\b/i;
 my (%FIRST, %FIRST_LC);
 $FIRST{$_} = 1 for @FIRST_FIRST_NAMES;
 $FIRST{$_} = 1 for @FIRST_MID_NAMES;
+$FIRST{$_} = 1 for @FIRST_BBO;
 $FIRST_LC{lc($_)} = $_ for @FIRST_FIRST_NAMES;
 $FIRST_LC{lc($_)} = $_ for @FIRST_MID_NAMES;
+$FIRST_LC{lc($_)} = $_ for @FIRST_BBO;
 
 my (%LAST, %LAST_LC);
 $LAST{$_} = 1 for @LAST_MID_NAMES;
 $LAST{$_} = 1 for @LAST_LAST_NAMES;
 $LAST_LC{lc($_)} = $_ for @LAST_MID_NAMES;
 $LAST_LC{lc($_)} = $_ for @LAST_LAST_NAMES;
+$LAST_LC{lc($_)} = $_ for @LAST_BBO;
 
 # my %FIRST_MANUAL;
 # get_file(\%FIRST_MANUAL, 'h');
@@ -132,6 +145,7 @@ for my $i (0 .. $#fields)
     my @info;
     my $country_seen = 0;
     my $magic_seen = 0;
+    my $name_seen = 0;
 
     print "HANDLE $handle (", 1+ $#data, ")\n";
     for my $i (0 .. $#data)
@@ -139,7 +153,8 @@ for my $i (0 .. $#fields)
       my $datum = $data[$i];
       $datum =~ s/^\s+//;
       $datum =~ s/\s+$//;
-      $datum =~ s/^[!\-+:;'"@?\)*.,=#%&\/\$]+\s*//;
+      $datum =~ s/^[!\-+:;'"@?\(\)*.,=#%&\/\$]+\s*//;
+      $datum =~ s/\s*[!\-+:;'"@?\)*.,=#%&\/\$]+$//;
 
       next unless length($datum) > 0;
       next if exists $SKIP_HASH{$datum};
@@ -167,12 +182,14 @@ for my $i (0 .. $#fields)
       if ($datum !~ /\s/ && exists $FIRST_LC{$datum_lc})
       {
         store($handle, 'FIRST', $FIRST_LC{$datum_lc});
+        $name_seen = 1;
         next;
       }
       elsif ($datum !~ /\s/ && exists $LAST_LC{$datum_lc} &&
         ! exists $CONVENTIONS_HASH{$datum_lc})
       {
         store($handle, 'LAST', $LAST_LC{$datum_lc});
+        $name_seen = 1;
         next;
       }
 
@@ -205,16 +222,34 @@ for my $i (0 .. $#fields)
 
       # Some simple first-last combinations.
       my @words = split /\s+/, $datum_lc;
-      if ($#words == 1 &&
-          exists $FIRST_LC{$words[0]} &&
-          exists $LAST_LC{$words[1]} &&
-          ! exists $CONVENTIONS_HASH{$words[1]})
+      if ($#words == 1)
       {
-        store($handle, 'FIRST', $FIRST_LC{$words[0]});
-        store($handle, 'LAST', $LAST_LC{$words[1]});
-        next;
+        if (exists $FIRST_LC{$words[0]} &&
+            ! exists $LAST_LC{$words[0]} &&
+            exists $LAST_LC{$words[1]} &&
+            ! exists $FIRST_LC{$words[1]} &&
+            ! exists $CONVENTIONS_HASH{$words[1]})
+        {
+          store($handle, 'FIRST', $FIRST_LC{$words[0]});
+          store($handle, 'LAST', $LAST_LC{$words[1]});
+          $name_seen = 1;
+          next;
+        }
+        elsif (!exists $FIRST_LC{$words[0]} &&
+            exists $LAST_LC{$words[0]} &&
+            ! exists $LAST_LC{$words[1]} &&
+            exists $FIRST_LC{$words[1]} &&
+            ! exists $CONVENTIONS_HASH{$words[0]})
+        {
+          print "WXW $datum\n";
+          # next;
+        }
       }
 
+      if ($name_seen)
+      {
+        print "YYY $datum\n";
+      }
 
       push @info, "GENERIC $datum";
     }
