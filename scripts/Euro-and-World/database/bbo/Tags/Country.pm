@@ -142,13 +142,13 @@ my @SINGLE_WORDS = qw(
   Jamaica Japan Jersey Jordan
   Kazakhstan Kenya Kuwait Kyrgyzstan
   Latvia Lebanon Lesotho Libya Liechtenstein Lithuania Luxembourg 
-  Macau Madagascar Malaysia Malta Martinique Mauritius Mexico Moldova
+  Macau Madagascar Malaysia Mali Malta Martinique Mauritius Mexico Moldova
   Monaco Mongolia Montenegro Morocco Mozambique
   Namibia Nepal Netherlands Nicaragua Nigeria Norden Norway 
   Oman
   Pakistan Palestine Panama Paraguay Peru Philippines Poland Portugal
   Qatar
-  Reunion Romania Russia
+  Reunion Romania Russia Rwanda
   Scotland Senegal Serbia Seychelles Singapore Slovakia Slovenia 
   Spain Sudan Suriname Sweden Switzerland Syria
   Taiwan Tanzania Thailand Togo Tunisia Turkey Turkmenistan

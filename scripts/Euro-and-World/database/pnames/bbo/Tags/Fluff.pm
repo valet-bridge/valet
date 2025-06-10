@@ -1,5 +1,4 @@
 #!perl
-
 use strict;
 use warnings;
 use v5.10;
@@ -40,7 +39,7 @@ my @SINGLE_WORDS = qw(
   discipline disconnects discussion disiplin disponibile disponible 
   diversamente doesn't down dream drums drunk dunno dupli during
 
-  earth ekspres else empty engineer enigma enjoy enough entame enter
+  earth ekspres elite else empty engineer enigma enjoy enough entame enter
   entre equal equilibrato errare error espoir eternal etre even every
   everybody everyday everyone everything everywhere excellence except
   excl exclusive exemplaire exp expat expect exper experienced experte
@@ -48,14 +47,14 @@ my @SINGLE_WORDS = qw(
 
   facteur fairplay fait false fans fantasy fast faster father fault 
   favorite favourite festiv festival festivali first flag flagless 
-  flower focus follow for force forceing forever forget forgive forgot
-  former freedom freund freunde friendly friends friendship from full
-  fun funny
+  flash flower focus follow for force forceing forever forget forgive 
+  forgot former freedom freund freunde friendly friends friendship from 
+  fruit full fun funny
 
   games gentleman glory goes good graduate great grincheux group
   grumpy guess guest 
 
-  handsome happiness happy have hazard head hear heard heaven help 
+  hallo handsome happiness happy have hazard head hear heard heaven help 
   here heureuse heute hidden hmmm hold holidays home homeless homour 
   honest hope horizon hospitable host human humanity humble humor 
   hunting hurt 
@@ -69,14 +68,15 @@ my @SINGLE_WORDS = qw(
   jacobsen jamais joke jump 
 
   keep kib kibitz kibitzer kibitzing kill kind kindness kiss knight
-  know knows
+  know knows koran
 
   ladder language laughter lawless lawyer leader leads learn learned
   learner learning least leave lesson lessons level levels life line
   listed listen literal little live living lol long longer looking lose
   lot love loved lovely lover loving lowest luck lui
 
-  magic magical majör makes making management manager manners martial
+  magic magical majör makes making management manager mania manners 
+  mardi martial
   masterpoints matter matters maybe me meet meilleure mentor merci
   message messager mester mestre mich mieux min mineure minors minus
   missing mistake mistakes modest moi moment moments monster more
@@ -90,23 +90,25 @@ my @SINGLE_WORDS = qw(
   of ok old on one only operator or oral orange ordinary other others 
   otherwise ou oublié oui our out over own
 
+  panda
   paradis paradise parfois particular partout pass password patience 
   patient paulsen peace penalty pendant people perfect perso person 
   personal persone personnel petite peut phantom phoney pigeon pigeons 
-  pique piques pirivate pivate place plaisir planet planets played 
+  pique piques pirivate pivate place plaisir planet planets plata played 
   players plays pleasant please pleasure pls plse plus plusqueparfait 
   pnts point polite politely politeness poor porteur positive possible 
   pourquoi powered prefer prefered preferred prend present president
   prima primus principiante prior priv priva privado privare privat
   privata private privatem privates privati privative privato prive
   privee privet privite privte privé privée priwate problem prochaine
-  professional profil profile profilo profl proud prv prvate prvt pryw
-  präcise précisés prétention prývate pseudo pseudonyms
+  professional profil profile profilo profl proud proxy prv prvate 
+  prvt pryw präcise précisés prétention prývate pseudo pseudonyms
   psychic ptivate public pupet pupp pvt
 
   quadri quand quasi quel quelque question quick quiet quite quota
 
-  rainbow random rapide rarely rating read realistic receive register
+  rainbow random rapide rarely rating read realistic reason receive 
+  register
   regular relative relax relaxe religion remarks remedios remember
   remove repetita reply reproches request requested require required
   resistance resisting respect respecte respond restons retired 
@@ -149,6 +151,9 @@ my @SINGLE_WORDS = qw(
   zero 
 
   être
+
+  bboer bteam email tante tartan tennis memory oracle gmail
+  masters
 );
 
 my %SINGLE_TYPOS =

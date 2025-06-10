@@ -1,20 +1,25 @@
 #!perl
 use strict;
 use warnings;
+use utf8;
+use feature 'unicode_strings';
 
 use lib '.';
 use lib '..';
 
 my @TAG_ORDER = qw(
+  CONVENTIONS
+  SYSTEM
+
   COUNTRY
   REGION
   CITY
   LOCALITY
   NATIONALITY
+
   FLUFF
   NOTNAMES
-  SYSTEM
-  CONVENTIONS
+
   FIRSTFIRST
   FIRSTMID
   FIRSTBBO
@@ -136,10 +141,6 @@ for my $i (0 .. $#fields)
       my @values = ();
       my @texts = ();
 
-if ($datum eq 'Afghanistan')
-{
-  print "HERE\n";
-}
       split_on_dates($datum, \@tags, \@values, \@texts, 0);
       split_on_multi($whole, \@TAG_ORDER, 0, \@tags, \@values, \@texts);
 
@@ -165,22 +166,36 @@ if ($datum eq 'Afghanistan')
           my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
           foreach my $value (@a)
           {
-            # if ($value eq 'Ankara')
-            # {
-              # print "HERE\n";
-            # }
-
-            if (singleton_non_tag_matches($value, \$token_no,
-              $chain, $histo, ''))
+            # The first two are a simpler version of singleton_non_matches.
+            if ($value =~ /^\d+$/)
             {
-              # print "UUU $value\n";
+              append_token($chain, 'COUNTER', 'NUMERAL',
+                $value, $value, \$token_no, $histo, '');
+              next;
+            }
+            elsif ($value =~ /^[A-za-z]$/)
+            {
+              append_token($chain, 'COUNTER', 'LETTER',
+                $value, $value, \$token_no, $histo, '');
               next;
             }
 
-            if (singleton_tag_matches($whole, \@TAG_ORDER,
-              \$token_no, $value, 0, $chain, $histo, ''))
+            # This is a simpler version of singleton_matches.
+            my $found = 0;
+            my $fix;
+            for my $core_tag (@TAG_ORDER)
             {
-              # print "VVV $value\n";
+              $fix = $whole->get_single($core_tag, lc($value));
+              next unless defined $fix->{CATEGORY};
+              my $tag = $fix->{CATEGORY};
+              $found = $core_tag;
+              last;
+            }
+
+            if ($found)
+            {
+              append_token($chain, 'SINGLETON', $found, $fix->{VALUE},
+                lc($value), \$token_no, $histo, '');
               next;
             }
 
@@ -195,66 +210,60 @@ if ($datum eq 'Afghanistan')
 
       if ($chain->last() == 0)
       {
-        my $token = $chain->check_out(0);
-        my $field = $token->field();
-        my $value = $token->value();
-        if ($field eq 'COUNTRY')
+        my $match_field = match_single_word($handle, $chain);
+        if ($match_field eq '')
         {
-          store($handle, 'COUNTRY', $value);
-          $country_seen = 1;
-          next;
-        }
-        elsif ($field eq 'REGION')
-        {
-          store($handle, 'REGION', $value);
-          print "XX7 $datum\n";
-          next;
-        }
-        elsif ($field eq 'CITY')
-        {
-          store($handle, 'CITY', $value);
-          print "XX8 $datum\n";
-          next;
-        }
-        elsif ($field eq 'LOCALITY')
-        {
-          store($handle, 'LOCALITY', $value);
-          print "XX9 $datum\n";
-          next;
-        }
-        elsif ($field eq 'FLUFF')
-        {
-          store($handle, 'FLUFF', $value);
-          next;
-        }
-        elsif ($field eq 'SYSTEM')
-        {
-          store($handle, 'SYSTEM', $value);
-          next;
-        }
-        elsif ($field eq 'CONVENTIONS')
-        {
-          store($handle, 'CONVENTIONS', $value);
-          next;
-        }
-        elsif ($field eq 'FIRSTFIRST' ||
-            $field eq 'FIRSTMID' ||
-            $field eq 'FIRSTBBO')
-        {
-          store($handle, 'FIRST', $value);
-          $name_seen = 1;
-          next;
-        }
-        elsif ($field eq 'LASTLAST' ||
-            $field eq 'LASTMID' ||
-            $field eq 'LASTBBO')
-        {
-          store($handle, 'LAST', $value);
-          $name_seen = 1;
-          next;
+          print "WW9 $datum\n";
+          my $value = $values[0];
+
+          # TODO Should be somehow above and not in this if().
+          if (length($value) >= 3 && $value =~ /^[0-9](\p{Word}+)$/) 
+          {
+            my $rest = $1;
+            my $found = 0;
+            my $fix;
+            for my $core_tag (@TAG_ORDER)
+            {
+              $fix = $whole->get_single($core_tag, lc($rest));
+              next unless defined $fix->{CATEGORY};
+              $found = $core_tag;
+              last;
+            }
+
+            if ($found)
+            {
+              # TODO Modify the token.
+            }
+          }
+          elsif (length($value) >= 5 && $value =~ /^[A-Z](\p{Word}+)$/) 
+          {
+            my $rest = $1;
+            my $found = 0;
+            my $fix;
+            for my $core_tag (@TAG_ORDER)
+            {
+              $fix = $whole->get_single($core_tag, lc($rest));
+              next unless defined $fix->{CATEGORY};
+              $found = $core_tag;
+              last;
+            }
+
+            if ($found)
+            {
+              # TODO Modify the token.
+              print "WWW $value ($found)\n";
+            }
+          }
         }
 
-        print "WW9 $datum\n";
+        if ($match_field eq 'COUNTRY')
+        {
+          $country_seen = 1;
+        }
+        elsif ($match_field eq 'NAME')
+        {
+          $name_seen = 1;
+        }
       }
       elsif ($chain->last() == 1)
       {
@@ -368,6 +377,45 @@ sub looks_like_email
   print "ALIAS $datum\n";
   print "DOMMISS $domain\n";
   return 0;
+}
+
+
+sub match_single_word
+{
+  # Return something useful if we matched.
+  my ($handle, $chain) = @_;
+
+  my $token = $chain->check_out(0);
+  my $field = $token->field();
+  my $value = $token->value();
+
+  if ($field eq 'COUNTRY' ||
+      $field eq 'REGION' ||
+      $field eq 'CITY' ||
+      $field eq 'LOCALITY' ||
+      $field eq 'FLUFF' ||
+      $field eq 'SYSTEM' ||
+      $field eq 'CONVENTIONS')
+  {
+    store($handle, $field, $value);
+    return $field;
+  }
+  elsif ($field eq 'FIRSTFIRST' ||
+      $field eq 'FIRSTMID' ||
+      $field eq 'FIRSTBBO')
+  {
+    store($handle, 'FIRST', $value);
+    return 'NAME';
+  }
+  elsif ($field eq 'LASTLAST' ||
+      $field eq 'LASTMID' ||
+      $field eq 'LASTBBO')
+  {
+    store($handle, 'LAST', $value);
+    return 'NAME';
+  }
+
+  return '';
 }
 
 
