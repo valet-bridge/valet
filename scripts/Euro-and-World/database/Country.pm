@@ -148,9 +148,9 @@ my %COUNTRIES = (
   Serbia => "SER", SER => "SER", # Not standard
   "Serbia and Montenegro" => "SCG", SCG => "SCG",
   Seychelles => "SYC", SYC => "SYC",
+  Singapore => "SIN", SIN => "SIN", # Not standard
   Slovakia => "SVK", SVK => "SVK",
   Slovenia => "SLO", SLO => "SLO", # Not standard
-  Singapore => "SIN", SIN => "SIN", # Not standard
   "South Africa" => "RSA", RSA => "RSA", # Not standard
   Spain => "ESP", ESP => "ESP",
   "Sri Lanka" => "SRI", SRI => "SRI", # Not standard

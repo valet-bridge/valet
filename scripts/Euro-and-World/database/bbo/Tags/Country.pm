@@ -14,21 +14,27 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Bosnia & Herzegovina',
+  'Burkina Faso',
+  'Cayman Islands',
   'Chinese Taipei',
   'Costa Rica',
   'Czech Republic',
+  'Dominican Republic',
   'Faroe Islands',
   'French Guyana',
   'French Polynesia',
   'Great Britain',
   'Hong Kong',
   'Isle of Man',
+  'Ivory Coast',
   'Netherlands Antilles',
   'New Caledonia',
+  'New Guinea',
   'New Zealand',
   'North America',
   'North Macedonia',
   'Northern Ireland',
+  'Saint Lucia',
   'San Marino',
   'Saudi Arabia',
   'Serbia and Montenegro',
@@ -37,7 +43,8 @@ my @MULTI_WORDS =
   'Sri Lanka',
   'Trinidad and Tobago',
   'United Arab Emirates',
-  'United Kingdom'
+  'United Kingdom',
+  'US Virgin Islands'
 );
 
 my %MULTI_TYPOS =
@@ -120,32 +127,36 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Albania Andorra Angora Argentina Australia Austria 
-  Bahrain Bangladesh Barbados Belarus Belgium Bermuda 
-  Bolivia Bosnia Botswana Brazil Bulgaria
-  Canada Chile Colombia Comoros Croatia Cuba Cyprus
+  Afghanistan Albania Algeria Andorra Angora Argentina Armenia Aruba
+  Australia Austria Azerbaijan
+  Bahamas Bahrain Bangladesh Barbados Belarus Belgium Benin Bermuda 
+  Bhutan Bolivia Bosnia Botswana Brazil Bulgaria
+  Cambodia Cameroon Canada Chile China Colombia Comoros Congo Croatia 
+  Cuba Cyprus
   Denmark 
-  Ecuador Egypt England Estonia 
+  Ecuador Egypt England Estonia Eswatini
   Finland France
-  Germany Georgia Greece Guadeloupe Guernsey
-  Hungary 
-  Iceland Indonesia Iraq Ireland Israel Italy
-  Japan Jersey Jordan
-  Kazakhstan Kenya Kuwait
-  Latvia Lebanon Lichtenstein Lithuania Luxembourg 
-  Macau Madagascar Malta Malaysia Mauritius Mexico 
-  Monaco Mongolia Montenegro Morocco
-  Netherlands Norden Norway 
-  Pakistan Palestine Peru Philippines Poland Portugal
+  Georgia Germany Georgia Greece Guadeloupe Guatemala Guernsey Guyana
+  Haiti Honduras Hungary 
+  Iceland India Indonesia Iran Iraq Ireland Israel Italy
+  Jamaica Japan Jersey Jordan
+  Kazakhstan Kenya Kuwait Kyrgyzstan
+  Latvia Lebanon Lesotho Libya Liechtenstein Lithuania Luxembourg 
+  Macau Madagascar Malaysia Malta Martinique Mauritius Mexico Moldova
+  Monaco Mongolia Montenegro Morocco Mozambique
+  Namibia Nepal Netherlands Nicaragua Nigeria Norden Norway 
+  Oman
+  Pakistan Palestine Panama Paraguay Peru Philippines Poland Portugal
   Qatar
   Reunion Romania Russia
-  Scotland Serbia Singapore Slovenia Slovakia Spain Sweden Switzerland Syria
-  Taiwan Tanzania Thailand Tunisia Turkey Turkmenistan
-  Uganda Ukraine Universal Uruguay USA
-  Venezuela
+  Scotland Senegal Serbia Seychelles Singapore Slovakia Slovenia 
+  Spain Sudan Suriname Sweden Switzerland Syria
+  Taiwan Tanzania Thailand Togo Tunisia Turkey Turkmenistan
+  Uganda Ukraine Universal Uruguay USA Uzbekistan
+  Vanuatu Venezuela Vietnam
   Wales
-  Yugoslavia
-  Zimbabwe
+  Yemen Yugoslavia
+  Zambia Zimbabwe
 );
 
 my %SINGLE_TYPOS =
@@ -170,6 +181,7 @@ my %SINGLE_TYPOS =
   Egypt => ['egy', 'egytp', 'egypte'],
   England => ['eng', 'angleterre', 'englnd'],
   Estonia => ['estonie', 'est'],
+  Eswatini => ['swaziland'],
   Finland => ['finnland', 'fi', 'fin'],
   'Faroe Islands' => ['faroes'],
   France => ['fra', 'fnc', 'frandce'],
@@ -188,6 +200,7 @@ my %SINGLE_TYPOS =
   Jordan => ['jor'],
   Latvia => ['lavtia', 'latvija', 'lat'],
   Lebanon => ['leb'],
+  Liechtenstein => ['lichtenstein'],
   Lithuania => ['lithuana', 'lit'],
   Luxembourg => ['luxemburg', 'luxembourgh'],
   Madagascar => ['madagaskar'],

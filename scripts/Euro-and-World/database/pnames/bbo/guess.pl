@@ -2,19 +2,40 @@
 use strict;
 use warnings;
 
+use lib '.';
 use lib '..';
-use lib '../..';
 
-use FirstFirst;
-use FirstMid;
-use FirstBBO;
+my @TAG_ORDER = qw(
+  COUNTRY
+  REGION
+  CITY
+  LOCALITY
+  NATIONALITY
+  FLUFF
+  NOTNAMES
+  SYSTEM
+  CONVENTIONS
+  FIRSTFIRST
+  FIRSTMID
+  FIRSTBBO
+  LASTLAST
+  LASTMID
+  LASTBBO
+);
 
-use LastMid;
-use LastLast;
-use LastBBO;
+# TODO Do something about Both.
+# Probaby split into BothFirstish and BothLastish and BothUnclear.
 
-use Country;
-my $country = Country->new();
+use WholeBBO;
+my $whole = WholeBBO->new();
+$whole->init_hashes;
+
+use Chain;
+use Token;
+use Util;
+
+use Histo;
+my $histo = Histo->new();
 
 my @DOMAINS = qw(
   ag ar at au be bg br ca ch cl cn co com cz de dk edu ee es eu fi fm fr 
@@ -24,86 +45,6 @@ my @DOMAINS = qw(
 
 my %DOMAINS_HASH;
 $DOMAINS_HASH{$_} = 1 for @DOMAINS;
-
-my @SKIP_WORDS = qw(
-  ask Ask
-  null
-  other Other
-  privado privat private prive privato Privat Private PRIVATE
-  request
-  speak
-);
-
-my %SKIP_HASH;
-$SKIP_HASH{$_} = 1 for @SKIP_WORDS;
-
-my @SYSTEM_WORDS = qw(
-  1nt 2d 2nt 15-17 15-18 16-18 16-19 19-20 20-21 20-22 21-23
-  0314 1430 5542
-  5cm 5crd 5major
-  aces accept acol against akol alert asking attitude
-  beginner better bicolor blackwood blw
-  capaletti capp card carding cards checkback clubs cue cuebid
-  dbl diamonds discard drury
-  enc encourage encouraging exclusion expert
-  faible fnt forcing free fsf fuerte
-  gadgets gambling gerber game gf
-  hand hcp hearts high
-  inverted
-  jac jacoby
-  keycard
-  landy lead leb lebensohl low
-  major majors master minimum minor muiderberg multi multicolor
-  negative nmf
-  ogust opening overcall overcalls
-  partner play player points prec precision preempt pts puppet
-  raise raises relay resp response reverse revdrury rkc rkcb 
-  rusinow sayc short small smolen spades splinter standard standart 
-  stayman 
-  std strng strong strongest suit suits supp support
-  transf transfer transfers transfert trèfle trefles trf trnsf 
-  trsf twos
-  udca undo undos upside
-  weak waiting
-  xfer
-);
-
-# BIL is not really a convention, but is normally not a real last name.
-my @CONVENTIONS = qw(
-  bergen
-  bil
-  blackwood
-  cappelletti
-  drury
-  english
-  jacobi jacoby
-  gerber ghestem goren
-  landy lightner
-  michaels
-  ogust
-  smolen stayman
-);
-
-my %CONVENTIONS_HASH;
-$CONVENTIONS_HASH{$_} = $_ for @CONVENTIONS;
-
-my $SYSTEMRE = qr/\b(?:@{[ join '|', @SYSTEM_WORDS ]})\b/i;
-
-
-my (%FIRST, %FIRST_LC);
-$FIRST{$_} = 1 for @FIRST_FIRST_NAMES;
-$FIRST{$_} = 1 for @FIRST_MID_NAMES;
-$FIRST{$_} = 1 for @FIRST_BBO;
-$FIRST_LC{lc($_)} = $_ for @FIRST_FIRST_NAMES;
-$FIRST_LC{lc($_)} = $_ for @FIRST_MID_NAMES;
-$FIRST_LC{lc($_)} = $_ for @FIRST_BBO;
-
-my (%LAST, %LAST_LC);
-$LAST{$_} = 1 for @LAST_MID_NAMES;
-$LAST{$_} = 1 for @LAST_LAST_NAMES;
-$LAST_LC{lc($_)} = $_ for @LAST_MID_NAMES;
-$LAST_LC{lc($_)} = $_ for @LAST_LAST_NAMES;
-$LAST_LC{lc($_)} = $_ for @LAST_BBO;
 
 # my %FIRST_MANUAL;
 # get_file(\%FIRST_MANUAL, 'h');
@@ -153,11 +94,11 @@ for my $i (0 .. $#fields)
       my $datum = $data[$i];
       $datum =~ s/^\s+//;
       $datum =~ s/\s+$//;
+      $datum =~ s/\s+/ /g;
       $datum =~ s/^[!\-+:;'"@?\(\)*.,=#%&\/\$]+\s*//;
       $datum =~ s/\s*[!\-+:;'"@?\)*.,=#%&\/\$]+$//;
 
       next unless length($datum) > 0;
-      next if exists $SKIP_HASH{$datum};
       next if $datum =~ /^[!_\-+:\(\)*.,=%\/\$'"@?#x\s]+$/;
 
       if ($datum =~ /Wolanski/)
@@ -165,40 +106,14 @@ for my $i (0 .. $#fields)
         # print "HERE\n";
       }
 
-      if ($country->valid_lc($datum))
-      {
-        store($handle, 'COUNTRY', $datum);
-        $country_seen = 1;
-        next;
-      }
-      elsif ($datum =~ /^(\d+)$/ && $1 >= 100 && $1 < 200)
+      if ($datum =~ /^(\d+)$/ && $1 >= 100 && $1 < 200)
       {
         store($handle, 'MAGIC', $datum);
         $magic_seen = 1;
         next;
       }
 
-      my $datum_lc = lc($datum);
-      if ($datum !~ /\s/ && exists $FIRST_LC{$datum_lc})
-      {
-        store($handle, 'FIRST', $FIRST_LC{$datum_lc});
-        $name_seen = 1;
-        next;
-      }
-      elsif ($datum !~ /\s/ && exists $LAST_LC{$datum_lc} &&
-        ! exists $CONVENTIONS_HASH{$datum_lc})
-      {
-        store($handle, 'LAST', $LAST_LC{$datum_lc});
-        $name_seen = 1;
-        next;
-      }
-
-      if ($datum =~ /^[0-9]n/ && $magic_seen)
-      {
-        # Skip -- some kind of code.
-        next;
-      }
-      elsif ($datum =~ /^\dy/)
+      if (($datum =~ /^[0-9]n/ && $magic_seen) || $datum =~ /^\dy/)
       {
         # Skip -- some kind of code.
         next;
@@ -208,47 +123,185 @@ for my $i (0 .. $#fields)
       {
         next if looks_like_email($handle, $datum);
       }
-      elsif (! $magic_seen)
+
+      if ($country_seen && ! $magic_seen)
       {
         store($handle, 'SYSTEM', $datum);
         next;
       }
 
-      if ($datum =~ $SYSTEMRE) 
-      {
-        store($handle, 'SYSTEM', $datum);
-        next;
-      }
+      # From here on we have to analyze more carefully.
+      # This is modeled on Title::Study.
+      my @tags = (0);
+      my @values = ();
+      my @texts = ();
 
-      # Some simple first-last combinations.
-      my @words = split /\s+/, $datum_lc;
-      if ($#words == 1)
+if ($datum eq 'Afghanistan')
+{
+  print "HERE\n";
+}
+      split_on_dates($datum, \@tags, \@values, \@texts, 0);
+      split_on_multi($whole, \@TAG_ORDER, 0, \@tags, \@values, \@texts);
+
+      # Split on separators.
+      my $sep = qr/[\s+\-\+\._:;&@"\/\(\)\|]/;
+
+      my $token_no = 0;
+      my $unsolved_flag = 0;
+      my $chain = Chain->new();
+
+      for my $i (0 .. $#values)
       {
-        if (exists $FIRST_LC{$words[0]} &&
-            ! exists $LAST_LC{$words[0]} &&
-            exists $LAST_LC{$words[1]} &&
-            ! exists $FIRST_LC{$words[1]} &&
-            ! exists $CONVENTIONS_HASH{$words[1]})
+        if ($tags[$i] ne '0')
         {
-          store($handle, 'FIRST', $FIRST_LC{$words[0]});
-          store($handle, 'LAST', $LAST_LC{$words[1]});
+          # We had a multi-word hit.
+          append_token($chain, 'SINGLETON', $tags[$i], $values[$i],
+            $texts[$i], \$token_no, $histo, '');
+          
+          print "TTT $values[$i]}\n";
+        }
+        else
+        {
+          my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
+          foreach my $value (@a)
+          {
+            # if ($value eq 'Ankara')
+            # {
+              # print "HERE\n";
+            # }
+
+            if (singleton_non_tag_matches($value, \$token_no,
+              $chain, $histo, ''))
+            {
+              # print "UUU $value\n";
+              next;
+            }
+
+            if (singleton_tag_matches($whole, \@TAG_ORDER,
+              \$token_no, $value, 0, $chain, $histo, ''))
+            {
+              # print "VVV $value\n";
+              next;
+            }
+
+            append_token($chain, 'UNKNOWN', '', $value, $value,
+              \$token_no, $histo, '');
+
+            print "SSS value $value\n";
+            $unsolved_flag = 1;
+          }
+        }
+      }
+
+      if ($chain->last() == 0)
+      {
+        my $token = $chain->check_out(0);
+        my $field = $token->field();
+        my $value = $token->value();
+        if ($field eq 'COUNTRY')
+        {
+          store($handle, 'COUNTRY', $value);
+          $country_seen = 1;
+          next;
+        }
+        elsif ($field eq 'REGION')
+        {
+          store($handle, 'REGION', $value);
+          print "XX7 $datum\n";
+          next;
+        }
+        elsif ($field eq 'CITY')
+        {
+          store($handle, 'CITY', $value);
+          print "XX8 $datum\n";
+          next;
+        }
+        elsif ($field eq 'LOCALITY')
+        {
+          store($handle, 'LOCALITY', $value);
+          print "XX9 $datum\n";
+          next;
+        }
+        elsif ($field eq 'FLUFF')
+        {
+          store($handle, 'FLUFF', $value);
+          next;
+        }
+        elsif ($field eq 'SYSTEM')
+        {
+          store($handle, 'SYSTEM', $value);
+          next;
+        }
+        elsif ($field eq 'CONVENTIONS')
+        {
+          store($handle, 'CONVENTIONS', $value);
+          next;
+        }
+        elsif ($field eq 'FIRSTFIRST' ||
+            $field eq 'FIRSTMID' ||
+            $field eq 'FIRSTBBO')
+        {
+          store($handle, 'FIRST', $value);
           $name_seen = 1;
           next;
         }
-        elsif (!exists $FIRST_LC{$words[0]} &&
-            exists $LAST_LC{$words[0]} &&
-            ! exists $LAST_LC{$words[1]} &&
-            exists $FIRST_LC{$words[1]} &&
-            ! exists $CONVENTIONS_HASH{$words[0]})
+        elsif ($field eq 'LASTLAST' ||
+            $field eq 'LASTMID' ||
+            $field eq 'LASTBBO')
         {
-          print "WXW $datum\n";
-          # next;
+          store($handle, 'LAST', $value);
+          $name_seen = 1;
+          next;
+        }
+
+        print "WW9 $datum\n";
+      }
+      elsif ($chain->last() == 1)
+      {
+        my $token0 = $chain->check_out(0);
+        my $field0 = $token0->field();
+        my $value0 = $token0->value();
+
+        my $token1 = $chain->check_out(1);
+        my $field1 = $token1->field();
+        my $value1 = $token1->value();
+
+        if (($field0 eq 'FIRSTFIRST' ||
+            $field0 eq 'FIRSTMID' ||
+            $field0 eq 'FIRSTBBO') &&
+            ($field1 eq 'LASTLAST' ||
+            $field1 eq 'LASTMID' ||
+            $field1 eq 'LASTBBO'))
+        {
+          store($handle, 'FIRST', $value0);
+          store($handle, 'LAST', $value1);
+          $name_seen = 1;
+          print "YY1 $datum\n";
+          next;
+        }
+        elsif (($field1 eq 'FIRSTFIRST' ||
+            $field1 eq 'FIRSTMID' ||
+            $field1 eq 'FIRSTBBO') &&
+            ($field0 eq 'LASTLAST' ||
+            $field0 eq 'LASTMID' ||
+            $field0 eq 'LASTBBO'))
+        {
+          store($handle, 'FIRST', $value1);
+          store($handle, 'LAST', $value0);
+          $name_seen = 1;
+          print "YY2 $datum\n";
+          next;
         }
       }
 
       if ($name_seen)
       {
-        print "YYY $datum\n";
+        print "ZZ1 $datum\n";
+      }
+
+      if ($#values > 3)
+      {
+        print "ZZ2 $datum\n";
       }
 
       push @info, "GENERIC $datum";

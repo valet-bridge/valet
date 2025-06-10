@@ -1,5 +1,28 @@
-Manip.pm: 
-Read into guess.pl
+Finish the last-first exceptions, implement
+Also implement some forced substitions, Swinkels AH => A. H. Swinkels
+CA Ratan = C. A. Ratan
+Rae Ann is one first name
+
+
+Country: Switch to Tags/Country (for the misspellings).
+City
+Region
+Club
+www.sth.sth
+Probably anything with a lot of spaces or commas is a NOTE
+please pls 
+
+Regenerate Both.pm
+Probably have to generate a presumption that it's one or the other.
+First + Both(Last) = First + Last
+Both(First) + Last = First + Last
+Count against EBL and BBO occurrences.
+
+Add Fluff and the Firsts to the same Whole system (or a different Whole)
+
+
+
+---
 
 Can also read a .txt file
 - Read what it matches, either complete lower-case or first cap

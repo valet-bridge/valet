@@ -39,7 +39,7 @@ sub ordinal_to_numeral
     $ord =~ s/^0+//; # Remove leading zeroes
     if ($ord < 0 || $ord >= 100)
     {
-      die "Large ordinal? $ord";
+      warn "Large ordinal? $ord";
     }
     return $1;
   }
