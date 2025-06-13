@@ -206,7 +206,7 @@ my @SINGLE_WORDS = qw(
   Brussels Bucharest Budapest Buffalo Buonconvento Burghausen Bursa 
   Burdur Buyukada Buzios Bydgoszcz Bytom Bø
 
-  Caen Cairns Cairo Cali Canakkale Canberra Cankaya Cannareggio 
+  Caen Cairns Cairo Cali Canakkale Canberra Cankaya Cannareggio Cannes
   Canterbury Caracas Casablanca Cascais Catania Cerkezkoy Cesme Chandigarh 
   Changhua Changsha Changzhou Chavdar Chaville Chelmno Chelopech Chengdu 
   Chennai Chepelare Chiayi Chicago Chongqing Chumphon Cimahi Cirebon 

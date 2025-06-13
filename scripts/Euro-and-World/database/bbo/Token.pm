@@ -99,6 +99,13 @@ sub set_iterator_field
 }
 
 
+sub set_field
+{
+  my ($self, $field) = @_;
+  $self->{FIELD} = $field;
+}
+
+
 sub reset_iterator_field
 {
   my ($self, $field) = @_;

@@ -3,6 +3,14 @@ use strict;
 use warnings;
 use utf8;
 use feature 'unicode_strings';
+use Encode;
+use Encode::HanExtra;
+use Encode::Detect::Detector;
+use Encode::Guess;
+
+
+# Encode::Guess->set_suspects(qw/utf8 windows-1254 gb18030 iso-8859-9 windows-1252/);
+
 
 use lib '.';
 use lib '..';
@@ -28,6 +36,11 @@ my @TAG_ORDER = qw(
   LASTBBO
 );
 
+my %LOCAL_SUBS =
+(
+  BARCANERA => {ZhangZhou => 'Zhou ZHANG'}
+);
+
 # TODO Do something about Both.
 # Probaby split into BothFirstish and BothLastish and BothUnclear.
 
@@ -50,18 +63,6 @@ my @DOMAINS = qw(
 
 my %DOMAINS_HASH;
 $DOMAINS_HASH{$_} = 1 for @DOMAINS;
-
-# my %FIRST_MANUAL;
-# get_file(\%FIRST_MANUAL, 'h');
-# for my $k (keys %FIRST_MANUAL)
-# {
-  # if (! exists $FIRST_LC{$k} && ! exists $LAST_LC{$k})
-  # {
-    # print "$k\n";
-  # }
-# }
-# exit;
-
 
 my $file = 'db';
 my $data;
@@ -87,6 +88,8 @@ for my $i (0 .. $#fields)
       next;
     }
 
+my @tmp;
+split_into_components($fields[$i+1], \@tmp);
     my @data = split /[\x00-\x1F]+/, $fields[$i+1];
     my @info;
     my $country_seen = 0;
@@ -100,15 +103,27 @@ for my $i (0 .. $#fields)
       $datum =~ s/^\s+//;
       $datum =~ s/\s+$//;
       $datum =~ s/\s+/ /g;
-      $datum =~ s/^[!\-+:;'"@?\(\)*.,=#%&\/\$]+\s*//;
-      $datum =~ s/\s*[!\-+:;'"@?\)*.,=#%&\/\$]+$//;
+      $datum =~   s/^[!\-+:;'"@?\(\)\{\}\[\]<>*.,=#%&\/\$]+\s*//;
+      $datum =~ s/\s*[!\-+:;'"@?\(\)\{\}*.,=#%&\/\$]+$//;
 
       next unless length($datum) > 0;
       next if $datum =~ /^[!_\-+:\(\)*.,=%\/\$'"@?#x\s]+$/;
 
-      if ($datum =~ /Wolanski/)
+next;
+      guess_string_type($handle, $datum, 0);
+
+      # A targeted way to make fixes.
+      if (exists $LOCAL_SUBS{$handle})
       {
-        # print "HERE\n";
+        for my $tofix (keys %{$LOCAL_SUBS{$handle}})
+        {
+          $datum =~ s/$tofix/$LOCAL_SUBS{$handle}{$tofix}/;
+        }
+      }
+
+      if ($datum =~ /^A$/)
+      {
+        print "HERE\n";
       }
 
       if ($datum =~ /^(\d+)$/ && $1 >= 100 && $1 < 200)
@@ -138,19 +153,19 @@ for my $i (0 .. $#fields)
       # From here on we have to analyze more carefully.
       # This is modeled on Title::Study.
       my @tags = (0);
-      my @values = ();
-      my @texts = ();
+      my @values = ($datum);
+      my @texts = ($datum);
 
-      split_on_dates($datum, \@tags, \@values, \@texts, 0);
       split_on_multi($whole, \@TAG_ORDER, 0, \@tags, \@values, \@texts);
 
       # Split on separators.
-      my $sep = qr/[\s+\-\+\._:;&@"\/\(\)\|]/;
+      my $sep = qr/[\s+\-\+\.,_:;&@"\/\(\)\|]/;
 
       my $token_no = 0;
       my $unsolved_flag = 0;
       my $chain = Chain->new();
 
+      # Make the chain.
       for my $i (0 .. $#values)
       {
         if ($tags[$i] ne '0')
@@ -158,54 +173,44 @@ for my $i (0 .. $#fields)
           # We had a multi-word hit.
           append_token($chain, 'SINGLETON', $tags[$i], $values[$i],
             $texts[$i], \$token_no, $histo, '');
-          
-          print "TTT $values[$i]}\n";
+          next;
         }
-        else
+
+        # Split further.
+        my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
+        my $i = 0;
+        foreach my $value (@a)
         {
-          my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
-          foreach my $value (@a)
+          if (study_component($whole, \@TAG_ORDER, $value, \$token_no, 
+            $chain, $histo))
           {
-            # The first two are a simpler version of singleton_non_matches.
-            if ($value =~ /^\d+$/)
-            {
-              append_token($chain, 'COUNTER', 'NUMERAL',
-                $value, $value, \$token_no, $histo, '');
-              next;
-            }
-            elsif ($value =~ /^[A-za-z]$/)
-            {
-              append_token($chain, 'COUNTER', 'LETTER',
-                $value, $value, \$token_no, $histo, '');
-              next;
-            }
-
-            # This is a simpler version of singleton_matches.
-            my $found = 0;
-            my $fix;
-            for my $core_tag (@TAG_ORDER)
-            {
-              $fix = $whole->get_single($core_tag, lc($value));
-              next unless defined $fix->{CATEGORY};
-              my $tag = $fix->{CATEGORY};
-              $found = $core_tag;
-              last;
-            }
-
-            if ($found)
-            {
-              append_token($chain, 'SINGLETON', $found, $fix->{VALUE},
-                lc($value), \$token_no, $histo, '');
-              next;
-            }
-
-            append_token($chain, 'UNKNOWN', '', $value, $value,
-              \$token_no, $histo, '');
-
-            print "SSS value $value\n";
-            $unsolved_flag = 1;
+            next;
           }
+
+          if ($i == 0 && 
+             (length($value) >= 3 && $value =~ /^[0-9](\p{Word}+)$/) ||
+             (length($value) >= 5 && $value =~ /^[A-Z](\p{Word}+)$/))
+          {
+            # It happens that there is a leading 0-9 or A-Z.
+            my $rest = $1;
+            if (study_component($whole, \@TAG_ORDER, $rest, \$token_no, 
+              $chain, $histo))
+            {
+              next;
+            }
+          }
+        
+          append_token($chain, 'UNKNOWN', '', $value, $value,
+            \$token_no, $histo, '');
+
+          print "SSS value $value\n";
+          $unsolved_flag = 1;
         }
+      }
+
+      for my $i (0 .. $chain->last())
+      {
+        consolidate_names($chain->check_out($i));
       }
 
       if ($chain->last() == 0)
@@ -215,54 +220,14 @@ for my $i (0 .. $#fields)
         {
           print "WW9 $datum\n";
           my $value = $values[0];
-
-          # TODO Should be somehow above and not in this if().
-          if (length($value) >= 3 && $value =~ /^[0-9](\p{Word}+)$/) 
-          {
-            my $rest = $1;
-            my $found = 0;
-            my $fix;
-            for my $core_tag (@TAG_ORDER)
-            {
-              $fix = $whole->get_single($core_tag, lc($rest));
-              next unless defined $fix->{CATEGORY};
-              $found = $core_tag;
-              last;
-            }
-
-            if ($found)
-            {
-              # TODO Modify the token.
-            }
-          }
-          elsif (length($value) >= 5 && $value =~ /^[A-Z](\p{Word}+)$/) 
-          {
-            my $rest = $1;
-            my $found = 0;
-            my $fix;
-            for my $core_tag (@TAG_ORDER)
-            {
-              $fix = $whole->get_single($core_tag, lc($rest));
-              next unless defined $fix->{CATEGORY};
-              $found = $core_tag;
-              last;
-            }
-
-            if ($found)
-            {
-              # TODO Modify the token.
-              print "WWW $value ($found)\n";
-            }
-          }
         }
+        else
+        {
+          $country_seen = 1 if $match_field eq 'COUNTRY';
+          $name_seen = 1 if $match_field eq 'NAME';
 
-        if ($match_field eq 'COUNTRY')
-        {
-          $country_seen = 1;
-        }
-        elsif ($match_field eq 'NAME')
-        {
-          $name_seen = 1;
+          $chain->complete('COMPLETE');
+          next;
         }
       }
       elsif ($chain->last() == 1)
@@ -275,38 +240,26 @@ for my $i (0 .. $#fields)
         my $field1 = $token1->field();
         my $value1 = $token1->value();
 
-        if (($field0 eq 'FIRSTFIRST' ||
-            $field0 eq 'FIRSTMID' ||
-            $field0 eq 'FIRSTBBO') &&
-            ($field1 eq 'LASTLAST' ||
-            $field1 eq 'LASTMID' ||
-            $field1 eq 'LASTBBO'))
+        if ($field0 eq 'FIRST' && $field1 eq 'LAST')
         {
           store($handle, 'FIRST', $value0);
           store($handle, 'LAST', $value1);
+          $chain->complete('COMPLETE');
           $name_seen = 1;
-          print "YY1 $datum\n";
           next;
         }
-        elsif (($field1 eq 'FIRSTFIRST' ||
-            $field1 eq 'FIRSTMID' ||
-            $field1 eq 'FIRSTBBO') &&
-            ($field0 eq 'LASTLAST' ||
-            $field0 eq 'LASTMID' ||
-            $field0 eq 'LASTBBO'))
+        elsif ($field1 eq 'FIRST' && $field0 eq 'LAST')
         {
           store($handle, 'FIRST', $value1);
           store($handle, 'LAST', $value0);
+          $chain->complete('COMPLETE');
           $name_seen = 1;
           print "YY2 $datum\n";
           next;
         }
       }
 
-      if ($name_seen)
-      {
-        print "ZZ1 $datum\n";
-      }
+      next if $chain->status() eq 'COMPLETE';
 
       if ($#values > 3)
       {
@@ -316,12 +269,14 @@ for my $i (0 .. $#fields)
       push @info, "GENERIC $datum";
     }
 
+next;
+
     for my $inf (@info)
     {
       print "$inf\n";
     }
 
-    for my $key (keys %{$players{$handle}})
+    for my $key (sort keys %{$players{$handle}})
     {
       print "KEY $key ", join(' ', @{$players{$handle}{$key}}), "\n";
     }
@@ -330,6 +285,8 @@ for my $i (0 .. $#fields)
     $i++;
   }
 }
+
+$histo->print();
 
 
 sub get_file
@@ -352,6 +309,117 @@ sub get_file
     $first->{lc($line)} = 1;
   }
   close $fh;
+}
+
+
+sub split_into_components
+{
+  my ($text, $list) = @_;
+  my @parts = split /([\x01-\x1F])/, $text;
+
+  push @$list, { CHARSET => 0, TEXT => shift @parts };
+  
+  while (@parts) 
+  {
+    my $sep = shift @parts;
+    my $chunk = shift @parts // '';
+    push @$list, { CHARSET => ord($sep), TEXT => $chunk };
+
+    my $ascii = ($chunk =~ tr/\x00-\x7F//);
+    my $total = length($chunk);
+    my $high = $total - $ascii;
+    next if $high == 0;
+
+    
+    my $encoding = guess_string_type('', $text, 0);
+    my $decoded;
+    if ($encoding eq 'FAILED')
+    {
+      $decoded = $chunk;
+    }
+    else
+    {
+      $decoded = decode($encoding, $chunk, Encode::FB_CROAK);
+    }
+
+
+    # my $encoding = Encode::Guess->guess($chunk);
+    # my $decoded;
+
+    # if (ref($encoding)) 
+    # {
+      # my $decoded = $encoding->decode($chunk);
+
+      binmode(STDOUT, ":encoding(UTF-8)");
+      printf("CHARSET %2d ENCODING %-15s TEXT %s\n", 
+        ord($sep), $encoding, $decoded);
+    # } 
+    # else 
+    # {
+      # warn "Could not guess encoding for $chunk: $encoding";
+    # }
+
+
+  }
+}
+
+
+
+sub guess_string_type
+{
+  my ($handle, $str, $recursing) = @_;
+
+  my $upper = ($str =~ tr/A-Z//);
+  my $lower = ($str =~ tr/a-z//);
+  my $digit = ($str =~ tr/0-9//);
+  my $ascii = ($str =~ tr/\x00-\x7F//);
+  my $total = length($str);
+  my $high = $total - $ascii;
+
+  # if ($ascii == 0  && $high > 2)
+  {
+    # print "NONPRINTING? $str\n";
+
+    my $encoding = Encode::Detect::Detector::detect($str);
+    if (defined $encoding) 
+    {
+      # print "  Detected encoding: $encoding\n";
+
+      # Decode the raw string to Perl's internal Unicode format
+      my $decoded;
+      eval 
+      {
+        $decoded = decode($encoding, $str, Encode::FB_CROAK);
+      };
+      if ($@) 
+      {
+        if (! $recursing)
+        {
+          my $str2 = substr($str, 1);
+          return guess_string_type($handle, $str2, 1);
+        }
+        else
+        {
+          warn "  Handle $handle [$recursing] decode failed with $encoding: $@";
+        }
+      } 
+      else 
+      {
+        # Set STDOUT to UTF-8 so it prints properly
+        binmode(STDOUT, ":encoding(UTF-8)");
+  
+        # Print decoded Unicode string
+        print "$encoding;$decoded\n";
+        return $encoding;
+        # print "  Decoded string: $decoded\n";
+      }
+    } 
+    else 
+    {
+      warn "  Encoding could not be detected.\n";
+    }
+  }
+  return 'FAILED';
 }
 
 
@@ -380,6 +448,47 @@ sub looks_like_email
 }
 
 
+sub consolidate_names
+{
+  my ($token) = @_;
+  my $field = $token->field();
+
+  if ($field eq 'FIRSTFIRST' ||
+      $field eq 'FIRSTMID' ||
+      $field eq 'FIRSTBBO')
+  {
+    $token->set_field('FIRST');
+  }
+  elsif ($field eq 'LASTLAST' ||
+      $field eq 'LASTMID' ||
+      $field eq 'LASTBBO')
+  {
+    $token->set_field('LAST');
+  }
+}
+
+
+sub study_component
+{
+  my ($whole, $tag_order, $value, $pos, $chain, $histo) = @_;
+
+  if (singleton_non_tag_matches_basic(
+    $value, $pos, $chain, $histo, ''))
+  {
+    return 1;
+  }
+  elsif (singleton_tag_matches_basic($whole, $tag_order,
+    $pos, $value, 0, $chain, $histo, ''))
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
+
 sub match_single_word
 {
   # Return something useful if we matched.
@@ -395,21 +504,20 @@ sub match_single_word
       $field eq 'LOCALITY' ||
       $field eq 'FLUFF' ||
       $field eq 'SYSTEM' ||
-      $field eq 'CONVENTIONS')
+      $field eq 'CONVENTIONS' ||
+      $field eq 'LETTER' ||
+      $field eq 'NUMERAL' ||
+      $field eq 'YEAR')
   {
     store($handle, $field, $value);
     return $field;
   }
-  elsif ($field eq 'FIRSTFIRST' ||
-      $field eq 'FIRSTMID' ||
-      $field eq 'FIRSTBBO')
+  elsif ($field eq 'FIRST')
   {
     store($handle, 'FIRST', $value);
     return 'NAME';
   }
-  elsif ($field eq 'LASTLAST' ||
-      $field eq 'LASTMID' ||
-      $field eq 'LASTBBO')
+  elsif ($field eq 'LAST')
   {
     store($handle, 'LAST', $value);
     return 'NAME';
@@ -427,7 +535,7 @@ sub store
   {
     for my $stored (@{$players{$handle}{$key}})
     {
-      return if $stored eq $value;
+      return if lc($stored) eq lc($value);
     }
   }
 

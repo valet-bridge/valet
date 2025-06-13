@@ -152,8 +152,70 @@ my @SINGLE_WORDS = qw(
 
   être
 
-  bboer bteam email tante tartan tennis memory oracle gmail
-  masters
+  bboer bteam cabin dalek email tante tartan tennis memory oracle 
+  gmail masters bbo hi hello hola doc amigo amie alcatraz 
+  anonim answers sashimi atheist abracadabra absolutely adidas
+  adventuress airbus alchemy all'swell amulett anonimous
+  annonnymouse anonym anonymus another arbeidsjern architect
+  etc meme nope announcing anon anonymous nihao besta beste bestan
+  bestefar betjenten blackout blacksea blonde blueberry bluemoon
+  blueriver booboo boobs bonzo boozy borusse boxer brick buffoon
+  buffy buffet bulls bullspread bum butchergirl calm calmness calculus
+  cameraman cardshark caress fall fallacy fatboy firecrackers
+  fivestar moonlight goal galaxy alcapone organizator overbid police
+  polydor porche pops poop paleface panther blacknick peach pearly
+  pebble perseverance pervert pessimist petal pharmacist picatchou
+  piquant rasputin razorbacks reality reliable resilienza retiredmom
+  rocks rockcat rubiksmagic rumpelstilzchen rumplestiltskin
+  rumplestilksin zodiacpower røyksignaler seaweed incognito surgeon
+  sailfish seabridge searching seasoned selvfølgelig seriously
+  slugger smallfather snoopy snowflower solidarite spurs spring
+  stratocaster sundance sunday symmetric tornado tormento tournier
+  taifun teabridge terpsychora testspeler tetrahedron thansfer
+  thedoctor thepunch theshipwright theskank transformer transfeer
+  trueheart true voisin volcano sofistike wolves waldamsel waldlaufer
+  walleye walkyria wasserfrosch watermelon weakling weltklasse
+  wifwafwouf wildkatze wir wirt wino witch withdrawl wonderland
+  xmas roguekiller arrester arrows arrow aspirant aspirante
+  asterix attractive demander idem adv says dragon blue snow now
+  nejdet like later joker robot shadow vip water wind avancé
+  alien spock venus brain bmw bridger void tree zorro apple
+  anonym glp golfer sourire lips dentist eagle erfahren xtreme
+  titanic tolclub wdp fearless dawg dreamer feckless kid dogfish
+  captainfiko provocator prezidenta summertime literati chocolate
+  namenlos diehard abyss access almighty baby babybear bambi bamsefar
+  beachside bigdog bighand biologist bipede blackwidow carpicornus
+  hour claim pistolpit crazy candle clarkent conquest courage cowboy
+  curious dracula zeitgeist deadlock dear debt debtgal deja demander
+  demandez deutschlehrer dictatorergodan doggie domino dostoevskij
+  drno dragonfly smellycat easter knucklehead enternasyonel eroica
+  sandglass songbird eastwind edge einsiedeln eins imigrant eimer
+  emacs emagine euro eurocauliflower eventyr fake fantasma diplomat
+  facebook abuse fancazzist fortgeschritten freezing frog geologist
+  goulash gazelle geezer gemini girlpower grammy gramps grams
+  grandma grandpapa half happyland hawkster heineken høns ihaveone
+  implied imprecision scapegoat jackswiss justplay jüpiter hippo
+  killer kosmonauta lajeunesse lalala cute queen lifemaster
+  lightening lightmare lightsword member masterchef mastermind
+  matheducationprofessor microsoft misanthrope moneypenny morpheus
+  never nekkidtruth neverland nevermind newbie newproject nightdream
+  notransfer noway nochat nostalgie nuggets numbers obelix panzer
+  passchen provins parknshop pianissimo laser qwerty rektorinn
+  reptili rimrocksetters royalforce nightwish tallboy sunflower
+  wickwire capricorn sevenheaven shogun sigma soldiers soulmate
+  squireboy storfiskarn sweetie traverse thinkist trickmachine
+  universel watcher coffeee coffee commendatore toucan flute grandprix
+  zaunkoenig luck abuserr addict administrator aerobics alchemist
+  seabird weinkauf bakwerk bambi banksy beaute begynder beginning
+  blueadobe bluevista blueyes bonsoir boson brainbaby 
+  bridgefriends bridgeplay bridgehi bridgefan bridgeforfun
+  bridgevejen bridgeur brillantissime bêtise cafetière cafécafé
+  campagne chooser chopper choppy cloudproject coconuts codnugget
+  compatability confdentl confidencial confidential confidentiel
+  confidentielle consolación contractor convivialite cosmiclove
+  cosmos cranky symphony troubadour darksnow decourriere destout
+  didn't déclassé
+  
 );
 
 my %SINGLE_TYPOS =

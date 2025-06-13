@@ -167,6 +167,58 @@ my @SINGLE_WORDS = qw(
   Ömer Özel 
 
   Øyvind 
+
+  Aadil Aamer Abeer Ahava Aiman Akill Akira Akoit Alisha Amara
+  Amelka Amila Anina Apana Asena Atara Aulus Aytac
+
+  Bandi Bando Banjer Barend Batie Bayan Belisa Beren Berkan Berkut
+  Berra Bertel Bertus Betta Bikram Biman Blaine Blara Boran Boslo
+
+  Dedel Dermane Dhani Dhuni Dilla Dilly Dinan Diran Diren Dotti
+  Duysal Dwill
+
+  Edita Efira Eirek Elies Emili Eros Esperanza Evita Ezibi
+
+  Feray Ferhan Flippi Flore Florie Fosen Franda Friedel
+
+  Gabin Galen Gandon Ganni Gilla Gilmar Gioni Glorie Golla Goral
+  Gradus Grong Gulli Gulus Gunder Gusta
+
+  Hashim Haman Hanni Hattie Heide Helli Hemin Henda Hilario Hilko
+  Hilla Hilly Himawan Hrafn Hrelu Hriva
+
+  Irini Ishan Icaro Iliga Inaki Iuras
+
+  Jesson Jadie Jadil Janber Janick Jarad Jarda Jarie Jasia Jeker
+  Jelle Jetty Jhale Joline Jolle Joran Joren Juras
+
+  Kirit Kabou Kalia Karia Karie Karon Karya Kayla Kelli Kenza Khayer
+  Khuman Kirit Kisio Kjoro Kolla Kora Krasim
+
+  Landon LaVon Lanny Lissa Lluis Lolina Lolla Loras Lotten Lyaya
+
+  Melia Meline Minna Manick Manis Manish Mantas Marinel Maune
+  Mendel Milla Minna Molla Murli
+
+  Nisim Nance Narda Neasa Nissa Nolly
+
+  Oberon Odetta
+
+  Pancho Peris
+
+  Rares Radda Rapin Rolla
+
+  Sante Scilla Selam Senga Seren Sevan Stani Solla
+
+  Tuner Toddy
+
+  Uchen
+
+  Vroni
+
+  Willa
+
+  Zilla
 );
 
 my %SINGLE_TYPOS =

@@ -14,7 +14,9 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(ordinal_to_numeral ordinalize unteam 
   scoring_full_to_short find_field_in_chains
   split_on_dates split_on_capitals split_on_multi append_token 
-  singleton_numeral singleton_non_tag_matches singleton_tag_matches
+  singleton_numeral 
+  singleton_non_tag_matches singleton_non_tag_matches_basic
+  singleton_tag_matches singleton_tag_matches_basic
   make_record post_process_analyze_rest one_to_two_chains);
 
 
@@ -418,6 +420,26 @@ sub singleton_non_tag_matches
 }
 
 
+sub singleton_non_tag_matches_basic
+{
+  my ($value, $pos, $chain, $histo, $prefix) = @_;
+
+  if ($value =~ /^\d+$/)
+  {
+    singleton_numeral($value, $pos, $chain, $histo, $prefix);
+    return 1;
+  }
+  elsif ($value =~ /^[A-Za-z]$/)
+  {
+    append_token($chain, 'COUNTER', 'LETTER', $value, $value,
+      $pos, $histo, $prefix);
+    return 1;
+  }
+
+  return 0;
+}
+
+
 sub singleton_tag_matches
 {
   my ($whole, $tag_order, $pos, $text, $sep_flag, $chain,
@@ -432,7 +454,7 @@ sub singleton_tag_matches
 
     if ($tag eq 'GENDER' && $fix->{VALUE} eq 'Open')
     {
-      append_token($chain, 'SINGLETON', 'GENDER', 'Open',, $text, 
+      append_token($chain, 'SINGLETON', 'GENDER', 'Open', $text, 
         $pos, $histo, $prefix);
 
       # Special case: Add an extra token.
@@ -480,6 +502,27 @@ sub singleton_tag_matches
       append_token($chain, 'SINGLETON', $tag, $fix->{VALUE}, $text, 
         $pos, $histo, $prefix);
     }
+
+    return 1;
+  }
+  return 0;
+}
+
+
+sub singleton_tag_matches_basic
+{
+  my ($whole, $tag_order, $pos, $text, $sep_flag, $chain,
+    $histo, $prefix) = @_;
+
+  for my $core_tag (@$tag_order)
+  {
+    my $fix = $whole->get_single($core_tag, lc($text));
+    next unless defined $fix->{CATEGORY};
+
+    my $tag = $fix->{CATEGORY};
+
+    append_token($chain, 'SINGLETON', $tag, $fix->{VALUE}, $text, 
+      $pos, $histo, $prefix);
 
     return 1;
   }

@@ -72,7 +72,7 @@ my @SINGLE_WORDS = qw(
   raise raises relay resp response revers reverse revdrury rkc rkcb
   rusinow sayc short small smolen spades splinter standard standart
 
-  signals singleton sistem splinters splntr stayman std strng 
+  sef signals singleton sistem splinters splntr stayman std strng 
   strong strongest suit suits supp support syst system systems
 
   takeout tranfer tranfers trans transf transfe transfer transfers 

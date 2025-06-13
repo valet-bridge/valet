@@ -28,7 +28,7 @@ my @SINGLE_WORDS = qw(
   english
   jacobi jacoby
   gerber ghestem goren
-  landy lightner
+  landy lavinthal lightner
   michaels
   ogust
   smolen stayman

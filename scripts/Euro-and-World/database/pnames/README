@@ -1,3 +1,12 @@
+Revised plan:
+- Spend more effort on the file format
+  - First look for country
+  - If more than one, what to do?
+  - Then have a short list of character sets per country
+  - Try to match
+- What about the hex-looking strings
+
+
 Finish the last-first exceptions, implement
 Also implement some forced substitions, Swinkels AH => A. H. Swinkels
 CA Ratan = C. A. Ratan
