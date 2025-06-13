@@ -252,10 +252,11 @@ my @SINGLE_WORDS = qw(
 
   Lahore Landak Langkat Lanzhou Laodikya Lappeenranta Larnaca Larvik 
   Lausanne Lebork Lecco Leiden Leipzig Leksand Lerum Lesno Leszno Leuven 
-  Leverkusen Lhokseumawe Liandui Liepaja Lille Lillehammer Lima Limboto 
-  Lincoln Lindesberg Linköping Lisbon Liushu Livane Ljubljana Lodi Lodz 
-  Lojdy Lokotok Lom Lomza London Lovech Lowicz Lublin Lubomino Ludhiana
-  Ludvikabygden Lufeng Luleburgaz Lumajang Luzern Lyon
+  Leverkusen Lhokseumawe Liandui Liège Liepaja Lille Lillehammer Lima 
+  Limboto Lincoln Lindesberg Linköping Lisbon Liushu Livane Ljubljana 
+  Lodi Lodz Lojdy Lokotok Lom Lomza London Lovech Lowicz Lublin 
+  Lubomino Ludhiana Ludvikabygden Lufeng Luleburgaz Lumajang Luzern 
+  Lyon
 
   Maastricht Madrid Magetan Makassar Malang Malatya Malmö Manado 
   Manchester Manila Manisa Manna Mannheim Marbella Marcelli Mardin 
@@ -309,8 +310,8 @@ my @SINGLE_WORDS = qw(
   Tangerang Taoyuan Tarakan Targoviste Tarnów Tarnobrzeg Tasikmalaya 
   Taskopru Täby Täfteå Tczew Tekkekoy Tekýrdag Telmessos Temuco Ternopil 
   Thane Thanjavur Thessaloniki Thoisy Tianjin Tilburg Timisoara Tire 
-  Tofta Tokyo Tomohon Tonya Torino Toronto Toshima Toulouse Tours Trabzon 
-  Tralles Trang Trieste Trondheim Tromsø Tula Tübingen 
+  Tofta Tokyo Tomohon Tondano Tonya Torino Toronto Toshima Toulouse 
+  Tours Trabzon Tralles Trang Trieste Trondheim Tromsø Tula Tübingen 
 
   Udaipur Uddevalla Ulricehamn Umeå Underberg Uppsala Urla Usak Utrecht 
   Uzunköprü

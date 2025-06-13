@@ -65,6 +65,8 @@ use Chain;
 use Token;
 use Util;
 
+use Email;
+
 use Histo;
 my $histo = Histo->new();
 
@@ -410,6 +412,7 @@ sub raw_to_paragraphs
 
         $line =~ s/^\s+//;
         $line =~ s/\s+$//;
+        $line =~ s/\s{2,}/ /;
         $line =~ s/^[!\-+:;'"@?\(\)\{\}\[\]<>*.,=#%&\/\$]+\s*//;
         $line  =~ s/\s*[!\-+:;'"@?\(\)\{\}*.,=#%&\/\$]+$//;
 
@@ -453,6 +456,12 @@ sub look_for_email
   # TODO We could tolerate some spaces here, etc.
 
   my ($text) = @_;
+
+  my @list;
+  Email::looks_like(lc($text), \@list);
+  return;
+
+  # TODO Still need to parse @list.
 
   my @a = split '@', $text;
   return '' unless $#a == 1;

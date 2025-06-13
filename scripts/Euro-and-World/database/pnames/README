@@ -1,3 +1,6 @@
+Domain.pm
+Server.pm, also things like co.uk, match longest from back
+
 Revised plan:
 - Spend more effort on the file format
   - First look for country
