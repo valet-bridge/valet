@@ -19,6 +19,9 @@ use Tags::City;
 use Tags::Nationality;
 use Tags::Locality;
 
+use Tags::Level;
+use Tags::Private;
+
 use Tags::Fluff;
 use Tags::NotNames;
 use Tags::System;
@@ -39,6 +42,8 @@ my %TAGS =
   COUNTRY => \&Tags::Country::set_hashes,
   NATIONALITY => \&Tags::Nationality::set_hashes,
   LOCALITY => \&Tags::Locality::set_hashes,
+  LEVEL => \&Tags::Level::set_hashes,
+  PRIVATE => \&Tags::Private::set_hashes,
   REGION => \&Tags::Region::set_hashes,
   FLUFF => \&Tags::Fluff::set_hashes,
   NOTNAMES => \&Tags::NotNames::set_hashes,

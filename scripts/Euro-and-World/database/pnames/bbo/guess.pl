@@ -36,6 +36,19 @@ my @TAG_ORDER = qw(
   LASTBBO
 );
 
+# This is a small special case.
+my @COUNTRY_ORDER = qw(
+  COUNTRY
+);
+
+my @LEVEL_ORDER = qw(
+  LEVEL
+);
+
+my @PRIVATE_ORDER = qw(
+  PRIVATE
+);
+
 my %LOCAL_SUBS =
 (
   BARCANERA => {ZhangZhou => 'Zhou ZHANG'}
@@ -64,17 +77,87 @@ my @DOMAINS = qw(
 my %DOMAINS_HASH;
 $DOMAINS_HASH{$_} = 1 for @DOMAINS;
 
+my @HANDLE_SKIPS = qw(
+  123 270357
+);
+
+my %HANDLE_SKIPS_HASH;
+$HANDLE_SKIPS_HASH{$_} = 1 for @HANDLE_SKIPS;
+
+
 my $file = 'db';
 my $data;
+read_raw_file($file, \$data);
+
+my @chunks = split /\x00+/, $data;
+my @paragraphs;
+
+raw_to_paragraphs(\@chunks, \@paragraphs);
+
+for my $paragraph (@paragraphs)
+{
+  inspect_paragraph($whole, $paragraph);
+}
+
+my $countries = 0;
+my @phist;
+my %uniques;
+for my $paragraph (@paragraphs)
+{
+  $phist[$#{$paragraph->{LINES}}]++;
+  $uniques{$paragraph->{HANDLE}}++;
+
+  # if ($#{$paragraph->{LINES}} == 1)
+  # {
+    # print_paragraph($paragraph);
+  # }
+
+  for my $entry (@{$paragraph->{LINES}})
+  {
+    if ($entry->{CATEGORY} eq 'COUNTRY')
+    {
+      $countries++;
+      last;
+    }
+  }
+
+  # my $num_open = 0;
+  # for my $entry (@{$paragraph->{LINES}})
+  # {
+    # if ($entry->{CATEGORY} eq 'OPEN')
+    # {
+      # $num_open++;
+    # }
+  # }
 
 
-open(my $fh, "<:raw", $file) or die "Cannot open $file$!";
-local $/;
-$data = <$fh>;
-close $fh ;
+  # if ($num_open > 1)
+  # {
+    # print_paragraph($paragraph);
+  # }
+}
 
-my @fields = split /\x00+/, $data;
+print "Paras:     $#paragraphs\n";
+print "Countries: $countries\n\n";
+my $numu = keys %uniques;
+print "Uniques    $numu\n\n";
 
+for my $i (0 .. $#phist)
+{
+  if (exists $phist[$i])
+  {
+    print "$i $phist[$i]\n";
+  }
+  else
+  {
+    print "$i\n";
+  }
+}
+
+exit;
+
+
+my @fields;
 my %players;
 for my $i (0 .. $#fields)
 {
@@ -287,6 +370,186 @@ next;
 }
 
 $histo->print();
+
+
+sub read_raw_file
+{
+  my ($file, $data) = @_;
+
+  open(my $fh, "<:raw", $file) or die "Cannot open $file$!";
+  local $/;
+  $$data = <$fh>;
+  close $fh;
+}
+
+
+sub raw_to_paragraphs
+{
+  my ($chunks, $paragraphs) = @_;
+
+  my $pno = 0;
+  for my $cno (0 .. $#chunks)
+  {
+    if ($chunks[$cno] =~ /^P([A-Z0-9 _]+)$/)
+    {
+      my $handle = $1;
+      if ($handle =~ /^ZZZZ_\d+$/)
+      {
+        # Skipping anonymous handle.
+        $cno++;
+        next;
+      }
+
+      next if exists $HANDLE_SKIPS_HASH{$handle};
+
+      $paragraphs[$pno]{HANDLE} = $handle;
+
+      for my $line (split /[\x00-\x1F]+/, $chunks[$cno+1])
+      {
+        next if $line =~ /^\s+$/;
+
+        $line =~ s/^\s+//;
+        $line =~ s/\s+$//;
+        $line =~ s/^[!\-+:;'"@?\(\)\{\}\[\]<>*.,=#%&\/\$]+\s*//;
+        $line  =~ s/\s*[!\-+:;'"@?\(\)\{\}*.,=#%&\/\$]+$//;
+
+        next if length($line) == 0;
+        next if $line =~ /^[!_\-+:\(\)*.,=%\/\$'"@?#x\s]+$/;
+
+        push @{$paragraphs[$pno]{LINES}},
+          { CATEGORY => 'OPEN', TEXT => $line };
+      }
+      $pno++;
+    }
+  }
+}
+
+
+sub look_for_single_tag
+{
+  # Is $text exactly a country, with nothing else in the string?
+  my ($whole, $tag_list, $tag, $text) = @_;
+
+  my @tags = (0);
+  my @values = ($text);
+  my @texts = ($text);
+
+  # Look for multi-word country.
+  if ($text =~ /[\s-]/)
+  {
+    split_on_multi($whole, $tag_list, 0, \@tags, \@values, \@texts);
+    return '' unless $#tags == 0;
+    return $values[0] if $tags[0] eq $tag;
+  }
+
+  # Look for single-word country.
+  my $fix = $whole->get_single($tag, lc($text));
+  return (defined $fix->{CATEGORY} ? $fix->{VALUE} : '');
+}
+
+
+sub look_for_email
+{
+  # TODO We could tolerate some spaces here, etc.
+
+  my ($text) = @_;
+
+  my @a = split '@', $text;
+  return '' unless $#a == 1;
+
+  my @b = split '\.', $a[1];
+  return '' unless $#b >= 1 && $#b <= 3;
+
+  my $domain = $b[$#b];
+  if (exists $DOMAINS_HASH{lc($domain)})
+  {
+    return $text;
+  }
+
+  print "ALIAS $text\n";
+  # print "DOMMISS $domain\n";
+  return '';
+}
+
+
+
+sub inspect_paragraph
+{
+  my ($whole, $paragraph) = @_;
+
+  my $country_seen = 0;
+  my $private_seen = 0;
+  my $magic_seen = 0;
+
+  for my $entry (@{$paragraph->{LINES}})
+  {
+    if (! $country_seen)
+    {
+      my $c = look_for_single_tag($whole, \@COUNTRY_ORDER, 'COUNTRY',
+        $entry->{TEXT});
+      if ($c)
+      {
+        $entry->{CATEGORY} = 'COUNTRY';
+        $entry->{VALUE} = $c;
+        $country_seen = 1;
+        next;
+      }
+
+# if ($paragraph->{HANDLE} eq 'GAVINO9')
+# {
+  # print "HERE\n";
+# }
+
+      my $l = look_for_single_tag($whole, \@LEVEL_ORDER, 'LEVEL',
+        $entry->{TEXT});
+      if ($l)
+      {
+        $entry->{CATEGORY} = 'LEVEL';
+        $entry->{VALUE} = $l;
+        next;
+      }
+
+      my $p = look_for_single_tag($whole, \@PRIVATE_ORDER, 'PRIVATE',
+        $entry->{TEXT});
+      if ($p)
+      {
+        $entry->{CATEGORY} = 'PRIVATE';
+        $entry->{VALUE} = $p;
+        $private_seen = 1;
+        next;
+      }
+
+      my $e = look_for_email($entry->{TEXT});
+      if ($e)
+      {
+        $entry->{CATEGORY} = 'EMAIL';
+        $entry->{VALUE} = $e;
+        next;
+      }
+    }
+
+    if ($entry->{TEXT} =~ /^(\d+)$/ && $1 >= 100 && $1 < 200)
+    {
+      $entry->{CATEGORY} = 'MAGIC';
+      $magic_seen = 1;
+      next;
+    }
+
+    if (($entry->{TEXT} =~ /^[0-9]n/ && $magic_seen) || 
+        $entry->{TEXT} =~ /^\dy/)
+    {
+      # Some kind of code.
+      $entry->{CATEGORY} = 'CODE';
+      next;
+    }
+
+    if (($country_seen || $private_seen) && ! $magic_seen)
+    {
+      $entry->{CATEGORY} = 'SYSTEM';
+      next;
+    }
+  }
+}
 
 
 sub get_file
@@ -542,4 +805,19 @@ sub store
   push @{$players{$handle}{$key}}, $value;
 }
 
+
+sub print_paragraph
+{
+  my ($paragraph) = @_;
+
+  print $paragraph->{HANDLE}, "\n";
+  for my $entry (@{$paragraph->{LINES}})
+  {
+    printf("%-12s %-12s %s\n", 
+      $entry->{CATEGORY},
+      $entry->{VALUE} // '',
+      $entry->{TEXT});
+  }
+  print "\n";
+}
 
