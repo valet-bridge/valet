@@ -9,44 +9,16 @@ use utf8;
 use open ':std', ':encoding(UTF-8)';
 
 use lib '.';
+
 use Email::Deletions;
 use Email::Countries;
 use Email::Multiples;
+use Email::Privates;
 
 use Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(looks_like);
-
-my @PRIVATES = (
-  '@no.spam',
-  'ask.me@tellyou',
-  'bruce.springsteen@no',
-  'dont.use@com',
-  'i.am@not',
-  'your.request@will.be.considered',
-  'ask me@o2.pl',
-  'ask me@hotmail.com',
-  'baboun@pourmes amis.com',
-  'be cool@bbo.com',
-  'be happy@fun.com',
-  'be nice @ crazy . com',
-  'chameleon @,hotmail.com',
-  'kau tanya lah@ku.com',
-  'no @no.com',
-  'non ricordo@quale.it',
-  'private.kol@hotmail.com',
-  'private@Private.com',
-  'private@gmail..com',
-  'private@gmail.com',
-  'private@hotmail.com',
-  'private@no.spam',
-  'private@private.com',
-  'wong ilang@yahoo.co',
-);
-
-my %PRIVATES_HASH;
-$PRIVATES_HASH{$_} = 1 for @PRIVATES;
 
 my @DOMAINS = qw(
   ae af ag ai am an ar as at au bd be bg bh biz bl bm bn bo br by 
@@ -101,7 +73,7 @@ if ($text =~ /vandyk/)
   {
     push @$matches, 'PRIVATE', 'Private';
   }
-  elsif (exists $PRIVATES_HASH{$text})
+  elsif (exists $PRIVATES_HASH->{$text})
   {
     push @$matches, 'PRIVATE', 'Private';
     return;
