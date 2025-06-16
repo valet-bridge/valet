@@ -13,6 +13,7 @@ use Encode::Guess;
 
 
 use lib '.';
+use lib './Email';
 use lib '..';
 
 my @TAG_ORDER = qw(
@@ -65,7 +66,7 @@ use Chain;
 use Token;
 use Util;
 
-use Email;
+use Email::Email;
 
 use Histo;
 my $histo = Histo->new();
@@ -458,7 +459,7 @@ sub look_for_email
   my ($text) = @_;
 
   my @list;
-  Email::looks_like(lc($text), \@list);
+  Email::Email::looks_like(lc($text), \@list);
   return;
 
   # TODO Still need to parse @list.
