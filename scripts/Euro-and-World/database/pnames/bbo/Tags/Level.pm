@@ -48,7 +48,7 @@ my %SINGLE_TYPOS =
     'good', 'learner', 'learning',
     'interm', 'intermed', 'intermediaire', 'intermediate',
     'intermediates', 'intermedio',
-    'sofistike'],
+    'sofistike', 'still.learning@home' ],
   'Life Master' => ['lifemaster'],
 );
 

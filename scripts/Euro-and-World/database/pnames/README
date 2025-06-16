@@ -1,5 +1,5 @@
-Domain.pm
-Server.pm, also things like co.uk, match longest from back
+Domain.pm, map to country or not
+Server.pm, also things like co.uk, match longest from back, match to country or not
 
 Revised plan:
 - Spend more effort on the file format
