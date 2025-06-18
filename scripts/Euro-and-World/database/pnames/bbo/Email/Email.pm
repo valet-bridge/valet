@@ -41,33 +41,22 @@ sub looks_like
 
   return if exists $DELETIONS_HASH->{$text};
 
-if ($text =~ /vandyk/)
-{
-  print "HERE\n";
-}
+  if ($text eq '@hotmail.com')
+  {
+    print "HERE\n";
+  }
 
-  if ($text =~ s/\s*private$//)
-  {
-    push @$matches, 'PRIVATE', 'Private';
-  }
-  elsif ($text =~ s/^pri(.+)vate$/$1/)
-  {
-    push @$matches, 'PRIVATE', 'Private';
-  }
-  elsif ($text =~ s/^p(.+)rivate$/$1/)
-  {
-    push @$matches, 'PRIVATE', 'Private';
-  }
-  elsif ($text =~ s/^(.+)rivate$/$1/)
-  {
-    push @$matches, 'PRIVATE', 'Private';
-  }
-  elsif (exists $PRIVATES_HASH->{$text})
+  if (exists $PRIVATES_HASH->{$text})
   {
     push @$matches, 'PRIVATE', 'Private';
     return;
   }
-  elsif ($text =~ s/^private*(.+)$/$1/)
+
+  if ($text =~ s/\s*private$// ||
+      $text =~ s/^pri(.+)vate$/$1/ ||
+      $text =~ s/^p(.+)rivate$/$1/ ||
+      $text =~ s/^(.+)rivate$/$1/ ||
+      $text =~ s/^private*(.+)$/$1/)
   {
     push @$matches, 'PRIVATE', 'Private';
   }
@@ -99,20 +88,16 @@ if ($text =~ /vandyk/)
   $text =~ s/\s//g;
 
   my $regex = Email::Domains::regex();
-  if ( $text =~ $regex)
-  {
-    my ($front, $back) = ($1, $2);
-    print "EMAILX $text\n";
-    return;
-  }
-  else
+  if ( $text !~ $regex)
   {
     # Effectively there is only the guy who entered a regex left here.
     print "MAILMISS $text\n";
     return;
   }
+
+  my ($front, $back) = ($1, $2);
+  print "EMAILX $text\n";
+  return;
 }
 
 1;
-
-
