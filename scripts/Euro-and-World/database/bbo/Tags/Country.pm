@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Antigua and Barbuda',
+  'American Samoa',
   'Bosnia & Herzegovina',
   'Burkina Faso',
   'Cayman Islands',
@@ -35,8 +36,10 @@ my @MULTI_WORDS =
   'North America',
   'North Macedonia',
   'Northern Ireland',
+  'Saint Barthélemy',
   'Saint Lucia',
   'San Marino',
+  'São Tomé and Príncipe',
   'Saudi Arabia',
   'Serbia and Montenegro',
   'South Africa',

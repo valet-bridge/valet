@@ -14,23 +14,12 @@ use Email::Deletions;
 use Email::Countries;
 use Email::Multiples;
 use Email::Privates;
+use Email::Domains;
 
 use Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(looks_like);
-
-my @DOMAINS = qw(
-  ae af ag ai am an ar as at au bd be bg bh biz bl bm bn bo br by 
-  ca cat cc ch cl cn co com cr cz cy de dk edu ee eg es eu fi fm fo fr 
-  ge gov gr hk hr hu id ie il info is it in jo jp kg kr ku kz
-  la lb lc li lk ls lt lu lv ma mc me mk mu mx mz 
-  na name net ni nl no nu nz org pe pf ph pk pl pt py ro rs ru 
-  sa se sg si sk sm st su th tn tr tt tv tw ua uk us uy vu world yu za
-);
-
-my %DOMAINS_HASH;
-$DOMAINS_HASH{$_} = 1 for @DOMAINS;
 
 
 sub looks_like
@@ -107,13 +96,12 @@ if ($text =~ /vandyk/)
     return;
   }
 
-  if ($text =~ /\s/)
+  $text =~ s/\s//g;
+
+  my $regex = Email::Domains::regex();
+  if ( $text =~ $regex)
   {
-    $text =~ s/\s//g;
-    return;
-  }
-  elsif ($text =~ /\.([a-z]+)$/ && exists $DOMAINS_HASH{$1})
-  {
+    my ($front, $back) = ($1, $2);
     print "EMAILX $text\n";
     return;
   }

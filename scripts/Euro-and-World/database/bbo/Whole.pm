@@ -107,7 +107,6 @@ sub set_overall_hashes
   # The words themselves.
   for my $multi (@$multi_words)
   {
-    # my $tilded = $multi =~ s/ /\~/gr;
     $self->{MWORDS}{$key}{lc($multi)} = $multi;
     $self->{SWORDS}{$key}{lc($multi)} = 
       { CATEGORY => $key, VALUE => $multi };

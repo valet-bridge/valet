@@ -1,3 +1,5 @@
+Check supposedly valid emails: Only contain a-z, A-Z, 0-9, _.-
+
 Domain.pm, map to country or not
 Server.pm, also things like co.uk, match longest from back, match to country or not
 
