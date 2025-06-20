@@ -28,16 +28,18 @@ sub looks_like
   # We attempt to return all of them.  The caller must then process
   # @$matches.
 
-  my ($text, $matches) = @_;
+  my ($orig_text, $matches) = @_;
 
-  my @a = split '@', $text;
+  my @a = split '@', $orig_text;
   return '' unless $#a == 1;
 
-  my $dots = ($text =~ tr/\.//);
+  my $dots = ($orig_text =~ tr/\.//);
   return '' unless $dots >= 1 && $dots <= 4;
 
-  $text =~ s/^\s+//;
-  $text =~ s/\s+$//;
+  $orig_text =~ s/^\s+//;
+  $orig_text =~ s/\s+$//;
+  my $text = $orig_text;
+  $text =~ s/\s//g;
 
   return if exists $DELETIONS_HASH->{$text};
 
@@ -72,7 +74,7 @@ sub looks_like
     return;
   }
 
-  my $spaces = ($text =~ tr/ //);
+  my $spaces = ($orig_text =~ tr/ //);
   if ($spaces > 3)
   {
     push @$matches, 'SYSTEM', $text;
@@ -81,11 +83,9 @@ sub looks_like
 
   if ($text =~ /[\x80-\xFF]/)
   {
-    print "CHARSET $text\n";
+    print "CHARSET $orig_text\n";
     return;
   }
-
-  $text =~ s/\s//g;
 
   my $regex = Email::Domains::regex();
   if ( $text !~ $regex)

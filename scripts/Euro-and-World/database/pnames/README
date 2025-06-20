@@ -1,5 +1,4 @@
 - Domain: Only country, not charset
-- remove all space in Email before starting; revise Email/*pm accordingly
 - Multiples: Some of them are Country.pm
 
 
