@@ -1,7 +1,7 @@
-Check supposedly valid emails: Only contain a-z, A-Z, 0-9, _.-
+- Domain: Only country, not charset
+- remove all space in Email before starting; revise Email/*pm accordingly
+- Multiples: Some of them are Country.pm
 
-Domain.pm, map to country or not
-Server.pm, also things like co.uk, match longest from back, match to country or not
 
 Revised plan:
 - Spend more effort on the file format

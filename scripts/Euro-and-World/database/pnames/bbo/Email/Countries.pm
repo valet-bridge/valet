@@ -224,6 +224,7 @@ my %COUNTRIES =
   'sotto come un rospo@tin.it' => 'Italy',
   'stars  express@club.bg' => 'Bulgaria',
   'sur @wanadoo.fr' => 'France',
+  'taiwan@peaceful_world.com' => 'Taiwan',
   'team f.asso.@orange.fr' => 'France',
   'toto@mail.fr' => 'France',
   'username@cam.ac.uk' => 'Great Britain',

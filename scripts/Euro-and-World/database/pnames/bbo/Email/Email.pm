@@ -90,14 +90,97 @@ sub looks_like
   my $regex = Email::Domains::regex();
   if ( $text !~ $regex)
   {
-    # Effectively there is only the guy who entered a regex left here.
+    # No hits.
     print "MAILMISS $text\n";
     return;
   }
 
-  my ($front, $back) = ($1, $2);
-  print "EMAILX $text\n";
+  my ($front, $sep, $domain) = ($1, $2, $3);
+  if ($sep eq '@')
+  {
+    # Ignore return value for now.
+    parse_user($front, $matches);
+
+    my $country = Email::Domains::country($domain);
+    push @$matches, 'EMAIL_COUNTRY', $country if $country;
+    push @$matches, 'EMAIL', $text;
+    return;
+  }
+
+  if ($sep ne '.')
+  {
+    print "MAILODD9 $text\n";
+    return;
+  }
+
+  if ($front !~ /^([a-z0-9._-]+)@([a-z0-9-]+)$/)
+  {
+    print "MAILODD8 $text, $front\n";
+    return;
+  }
+
+  my ($user, $server) = ($1, $2);
+  print "MAILINFO $server ($domain)\n";
+
+  # Ignore return value for now.
+  parse_user($user, $matches);
   return;
 }
+
+
+sub parse_user
+{
+  my ($user, $matches) = @_;
+
+  if ($user =~ /^\d+$/)
+  {
+    push @$matches, 'USER_NUMERICAL', $1;
+    return 1;
+  }
+
+  $user =~ s/^[\d_.-]+//;
+  $user =~ s/[\d_.-]+$//;
+
+  if ($user =~ /^[a-z]+$/)
+  {
+    # A single string, potentially followed by numbers.
+    push @$matches, 'USER_LETTERS', $user;
+    return 1;
+  }
+
+  my @a = split /\./, $user;
+  my @b = split '_', $user;
+  my @c = split '-', $user;
+
+  if ($#a == 0 && $#b == 0 && $#c == 0)
+  {
+    print "MAILODD1 $user\n";
+    return 0;
+  }
+  elsif ($#a == 1 && $#b == 0 && $#c == 0)
+  {
+    push @$matches, 'USER_FIRST', $a[0];
+    push @$matches, 'USER_SECOND', $a[1];
+    return 1;
+  }
+  elsif ($#a == 0 && $#b == 1 && $#c == 0)
+  {
+    push @$matches, 'USER_FIRST', $b[0];
+    push @$matches, 'USER_SECOND', $b[1];
+    return 1;
+  }
+  elsif ($#a == 0 && $#b == 0 && $#c == 1)
+  {
+    push @$matches, 'USER_FIRST', $c[0];
+    push @$matches, 'USER_SECOND', $c[1];
+    return 1;
+  }
+  else
+  {
+    print "MAILODD2 $user\n";
+    return 0;
+  }
+}
+
 
 1;
