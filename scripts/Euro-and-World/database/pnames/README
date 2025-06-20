@@ -1,5 +1,6 @@
-- Domain: Only country, not charset
 - Multiples: Some of them are Country.pm
+- No username?
+- Split MAILMISS8, recognize the server issues separately
 
 
 Revised plan:
