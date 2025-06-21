@@ -306,6 +306,25 @@ my %MULTIPLES =
   'zetim@op.plpid1751' => [ EMAIL => 'zetim@op.pl' ],
   'zkrzepkowski@wp.pl4329' => [ EMAIL => 'zkrzepkowski@wp.pl' ],
   'zubyz@seznam.czmámiskypezdenda1202' => [ EMAIL => 'zubyz@seznam.cz' ],
+
+  'mamamazi@\'walla.com' => [ EMAIL => 'mamamazi@walla.com' ],
+  'xwh163@.com' => [ EMAIL => 'xwh@163.com'],
+  'simcous@.abv.bg' => [ EMAIL => 'simcous@abv.bg'],
+  'francodolcetta@.alice.it' => [ EMAIL => 'francodolcetta@alice.it' ],
+  'roreat@.bermuda.com' => [ EMAIL => 'roreat@bermuda.com' ],
+  'yves.hebert@.cgocable.ca' => [ EMAIL => 'yves.hebert@cgocable.ca' ],
+  'taraca@.sbb.rs' => [ EMAIL => 'taraca@sbb.rs' ],
+  'renee.chediack@.fibertel.com.ar' => [ EMAIL => 'renee.chediack@fibertel.com.ar' ],
+  'jose.azzopardi@.orange.fr' => [ EMAIL => 'jose.azzopardi@orange.fr' ],
+  'shronet88@.hotmail.com' => [ EMAIL => 'shronet88@hotmail.com' ],
+  'nn.771@.wp.pl' => [ EMAIL => 'nn.771@wp.pl' ],
+  '746903008@.qq.com' => [ EMAIL => '746903008@qq.com' ],
+  '827481046qq@.com' => [ EMAIL => '827481046@qq.com' ],
+  'yamit@.terra.com.br' => [ EMAIL => 'yamit@.terra.com.br' ],
+  'stefan_021@.onet.eu' => [ EMAIL => 'stefan_021@onet.eu' ],
+  'la39@.comhem.se' => [ EMAIL => 'la39@.comhem.se' ],
+  'a.abbassi@.hotmail.fr' => [ EMAIL => 'a.abbassi@hotmail.fr' ],
+
 );
 
 our $MULTIPLES_HASH = \%MULTIPLES;

@@ -171,6 +171,13 @@ my @PRIVATES = (
   'zz@hotmail.com',
   'zzz@fff.com',
   'zzz@hotmail.com',
+
+  'no_complaint@no_advise.com',
+  'solobridge@.com',
+  'bridgeplayer@.com',
+  'no.one@.com',
+  '@.com',
+  'donaldnotrump@.com',
 );
 
 our $PRIVATES_HASH = { map { $_ => 1 } @PRIVATES };

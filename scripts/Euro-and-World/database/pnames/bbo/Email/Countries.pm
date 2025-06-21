@@ -288,6 +288,16 @@ my %COUNTRIES =
   'tufan.ter..@mynet.com' => 'Turkey',
   'vera_mente_@live.it' => 'Italy',
   'y.ww@orange' => 'France',
+  'don\'tgrowlme@smile.co.nz' => 'New Zealand',
+  'www.cj@.cn' => 'China',
+  'jac2n@.cue-bids.bg' => 'Bulgaria',
+  'perfectible@.fr' => 'France',
+  '7champions@.it' => 'Italy',
+  'patobridge@.it' => 'Italy',
+  'nocomment@.it' => 'Italy',
+  'rose_moon@.edu.tr' => 'Turkey',
+  'rosadeldeserto@.it' => 'Italy',
+  'preferiscolapostacelere@.it' => 'Italy',
 );
 
 our $COUNTRIES_HASH = \%COUNTRIES;
