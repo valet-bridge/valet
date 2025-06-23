@@ -43,7 +43,7 @@ sub looks_like
 
   return if exists $DELETIONS_HASH->{$text};
 
-  if ($text eq '@hotmail.com')
+  if ($text =~ /\@juno.com/i)
   {
     print "HERE\n";
   }
@@ -109,18 +109,45 @@ sub looks_like
 
   if ($sep ne '.')
   {
+    # Clean.
     print "MAILODD9 $text\n";
     return;
   }
 
-  if ($front !~ /^([a-z0-9._-]+)@([a-z0-9-]+)$/)
+  if ($front !~ /^([a-z0-9._-]+)@/)
   {
-    print "MAILODD8 $text, $front\n";
+    # Clean.
+    print "MAILODD8 $orig_text, $front\n";
     return;
   }
+  my $user = $1;
 
-  my ($user, $server) = ($1, $2);
-  print "MAILINFO $server ($domain)\n";
+  if ($front !~ /@([a-z0-9_-]+)$/)
+  {
+    my $remainder = $front;
+    $remainder =~ s/^.*@(.*)/$1/;
+    print "MAILODD7 $text, $remainder\n";
+    return;
+  }
+  my $server = $1;
+
+  # if ($front !~ /^([a-z0-9._-]+)@([a-z0-9_-]+)$/)
+  # {
+    # if ($front !~ /@.*\./)
+    # {
+      # print "MAILODD8 $orig_text, $front\n";
+      # return;
+    # }
+    # else
+    # {
+      # my $remainder = $front;
+      # $remainder =~ s/^.*@(.*)/$1/;
+      # print "MAILODD7 $text, $remainder\n";
+      # return;
+    # }
+  # }
+
+  # print "MAILINFO $server ($domain)\n";
 
   # Ignore return value for now.
   parse_user($user, $matches);
@@ -148,14 +175,21 @@ sub parse_user
     return 1;
   }
 
+  if ($user !~ /^[a-z0-9._-]+$/)
+  {
+    print "MAILODD4 $user\n";
+    return 0;
+  }
+
   my @a = split /\./, $user;
   my @b = split '_', $user;
   my @c = split '-', $user;
 
   if ($#a == 0 && $#b == 0 && $#c == 0)
   {
-    print "MAILODD1 $user\n";
-    return 0;
+    # Checked manually.
+    push @$matches, 'USER_UNPARSEABLE', $user;
+    return 1;
   }
   elsif ($#a == 1 && $#b == 0 && $#c == 0)
   {
