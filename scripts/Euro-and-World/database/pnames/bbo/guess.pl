@@ -140,6 +140,8 @@ for my $paragraph (@paragraphs)
   # }
 }
 
+exit;
+
 print "Paras:     $#paragraphs\n";
 print "Countries: $countries\n\n";
 my $numu = keys %uniques;

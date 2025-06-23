@@ -15,6 +15,7 @@ use Email::Countries;
 use Email::Multiples;
 use Email::Privates;
 use Email::Domains;
+use Email::Servers;
 
 use Exporter;
 
@@ -122,14 +123,23 @@ sub looks_like
   }
   my $user = $1;
 
+  my $server;
   if ($front !~ /@([a-z0-9_-]+)$/)
   {
     my $remainder = $front;
     $remainder =~ s/^.*@(.*)/$1/;
-    print "MAILODD7 $text, $remainder\n";
-    return;
+    $server = $1;
+    if (! Email::Servers::is_server($domain, $remainder))
+    {
+      # Otherwise fall through.
+      print "MAILODD7 $text, $remainder\n";
+      return;
+    }
   }
-  my $server = $1;
+  else
+  {
+    $server = $1;
+  }
 
   # if ($front !~ /^([a-z0-9._-]+)@([a-z0-9_-]+)$/)
   # {

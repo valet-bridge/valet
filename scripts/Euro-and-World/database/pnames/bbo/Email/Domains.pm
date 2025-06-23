@@ -25,6 +25,7 @@ my %DOMAINS =
   'ac.id' => 'Indonesia',
   'ac.il' => 'Israel',
   'ac.in' => 'India',
+  'ac.jp' => 'Japan',
   'ac.kr' => 'South Korea',
   'ac.nz' => 'New Zealand',
   'ac.th' => 'Thailand',
@@ -456,7 +457,7 @@ my %DOMAINS =
   'zen.fr' => 'France',
   za => 'South Africa',
   'zgora.pl' => 'Poland',
-  'zj.ch' => 'China',
+  'zj.cn' => 'China',
 );
 
 my $PATTERN = join '|',
