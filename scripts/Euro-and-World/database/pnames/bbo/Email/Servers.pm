@@ -35,8 +35,10 @@ my %SERVERS =
       'royal.ocn' => 1, 'song.ocn' => 1,
     'deluxe.odn' => 1, 'syd.odn' => 1, 'par.odn' => 1,
     'va.rsoenet' => 1 },
+  'net.pk' => { 'khi.comsats' => 1 },
   'net.pl' => { 'main.satfilm' => 1 },
   'net.tw' => { 'fbb.3a' => 1 },
+  'ntu.edu.tw' => { 'cmlab.csie' => 1 },
   'zj.cn' => { 'mail.hz' => 1, 'mail.tzptt' => 1, 'mail.wzptt' => 1 },
 );
 

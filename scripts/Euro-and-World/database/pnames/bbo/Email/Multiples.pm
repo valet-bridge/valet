@@ -385,9 +385,9 @@ my %MULTIPLES =
   'pinon,luciano@tiscali.it' => [ EMAIL => 'pinon.luciano@tiscali.it' ],
   'divayo\'s@hotmail.com' => [ EMAIL => 'divayo@hotmail.com' ],
   'patsyohanlon\'@gmail.com' => [ EMAIL => 'patsyohanlon@gmail.com' ],
-  'esther,jacob.adler' => [ EMAIL => 'esther.adler@gmail.com' ],
+  'esther,jacob.adler@gmail.com' => [ EMAIL => 'esther.adler@gmail.com' ],
   's/strong-club-sys.lilypat10@hotmail.com' => [ EMAIL => 'lilypat10.hotmail.com' ],
-  'k.d.b.k//selimyalcin@hotmail.com' => [ EMAIL => 'selimyalcin@hotmail.com' ],
+  'k.d.b.k//selimyalcin1@hotmail.com' => [ EMAIL => 'selimyalcin@hotmail.com' ],
 );
 
 our $MULTIPLES_HASH = \%MULTIPLES;
