@@ -88,6 +88,22 @@ my @UNPARSEABLE =
   'z-r-p',
   'hotel-de-lunivers',
   'marin-dobrotich-bg',
+  'a_p_s_y',
+  'b_l_o_n_d_i',
+  'boss_the-man',
+  'bridge.juan-les-pins',
+  'clever_-_rock',
+  'e-t-o-t',
+  'ex-zozo.nc',
+  'i_love_little_rabbit',
+  'j.f.p.ar',
+  'jack-daniel.s',
+  'ner.g.i.s',
+  'p.m.l.c',
+  'sultan-of_swing',
+  't.de-luna',
+  'the_good_naughty_boy',
+  'where-do-i-go',
 );
 
 our $UNPARSEABLE_HASH = { map { $_ => 1 } @UNPARSEABLE };

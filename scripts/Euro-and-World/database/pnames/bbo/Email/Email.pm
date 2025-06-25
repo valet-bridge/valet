@@ -16,6 +16,7 @@ use Email::Multiples;
 use Email::Privates;
 use Email::Domains;
 use Email::Servers;
+use Email::Users;
 use Email::Unparseable;
 
 use Exporter;
@@ -47,7 +48,7 @@ sub looks_like
 
   if ($text =~ /\@juno.com/i)
   {
-    print "HERE\n";
+    # print "HERE\n";
   }
 
   if (exists $PRIVATES_HASH->{$text})
@@ -208,6 +209,12 @@ sub parse_user
     push @$matches, 'USER_UNPARSEABLE', $user;
     return 1;
   }
+  elsif (exists $USERS_HASH->{$user})
+  {
+    my @list = Email::Users::lookup($user);
+    push @$matches, @list;
+    return 1;
+  }
   elsif ($#a == 1 && $#b == 0 && $#c == 0)
   {
     return match_two($matches, $user, $a[0], $a[1], '');
@@ -231,6 +238,19 @@ sub parse_user
   elsif ($#a == 0 && $#b == 0 && $#c == 2)
   {
     return match_three($matches, $user, $c[0], $c[1], $c[2], 'MAILODDX');
+  }
+  elsif ($#a == 1 && $#b == 0 && $#c == 1)
+  {
+    if (length($a[0]) > length($c[0]))
+    {
+      # Jean-Pierre Chery.
+      return match_two($matches, $user, $a[0], $a[1], '');
+    }
+    else
+    {
+      print "MAILODD3b $user\n";
+      return 0;
+    }
   }
   else
   {
