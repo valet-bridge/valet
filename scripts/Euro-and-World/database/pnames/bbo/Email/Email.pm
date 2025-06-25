@@ -16,6 +16,7 @@ use Email::Multiples;
 use Email::Privates;
 use Email::Domains;
 use Email::Servers;
+use Email::Unparseable;
 
 use Exporter;
 
@@ -191,9 +192,15 @@ sub parse_user
     return 0;
   }
 
-  my @a = split /\./, $user;
-  my @b = split '_', $user;
-  my @c = split '-', $user;
+  if (exists $UNPARSEABLE_HASH->{$user})
+  {
+    push @$matches, 'USER_UNPARSEABLE', $user;
+    return 1;
+  }
+
+  my @a = split /\.+/, $user;
+  my @b = split /_+/, $user;
+  my @c = split /-+/, $user;
 
   if ($#a == 0 && $#b == 0 && $#c == 0)
   {
@@ -203,25 +210,103 @@ sub parse_user
   }
   elsif ($#a == 1 && $#b == 0 && $#c == 0)
   {
-    push @$matches, 'USER_FIRST', $a[0];
-    push @$matches, 'USER_SECOND', $a[1];
-    return 1;
+    return match_two($matches, $user, $a[0], $a[1], '');
   }
   elsif ($#a == 0 && $#b == 1 && $#c == 0)
   {
-    push @$matches, 'USER_FIRST', $b[0];
-    push @$matches, 'USER_SECOND', $b[1];
-    return 1;
+    return match_two($matches, $user, $b[0], $b[1], '');
   }
   elsif ($#a == 0 && $#b == 0 && $#c == 1)
   {
-    push @$matches, 'USER_FIRST', $c[0];
-    push @$matches, 'USER_SECOND', $c[1];
-    return 1;
+    return match_two($matches, $user, $c[0], $c[1], '');
+  }
+  elsif ($#a == 2 && $#b == 0 && $#c == 0)
+  {
+    return match_three($matches, $user, $a[0], $a[1], $a[2], 'MAILODD5');
+  }
+  elsif ($#a == 0 && $#b == 2 && $#c == 0)
+  {
+    return match_three($matches, $user, $b[0], $b[1], $b[2], 'MAILODD6');
+  }
+  elsif ($#a == 0 && $#b == 0 && $#c == 2)
+  {
+    return match_three($matches, $user, $c[0], $c[1], $c[2], 'MAILODDX');
   }
   else
   {
     print "MAILODD2 $user\n";
+    return 0;
+  }
+}
+
+sub match_two
+{
+  my ($matches, $user, $e0, $e1, $debug) = @_;
+
+  my $l0 = length($e0);
+  my $l1 = length($e1);
+
+  if ($e0 eq 'dr')
+  {
+    push @$matches, 'USER_TITLE', 'Dr.';
+    push @$matches, 'USER_LAST', $e1;
+    print "$debug A: $user\n" if $debug;
+    return 1;
+  }
+  else
+  {
+    push @$matches, 'USER_ONE', $e0;
+    push @$matches, 'USER_TWO', $e1;
+    return 1;
+  }
+}
+
+
+sub match_three
+{
+  my ($matches, $user, $e0, $e1, $e2, $debug) = @_;
+
+  if ($user =~ /[0-9]/)
+  {
+    push @$matches, 'USER_UNPARSEABLE', $user;
+    # print "$debug A: $user\n" if $debug;
+    return 1;
+  }
+
+  my $l0 = length($e0);
+  my $l1 = length($e1);
+  my $l2 = length($e2);
+
+  if ($l0 == 1 && $l1 == 1 && $l2 > 1)
+  {
+    my $initials = uc("$e0. $e1.");
+    push @$matches, 'USER_INITIALS', $initials;
+    push @$matches, 'USER_LAST', $e2;
+    # print "$debug B: $user\n" if $debug;
+    return 1;
+  }
+  elsif ($l0 > 1 && $l1 == 1 && $l2 > 1)
+  {
+    if ($e0 eq 'dr')
+    {
+      push @$matches, 'USER_TITLE', 'Dr.';
+      push @$matches, 'USER_INITIALS', uc("$e1.");
+      push @$matches, 'USER_LAST', $e2;
+      # print "$debug C: $user\n" if $debug;
+      return 1;
+    }
+    else
+    {
+      push @$matches, 'USER_FIRST', $e0;
+      push @$matches, 'USER_INITIALS', uc("$e1.");
+      push @$matches, 'USER_LAST', $e2;
+      # print "$debug D: $user\n" if $debug;
+      return 1;
+    }
+  }
+  else
+  {
+    print "$debug E: '$user',\n" if $debug;
     return 0;
   }
 }

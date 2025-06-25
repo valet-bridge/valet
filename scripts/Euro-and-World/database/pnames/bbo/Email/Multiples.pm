@@ -388,6 +388,18 @@ my %MULTIPLES =
   'esther,jacob.adler@gmail.com' => [ EMAIL => 'esther.adler@gmail.com' ],
   's/strong-club-sys.lilypat10@hotmail.com' => [ EMAIL => 'lilypat10.hotmail.com' ],
   'k.d.b.k//selimyalcin1@hotmail.com' => [ EMAIL => 'selimyalcin@hotmail.com' ],
+  'marlierjeanlouis@gmail.comorange.fr' => [ EMAIL => 'marlierjeanlouis@orange.fr' ],
+  'm.moses@ns.alient.net' => [ EMAIL => 'm.moses@ns.aliant.net' ],
+  'tub2500@aol.come.com.au' => [ EMAIL => 'tub2500@aol.com.au' ],
+  'basel5867@hotmail.comil.com' => [ EMAIL => 'basel5867@hotmail.com' ],
+
+  'tayeau.françoise@wanadoo.fr' => [ EMAIL => 'tayeau.francoise@wanadoo.fr' ],
+  'josearanaz@telefónica.net' => [ EMAIL => 'josearanaz@telefonica.net' ],
+  'xiaojun0@sina.com·çôæçååæ' => [ EMAIL => 'xiaojun0@sina.com' ],
+  'mlandy/woolsey@j2st.nmf.4ºsf.rjo' => [ SYSTEM => 'mlandy/woolsey@j2st.nmf.4ºsf.rjo' ],
+  'mosher/mlandy@j2st.nmf.4ºsf.rjo' => [ SYSTEM => 'mosher/mlandy@j2st.nmf.4ºsf.rjo' ],
+  'ergýnemre@yahoo.com' => [ EMAIL => 'erginemre@yahoo.com' ],
+
 );
 
 our $MULTIPLES_HASH = \%MULTIPLES;

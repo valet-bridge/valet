@@ -577,6 +577,13 @@ my @DELETIONS =
   'dd@pos.ta.il',
   'sermus@musser.com.world',
   'notasattractiveasiused2b@yahoo.com',
+  'pierdola@zgundek.kurde.pl',
+  'oratu@fors.fortis.pe.li.no',
+  'cndaty@fublic.ty.cn',
+  'ah_song@sh.tk.vc.hk',
+  'brian@meadows.pair.com',
+  'test@moldovita.dynu.com',
+  'sonder@nesa.jay.net',
 );
 
 our $DELETIONS_HASH = { map { $_ => 1 } @DELETIONS };

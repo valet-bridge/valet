@@ -15,16 +15,19 @@ our @EXPORT = qw(is_server);
 
 my %SERVERS =
 (
-  'ac.jp' => { 'neptune.kanazawa-it' => 1},
+  'ac.cn' => { 'ms.xjb' => 1 },
+  'ac.jp' => { 'neptune.kanazawa-it' => 1 },
   'ac.il' => { 
     'mail.biu' => 1,
     'post.tau' => 1, 
     'wisdom.weizmann' => 1 },
+  'cmu.edu' => { 'club.cc' => 1 },
   'com.cn' => { 
     'cmc.genertec' => 1,
     'mail.zjczzq' => 1 },
   'com.tw' => { 'ms32.url' => 1 },
   'ethz.ch' => { 'org.chem' => 1 },
+  'gov.tw' => { 'mail.kpb' => 1 },
   'ne.jp' => { 
     'a6.dion' => 1, 'd1.dion' => 1, 'h2.dion' => 1, 
     'mx1.harmonix' => 1, 
@@ -35,6 +38,7 @@ my %SERVERS =
       'royal.ocn' => 1, 'song.ocn' => 1,
     'deluxe.odn' => 1, 'syd.odn' => 1, 'par.odn' => 1,
     'va.rsoenet' => 1 },
+  'net.cn' => { 'public8.sta' => 1 },
   'net.pk' => { 'khi.comsats' => 1 },
   'net.pl' => { 'main.satfilm' => 1 },
   'net.tw' => { 'fbb.3a' => 1 },
