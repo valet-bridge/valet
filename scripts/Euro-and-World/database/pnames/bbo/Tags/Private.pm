@@ -44,7 +44,7 @@ my %SINGLE_TYPOS =
     'privati', 'privative', 'privato', 'prive', 'privee', 'privet', 
     'privite', 'privte', 'privé', 'privée', 'priwate', 'prv', 
     'prvate', 'prvt', 'pryw', 'prývate', 'ptivate',
-    'undisclosed', 'unknown', 'unlisted'],
+    'unavailable', 'undisclosed', 'unknown', 'unlisted'],
 );
 
 

@@ -35,7 +35,7 @@ my %SINGLE_TYPOS =
   Beginner => [
     'aspirant', 'aspirante',
     'bad', 'basic', 'beginer', 'beginners', 'crazy',
-    'beginning', 'begynder', 'novice', 'poor', 'weakling'],
+    'beginning', 'begynder', 'learner', 'novice', 'poor', 'weakling'],
   Expert => [
     'besta', 'beste', 'bestan', 'class',
     'elite',

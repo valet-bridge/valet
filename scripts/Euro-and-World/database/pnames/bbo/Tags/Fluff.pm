@@ -56,13 +56,13 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   0123 0314@0314 1t
 
-  about above academic accepte according advance advanced advice after 
+  about above academic accepte according advance advice after 
   aggressive ailleurs all almost alone alternate always amours anadolu
   and anfrage année answer anything anytime anyway apprentie around asap 
   ask asked aussi available avancée
 
-  back bad basic bass be beautiful beauty beauté become been beginer 
-  beginners being believe belong belongs below besoin best bienvenue 
+  back bad basic bass be beautiful beauty beauté become been 
+  being believe belong belongs below besoin best bienvenue 
   big bitte blues bonheur bonjour both bridgeopplevelser
 
   call cannot care careful cause cegetel.net championship chance change 
@@ -75,11 +75,11 @@ my @SINGLE_WORDS = qw(
   discipline disconnects discussion disiplin disponibile disponible 
   diversamente doesn't down dream drums drunk dunno dupli during
 
-  earth ekspres elite else e-mail empty engineer enigma enjoy enough 
+  earth ekspres else e-mail empty engineer enigma enjoy enough 
   entame enter entre equal equilibrato errare error espoir eternal etre 
   even every everybody everyday everyone everything everywhere 
-  excellence except excl exclusive exemplaire exp expat expect exper 
-  experienced experte experto experts express extra exuberant eye eyes 
+  excellence except excl exclusive exemplaire expat expect
+  experienced express extra exuberant eye eyes 
 
   facteur fairplay fait false fans fantasy fast faster father fault 
   favorite favourite festiv festival festivali first flag flagless 
@@ -97,8 +97,7 @@ my @SINGLE_WORDS = qw(
 
   idiot idioti idiots if imperial importance important importante 
   impossible inconnu inconnue independent info ingen inner inside 
-  instead interesa interest interested interm intermed intermediaire 
-  intermediate intermediates intermedio international inthe into 
+  instead interesa interest interested international inthe into 
   inutile invisible ipsum is island ist
 
   jacobsen jamais joke jump 
@@ -107,14 +106,13 @@ my @SINGLE_WORDS = qw(
   know knows koran
 
   ladder language laughter lawless lawyer leader leads learn learned
-  learner learning least leave lesson lessons level levels life line
+  learning least leave lesson lessons level levels life line
   listed listen literal little live living logic lol long longer 
   looking lose lot love loved lovely lover loving lowest luck lui
 
   magic magical majör makes making management manager mania manners 
-  mardi martial
-  masterpoints matter matters maybe me meet meilleure mentor merci
-  message messager mester mestre mich mieux min mineure minors minus
+  mardi martial masterpoints matter matters maybe me meet meilleure 
+  mentor merci message messager mich mieux min mineure minors minus
   missing mistake mistakes modest moi moment moments monster more
   morning most mostly mother much music my myown myself mystery
 
@@ -128,27 +126,22 @@ my @SINGLE_WORDS = qw(
 
   panda paradis paradise parfois particular partout pas pass password 
   patience patient paulsen peace penalty pendant people perfect 
-  perso person 
-  personal persone personnel petite peut phantom phoney pigeon pigeons 
-  pique piques pirivate pivate place plaisir planet planets plata played 
+  perso person personal persone personnel petite peut phantom phoney 
+  pigeon pigeons pique piques place plaisir planet planets plata played 
   player players plays pleasant please pleasure pls plse plus 
   plusqueparfait pnts point polite politely politeness poor porteur 
   positive possible pourquoi powered prefer prefered preferred prend 
-  present president prima primus principiante prior priv priva privado 
-  privare privat privata private privatem privates privati privative 
-  privato prive privee privet privite privte privé privée priwate 
-  problem prochaine professional profil profile profilo profl proud 
-  proxy prv prvate prvt pryw präcise précisés prétention prývate 
-  pseudo pseudonyms psychic ptivate public pupet pupp pvt
+  present president prima primus principiante prior problem prochaine 
+  professional profil profile profilo profl proud proxy präcise 
+  précisés prétention pseudo pseudonyms psychic public pupet pupp pvt
 
   qèº quadri quand quasi quel quelque question quick quiet quite quota
 
   rainbow random rapide rarely rating read realistic reason receive 
-  register
-  regular relative relax relaxe religion remarks remedios remember
-  remove repetita reply reproches request requested require required
-  resistance resisting respect respecte respond restons retired 
-  revolution right rude rudeness réservé
+  register regular relative relax relaxe religion remarks remedios 
+  remember remove repetita reply reproches request requested require 
+  required resistance resisting respect respecte respond restons 
+  retired revolution right rude rudeness réservé
 
   same science score scubadiving seconds secret see selfproclaimed 
   sense serious seulement seven should show side silence silent
@@ -169,8 +162,8 @@ my @SINGLE_WORDS = qw(
   toujours tournament tournaments tourney tout toute trees trine 
   trouble trust truth trykker très two
 
-  unavailable under understand undisclosed universe unknown unless
-  unlisted until unusual upon urgent use used user usually
+  under understand universe unless until unusual upon urgent use 
+  used user usually
 
   veritas very veux virtual viva vive vivre voted votre voulez vous
   vs vugraph véritable 
@@ -178,7 +171,7 @@ my @SINGLE_WORDS = qw(
   walk want wanted wants war wasted watch we welcome were what 
   whatever whats when where which who whoami why wife will wine 
   winner winter wisdom with without wlc woman wonder wonderful word 
-  words words work world worldclass worse would write writer wrong
+  words words work worse would write writer wrong
 
   xx
 
@@ -191,9 +184,8 @@ my @SINGLE_WORDS = qw(
   bboer bteam cabin dalek email tante tartan tennis memory oracle 
   gmail masters bbo hi hello hola doc amigo amie alcatraz 
   anonim answers sashimi atheist abracadabra absolutely adidas
-  adventuress airbus alchemy all'swell amulett anonimous
-  annonnymouse anonym anonymus another arbeidsjern architect
-  etc meme nope announcing anon anonymous nihao besta beste bestan
+  adventuress airbus alchemy all'swell amulett another arbeidsjern 
+  architect etc meme nope announcing nihao besta beste bestan
   bestefar betjenten blackout blacksea blonde blueberry bluemoon
   blueriver booboo boobs bonzo boozy borusse boxer brick buffoon
   buffy buffet bulls bullspread bum butchergirl calm calmness calculus
@@ -210,13 +202,13 @@ my @SINGLE_WORDS = qw(
   taifun teabridge terpsychora testspeler tetrahedron thansfer
   thedoctor thepunch theshipwright theskank transformer transfeer
   trueheart true voisin volcano sofistike wolves waldamsel waldlaufer
-  walleye walkyria wasserfrosch watermelon weakling weltklasse
+  walleye walkyria wasserfrosch watermelon 
   wifwafwouf wildkatze wir wirt wino witch withdrawl wonderland
-  xmas roguekiller arrester arrows arrow aspirant aspirante
+  xmas roguekiller arrester arrows arrow
   asterix attractive demander idem adv says dragon blue snow now
   nejdet like later joker robot shadow vip water wind avancé
   alien spock venus brain bmw bridger void tree zorro apple
-  anonym glp golfer sourire lips dentist eagle erfahren xtreme
+  glp golfer sourire lips dentist eagle xtreme
   titanic tolclub wdp fearless dawg dreamer feckless kid dogfish
   captainfiko provocator prezidenta summertime literati chocolate
   namenlos diehard abyss access almighty baby babybear bambi bamsefar
@@ -227,7 +219,7 @@ my @SINGLE_WORDS = qw(
   drno dragonfly smellycat easter knucklehead enternasyonel eroica
   sandglass songbird eastwind edge einsiedeln eins imigrant eimer
   emacs emagine euro eurocauliflower eventyr fake fantasma diplomat
-  facebook abuse fancazzist fortgeschritten freezing frog geologist
+  facebook abuse fancazzist freezing frog geologist
   goulash gazelle geezer gemini girlpower grammy gramps grams
   grandma grandpapa half happyland hawkster heineken høns ihaveone
   implied imprecision scapegoat jackswiss justplay jüpiter hippo
