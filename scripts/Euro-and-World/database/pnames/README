@@ -1,6 +1,5 @@
-- Multiples: Some of them are Country.pm
-- No username?
-- Split MAILMISS8, recognize the server issues separately
+- Multiples
+  - Split out Edits.pm for EMAIL
 
 
 Revised plan:

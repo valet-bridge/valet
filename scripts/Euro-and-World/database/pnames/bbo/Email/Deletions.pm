@@ -584,6 +584,8 @@ my @DELETIONS =
   'brian@meadows.pair.com',
   'test@moldovita.dynu.com',
   'sonder@nesa.jay.net',
+  'rubob2)59@msn.com',
+  'd"avarough@yahoo.com',
 );
 
 our $DELETIONS_HASH = { map { $_ => 1 } @DELETIONS };

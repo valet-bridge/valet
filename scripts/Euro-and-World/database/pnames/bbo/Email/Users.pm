@@ -73,6 +73,12 @@ my %USERS =
   'rem.van.hooff' => [ EMAIL_FIRST => 'Rem', EMAIL_PARTICLES => 'van', EMAIL_LAST => 'Hooff' ],
   's_james_elliott' => [ EMAIL_INITIALS => 'S.', EMAIL_FIRST => 'James', EMAIL_LAST => 'Elliott' ],
   'vincent_de_pagter' => [ EMAIL_FIRST => 'Vincent', EMAIL_PARTICLES => 'de', EMAIL_LAST => 'Pagter' ],
+  'jean-paul-fremery' => [ EMAIL_FIRST => 'Jean-Paul', EMAIL_LAST => 'Fremery' ],
+  'stephen_yk_liu' => [ EMAIL_FIRST => 'Stephen', EMAIL_INITIALS => 'Y. K.', EMAIL_LAST => 'Liu' ],
+  'mehmet_ali_gunduz' => [ EMAIL_FIRST => 'Mehmet Ali', EMAIL_LAST => 'Gunduz' ],
+  'jack_kl_wong' => [ EMAIL_FIRST => 'Jack', EMAIL_INITIALS => 'K. L.', EMAIL_LAST => 'Wong' ],
+  'j_tom_edwards' => [ EMAIL_INITIALS => 'J.', EMAIL_FIRST => 'Tom', EMAIL_LAST => 'Edwards' ],
+  'jean.claude.tremel' => [ EMAIL_FIRST => 'Jean-Claude', EMAIL_LAST => 'Tremel' ],
 );
 
 our $USERS_HASH = \%USERS;

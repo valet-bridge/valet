@@ -12,6 +12,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'a slam',
   'pas de'
 );
 

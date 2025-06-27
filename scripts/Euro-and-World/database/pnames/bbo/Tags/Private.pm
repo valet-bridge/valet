@@ -38,10 +38,10 @@ my %SINGLE_TYPOS =
     'incognito', 'inconnu', 'inconnue',
     'other', 'others',
     'pirivate', 'pivate', 'priv', 'priva', 'privado', 'privare',
-    'privat', 'privata', 'privatem', 'privates', 'privati',
-    'privative', 'privato', 'prive', 'privee', 'privet', 'privite',
-    'privte', 'privé', 'privée', 'priwate', 'prv', 'prvate', 'prvt',
-    'pryw', 'prývate', 'ptivate',
+    'privat', 'privata', 'private.au', 'privatem', 'privates', 
+    'privati', 'privative', 'privato', 'prive', 'privee', 'privet', 
+    'privite', 'privte', 'privé', 'privée', 'priwate', 'prv', 
+    'prvate', 'prvt', 'pryw', 'prývate', 'ptivate',
     'undisclosed', 'unknown', 'unlisted'],
 );
 

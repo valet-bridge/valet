@@ -12,6 +12,7 @@ use lib '.';
 
 use Email::Deletions;
 use Email::Countries;
+use Email::Edits;
 use Email::Multiples;
 use Email::Privates;
 use Email::Domains;
@@ -34,10 +35,10 @@ sub looks_like
   my ($orig_text, $matches) = @_;
 
   my @a = split '@', $orig_text;
-  return '' unless $#a == 1;
+  return unless $#a == 1;
 
   my $dots = ($orig_text =~ tr/\.//);
-  return '' unless $dots >= 1 && $dots <= 4;
+  return unless $dots >= 1 && $dots <= 4;
 
   $orig_text =~ s/^\s+//;
   $orig_text =~ s/\s+$//;
@@ -46,7 +47,7 @@ sub looks_like
 
   return if exists $DELETIONS_HASH->{$text};
 
-  if ($text =~ /\@juno.com/i)
+  if ($text =~ /tention/i)
   {
     # print "HERE\n";
   }
@@ -75,6 +76,11 @@ sub looks_like
   {
     push @$matches, @{$MULTIPLES_HASH->{$text}};
     return;
+  }
+  elsif (exists $EDITS_HASH->{$text})
+  {
+    # Fall through.
+    $text = $EDITS_HASH->{$text};
   }
 
   my $spaces = ($orig_text =~ tr/ //);
@@ -163,6 +169,7 @@ sub looks_like
 
   # Ignore return value for now.
   parse_user($user, $matches);
+  push @$matches, 'EMAIL', $text;
   return;
 }
 
@@ -171,9 +178,9 @@ sub parse_user
 {
   my ($user, $matches) = @_;
 
-  if ($user =~ /^\d+$/)
+  if ($user =~ /^[\d_.-]+$/)
   {
-    push @$matches, 'USER_NUMERICAL', $1;
+    push @$matches, 'USER_NUMERICAL', $user;
     return 1;
   }
 
@@ -183,7 +190,7 @@ sub parse_user
   if ($user =~ /^[a-z]+$/)
   {
     # A single string, potentially followed by numbers.
-    push @$matches, 'USER_LETTERS', $user;
+    push @$matches, 'USER_ONE', $user;
     return 1;
   }
 
@@ -212,7 +219,7 @@ sub parse_user
   elsif (exists $USERS_HASH->{$user})
   {
     my @list = Email::Users::lookup($user);
-    push @$matches, @list;
+    push @$matches, map { @$_ } @list;
     return 1;
   }
   elsif ($#a == 1 && $#b == 0 && $#c == 0)

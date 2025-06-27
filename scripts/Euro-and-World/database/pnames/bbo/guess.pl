@@ -37,6 +37,29 @@ my @TAG_ORDER = qw(
   LASTBBO
 );
 
+my @POST_MAIL_ORDER = qw(
+  OPEN
+  PRIVATE
+  SYSTEM
+
+  USER_TITLE
+  USER_ONE
+  USER_TWO
+  USER_FIRST
+  USER_INITIALS
+  USER_LAST
+  USER_NUMERICAL
+  USER_UNPARSEABLE
+  EMAIL_COUNTRY
+  EMAIL
+
+  CITY
+  COUNTRY
+  SYSTEM
+  MAGIC
+  CODE
+);
+
 # This is a small special case.
 my @COUNTRY_ORDER = qw(
   COUNTRY
@@ -100,10 +123,11 @@ raw_to_paragraphs(\@chunks, \@paragraphs);
 for my $paragraph (@paragraphs)
 {
   inspect_paragraph($whole, $paragraph);
+  check_tag_order($paragraph);
 }
 
 my $countries = 0;
-my @phist;
+my (@phist, @hhist);
 my %uniques;
 for my $paragraph (@paragraphs)
 {
@@ -458,10 +482,9 @@ sub look_for_email
 {
   # TODO We could tolerate some spaces here, etc.
 
-  my ($text) = @_;
+  my ($text, $list) = @_;
 
-  my @list;
-  Email::Email::looks_like(lc($text), \@list);
+  Email::Email::looks_like(lc($text), $list);
   return;
 
   # TODO Still need to parse @list.
@@ -507,10 +530,10 @@ sub inspect_paragraph
         next;
       }
 
-# if ($paragraph->{HANDLE} eq 'GAVINO9')
-# {
-  # print "HERE\n";
-# }
+if ($paragraph->{HANDLE} eq 'COLETTE67')
+{
+  print "HERE\n";
+ }
 
       my $l = look_for_single_tag($whole, \@LEVEL_ORDER, 'LEVEL',
         $entry->{TEXT});
@@ -531,11 +554,12 @@ sub inspect_paragraph
         next;
       }
 
-      my $e = look_for_email($entry->{TEXT});
-      if ($e)
+      my @list;
+      look_for_email($entry->{TEXT}, \@list);
+      if ($#list >= 0)
       {
-        $entry->{CATEGORY} = 'EMAIL';
-        $entry->{VALUE} = $e;
+        $entry->{CATEGORY} = 'LIST';
+        @{$entry->{LIST}} = @list;
         next;
       }
     }
@@ -559,6 +583,66 @@ sub inspect_paragraph
     {
       $entry->{CATEGORY} = 'SYSTEM';
       next;
+    }
+  }
+}
+
+
+sub locate_tag_number
+{
+  my ($start, $tag) = @_;
+
+  for my $i ($$start .. $#POST_MAIL_ORDER)
+  {
+    if ($tag eq $POST_MAIL_ORDER[$i])
+    {
+      $$start = $i;
+      return 1;
+    }
+  }
+  return 0;
+
+}
+
+
+sub check_tag_order
+{
+  my ($paragraph) = @_;
+
+  my $post_index = 0;
+
+  for my $entry (@{$paragraph->{LINES}})
+  {
+    my $tag = $entry->{CATEGORY};
+    if (ref($tag))
+    {
+      print_paragraph($paragraph);
+      print "CATEGORY not a tag!\n";
+    }
+    elsif ($tag eq 'LIST')
+    {
+      for (my $i = 0; $i <= $#{$entry->{LIST}}; $i += 2)
+      {
+        if (! locate_tag_number(\$post_index, $entry->{LIST}[$i]))
+        {
+          print_paragraph($paragraph);
+          print "Did not find tag " .  $entry->{LIST}[$i] . " in order\n";
+          print "---\n\n";
+          return;
+          # die "Did not find tag " .  $entry->{LIST}[$i] . " in order";
+        }
+      }
+    }
+    else
+    {
+      if (! locate_tag_number(\$post_index, $tag))
+      {
+        print_paragraph($paragraph);
+        print "Did not find tag $tag in order\n";
+        print "---\n\n";
+        return;
+        # die "Did not find tag $tag in order";
+      }
     }
   }
 }
@@ -825,10 +909,25 @@ sub print_paragraph
   print $paragraph->{HANDLE}, "\n";
   for my $entry (@{$paragraph->{LINES}})
   {
-    printf("%-12s %-12s %s\n", 
-      $entry->{CATEGORY},
-      $entry->{VALUE} // '',
-      $entry->{TEXT});
+    if ($entry->{CATEGORY} eq 'LIST')
+    {
+      my $len = $#{$entry->{LIST}};
+
+      for (my $i = 0; $i <= $len; $i += 2)
+      {
+        printf("%-12s %-12s %s\n", 
+          $entry->{LIST}[$i],
+          $entry->{LIST}[$i+1],
+          $entry->{TEXT});
+      }
+    }
+    else
+    {
+      printf("%-12s %-12s %s\n", 
+        $entry->{CATEGORY},
+        $entry->{VALUE} // '',
+        $entry->{TEXT});
+    }
   }
   print "\n";
 }
