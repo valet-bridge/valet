@@ -37,6 +37,7 @@ my %SINGLE_TYPOS =
     'confdentl', 'confidencial', 'confidential', 'confidentiel',
     'confidentielle', 'great',
     'incognito', 'inconnu', 'inconnue',
+    'no@com',
     'other', 'others',
     'pirivate', 'pivate', 'priv', 'priva', 'privado', 'privare',
     'privat', 'privata', 'private.au', 'privatem', 'privates', 

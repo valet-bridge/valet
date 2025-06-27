@@ -319,7 +319,7 @@ my @SINGLE_WORDS = qw(
   Vadsø Van Vancouver Varanasi Varberg Varese Varna Vasa Västervik 
   Västerås Vejle Veldhoven Venice Verdal Verona Vestfold Vestvågøy 
   Viareggio Viborg Vienna Vikersund Villeurbanne Vilnius 
-  Vishakhapatanam Vodskov Vorden Vraca Våge
+  Vishakhapatanam Vodskov Vorden Vraca Våge Vålerenga
 
   Waldsolms Waltham Wanzhou Warsaw Wellington Wetzlar Wiesbaden 
   Wisla Wolverhampton Worcester Wroclaw Wronie Wuhan Wuxi Wuzhishan

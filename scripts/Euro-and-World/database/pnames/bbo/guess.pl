@@ -147,7 +147,7 @@ for my $paragraph (@paragraphs)
   inspect_paragraph($whole, $paragraph);
 
   # This caught many things, but is more of a linter.
-  # check_tag_order($paragraph);
+  check_tag_order($paragraph);
 }
 
 my $countries = 0;
@@ -563,7 +563,7 @@ sub inspect_paragraph
 
 if ($paragraph->{HANDLE} eq 'DRSLAMM')
 {
-  print "HERE\n";
+  # print "HERE\n";
  }
 
       my $l = look_for_single_tag($whole, \@LEVEL_ORDER, 'LEVEL',
@@ -714,6 +714,9 @@ sub check_tag_order
   {
     my $tag = $entry->{CATEGORY};
     next if $tag eq 'FLUFF'; # Always permitted
+    next if $tag eq 'PRIVATE' || 
+      $tag eq 'COUNTRY' ||
+      $tag eq 'LEVEL'; # Manually checked
     if ($tag eq 'LIST')
     {
       for (my $i = 0; $i <= $#{$entry->{LIST}}; $i += 2)

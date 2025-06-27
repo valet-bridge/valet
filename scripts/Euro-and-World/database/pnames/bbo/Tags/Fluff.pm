@@ -12,6 +12,8 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  '·Å·ÉÃÎÏë',
+  '52/5 35/5',
   'a slam',
   'all conv',
   'bonne humeur',
@@ -26,6 +28,7 @@ my @MULTI_WORDS =
   "it's just a game",
   'it is only a game',
   'fiat lux',
+  'have fun',
   'hello everyone',
   'jeu rapide svp',
   'just for',
@@ -33,9 +36,15 @@ my @MULTI_WORDS =
   'no nt fit',
   'no profile no pay',
   'no profile,no play',
+  'p',
   'pas de',
   'play nice bridge',
   'please profile',
+  'rýze findikli baþköy',
+  't',
+  'tell me carding',
+  'use most conventions',
+  'vålerenga',
   'why havent u booted me yet',
   'x only for penalty.... even at level 1',
 );
@@ -45,23 +54,22 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  0123 0314@0314
+  0123 0314@0314 1t
 
   about above academic accepte according advance advanced advice after 
-  aggressive ailleurs all almost alone alternate always amours and 
-  anfrage année answer anything anytime anyway apprentie around asap 
+  aggressive ailleurs all almost alone alternate always amours anadolu
+  and anfrage année answer anything anytime anyway apprentie around asap 
   ask asked aussi available avancée
 
-  back bad basic bass be beautiful beauty beauté become been
-  beginer beginners being believe belong belongs below besoin best
-  bienvenue big bitte blues bonheur bonjour both bridgeopplevelser
+  back bad basic bass be beautiful beauty beauté become been beginer 
+  beginners being believe belong belongs below besoin best bienvenue 
+  big bitte blues bonheur bonjour both bridgeopplevelser
 
   call cannot care careful cause cegetel.net championship chance change 
-  chat
-  cheaters chocolat chocolate citizen class click closed coach cogito
-  color comité comment comments common companion complain complicated
-  computer connais connection conseils contact cool copy corner 
-  correct criticism criticize curieux current
+  chat cheaters chocolat chocolate citizen class click closed coach 
+  cogito color comité comment comments common companion complain 
+  complicated computer connais connection conseils contact cool copy 
+  corner correct criticism criticize curieux current
 
   days decisions details dies diesen difficile difficult direct 
   discipline disconnects discussion disiplin disponibile disponible 
@@ -118,9 +126,9 @@ my @SINGLE_WORDS = qw(
   of ok old on one only operator or oral orange ordinary other others 
   otherwise ou oublié oui our out over own
 
-  panda
-  paradis paradise parfois particular partout pass password patience 
-  patient paulsen peace penalty pendant people perfect perso person 
+  panda paradis paradise parfois particular partout pas pass password 
+  patience patient paulsen peace penalty pendant people perfect 
+  perso person 
   personal persone personnel petite peut phantom phoney pigeon pigeons 
   pique piques pirivate pivate place plaisir planet planets plata played 
   player players plays pleasant please pleasure pls plse plus 
@@ -133,7 +141,7 @@ my @SINGLE_WORDS = qw(
   proxy prv prvate prvt pryw präcise précisés prétention prývate 
   pseudo pseudonyms psychic ptivate public pupet pupp pvt
 
-  quadri quand quasi quel quelque question quick quiet quite quota
+  qèº quadri quand quasi quel quelque question quick quiet quite quota
 
   rainbow random rapide rarely rating read realistic reason receive 
   register
