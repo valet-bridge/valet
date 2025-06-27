@@ -586,7 +586,7 @@ my @DELETIONS =
   'sonder@nesa.jay.net',
   'rubob2)59@msn.com',
   'd"avarough@yahoo.com',
-  'alam@t.palsu.com',
+  'alam@t.palsu.oom',
   'charles@ttccharlie.force9.co.uk',
   'paul@anubis.no-ip.com',
   'fskurb@pastime.u-net.com',

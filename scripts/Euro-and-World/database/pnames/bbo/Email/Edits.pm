@@ -33,7 +33,6 @@ my %EDITS =
   'agusia74@poczta.onet' => 'agusia74@poczta.onet.pl',
   'ah.vandyk@sympatico/ca' => 'ah.vandyk@sympatico.ca',
   'al1919@hotmail.fr' => 'al1919@hotmail.fr',
-  'alam@t.palsu.oom' => 'alam@t.palsu.com',
   'alex------@llibero.it' => 'alex@libero.it',
   'alie_196616@yahoo.acom' => 'alie_196616@yahoo.com',
   'antun.matana@optinet' => 'antun.matana@optinet.hr',
@@ -314,7 +313,7 @@ my %EDITS =
   '°°°beef9410@gmail.com°°°' => 'beef9410@gmail.com',
   'iyurdam35@hotmail.comkarþýyakaiçkulübü' => 'iyurdam35@hotmail.com',
   'wvash@media.combb.net' => 'wvash@bb.net',
-  'maryse-christian-gerbod' => 'christian-gerbod@hotmail.fr',
+  'maryse-christian-gerbod@hotmail.fr' => 'christian-gerbod@hotmail.fr',
 );
 
 our $EDITS_HASH = \%EDITS;
