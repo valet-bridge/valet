@@ -51,11 +51,6 @@ sub looks_like
     return;
   }
 
-  if ($text =~ /tention/i)
-  {
-    # print "HERE\n";
-  }
-
   if (exists $PRIVATES_HASH->{$text})
   {
     push @$matches, 'PRIVATE', 'Private';
@@ -96,7 +91,7 @@ sub looks_like
 
   if ($text =~ /[\x80-\xFF]/)
   {
-    print "CHARSET $orig_text\n";
+    special_kludge($text, $matches);
     return;
   }
 
@@ -175,6 +170,26 @@ sub looks_like
   parse_user($user, $matches);
   push @$matches, 'EMAIL', $text;
   return;
+}
+
+
+sub special_kludge
+{
+  my ($text, $matches) = @_;
+
+  # There are only six cases left.
+  if ($text =~ /1nt/)
+  {
+    push @$matches, 'SYSTEM', '2/1 1NT 15-17 Transfers';
+  }
+  elsif ($text =~ /\.pl$/)
+  {
+    push @$matches, 'EMAIL_COUNTRY', 'Poland';
+  }
+  else
+  {
+    push @$matches, 'DELETE', $text;
+  }
 }
 
 
