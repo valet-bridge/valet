@@ -46,27 +46,31 @@ my %COUNTRIES = (
   "Chinese Taipei" => "TPE", TPE => "TPE", 
     "Taiwan" => "TPE",
   Colombia => "COL", COL => "COL",
-  Congo => "COG", COG => "COG",
   "Costa Rica" => "CRC", CRC => "CRC",
   Croatia => "CRO", CRO => "CRO", # Not standard
   Cuba => "CUB", CUB => "CUB",
   Cyprus => "CYP", CYP => "CYP",
   "Czech Republic" => "CZE", CZE => "CZE",
+  "Democratic Republic of the Congo" => "COD", COG => "COD",
   Denmark => "DEN", DEN => "DEN", # Not standard
   "Dominican Republic" => "DOM", DOM => "DOM",
   Ecuador => "ECU", ECU => "ECU",
   Egypt => "EGY", EGY => "EGY",
   England => "ENG", ENG => "ENG", # Not standard
+  "Equatorial Guinea" => "GNQ", GNQ => "GNQ",
   Estonia => "EST", EST => "EST",
   Eswatini => "SWZ", Swaziland => "SWZ", SWZ => "SWZ",
   "Faroe Islands" => "FRO", FRO => "FRO",
+  Fiji => "FJI", FJI => "FJI",
   Finland => "FIN", FIN => "FIN",
   France => "FRA", FRA => "FRA",
   "French Polynesia" => "PYF", PYF => "PYF",
+  Gabon => "GAB", GAB => "GAB",
   Georgia => "GEO", GEO => "GEO",
   Germany => "GER", GER => "GER", # Not standard
   "Great Britain" => "GBR", GBR => "GBR",
   Greece => "GRE", GRE => "GRE", # Not standard
+  Grenada => "GRD", GRD => "GRD",
   Guadeloupe => "GLP", GLP => "GLP",
   Guatemala => "GUA", GUA => "GUA",
   Guyana => "GUY", GUY => "GUY",
@@ -93,6 +97,7 @@ my %COUNTRIES = (
     KOR => "KOR", # South Korea, Republic of Korea
   Kuwait => "KUW", KUW => "KUW", # Not standard
   Kyrgyzstan => "KGZ", KGZ => "KGZ",
+  Laos => "LAO", LAO => "LAO",
   Latvia => "LAT", LAT => "LAT", # Not standard
   Lebanon => "LIB", LIB => "LIB", # Not standard
   Lesotho => "LSO", LSO => "LSO",
@@ -137,6 +142,7 @@ my %COUNTRIES = (
   Poland => "POL", POL => "POL",
   Portugal => "POR", POR => "POR", # Not standard
   Qatar => "QAT", QAT => "QAT",
+  "Republic of the Congo" => "COG", COG => "COG",
   Reunion => "REU", REU => "REU",
   Romania => "ROM", ROM => "ROM", # Not standard
   Russia => "RUS", "RUS" => "RUS",

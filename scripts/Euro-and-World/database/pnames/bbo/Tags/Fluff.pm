@@ -13,7 +13,31 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'a slam',
-  'pas de'
+  'all conv',
+  'bonne humeur',
+  'count and think',
+  'dieu est amour',
+  'do you know the pass',
+  'fair play',
+  'fair play please',
+  'i am not here',
+  'i dont speak english',
+  'i just dunno',
+  "it's just a game",
+  'it is only a game',
+  'fiat lux',
+  'hello everyone',
+  'jeu rapide svp',
+  'just for',
+  'kiss@bridge',
+  'no nt fit',
+  'no profile no pay',
+  'no profile,no play',
+  'pas de',
+  'play nice bridge',
+  'please profile',
+  'why havent u booted me yet',
+  'x only for penalty.... even at level 1',
 );
 
 my %MULTI_TYPOS =
@@ -21,6 +45,8 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  0123 0314@0314
+
   about above academic accepte according advance advanced advice after 
   aggressive ailleurs all almost alone alternate always amours and 
   anfrage année answer anything anytime anyway apprentie around asap 
@@ -30,7 +56,8 @@ my @SINGLE_WORDS = qw(
   beginer beginners being believe belong belongs below besoin best
   bienvenue big bitte blues bonheur bonjour both bridgeopplevelser
 
-  call cannot care careful cause championship chance change chat
+  call cannot care careful cause cegetel.net championship chance change 
+  chat
   cheaters chocolat chocolate citizen class click closed coach cogito
   color comité comment comments common companion complain complicated
   computer connais connection conseils contact cool copy corner 
@@ -40,11 +67,11 @@ my @SINGLE_WORDS = qw(
   discipline disconnects discussion disiplin disponibile disponible 
   diversamente doesn't down dream drums drunk dunno dupli during
 
-  earth ekspres elite else empty engineer enigma enjoy enough entame enter
-  entre equal equilibrato errare error espoir eternal etre even every
-  everybody everyday everyone everything everywhere excellence except
-  excl exclusive exemplaire exp expat expect exper experienced experte
-  experto experts express extra exuberant eye eyes 
+  earth ekspres elite else e-mail empty engineer enigma enjoy enough 
+  entame enter entre equal equilibrato errare error espoir eternal etre 
+  even every everybody everyday everyone everything everywhere 
+  excellence except excl exclusive exemplaire exp expat expect exper 
+  experienced experte experto experts express extra exuberant eye eyes 
 
   facteur fairplay fait false fans fantasy fast faster father fault 
   favorite favourite festiv festival festivali first flag flagless 
@@ -73,8 +100,8 @@ my @SINGLE_WORDS = qw(
 
   ladder language laughter lawless lawyer leader leads learn learned
   learner learning least leave lesson lessons level levels life line
-  listed listen literal little live living lol long longer looking lose
-  lot love loved lovely lover loving lowest luck lui
+  listed listen literal little live living logic lol long longer 
+  looking lose lot love loved lovely lover loving lowest luck lui
 
   magic magical majör makes making management manager mania manners 
   mardi martial
@@ -96,15 +123,15 @@ my @SINGLE_WORDS = qw(
   patient paulsen peace penalty pendant people perfect perso person 
   personal persone personnel petite peut phantom phoney pigeon pigeons 
   pique piques pirivate pivate place plaisir planet planets plata played 
-  players plays pleasant please pleasure pls plse plus plusqueparfait 
-  pnts point polite politely politeness poor porteur positive possible 
-  pourquoi powered prefer prefered preferred prend present president
-  prima primus principiante prior priv priva privado privare privat
-  privata private privatem privates privati privative privato prive
-  privee privet privite privte privé privée priwate problem prochaine
-  professional profil profile profilo profl proud proxy prv prvate 
-  prvt pryw präcise précisés prétention prývate pseudo pseudonyms
-  psychic ptivate public pupet pupp pvt
+  player players plays pleasant please pleasure pls plse plus 
+  plusqueparfait pnts point polite politely politeness poor porteur 
+  positive possible pourquoi powered prefer prefered preferred prend 
+  present president prima primus principiante prior priv priva privado 
+  privare privat privata private privatem privates privati privative 
+  privato prive privee privet privite privte privé privée priwate 
+  problem prochaine professional profil profile profilo profl proud 
+  proxy prv prvate prvt pryw präcise précisés prétention prývate 
+  pseudo pseudonyms psychic ptivate public pupet pupp pvt
 
   quadri quand quasi quel quelque question quick quiet quite quota
 
@@ -126,7 +153,7 @@ my @SINGLE_WORDS = qw(
   suggestions suis suite summer sunshine super sure sureté susy svp 
   swearing sweeney sweet sweety sweidan syd sympa sympatico
 
-  take talk talking target teach teacher teaching team temple
+  take talk talking target tc teach teacher teaching team temple
   tempo temporary temporis temps test than thank thanks that the their
   them then there they thing things think thinking third this 
   those thought through time times tiny tired titles tks to today

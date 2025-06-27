@@ -45,7 +45,11 @@ sub looks_like
   my $text = $orig_text;
   $text =~ s/\s//g;
 
-  return if exists $DELETIONS_HASH->{$text};
+  if (exists $DELETIONS_HASH->{$text})
+  {
+    push @$matches, 'DELETE', $orig_text;
+    return;
+  }
 
   if ($text =~ /tention/i)
   {

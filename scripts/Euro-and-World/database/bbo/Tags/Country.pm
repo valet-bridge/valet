@@ -21,7 +21,9 @@ my @MULTI_WORDS =
   'Chinese Taipei',
   'Costa Rica',
   'Czech Republic',
+  'Democratic Republic of the Congo',
   'Dominican Republic',
+  'Equatorial Guinea',
   'Faroe Islands',
   'French Guyana',
   'French Polynesia',
@@ -36,12 +38,14 @@ my @MULTI_WORDS =
   'North America',
   'North Macedonia',
   'Northern Ireland',
+  'Republic of the Congo',
   'Saint Barthélemy',
   'Saint Lucia',
   'San Marino',
   'São Tomé and Príncipe',
   'Saudi Arabia',
   'Serbia and Montenegro',
+  'Sierra Leone',
   'South Africa',
   'South Korea',
   'Sri Lanka',
@@ -131,23 +135,24 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Afghanistan Albania Algeria Andorra Angora Argentina Armenia Aruba
-  Australia Austria Azerbaijan
+  Afghanistan Albania Algeria Andorra Angola Angora Argentina Armenia 
+  Aruba Australia Austria Azerbaijan
   Bahamas Bahrain Bangladesh Barbados Belarus Belgium Benin Bermuda 
   Bhutan Bolivia Bosnia Botswana Brazil Bulgaria
-  Cambodia Cameroon Canada Chile China Colombia Comoros Congo Croatia 
+  Cambodia Cameroon Canada Chile China Colombia Comoros Croatia 
   Cuba Cyprus
   Denmark 
   Ecuador Egypt England Estonia Eswatini
-  Finland France
-  Georgia Germany Georgia Greece Guadeloupe Guatemala Guernsey Guyana
+  Fiji Finland France
+  Gabon Georgia Germany Georgia Greece Grenada Guadeloupe Guatemala 
+  Guernsey Guyana
   Haiti Honduras Hungary 
   Iceland India Indonesia Iran Iraq Ireland Israel Italy
   Jamaica Japan Jersey Jordan
   Kazakhstan Kenya Kuwait Kyrgyzstan
-  Latvia Lebanon Lesotho Libya Liechtenstein Lithuania Luxembourg 
-  Macau Madagascar Malaysia Mali Malta Martinique Mauritius Mexico Moldova
-  Monaco Mongolia Montenegro Morocco Mozambique
+  Laos Latvia Lebanon Lesotho Libya Liechtenstein Lithuania Luxembourg 
+  Macau Madagascar Malaysia Mali Malta Martinique Mauritius Mexico 
+  Moldova Monaco Mongolia Montenegro Morocco Mozambique
   Namibia Nepal Netherlands Nicaragua Nigeria Norden Norway 
   Oman
   Pakistan Palestine Panama Paraguay Peru Philippines Poland Portugal
@@ -180,6 +185,7 @@ my %SINGLE_TYPOS =
   'Chinese Taipei' => ['taipei'],
   Colombia => ['columbia'],
   Croatia => ['croatie', 'cro'],
+  'Democratic Republic of the Congo' => ['congo-kinshasa'],
   Denmark => ['danmark', 'danemark', 'denmarrk', 'den', 'dk',
     'denmark*'],
   Egypt => ['egy', 'egytp', 'egypte'],
@@ -199,6 +205,8 @@ my %SINGLE_TYPOS =
   Iceland => ['ice', 'islande'],
   India => ['indýa', 'hindusthan', 'hidusthan', 'indiaa'],
   Indonesia => ['timnas', 'ina'],
+  Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
+    'irelend', 'irelena', 'ire', 'eire'],
   Israel => ['isreal', 'israil', 'isarel', 'israël', 'isr'],
   Italy => ['italia', 'it', 'ita', 'italie'],
   Jordan => ['jor'],
@@ -221,8 +229,7 @@ my %SINGLE_TYPOS =
   Poland => ['polen', 'pologne', 'polska', 'pol', 'polland',
     'porland'],
   Portugal => ['por', 'pl', 'portogallo'],
-  Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
-    'irelend', 'irelena', 'ire', 'eire'],
+  'Republic of the Congo' => ['congo-brazzaville'],
   Reunion => ['réunion'],
   Romania => ['rumania', 'rum', 'rom'],
   Russia => ['russian', 'rus', 'rusia', 'sbornaya', 'sbornaia'],
@@ -242,6 +249,7 @@ my %SINGLE_TYPOS =
   Turkey => ['tur', 'turkish', 'turkiye', 'türkýye'],
   'United Arab Emirates' => ['uae'],
   'United Kingdom' => ['uk'],
+  'Venezuela' => ['venezuala'],
   Wales => ['wal'],
   Uruguay => ['uru'],
   USA => ['america']

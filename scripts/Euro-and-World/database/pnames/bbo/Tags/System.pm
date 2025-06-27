@@ -13,6 +13,21 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  '2/1 sayc',
+  '2dhs weak',
+  '5 card major',
+  'apel direct',
+  'carta impar siempre gusta',
+  'doubles=take-out;neg;re-ooen;penalty',
+  'neg x transfer',
+  'negat x',
+  'no 2nt fit',
+  'no wj',
+  'o/e dis crds',
+  'std carding',
+  'std discards',
+  'std.crd-muc',
+  'weak jumps',
 );
 
 my %MULTI_TYPOS =
@@ -20,10 +35,10 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  15-17 15-18 16-18 16-19 19-20 20-21 20-22 21-23
-  0314 1430 5542
-  17nt 1h 1n 1nt 1nt16 1p 1s 1t
-  2cl 2clubs 2d 2k 2n 2nt 2p 2s 2sa 2sp 2weak 2ème
+  15-17 15-17nt 15-18 16-18 16-19 19-20 20-21 20-22 21-23
+  0314 03142Q 03/14 1430 5542
+  11-rule 17nt 1h 1nt 1nt16 1p 1s 1t
+  2/1 2cl 2clubs 2d 2k 2nt 2p 2s 2sa 2sp 2weak 2ème
   3c 3k 3p 3s 3sa 3ème 4c 4cl 4sf 4way 
   5c 5cm 5crd 5m 5maj 5major 5mj 5s 5t 5ème
 
@@ -69,9 +84,10 @@ my @SINGLE_WORDS = qw(
   play player points prec precision preempt preempts précision 
   pts puppet
 
-  raise raises relay resp response revers reverse revdrury rkc rkcb
-  rusinow sayc short small smolen spades splinter standard standart
+  raise raises rckb relay resp response revers reverse revdrury rkc 
+  rkcb rkcb1430 rusinow 
 
+  sayc short small smolen spades splinter standard standart
   sef signals singleton sistem splinters splntr stayman std strng 
   strong strongest suit suits supp support syst system systems
 
@@ -79,7 +95,7 @@ my @SINGLE_WORDS = qw(
   transfert transfr transfs trasfer trefle trèfle trefles trf trfrs 
   tricks trnsf trnsfer trsf trump twos
 
-  udca undo undos upside
+  udca udca-mud undo undos upside
 
   vulnerable waiting weak weak2 
 

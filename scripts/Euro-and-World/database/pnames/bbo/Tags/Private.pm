@@ -18,6 +18,7 @@ my %MULTI_TYPOS =
 (
   Private => [
     'as requested',
+    'ask me..if want',
     'at request',
     'available upon request',
     'on request',

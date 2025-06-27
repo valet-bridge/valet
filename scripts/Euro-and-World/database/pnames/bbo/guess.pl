@@ -37,24 +37,38 @@ my @TAG_ORDER = qw(
   LASTBBO
 );
 
+# Permissive of some order changes.
+
 my @POST_MAIL_ORDER = qw(
   OPEN
   PRIVATE
   SYSTEM
 
+  LEVEL
+
   USER_TITLE
   USER_ONE
   USER_TWO
+
+  USER_INITIALS
   USER_FIRST
   USER_INITIALS
+  USER_PARTICLES
   USER_LAST
+
   USER_NUMERICAL
   USER_UNPARSEABLE
+  EMAIL_CITY
+  EMAIL_REGION
   EMAIL_COUNTRY
+  EMAIL_UNIVERSITY
   EMAIL
+
+  LEVEL
 
   CITY
   COUNTRY
+
   SYSTEM
   MAGIC
   CODE
@@ -71,6 +85,14 @@ my @LEVEL_ORDER = qw(
 
 my @PRIVATE_ORDER = qw(
   PRIVATE
+);
+
+my @FLUFF_ORDER = qw(
+  FLUFF
+);
+
+my @SYSTEM_ORDER = qw(
+  SYSTEM
 );
 
 my %LOCAL_SUBS =
@@ -457,14 +479,14 @@ sub raw_to_paragraphs
 
 sub look_for_single_tag
 {
-  # Is $text exactly a country, with nothing else in the string?
+  # Is $text exactly a tag value, with nothing else in the string?
   my ($whole, $tag_list, $tag, $text) = @_;
 
   my @tags = (0);
   my @values = ($text);
   my @texts = ($text);
 
-  # Look for multi-word country.
+  # Look for multi-word tag value.
   if ($text =~ /[\s-]/)
   {
     split_on_multi($whole, $tag_list, 0, \@tags, \@values, \@texts);
@@ -515,9 +537,16 @@ sub inspect_paragraph
   my $country_seen = 0;
   my $private_seen = 0;
   my $magic_seen = 0;
+  my $mail_seen = 0;
+  my $level_seen = 0;
+
+  my $eno = -1;
+  my $elen = $#{$paragraph->{LINES}};
 
   for my $entry (@{$paragraph->{LINES}})
   {
+    $eno++;
+
     if (! $country_seen)
     {
       my $c = look_for_single_tag($whole, \@COUNTRY_ORDER, 'COUNTRY',
@@ -530,7 +559,7 @@ sub inspect_paragraph
         next;
       }
 
-if ($paragraph->{HANDLE} eq 'COLETTE67')
+if ($paragraph->{HANDLE} eq 'DRSLAMM')
 {
   print "HERE\n";
  }
@@ -541,6 +570,7 @@ if ($paragraph->{HANDLE} eq 'COLETTE67')
       {
         $entry->{CATEGORY} = 'LEVEL';
         $entry->{VALUE} = $l;
+        $level_seen = 1;
         next;
       }
 
@@ -548,38 +578,105 @@ if ($paragraph->{HANDLE} eq 'COLETTE67')
         $entry->{TEXT});
       if ($p)
       {
-        $entry->{CATEGORY} = 'PRIVATE';
-        $entry->{VALUE} = $p;
-        $private_seen = 1;
+        if ($level_seen && $private_seen)
+        {
+          $entry->{CATEGORY} = 'FLUFF';
+          $entry->{VALUE} = $entry->{TEXT};
+        }
+        elsif (! $level_seen &&
+            ($private_seen || $mail_seen) && 
+            $entry->{TEXT} =~ /^other$/i)
+        {
+          $entry->{CATEGORY} = 'LEVEL';
+          $entry->{VALUE} = 'Other';
+          $level_seen = 1;
+        }
+        elsif (! $level_seen &&
+            ($private_seen || $mail_seen) && 
+            $entry->{TEXT} =~ /^private$/i)
+        {
+          $entry->{CATEGORY} = 'LEVEL';
+          $entry->{VALUE} = 'Private';
+          $level_seen = 1;
+        }
+        else
+        {
+          $entry->{CATEGORY} = 'PRIVATE';
+          $entry->{VALUE} = $p;
+          $private_seen = 1;
+        }
         next;
       }
 
+      my $f = look_for_single_tag($whole, \@FLUFF_ORDER, 'FLUFF',
+        $entry->{TEXT});
+      if ($f)
+      {
+        $entry->{CATEGORY} = 'FLUFF';
+        $entry->{VALUE} = $f;
+        next;
+      }
+
+      # Sometimes people give the same mail twice, or two different ones.
       my @list;
       look_for_email($entry->{TEXT}, \@list);
       if ($#list >= 0)
       {
-        $entry->{CATEGORY} = 'LIST';
-        @{$entry->{LIST}} = @list;
+        if ($mail_seen)
+        {
+          $entry->{CATEGORY} = 'FLUFF';
+          $entry->{VALUE} = $entry->{TEXT};
+        }
+        else
+        {
+          $entry->{CATEGORY} = 'LIST';
+          @{$entry->{LIST}} = @list;
+          $mail_seen = 1;
+        }
+        next;
+      }
+
+      my $s = look_for_single_tag($whole, \@SYSTEM_ORDER, 'SYSTEM',
+        $entry->{TEXT});
+      if ($s)
+      {
+        $entry->{CATEGORY} = 'SYSTEM';
+        $entry->{VALUE} = $entry->{TEXT};
+        next;
+      }
+
+    }
+
+    if (! $magic_seen && $eno+1 >= $elen)
+    {
+      # Towards the end.
+      if ($entry->{TEXT} =~ /^(\d+)$/ && $1 >= 100 && $1 < 200)
+      {
+        $entry->{CATEGORY} = 'MAGIC';
+        $magic_seen = 1;
         next;
       }
     }
 
-    if ($entry->{TEXT} =~ /^(\d+)$/ && $1 >= 100 && $1 < 200)
+    if ($magic_seen && $eno == $elen &&
+        $entry->{TEXT} =~ /^(\d+)$/ && $1 >= 100 && $1 < 200)
     {
-      $entry->{CATEGORY} = 'MAGIC';
-      $magic_seen = 1;
-      next;
+      # Not clear, but doesn't matter.
+      $entry->{CATEGORY} = 'FLUFF';
+      $entry->{VALUE} = $entry->{TEXT};
     }
 
-    if (($entry->{TEXT} =~ /^[0-9]n/ && $magic_seen) || 
-        $entry->{TEXT} =~ /^\dy/)
+    if ($eno+1 >= $elen &&
+        (($entry->{TEXT} =~ /^[0-9]n/ && $magic_seen) || 
+        $entry->{TEXT} =~ /^\dy[!|]/ ||
+        $entry->{TEXT} =~ /^\dy$/))
     {
       # Some kind of code.
       $entry->{CATEGORY} = 'CODE';
       next;
     }
 
-    if (($country_seen || $private_seen) && ! $magic_seen)
+    if (($country_seen || $mail_seen || $private_seen) && ! $magic_seen)
     {
       $entry->{CATEGORY} = 'SYSTEM';
       next;
@@ -614,22 +711,19 @@ sub check_tag_order
   for my $entry (@{$paragraph->{LINES}})
   {
     my $tag = $entry->{CATEGORY};
-    if (ref($tag))
-    {
-      print_paragraph($paragraph);
-      print "CATEGORY not a tag!\n";
-    }
-    elsif ($tag eq 'LIST')
+    next if $tag eq 'FLUFF'; # Always permitted
+    if ($tag eq 'LIST')
     {
       for (my $i = 0; $i <= $#{$entry->{LIST}}; $i += 2)
       {
-        if (! locate_tag_number(\$post_index, $entry->{LIST}[$i]))
+        my $list_tag = $entry->{LIST}[$i];
+        next if $list_tag eq 'DELETE'; # Always permitted
+        if (! locate_tag_number(\$post_index, $list_tag))
         {
           print_paragraph($paragraph);
           print "Did not find tag " .  $entry->{LIST}[$i] . " in order\n";
           print "---\n\n";
           return;
-          # die "Did not find tag " .  $entry->{LIST}[$i] . " in order";
         }
       }
     }
@@ -641,7 +735,6 @@ sub check_tag_order
         print "Did not find tag $tag in order\n";
         print "---\n\n";
         return;
-        # die "Did not find tag $tag in order";
       }
     }
   }

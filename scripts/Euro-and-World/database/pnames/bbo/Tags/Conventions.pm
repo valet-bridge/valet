@@ -20,6 +20,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  0314 1430 
   bergen
   bil
   blackwood
