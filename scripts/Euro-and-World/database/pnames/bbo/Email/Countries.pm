@@ -491,6 +491,13 @@ my %COUNTRIES =
   '²»áïäãêçéïîçè¥¾æ°é@qq.com' => 'China',
   'yasarsuat@gmail.com/taþköprü-kastamonu' => 'Turkey',
   'yuksel_ertac@hotmail.com briç dersi verm' => 'Turkey',
+  'bak.post.glyr@slm.vryr.tr' => 'Turkey',
+  'baykara@selim.kars.tr' => 'Turkey',
+  'silaturrahmi@bridge.comm.id' => 'Indonesia',
+  'rswang@u.washington.edu' => 'USA',
+  'polish@heart.ludlow.co.uk' => 'United Kingdom',
+  'sfleischman@tampabay.rr.net' => 'USA',
+  'rajkumargoswami@.in.com' => 'India',
 );
 
 our $COUNTRIES_HASH = \%COUNTRIES;

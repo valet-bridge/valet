@@ -145,7 +145,9 @@ raw_to_paragraphs(\@chunks, \@paragraphs);
 for my $paragraph (@paragraphs)
 {
   inspect_paragraph($whole, $paragraph);
-  check_tag_order($paragraph);
+
+  # This caught many things, but is more of a linter.
+  # check_tag_order($paragraph);
 }
 
 my $countries = 0;

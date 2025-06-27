@@ -313,6 +313,8 @@ my %EDITS =
   'ergýnemre@yahoo.com' => 'erginemre@yahoo.com',
   '°°°beef9410@gmail.com°°°' => 'beef9410@gmail.com',
   'iyurdam35@hotmail.comkarþýyakaiçkulübü' => 'iyurdam35@hotmail.com',
+  'wvash@media.combb.net' => 'wvash@bb.net',
+  'maryse-christian-gerbod' => 'christian-gerbod@hotmail.fr',
 );
 
 our $EDITS_HASH = \%EDITS;
