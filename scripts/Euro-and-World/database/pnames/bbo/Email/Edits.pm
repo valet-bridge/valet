@@ -314,6 +314,11 @@ my %EDITS =
   'iyurdam35@hotmail.comkarþýyakaiçkulübü' => 'iyurdam35@hotmail.com',
   'wvash@media.combb.net' => 'wvash@bb.net',
   'maryse-christian-gerbod@hotmail.fr' => 'christian-gerbod@hotmail.fr',
+  'michelgatinì@hotmail.com' => 'michelgatini@hotmail.com',
+  'kérdezd@axelero.hu' => 'kerdezd@axelero.hu',
+  '34barkley@wp.pl/münchen' => '34barkley@wp.pl',
+  'michal@grzybczyk.pltarn.góry' => 'michal@grzybczyk.pl',
+  'indi7@tut.by(ïèñàòüïîðóññêè' => 'indi7@tut.by',
 );
 
 our $EDITS_HASH = \%EDITS;

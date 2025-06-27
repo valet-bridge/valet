@@ -490,7 +490,7 @@ my %COUNTRIES =
   'lavitaèbella@nl.com' => 'Netherlands',
   '²»áïäãêçéïîçè¥¾æ°é@qq.com' => 'China',
   'yasarsuat@gmail.com/taþköprü-kastamonu' => 'Turkey',
-  'yuksel_ertac@hotmail.com briç dersi verm' => 'Turkey',
+  'yuksel_ertac@hotmail.combriçdersiverm' => 'Turkey',
   'bak.post.glyr@slm.vryr.tr' => 'Turkey',
   'baykara@selim.kars.tr' => 'Turkey',
   'silaturrahmi@bridge.comm.id' => 'Indonesia',
@@ -498,6 +498,17 @@ my %COUNTRIES =
   'polish@heart.ludlow.co.uk' => 'United Kingdom',
   'sfleischman@tampabay.rr.net' => 'USA',
   'rajkumargoswami@.in.com' => 'India',
+  '8ç@suffit.be' => 'Belgium',
+  'bexçêgulan@mynet.com' => 'Turkey',
+  'åkvik-panoram@.com' => 'Norway',
+  'måse@gauldalen.com.no' => 'Norway',
+  'amsel«nospam»@telenet.be' => 'Belgium',
+  'dede@hotmail.torbalý' => 'Turkey',
+  'nonsonosire@nèasburgo.com' => 'Italy',
+  'áíáäéüñèñùóç@hellas.gr' => 'Greece',
+  'kudowazdrójbroneks@o2.pl' => 'Poland',
+  'publi-cite­@sympatico.ca' => 'Canada',
+  'ollktýkhjhbhbbbbbhsbnwhhhi_lau@mynet.com' => 'Turkey',
 );
 
 our $COUNTRIES_HASH = \%COUNTRIES;
