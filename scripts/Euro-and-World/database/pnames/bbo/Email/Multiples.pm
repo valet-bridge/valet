@@ -20,6 +20,7 @@ my %MULTIPLES =
   '6egil(egil@nerheim.nu' => [ OPEN => 'Egil', EMAIL => 'egil@nerheim.nu' ],
   '88@yaman.com2breslau' => [ EMAIL_CITY => 'Wroclaw', EMAIL_COUNTRY => 'Poland', EMAIL => '88@yaman.com'  ],
   'abe@iki.fi,livingingermany' => [ EMAIL => 'abe@iki.fi', COUNTRY => 'Germany' ],
+  'abural@(hotmail)(gmail).com' => [ EMAIL => 'abural@gmail.com'  ],
   'advanced++@abv.bg' => [ LEVEL => 'Advanced', EMAIL_COUNTRY => 'Bulgaria' ],
   'ajay(28)bridgegoth@yahoo.fi' => [ OPEN => 'Jay', EMAIL => 'bridgegoth@yahoo.fi' ],
   'al@morglia.net-bboitalia' => [ EMAIL_COUNTRY => 'Italy', EMAIL => 'al@morglia.net' ],
@@ -27,6 +28,7 @@ my %MULTIPLES =
   'anna@anna.com' => [ OPEN => 'Anna' ],
   'avec.jac@mennecy' => [ EMAIL_CITY => 'Mennecy', EMAIL_COUNTRY => 'France' ],
   'beniopszczola@o2.plolsztyn' => [ EMAIL_CITY => 'Olsztyn', EMAIL_COUNTRY => 'Poland', EMAIL => 'beniopszczola@o2.pl' ],
+  'bjorn.ahlm@comhem.nospam.se' => [ USER_ONE => 'Bjorn', USER_TWO => 'Ahlm', EMAIL_COUNTRY => 'Sweden' ],
   'bulova@nyct.netlessonsavl' => [ EMAIL => 'bulova@nyct.net', LEVEL => 'Expert' ],
   'burdigala@port.de.la.lune' => [ EMAIL_CITY => 'Bordeaux', EMAIL_COUNTRY => 'France' ],
   'carlcsc@yahoo.comglm' => [ EMAIL => 'carlcsc@yahoo.com glm', 'LEVEL' => 'Life Master' ],
@@ -58,11 +60,18 @@ my %MULTIPLES =
   'jemmabe@yahoo.fr(liege-belgium' => [ EMAIL_CITY => 'Liège', EMAIL_COUNTRY => 'Belgium', EMAIL => 'jemmabe@yahoo.fr' ], 
   'kamalkumarnaguri1950@g mail . com' => [ OPEN => 'Kamal Kumar', EMAIL => 'naguri1950@gmail.com' ],
   'liz//neg.dble/jac2nt/gerber@nt' => [ OPEN => 'Liz' ],
+  'luigidagmarmiele@.com' => [ USER_ONE => 'Luigi', USER_TWO => 'Miele', EMAIL_COUNTRY => 'Italy' ],
   'luigifilippo.tinellidigorla@fastwebnet.i' => [ OPEN => 'Luigi Filippo TINELLI', EMAIL_CITY => 'Milan', EMAIL_COUNTRY => 'Italy' ],
+  'marcelvilleneuve@.ca' => [ USER_ONE => 'Marcel', USER_TWO => 'Villeneuve', EMAIL_COUNTRY => 'Canada' ],
   'margokw@aol.comsocal' => [ EMAIL_REGION => 'Southern California', EMAIL => 'margokw@aol.com' ],
   'marisa.@cantabriainfinita' => [ OPEN => 'Marisa', EMAIL_REGION => 'Cantabria' ],
+  'massimomongini@.it' => [ USER_ONE => 'Massimo', USER_TWO => 'Mongoni', EMAIL_COUNTRY => 'Italy' ],
   'milan.italy@march.1963' => [ EMAIL_CITY => 'Milan', EMAIL_COUNTRY => 'Italy' ],
+  'ministre@impots.gouv.fr' => [ EMAIL_COUNTRY => 'France' ],
+  'mlandy/woolsey@j2st.nmf.4ºsf.rjo' => [ SYSTEM => 'mlandy/woolsey@j2st.nmf.4ºsf.rjo' ],
+  'mosher/mlandy@j2st.nmf.4ºsf.rjo' => [ SYSTEM => 'mosher/mlandy@j2st.nmf.4ºsf.rjo' ],
   'nazmul.haq@physics' => [ OPEN => 'Nazmul Haq' ],
+  'neg=dbl/1nt@bbo.ro' => [ SYSTEM => 'neg=dbl/1nt', EMAIL_COUNTRY => 'Romania' ],
   'notalways@exp.com' => [ LEVEL => 'Advanced' ],
   'olivier@40.fr' => [ OPEN => 'Olivier', EMAIL_COUNTRY => 'France' ],
   'pablo.valencia@anti.gua' => [ OPEN => 'Pablo Valencia', EMAIL_COUNTRY => 'Antigua and Barbuda' ],
@@ -73,6 +82,7 @@ my %MULTIPLES =
   'realexpert,jan.gronlund3@getmail.no' => [ EMAIL => 'jan.gronlund3@getmail.no', LEVEL => 'Expert' ],
   'rechtsanwaltyetkinadar@hotmail.com' => [ EMAIL_COUNTRY => 'Germany', EMAIL => 'yetkinadar@hotmail.com' ],
   'rgpune@yahoo.com,iit-b95' => [ EMAIL_COUNTRY => 'India', EMAIL => 'rgpune@yahoo.com' ],
+  'roger.squarcioni@.fr' => [ USER_ONE => 'Roger', USER_TWO => 'Squarcioni', EMAIL_COUNTRY => 'France' ],
   'rreggi@wp.plbydgoszcz' => [ EMAIL_CITY => 'Bydgoszcz', EMAIL_COUNTRY => 'Poland', EMAIL => 'rreggi@wp.pl' ],
   'sam aka showle@aol.com' => [ OPEN => 'Sam', EMAIL => 'showle@aol.com' ],
   'sarel.king@013netnot' => [ OPEN => 'Sarel King' ],
@@ -89,21 +99,6 @@ my %MULTIPLES =
   'vicsartor/vsartor77@aol.com' => [ OPEN => 'Vic Sartor', EMAIL => 'vsartor77@aol.com' ],
   'watford@around.m25.london' => [ EMAIL_CITY => 'Watford', EMAIL_COUNTRY => 'England' ],
   'wojchr@op.plwarszawa' => [ EMAIL_CITY => 'Warsaw', EMAIL_COUNTRY => 'Poland', EMAIL => 'wojchr@op.pl' ],
-
-  'neg=dbl/1nt@bbo.ro' => [ SYSTEM => 'neg=dbl/1nt', EMAIL_COUNTRY => 'Romania' ],
-
-  'abural@(hotmail)(gmail).com' => [ EMAIL => 'abural@gmail.com'  ],
-
-  'massimomongini@.it' => [ USER_ONE => 'Massimo', USER_TWO => 'Mongoni', EMAIL_COUNTRY => 'Italy' ],
-  'marcelvilleneuve@.ca' => [ USER_ONE => 'Marcel', USER_TWO => 'Villeneuve', EMAIL_COUNTRY => 'Canada' ],
-  'luigidagmarmiele@.com' => [ USER_ONE => 'Luigi', USER_TWO => 'Miele', EMAIL_COUNTRY => 'Italy' ],
-  'roger.squarcioni@.fr' => [ USER_ONE => 'Roger', USER_TWO => 'Squarcioni', EMAIL_COUNTRY => 'France' ],
-  'bjorn.ahlm@comhem.nospam.se' => [ USER_ONE => 'Bjorn', USER_TWO => 'Ahlm', EMAIL_COUNTRY => 'Sweden' ],
-  'ministre@impots.gouv.fr' => [ EMAIL_COUNTRY => 'France' ],
-
-  'mlandy/woolsey@j2st.nmf.4ºsf.rjo' => [ SYSTEM => 'mlandy/woolsey@j2st.nmf.4ºsf.rjo' ],
-  'mosher/mlandy@j2st.nmf.4ºsf.rjo' => [ SYSTEM => 'mosher/mlandy@j2st.nmf.4ºsf.rjo' ],
-
 );
 
 our $MULTIPLES_HASH = \%MULTIPLES;
