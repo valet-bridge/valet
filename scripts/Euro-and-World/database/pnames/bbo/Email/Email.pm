@@ -34,12 +34,15 @@ sub looks_like
 
   my ($orig_text, $matches) = @_;
 
+  # Emails have '@'.
   my @a = split '@', $orig_text;
   return unless $#a == 1;
 
+  # Emails don't have too many dots.
   my $dots = ($orig_text =~ tr/\.//);
   return unless $dots >= 1 && $dots <= 4;
 
+  # Clean up some spaces.
   $orig_text =~ s/^\s+//;
   $orig_text =~ s/\s+$//;
   my $text = $orig_text;
@@ -50,8 +53,7 @@ sub looks_like
     push @$matches, 'DELETE', $orig_text;
     return;
   }
-
-  if (exists $PRIVATES_HASH->{$text})
+  elsif (exists $PRIVATES_HASH->{$text})
   {
     push @$matches, 'PRIVATE', 'Private';
     return;
@@ -63,6 +65,7 @@ sub looks_like
       $text =~ s/^(.+)rivate$/$1/ ||
       $text =~ s/^private*(.+)$/$1/)
   {
+    # Fall through.
     push @$matches, 'PRIVATE', 'Private';
   }
 
@@ -98,15 +101,13 @@ sub looks_like
   my $regex = Email::Domains::regex();
   if ( $text !~ $regex)
   {
-    # No hits.
-    print "MAILMISS $text\n";
+    # Doesn't happen.
     return;
   }
 
   my ($front, $sep, $domain) = ($1, $2, $3);
   if ($sep eq '@')
   {
-    # Ignore return value for now.
     parse_user($front, $matches);
 
     my $country = Email::Domains::country($domain);
@@ -117,15 +118,13 @@ sub looks_like
 
   if ($sep ne '.')
   {
-    # Clean.
-    print "MAILODD9 $text\n";
+    # Doesn't happen.
     return;
   }
 
   if ($front !~ /^([a-z0-9._-]+)@/)
   {
-    # Clean.
-    print "MAILODD8 $orig_text, $front\n";
+    # Doesn't happen.
     return;
   }
   my $user = $1;
@@ -138,8 +137,7 @@ sub looks_like
     $server = $1;
     if (! Email::Servers::is_server($domain, $remainder))
     {
-      # Otherwise fall through.
-      print "MAILODD7 $text, $remainder\n";
+      # Doesn't happen.
       return;
     }
   }
@@ -148,25 +146,6 @@ sub looks_like
     $server = $1;
   }
 
-  # if ($front !~ /^([a-z0-9._-]+)@([a-z0-9_-]+)$/)
-  # {
-    # if ($front !~ /@.*\./)
-    # {
-      # print "MAILODD8 $orig_text, $front\n";
-      # return;
-    # }
-    # else
-    # {
-      # my $remainder = $front;
-      # $remainder =~ s/^.*@(.*)/$1/;
-      # print "MAILODD7 $text, $remainder\n";
-      # return;
-    # }
-  # }
-
-  # print "MAILINFO $server ($domain)\n";
-
-  # Ignore return value for now.
   parse_user($user, $matches);
   push @$matches, 'EMAIL', $text;
   return;
@@ -177,7 +156,7 @@ sub special_kludge
 {
   my ($text, $matches) = @_;
 
-  # There are only six cases left.
+  # There are only six cases with high special characters left.
   if ($text =~ /1nt/)
   {
     push @$matches, 'SYSTEM', '2/1 1NT 15-17 Transfers';
@@ -200,7 +179,7 @@ sub parse_user
   if ($user =~ /^[\d_.-]+$/)
   {
     push @$matches, 'USER_NUMERICAL', $user;
-    return 1;
+    return;
   }
 
   $user =~ s/^[\d_.-]+//;
@@ -210,19 +189,19 @@ sub parse_user
   {
     # A single string, potentially followed by numbers.
     push @$matches, 'USER_ONE', $user;
-    return 1;
+    return;
   }
 
   if ($user !~ /^[a-z0-9._-]+$/)
   {
-    print "MAILODD4 $user\n";
-    return 0;
+    # Doesn't happen.
+    return;
   }
 
   if (exists $UNPARSEABLE_HASH->{$user})
   {
     push @$matches, 'USER_UNPARSEABLE', $user;
-    return 1;
+    return;
   }
 
   my @a = split /\.+/, $user;
@@ -233,55 +212,51 @@ sub parse_user
   {
     # Checked manually.
     push @$matches, 'USER_UNPARSEABLE', $user;
-    return 1;
   }
   elsif (exists $USERS_HASH->{$user})
   {
     my @list = Email::Users::lookup($user);
     push @$matches, map { @$_ } @list;
-    return 1;
   }
   elsif ($#a == 1 && $#b == 0 && $#c == 0)
   {
-    return match_two($matches, $user, $a[0], $a[1], '');
+    match_two($matches, $user, $a[0], $a[1], '');
   }
   elsif ($#a == 0 && $#b == 1 && $#c == 0)
   {
-    return match_two($matches, $user, $b[0], $b[1], '');
+    match_two($matches, $user, $b[0], $b[1], '');
   }
   elsif ($#a == 0 && $#b == 0 && $#c == 1)
   {
-    return match_two($matches, $user, $c[0], $c[1], '');
+    match_two($matches, $user, $c[0], $c[1], '');
   }
   elsif ($#a == 2 && $#b == 0 && $#c == 0)
   {
-    return match_three($matches, $user, $a[0], $a[1], $a[2], 'MAILODD5');
+    match_three($matches, $user, $a[0], $a[1], $a[2], 'MAILODD1');
   }
   elsif ($#a == 0 && $#b == 2 && $#c == 0)
   {
-    return match_three($matches, $user, $b[0], $b[1], $b[2], 'MAILODD6');
+    match_three($matches, $user, $b[0], $b[1], $b[2], 'MAILODD2');
   }
   elsif ($#a == 0 && $#b == 0 && $#c == 2)
   {
-    return match_three($matches, $user, $c[0], $c[1], $c[2], 'MAILODDX');
+    match_three($matches, $user, $c[0], $c[1], $c[2], 'MAILODD3');
   }
   elsif ($#a == 1 && $#b == 0 && $#c == 1)
   {
     if (length($a[0]) > length($c[0]))
     {
-      # Jean-Pierre Chery.
-      return match_two($matches, $user, $a[0], $a[1], '');
+      # Of the form 'Jean-Pierre Chery'.
+      match_two($matches, $user, $a[0], $a[1], '');
     }
     else
     {
-      print "MAILODD3b $user\n";
-      return 0;
+      # Doesn't happen.
     }
   }
   else
   {
-    print "MAILODD2 $user\n";
-    return 0;
+    # Doesn't happen.
   }
 }
 
@@ -297,13 +272,11 @@ sub match_two
     push @$matches, 'USER_TITLE', 'Dr.';
     push @$matches, 'USER_LAST', $e1;
     print "$debug A: $user\n" if $debug;
-    return 1;
   }
   else
   {
     push @$matches, 'USER_ONE', $e0;
     push @$matches, 'USER_TWO', $e1;
-    return 1;
   }
 }
 
@@ -315,8 +288,7 @@ sub match_three
   if ($user =~ /[0-9]/)
   {
     push @$matches, 'USER_UNPARSEABLE', $user;
-    # print "$debug A: $user\n" if $debug;
-    return 1;
+    return;
   }
 
   my $l0 = length($e0);
@@ -328,8 +300,6 @@ sub match_three
     my $initials = uc("$e0. $e1.");
     push @$matches, 'USER_INITIALS', $initials;
     push @$matches, 'USER_LAST', $e2;
-    # print "$debug B: $user\n" if $debug;
-    return 1;
   }
   elsif ($l0 > 1 && $l1 == 1 && $l2 > 1)
   {
@@ -338,24 +308,14 @@ sub match_three
       push @$matches, 'USER_TITLE', 'Dr.';
       push @$matches, 'USER_INITIALS', uc("$e1.");
       push @$matches, 'USER_LAST', $e2;
-      # print "$debug C: $user\n" if $debug;
-      return 1;
     }
     else
     {
       push @$matches, 'USER_FIRST', $e0;
       push @$matches, 'USER_INITIALS', uc("$e1.");
       push @$matches, 'USER_LAST', $e2;
-      # print "$debug D: $user\n" if $debug;
-      return 1;
     }
   }
-  else
-  {
-    print "$debug E: '$user',\n" if $debug;
-    return 0;
-  }
 }
-
 
 1;
