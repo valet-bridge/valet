@@ -136,7 +136,7 @@ my @SINGLE_WORDS = qw(
   aces accept acol against agreement akol alert amer artificial asking
   atout attitude
 
-  bal balance beginner better bicolor bid bidding bids blackwood blw
+  bal balance better bicolor bid bidding bids blackwood blw
   boards
 
   capaletti capp card carding cards checkback cl clubs conservative 
@@ -162,12 +162,11 @@ my @SINGLE_WORDS = qw(
 
   landy lead lim lo loser losers losing low
 
-  maior maj major majors master mi miner mini minimum minor mj 
-  muiderberg multi multi2d multicolor
+  master mi miner mini minimum minor multi multi2d multicolor
 
-  nat natural naturale naturel negative ni nmf nobile nt
+  negative ni nmf nobile nt
 
-  odd ogust open opener openig openings opponent opps overcall 
+  odd open opener openig openings opponent opps overcall 
   overcalls
 
   pair pari parité partenaire partenaires partener partner partners 
@@ -182,9 +181,7 @@ my @SINGLE_WORDS = qw(
   strong strongest sui suit suits sup supp support supportx syst system 
   systems
 
-  takeout tran tranfer tranfers trans transf transfe transfer transfers 
-  transfert transfr transfs trasfer trefle trèfle trefles trf trfrs 
-  tricks trnsf trnsfer trsf trump twos
+  takeout transfer trefle trèfle trefles tricks trump twos
 
   udca udca-mud undo undos upside
 
@@ -197,6 +194,11 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  major => ['maior', 'maj', 'majors', 'mj'],
+  natural => ['nat', 'naturale', 'naturel'],
+  transfer => ['tran', 'tranfer', 'tranfers', 'trans', 'transf',
+    'transfe', 'transfers', 'transfert', 'transfr', 'transfs',
+    'trasfer', 'trf', 'trfrs', 'trnsf', 'trnsfer', 'trsf' ],
 );
 
 

@@ -103,7 +103,7 @@ my @SINGLE_WORDS = qw(
   gazzilli gerber ghestem goren
   jassem jordan
   landy lavinthal lebensohl lightner
-  michaels
+  michaels muiderberg
   ogust
   rusinow
   smolen stayman stenberg
