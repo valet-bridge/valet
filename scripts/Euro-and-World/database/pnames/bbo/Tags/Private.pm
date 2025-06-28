@@ -43,7 +43,7 @@ my %SINGLE_TYPOS =
     'privat', 'privata', 'private.au', 'privatem', 'privates', 
     'privati', 'privative', 'privato', 'prive', 'privee', 'privet', 
     'privite', 'privte', 'privé', 'privée', 'priwate', 'prv', 
-    'prvate', 'prvt', 'pryw', 'prývate', 'ptivate',
+    'prvate', 'prvt', 'pryw', 'prývate', 'ptivate', 'pvt',
     'unavailable', 'undisclosed', 'unknown', 'unlisted'],
 );
 

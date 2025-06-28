@@ -45,6 +45,7 @@ my %MULTI_TYPOS =
     'b/wood', 
     'b /wood', 
     'bk wood',
+    'bkw en clés',
     'bl. wood', 
     'bl.wood', 
     'bl-wood', 
@@ -62,6 +63,8 @@ my %MULTI_TYPOS =
     'rkcb/wood'], 
   cappelletti => ['re cap'],
   drury => ['re-drury', 're.drury'],
+  michaels => [
+    'michaels unusual nt'],
   stayman => [
     'majorst.man',
     's-man',
@@ -116,8 +119,11 @@ my %SINGLE_TYPOS =
 (
   bergen => ['berg', 'berge', 'berger', 'bergin'],
   blackwood => ['black', 'bwood', 'mwood'], 
+  cappelletti => ['capaletti', 'capp'],
   gerber => ['garber', 'gb', 'ger', 'gerb'],
-  jacoby => ['jacobi', 'jakoby'],
+  jacoby => [
+    'jac', 'jacobi', 'jacobytransfer',
+    'jakoby'],
   landy => ['landi'],
   lavinthal => ['lev', 'leventhal'],
   lebensohl => ['leb'],

@@ -8,7 +8,7 @@ use open ':std', ':encoding(UTF-8)';
 package Tags::Fluff;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes);
+our @EXPORT = qw(set_hashes @SINGLE_WORDS);
 
 my @MULTI_WORDS =
 (
@@ -16,10 +16,15 @@ my @MULTI_WORDS =
   '52/5 35/5',
   'a slam',
   'all conv',
+  "all'swell",
   'bonne humeur',
+  'cegetel.net',
   'count and think',
+  "didn't",
   'dieu est amour',
   'do you know the pass',
+  "doesn't",
+  'e-mail',
   'fair play',
   'fair play please',
   'i am not here',
@@ -54,205 +59,197 @@ my %MULTI_TYPOS =
 (
 );
 
-my @SINGLE_WORDS = qw(
-  0123 0314@0314 1t
+our @SINGLE_WORDS = qw(
+  0123 0314@0314 
 
-  about above academic accepte according act advance advice after 
-  aggressive ailleurs all almost alone alternate always amours an
-  anadolu and anfrage année answer any anything anytime anyway apprentie 
-  are area around as asap ask asked aussi available avancée
+  1t 
 
-  back bad basic bass be beautiful beauty beauté become been beer
-  begin being believe belong belongs below besoin best bienvenue 
-  big bitte blessing blues bonheur bonjour both bravo bridgeopplevelser
-  bye
+  about abracadabra absolutely abuse abuserr abyss academic 
+  accepte access according act addict adidas administrator adv 
+  advance adventuress advice aerobics after aggressive ailleurs 
+  airbus alcapone alcatraz alchemist alchemy alien all 
+  almighty almost alone alternate always amie amigo amours amulett an 
+  anadolu and anfrage announcing année anonim another answer answers 
+  any anything anytime anyway apple apprentie arbeidsjern architect 
+  are area around arrester arrow arrows as asap ask asked asterix 
+  atheist attractive aussi available avancé avancée 
 
-  call can cannot care careful cause cegetel.net championship chance 
-  change chat cheaters chocolat chocolate christmas citizen class 
-  click closed coach cogito color comfort comité comment comments 
-  common companion complain complicated computer connais connection 
-  conseils contact cool copy corner correct criticism criticize 
-  curieux current
+  baby babybear back bad bakwerk bambi bamsefar banksy basic bass bbo 
+  bboer be beachside beaute beautiful beauty beauté become been beer 
+  begin beginning being believe belong belongs below besoin 
+  best besta bestan beste bestefar betjenten bien bienvenue big 
+  bigdog bighand biologist bipede bitte blacknick blackout blacksea 
+  blackwidow blessing blonde blue blueadobe blueberry bluemoon 
+  blueriver blues bluevista blueyes bmw bonheur bonjour bonsoir bonzo 
+  booboo boobs boozy borusse boson both boxer brain brainbaby bravo 
+  brick bridgefan bridgeforfun bridgefriends bridgehi 
+  bridgeopplevelser bridgeplay bridger bridgeur bridgevejen 
+  brillantissime bteam buffet buffoon buffy bulls bullspread bum 
+  butchergirl bye bêtise 
 
-  danger days de decisions del deny des details dies diesen difficile 
-  difficult direct discipline disconnects discussion disiplin 
-  disponibile disponible diversamente doesn't down dream drums 
-  drunk dunno dupli during
+  cabin cafetière cafécafé calculus call calm calmness cameraman 
+  campagne can candle cannot capricorn captainfiko cardshark care 
+  careful caress carpicornus cause champion championship 
+  chance change chat cheaters chocolat chocolate chooser chopper 
+  choppy christmas citizen claim clarkent class click closed 
+  cloudproject coach coconuts codnugget coffee coffeee cogito color 
+  comfort comité commendatore comment comments common companion 
+  compatability complain complicated computer con confdentl 
+  confidencial confidential confidentiel confidentielle connais 
+  connection conquest conseils consolación contact contractor 
+  convivialite cool copy corner correct cosmiclove cosmos courage 
+  cowboy cranky crazy criticism criticize curieux curious current 
+  cute 
 
-  earth ekspres else e-mail empty engineer enigma enjoy enough 
-  entame enter entre equal equilibrato er errare error esp espoir est
-  eternal etre 
-  even every everybody everyday everyone everything everywhere ex
-  excellence except excl exclusive exemplaire expat expect
+  dalek danger darksnow dawg days de deadlock dear debt debtgal 
+  decisions decourriere deja del demander demandez dentist deny des 
+  destout details deutschlehrer dictatorergodan diehard dies 
+  diesen difficile difficult diplomat direct discipline disconnects 
+  discussion disiplin disponibile disponible diversamente doc
+  dogfish doggie domino dostoevskij down dracula dragon dragonfly 
+  dream dreamer drno drums drunk dunno dupli during déclassé 
+
+  eagle earth easter eastwind edge eimer eins einsiedeln 
+  ekspres else emacs emagine email empty engineer enigma enjoy enough 
+  enter enternasyonel entre equal equilibrato er eroica errare 
+  error esp espoir est etc eternal etre euro eurocauliflower even 
+  eventyr every everybody everyday everyone everything everywhere ex 
+  excellence except exclusive exemplaire expat expect 
   experienced express extra exuberant eye eyes 
 
-  facteur fair fairplay fait faith false fans fantasy fast faster father 
-  fault favorite favourite festiv festival festivali finesse first 
-  flag flagless flash flat flower focus follow for force forceing forever 
-  forget forgive forgot former freedom freund freunde friendly friends 
-  friendship from fruit full fun funny
+  facebook facteur fair fairplay fait faith fake fall fallacy false 
+  fancazzist fancy fans fantasma fantasy fast faster fatboy father 
+  fault favorite favourite fearless feckless festiv festival 
+  festivali fine finesse firecrackers first fivestar flag flagless 
+  flash flat flower flute focus follow for forever forget forgive 
+  forgot former forti freedom freezing freund freunde friend friendly 
+  friends friendship frog from fruit full fun funny 
 
-  games gentleman glory godt goes good graduate great grincheux group
-  grumpy guess guest 
+  galaxy games gazelle geezer gemini gentleman geologist girlpower 
+  glory glp gmail goal godt goes golfer good goulash graduate grammy 
+  gramps grams grand grandma grandpapa grandprix great grincheux 
+  group grumpy guess guest 
 
-  hallo handsome happiness happy have hazard he head hear heard heaven 
-  help here heureuse heute hidden him hmmm hoch hold holidays home 
-  homeless homme homour hon honest hope horizon hospitable host human 
-  humanity humble humor hunting hurt 
+  half hallo handsome happiness happy happyland hard have hawkster 
+  hazard he head hear heard heaven heineken hello help here heureuse 
+  heute hi hidden him hippo hmmm hola hold holidays home 
+  homeless homme homour honest hope horizon hospitable host hour 
+  human humanity humble humor hunting hurt høns 
 
-  idiot idioti idiots if imperial importance important importante 
-  impossible inconnu inconnue independent info ingen inner inside 
-  instead interesa interest interested international inthe into 
-  inutile invisible ipsum is island ist
+  idem idiot idioti idiots if ihaveone imigrant imperial implied 
+  importance important importante impossible imprecision incognito 
+  inconnu inconnue independent info ingen inner inside instead 
+  interesa interest interested international inthe into inutile 
+  invisible ipsum is island ist 
 
-  jacobsen jamais joke jump just juste
+  jackswiss jacobsen jamais joke joker just juste justplay jüpiter 
 
-  keep kib kibitz kibitzer kibitzing kill kind kindness kiss knight
-  know knows koran
+  keep kib kibitz kibitzer kibitzing kid kill killer kind kindness 
+  kiss knight know knows knucklehead koran kosmonauta 
 
-  ladder language laughter lawless lawyer leader leads learn learned
-  learning least leave les lesson lessons level levels life line
-  listed listen literal little live living logic lol long longer 
-  looking lose lot love loved lovely lover loving lowest luck lucky lui
+  ladder lajeunesse lalala language laser later laughter lawless 
+  lawyer learn learned learning least leave les lesson 
+  lessons level levels life lifemaster lightening lightmare 
+  lightsword like line lips listed listen lite literal literati 
+  little live living logic lol long longer looking lose lot love 
+  loved lovely lover loving lowest luck lucky lui 
 
   magic magical majör makes making management manager mania manners 
-  mardi martial masterpoints matter matters maybe me meet meilleure 
-  mentor merci message messager mich mieux min mine mineure minors minus
-  missing mistake mistakes modest moi moment moments monster more
-  morning most mostly mother much music my myown myself mystery
+  mardi martial masterchef mastermind masterpoints masters 
+  matheducationprofessor matter matters may maybe me meet
+  member meme memory mentor merci message messager mich 
+  microsoft mieux mine minus misanthrope missing mistake mistakes 
+  modest moi moment moments moneypenny monster moonlight more morning 
+  morpheus most mostly mother much music my myown myself mystery 
 
-  name national native naturel necessaire necessary need needed 
-  negativ neither neli new next nice nicely nie night niveau no nobody 
-  nombre non noname none nonmember noone not nothing nous novice 
-  nowhere nuit null number nur
+  name namenlos national native naturel necessaire necessary need 
+  needed neither nejdet nekkidtruth neli never neverland nevermind 
+  new newproject next nice nicely nie night nightdream nightwish 
+  nihao niveau no nobody nochat nombre non noname none nonmember 
+  noone nope nostalgie not nothing nous novice now noway nowhere 
+  nuggets nuit null number numbers nur 
 
-  of ok old on one only operator or oral orange ordinary oth other others 
-  otherwise ou oublié oui our out over own
+  obelix of ok old on one only operator or oracle oral orange 
+  ordinary organizator oth other others otherwise ou oublié oui our 
+  out over overbid own 
 
-  panda paradis paradise parfois particular partout pas pass password 
-  patience patient paulsen peace penalty pendant people perfect 
-  perso person personal persone personnel petite peut phantom phoney 
-  pigeon pigeons pique piques place plaisir planet planets plata played 
-  player players plays pleasant please pleasure pls plse plus 
-  plusqueparfait pnts point polite politely politeness poor porteur 
-  positive possible pourquoi powered prefer prefered preferred prend 
-  present president pretty prima primus principiante prior problem 
-  prochaine prof professional profil profile profilo profl proud proxy 
-  präcise précisés prétention pseudo pseudonyms psychic public pupet 
-  pupp pvt
+  paleface panda panther panzer paradis paradise parfois parknshop 
+  part particular partout pas pass passchen password patience patient 
+  paulsen peace peach pearly pebble pendant people perfect 
+  perseverance perso person personal persone personnel pervert 
+  pessimist petal peut phantom pharmacist phoney pianissimo 
+  picatchou pigeon pigeons piquant pistolpit place plaisir planet 
+  planets plata played player players plays pleasant please pleasure 
+  pls plse plus plusqueparfait police polite politely politeness polydor 
+  poop poor pops porche porteur possible pourquoi powered prefer 
+  prefered preferred prend present president pretty prezidenta prima 
+  primus principiante prior problem prochaine prof professional profil 
+  profile profilo profl proud provins provocator proxy präcise précisés 
+  prétention pseudo pseudonyms public
 
-  qèº quadri quand quant quasi quel quelque question quick quiet 
-  quite quota
+  quand quant quasi quel quelque question quick quiet quite quota 
+  qwerty qèº 
 
-  rainbow random rapide rarely rating read realistic reason receive 
-  register regular relative relax relaxe religion remarks remedios 
-  remember remove repetita reply reproches request requested require 
-  required resistance resisting respect respecte respond restons 
-  retired revolution right rude rudeness réservé
+  rainbow random rapide rarely rasputin rating razorbacks read 
+  realistic reality reason receive register regular rektorinn 
+  relative relax relaxe reliable religion remarks remedios remember 
+  remove repetita reply reproches reptili request requested require 
+  required resilienza resistance resisting respect respecte respond 
+  restons retired retiredmom revolution right rimrocksetters robot 
+  rockcat rocks roguekiller royalforce rubiksmagic rude rudeness 
+  rumpelstilzchen rumplestilksin rumplestiltskin réservé røyksignaler 
 
-  same science score scubadiving seconds secret see selfproclaimed 
-  sense serious seulement seven she should show si side silence silent
-  simpatici simple simplicity simply since skill skills sky slack slow 
-  slowly smart smile smiles smiling solo some somebody someone something 
-  sometime sometimes somewhere soon sorry sounds souriez spacewide spam 
-  speak speaking special speedy sporklübü spreche squeeze standing 
-  star stark stars start steps still stolen stoned stop story straight 
-  stranded street stress student stuff stupid stupidity style står 
-  subject sufficient suggestions suis suite summer sunshine super sure 
-  sureté susy svp swearing sweeney sweet sweety sweidan syd sympa 
-  sympatico
+  sailfish same sandglass sashimi say says scapegoat science score 
+  scubadiving seabird seabridge searching seasoned seaweed seconds 
+  secret see selfproclaimed selvfølgelig sense serious seriously 
+  seulement seven sevenheaven shadow she shogun should show si side 
+  sigma silence silent simpatici simple simplicity simply since skill 
+  skills sky slack slow slowly slugger smallfather smart smellycat 
+  smile smiles smiling snoopy snow snowflower sofistike soldiers 
+  solidarite solo some somebody someone something sometime sometimes 
+  somewhere songbird soon sorry soulmate sounds souriez sourire 
+  spacewide spam speak speaking special speedy spock sporklübü 
+  spreche spring spurs squeeze squireboy standing star stark stars 
+  start steps still stolen stoned stop storfiskarn story straight 
+  stranded stratocaster street stress student stuff stupid stupidity 
+  style står subject sufficient suggestions suis suite summer 
+  summertime sundance sunday sunflower sunshine super sure sureté 
+  surgeon susy svp swearing sweeney sweet sweetie sweety sweidan syd 
+  symmetric sympa sympatico symphony 
 
-  take talk talking target tc teach teacher teaching team telling temple
-  tempo temporary temporis temps test than thank thanks that the their
-  them then there they thing things think thinking third this 
-  those thought through time times tiny tired titles tks to today
-  together tolerance tolerated tolérance tomorrow too top total
-  toujours tournament tournaments tourney tout toute trees trine 
-  trouble trust truth trykker très tu two
+  taifun take talk talking tallboy tante target tartan tc teabridge 
+  teach teacher teaching team telling temple tempo temporary temporis 
+  temps tennis terpsychora test testspeler tetrahedron than thank 
+  thanks thansfer that the thedoctor their them then thepunch there 
+  theshipwright theskank they thing things think thinking thinkist 
+  third this those thought through time times tiny tired titanic 
+  titles tks to today together tolclub tolerance tolerated tolérance 
+  tomorrow too top tormento tornado total toucan toujours tournament 
+  tournaments tourney tournier tout toute transformer 
+  traverse tree trees trickmachine trine troubadour trouble true 
+  trueheart trust truth trykker très tu two 
 
-  un under understand universe unless until unusual up upon urgent use 
-  used user usually
+  un under understand universe universel unless until unusual up upon 
+  urgent use used user usually 
 
-  veritas very veux virtual viva vive vivre voted votre voulez vous
-  vs vugraph véritable 
+  venus veritas very veux vip virtual viva vive vivre void voisin 
+  volcano voted votre voulez vous vs vugraph véritable 
 
-  walk want wanted wants war wasted watch we welcome were what 
-  whatever whats when where which who whoami why wife will wine 
-  winner winter wisdom wise with without wlc woman wonder wonderful word 
-  words words work worse would write writer wrong
+  waldamsel waldlaufer walk walkyria walleye want wanted wants war 
+  wasserfrosch wasted watch watcher water watermelon wdp we weinkauf 
+  welcome were what whatever whats when where which who whoami why 
+  wickwire wife wifwafwouf wildkatze will win wind wine winner wino 
+  winter wir wirt wisdom wise witch with withdrawl without wlc wolves 
+  woman wonder wonderful wonderland word words work worse would write 
+  writer wrong 
 
-  xx
+  xmas xtreme xx 
 
   year years yes yet you you're your yourself yucel 
 
-  zero 
+  zaunkoenig zeitgeist zero zodiacpower zorro 
 
-  être
-
-  bboer bteam cabin dalek email tante tartan tennis memory oracle 
-  gmail masters bbo hi hello hola doc amigo amie alcatraz 
-  anonim answers sashimi atheist abracadabra absolutely adidas
-  adventuress airbus alchemy all'swell amulett another arbeidsjern 
-  architect etc meme nope announcing nihao besta beste bestan
-  bestefar betjenten blackout blacksea blonde blueberry bluemoon
-  blueriver booboo boobs bonzo boozy borusse boxer brick buffoon
-  buffy buffet bulls bullspread bum butchergirl calm calmness calculus
-  cameraman cardshark caress fall fallacy fatboy firecrackers
-  fivestar moonlight goal galaxy alcapone organizator overbid police
-  polydor porche pops poop paleface panther blacknick peach pearly
-  pebble perseverance pervert pessimist petal pharmacist picatchou
-  piquant rasputin razorbacks reality reliable resilienza retiredmom
-  rocks rockcat rubiksmagic rumpelstilzchen rumplestiltskin
-  rumplestilksin zodiacpower røyksignaler seaweed incognito surgeon
-  sailfish seabridge searching seasoned selvfølgelig seriously
-  slugger smallfather snoopy snowflower solidarite spurs spring
-  stratocaster sundance sunday symmetric tornado tormento tournier
-  taifun teabridge terpsychora testspeler tetrahedron thansfer
-  thedoctor thepunch theshipwright theskank transformer transfeer
-  trueheart true voisin volcano sofistike wolves waldamsel waldlaufer
-  walleye walkyria wasserfrosch watermelon 
-  wifwafwouf wildkatze wir wirt wino witch withdrawl wonderland
-  xmas roguekiller arrester arrows arrow
-  asterix attractive demander idem adv says dragon blue snow now
-  nejdet like later joker robot shadow vip water wind avancé
-  alien spock venus brain bmw bridger void tree zorro apple
-  glp golfer sourire lips dentist eagle xtreme
-  titanic tolclub wdp fearless dawg dreamer feckless kid dogfish
-  captainfiko provocator prezidenta summertime literati chocolate
-  namenlos diehard abyss access almighty baby babybear bambi bamsefar
-  beachside bigdog bighand biologist bipede blackwidow carpicornus
-  hour claim pistolpit crazy candle clarkent conquest courage cowboy
-  curious dracula zeitgeist deadlock dear debt debtgal deja demander
-  demandez deutschlehrer dictatorergodan doggie domino dostoevskij
-  drno dragonfly smellycat easter knucklehead enternasyonel eroica
-  sandglass songbird eastwind edge einsiedeln eins imigrant eimer
-  emacs emagine euro eurocauliflower eventyr fake fantasma diplomat
-  facebook abuse fancazzist freezing friend frog geologist fancy hard
-  champion grand bien lite fine win part forti meilleur may say con
-  goulash gazelle geezer gemini girlpower grammy gramps grams
-  grandma grandpapa half happyland hawkster heineken høns ihaveone
-  implied imprecision scapegoat jackswiss justplay jüpiter hippo
-  killer kosmonauta lajeunesse lalala cute queen lifemaster
-  lightening lightmare lightsword member masterchef mastermind
-  matheducationprofessor microsoft misanthrope moneypenny morpheus
-  never nekkidtruth neverland nevermind newbie newproject nightdream
-  notransfer noway nochat nostalgie nuggets numbers obelix panzer
-  passchen provins parknshop pianissimo laser qwerty rektorinn
-  reptili rimrocksetters royalforce nightwish tallboy sunflower
-  wickwire capricorn sevenheaven shogun sigma soldiers soulmate
-  squireboy storfiskarn sweetie traverse thinkist trickmachine
-  universel watcher coffeee coffee commendatore toucan flute grandprix
-  zaunkoenig luck abuserr addict administrator aerobics alchemist
-  seabird weinkauf bakwerk bambi banksy beaute begynder beginning
-  blueadobe bluevista blueyes bonsoir boson brainbaby 
-  bridgefriends bridgeplay bridgehi bridgefan bridgeforfun
-  bridgevejen bridgeur brillantissime bêtise cafetière cafécafé
-  campagne chooser chopper choppy cloudproject coconuts codnugget
-  compatability confdentl confidencial confidential confidentiel
-  confidentielle consolación contractor convivialite cosmiclove
-  cosmos cranky symphony troubadour darksnow decourriere destout
-  didn't déclassé
-  
+  être 
 );
 
 my %SINGLE_TYPOS =
