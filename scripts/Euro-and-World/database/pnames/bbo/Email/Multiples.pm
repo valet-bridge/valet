@@ -15,8 +15,8 @@ our @EXPORT = qw($MULTIPLES_HASH);
 
 my %MULTIPLES =
 (
-  '2/1@paragragh22.com' => [ SYSTEM => '2/1@paragragh22.com' ],
-  '2/1gf@km.com' => [ SYSTEM => '2/1gf@km.com' ],
+  '2/1@paragragh22.com' => [ SYSTEM => '2/1' ],
+  '2/1gf@km.com' => [ SYSTEM => '2/1gf' ],
   '6egil(egil@nerheim.nu' => [ OPEN => 'Egil', EMAIL => 'egil@nerheim.nu' ],
   '88@yaman.com2breslau' => [ EMAIL_CITY => 'Wroclaw', EMAIL_COUNTRY => 'Poland', EMAIL => '88@yaman.com'  ],
   'abe@iki.fi,livingingermany' => [ EMAIL => 'abe@iki.fi', COUNTRY => 'Germany' ],
@@ -68,8 +68,8 @@ my %MULTIPLES =
   'massimomongini@.it' => [ USER_ONE => 'Massimo', USER_TWO => 'Mongoni', EMAIL_COUNTRY => 'Italy' ],
   'milan.italy@march.1963' => [ EMAIL_CITY => 'Milan', EMAIL_COUNTRY => 'Italy' ],
   'ministre@impots.gouv.fr' => [ EMAIL_COUNTRY => 'France' ],
-  'mlandy/woolsey@j2st.nmf.4ºsf.rjo' => [ SYSTEM => 'mlandy/woolsey@j2st.nmf.4ºsf.rjo' ],
-  'mosher/mlandy@j2st.nmf.4ºsf.rjo' => [ SYSTEM => 'mosher/mlandy@j2st.nmf.4ºsf.rjo' ],
+  'mlandy/woolsey@j2st.nmf.4ºsf.rjo' => [ SYSTEM => 'mlandy/woolsey j2st.nmf.4ºsf.rjo' ],
+  'mosher/mlandy@j2st.nmf.4ºsf.rjo' => [ SYSTEM => 'mosher/mlandy j2st.nmf.4ºsf.rjo' ],
   'nazmul.haq@physics' => [ OPEN => 'Nazmul Haq' ],
   'neg=dbl/1nt@bbo.ro' => [ SYSTEM => 'neg=dbl/1nt', EMAIL_COUNTRY => 'Romania' ],
   'notalways@exp.com' => [ LEVEL => 'Advanced' ],

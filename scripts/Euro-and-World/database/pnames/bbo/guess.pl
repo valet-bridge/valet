@@ -20,14 +20,15 @@ my @TAG_ORDER = qw(
   CONVENTIONS
   SYSTEM
 
+  FLUFF
+  NOTNAMES
+
   COUNTRY
   REGION
   CITY
   LOCALITY
   NATIONALITY
 
-  FLUFF
-  NOTNAMES
 
   FIRSTFIRST
   FIRSTMID
@@ -37,7 +38,22 @@ my @TAG_ORDER = qw(
   LASTBBO
 );
 
+my @SEMANTIC_TAGS = qw(
+  COUNTRY 
+  REGION 
+  CITY 
+  LOCALITY 
+  NATIONALITY
+  NOTNAMES 
+  FIRST 
+  LAST
+);
+
+my %SEMANTIC_HASH;
+$SEMANTIC_HASH{$_} = 1 for @SEMANTIC_TAGS;
+
 # Permissive of some order changes.
+# Other tags include DELETE and FLUFF.
 
 my @POST_MAIL_ORDER = qw(
   OPEN
@@ -146,8 +162,14 @@ for my $paragraph (@paragraphs)
 {
   inspect_paragraph($whole, $paragraph);
 
+  # print_paragraph($paragraph);
+
   # This caught many things, but is more of a linter.
-  check_tag_order($paragraph);
+  # check_tag_order($paragraph);
+
+  # Make chains for each unstructured field (OPEN, SYSTEM),
+  # make histograms, guess what the chains are.
+  structure_paragraph($whole, $paragraph);
 }
 
 my $countries = 0;
@@ -687,6 +709,195 @@ if ($paragraph->{HANDLE} eq 'DRSLAMM')
 }
 
 
+sub make_chain
+{
+  my ($whole, $datum, $chain) = @_;
+
+  my @tags = (0);
+  my @values = ($datum);
+  my @texts = ($datum);
+
+  split_on_multi($whole, \@TAG_ORDER, 0, \@tags, \@values, \@texts);
+
+  # Split on separators.
+  my $sep = qr/[\s+\-\+\.,_:;&@"\/\(\)\|]/;
+
+  my $token_no = 0;
+  # my $unsolved_flag = 0;
+
+  # Make the chain.
+  for my $i (0 .. $#values)
+  {
+    if ($tags[$i] ne '0')
+    {
+      # We had a multi-word hit.
+      append_token($chain, 'SINGLETON', $tags[$i], $values[$i],
+        $texts[$i], \$token_no, $histo, '');
+      next;
+    }
+
+    # Split further.
+    my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
+    my $i = 0;
+    foreach my $value (@a)
+    {
+      if (study_component($whole, \@TAG_ORDER, $value, \$token_no, 
+        $chain, $histo))
+      {
+        next;
+      }
+
+      if ($i == 0 && 
+         (length($value) >= 3 && $value =~ /^[0-9](\p{Word}+)$/) ||
+         (length($value) >= 5 && $value =~ /^[A-Z](\p{Word}+)$/))
+      {
+        # It happens that there is a leading 0-9 or A-Z.
+        my $rest = $1;
+        if (study_component($whole, \@TAG_ORDER, $rest, \$token_no, 
+          $chain, $histo))
+        {
+          next;
+        }
+      }
+        
+      append_token($chain, 'UNKNOWN', '', $value, $value,
+        \$token_no, $histo, '');
+
+      # print "SSS value $value\n";
+      # $unsolved_flag = 1;
+    }
+  }
+
+  for my $i (0 .. $chain->last())
+  {
+    consolidate_names($chain->check_out($i));
+  }
+}
+
+
+sub get_token_tag
+{
+  my ($token) = @_;
+
+  if ($token->category() eq 'UNKNOWN')
+  {
+    return 'UNKNOWN';
+  }
+  else
+  {
+    return $token->field();
+  }
+}
+
+
+sub make_chain_profile
+{
+  my ($chain, $profile) = @_;
+
+  for my $i (0 .. $chain->last())
+  {
+    my $token = $chain->check_out($i);
+    $profile->{get_token_tag($token)}++;
+  }
+}
+
+
+sub print_chain_info
+{
+  my ($chain) = @_;
+
+  my $semantics = '';
+  for my $i (0 .. $chain->last())
+  {
+    my $token = $chain->check_out($i);
+    my $tag = get_token_tag($token);
+    print "$tag ";
+    $semantics .= "SEMANTIC " . $token->value() . "\n" 
+      if is_semantic($tag);
+  }
+  print "\n$semantics\n\n";
+}
+
+
+sub is_semantic
+{
+  my ($tag) = @_;
+  return exists $SEMANTIC_HASH{$tag};
+}
+
+
+sub classify_chain_profile
+{
+  my ($chain, $profile, $datum) = @_;
+
+  my $count = 1 + $chain->last();
+
+  my $system_indicators = 0;
+  for my $key (qw(CONVENTIONS SYSTEM FLUFF))
+  {
+    $system_indicators += $profile->{$key} // 0;
+  }
+
+  my $semantic_indicators = 0;
+  for my $key (qw(COUNTRY REGION CITY LOCALITY NATIONALITY
+    NOTNAMES FIRST LAST))
+  {
+    $semantic_indicators += $profile->{$key} // 0;
+  }
+
+  if ($count > 4)
+  {
+    if ($semantic_indicators)
+    {
+       print "($system_indicators, $semantic_indicators): $datum\n";
+       print_chain_info($chain);
+    }
+  }
+}
+
+
+sub structure_paragraph
+{
+  my ($whole, $paragraph) = @_;
+
+  for my $entry (@{$paragraph->{LINES}})
+  {
+    if ($entry->{CATEGORY} eq 'LIST')
+    {
+      my $len = $#{$entry->{LIST}};
+
+      for (my $i = 0; $i <= $len; $i += 2)
+      {
+        if ($entry->{LIST}[$i] eq 'OPEN' ||
+            $entry->{LIST}[$i] eq 'SYSTEM')
+        {
+          my $chain = Chain->new();
+          make_chain($whole, $entry->{LIST}[$i+1], $chain);
+
+          my %profile;
+          make_chain_profile($chain, \%profile);
+
+          classify_chain_profile($chain, \%profile, $entry->{LIST}[$i+1]);
+        }
+      }
+    }
+    elsif ($entry->{CATEGORY} eq 'OPEN' ||
+        $entry->{CATEGORY} eq 'SYSTEM')
+    {
+      my $chain = Chain->new();
+      my $datum = $entry->{VALUE} // $entry->{TEXT};
+      make_chain($whole, $datum, $chain);
+
+      my %profile;
+      make_chain_profile($chain, \%profile);
+
+      classify_chain_profile($chain, \%profile, $datum);
+    }
+  }
+
+}
+
+
 sub locate_tag_number
 {
   my ($start, $tag) = @_;
@@ -1029,4 +1240,3 @@ sub print_paragraph
   }
   print "\n";
 }
-

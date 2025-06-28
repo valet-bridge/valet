@@ -1,10 +1,29 @@
-Revised plan:
-- Spend more effort on the file format
-  - First look for country
-  - If more than one, what to do?
-  - Then have a short list of character sets per country
-  - Try to match
-- What about the hex-looking strings
+Consolidate
+- CITY and EMAIL_CITY
+- COUNTRY and EMAIL_COUNTRY
+- REGION and EMAIL_REGION
+- UNIVERSITY and EMAIL_UNIVERSITY
+- SYSTEM: Probably SYSTEM AND EMAIL_SYSTEM
+  - EMAIL_SYSTEM is actually solid
+  - SYSTEM could perhaps still be a name, esp. early on
+  - Look in SYSTEM first for system words, then for names
+  - Take some kind of vote, claw back some as names
+- PRIVATE
+  - Depends on presence of EMAIL and LEVEL
+    - Both present: If one is the same, delete
+    - Otherwise flag?
+    - EMAIL present: LEVEL (happens?)
+    - LEVEL present: EMAIL_PRIVATE (happens?)
+    - None present: EMAIL_PRIVATE
+- MAGIC and CODE don't matter (should be at the end)
+- USER_ONE and USER_TWO: Try to match with names
+- OPEN
+  - Segregate out high charsets for now (later use COUNTRY)
+  - Hex-looking strings
+  - Similar to SYSTEM vetting: words, votes
+  - Flag conflict with USER_FIRST, INITIALS, PARTICLES, LAST
+  - Eliminate USER_ONE and USER_TWO if matching
+
 
 
 Finish the last-first exceptions, implement
@@ -26,10 +45,6 @@ Probably have to generate a presumption that it's one or the other.
 First + Both(Last) = First + Last
 Both(First) + Last = First + Last
 Count against EBL and BBO occurrences.
-
-Add Fluff and the Firsts to the same Whole system (or a different Whole)
-
-
 
 ---
 

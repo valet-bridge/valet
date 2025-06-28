@@ -40,6 +40,7 @@ my @MULTI_WORDS =
   'pas de',
   'play nice bridge',
   'please profile',
+  're-arrange',
   'rýze findikli baþköy',
   't',
   'tell me carding',
@@ -56,72 +57,76 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   0123 0314@0314 1t
 
-  about above academic accepte according advance advice after 
-  aggressive ailleurs all almost alone alternate always amours anadolu
-  and anfrage année answer anything anytime anyway apprentie around asap 
-  ask asked aussi available avancée
+  about above academic accepte according act advance advice after 
+  aggressive ailleurs all almost alone alternate always amours an
+  anadolu and anfrage année answer any anything anytime anyway apprentie 
+  are area around as asap ask asked aussi available avancée
 
-  back bad basic bass be beautiful beauty beauté become been 
-  being believe belong belongs below besoin best bienvenue 
-  big bitte blues bonheur bonjour both bridgeopplevelser
+  back bad basic bass be beautiful beauty beauté become been beer
+  begin being believe belong belongs below besoin best bienvenue 
+  big bitte blessing blues bonheur bonjour both bravo bridgeopplevelser
+  bye
 
-  call cannot care careful cause cegetel.net championship chance change 
-  chat cheaters chocolat chocolate citizen class click closed coach 
-  cogito color comité comment comments common companion complain 
-  complicated computer connais connection conseils contact cool copy 
-  corner correct criticism criticize curieux current
+  call can cannot care careful cause cegetel.net championship chance 
+  change chat cheaters chocolat chocolate christmas citizen class 
+  click closed coach cogito color comfort comité comment comments 
+  common companion complain complicated computer connais connection 
+  conseils contact cool copy corner correct criticism criticize 
+  curieux current
 
-  days decisions details dies diesen difficile difficult direct 
-  discipline disconnects discussion disiplin disponibile disponible 
-  diversamente doesn't down dream drums drunk dunno dupli during
+  danger days de decisions del deny des details dies diesen difficile 
+  difficult direct discipline disconnects discussion disiplin 
+  disponibile disponible diversamente doesn't down dream drums 
+  drunk dunno dupli during
 
   earth ekspres else e-mail empty engineer enigma enjoy enough 
-  entame enter entre equal equilibrato errare error espoir eternal etre 
-  even every everybody everyday everyone everything everywhere 
+  entame enter entre equal equilibrato er errare error esp espoir est
+  eternal etre 
+  even every everybody everyday everyone everything everywhere ex
   excellence except excl exclusive exemplaire expat expect
   experienced express extra exuberant eye eyes 
 
-  facteur fairplay fait false fans fantasy fast faster father fault 
-  favorite favourite festiv festival festivali first flag flagless 
-  flash flower focus follow for force forceing forever forget forgive 
-  forgot former freedom freund freunde friendly friends friendship from 
-  fruit full fun funny
+  facteur fair fairplay fait faith false fans fantasy fast faster father 
+  fault favorite favourite festiv festival festivali finesse first 
+  flag flagless flash flat flower focus follow for force forceing forever 
+  forget forgive forgot former freedom freund freunde friendly friends 
+  friendship from fruit full fun funny
 
-  games gentleman glory goes good graduate great grincheux group
+  games gentleman glory godt goes good graduate great grincheux group
   grumpy guess guest 
 
-  hallo handsome happiness happy have hazard head hear heard heaven help 
-  here heureuse heute hidden hmmm hold holidays home homeless homour 
-  honest hope horizon hospitable host human humanity humble humor 
-  hunting hurt 
+  hallo handsome happiness happy have hazard he head hear heard heaven 
+  help here heureuse heute hidden him hmmm hoch hold holidays home 
+  homeless homme homour hon honest hope horizon hospitable host human 
+  humanity humble humor hunting hurt 
 
   idiot idioti idiots if imperial importance important importante 
   impossible inconnu inconnue independent info ingen inner inside 
   instead interesa interest interested international inthe into 
   inutile invisible ipsum is island ist
 
-  jacobsen jamais joke jump 
+  jacobsen jamais joke jump just juste
 
   keep kib kibitz kibitzer kibitzing kill kind kindness kiss knight
   know knows koran
 
   ladder language laughter lawless lawyer leader leads learn learned
-  learning least leave lesson lessons level levels life line
+  learning least leave les lesson lessons level levels life line
   listed listen literal little live living logic lol long longer 
-  looking lose lot love loved lovely lover loving lowest luck lui
+  looking lose lot love loved lovely lover loving lowest luck lucky lui
 
   magic magical majör makes making management manager mania manners 
   mardi martial masterpoints matter matters maybe me meet meilleure 
-  mentor merci message messager mich mieux min mineure minors minus
+  mentor merci message messager mich mieux min mine mineure minors minus
   missing mistake mistakes modest moi moment moments monster more
   morning most mostly mother much music my myown myself mystery
 
   name national native naturel necessaire necessary need needed 
-  negativ neither neli new next nicely nie night niveau no nobody 
+  negativ neither neli new next nice nicely nie night niveau no nobody 
   nombre non noname none nonmember noone not nothing nous novice 
-  nowhere nuit null number
+  nowhere nuit null number nur
 
-  of ok old on one only operator or oral orange ordinary other others 
+  of ok old on one only operator or oral orange ordinary oth other others 
   otherwise ou oublié oui our out over own
 
   panda paradis paradise parfois particular partout pas pass password 
@@ -131,11 +136,13 @@ my @SINGLE_WORDS = qw(
   player players plays pleasant please pleasure pls plse plus 
   plusqueparfait pnts point polite politely politeness poor porteur 
   positive possible pourquoi powered prefer prefered preferred prend 
-  present president prima primus principiante prior problem prochaine 
-  professional profil profile profilo profl proud proxy präcise 
-  précisés prétention pseudo pseudonyms psychic public pupet pupp pvt
+  present president pretty prima primus principiante prior problem 
+  prochaine prof professional profil profile profilo profl proud proxy 
+  präcise précisés prétention pseudo pseudonyms psychic public pupet 
+  pupp pvt
 
-  qèº quadri quand quasi quel quelque question quick quiet quite quota
+  qèº quadri quand quant quasi quel quelque question quick quiet 
+  quite quota
 
   rainbow random rapide rarely rating read realistic reason receive 
   register regular relative relax relaxe religion remarks remedios 
@@ -144,25 +151,26 @@ my @SINGLE_WORDS = qw(
   retired revolution right rude rudeness réservé
 
   same science score scubadiving seconds secret see selfproclaimed 
-  sense serious seulement seven should show side silence silent
-  simpatici simple simplicity simply since skill skills slack slow 
-  slowly smile smiles smiling some somebody someone something sometime 
-  sometimes somewhere sorry sounds souriez spacewide spam speak 
-  speaking special speedy sporklübü spreche squeeze standing stars 
-  start steps still stolen stoned stop story straight stranded street 
-  stress student stuff stupid stupidity style står subject sufficient 
-  suggestions suis suite summer sunshine super sure sureté susy svp 
-  swearing sweeney sweet sweety sweidan syd sympa sympatico
+  sense serious seulement seven she should show si side silence silent
+  simpatici simple simplicity simply since skill skills sky slack slow 
+  slowly smart smile smiles smiling solo some somebody someone something 
+  sometime sometimes somewhere soon sorry sounds souriez spacewide spam 
+  speak speaking special speedy sporklübü spreche squeeze standing 
+  star stark stars start steps still stolen stoned stop story straight 
+  stranded street stress student stuff stupid stupidity style står 
+  subject sufficient suggestions suis suite summer sunshine super sure 
+  sureté susy svp swearing sweeney sweet sweety sweidan syd sympa 
+  sympatico
 
-  take talk talking target tc teach teacher teaching team temple
+  take talk talking target tc teach teacher teaching team telling temple
   tempo temporary temporis temps test than thank thanks that the their
   them then there they thing things think thinking third this 
   those thought through time times tiny tired titles tks to today
   together tolerance tolerated tolérance tomorrow too top total
   toujours tournament tournaments tourney tout toute trees trine 
-  trouble trust truth trykker très two
+  trouble trust truth trykker très tu two
 
-  under understand universe unless until unusual upon urgent use 
+  un under understand universe unless until unusual up upon urgent use 
   used user usually
 
   veritas very veux virtual viva vive vivre voted votre voulez vous
@@ -170,7 +178,7 @@ my @SINGLE_WORDS = qw(
 
   walk want wanted wants war wasted watch we welcome were what 
   whatever whats when where which who whoami why wife will wine 
-  winner winter wisdom with without wlc woman wonder wonderful word 
+  winner winter wisdom wise with without wlc woman wonder wonderful word 
   words words work worse would write writer wrong
 
   xx
@@ -219,7 +227,8 @@ my @SINGLE_WORDS = qw(
   drno dragonfly smellycat easter knucklehead enternasyonel eroica
   sandglass songbird eastwind edge einsiedeln eins imigrant eimer
   emacs emagine euro eurocauliflower eventyr fake fantasma diplomat
-  facebook abuse fancazzist freezing frog geologist
+  facebook abuse fancazzist freezing friend frog geologist fancy hard
+  champion grand bien lite fine win part forti meilleur may say con
   goulash gazelle geezer gemini girlpower grammy gramps grams
   grandma grandpapa half happyland hawkster heineken høns ihaveone
   implied imprecision scapegoat jackswiss justplay jüpiter hippo
