@@ -14,7 +14,9 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   '2c strong',
+  '5-card majors',
   'even-odd',
+  'high-low',
   'limit raise',
   'new zealand acol',
   'new zealand precision',
@@ -39,11 +41,7 @@ my @MULTI_WORDS =
   '21=two clubs',
   '2weak transferss 0314',
   '4 kc',
-  '5 card ma',
-  '5 card major',
-  '5 li',
   '5m-3m,1nt15-17,2nt20-22',
-  '5 maj',
   'apel direct',
   'bergen, j2nt, jac & tx',
   'bergen,fnt ,capp,0314,o/e',
@@ -63,14 +61,6 @@ my @MULTI_WORDS =
   'kc 14-30',
   'kc 41/30',
   'lavinthal discards or std',
-  'lim rais',
-  'lim raise',
-  'lim.raise',
-  'lim. raise',
-  'lim raises',
-  'lim rs',
-  'lim.r',
-  'lim/r',
   'michaels. gambling',
   'natural bid only',
   'ndabl',
@@ -193,6 +183,136 @@ my %MULTI_TYPOS =
     'strong 2c over 22p',
     'strong 2cl 22+',
     'strong 2club'],
+  '5-card majors' => [
+    '1 h/s= 5card',
+    '1 h/s - major five',
+    '12 13 5card open',
+    '12p+ open 5card maj',
+    '12 pts 5 cards',
+    '12p opening, 5card majer',
+    '13/15 5card suits one of suit',
+    '13+pts (12 with exceptional case) 5 card major',
+    '13points yo open 5cardmajor',
+    '13 to open 5cards major',
+    '1h-sp 5card',
+    '1h/1s 5crd',
+    '1h,1s 5card',
+    '1hs-13hcp 5crd',
+    '1h en 1 sp = 5card',
+    '1he, sp- 5card',
+    '1s/1h11-15(5carde)',
+    '1s,1h 5cards',
+    '2std american5card majors',
+    '5card m',
+    '5card ma opning',
+    '5card mag',
+    '5card mager',
+    '5card magor suits open w 12hpc',
+    '5card maio',
+    '5card maj',
+    '5card major',
+    '5card major..opening 11+',
+    '5card major a la francaise natural',
+    '5card major opening only',
+    '5card majors',
+    '5card majors 12-16',
+    '5card majr',
+    '5card man',
+    '5card mjr',
+    '5card mjrs',
+    '5card mayo',
+    '5card op',
+    '5card open',
+    '5cards m',
+    '5cards maj',
+    '5cards major',
+    '5cards meij',
+    '5cards op',
+    '5crd hoog',
+    '5crd mag open',
+    '5crd maj',
+    '5crd major',
+    '5crd major 12+',
+    '5crd major with fnt',
+    '5crd majors',
+    '5crds major',
+    '5crd mj',
+    '5 c ma',
+    '5 c maj',
+    '5 c major',
+    '5 c mj',
+    '5 c openg',
+    '5 ca major',
+    '5 card Major',
+    '5 card m',
+    '5 card ma',
+    '5 card mager',
+    '5 card maj',
+    '5 card major',
+    '5 card major 12h',
+    '5 card major opening',
+    '5 card major to open',
+    '5 card majors',
+    '5 card majs',
+    '5 card mayo',
+    '5 card mayor',
+    '5 cards',
+    '5 cards 12 pc',
+    '5 cards mag',
+    '5 cards maj',
+    '5 cards major',
+    '5 cards majors',
+    '5 cards open in major',
+    '5 cards opening',
+    '5 carts mar',
+    '5 cd maj',
+    '5 cd maj opener',
+    '5 cd majors',
+    '5 cds majors',
+    '5 cm',
+    '5 cr major',
+    '5 crd high',
+    '5 crd m 13+',
+    '5 crd major',
+    '5 crd mjrs',
+    '5 crd open',
+    '5 li',
+    '5 maj',
+    'always open 5 carts',
+    'five c major',
+    'five card major',
+    'five card major open',
+    'five card major to open',
+    'five card majors',
+    'five h & S',
+    'five hart an sp',
+    'five majo',
+    'five major',
+    'five majors',
+    'h/s5cards',
+    'in op.5 card maj',
+    'm 5',
+    'm major five',
+    'maj 5',
+    'maj 5e',
+    'maj. 5ème',
+    'major 5card',
+    'major 5cards 13-19pc',
+    'major 5cards start with (10:12)',
+    'majors 5card open',
+    'mayor 5',
+    'naturel 5 card',
+    'op12-21 5card in mayer and spades first',
+    'open 5 card majors',
+    'open 11 pnts. 5card mjrs',
+    'open 12-15.5card mayer',
+    'open 12 PC 5 cards in suit',
+    'open 12 points-5card majors',
+    '0pen 5card.mayor',
+    'open 5card majors',
+    'open w/5card major and 11-15 pts',
+    'open with 5cards',
+    'standart 5 mj'],
   'even-odd' => [
     'compte en pair-impair',
     'def en pair impair',
@@ -314,10 +434,14 @@ my %MULTI_TYPOS =
     'cue>limitraise',
     '(major) limit raise',
     'lim.r',
+    'lim/r',
     'lim.raise',
+    'lim. raise',
     'lim r',
     'lim rai',
+    'lim rais',
     'lim raise',
+    'lim raises',
     'lim rs',
     'limit-bids',
     'limit bid',
@@ -362,14 +486,24 @@ my %MULTI_TYPOS =
     'salto limitado',
     'saltos limitados',
     ],
+  'minorwood' => [
+    'm.wood',
+    'min wood',
+    'minr wood',
+    'minor wood',
+    'minör wood',
+    'mn wood'],
   'new zealand acol' => ['acol in nz', 'nz acol'],
   'new zealand precision' => ['nz precision' ],
   'standard french' => [
+    'french 5 cart major',
+    'french standard',
     'french std',
     'le sef',
     'le sef+',
     'le sef classiqjue',
     'nouveau sef',
+    's e f',
     'seffff',
     'sefmeil mineure',
     'sef 2006',
@@ -391,7 +525,7 @@ my @SINGLE_WORDS = qw(
   11-rule 17nt 1ba 1h 1nt 1nt16 1p 1re 1s
   2/1 2ba 2cl 2clubs 2d 2k 2nt 2p 2s 2sa 2sp 2way 2weak 2ème
   3c 3k 3p 3s 3sa 3ème 4c 4cl 4mi 4sf 4way 4-way
-  5c 5cm 5crd 5kc 5li 5m 5ma 5maj 5major 5mj 5s 5t 5ème
+  5c 5cm 5kc 5li 5m 5ma 5maj 5major 5mj 5s 5t 5ème
 
   above aces accept acol against agreement akol alert amer artificial 
   asking atout attitude
@@ -404,13 +538,13 @@ my @SINGLE_WORDS = qw(
   cue cuebid
 
   dbl deb defausse defence defense demand demande di diamond diamonds 
-  discard dispari double doubles doubleton drury dummy duplicate
+  discard dispari double doubles doubleton dummy duplicate
 
   enc encourage encouraging entame excl exclusion expert
 
   faible fnt force forceing forcing fort forte free fsf fuerte
 
-  gadgets gamble gambling gerber game gf
+  gadgets gamble gambling game gf
 
   hand hands hcp hearts high hoch hon honor
 
@@ -422,7 +556,7 @@ my @SINGLE_WORDS = qw(
 
   landy lead leader leads lim lo loser losers losing low
 
-  major master meilleur meilleure mini minimum minor 
+  major master meilleur meilleure mini minimum minor  minorwood
   multi multi2d multicolor
 
   negativ negative ni nmf nobile nt
@@ -440,8 +574,8 @@ my @SINGLE_WORDS = qw(
   raise raises rckb real reg relay resp response revers reverse revdrury 
   rkc rkcb rkcb1430 rom roman romen
 
-  sa sans sayac sayc short small smolen spades splinter standard standart
-  signals singleton sistem splinters splntr stan stayman std strng 
+  sa sans sayac sayc short small spades splinter standard standart
+  signals singleton sistem splinters splntr stan std strng 
   strong strongest sui suit suits sup supp support supportx syst system 
   systems
 
@@ -458,11 +592,19 @@ my %SINGLE_TYPOS =
 (
   artificial => ['art'],
   '2c strong' => ['strog2club'],
+  '5-card majors' => [
+    '5cardm', 
+    '5cardmaj', 
+    '5cardmajor', 
+    '5crd',
+    'maj5card',
+    'mjrsfive'],
   'even-odd' => ['pairimpair'],
   'high-low' => ['highenc'],
   'limit raise' => ['limra', 'limitraise', 'limitraisecue',
     'limitraises', 'limrsq'],
   minor => ['mi', 'min', 'miner', 'mineure', 'minors'],
+  minorwood => ['mwood'],
   major => ['maior', 'maj', 'majors', 'mj'],
   natural => ['nat', 'naturale', 'naturel'],
   'standard french' => ['sef', 'sef12'],
