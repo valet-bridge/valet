@@ -17,7 +17,11 @@ use lib './Email';
 use lib '..';
 
 my @TAG_ORDER = qw(
+  BASES
+  OPENINGS
+  KEYCARD
   CONVENTIONS
+  CARDING
   SYSTEM
 
   FLUFF
@@ -833,7 +837,7 @@ sub classify_chain_profile
   my $count = 1 + $chain->last();
 
   my $system_indicators = 0;
-  for my $key (qw(CONVENTIONS SYSTEM FLUFF))
+  for my $key (qw(BASES OPENINGS KEYCARD CONVENTIONS CARDING SYSTEM FLUFF))
   {
     $system_indicators += $profile->{$key} // 0;
   }

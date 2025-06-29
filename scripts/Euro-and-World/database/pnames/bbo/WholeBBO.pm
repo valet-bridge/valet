@@ -25,7 +25,11 @@ use Tags::Private;
 use Tags::Fluff;
 use Tags::NotNames;
 use Tags::System;
+use Tags::Bases;
+use Tags::Openings;
+use Tags::Keycard;
 use Tags::Conventions;
+use Tags::Carding;
 
 use Tags::FirstFirst;
 use Tags::FirstMid;
@@ -48,7 +52,11 @@ my %TAGS =
   FLUFF => \&Tags::Fluff::set_hashes,
   NOTNAMES => \&Tags::NotNames::set_hashes,
   SYSTEM => \&Tags::System::set_hashes,
+  BASES => \&Tags::Bases::set_hashes,
+  OPENINGS => \&Tags::Openings::set_hashes,
+  KEYCARD => \&Tags::Keycard::set_hashes,
   CONVENTIONS => \&Tags::Conventions::set_hashes,
+  CARDING => \&Tags::Carding::set_hashes,
   FIRSTFIRST => \&Tags::FirstFirst::set_hashes,
   FIRSTMID => \&Tags::FirstMid::set_hashes,
   FIRSTBBO => \&Tags::FirstBBO::set_hashes,

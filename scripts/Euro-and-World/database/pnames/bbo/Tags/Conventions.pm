@@ -143,6 +143,19 @@ my %MULTI_TYPOS =
     'woid wood',
     'woit wood',
     'woýd wood'],
+  walsh => [
+    't-walsh',
+    'walsh(1c)',
+    'walsh rebids',
+    'walsh relay',
+    'walsh respones',
+    'walsh tfr'],
+  wilkosz => [
+    '2d wilkosz'],
+  woolsey => [
+    's/ sa woolsey',
+    'woolsey/1sa',
+    'woolsey/ 1sa'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -195,7 +208,9 @@ my %SINGLE_TYPOS =
     'steaman'], 
   texas => ['tex'],
   voidwood => ['wwood'],
+  walsh => ['wal', 'walch', 'wallsh', 'wals'],
   wilkosz => ['wilk'],
+  woolsey => ['wool', 'wools', 'woolsee', 'woolsy', 'woosley'],
 );
 
 
