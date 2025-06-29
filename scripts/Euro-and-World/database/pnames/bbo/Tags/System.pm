@@ -13,7 +13,8 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
-  'limit raise',
+  'Limit Raise',
+  'Negative Double',
 
   '1 diamond=4+cards, 1 club=2+cards',
   '1 sa 15-17',
@@ -23,11 +24,10 @@ my @MULTI_WORDS =
   '1nt 15-17;2nt 21-22',
   '1nt 15-17 2nt 20-22 2cl 23',
   '1nt 15-19',
+  '2c precision',
   '2 sa 20-22',
   '2 major opening: 6-10pts, 6+ suit',
   '2 s h d weak. 2cl 23',
-  '2/1 or sayc',
-  '2/1 sayc',
   '2b over 1',
   '2d pos,2h neg,2nt h/2c open',
   '2dhs weak',
@@ -94,7 +94,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'limit raise' => [
+  'Limit Raise' => [
     '10-11 limt rais',
     '10/11 limit raise',
     '1x-3x lim',
@@ -157,7 +157,59 @@ my %MULTI_TYPOS =
     'salto limitado',
     'saltos limitados',
     ],
-  transfer => [
+  'Negative Double' => [
+    'dbls. neg.4h',
+    'doblo neg',
+    'doblo negativo',
+    'neg 2 sp',
+    'neg 3s',
+    'neg d',
+    'neg db>3h',
+    'neg dbl',
+    'neg dbl 3sp',
+    'neg dbl to 3 sp',
+    'neg dbl-4d',
+    'neg dbls',
+    'neg do 3 pik',
+    'neg do 3pik',
+    'neg dou',
+    'neg doub',
+    'neg doub to 3 level',
+    'neg doub up 2sp',
+    'neg doubles',
+    'neg dub',
+    'neg dub to 2 sp',
+    'neg x',
+    'neg x 4d',
+    'neg x thru 3sp',
+    'neg x to 2s',
+    'neg x-3s',
+    'neg*',
+    'neg,doub',
+    'neg-dbl',
+    'neg. dbl',
+    'neg. dobles',
+    'neg. doub. till 4d',
+    'neg. x 3s',
+    'neg.d',
+    'neg.dbls',
+    'neg.dobl',
+    'neg.x',
+    'neg.x 2sp',
+    'negX to 4h',
+    'negatif x',
+    'negativ dbl',
+    'negativ double',
+    'negativ x',
+    'negative dbl',
+    'negative doub',
+    'negative double',
+    'negative double up to 4 h',
+    'negative x',
+    'negdbl-3s',
+    'negt gb',
+    'x-neg'],
+  Transfer => [
     'all transefs',
     'no transfer', 
     'no transfers'],
@@ -174,7 +226,7 @@ my @SINGLE_WORDS = qw(
   above aces accept acol against agreement akol alert amer artificial 
   asking atout attitude
 
-  bal balance better bicolor bid bidding bids blackwood blw
+  bal balance better bicolor bid bidding bids bil blackwood blw
   boards
 
   card carding cards checkback cl clubs conservative 
@@ -184,7 +236,7 @@ my @SINGLE_WORDS = qw(
   dbl deb defausse defence defense demand demande di diamond diamonds 
   discard dispari double doubles doubleton dummy duplicate
 
-  enc encourage encouraging entame excl exclusion expert
+  enc encourage encouraging english entame excl exclusion expert
 
   faible fnt force forceing forcing fort forte free fsf fuerte
 
@@ -218,12 +270,12 @@ my @SINGLE_WORDS = qw(
   raise raises rckb real reg relay resp response revers reverse revdrury 
   rkc rkcb rkcb1430 rom roman romen
 
-  sa sans sayac sayc short small spades splinter standard standart
+  sa sans short small spades splinter standard standart
   signals singleton sistem splinters splntr stan std strng 
   strong strongest sui suit suits sup supp support supportx syst system 
   systems
 
-  takeout transfer trèfle tricks trump twos
+  takeout Transfer trèfle tricks trump twos
 
   udca udca-mud undo undos upside
 
@@ -235,12 +287,18 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   artificial => ['art'],
-  'limit raise' => ['limra', 'limitraise', 'limitraisecue',
+  'Limit Raise' => ['limra', 'limitraise', 'limitraisecue',
     'limitraises', 'limrsq'],
   minor => ['mi', 'min', 'miner', 'mineure', 'minors'],
   major => ['maior', 'maj', 'majors', 'mj'],
   natural => ['nat', 'naturale', 'naturel'],
-  transfer => [
+  'Negative Double' => [
+    'negativex',
+    'negdbl',
+    'negdble',
+    'negx',
+    'negx2lev'],
+  Transfer => [
     'notransfer',
     'tran', 'tranfer', 'tranfers', 'trans', 'transef', 'transefer',
     'transefs', 'transf', 'transfe', 'transfeer', 'transfers', 

@@ -1,6 +1,6 @@
 #!perl
 
-# These are conventions that are names after people.
+# These are conventions that are names after people, places etc.
 
 use strict;
 use warnings;
@@ -19,7 +19,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  bergen => [
+  Bergen => [
     '2sas fit(bergen)',
     'berg rais',
     'bergan raises',
@@ -49,7 +49,7 @@ my %MULTI_TYPOS =
     'saltos bergen',
     'v.m.bergen',
     ],
-  blackwood => [
+  Blackwood => [
     '2wood',
     '4abl.wood',
     '7 cardblack wood',
@@ -90,8 +90,8 @@ my %MULTI_TYPOS =
     'bw 5 clés',
     'flac wood',
     'rkcb/wood'], 
-  cappelletti => ['re cap'],
-  drury => [
+  Cappelletti => ['re cap'],
+  Drury => [
     '(rev) drury',
     '2 drury',
     '2d drury',
@@ -112,12 +112,29 @@ my %MULTI_TYPOS =
     'rev drury',
     'reverse_drury',
     'reverse drury',
+    'rew drury',
     ],
-  ghestem => ['mod ghestem'],
-  michaels => [
+  Ghestem => ['mod ghestem'],
+  Michaels => [
     'michaels unusual nt'],
-  ogust => ['ogust responses'],
-  stayman => [
+  Ogust => ['ogust responses'],
+  Rubensohl => [
+    'le rub',
+    'le rubenshol',
+    'ni ruben',
+    'partout rubens',
+    'r\'rub',
+    'rub 2nt',
+    'ruben adv',
+    'rubenhsol a sa',
+    'rubens adv',
+    'rubens advances',
+    'rubens lol',
+    'rubens tout',
+    'rubensol à sa',
+    'sa rub',
+    'à sa ruben'],
+  Stayman => [
     'majorst.man',
     's-man',
     's.man',
@@ -133,7 +150,143 @@ my %MULTI_TYPOS =
     'stay men', 
     'sty-man',
     'sty man'],
-  voidwood => [
+  # Apparently in France this is also used for 2-level transfers
+  Texas => [
+    '3c tex na kara',
+    '4-trx texas',
+    'Inter en texas sur 1sa(x=t,t=c',
+    'all texas',
+    'barrages en texas',
+    'barrages en texas de 2k à 3sa',
+    'barrages nv en texas',
+    'def contr 1 sa entte posi en texas',
+    'en 2e: texas',
+    'encheres au niveau de 3 sont texas',
+    'grande texas',
+    'intervention en texas sur 1sa',
+    'le texas majeur',
+    'no tex',
+    'no texas',
+    'ouv au niveau de trois texas',
+    'ouv de barrage au niveau de 3 en texas',
+    'piccola &grande texas',
+    'piccola texas senza interferenze grande texas',
+    'piccole e grandi texas',
+    'red texas',
+    'reponse texas sur un !c',
+    'sa texas',
+    'sa-texas',
+    'south african texas',
+    'su 1sa texas anche in intervento',
+    'sur 1sa int en texas',
+    'sydaf texas',
+    'tayman texas mm',
+    'tex 4wa tns',
+    'tex en maj',
+    'tex k a 2sa',
+    'tex m',
+    'tex m et m',
+    'tex maj/min',
+    'tex min',
+    'tex na d 2nt',
+    'tex na d 3c',
+    'tex na wszystko',
+    'tex sudafr',
+    'tex tr',
+    'tex transf',
+    'tex trf',
+    'tex trs',
+    'tex trsfrs',
+    'tex x nob',
+    'tex xfers',
+    'tex. trans',
+    'tex.trsf',
+    'texas ( 2sa = texas k)',
+    'texas (transfer)',
+    'texas 4 w trnsf',
+    'texas 6cm',
+    'texas K pour co',
+    'texas ad 1s',
+    'texas all',
+    'texas and texas minors',
+    'texas après 1nt',
+    'texas complete',
+    'texas en 2nd sur sa',
+    'texas en majeur',
+    'texas et en mineure',
+    'texas in noble',
+    'texas k 2sa',
+    'texas k=2 sa et modul',
+    'texas m',
+    'texas m et m',
+    'texas m, m',
+    'texas mag',
+    'texas maj',
+    'texas maj / min (2sa p.r k)',
+    'texas maj and min',
+    'texas maj et min',
+    'texas maj min',
+    'texas maj.min',
+    'texas maje mi pres',
+    'texas majeur et mineur',
+    'texas meme en min',
+    'texas mi',
+    'texas mineure interesse',
+    'texas minor maj',
+    'texas mjr, texas min',
+    'texas mm',
+    'texas na kara 3C',
+    'texas nt',
+    'texas per c/p',
+    'texas per i nobili',
+    'texas per le maggiori',
+    'texas per maggiori',
+    'texas per nobili',
+    'texas solo maggiori',
+    'texas su 1sa',
+    'texas su un sa',
+    'texas sur 1sa de l adv',
+    'texas sur ouv adverse de 1sa',
+    'texas sur ouverture adverse en 1sa',
+    'texas t',
+    'texas tambièn para los menores',
+    'texas tr',
+    'texas tran',
+    'texas tranf',
+    'texas trans',
+    'texas transf',
+    'texas transfer',
+    'texas transfer all suit',
+    'texas transfers',
+    'texas transfs',
+    'texas trasnfers',
+    'texas trf',
+    'texas trns',
+    'texas ts',
+    'texas xf',
+    'texas xfers',
+    'texas( transfer)',
+    'texas(transfer',
+    'texas(transfer)',
+    'texas(transft)',
+    'texs tran.f nt',
+    'texus t',
+    'tout texas',
+    'tout transfert en tex',
+    'trans texas',
+    'transf.texas',
+    'transfer tex',
+    'transfer texas',
+    'transfer texas after1sa opening',
+    'transfer y texas',
+    'transfers maj.-min texas',
+    'trasfer texas',
+    'trnsfr texas',
+    'trsf texas',
+    'ts les texas',
+    'ts texas',
+    'tutte le texas'],
+  Voidwood => [
     'v.wood', 
     'v wood', 
     'void wood', 
@@ -143,74 +296,170 @@ my %MULTI_TYPOS =
     'woid wood',
     'woit wood',
     'woýd wood'],
-  walsh => [
+  Walsh => [
     't-walsh',
     'walsh(1c)',
     'walsh rebids',
     'walsh relay',
     'walsh respones',
     'walsh tfr'],
-  wilkosz => [
+  Wilkosz => [
     '2d wilkosz'],
-  woolsey => [
+  Woolsey => [
     's/ sa woolsey',
     'woolsey/1sa',
     'woolsey/ 1sa'],
 );
 
 my @SINGLE_WORDS = qw(
-  albarran
-  baron benjamin bergen bil blackwood
-  cappelletti crowhurst
-  drury
-  ekren english
-  fantunes fishbein
-  hamilton
-  jacoby josephine
-  gazzilli gerber ghestem goren
-  jassem jordan
-  landy lavinthal lebensohl lightner
-  michaels muiderberg
-  ogust
-  rusinow
-  smolen stayman stenberg
-  texas truscott
-  voidwood
-  walsh wilkosz woolsey
+  Baron Benjamin Bergen Blackwood
+  Cappelletti Crowhurst
+  Drury
+  Fantunes Fishbein
+  Hamilton
+  Jacoby Josephine
+  Gazzilli Gerber Ghestem Goren
+  Jassem Jordan
+  Landy Lavinthal Lebensohl Lightner
+  Michaels Muiderberg
+  Ogust
+  Rubensohl Rusinow
+  Smolen Stayman Stenberg
+  Texas Truscott
+  Voidwood
+  Walsh Wilkosz Woolsey
 );
 
 my %SINGLE_TYPOS =
 (
-  bergen => [
-    'berg', 'bergan', 'berge', 'bergenr', 'berger', 'bergin', 
-    'bergn', 'bergrais', 'berguen'],
-  blackwood => ['black', 'bw5', 'bw5cles', 'bwood',
+  Bergen => [
+    'berg', 
+    'bergan', 
+    'berge', 
+    'bergenr', 
+    'berger', 
+    'bergin', 
+    'bergn', 
+    'bergrais', 
+    'berguen', 
+    'rberg'],
+  Blackwood => [
+    'black', 
+    'bw5', 
+    'bw5cles', 
+    'bwood',
     'rkblackwood'], 
-  cappelletti => ['capaletti', 'capp'],
-  drury => ['2wdrury', '2wrdrury', '2wydrury', 'drrury', 'durrury',
-    'rdrury', 'revdrury', 'rvrsdrury'],
-  gerber => ['garber', 'gb', 'ger', 'gerb'],
-  ghestem => ['gest', 'gestam', 'gestem', 'gesthem', 'ghest', 'ghestam'],
-  jacoby => [
-    'jac', 'jacobi', 'jacobytransfer',
+  Cappelletti => [
+    'capaletti', 
+    'capp'],
+  Drury => [
+    '2wdrury', 
+    '2wrdrury', 
+    '2wydrury', 
+    'drrury', 
+    'durrury',
+    'rdrury', 
+    'revdrury', 
+    'rvrsdrury'],
+  Gerber => [
+    'garber', 
+    'gb', 
+    'ger', 
+    'gerb'],
+  Ghestem => [
+    'gest', 
+    'gestam', 
+    'gestem', 
+    'gestheim',
+    'gesthem', 
+    'ghest', 
+    'ghestam'],
+  Jacoby => [
+    'jac', 
+    'jacobi', 
+    'jacobytransfer',
     'jakoby'],
-  landy => ['landi'],
-  lavinthal => ['lev', 'leventhal'],
-  lebensohl => ['leb'],
-  michaels => ['mic', 'michael', 'mick', 'mickael', 'micheal', 'mikael'],
-  ogust => ['ougust'],
-  smolen => ['smol', 'smollen'],
-  stayman => [
+  Landy => ['landi'],
+  Lavinthal => [
+    'lev', 
+    'leventhal'],
+  Lebensohl => ['leb'],
+  Michaels => [
+    'mic', 
+    'michael', 
+    'mick', 
+    'mickael', 
+    'micheal', 
+    'mikael'],
+  Ogust => ['ougust'],
+  Rubensohl => [
+    'rub',
+    'rubadv',
+    'rube',
+    'ruben',
+    'rubenholl',
+    'rubenhsol',
+    'rubens',
+    'rubensh',
+    'rubenshohl',
+    'rubenshol',
+    'rubensholl',
+    'rubenshotl',
+    'rubenso',
+    'rubensohl',
+    'rubensohll',
+    'rubensol',
+    'rubesohl',
+    'rubh',
+    'rubhen',
+    'rubhensol',
+    'rubin',
+    'rubinsohl',
+    'rubinsolh',
+    'rubn',
+    'rubsol'],
+  Smolen => [
+    'smol', 
+    'smole', 
+    'smollen'],
+  Stayman => [
     'sayman', 
     'staman',
     'stay', 
     'staym',
     'steaman'], 
-  texas => ['tex'],
-  voidwood => ['wwood'],
-  walsh => ['wal', 'walch', 'wallsh', 'wals'],
-  wilkosz => ['wilk'],
-  woolsey => ['wool', 'wools', 'woolsee', 'woolsy', 'woosley'],
+  Texas => [
+    'tex',
+    'texa',
+    'texasc',
+    'texases',
+    'texasisé',
+    'texasmineur',
+    'texass',
+    'texastransfer',
+    'texastransfers',
+    'texastrfs',
+    'texasy',
+    'texasy1nt',
+    'texs',
+    'texsa',
+    'texsas',
+    'texsmm',
+    'textr',
+    'texus'],
+  Voidwood => ['wwood'],
+  Walsh => [
+    'wal', 
+    'walch', 
+    'wallsh', 
+    'wals'],
+  Wilkosz => ['wilk'],
+  Woolsey => [
+    'wool', 
+    'wools', 
+    'woolsee', 
+    'woolsy', 
+    'woosley'],
 );
 
 

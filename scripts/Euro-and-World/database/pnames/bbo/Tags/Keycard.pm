@@ -97,6 +97,8 @@ my %MULTI_TYPOS =
     'kc 30 14 2',
     'kc 3014',
     'kc 41/30',
+    'kcb 0314',
+    'kcb 143',
     'no play rkc',
     'no rkc',
     'no rkcb',
@@ -514,6 +516,9 @@ my %SINGLE_TYPOS =
 (
    Minorwood => ['mwood'],
   'Roman Keycard' => [
+    'kcb',
+    'kcbckw',
+    'kcbl1430',
     'rk',
     'rk03',
     'rk14',

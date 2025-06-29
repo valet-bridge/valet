@@ -13,15 +13,19 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
-  '5-card majors',
-  'new zealand acol',
-  'new zealand precision',
-  'standard french',
+  '5-Card Majors',
+  'Forum D',
+  'Meckwell Precision',
+  'New Zealand Acol',
+  'New Zealand Precision',
+  'Standard French',
+  'Standard Italia',
+  'Two Over One',
 );
 
 my %MULTI_TYPOS =
 (
-  '5-card majors' => [
+  '5-Card Majors' => [
     '1 h/s= 5card',
     '1 h/s - major five',
     '12 13 5card open',
@@ -151,9 +155,72 @@ my %MULTI_TYPOS =
     'open w/5card major and 11-15 pts',
     'open with 5cards',
     'standart 5 mj'],
-  'new zealand acol' => ['acol in nz', 'nz acol'],
-  'new zealand precision' => ['nz precision' ],
-  'standard french' => [
+  'Forum D' => [
+    'forum d+',
+    'forum d plus'],
+  'Meckwell Precision' => [
+    'mechwell prevision'],
+  'New Zealand Acol' => ['acol in nz', 'nz acol'],
+  'New Zealand Precision' => ['nz precision' ],
+  'Precision' => [
+    'basic precision',
+    'berkman precision w/ xfer positives',
+    'bulgarian precision',
+    'chinese precision modified',
+    'control precision',
+    'easy going precision',
+    'lancia precision',
+    'mod.precision',
+    'mod. precision',
+    'mod precision',
+    'modified precision',
+    'oldfashion precision',
+    'oliver clarke precision',
+    'olivers precision',
+    'per precision today',
+    'poren precision',
+    'power precision (sontag)',
+    'prazision (special system)',
+    'precision(berkowitz)',
+    'precision(forum)',
+    'precision(goren/wei)',
+    'precision(mod)',
+    'precision(simplified)',
+    'precision-full',
+    'precision (goren)',
+    'precision (oliver c style)',
+    'precision (only classic - wei)',
+    'precision bg',
+    'precision cl',
+    'precision club',
+    'precision club 16+',
+    'precision club cc. wei',
+    'precision italy',
+    'precision milano',
+    'precision sistem',
+    'precision system',
+    'precision wei',
+    'precision with trans',
+    'relay precision',
+    'simple precision',
+    'super-precision',
+    'super precision',
+    'transfer precision',
+    'trèfle de précision',
+    'wei precision',
+    "wei's precision original"],
+  'SAYC' => [
+    'acbl yellow card',
+    'sayc (standard american yellow card)',
+    'sayc basic',
+    'sayc klasik',
+    'simple sayc',
+    'standard america yellow card basic',
+    'standard sayc',
+    'std american yellow',
+    'stdam yellow card',
+    'yellow card'],
+  'Standard French' => [
     'french 5 cart major',
     'french standard',
     'french std',
@@ -168,23 +235,82 @@ my %MULTI_TYPOS =
     'sef au complet',
     'sef basic',
     'sef francais',
+    'sef (french system)',
     'simple sef',
     'un peu sef'],
+  'Standard Italia' => [
+    'advanced italian standard',
+    'bbo standard italia',
+    'bbo standard italy',
+    'italian standard',
+    'italy standard',
+    'naturale lungo corto standard italian',
+    'naturale standar italia',
+    'naturale standard italia',
+    'sistema naturale italiano',
+    'sistema naturale standard italia',
+    'sistema standard b.b.o. italia',
+    'sistema standard italia',
+    'stand italia',
+    'stand.italia',
+    'stand.italy',
+    'stand:b b o italia',
+    'standad italia',
+    'standar italia',
+    'standard bbo italia',
+    'standard bboitalia',
+    'standard italian',
+    'standard italian natural',
+    'standard italiano',
+    'standard italiano 2010',
+    'standard italy'],
+  'Two Over One' => [
+    '2/1',
+    '2/1 always fg',
+    '2/1 fm',
+    '2/1 full',
+    '2/1 game force',
+    '2/1 game forcing',
+    '2/1 gf',
+    '2/1 hardy',
+    '2/1 max hardy',
+    '2/1 mf',
+    '2/1 stand',
+    '2/1 system',
+    '2/1(hardy)',
+    '2/1(max hardy)',
+    '2/1forcing',
+    '2/1gf',
+    '2/1system by mike lawrence'],
 );
 
 my @SINGLE_WORDS = qw(
+  Precision
+  SAYC
 );
 
 my %SINGLE_TYPOS =
 (
-  '5-card majors' => [
+  '5-Card Majors' => [
     '5cardm', 
     '5cardmaj', 
     '5cardmajor', 
     '5crd',
     'maj5card',
     'mjrsfive'],
-  'standard french' => ['sef', 'sef12'],
+  Precision => [
+    'orpricision',
+    'percision',
+    'precision2005',
+    'presicion'],
+  SAYC => [
+    'sayac',
+    'stdam'],
+  'Standard French' => [
+    'sef', 
+    'sef12'],
+  'Two Over One' => [
+    '2over1'],
 );
 
 

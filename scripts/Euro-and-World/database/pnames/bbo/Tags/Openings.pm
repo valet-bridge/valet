@@ -13,12 +13,52 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
-  '2c strong',
+  '2C Albarran',
+  '2C Strong',
+  '2D Albarran',
+  '2D Ekren',
 );
 
 my %MULTI_TYPOS =
 (
-  '2c strong' => [
+  '2C Albarran' => [
+    '2 c albaran',
+    '2 cl strong Albarran',
+    '2 t albarant',
+    '2 tr albarran',
+    '2 trebol albarran',
+    '2 treboles albarran',
+    '2 trfl strong with albarran',
+    '2!c albaran',
+    '2!c albarran',
+    '23+ 2C albarran mod',
+    '2C albaran',
+    '2C albarran',
+    '2c 20 po albaran',
+    '2c alba',
+    '2c albaran',
+    '2c albarr',
+    '2c albarran',
+    '2c with albaran',
+    '2c(albar)',
+    '2c>albaran',
+    '2cgf albarran',
+    '2cl - 22+ po, albaran',
+    '2cl albaran',
+    '2cl albaron',
+    '2cl strng albaran',
+    '2cstrong(alba)',
+    '2t albaran',
+    '2t albarran',
+    '2tr albarran',
+    '2tre. albarran',
+    '2treb alba',
+    '2trebol albarran',
+    '2treboles albarran',
+    '2trefle albarran',
+    'albarran=23+ pts or +1',
+    'strong 2 cl 23+ and albaran'],
+  '2C Strong' => [
     '2c-22+',
     '2c +22',
     '2c +23',
@@ -88,6 +128,10 @@ my %MULTI_TYPOS =
     'strong 2c over 22p',
     'strong 2cl 22+',
     'strong 2club'],
+  '2D Albarran' => [
+    '2diamantes-albarran24o+p.h.'],
+  '2D Ekren' => [
+    'ekrens 2 ruder til major'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -95,7 +139,14 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  '2c strong' => ['strog2club'],
+  '2C Albarran' => [
+    'albar',
+    'albaran',
+    'albarr',
+    'albarrain',
+    'albarran'],
+  '2C Strong' => ['strog2club'],
+  '2D Ekren' => ['ekren'],
 );
 
 
