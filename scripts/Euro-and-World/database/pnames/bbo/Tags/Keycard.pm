@@ -411,7 +411,6 @@ my %MULTI_TYPOS =
     'rkcb 5-keys',
     'rkcb 5A',
     'rkcb full 03-14',
-    'rkcb jacoby',
     'rkcb o314',
     'rkcb or 5ase .o',
     'rkcb or reg blckwd',

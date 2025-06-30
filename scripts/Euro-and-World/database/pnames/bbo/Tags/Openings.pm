@@ -741,8 +741,8 @@ my %MULTI_TYPOS =
     '2!c albaran',
     '2!c albarran',
     '23+ 2C albarran mod',
-    '2C albaran',
-    '2C albarran',
+    '2c albaran',
+    '2c albarran',
     '2c 20 po albaran',
     '2c alba',
     '2c albaran',
@@ -768,6 +768,7 @@ my %MULTI_TYPOS =
     'albarran=23+ pts or +1',
     'strong 2 cl 23+ and albaran'],
   '2C Strong' => [
+    '2 c strong',
     '2c-22+',
     '2c +22',
     '2c +23',

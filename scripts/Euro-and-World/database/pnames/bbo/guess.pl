@@ -19,6 +19,8 @@ use lib '..';
 my @TAG_ORDER = qw(
   BASES
   OPENINGS
+  CONSTRUCTIVE
+  AGAINSTNT
   KEYCARD
   CONVENTIONS
   CARDING
@@ -162,6 +164,8 @@ my @paragraphs;
 
 raw_to_paragraphs(\@chunks, \@paragraphs);
 
+my %chain_stats;
+
 for my $paragraph (@paragraphs)
 {
   inspect_paragraph($whole, $paragraph);
@@ -173,8 +177,37 @@ for my $paragraph (@paragraphs)
 
   # Make chains for each unstructured field (OPEN, SYSTEM),
   # make histograms, guess what the chains are.
-  structure_paragraph($whole, $paragraph);
+  # structure_paragraph($whole, $paragraph);
+  
+  # Look at sub-chains where important system stuff has been found.
+  sub_system_chains($whole, $paragraph, \%chain_stats);
 }
+
+print "Chains ", $chain_stats{CHAINS}, "\n\n";
+my $sum = 0;
+my $sumprod = 0;
+for my $i (0 .. $#{$chain_stats{LENGTHS}})
+{
+  my $c = $chain_stats{LENGTHS}[$i] // 0;
+  printf("%2s %6d\n", $i, $c);
+  $sum += $c;
+  $sumprod += $c * $i;
+}
+printf("\nAverage %6.2f\n", $sumprod / $sum);
+
+print "\nSubchains ", $chain_stats{SUBS}, "\n\n";
+$sum = 0;
+$sumprod = 0;
+for my $i (0 .. $#{$chain_stats{SUBLENGTHS}})
+{
+  my $c = $chain_stats{SUBLENGTHS}[$i] // 0;
+  printf("%2s %6d\n", $i, $c);
+  $sum += $c;
+  $sumprod += $c * $i;
+}
+printf("\nAverage %6.2f\n", $sumprod / $sum);
+
+exit;
 
 my $countries = 0;
 my (@phist, @hhist);
@@ -860,6 +893,61 @@ sub classify_chain_profile
 }
 
 
+sub print_sub_chains
+{
+  my ($chain, $profile, $datum, $chain_stats) = @_;
+
+  my $count = 1 + $chain->last();
+  $chain_stats->{LENGTHS}[$count]++;
+
+  my $system_indicators = 0;
+  for my $key (qw(BASES OPENINGS KEYCARD CONVENTIONS CARDING))
+  {
+    $system_indicators += $profile->{$key} // 0;
+  }
+
+  return if $system_indicators == 0;
+  return if $system_indicators == $count;
+
+  print "($system_indicators of $count): $datum\n";
+
+  # Build up the texts on which to split.
+  my $pos = 0;
+  my $last_hit = -1;
+  for my $i (0 .. $chain->last())
+  {
+    my $token = $chain->check_out($i);
+    my $tag = get_token_tag($token);
+
+    next unless ($tag eq 'BASES' || $tag eq 'OPENINGS' ||
+        $tag eq 'KEYCARD' || $tag eq 'CONVENTIONS' ||
+        $tag eq 'CARDING');
+    
+    my $substr = $token->text();
+    my $index = index($datum, $substr, $pos);
+
+    die "Substring '$substr' not found in expected order" if $index == -1;
+
+    my $piece = substr($datum, $pos, $index - $pos);
+    if ($piece)
+    {
+      $piece =~ s/^[ ,:;.()&-]+//;
+      $piece =~  s/[ ,:;.()&-]+$//;
+      if ($piece)
+      {
+        print "X   '$piece',\n";
+        my $sub_len = $i - $last_hit;
+        $chain_stats->{SUBS}++;
+        $chain_stats->{SUBLENGTHS}[$sub_len]++;
+      }
+    }
+
+    $pos = $index + length($substr);
+  }
+  print "\n";
+}
+
+
 sub structure_paragraph
 {
   my ($whole, $paragraph) = @_;
@@ -896,6 +984,51 @@ sub structure_paragraph
       make_chain_profile($chain, \%profile);
 
       classify_chain_profile($chain, \%profile, $datum);
+    }
+  }
+
+}
+
+
+sub sub_system_chains
+{
+  my ($whole, $paragraph, $chain_stats) = @_;
+
+  for my $entry (@{$paragraph->{LINES}})
+  {
+    if ($entry->{CATEGORY} eq 'LIST')
+    {
+      my $len = $#{$entry->{LIST}};
+
+      for (my $i = 0; $i <= $len; $i += 2)
+      {
+        if ($entry->{LIST}[$i] eq 'OPEN' ||
+            $entry->{LIST}[$i] eq 'SYSTEM')
+        {
+          my $chain = Chain->new();
+          make_chain($whole, $entry->{LIST}[$i+1], $chain);
+          $chain_stats->{CHAINS}++;
+
+          my %profile;
+          make_chain_profile($chain, \%profile);
+
+          print_sub_chains($chain, \%profile, $entry->{LIST}[$i+1],
+            $chain_stats);
+        }
+      }
+    }
+    elsif ($entry->{CATEGORY} eq 'OPEN' ||
+        $entry->{CATEGORY} eq 'SYSTEM')
+    {
+      my $chain = Chain->new();
+      my $datum = $entry->{VALUE} // $entry->{TEXT};
+      make_chain($whole, $datum, $chain);
+      $chain_stats->{CHAINS}++;
+
+      my %profile;
+      make_chain_profile($chain, \%profile);
+
+      print_sub_chains($chain, \%profile, $datum, $chain_stats);
     }
   }
 
