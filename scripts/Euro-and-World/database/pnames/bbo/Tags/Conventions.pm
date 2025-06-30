@@ -90,7 +90,6 @@ my %MULTI_TYPOS =
     'bw 5 clés',
     'flac wood',
     'rkcb/wood'], 
-  Cappelletti => ['re cap'],
   Drury => [
     '(rev) drury',
     '2 drury',
@@ -114,10 +113,70 @@ my %MULTI_TYPOS =
     'reverse drury',
     'rew drury',
     ],
+  Gazzilli => [
+    'gazilli(meckstroth)',
+    'mini-gazzilli'],
   Ghestem => ['mod ghestem'],
+  'Kokish' => [
+    '2c kokish',
+    'controls w kokish',
+    'kok over 2c',
+    'kokich/2c',
+    'kokish gf',
+    'kokish in 2 c',
+    'kokish mod',
+    'kokish r',
+    'kokish relay',
+    'kokish relay 2hneg',
+    'kokish resp'],
+  Landy => [
+    'landy sournois'],
   Michaels => [
     'michaels unusual nt'],
+  Muiderberg => [
+    '2 h/s muid',
+    '2h en 2s=muiderberg',
+    '2ha en 2sch .muiderberg',
+    '2harten en 2schoppen is muiderberg',
+    '2hs muider',
+    '2m muid',
+    '2sch/hart muiderberg',
+    '2sp-h muideberg',
+    '5+5 (muidbrg) weak',
+    'dutch 2 (muiden',
+    'dutch 2 (muiderberg)',
+    'mod. muiderberg',
+    'muiderberg 2h/s'],
   Ogust => ['ogust responses'],
+  Roudinesco => [
+    'check back (roudy)',
+    'constant roudi',
+    'le roudi',
+    'le roudy',
+    'pas de roudi',
+    'roudi 2012',
+    'roudi 3 rep',
+    'roudi 3paliers',
+    'roudi 3r',
+    'roudi 4 re',
+    'roudi 4 paliers',
+    'roudi (3paliers)',
+    'roudi ( cbs)',
+    'roudi cheback',
+    'roudi checkback',
+    'roudi check back',
+    'roudi check back staym',
+    'roudi chkbk',
+    'roudi const',
+    'roudi constant',
+    'roudi classique',
+    'roudi fixe',
+    'roudi mod',
+    'roudinesco const',
+    'roudy check back stay',
+    'roudy-constant',
+    'roudy constant',
+    'roudy cst'],
   Rubensohl => [
     'le rub',
     'le rubenshol',
@@ -312,18 +371,19 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Baron Benjamin Bergen Blackwood
-  Cappelletti Crowhurst
+  Baron Bergen Blackwood
+  Crowhurst
   Drury
   Fantunes Fishbein
   Hamilton
-  Jacoby Josephine
+  Jacoby
   Gazzilli Gerber Ghestem Goren
   Jassem Jordan
+  Kokish
   Landy Lavinthal Lebensohl Lightner
   Michaels Muiderberg
   Ogust
-  Rubensohl Rusinow
+  Roudinesco Rubensohl Rusinow
   Smolen Stayman Stenberg
   Texas Truscott
   Voidwood
@@ -349,9 +409,6 @@ my %SINGLE_TYPOS =
     'bw5cles', 
     'bwood',
     'rkblackwood'], 
-  Cappelletti => [
-    'capaletti', 
-    'capp'],
   Drury => [
     '2wdrury', 
     '2wrdrury', 
@@ -361,6 +418,8 @@ my %SINGLE_TYPOS =
     'rdrury', 
     'revdrury', 
     'rvrsdrury'],
+  Gazzilli => [
+    'gazilli'],
   Gerber => [
     'garber', 
     'gb', 
@@ -379,6 +438,12 @@ my %SINGLE_TYPOS =
     'jacobi', 
     'jacobytransfer',
     'jakoby'],
+  'Kokish' => [
+    'kok',
+    'koki',
+    'kokis',
+    'kokich',
+    'kokshi'],
   Landy => ['landi'],
   Lavinthal => [
     'lev', 
@@ -391,7 +456,30 @@ my %SINGLE_TYPOS =
     'mickael', 
     'micheal', 
     'mikael'],
+  Muiderberg => [
+    'muid',
+    'muid berg',
+    'muidb',
+    'muidbe',
+    'muideberg',
+    'muideburg',
+    'muidenb',
+    'muidenberg',
+    'muider',
+    'muider2',
+    'muiderb',
+    'muiderbe',
+    'muiderber',
+    'muiderberg',
+    'muiderbg',
+    'muidrbg'],
   Ogust => ['ougust'],
+  Roudinesco => [
+    'roud',
+    'roudi',
+    'roudicomplet',
+    'roudiconst',
+    'roudy'],
   Rubensohl => [
     'rub',
     'rubadv',

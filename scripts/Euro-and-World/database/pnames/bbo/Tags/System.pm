@@ -13,6 +13,10 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Cappelletti Against 1NT',
+  'Cappelletti Transfer',
+  'Kokish 2NT',
+  'Kokish Game Try',
   'Limit Raise',
   'Negative Double',
 
@@ -94,6 +98,25 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Cappelletti Against 1NT' => [
+    'cap./mod',
+    'capell etti',
+    'capelleti mod',
+    'capelletti on nt',
+    'cappeletti ove',
+    're capp',],
+  'Cappelletti Transfer' => [
+    'cappelletti tranf',
+    'transfr.capp',
+    '4trans capp'],
+  Josephine => [
+    'josephin 5nt'],
+  'Kokish Game Try' => [
+    'kokish hsgt',
+    'kokish trial bids',
+    'kokish trials',
+    'kokish game tries',
+    'kokish rebids'],
   'Limit Raise' => [
     '10-11 limt rais',
     '10/11 limit raise',
@@ -246,11 +269,11 @@ my @SINGLE_WORDS = qw(
 
   impair imparare interference inverted invitation invite 
 
-  jump
+  josephine jump
 
   key keycard kl klaver kravpass
 
-  landy lead leader leads lim lo loser losers losing low
+  landik landy lead leader leads lim lo loser losers losing low
 
   major master meilleur meilleure mini minimum minor
   multi multi2d multicolor
@@ -287,8 +310,51 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   artificial => ['art'],
+  'Cappelletti Against 1NT' => [
+    'cap',
+    'capaletti',
+    'capality',
+    'capalleti',
+    'capaltti',
+    'caparetti',
+    'capel',
+    'capeleti',
+    'capeletti',
+    'capelleti',
+    'capil',
+    'capiletti',
+    'capilleti',
+    'capiltetti',
+    'capleti',
+    'capolet',
+    'capoletti',
+    'capollrtti',
+    'capp',
+    'cappaletti',
+    'cappeiieti',
+    'cappel',
+    'cappeleti',
+    'cappeletti',
+    'cappelitti',
+    'cappelleti',
+    'cappelletti',
+    'cappellitti',
+    'cappilatti',
+    'cappl',
+    'capplety',
+    'cappll',
+    'cappoletti',
+    'capps',
+    'cappti'],
+  Josephine => [
+    'josep',
+    'josephin',
+    'josephine',
+    'josepsin'],
   'Limit Raise' => ['limra', 'limitraise', 'limitraisecue',
     'limitraises', 'limrsq'],
+  'Kokish Game Try' => [
+    'kokishgametry'],
   minor => ['mi', 'min', 'miner', 'mineure', 'minors'],
   major => ['maior', 'maj', 'majors', 'mj'],
   natural => ['nat', 'naturale', 'naturel'],

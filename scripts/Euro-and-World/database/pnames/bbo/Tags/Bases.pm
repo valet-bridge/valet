@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   '5-Card Majors',
+  'Benjamin ACOL',
   'Forum D',
   'Meckwell Precision',
   'New Zealand Acol',
@@ -155,6 +156,11 @@ my %MULTI_TYPOS =
     'open w/5card major and 11-15 pts',
     'open with 5cards',
     'standart 5 mj'],
+  'Benjamin ACOL' => [
+    'benj acl',
+    'benji acol',
+    'benjie acol',
+    'benjmen acol'],
   'Forum D' => [
     'forum d+',
     'forum d plus'],
@@ -269,6 +275,7 @@ my %MULTI_TYPOS =
     '2/1 always fg',
     '2/1 fm',
     '2/1 full',
+    '2/1 game f',
     '2/1 game force',
     '2/1 game forcing',
     '2/1 gf',
