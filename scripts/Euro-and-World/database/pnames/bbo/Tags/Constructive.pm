@@ -16,6 +16,7 @@ my @MULTI_WORDS =
   'Kokish Game Try',
   'Limit Raise',
   'Negative Double',
+  'Weak Jump Shift',
 );
 
 my %MULTI_TYPOS =
@@ -143,10 +144,27 @@ my %MULTI_TYPOS =
     'negdbl-3s',
     'negt gb',
     'x-neg'],
+  Splinter => [
+    'no splint',
+    'splinter bids',
+    'splinter jump'],
+  'Weak Jump Shift' => [
+    'all jump shifts weak',
+    'weak jump shift',
+    'weak jump shift overcalls',
+    'weak jump shifts',
+    'weak jump shifts always',
+    'weak jumpshifts',
+    'weal jump shift',
+    'wk jump shift',
+    'wk jump shifts',
+    'wkjumpshift2-6pts'],
 );
 
 my @SINGLE_WORDS = qw(
   Josephine
+  Namyats
+  Splinter
 );
 
 my %SINGLE_TYPOS =
@@ -160,12 +178,45 @@ my %SINGLE_TYPOS =
     'limitraises', 'limrsq'],
   'Kokish Game Try' => [
     'kokishgametry'],
+  Namyats => [
+    'namia',
+    'namiyat',
+    'namy',
+    'namyant',
+    'namyas',
+    'namyat',
+    'namynt',
+    'namyt',
+    'namyts'],
   'Negative Double' => [
     'negativex',
     'negdbl',
     'negdble',
     'negx',
     'negx2lev'],
+  Splinter => [
+    'spli',
+    'splider',
+    'splin',
+    'splinder',
+    'spliner',
+    'spliners',
+    'splinr',
+    'splint',
+    'splintera',
+    'splinters',
+    'splintery',
+    'splintr',
+    'splintrs',
+    'splints',
+    'splintters',
+    'split',
+    'spliter'],
+  'Weak Jump Shift' => [
+    'weakjumpshift',
+    'wjs',
+    'wkjumpshift',
+    'wkjumpshifts'],
 );
 
 

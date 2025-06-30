@@ -13,9 +13,6 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
-  'Cappelletti Transfer',
-  'Kokish 2NT',
-
   '1 diamond=4+cards, 1 club=2+cards',
   '1 sa 15-17',
   '1403 two way chekback unusall gold way michel gerber multylandy',
@@ -94,10 +91,6 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Cappelletti Transfer' => [
-    'cappelletti tranf',
-    'transfr.capp',
-    '4trans capp'],
   Transfer => [
     'all transefs',
     'no transfer', 
@@ -166,7 +159,7 @@ my @SINGLE_WORDS = qw(
 
   takeout Transfer trèfle tricks trump twos
 
-  udca udca-mud undo undos upside
+  undo undos upside
 
   vulnerable 
 

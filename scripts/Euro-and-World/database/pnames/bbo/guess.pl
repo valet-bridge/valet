@@ -20,6 +20,7 @@ my @TAG_ORDER = qw(
   BASES
   OPENINGS
   CONSTRUCTIVE
+  COMPETITIVE
   AGAINSTNT
   KEYCARD
   CONVENTIONS
@@ -522,7 +523,7 @@ sub raw_to_paragraphs
 
         $line =~ s/^\s+//;
         $line =~ s/\s+$//;
-        $line =~ s/\s{2,}/ /;
+        $line =~ s/\s{2,}/ /g;
         $line =~ s/^[!\-+:;'"@?\(\)\{\}\[\]<>*.,=#%&\/\$]+\s*//;
         $line  =~ s/\s*[!\-+:;'"@?\(\)\{\}*.,=#%&\/\$]+$//;
 
@@ -620,7 +621,7 @@ sub inspect_paragraph
         next;
       }
 
-if ($paragraph->{HANDLE} eq 'DRSLAMM')
+if ($paragraph->{HANDLE} eq 'GHISA')
 {
   # print "HERE\n";
  }
@@ -901,7 +902,8 @@ sub print_sub_chains
   $chain_stats->{LENGTHS}[$count]++;
 
   my $system_indicators = 0;
-  for my $key (qw(BASES OPENINGS KEYCARD CONVENTIONS CARDING))
+  for my $key (qw(BASES OPENINGS CONSTRUCTIVE COMPETITIVE
+    AGAINSTNT KEYCARD CONVENTIONS CARDING))
   {
     $system_indicators += $profile->{$key} // 0;
   }
@@ -909,7 +911,7 @@ sub print_sub_chains
   return if $system_indicators == 0;
   return if $system_indicators == $count;
 
-  print "($system_indicators of $count): $datum\n";
+  # print "($system_indicators of $count): $datum\n";
 
   # Build up the texts on which to split.
   my $pos = 0;
@@ -921,7 +923,8 @@ sub print_sub_chains
 
     next unless ($tag eq 'BASES' || $tag eq 'OPENINGS' ||
         $tag eq 'KEYCARD' || $tag eq 'CONVENTIONS' ||
-        $tag eq 'CARDING');
+        $tag eq 'CARDING' || $tag eq 'CONSTRUCTIVE' ||
+        $tag eq 'COMPETITIVE' || $tag eq 'AGAINSTNT');
     
     my $substr = $token->text();
     my $index = index($datum, $substr, $pos);
@@ -929,22 +932,29 @@ sub print_sub_chains
     die "Substring '$substr' not found in expected order" if $index == -1;
 
     my $piece = substr($datum, $pos, $index - $pos);
+    my $sub_len = $i - $last_hit;
+    $last_hit = $i;
+    $chain_stats->{SUBS}++;
+    $chain_stats->{SUBLENGTHS}[$sub_len]++;
+
     if ($piece)
     {
-      $piece =~ s/^[ ,:;.()&-]+//;
-      $piece =~  s/[ ,:;.()&-]+$//;
+      $piece =~ s/^[- ,:;.()&\/]+//;
+      $piece =~  s/[- ,:;.()&\/]+$//;
       if ($piece)
       {
-        print "X   '$piece',\n";
-        my $sub_len = $i - $last_hit;
-        $chain_stats->{SUBS}++;
-        $chain_stats->{SUBLENGTHS}[$sub_len]++;
+
+        if ($sub_len >= 15)
+        {
+          print "Y $datum\n";
+          print "X '$piece',\n";
+        }
       }
     }
 
     $pos = $index + length($substr);
   }
-  print "\n";
+  # print "\n";
 }
 
 
@@ -1031,7 +1041,6 @@ sub sub_system_chains
       print_sub_chains($chain, \%profile, $datum, $chain_stats);
     }
   }
-
 }
 
 

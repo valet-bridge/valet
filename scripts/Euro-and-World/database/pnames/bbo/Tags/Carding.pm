@@ -407,9 +407,27 @@ my %MULTI_TYPOS =
     'smith.echo',
     'smith/suits',
     'ud smith'],
+  UDCA => [
+    'upside dow',
+    'upside down',
+    'upside down at',
+    'upside down attitud',
+    'upside down attitude',
+    'upside down cardin',
+    'upside down count & attitude',
+    'upside down count and attitude',
+    'upside down count&att',
+    'upside down ct&att',
+    'upside down signals',
+    'upside-dow',
+    'upside-down',
+    'upside-down everything',
+    'upsidedown signals'],
 );
 
 my @SINGLE_WORDS = qw(
+  MUD
+  UDCA
 );
 
 my %SINGLE_TYPOS =
@@ -421,6 +439,9 @@ my %SINGLE_TYPOS =
     'smith',
     'smithechorev',
     'smiths'],
+  UDCA => [
+    'upsi',
+    'upsidedown'],
 );
 
 

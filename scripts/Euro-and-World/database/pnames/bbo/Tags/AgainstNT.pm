@@ -25,9 +25,13 @@ my %MULTI_TYPOS =
     'capelletti on nt',
     'cappeletti ove',
     're capp',],
+  DONT => [
+    'dont over nt',
+    'mod dont'],
 );
 
 my @SINGLE_WORDS = qw(
+  DONT
 );
 
 my %SINGLE_TYPOS =

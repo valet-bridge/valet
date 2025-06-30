@@ -508,11 +508,15 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  DOPI
   Minorwood
+  ROPI
 );
 
 my %SINGLE_TYPOS =
 (
+   DOPI => [
+     'd0p1'],
    Minorwood => ['mwood'],
   'Roman Keycard' => [
     'kcb',
@@ -569,6 +573,8 @@ my %SINGLE_TYPOS =
     'rkk',
     'rksb0314',
     'romankeycard'],
+   ROPI => [
+     'r0p1'],
 );
 
 

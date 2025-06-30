@@ -28,6 +28,7 @@ use Tags::System;
 use Tags::Bases;
 use Tags::Openings;
 use Tags::Constructive;
+use Tags::Competitive;
 use Tags::AgainstNT;
 use Tags::Keycard;
 use Tags::Conventions;
@@ -57,6 +58,7 @@ my %TAGS =
   BASES => \&Tags::Bases::set_hashes,
   OPENINGS => \&Tags::Openings::set_hashes,
   CONSTRUCTIVE => \&Tags::Constructive::set_hashes,
+  COMPETITIVE => \&Tags::Competitive::set_hashes,
   AGAINSTNT => \&Tags::AgainstNT::set_hashes,
   KEYCARD => \&Tags::Keycard::set_hashes,
   CONVENTIONS => \&Tags::Conventions::set_hashes,
