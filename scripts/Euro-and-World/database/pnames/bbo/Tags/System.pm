@@ -91,10 +91,6 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  Transfer => [
-    'all transefs',
-    'no transfer', 
-    'no transfers'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -157,7 +153,7 @@ my @SINGLE_WORDS = qw(
   strong strongest sui suit suits sup supp support supportx syst system 
   systems
 
-  takeout Transfer trèfle tricks trump twos
+  takeout trèfle tricks trump twos
 
   undo undos upside
 
@@ -172,12 +168,6 @@ my %SINGLE_TYPOS =
   minor => ['mi', 'min', 'miner', 'mineure', 'minors'],
   major => ['maior', 'maj', 'majors', 'mj'],
   natural => ['nat', 'naturale', 'naturel'],
-  Transfer => [
-    'notransfer',
-    'tran', 'tranfer', 'tranfers', 'trans', 'transef', 'transefer',
-    'transefs', 'transf', 'transfe', 'transfeer', 'transfers', 
-    'transfert', 'transfr', 'transfs', 'trasfer', 'trf', 'trfrs', 
-    'trnsf', 'trnsfer', 'trsf', 'xfer', 'xfers'],
   trèfle => ['trefle', 'trefles'],
 );
 

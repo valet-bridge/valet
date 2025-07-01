@@ -26,6 +26,19 @@ my %MULTI_TYPOS =
     'minör wood',
     'mn wood'],
   'Roman Keycard' => [
+    '4nt-cl 0-3 1-4 2',
+    '5kc- 03,14,25,2+q',
+    'ace 03 14 keyc+qu',
+    'ace: 03, 14, 2, 2+q',
+    'bk5 cles',
+    'black03,14,2+q+k',
+    'blakwood 3041',
+    'blckd-5aces-0/3,1/4,2+q',
+    'blkwd 5 wart 0-3 1-4',
+    'bw 30 41 5k 2+q',
+    'rcb 4103',
+    'rck:0314(5kc)',
+
     '(kb)rkc',
     '0-3/1-4 rkc',
     '03 -14 rkc',
@@ -516,7 +529,8 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
    DOPI => [
-     'd0p1'],
+     'd0p1',
+     'dopis'],
    Minorwood => ['mwood'],
   'Roman Keycard' => [
     'kcb',

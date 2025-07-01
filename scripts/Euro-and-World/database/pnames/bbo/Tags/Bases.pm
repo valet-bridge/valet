@@ -72,6 +72,7 @@ my %MULTI_TYPOS =
     '5card mayo',
     '5card op',
     '5card open',
+    '5card opening',
     '5cards m',
     '5cards maj',
     '5cards major',
@@ -126,6 +127,7 @@ my %MULTI_TYPOS =
     '5 crd mjrs',
     '5 crd open',
     '5 li',
+    '5 maggiore',
     '5 maj',
     '5 major cards',
     '5 major color',
@@ -165,6 +167,7 @@ my %MULTI_TYPOS =
     'open 12 points-5card majors',
     'open5 major',
     'open 5 card majors',
+    'open 5cd maj',
     'open 5 major',
     'open 5 majors',
     'open 5card majors',
@@ -325,6 +328,8 @@ my %MULTI_TYPOS =
     'std american yellow',
     'stdam yellow card',
     'yellow card'],
+  'Standard American' => [
+    'std am'],
   'Standard French' => [
     '5 cart majeur',
     '5 cartes en majeur',

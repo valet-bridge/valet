@@ -134,18 +134,23 @@ my %MULTI_TYPOS =
   Michaels => [
     'michaels unusual nt'],
   Muiderberg => [
-    '2 h/s muid',
+    '2hs=7-11p 5+h/s and 5+ lower suit',
+    '2hs(6-10,5-5)',
+    '2h/s 5+4m 7-10',
     '2h en 2s=muiderberg',
+    '2s/h 5 m+4+m',
     '2ha en 2sch .muiderberg',
     '2harten en 2schoppen is muiderberg',
     '2hs muider',
     '2m muid',
     '2sch/hart muiderberg',
     '2sp-h muideberg',
+    '2 h/s muid',
     '5+5 (muidbrg) weak',
     'dutch 2 (muiden',
     'dutch 2 (muiderberg)',
     'mod. muiderberg',
+    'muid berg',
     'muiderberg 2h/s'],
   Ogust => ['ogust responses'],
   Roudinesco => [
@@ -435,6 +440,7 @@ my %SINGLE_TYPOS =
     'rberg'],
   Blackwood => [
     'black', 
+    'blkwd',
     'bw5', 
     'bw5cles', 
     'bwood',
@@ -454,7 +460,8 @@ my %SINGLE_TYPOS =
     'garber', 
     'gb', 
     'ger', 
-    'gerb'],
+    'gerb',
+    'grber'],
   Ghestem => [
     'gest', 
     'gestam', 
@@ -478,7 +485,9 @@ my %SINGLE_TYPOS =
   Lavinthal => [
     'lev', 
     'leventhal'],
-  Lebensohl => ['leb'],
+  Lebensohl => [
+    'leb',
+    'lebenshol'],
   Michaels => [
     'mic', 
     'michael', 
@@ -488,7 +497,6 @@ my %SINGLE_TYPOS =
     'mikael'],
   Muiderberg => [
     'muid',
-    'muid berg',
     'muidb',
     'muidbe',
     'muideberg',
@@ -546,6 +554,8 @@ my %SINGLE_TYPOS =
     'stay', 
     'staym',
     'steaman'], 
+  Stenberg => [
+    'stenb'],
   Texas => [
     'tex',
     'texa',
