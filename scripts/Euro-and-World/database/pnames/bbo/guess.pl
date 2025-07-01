@@ -911,7 +911,7 @@ sub print_sub_chains
   return if $system_indicators == 0;
   return if $system_indicators == $count;
 
-  # print "($system_indicators of $count): $datum\n";
+  print "($system_indicators of $count): $datum\n";
 
   # Build up the texts on which to split.
   my $pos = 0;
@@ -944,17 +944,17 @@ sub print_sub_chains
       if ($piece)
       {
 
-        if ($sub_len >= 15)
-        {
+        # if ($sub_len >= 15)
+        # {
           print "Y $datum\n";
           print "X '$piece',\n";
-        }
+        # }
       }
     }
 
     $pos = $index + length($substr);
   }
-  # print "\n";
+  print "\n";
 }
 
 

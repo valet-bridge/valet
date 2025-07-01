@@ -15,6 +15,7 @@ my @MULTI_WORDS =
 (
   '5-Card Majors',
   'Benjamin ACOL',
+  'Blue Club',
   'Dutch ACOL',
   'Forum D',
   'Meckwell Precision',
@@ -22,6 +23,7 @@ my @MULTI_WORDS =
   'New Zealand Precision',
   'Polish Club',
   'Power ACOL',
+  'Regular Precision',
   'Standard American',
   'Standard French',
   'Standard Italia',
@@ -33,6 +35,31 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   '5-Card Majors' => [
+    'mayor quinto (5th)',
+    'majeure 5èmè',
+    'nobili 5',
+    'open 5-card major',
+    'quinta nobile',
+    'quinte nobili',
+    '5 cart mayor',
+    '5 cartes majeurs',
+    '5 cd major',
+    '5 cd mjrs',
+    '5 cd mjrs',
+    '5 crd m',
+    '5 nob',
+    '5 nobile',
+    '5 ème maj',
+    '5-c major',
+    '5-card maj',
+    '5-kard major',
+    '5^nobile',
+    '5th major',
+    '5° major',
+    '5° nobile',
+    '5°magg',
+    '5º mayor',
+
     '1 h/s= 5card',
     '1 h/s - major five',
     '12 13 5card open',
@@ -198,6 +225,8 @@ my %MULTI_TYPOS =
     'benjmn acol',
     'benjy acol',
     'benz acol'],
+  'Blue Club' => [
+    'blue team'],
   'Dutch ACOL' => [
     '4 card dutch acol',
     'acol dutch',
@@ -217,6 +246,9 @@ my %MULTI_TYPOS =
   'New Zealand Acol' => ['acol in nz', 'nz acol'],
   'New Zealand Precision' => ['nz precision' ],
   'Polish Club' => [
+    'pol.cl. wj 05',
+    'polisch bridge club 05',
+
     'basic polish club',
     'no polish club',
     'polish bridge club 05',
@@ -328,9 +360,21 @@ my %MULTI_TYPOS =
     'std american yellow',
     'stdam yellow card',
     'yellow card'],
+  'Regular Precision' => [
+    'strong club , prec',
+    'prec cl',
+    'prec power',
+    'prec. cl'],
   'Standard American' => [
+    'std american',
+    'america std',
+    'american standard bridge rules',
+    'american stdrd conv',
     'std am'],
   'Standard French' => [
+    'syst.français',
+    'system francais',
+
     '5 cart majeur',
     '5 cartes en majeur',
     '5 cartes marjeur',
@@ -458,6 +502,7 @@ my %MULTI_TYPOS =
     'standard italiano 2010',
     'standard italy'],
   'Two Over One' => [
+    '2/1mf',
     '2/1',
     '2/1 always fg',
     '2/1 fm',

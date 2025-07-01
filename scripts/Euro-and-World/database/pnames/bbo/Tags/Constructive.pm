@@ -13,14 +13,18 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Fourth Suit Forcing',
   'Kokish Game Try',
   'Limit Raise',
   'Negative Double',
+  'New Minor Forcing',
   'Weak Jump Shift',
 );
 
 my %MULTI_TYPOS =
 (
+  'Fourth Suit Forcing' => [
+    '4th suit force'],
   Josephine => [
     'josephin 5nt'],
   'Kokish Game Try' => [
@@ -121,6 +125,7 @@ my %MULTI_TYPOS =
     'neg x-3s',
     'neg*',
     'neg,doub',
+    'neg.dble',
     'neg-dbl',
     'neg. dbl',
     'neg. dobles',
@@ -144,6 +149,84 @@ my %MULTI_TYPOS =
     'negdbl-3s',
     'negt gb',
     'x-neg'],
+  'New Minor Forcing' => [
+    'n.m.f',
+    '2 way new minor',
+    '2-way new minor forcing',
+    'n, new min. f',
+    'ne new minor fo',
+    'new mi',
+    'new min',
+    'new min chk',
+    'new min f',
+    'new min foc',
+    'new min for',
+    'new min forc',
+    'new min forc 1 rd',
+    'new min forcing',
+    'new min fors',
+    'new min frc',
+    'new min gf',
+    'new min suit for',
+    'new min, forc',
+    'new min. for',
+    'new min. forcing 2 way',
+    'new min.forc',
+    'new miner',
+    'new miner forc',
+    'new miner forcing',
+    'new miner fors',
+    'new minerforcind',
+    'new minf',
+    'new minnor',
+    'new minnor forcing',
+    'new mino',
+    'new minor',
+    'new minor =force',
+    'new minor f',
+    'new minor f',
+    'new minor fc',
+    'new minor fcng',
+    'new minor fo',
+    'new minor for',
+    'new minor forc',
+    'new minor forc ing',
+    'new minor force',
+    'new minor force-mod',
+    'new minor force=invite+',
+    'new minor forci',
+    'new minor forcin',
+    'new minor forcing',
+    'new minor forcing one round',
+    'new minor forcingfor 1 rd',
+    'new minor forcng',
+    'new minor forsing',
+    'new minor forxing',
+    'new minor frc',
+    'new minor frce',
+    'new minor suit',
+    'new minor suit forcing',
+    'new minor= f1',
+    'new minorforcing',
+    'new minors',
+    'new minors forcing',
+    'new minot forcing',
+    'new minr forcing',
+    'new minr frc',
+    'new minr frcing',
+    'new minör',
+    'new minör forc',
+    'nu minor forc',
+    'two way new minor forci'],
+  Puppet => [
+    '2nt puppet',
+    '5 card puppet',
+    'modified puppet',
+    'pup/2nt',
+    'puppet (2nt',
+    'puppet(2nt',
+    'puppet(3c',
+    'puppet/2nt'],
   Splinter => [
     'no splint',
     'splinter bids',
@@ -170,12 +253,15 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Josephine
   Namyats
+  Puppet
   Splinter
   Transfer 
 );
 
 my %SINGLE_TYPOS =
 (
+  'Fourth Suit Forcing' => [
+    '4sxf'],
   Josephine => [
     'josep',
     'josephin',
@@ -186,6 +272,7 @@ my %SINGLE_TYPOS =
   'Kokish Game Try' => [
     'kokishgametry'],
   Namyats => [
+    'namats',
     'namia',
     'namiyat',
     'namy',
@@ -201,6 +288,20 @@ my %SINGLE_TYPOS =
     'negdble',
     'negx',
     'negx2lev'],
+  'New Minor Forcing' => [
+    'newmf',
+    'nmf'],
+  Puppet => [
+    'pup',
+    'pupet',
+    'pupett',
+    'pupp',
+    'puppet',
+    'puppet2nt',
+    'puppett',
+    'puppit',
+    'puppt',
+    'pupt'],
   Splinter => [
     'spli',
     'splider',

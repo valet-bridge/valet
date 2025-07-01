@@ -50,8 +50,15 @@ my %MULTI_TYPOS =
     'v.m.bergen',
     ],
   Blackwood => [
-    '2wood',
+    'bl acwood',
+    '4 nt ace',
+    '4nt ask',
+    '4nt ask a',
+    '4nt asking for aces',
+    '4nt:04,1,2,3, aces',
+
     '4abl.wood',
+    '4nt ask 4 aces',
     '7 cardblack wood',
     'b wood',
     'balck wood',
@@ -134,6 +141,20 @@ my %MULTI_TYPOS =
   Michaels => [
     'michaels unusual nt'],
   Muiderberg => [
+    '2h-2sp 55 weak',
+    '2h/2sp=h/sp+m',
+    '2m weak 5+5',
+    '2 h s weak5-5',
+    '2 h-2sp 5+5 card max.10 pts',
+    '2 h/s weak double colour',
+    '2h/s weak (5+5)',
+    '2h/s weak 5+4 lower',
+    '2h=5h+5other, 2s=5s+5c or 5d',
+    '2he/sp weak 5-5',
+    '2 h -sp 5+5',
+    '2 h,2 sp weak(5+5)',
+    '2 h,s 5-5 weak',
+
     '2hs=7-11p 5+h/s and 5+ lower suit',
     '2hs(6-10,5-5)',
     '2h/s 5+4m 7-10',
@@ -439,6 +460,10 @@ my %SINGLE_TYPOS =
     'berguen', 
     'rberg'],
   Blackwood => [
+    '2wood',
+    'bkw',
+    'blckwd',
+    'blcw',
     'black', 
     'blkwd',
     'bw5', 
@@ -450,6 +475,7 @@ my %SINGLE_TYPOS =
     '2wrdrury', 
     '2wydrury', 
     'drrury', 
+    'druri',
     'durrury',
     'rdrury', 
     'revdrury', 
@@ -511,7 +537,9 @@ my %SINGLE_TYPOS =
     'muiderberg',
     'muiderbg',
     'muidrbg'],
-  Ogust => ['ougust'],
+  Ogust => [
+    'oogust',
+    'ougust'],
   Roudinesco => [
     'roud',
     'roudi',

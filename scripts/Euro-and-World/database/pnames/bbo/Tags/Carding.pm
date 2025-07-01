@@ -25,6 +25,7 @@ my %MULTI_TYPOS =
   'even-odd' => [
     'compte en pair-impair',
     'def en pair impair',
+    'déf. italien',
     'defausse pair/impair',
     'défausse pair/impair',
     'déf pair/impair',

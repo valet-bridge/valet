@@ -133,7 +133,7 @@ my @SINGLE_WORDS = qw(
   major master meilleur meilleure mini minimum minor
   multi multi2d multicolor
 
-  negativ negative ni nmf nobile nt
+  negativ negative ni nobile nt
 
   odd open opener openig openings opponent opps overcall 
   overcalls
@@ -141,7 +141,7 @@ my @SINGLE_WORDS = qw(
   pair pari parité partenaire partenaires partener partner partners 
   penalty petite pi pique piques pl play player pnts point points 
   polish positive power 
-  prec precision preempt preempts précision pts psychis pupet pupp puppet
+  prec precision preempt preempts précision pts psychis 
 
   quadri queen
 

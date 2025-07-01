@@ -26,6 +26,7 @@ my %MULTI_TYPOS =
     'transfr.capp',
     '4trans capp'],
   'Takeout Double' => [
+    't/o dbl',
     'bid on infox',
     'contro informativo',
     'dbl for takeout',
@@ -52,6 +53,7 @@ my %MULTI_TYPOS =
     'take out dub',
     'take out x',
     'take-aut dbl',
+    'take-out dbl',
     'take-out double',
     'takeout dbl',
     'takeout dbles',
@@ -63,6 +65,7 @@ my %MULTI_TYPOS =
     'x for take out',
     'x is for take out'],
   'Unusual 2NT' => [
+    'un/nt',
     'un 2nt',
     'un nt',
     'un nt\'s',
@@ -107,12 +110,15 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Takeout Double' => [
+    'infokontra',
     'infox',
     'takeout',
     'takeoutdoubles',
     'takeouts',
     'takout'],
   'Unusual 2NT' => [
+    'u2nt',
+    'un2n',
     'un2nt',
     'unnt',
     'uns2nt',
