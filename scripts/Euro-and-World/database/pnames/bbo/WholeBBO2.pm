@@ -36,6 +36,7 @@ use Swords::Blackwood;
 use Swords::Misc;
 use Swords::Keycard;
 use Swords::Stayman;
+use Swords::Carding;
 
 
 my %TAGS =
@@ -66,6 +67,7 @@ my %TAGS =
   MISC => \&Swords::Misc::set_hashes,
   KEYCARD => \&Swords::Keycard::set_hashes,
   STAYMAN => \&Swords::Stayman::set_hashes,
+  CARDING => \&Swords::Carding::set_hashes,
 );
 
 

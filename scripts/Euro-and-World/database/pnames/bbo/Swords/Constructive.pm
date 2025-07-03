@@ -20,14 +20,57 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Drury
   Gerber
   Puppet
+  Roudinesco
   Smolen
   Splinter
 );
 
 my %SINGLE_TYPOS =
 (
+  Drury => [
+    'drru',
+    'drrury',
+    'drruy',
+    'drry',
+    'drrys',
+    'drryy',
+    'dru',
+    'druary',
+    'drudry',
+    'drudy',
+    'druery',
+    'druey',
+    'druhry',
+    'druly',
+    'drur',
+    'drurey',
+    'drureyfittey',
+    'druri',
+    'drurie',
+    'druriy',
+    'drurry',
+    'drurty',
+    'druru',
+    'drurury',
+    'druruy',
+    'druryfit',
+    'druryfitte',
+    'druryi',
+    'druryr',
+    'drurys',
+    'druryy',
+    'druty',
+    'druury',
+    'druuy',
+    'druwry',
+    'druy',
+    'druyru',
+    'druyy',
+    'dryr',
+    'dryry'],
   Gerber => [
     'garbar',
     'garber',
@@ -97,6 +140,14 @@ my %SINGLE_TYPOS =
     'pupput',
     'pupt',
     'puput'],
+  Roudinesco => [
+    'roud',
+    'rouddi',
+    'roudi',
+    'roudii',
+    'roudinescu',
+    'roudj',
+    'roudy'],
   Smolen => [
     'sml',
     'smlen',

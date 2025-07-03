@@ -72,6 +72,7 @@ my @UNIT_TAGS = qw(
   MISC
   KEYCARD
   STAYMAN
+  CARDING
 );
 
 my @TAG_ORDER = qw(
