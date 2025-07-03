@@ -15,6 +15,8 @@ my @MULTI_WORDS =
 (
   'Cappelletti Transfer',
   'Kokish 2NT',
+  'Penalty Double',
+  'Support Double',
   'Takeout Double',
   'Unusual 2NT',
 );
@@ -25,6 +27,11 @@ my %MULTI_TYPOS =
     'cappelletti tranf',
     'transfr.capp',
     '4trans capp'],
+  'Penalty Double' => [
+    'all dbl can be penalty'],
+  'Support Double' => [
+    'supprt dbl',
+    'support x'],
   'Takeout Double' => [
     't/o dbl',
     'bid on infox',
@@ -65,6 +72,7 @@ my %MULTI_TYPOS =
     'x for take out',
     'x is for take out'],
   'Unusual 2NT' => [
+    'unusual n.t',
     'un/nt',
     'un 2nt',
     'un nt',
@@ -105,6 +113,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Landik
 );
 
 my %SINGLE_TYPOS =
@@ -117,6 +126,7 @@ my %SINGLE_TYPOS =
     'takeouts',
     'takout'],
   'Unusual 2NT' => [
+    'unusual n.t',
     'u2nt',
     'un2n',
     'un2nt',

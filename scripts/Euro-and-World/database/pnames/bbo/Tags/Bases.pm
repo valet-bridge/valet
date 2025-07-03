@@ -35,9 +35,26 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   '5-Card Majors' => [
+    '5 card majrs',
+    '5 cd marjor',
+    '5 cd mj',
+    '5 cd mjr',
+    '5 crd maj',
+    '5 crd mj',
+    '5 crt major',
+    '5 suit major',
+    '5+ majors',
+    'major suit 5-carder',
+    '5 c mjrs',
+    '5 card majör',
+    '5 crds majors',
+    '5 major',
+    '5cd mjr',
+    'mayor quinto',
     'mayor quinto (5th)',
     'majeure 5èmè',
     'nobili 5',
+    '5 majör',
     'open 5-card major',
     'quinta nobile',
     'quinte nobili',
@@ -47,6 +64,7 @@ my %MULTI_TYPOS =
     '5 cd mjrs',
     '5 cd mjrs',
     '5 crd m',
+    '5c major',
     '5 nob',
     '5 nobile',
     '5 ème maj',
@@ -366,6 +384,10 @@ my %MULTI_TYPOS =
     'prec power',
     'prec. cl'],
   'Standard American' => [
+    'stnrd amer. bidding',
+    'american bidding syatem',
+    'american standard',
+    'american bidding system',
     'std american',
     'america std',
     'american standard bridge rules',
@@ -374,6 +396,7 @@ my %MULTI_TYPOS =
   'Standard French' => [
     'syst.français',
     'system francais',
+    'standard francais',
 
     '5 cart majeur',
     '5 cartes en majeur',
@@ -522,7 +545,8 @@ my %MULTI_TYPOS =
     '2/1gf',
     '2/1system by mike lawrence',
     '2over 1',
-    '2 over 1'],
+    '2 over 1',
+    'mod 2\\1'],
   'UK ACOL' => [
     '4 card major acol',
     '4 open acol',
@@ -573,6 +597,10 @@ my %SINGLE_TYPOS =
     '5cardmaj', 
     '5cardmajor', 
     '5crd',
+    '5cm',
+    '5m',
+    '5maj',
+    '5major',
     'maj5card',
     'mjrsfive'],
   Precision => [
@@ -583,6 +611,8 @@ my %SINGLE_TYPOS =
   SAYC => [
     'sayac',
     'stdam'],
+  'Standard American' => [
+    'amstd'],
   'Standard French' => [
     'sef', 
     'sef12'],

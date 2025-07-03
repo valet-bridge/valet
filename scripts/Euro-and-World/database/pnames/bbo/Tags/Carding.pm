@@ -13,8 +13,13 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
-  'even-odd',
-  'high-low',
+  'Even-Odd',
+  '3rd/5th Against Suit',
+  '4th Against NT',
+  '2nd/4th Best',
+  'Direct Discards',
+  'Foster Echo',
+  'High-Low',
   'Italian Discards',
   'Italian Signals',
   'Smith Echo',
@@ -22,7 +27,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'even-odd' => [
+  'Even-Odd' => [
     'compte en pair-impair',
     'def en pair impair',
     'déf. italien',
@@ -62,7 +67,39 @@ my %MULTI_TYPOS =
     'sign pair-impair',
     'tout en pair impair',
     'tout pair-impair'],
-  'high-low' => [
+  '2nd/4th Best' => [
+    '2/4 lead',
+    '2/4 leads',
+    'lead 2/4',
+    '4th lead'],
+  '3rd/5th Against Suit' => [
+    '3&5 vs suit',
+    '3./5. vs suit',
+    'lead 3/5',
+    'lead 3-5',
+    '3/5 against suit',
+    '3/5 against suits',
+    '3/5 at suits',
+    '3/5 suit',
+    'suit 3/5'],
+  '4th Against NT' => [
+    '2./4. vs nt',
+    'for Nt best 4',
+    '2/4 ag. nt',
+    '24nt',
+    '4th best at nt',
+    '4th for nt',
+    '4th nt',
+    '4th vs nt',
+    'nt 2/4',
+    'nt best 4 o 2 witho. honor'],
+  'Direct Discards' => [
+    'apl dir',
+    'appel direct',
+    'appel direct coul',
+    'pet prom',
+    'petit ap'],
+  'High-Low' => [
     'discards high /encour',
     'encourige with high',
     'enc-high',
@@ -134,6 +171,7 @@ my %MULTI_TYPOS =
     'signalling is high- low for attit./quant',
     'std carding high'],
   'Italian Discards' => [
+    'rom.-lv',
     '1 def italiene',
     '1 defausse italienne',
     '1 déf ital',
@@ -667,8 +705,8 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  'even-odd' => ['pairimpair'],
-  'high-low' => ['highenc'],
+  'Even-Odd' => ['pairimpair'],
+  'High-Low' => ['highenc'],
   Lavinthal => [
     'lav',
     'lavantal',

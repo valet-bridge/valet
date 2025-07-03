@@ -14,8 +14,10 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Fourth Suit Forcing',
+  'Inverted Minors',
   'Kokish Game Try',
   'Limit Raise',
+  'Mini-Splinter',
   'Negative Double',
   'New Minor Forcing',
   'Weak Jump Shift',
@@ -24,9 +26,17 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Fourth Suit Forcing' => [
+    '4 sgf',
     '4th suit force'],
   Josephine => [
     'josephin 5nt'],
+  'Inverted Minors' => [
+    'inv-min',
+    'inv. minor',
+    'inv min',
+    'inv mnr',
+    'inv ms',
+    'inv.m'],
   'Kokish Game Try' => [
     'kokish hsgt',
     'kokish trial bids',
@@ -97,6 +107,11 @@ my %MULTI_TYPOS =
     'saltos limitados',
     ],
   'Negative Double' => [
+    'ktr neg do 3s',
+    'neg.dbl up to 2 sp',
+    'negdoub',
+    'ngtf dbl',
+
     'dbls. neg.4h',
     'doblo neg',
     'doblo negativo',
@@ -271,6 +286,8 @@ my %SINGLE_TYPOS =
     'limitraises', 'limrsq'],
   'Kokish Game Try' => [
     'kokishgametry'],
+  'Mini-Splinter' => [
+    'minispl'],
   Namyats => [
     'namats',
     'namia',

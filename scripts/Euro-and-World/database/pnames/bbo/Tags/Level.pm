@@ -50,7 +50,8 @@ my %SINGLE_TYPOS =
     'good', 'learner', 'learning',
     'interm', 'intermed', 'intermediaire', 'intermediate',
     'intermediates', 'intermedio',
-    'sofistike', 'still.learning@home' ],
+    'sofistike', 'still.learning@home',
+    'strong improving intermediate'],
   'Life Master' => ['lifemaster'],
 );
 

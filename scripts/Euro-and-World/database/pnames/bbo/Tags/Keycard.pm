@@ -20,6 +20,10 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Keycard Responses' => [
+    '3-0,1-4 2 0',
+    '0 3 1 4 2q',
+    '0or3,1or4,2-0',
+    'o-3 1-4 aces',
     '0.3 1.4 2.2 +d',
     '01234 rispond a and k',
     '04/1/2/3',
@@ -234,6 +238,7 @@ my %MULTI_TYPOS =
     'minör wood',
     'mn wood'],
   'Roman Keycard' => [
+    '4ba na 5w14 o3 25+d atu',
     'k.c.b',
     '(kb)rkc',
     '4nt kc',
@@ -242,6 +247,7 @@ my %MULTI_TYPOS =
     '4sa = rkc',
     '4sa rkcb',
     'bk5 cles',
+    'black14 03 25 na 5+q',
     'blackhood',
     'blackw',
     'blackwood romano',
@@ -260,14 +266,14 @@ my %MULTI_TYPOS =
     'eroman blackwood',
     'even roman key card blackwood',
     'kc',
-    'kcb 0314',
-    'kcb 143',
+    'kcb',
     'no play rkc',
     'no rkc',
     'no rkcb',
     'no roman key ca',
     'only4nt rkc',
     'r kc',
+    'r.k.card',
     'rcb',
     'reg blckwd',
     'rk blackwood',

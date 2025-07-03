@@ -16,6 +16,57 @@ use lib '.';
 use lib './Email';
 use lib '..';
 
+my %PUNCTUATION =
+(
+  '-' => 'DASH',
+  '+' => 'PLUS',
+  '.' => 'POINT',
+  '?' => 'QUESTION',
+  '_' => 'UNDERSCORE',
+  ',' => 'COMMA',
+  ':' => 'COLON',
+  ';' => 'SEMICOLON',
+  '=' => 'EQUAL',
+  '&' => 'AMPERSAND',
+  '@' => 'AT_SIGN',
+  '#' => 'HASH',
+  '*' => 'ASTERISK',
+  '%' => 'PERCENT',
+  '$' => 'DOLLAR',
+  '^' => 'CARET',
+  '~' => 'TILDE',
+  '"' => 'DOUBLEQUOTE',
+  '/' => 'SLASH',
+  '\\' => 'BACKSLASH',
+  '(' => 'PAREN_LEFT',
+  ')' => 'PAREN_RIGHT',
+  '<' => 'LESS_THAN',
+  '>' => 'GREATER_THAN',
+  '|' => 'PIPE',
+  '[' => 'SQUARE_LEFT',
+  ']' => 'SQUARE_RIGHT',
+  '{' => 'CURLY_LEFT',
+  '}' => 'CURLY_RIGHT',
+);
+
+my @UNIT_TAGS = qw(
+  DENOMINATIONS
+  DENOMINATIONS_FRA
+  DENOMINATIONS_GER
+  LENGTHS
+  LENGTHS_FRA
+  LENGTHS_GER
+  RANKS
+  RANKS_FRA
+  RANKS_GER
+  SHAPES
+  STRENGTHS
+  STRENGTHS_FRA
+  STRENGTHS_GER
+
+  STAYMAN
+);
+
 my @TAG_ORDER = qw(
   BASES
   OPENINGS
@@ -142,6 +193,10 @@ use WholeBBO;
 my $whole = WholeBBO->new();
 $whole->init_hashes;
 
+use WholeBBO2;
+my $whole2 = WholeBBO2->new();
+$whole2->init_hashes;
+
 use Chain;
 use Token;
 use Util;
@@ -200,8 +255,12 @@ for my $paragraph (@paragraphs)
 
   for my $entry (@{$paragraph->{LINES}})
   {
-    # Try to split lines into pieces.
-    if (parse_by_separator($whole, $entry, ','))
+    my $chain = Chain->new();
+    my @chains;
+    push @chains, $chain;
+
+    if (study_line($whole2, \@UNIT_TAGS, $entry, \@chains, 
+      $histo, \%chain_stats))
     {
       next;
     }
@@ -212,9 +271,41 @@ for my $paragraph (@paragraphs)
   # structure_paragraph($whole, $paragraph);
   
   # Look at sub-chains where important system stuff has been found.
-  sub_system_chains($whole, $paragraph,
-    $handle_counts{$paragraph->{HANDLE}}, \%chain_stats);
+  # sub_system_chains($whole, $paragraph,
+    # $handle_counts{$paragraph->{HANDLE}}, \%chain_stats);
 }
+
+printf("Lines %10d\n", $chain_stats{DATA});
+printf("Parts %10d\n\n", $chain_stats{PARTS});
+
+print "Categories\n\n";
+my $ssum = 0;
+for my $cat (sort keys %{$chain_stats{CATEGORIES}})
+{
+  printf("%-20s%8d\n", $cat, $chain_stats{CATEGORIES}{$cat});
+  $ssum += $chain_stats{CATEGORIES}{$cat};
+}
+printf("\n%20s%8d\n", "Sum", $ssum);
+
+print "\nWords\n\n";
+$ssum = 0;
+for my $word (sort keys %{$chain_stats{WORDS}})
+{
+  printf("%-20s%8d\n", $word, $chain_stats{WORDS}{$word});
+  $ssum += $chain_stats{WORDS}{$word};
+}
+printf("\n%20s%8d\n", "Sum", $ssum);
+
+print "High words\n\n";
+$ssum = 0;
+for my $word (sort keys %{$chain_stats{HIGH_WORDS}})
+{
+  printf("%-20s%8d\n", $word, $chain_stats{HIGH_WORDS}{$word});
+  $ssum += $chain_stats{HIGH_WORDS}{$word};
+}
+printf("\n%20s%8d\n", "Sum", $ssum);
+
+exit;
 
 print "Chains ", $chain_stats{CHAINS}, "\n\n";
 my $sum = 0;
@@ -1088,95 +1179,160 @@ sub sub_system_chains
 }
 
 
-sub parse_text_by_separator
+sub lines_to_list
 {
-  my ($whole, $category, $text, $sep) = @_;
-
-  return 0 unless $category eq 'OPEN' || $category eq 'SYSTEM';
-
-  my @pieces = split /$sep/, $text;
-  return unless #pieces >= 2;
-
-  my $num = 0;
-  my $hits = 0;
-  for my $piece (@pieces)
-  {
-    my $chain = Chain->new();
-    make_chain($whole, $piece, $chain);
-    $chain_stats->{CHAINS}++;
-    my %profile;
-    make_chain_profile($chain, \%profile);
-
-    $num++;
-    if ($chain->last() == 0 &&
-        exists $SYSTEM_TAGS_HASHT{ get_token_tag($chain->check_out($i)) })
-    {
-      $hits++;
-    }
-  }
-
-  if ($hits == $num)
-  {
-    return 1;
-  }
-  elsif ($num >= 3 && $hits+1 == $num)
-  {
-    # TODO Show the problem
-    return 1;
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-
-sub parse_entry_by_separators
-{
-  my ($whole, $entry) = @_;
+  my ($entry, $list) = @_;
 
   if ($entry->{CATEGORY} eq 'LIST')
   {
     my $len = $#{$entry->{LIST}};
     for (my $i = 0; $i <= $len; $i += 2)
     {
-      my $parsed = 0;
-      for my $sep (qw(, ;))
+      if ($entry->{LIST}[$i] eq 'OPEN' || 
+          $entry->{LIST}[$i] eq 'SYSTEM')
       {
-        if (parse_text_by_separator($whole, 
-          $entry->{LIST}[$i], $entry->{LIST}[$i+1], $sep))
-        {
-          $parsed = 1;
-          last;
-        }
-      }
-
-      if ($parsed)
-      {
-        $entry->{LIST}[$i] = 'PARSED_SYSTEM';
+        push @$list, $entry->{LIST}[$i+1];
       }
     }
+  }
+  elsif ($entry->{CATEGORY} eq 'OPEN' || $entry->{CATEGORY} eq 'SYSTEM')
+  {
+    my $datum = $entry->{VALUE} // $entry->{TEXT};
+    push @$list, $datum;
+  }
+}
+
+
+sub push_unit
+{
+  my ($units, $category, $text, $value, $pos, $chain_stats) = @_;
+
+  push @$units, [ CATEGORY => $category, TEXT => $text, 
+    VALUE => $value, POS => $pos ];
+
+  if ($category eq 'WORD')
+  {
+    $chain_stats->{WORDS}{$value}++;
+  }
+  elsif ($category eq 'HIGH_WORD')
+  {
+    $chain_stats->{HIGH_WORDS}{$value}++;
   }
   else
   {
-    my $datum = $entry->{VALUE} // $entry->{TEXT};
-    my $parsed = 0;
-    for my $sep (qw(, ;))
+    $chain_stats->{CATEGORIES}{$category}++;
+  }
+}
+
+
+sub list_to_units
+{
+  my ($whole, $unit_tags, $list, $units, $histo, $chain_stats) = @_;
+
+  for my $datum (@$list)
+  {
+    $chain_stats->{DATA}++;
+
+    if ($datum =~ /#fake@/)
     {
-      if (parse_text_by_separator($whole, 
-        $entry->{CATEGORY}, $datum, $sep))
-        {
-          $parsed = 1;
-          last;
-        }
-      }
+      push_unit($units, 'FLUFF', $datum, $datum, 0, $chain_stats);
+      return;
     }
 
-    if ($parsed)
+    my $sep = qr/(\d+|[\s\-\+\.\?_,:;=&@#*%\$^~"\/\\()<>|\[\]\{\}])/;
+    my @parts = grep { $_ ne '' } split /$sep/, $datum;
+
+    my $pos = 0;
+    for my $part (@parts)
     {
-      $entry->{LIST}[$i] = 'PARSED_SYSTEM';
+      $chain_stats->{PARTS}++;
+      if (exists $PUNCTUATION{$part})
+      {
+        push_unit($units, 'PUNCTUATION', $part, $PUNCTUATION{$part},
+          $pos, $chain_stats);
+      }
+      elsif ($part eq ' ')
+      {
+        push_unit($units, 'PUNCTUATION', $part, 'SPACE',
+          $pos, $chain_stats);
+      }
+      elsif ($part =~ /^\d+$/)
+      {
+        if ($part ne '0' && $part =~ /^0/)
+        {
+          push_unit($units, 'INT_TEXTISH', $part, $part, 
+            $pos, $chain_stats);
+        }
+        elsif ($part >= 1 && $part <= 7)
+        {
+          push_unit($units, 'INT_SMALL', $part, $part, 
+            $pos, $chain_stats);
+        }
+        elsif ($part <= 40)
+        {
+          push_unit($units, 'INT_MEDIUM', $part, $part, 
+            $pos, $chain_stats);
+        }
+        else
+        {
+          push_unit($units, 'INT_LARGE', $part, $part, 
+            $pos, $chain_stats);
+        }
+      }
+      elsif ($part =~ /^[A-Za-z'`!]+$/)
+      {
+        my $found = 0;
+        for my $unit_tag (@$unit_tags)
+        {
+          my $fix = $whole->get_single($unit_tag, lc($part));
+          next unless defined $fix->{CATEGORY};
+
+          my $tag = $fix->{CATEGORY};
+          push_unit($units, $tag, $part, $fix->{VALUE}, 
+            $pos, $chain_stats);
+          $found = 1;
+          last;
+        }
+
+        if (! $found)
+        {
+          # TODO If it has ', ` or !, 
+          # we can look for a multi-word match.
+          push_unit($units, 'WORD', $part, $part, $pos, $chain_stats);
+        }
+      }
+      else
+      {
+        my $ascii = ($part =~ tr/\x00-\x7E//);
+        my $total = length($part);
+        my $high = $total - $ascii;
+
+        if ($high == 0)
+        {
+           # All ASCII.
+           print "WARN $datum|$part, $pos: Should not happen\n";
+        }
+        else
+        {
+          push_unit($units, 'HIGH_WORD', $part, $part, $pos, $chain_stats);
+        }
+      }
+      $pos++;
     }
   }
+}
+
+
+sub study_line
+{
+  my ($whole, $unit_tags, $entry, $chains, $histo, $chain_stats) = @_;
+
+  my @list;
+  lines_to_list($entry, \@list);
+
+  my @units;
+  list_to_units($whole, $unit_tags, \@list, \@units, 
+    $histo, $chain_stats);
 }
 
 
