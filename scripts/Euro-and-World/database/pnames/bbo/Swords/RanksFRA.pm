@@ -27,9 +27,22 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   minor => [
-    'mineure'],
+    'mineu',
+    'mineur',
+    'mineure',
+    'mineures',
+    'mineurs',
+    'mineuure'],
   major => [
-    'majeure'],
+    'majeu',
+    'majeur',
+    'majeure',
+    'majeures',
+    'majeurex',
+    'majeurs',
+    'mjeur',
+    'mjeure',
+    'mjeurs'],
 );
 
 

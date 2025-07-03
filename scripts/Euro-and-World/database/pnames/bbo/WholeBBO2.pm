@@ -28,6 +28,13 @@ use Swords::Lengths;
 use Swords::LengthsFRA;
 use Swords::LengthsGER;
 
+use Swords::Bases;
+use Swords::Constructive;
+use Swords::Competitive;
+use Swords::Bergen;
+use Swords::Blackwood;
+use Swords::Misc;
+use Swords::Keycard;
 use Swords::Stayman;
 
 
@@ -51,6 +58,13 @@ my %TAGS =
   LENGTHS_FRA => \&Swords::LengthsFRA::set_hashes,
   LENGTHS_GER => \&Swords::LengthsGER::set_hashes,
 
+  BASES => \&Swords::Bases::set_hashes,
+  CONSTRUCTIVE => \&Swords::Constructive::set_hashes,
+  COMPETITIVE => \&Swords::Competitive::set_hashes,
+  BERGEN => \&Swords::Bergen::set_hashes,
+  BLACKWOOD => \&Swords::Blackwood::set_hashes,
+  MISC => \&Swords::Misc::set_hashes,
+  KEYCARD => \&Swords::Keycard::set_hashes,
   STAYMAN => \&Swords::Stayman::set_hashes,
 );
 

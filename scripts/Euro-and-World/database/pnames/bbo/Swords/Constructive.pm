@@ -1,0 +1,232 @@
+#!perl
+
+use strict;
+use warnings;
+use v5.10;
+use utf8;
+use open ':std', ':encoding(UTF-8)';
+
+package Swords::Constructive;
+
+our @ISA = qw(Exporter);
+our @EXPORT = qw(set_hashes);
+
+my @MULTI_WORDS =
+(
+);
+
+my %MULTI_TYPOS =
+(
+);
+
+my @SINGLE_WORDS = qw(
+  Gerber
+  Puppet
+  Smolen
+  Splinter
+);
+
+my %SINGLE_TYPOS =
+(
+  Gerber => [
+    'garbar',
+    'garber',
+    'gbr',
+    'gerb',
+    'gerba',
+    'gerbar',
+    'gerbe',
+    'gerbeer',
+    'gerber',
+    'gerbere',
+    'gerberg',
+    'gerberh',
+    'gerberl',
+    'gerberm',
+    'gerbern',
+    'gerberr',
+    'gerbers',
+    'gerbor',
+    'gerbr',
+    'gerbre',
+    'gerbrkc',
+    'gervber',
+    'gerver',
+    'grb',
+    'grbe',
+    'grber',
+    'grbr'],
+  Puppet => [
+    'ppt',
+    'pup',
+    'pupat',
+    'pupe',
+    'puped',
+    'pupeet',
+    'pupet',
+    'pupets',
+    'pupett',
+    'pupette',
+    'puphit',
+    'pupi',
+    'pupici',
+    'pupit',
+    'pupp',
+    'puppat',
+    'puppe',
+    'pupped',
+    'puppent',
+    'pupper',
+    'puppert',
+    'puppetbid',
+    'puppete',
+    'puppeth',
+    'puppetl',
+    'puppeto',
+    'puppeton',
+    'puppets',
+    'puppett',
+    'puppetto',
+    'puppis',
+    'puppit',
+    'puppnt',
+    'pupppet',
+    'pupprt',
+    'puppst',
+    'puppt',
+    'pupput',
+    'pupt',
+    'puput'],
+  Smolen => [
+    'sml',
+    'smlen',
+    'smll',
+    'smlln',
+    'smln',
+    'smloen',
+    'smlolen',
+    'smlon',
+    'smn',
+    'smo',
+    'smoelen',
+    'smol',
+    'smolan',
+    'smole',
+    'smoleen',
+    'smolem',
+    'smolen',
+    'smolene',
+    'smolenl',
+    'smolenm',
+    'smoleno',
+    'smolens',
+    'smoleon',
+    'smolian',
+    'smolien',
+    'smolin',
+    'smoll',
+    'smolle',
+    'smollen',
+    'smoln',
+    'smoloen',
+    'smolon',
+    'smolun',
+    'smomlen',
+    'smon',
+    'smonel'],
+  Splinter => [
+    'spl',
+    'spleeder',
+    'spleinters',
+    'splent',
+    'splenter',
+    'spli',
+    'splid',
+    'splider',
+    'splihter',
+    'spliinter',
+    'splimter',
+    'splimters',
+    'splin',
+    'splinder',
+    'splinders',
+    'spliner',
+    'spliners',
+    'splinfer',
+    'splingt',
+    'splinnter',
+    'splinpter',
+    'splinr',
+    'splinrt',
+    'splinrts',
+    'splint',
+    'splintaire',
+    'splinte',
+    'splinter',
+    'splintera',
+    'splinterbid',
+    'splinterbids',
+    'splinterl',
+    'splinters',
+    'splintersers',
+    'splintery',
+    'splintes',
+    'splinthe',
+    'splintir',
+    'splintle',
+    'splintner',
+    'splintor',
+    'splintors',
+    'splintr',
+    'splintrs',
+    'splints',
+    'splintt',
+    'splintter',
+    'splintters',
+    'splionters',
+    'splir',
+    'split',
+    'spliter',
+    'spliters',
+    'splitnter',
+    'splitr',
+    'spllinter',
+    'spllnt',
+    'spllnter',
+    'spllnters',
+    'spln',
+    'splniter',
+    'splnr',
+    'splnt',
+    'splnter',
+    'splnters',
+    'splntr',
+    'splntrs',
+    'splntrt',
+    'splnts',
+    'splointer',
+    'splr',
+    'spls',
+    'splt',
+    'splter',
+    'splters',
+    'spltnr',
+    'spltr',
+    'spltrbid',
+    'spltrs',
+    'splts',
+    'splynter',
+    'spnter',
+    'spntr'],
+);
+
+
+sub set_hashes
+{
+  my ($method, $key) = @_;
+
+  $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
+    \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
+}
+
+1;
