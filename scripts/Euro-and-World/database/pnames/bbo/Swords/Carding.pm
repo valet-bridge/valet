@@ -20,6 +20,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  UDCA
   Lavinthal
 );
 
@@ -118,7 +119,28 @@ my %SINGLE_TYPOS =
     'lawintal',
     'lawinthal',
     'lawinthall',
-    'lawt'],
+    'lawt',
+    'leventhal',
+    'levent',
+    'levinthal'],
+  UDCA => [
+    'uda',
+    'udac',
+    'udc',
+    'udcad',
+    'udcal',
+    'udcard',
+    'udcarding',
+    'udcas',
+    'udce',
+    'uddc',
+    'udeca',
+    'udga',
+    'udica',
+    'udka',
+    'udlca',
+    'udsa',
+    'udsca'],
 );
 
 

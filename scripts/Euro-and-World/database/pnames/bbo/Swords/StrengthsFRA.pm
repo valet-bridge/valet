@@ -31,6 +31,7 @@ my %SINGLE_TYPOS =
     'faibles'],
   strong => [
     'fort',
+    'forte',
     'forts'],
 );
 

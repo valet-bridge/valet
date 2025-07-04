@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Swords::Denominations;
+package Swords::DenominationsITA;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
@@ -30,28 +30,27 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   clubs => [
-    '!c',
-    'club',
-    'treb',
-    'trebol',
-    'treboles',
-    'tref',
-    'treff',
-    'trefl'],
+    'fio',
+    'fior',
+    'fiore',
+    'fiori'],
   diamonds => [
-    '!d',
-    'diamond',
-    'karo'],
+    'quaadri',
+    'quad',
+    'quadi',
+    'quadr',
+    'quadri',
+    'quadrii',
+    'quadry'],
   hearts => [
-    '!h',
-    'heart',
-    'coeur'],
+    'cuor',
+    'cuore',
+    'cuori'],
   spades => [
-    '!s',
-    'spade',
-    'pik'],
-  notrump => [
-    'nt'],
+    'picce',
+    'picch',
+    'picche',
+    'piccche'],
 );
 
 
