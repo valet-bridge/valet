@@ -128,6 +128,34 @@ my %SYSTEM_TAGS_HASH =
   CARDING => 1,
 );
 
+my @NOTRUMP_FWD_LIKE = qw(int ntp ntr nts sa sin sn snt);
+my %NOTRUMP_FWD_LIKE_HASH;
+$NOTRUMP_FWD_LIKE_HASH{$_} = 1 for @NOTRUMP_FWD_LIKE;
+
+my %NOTRUMP_FWD_TWO_LIKE_HASH =
+(
+  n => { t => 1, trump => 1 },
+  no => { trump => 1 },
+  s => { t => 1 }
+);
+
+my @NOTRUMP_BWD_LIKE = qw(int n ntp ntr nts sa sans senza sn snt);
+my %NOTRUMP_BWD_LIKE_HASH;
+$NOTRUMP_BWD_LIKE_HASH{$_} = 1 for @NOTRUMP_BWD_LIKE;
+
+my %NOTRUMP_BWD_TWO_LIKE_HASH =
+(
+  atout => { sans => 1},
+  t => { n => 1, s => 1},
+  trump => { no => 1 },
+  trumps => { no => 1 }
+);
+
+
+my @POINTS_LIKE = qw(p ph ps ptsnt pys);
+my %POINTS_LIKE_HASH;
+$POINTS_LIKE_HASH{$_} = 1 for @POINTS_LIKE;
+
 my %SEMANTIC_HASH;
 $SEMANTIC_HASH{$_} = 1 for @SEMANTIC_TAGS;
 
@@ -1216,8 +1244,8 @@ sub push_unit
 {
   my ($units, $category, $text, $value, $pos, $chain_stats) = @_;
 
-  push @$units, [ CATEGORY => $category, TEXT => $text, 
-    VALUE => $value, POS => $pos ];
+  push @$units, { CATEGORY => $category, TEXT => $text, 
+    VALUE => $value, POS => $pos };
 
   if ($category eq 'WORD')
   {
@@ -1332,6 +1360,233 @@ sub list_to_units
 }
 
 
+sub print_unit_range
+{
+  my ($units, $uno_lower, $uno_upper, $text) = @_;
+
+  my $u0 = ($uno_lower < 0 ? 0 : $uno_lower);
+  my $u1 = ($uno_upper > $#$units ? $#$units : $uno_upper);
+
+  my $merge = '';
+  for my $no ($u0 .. $u1)
+  {
+    $merge .= $units->[$no]{TEXT};
+  }
+
+  my $d0 = ($u0 == 0 ? '|' : '.');
+  my $d1 = ($u1 == $#$units ? '|' : '.');
+  print "$text: $d0$merge$d1\n";
+}
+
+
+sub find_first_equal_anywhere
+{
+  my ($units, $category, $value) = @_;
+
+  for my $no (0 .. $#$units)
+  {
+    if ($units->[$no]{CATEGORY} eq $category &&
+        $units->[$no]{VALUE} eq $value)
+    {
+      return $no;
+    }
+  }
+
+  return -1;
+}
+
+
+sub find_first_equal_forward
+{
+  my ($units, $start, $category, $value, $positives) = @_;
+
+  for my $no ($start .. $#$units)
+  {
+    my $unit = $units->[$no];
+    my $cat = $unit->{CATEGORY};
+    my $val = $unit->{VALUE};
+
+    if ($cat eq $category)
+    {
+      return ($val eq $value ? $no : -1);
+    }
+    elsif ($cat eq 'WORD')
+    {
+      if (exists $positives->{lc($val)})
+      {
+        return $no;
+      }
+      else
+      {
+        print "HOWABOUT_FWD $value: $val\n";
+        return -1;
+      }
+    }
+    elsif ($cat ne 'PUNCTUATION')
+    {
+      # Contradiction.
+      return -1;
+    }
+  }
+
+  # Reached the end.
+  return -2;
+}
+
+
+sub find_first_equal_backward
+{
+  my ($units, $start, $category, $value, $positives) = @_;
+
+  for my $no (reverse 0 .. $start)
+  {
+    my $unit = $units->[$no];
+    my $cat = $unit->{CATEGORY};
+    my $val = $unit->{VALUE};
+
+    if ($cat eq $category)
+    {
+      return ($val eq $value ? $no : -1);
+    }
+    elsif ($cat eq 'WORD')
+    {
+      if (exists $positives->{lc($val)})
+      {
+        return $no;
+      }
+      else
+      {
+        print "HOWABOUT_BWD $value: $val\n";
+        return -1;
+      }
+    }
+    elsif ($cat ne 'PUNCTUATION')
+    {
+      # Contradiction.
+      return -1;
+    }
+  }
+
+  # Reached the end.
+  return -2;
+}
+
+
+sub find_first_range_forward
+{
+  my ($units, $start, $category, $lower, $upper) = @_;
+
+  for my $no ($start .. $#$units)
+  {
+    my $unit = $units->[$no];
+    my $cat = $unit->{CATEGORY};
+    my $val = $unit->{VALUE};
+
+    if ($cat eq 'WORD')
+    {
+      return -1 unless ($val eq 'to' || $val eq 'a');
+    }
+    elsif ($cat eq 'HIGH_WORD')
+    {
+      return -1 unless ($val eq 'à');
+    }
+    elsif ($cat eq $category)
+    {
+      return ($val >= $lower && $val <= $upper ? $no : -1);
+    }
+    elsif ($cat ne 'PUNCTUATION')
+    {
+      # Contradiction.
+      return -1;
+    }
+  }
+
+  # Reached the end.
+  return -2;
+}
+
+
+sub look_for_nt_interval
+{
+  my ($units, $lower, $upper, $level) = @_;
+
+  my $anchor_lo = find_first_equal_anywhere($units,
+    'INT_MEDIUM', $lower);
+  return if $anchor_lo == -1;
+
+  my $anchor_hi = find_first_range_forward($units, $anchor_lo+1,
+    'INT_MEDIUM', $lower, $upper);
+  return if $anchor_hi < 0;
+
+  # So now we have a range.
+  my $pts = find_first_equal_forward($units, $anchor_hi+1,
+    'MISC', 'Points', \%POINTS_LIKE_HASH);
+
+  my $nt_seen = 0;
+  if ($pts == -2)
+  {
+    # Go to the end.
+    $anchor_hi = $#$units;
+  }
+  elsif ($pts >= 0)
+  {
+    $anchor_hi = $pts;
+  }
+  elsif ($pts == -1)
+  {
+    # In that case, look for NT.
+    my $nt = find_first_equal_forward($units, $anchor_hi+1,
+      'DENOMINATIONS', 'notrump', \%NOTRUMP_FWD_LIKE_HASH);
+    if ($nt == -2)
+    {
+      $anchor_hi = $#$units;
+    }
+    elsif ($nt >= 0)
+    {
+      $anchor_hi = $nt;
+      $nt_seen = 1;
+    }
+  }
+
+  if ($nt_seen)
+  {
+    print_unit_range($units, $anchor_lo, $anchor_hi, "FULL0");
+    return;
+  }
+
+  my $nt = find_first_equal_backward($units, $anchor_lo-1,
+      'DENOMINATIONS', 'notrump', \%NOTRUMP_BWD_LIKE_HASH);
+  if ($nt == -2)
+  {
+    $anchor_lo = 0;
+  }
+  elsif ($nt >= 0)
+  {
+    $anchor_lo = $nt;
+    $nt_seen = 1;
+  }
+  else
+  {
+    print_unit_range($units, $anchor_lo-2, $anchor_hi+2, "PARTIAL");
+    return;
+  }
+
+  my $lv = find_first_equal_backward($units, $anchor_lo-1,
+    'INT_SMALL', 1, {});
+
+  if ($lv == -2)
+  {
+    $anchor_lo = 0;
+  }
+  elsif ($lv >= 0)
+  {
+    $anchor_lo = $lv;
+  }
+
+  print_unit_range($units, $anchor_lo, $anchor_hi, "FULL1");
+}
+
+
 sub study_line
 {
   my ($whole, $unit_tags, $entry, $chains, $histo, $chain_stats) = @_;
@@ -1342,6 +1597,8 @@ sub study_line
   my @units;
   list_to_units($whole, $unit_tags, \@list, \@units, 
     $histo, $chain_stats);
+
+  look_for_nt_interval(\@units, 15, 20, 1);
 }
 
 

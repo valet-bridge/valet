@@ -51,7 +51,19 @@ my %SINGLE_TYPOS =
     'spade',
     'pik'],
   notrump => [
-    'nt'],
+    '!nt',
+    'ba',
+    'notramp',
+    'nottramp',
+    'ntrump',
+    'nt',
+    'ntbal',
+    'sansatu',
+    'sanzato',
+    'sanzatu',
+    'sintriunfo',
+    'st',
+    'ut'],
 );
 
 
