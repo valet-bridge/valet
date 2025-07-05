@@ -1,3 +1,9 @@
+System lines:
+If 15-17 make it a range, so don't waste the work.
+But 13 15 16 17 should not become 15-16...
+
+
+
 Consolidate
 - CITY and EMAIL_CITY
 - COUNTRY and EMAIL_COUNTRY

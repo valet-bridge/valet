@@ -15,9 +15,6 @@ use lib '.';
 use lib './Swords';
 
 use Swords::Denominations;
-use Swords::DenominationsFRA;
-use Swords::DenominationsGER;
-use Swords::DenominationsITA;
 use Swords::Ranks;
 use Swords::RanksFRA;
 use Swords::RanksGER;
@@ -43,9 +40,6 @@ use Swords::Carding;
 my %TAGS =
 (
   DENOMINATIONS => \&Swords::Denominations::set_hashes,
-  DENOMINATIONS_FRA => \&Swords::DenominationsFRA::set_hashes,
-  DENOMINATIONS_GER => \&Swords::DenominationsGER::set_hashes,
-  DENOMINATIONS_ITA => \&Swords::DenominationsITA::set_hashes,
 
   RANKS => \&Swords::Ranks::set_hashes,
   RANKS_FRA => \&Swords::RanksFRA::set_hashes,
