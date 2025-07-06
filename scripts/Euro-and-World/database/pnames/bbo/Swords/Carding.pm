@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Reverse Smith',
 );
 
 my %MULTI_TYPOS =
@@ -123,6 +124,9 @@ my %SINGLE_TYPOS =
     'leventhal',
     'levent',
     'levinthal'],
+  'Reverse Smith' => [
+    'revsmith',
+    'revsmithecho'],
   UDCA => [
     'uda',
     'udac',

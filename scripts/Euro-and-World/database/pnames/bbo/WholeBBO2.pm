@@ -27,6 +27,7 @@ use Swords::LengthsFRA;
 use Swords::LengthsGER;
 
 use Swords::Bases;
+use Swords::Openings;
 use Swords::Constructive;
 use Swords::Competitive;
 use Swords::Bergen;
@@ -56,6 +57,7 @@ my %TAGS =
   LENGTHS_GER => \&Swords::LengthsGER::set_hashes,
 
   BASES => \&Swords::Bases::set_hashes,
+  OPENINGS => \&Swords::Openings::set_hashes,
   CONSTRUCTIVE => \&Swords::Constructive::set_hashes,
   COMPETITIVE => \&Swords::Competitive::set_hashes,
   BERGEN => \&Swords::Bergen::set_hashes,

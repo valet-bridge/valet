@@ -63,6 +63,7 @@ my @UNIT_TAGS = qw(
   STRENGTHS_GER
 
   BASES
+  OPENINGS
   CONSTRUCTIVE
   COMPETITIVE
   BLACKWOOD
@@ -76,6 +77,7 @@ my @UNIT_TAGS = qw(
 my %CERTAIN_WORDS =
 (
   BASES => 1,
+  OPENINGS => 1,
   CONSTRUCTIVE => 1,
   COMPETITIVE => 1,
   BLACKWOOD => 1,
@@ -244,6 +246,7 @@ use WholeBBO2;
 my $whole2 = WholeBBO2->new();
 $whole2->init_hashes;
 
+use Caps;
 use Chain;
 use Token;
 use Util;
@@ -1386,6 +1389,12 @@ sub list_to_units
         {
           # TODO If it has ', ` or !, 
           # we can look for a multi-word match.
+
+          # my $splits;
+          # if (Caps::split_on_caps($part))
+          # {
+          # }
+
           push_unit($units, 'WORD', $part, $part, $pos, $chain_stats);
         }
       }
@@ -1867,6 +1876,21 @@ sub look_for_nt_interval
 }
 
 
+sub look_for_5c_major
+{
+  my ($units, $chain_stats) = @_;
+
+  my $anchor = find_first_equal_anywhere($units, 'INT_SMALL', 5);
+  return if $anchor == -1;
+
+  my $prev = find_previous_substantial($units, $anchor-1);
+  my $next = find_next_substantial($units, $anchor+1);
+
+  print("XPREV ", $units->[$prev]{VALUE}, "\n") if $prev >= 0;
+  print("XNEXT ", $units->[$next]{VALUE}, "\n") if $next >= 0;
+}
+
+
 sub study_line
 {
   my ($whole, $unit_tags, $entry, $chains, $histo, $chain_stats) = @_;
@@ -1878,7 +1902,10 @@ sub study_line
   list_to_units($whole, $unit_tags, \@list, \@units, 
     $histo, $chain_stats);
 
-  look_for_nt_interval(\@units, 15, 20, 1, $chain_stats);
+  look_for_5c_major(\@units, $chain_stats);
+
+  # look_for_nt_interval(\@units, 15, 20, 1, $chain_stats);
+  # look_for_nt_interval(\@units, 20, 23, 2, $chain_stats);
 }
 
 
