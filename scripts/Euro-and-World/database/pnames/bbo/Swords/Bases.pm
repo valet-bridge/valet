@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Blue Club',
   'Better Minor',
   'Convenient Minor',
+  'Five Card Major',
   'German Forum D',
   'Magic Diamond',
   'Polish ACOL',
@@ -25,6 +26,7 @@ my @MULTI_WORDS =
   'Power Precision',
   'Standard American',
   'Standard Italian',
+  'Two Over One',
 );
 
 my %MULTI_TYPOS =
@@ -155,6 +157,8 @@ my %SINGLE_TYPOS =
   'Standard Italian' => [
     'standardbboitalia',
     'standarditalia'],
+  'Two Over One' => [
+    '2/1'],
 );
 
 

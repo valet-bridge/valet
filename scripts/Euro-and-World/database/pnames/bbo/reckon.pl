@@ -52,11 +52,7 @@ my %PUNCTUATION =
 my @UNIT_TAGS = qw(
   DENOMINATIONS
   LENGTHS
-  LENGTHS_FRA
-  LENGTHS_GER
   RANKS
-  RANKS_FRA
-  RANKS_GER
   SHAPES
   STRENGTHS
   STRENGTHS_FRA
@@ -162,6 +158,25 @@ my %NOTRUMP_BWD_TWO_LIKE_HASH =
   trump => { no => 1 },
   trumps => { no => 1 }
 );
+
+# The next four are used to find "5-card majors".
+my @CARDS_LIKE = qw(çrd ca car ccrd c cort cr crs cs cts
+  k karr kkrt ko korst kr);
+my %CARDS_LIKE_HASH;
+$CARDS_LIKE_HASH{$_} = 1 for @CARDS_LIKE;
+
+my @MAJOR_LIKE = qw(hs m ma mai may mg mgr mig mm moj mr ms
+  sh m's naijor naj nb mobile nobl noble);
+my %MAJOR_LIKE_HASH;
+$MAJOR_LIKE_HASH{$_} = 1 for @MAJOR_LIKE;
+
+my @CARDS_MAJOR_LIKE = qw(km crm crdsm);
+my %CARDS_MAJOR_LIKE;
+$CARDS_MAJOR_LIKE{$_} = 1 for @CARDS_MAJOR_LIKE;
+
+my @ORDINAL_LIKE = qw(a in en);
+my %ORDINAL_LIKE_HASH;
+$ORDINAL_LIKE_HASH{$_} = 1 for @ORDINAL_LIKE;
 
 
 my @POINTS_LIKE = qw(p ph ps ptsnt pys);
@@ -1370,8 +1385,10 @@ sub list_to_units
             $pos, $chain_stats);
         }
       }
-      elsif ($part =~ /^[A-Za-z'`!]+$/)
+      else
       {
+        # Look in the tables, even for non-ASCII parts.
+
         my $found = 0;
         for my $unit_tag (@$unit_tags)
         {
@@ -1387,33 +1404,28 @@ sub list_to_units
 
         if (! $found)
         {
-          # TODO If it has ', ` or !, 
-          # we can look for a multi-word match.
+          my $ascii = ($part =~ tr/\x00-\x7E//);
+          my $total = length($part);
+          my $high = $total - $ascii;
+
+          if ($high == 0)
+          {
+            # All ASCII.
+            push_unit($units, 'WORD', $part, $part, $pos, $chain_stats);
+          }
+          else
+          {
+            push_unit($units, 'HIGH_WORD', $part, $part, $pos, 
+              $chain_stats);
+          }
 
           # my $splits;
           # if (Caps::split_on_caps($part))
           # {
           # }
-
-          push_unit($units, 'WORD', $part, $part, $pos, $chain_stats);
         }
       }
-      else
-      {
-        my $ascii = ($part =~ tr/\x00-\x7E//);
-        my $total = length($part);
-        my $high = $total - $ascii;
 
-        if ($high == 0)
-        {
-           # All ASCII.
-           print "WARN $datum|$part, $pos: Should not happen\n";
-        }
-        else
-        {
-          push_unit($units, 'HIGH_WORD', $part, $part, $pos, $chain_stats);
-        }
-      }
       $pos++;
     }
   }
@@ -1880,14 +1892,101 @@ sub look_for_5c_major
 {
   my ($units, $chain_stats) = @_;
 
+  # TODO Could keep looking, not just once.
   my $anchor = find_first_equal_anywhere($units, 'INT_SMALL', 5);
-  return if $anchor == -1;
 
-  my $prev = find_previous_substantial($units, $anchor-1);
+  if ($anchor == -1)
+  {
+    $anchor = find_first_equal_anywhere($units, 'WORD', 'five');
+    return if $anchor == -1;
+
+    print_unit_context($units, $anchor, $anchor, "PARTIAL1");
+  }
+
   my $next = find_next_substantial($units, $anchor+1);
+  return unless $next >= 0;
 
-  print("XPREV ", $units->[$prev]{VALUE}, "\n") if $prev >= 0;
+  my $value = $units->[$next]{VALUE};
+
+  if ($value eq 'Ordinal Indicator' || 
+      exists $ORDINAL_LIKE_HASH{$value})
+  {
+    # Skip over it.
+    $next = find_next_substantial($units, $next+1);
+    return unless $next >= 0;
+
+    $value = $units->[$next]{VALUE};
+  }
+
+  if ($value eq 'cards' || exists $CARDS_LIKE_HASH{$value} ||
+      exists $ORDINAL_LIKE_HASH{$value})
+  {
+    # Keep looking for Major.
+    $next = find_next_substantial($units, $next+1);
+    return unless $next >= 0;
+
+    $value = $units->[$next]{VALUE};
+    if ($value eq 'major' || exists $MAJOR_LIKE_HASH{$value})
+    {
+      collapse_units($units, $anchor, $next, 'BASES', 'Five Card Major',
+        $chain_stats);
+    }
+
+    return;
+  }
+  elsif ($value eq 'major' || exists $MAJOR_LIKE_HASH{$value})
+  {
+    # Keep looking for Cards.
+    my $base = $next;
+    $next = find_next_substantial($units, $next+1);
+    return unless $next >= 0;
+
+    $value = $units->[$next]{VALUE};
+    if ($value eq 'cards' || exists $CARDS_LIKE_HASH{$value})
+    {
+      collapse_units($units, $anchor, $next, 'BASES', 'Five Card Major',
+        $chain_stats);
+      return;
+    }
+
+    # If boxed in by sensible words, "5 Major" alone may be OK.
+    my $cat_next = $units->[$next]{CATEGORY};
+
+    my $prev = find_previous_substantial($units, $anchor-1);
+    my $cat_prev = '';
+    if ($prev >= 0)
+    {
+      $cat_prev = $units->[$prev]{CATEGORY};
+    }
+
+    if (($cat_next eq 'BERGEN' || $cat_next eq 'STAYMAN' ||
+        $cat_next eq 'CONSTRUCTIVE' || $cat_next eq 'COMPETITIVE' ||
+        $cat_next eq 'BLACKWOOD' || $cat_next eq 'KEYCARD') &&
+        ($prev < 0 || $cat_prev eq 'BASES'))
+    {
+      collapse_units($units, $anchor, $base, 'BASES', 'Five Card Major',
+        $chain_stats);
+      return;
+    }
+
+    # Might as well make a note in MISC for later.
+    collapse_units($units, $anchor, $base, 'MISC', 'Five Major',
+      $chain_stats);
+    return;
+  }
+  elsif ($value eq 'Card Major' || exists $CARDS_MAJOR_LIKE{$value})
+  {
+    collapse_units($units, $anchor, $next, 'BASES', 'Five Card Major',
+      $chain_stats);
+
+    return;
+  }
+
   print("XNEXT ", $units->[$next]{VALUE}, "\n") if $next >= 0;
+
+  # TODO Can also try our luck before.  And cinqieme, fifth as words.
+  # my $prev = find_previous_substantial($units, $anchor-1);
+  # print("XPREV ", $units->[$prev]{VALUE}, "\n") if $prev >= 0;
 }
 
 

@@ -16,15 +16,11 @@ use lib './Swords';
 
 use Swords::Denominations;
 use Swords::Ranks;
-use Swords::RanksFRA;
-use Swords::RanksGER;
 use Swords::Strengths;
 use Swords::StrengthsFRA;
 use Swords::StrengthsGER;
 use Swords::Shapes;
 use Swords::Lengths;
-use Swords::LengthsFRA;
-use Swords::LengthsGER;
 
 use Swords::Bases;
 use Swords::Openings;
@@ -41,20 +37,14 @@ use Swords::Carding;
 my %TAGS =
 (
   DENOMINATIONS => \&Swords::Denominations::set_hashes,
-
   RANKS => \&Swords::Ranks::set_hashes,
-  RANKS_FRA => \&Swords::RanksFRA::set_hashes,
-  RANKS_GER => \&Swords::RanksGER::set_hashes,
 
   STRENGTHS => \&Swords::Strengths::set_hashes,
   STRENGTHS_FRA => \&Swords::StrengthsFRA::set_hashes,
   STRENGTHS_GER => \&Swords::StrengthsGER::set_hashes,
 
   SHAPES => \&Swords::Shapes::set_hashes,
-
   LENGTHS => \&Swords::Lengths::set_hashes,
-  LENGTHS_FRA => \&Swords::LengthsFRA::set_hashes,
-  LENGTHS_GER => \&Swords::LengthsGER::set_hashes,
 
   BASES => \&Swords::Bases::set_hashes,
   OPENINGS => \&Swords::Openings::set_hashes,
