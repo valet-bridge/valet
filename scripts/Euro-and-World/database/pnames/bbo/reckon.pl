@@ -16,6 +16,8 @@ use lib '.';
 use lib './Email';
 use lib '..';
 
+my %INT_COUNTS;
+
 my %PUNCTUATION =
 (
   '-' => 'DASH',
@@ -369,6 +371,12 @@ for my $word (sort keys %{$chain_stats{HIGH_WORDS}})
   $ssum += $chain_stats{HIGH_WORDS}{$word};
 }
 printf("\n%20s%8d\n", "Sum", $ssum);
+
+print "\nIntegers\n\n";
+for my $k (sort {$a <=> $b} keys %INT_COUNTS)
+{
+  printf("%-16s%8d\n", $k, $INT_COUNTS{$k});
+}
 
 exit;
 
@@ -1990,6 +1998,68 @@ sub look_for_5c_major
 }
 
 
+sub get_number_streaks
+{
+  my ($units, $streaks) = @_;
+
+  my $streak_no = 0;
+  my $streak_flag = 0;
+
+  my $i = 0;
+  my $len = $#$units;
+  while ($i <= $len)
+  {
+    my $s = find_next_substantial($units, $i);
+    return if $s < 0;
+
+    my $cat = $units->[$s]{CATEGORY};
+    if ($cat eq 'INT_SMALL' || $cat eq 'INT_MEDIUM' ||
+        $cat eq 'INT_LARGE' || $cat eq 'INT_TEXTISH')
+    {
+      $streak_flag = 1;
+      push @{$streaks->[$streak_no]}, $s;
+    }
+    elsif ($streak_flag)
+    {
+      $streak_flag = 0;
+      $streak_no++;
+    }
+    $i = $s+1;
+  }
+}
+
+
+sub look_for_kc_responses
+{
+  my ($units, $chain_stats) = @_;
+
+  my @streaks;
+  get_number_streaks($units, \@streaks);
+
+  my $count = 0;
+  for my $streak (@streaks)
+  {
+    my $text = '';
+    for my $elem (@$streak)
+    {
+      my $v = $units->[$elem]{VALUE};
+      $INT_COUNTS{$v}++;
+      $text .= $v . ' ';
+    }
+    print "CAND $count: $text\n";
+    $count++;
+  }
+
+  if ($count)
+  {
+    print_unit_context($units, 0, $#$units, 'ORIG');
+    print "\n";
+  }
+
+}
+
+
+
 sub study_line
 {
   my ($whole, $unit_tags, $entry, $chains, $histo, $chain_stats) = @_;
@@ -2001,10 +2071,12 @@ sub study_line
   list_to_units($whole, $unit_tags, \@list, \@units, 
     $histo, $chain_stats);
 
-  look_for_5c_major(\@units, $chain_stats);
+  # look_for_5c_major(\@units, $chain_stats);
 
   # look_for_nt_interval(\@units, 15, 20, 1, $chain_stats);
   # look_for_nt_interval(\@units, 20, 23, 2, $chain_stats);
+
+  look_for_kc_responses(\@units, $chain_stats);
 }
 
 

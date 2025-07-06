@@ -157,8 +157,6 @@ my %SINGLE_TYPOS =
   'Standard Italian' => [
     'standardbboitalia',
     'standarditalia'],
-  'Two Over One' => [
-    '2/1'],
 );
 
 
