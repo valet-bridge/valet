@@ -263,6 +263,7 @@ use WholeBBO2;
 my $whole2 = WholeBBO2->new();
 $whole2->init_hashes;
 
+use Units;
 use Caps;
 use Chain;
 use Token;
