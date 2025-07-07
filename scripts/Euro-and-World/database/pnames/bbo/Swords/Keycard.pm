@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Keycard Responses',
 );
 
 my %MULTI_TYPOS =

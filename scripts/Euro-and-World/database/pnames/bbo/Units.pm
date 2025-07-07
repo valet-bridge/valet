@@ -85,6 +85,43 @@ sub push
 }
 
 
+sub decrement_stats
+{
+  # Not a class method.
+  my ($old_category, $old_value, $chain_stats) = @_;
+
+  if ($old_category eq 'WORD')
+  {
+    $chain_stats->{WORDS}{$old_value}--;
+  }
+  elsif ($old_category eq 'HIGH_WORD')
+  {
+    $chain_stats->{HIGH_WORDS}{$old_value}--;
+  }
+  else
+  {
+    $chain_stats->{CATEGORIES}{$old_category}--;
+  }
+}
+
+
+sub reslot
+{
+  my ($self, $index, $new_category, $new_value, $chain_stats) = @_;
+
+  my $new_text = '';
+  my $unit = $self->{UNITS}[$index];
+  my $category = $unit->{CATEGORY};
+  my $value = $unit->{VALUE};
+
+  decrement_stats($category, $value, $chain_stats);
+
+  $chain_stats->{CATEGORIES}{$new_category}++;
+  $self->{UNITS}[$index]{CATEGORY} = $new_category;
+  $self->{UNITS}[$index]{VALUE} = $new_value;
+}
+
+
 sub collapse
 {
   my ($self, $lower, $upper, $new_category, $new_value, $chain_stats) = @_;
@@ -97,18 +134,7 @@ sub collapse
     my $value = $unit->{VALUE};
     $new_text .= $unit->{TEXT};
 
-    if ($category eq 'WORD')
-    {
-      $chain_stats->{WORDS}{$value}--;
-    }
-    elsif ($category eq 'HIGH_WORD')
-    {
-      $chain_stats->{HIGH_WORDS}{$value}--;
-    }
-    else
-    {
-      $chain_stats->{CATEGORIES}{$category}--;
-    }
+    decrement_stats($category, $value, $chain_stats);
   }
 
   $chain_stats->{CATEGORIES}{$new_category}++;

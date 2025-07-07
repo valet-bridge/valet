@@ -1280,69 +1280,6 @@ sub lines_to_list
 }
 
 
-sub push_unit
-{
-  my ($units, $category, $text, $value, $pos, $chain_stats) = @_;
-
-  push @$units, { CATEGORY => $category, TEXT => $text, 
-    VALUE => $value, POS => $pos };
-
-  if ($category eq 'WORD')
-  {
-    $chain_stats->{WORDS}{$value}++;
-  }
-  elsif ($category eq 'HIGH_WORD')
-  {
-    $chain_stats->{HIGH_WORDS}{$value}++;
-  }
-  else
-  {
-    $chain_stats->{CATEGORIES}{$category}++;
-  }
-}
-
-
-sub collapse_units
-{
-  my ($units, $lower, $upper, 
-    $new_category, $new_value, $chain_stats) = @_;
-
-  my $new_text = '';
-  for my $no ($lower .. $upper)
-  {
-    my $unit = $units->[$no];
-    my $category = $unit->{CATEGORY};
-    my $value = $unit->{VALUE};
-    $new_text .= $unit->{TEXT};
-
-    if ($category eq 'WORD')
-    {
-      $chain_stats->{WORDS}{$value}--;
-    }
-    elsif ($category eq 'HIGH_WORD')
-    {
-      $chain_stats->{HIGH_WORDS}{$value}--;
-    }
-    else
-    {
-      $chain_stats->{CATEGORIES}{$category}--;
-    }
-  }
-
-  $chain_stats{CATEGORIES}{$new_category}++;
-  $units->[$lower]{CATEGORY} = $new_category;
-  $units->[$lower]{VALUE} = $new_value;
-  $units->[$lower]{TEXT} = $new_text;
-
-  return if $lower == $upper;
-
-  $units->[$lower]{POS} = $units->[$lower]{POS} . " to " . 
-    $units->[$upper]{POS};
-
-  splice(@$units, $lower+1, $upper - $lower);
-}
-
-
 sub list_to_units
 {
   my ($whole, $unit_tags, $list, $units, $histo, $chain_stats) = @_;
@@ -1661,7 +1598,13 @@ sub study_line
   # look_for_nt_interval($units, 15, 20, 1, $chain_stats);
   # look_for_nt_interval($units, 20, 23, 2, $chain_stats);
 
-  Sparse::KeyResp::look_for_responses($units, \%INT_COUNTS, $chain_stats);
+  my @streaks;
+  $units->get_number_streaks(\@streaks);
+
+  # The return value is the streak number, after which other
+  # streak contents will no longer be valid.
+  Sparse::KeyResp::look_for_responses($units, \@streaks,
+    \%INT_COUNTS, $chain_stats);
 }
 
 
