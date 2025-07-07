@@ -39,6 +39,30 @@ sub new
   return $self;
 }
 
+
+sub last
+{
+  my ($self, $index) = @_;
+  return $#{$self->{UNITS}};
+}
+
+
+sub category
+{
+  my ($self, $index) = @_;
+  die "Index $index out of bounds" unless $index <= $#{$self->{UNITS}};
+  return $self->{UNITS}[$index]{CATEGORY};
+}
+
+
+sub value
+{
+  my ($self, $index) = @_;
+  die "Index $index out of bounds" unless $index <= $#{$self->{UNITS}};
+  return $self->{UNITS}[$index]{VALUE};
+}
+
+
 sub push
 {
   my ($self, $category, $text, $value, $pos, $chain_stats) = @_;
@@ -61,7 +85,7 @@ sub push
 }
 
 
-sub collapse_units
+sub collapse
 {
   my ($self, $lower, $upper, $new_category, $new_value, $chain_stats) = @_;
 
