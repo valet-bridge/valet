@@ -25,6 +25,7 @@ my @SINGLE_WORDS = qw(
   Benjamin
   Bid
   Carding
+  Checkback
   Cuebid
   Defense
   Discard
@@ -136,6 +137,17 @@ my %SINGLE_TYPOS =
     'crdg',
     'crding',
     'crdng'],
+  Checkback => [
+    'chaback',
+    'chackb',
+    'chckb',
+    'chckbck',
+    'chckbk',
+    'checkb',
+    'checkback',
+    'chekback',
+    'chkback',
+    'chkbk'],
   Cuebid => [
     'cub',
     'cubbit',

@@ -13,11 +13,11 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Forcing NT',
   'Inverted Minors',
   'New Minor Forcing',
   'Jacoby 2NT',
   'Jacoby Transfers',
-  'Reverse Bergen',
   'Reverse Drury',
   'Texas Transfers',
 );
@@ -110,6 +110,20 @@ my %SINGLE_TYPOS =
     'flany',
     'flrannery',
     'flry'],
+  'Forcing NT' => [
+    'font',
+    'forcent',
+    'forcgnt',
+    'forcingnt',
+    'forcinnt',
+    'forcnt',
+    'fornt',
+    'forsingnt',
+    'forsnt',
+    'frcgnt',
+    'frcnt',
+    'frnt',
+    'frsnt'],
   Gerber => [
     'garbar',
     'garber',
@@ -467,16 +481,6 @@ my %SINGLE_TYPOS =
     'nmr',
     'nmrf',
     'nmsf'],
-  'Reverse Bergen' => [
-    'revber',
-    'revberg',
-    'revbergen',
-    'revbgraise',
-    'revbrg',
-    'revbrgn',
-    'revebergen',
-    'reverseberg',
-    'reversebergen'],
   'Reverse Drury' => [
     'revd',
     'revdr',

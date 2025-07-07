@@ -16,12 +16,14 @@ my @MULTI_WORDS =
   'Michaels Cuebid',
   'Multi Landy',
   'Negative Double',
+  'Responsive Double',
   'Stolen Bid',
   'Support Double',
   'Unusual NT',
   'Weak Jump',
   'Weak Jump Shift',
   'Weak Jump Overcall',
+  'Western Cuebid',
 );
 
 my %MULTI_TYPOS =
@@ -730,6 +732,13 @@ my %SINGLE_TYPOS =
     'multylandy',
     'multylen',
     'multylendy'],
+  'Responsive Double' => [
+    'respdb',
+    'respdbl',
+    'respronf',
+    'respx',
+    'respx\'s',
+    'resx'],
   'Stolen Bid' => [
     'stlnbd',
     'stlnbid',
@@ -856,6 +865,16 @@ my %SINGLE_TYPOS =
     'weakjumpovercall',
     'weakjumpovercl',
     'wjoc'],
+  'Western Cuebid' => [
+    'westcue',
+    'westerncue',
+    'westernq',
+    'westerq',
+    'westq',
+    'weternq',
+    'wstnq',
+    'wstq',
+    'wstrnqbids'],
 );
 
 

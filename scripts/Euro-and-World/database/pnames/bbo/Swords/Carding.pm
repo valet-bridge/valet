@@ -13,7 +13,9 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Lavinthal Against NT',
   'Reverse Smith',
+  'Standard Carding',
 );
 
 my %MULTI_TYPOS =
@@ -124,9 +126,50 @@ my %SINGLE_TYPOS =
     'leventhal',
     'levent',
     'levinthal'],
+  'Lavinthal Against NT' => [
+    'laventhalsa',
+    'lavesa',
+    'lavinsa',
+    'lavintalsa',
+    'lavintfornt',
+    'lavinthalnt',
+    'lavinthalonn',
+    'lavinthalonnt',
+    'lavinthalsa',
+    'lavintsa',
+    'lavnt',
+    'lavsa',
+    'levanthalsa',
+    'leventhsa',
+    'leventhalsa',
+    'leventsa',
+    'levinsa',
+    'levintalsa',
+    'levinthalsa',
+    'levsa'],
   'Reverse Smith' => [
     'revsmith',
     'revsmithecho'],
+  'Standard Carding' => [
+    'stancarding',
+    'standardsigs',
+    'standcard',
+    'standcarding',
+    'stdc',
+    'stdca',
+    'stdcard',
+    'stdcard\'s',
+    'stdcardg',
+    'stdcarding',
+    'stdcd',
+    'stdcding',
+    'stdcg',
+    'stdcrd',
+    'stdcrdg',
+    'stncard',
+    'stncrd',
+    'stndc',
+    'stndrdc'],
   UDCA => [
     'uda',
     'udac',

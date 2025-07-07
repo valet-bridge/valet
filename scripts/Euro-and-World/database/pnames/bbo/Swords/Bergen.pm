@@ -13,6 +13,8 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Bergen Raise',
+  'Reverse Bergen',
 );
 
 my %MULTI_TYPOS =
@@ -62,7 +64,36 @@ my %SINGLE_TYPOS =
     'brge',
     'brgen',
     'brgn',
-    'rberg'],
+    'brgr',
+    'regber',
+    'regberg'],
+  'Bergen Raise' => [
+    'bergenr',
+    'bergenraise',
+    'bergenraises',
+    'bergenriases',
+    'bergnrzs',
+    'bergr',
+    'bergrais',
+    'bergraise',
+    'bergraises',
+    'bergrise',
+    'berrai'],
+  'Reverse Bergen' => [
+    'bergenrev',
+    'bergrev',
+    'rberg',
+    'revber',
+    'revberg',
+    'revbergen',
+    'revbergn',
+    'revbgraise',
+    'revbrg',
+    'revbrgn',
+    'revebergen',
+    'reverseberg',
+    'reversebergen',
+    'rvberg'],
 );
 
 

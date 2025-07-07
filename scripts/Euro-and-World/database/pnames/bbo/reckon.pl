@@ -14,6 +14,7 @@ use Encode::Guess;
 
 use lib '.';
 use lib './Email';
+use lib './Caps';
 use lib './Sparse';
 use lib '..';
 
@@ -267,7 +268,8 @@ $whole2->init_hashes;
 use Units;
 use Sparse::KeyResp;
 
-use Caps;
+use CapSplit;
+use Deletions;
 use Chain;
 use Token;
 use Util;
@@ -1298,6 +1300,7 @@ sub list_to_units
     my @parts = grep { $_ ne '' } split /$sep/, $datum;
 
     my $pos = 0;
+    my @splits;
     for my $part (@parts)
     {
       $chain_stats->{PARTS}++;
@@ -1332,39 +1335,51 @@ sub list_to_units
       else
       {
         # Look in the tables, even for non-ASCII parts.
-
-        my $found = 0;
-        for my $unit_tag (@$unit_tags)
+        if (Caps::Deletions::present($part))
         {
-          my $fix = $whole->get_single($unit_tag, lc($part));
-          next unless defined $fix->{CATEGORY};
-
-          my $tag = $fix->{CATEGORY};
-          $units->push($tag, $part, $fix->{VALUE}, $pos, $chain_stats);
-          $found = 1;
-          last;
+          # Don't push anything.
         }
-
-        if (! $found)
+        elsif (Caps::CapSplit::split_on_caps($part, \@splits))
         {
-          my $ascii = ($part =~ tr/\x00-\x7E//);
-          my $total = length($part);
-          my $high = $total - $ascii;
-
-          if ($high == 0)
+            # TODO Push the splits.
+        }
+        else
+        {
+          my $found = 0;
+          for my $unit_tag (@$unit_tags)
           {
-            # All ASCII.
-            $units->push('WORD', $part, $part, $pos, $chain_stats);
-          }
-          else
-          {
-            $units->push('HIGH_WORD', $part, $part, $pos, $chain_stats);
+            my $fix = $whole->get_single($unit_tag, lc($part));
+            next unless defined $fix->{CATEGORY};
+  
+            my $tag = $fix->{CATEGORY};
+            $units->push($tag, $part, $fix->{VALUE}, $pos, $chain_stats);
+            $found = 1;
+            last;
           }
 
-          # my $splits;
-          # if (Caps::split_on_caps($part))
-          # {
-          # }
+          if (! $found)
+          {
+            if ($part =~ /[a-z]{2,}[A-Z]/ &&
+                $part =~ /^[a-zA-Z]/ &&
+                $part !~ /^[a-z][A-Z]/)
+            {
+              print "CANX $part\n";
+            }
+
+            my $ascii = ($part =~ tr/\x00-\x7E//);
+            my $total = length($part);
+            my $high = $total - $ascii;
+
+            if ($high == 0)
+            {
+              # All ASCII.
+              $units->push('WORD', $part, $part, $pos, $chain_stats);
+            }
+            else
+            {
+              $units->push('HIGH_WORD', $part, $part, $pos, $chain_stats);
+            }
+          }
         }
       }
 
@@ -1592,6 +1607,8 @@ sub study_line
   my $units = Units->new();
   list_to_units($whole, $unit_tags, \@list, $units,
     $histo, $chain_stats);
+
+return;
 
   # look_for_5c_major(\@units, $chain_stats);
 
