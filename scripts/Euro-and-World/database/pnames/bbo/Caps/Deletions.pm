@@ -285,7 +285,7 @@ my %WORDS =
 
 sub present
 {
-  my ($text, $splits) = @_;
+  my ($text) = @_;
 
   return exists $WORDS{$text};
 }

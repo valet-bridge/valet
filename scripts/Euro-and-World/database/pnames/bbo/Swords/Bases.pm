@@ -75,6 +75,7 @@ my %SINGLE_TYPOS =
     'blueclub'],
   'Convenient Minor' => [
     'convm',
+    'convminor',
     'convenientminor',
     'convminors'],
   'German Forum D' => [

@@ -70,6 +70,38 @@ sub push
   push @{$self->{UNITS}}, 
     { CATEGORY => $category, TEXT => $text, VALUE => $value, POS => $pos };
 
+  increment_stats($category, $value, $chain_stats);
+}
+
+
+sub push_integer
+{
+  my ($self, $text, $pos, $chain_stats) = @_;
+
+  if ($text ne '0' && $text =~ /^0/)
+  {
+    $self->push('INT_TEXTISH', $text, $text, $pos, $chain_stats);
+  }
+  elsif ($text >= 1 && $text <= 7)
+  {
+    $self->push('INT_SMALL', $text, $text, $pos, $chain_stats);
+  }
+  elsif ($text <= 40)
+  {
+    $self->push('INT_MEDIUM', $text, $text, $pos, $chain_stats);
+  }
+  else
+  {
+    $self->push('INT_LARGE', $text, $text, $pos, $chain_stats);
+  }
+}
+
+
+sub increment_stats
+{
+  # Not a class method.
+  my ($category, $value, $chain_stats) = @_;
+
   if ($category eq 'WORD')
   {
     $chain_stats->{WORDS}{$value}++;

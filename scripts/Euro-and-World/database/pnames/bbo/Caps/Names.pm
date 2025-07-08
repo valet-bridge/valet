@@ -642,7 +642,7 @@ my %NAMES =
   'LenaReijinga' => [ NAME_FIRST => 'Lena', NAME_LAST => 'Reijinga'],
   'TeomanKoray' => [ NAME_FIRST => 'Teoman', NAME_LAST => 'Koray'],
   'KevinChen' => [ NAME_FIRST => 'Kevin', NAME_LAST => 'Chen'],
-  'JoviSmederevac' => [ NAME_FIRST => 'Jovi', NAME_LAST => 'Smederevac'],
+  'JoviSmed' => [ NAME_FIRST => 'Jovi', NAME_LAST => 'Smederevac'],
   'BarbaraCameron' => [ NAME_FIRST => 'Barbara', NAME_LAST => 'Cameron'],
   'TimYang' => [ NAME_FIRST => 'Tim', NAME_LAST => 'Yang'],
   'ThomasZhang' => [ NAME_FIRST => 'Thomas', NAME_LAST => 'Zhang'],

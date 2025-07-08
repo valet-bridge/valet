@@ -273,6 +273,7 @@ use Deletions;
 use Chain;
 use Token;
 use Util;
+use Butil;
 
 use Email::Email;
 
@@ -1315,72 +1316,30 @@ sub list_to_units
       }
       elsif ($part =~ /^\d+$/)
       {
-        if ($part ne '0' && $part =~ /^0/)
-        {
-          $units->push('INT_TEXTISH', $part, $part, $pos, $chain_stats);
-        }
-        elsif ($part >= 1 && $part <= 7)
-        {
-          $units->push('INT_SMALL', $part, $part, $pos, $chain_stats);
-        }
-        elsif ($part <= 40)
-        {
-          $units->push('INT_MEDIUM', $part, $part, $pos, $chain_stats);
-        }
-        else
-        {
-          $units->push('INT_LARGE', $part, $part, $pos, $chain_stats);
-        }
+        $units->push_integer($part, $pos, $chain_stats);
+      }
+      elsif (Caps::Deletions::present($part))
+      {
+        # Don't push anything.
+      }
+      elsif (Caps::CapSplit::split_on_caps($whole, $unit_tags, $part, \@splits))
+      {
+          # TODO Push the splits.
       }
       else
       {
-        # Look in the tables, even for non-ASCII parts.
-        if (Caps::Deletions::present($part))
-        {
-          # Don't push anything.
-        }
-        elsif (Caps::CapSplit::split_on_caps($part, \@splits))
-        {
-            # TODO Push the splits.
-        }
-        else
-        {
-          my $found = 0;
-          for my $unit_tag (@$unit_tags)
-          {
-            my $fix = $whole->get_single($unit_tag, lc($part));
-            next unless defined $fix->{CATEGORY};
-  
-            my $tag = $fix->{CATEGORY};
-            $units->push($tag, $part, $fix->{VALUE}, $pos, $chain_stats);
-            $found = 1;
-            last;
-          }
+        my ($category, $value);
+        categorize($whole, $unit_tags, $part, \$category, \$value);
 
-          if (! $found)
-          {
-            if ($part =~ /[a-z]{2,}[A-Z]/ &&
-                $part =~ /^[a-zA-Z]/ &&
-                $part !~ /^[a-z][A-Z]/)
-            {
-              print "CANX $part\n";
-            }
-
-            my $ascii = ($part =~ tr/\x00-\x7E//);
-            my $total = length($part);
-            my $high = $total - $ascii;
-
-            if ($high == 0)
-            {
-              # All ASCII.
-              $units->push('WORD', $part, $part, $pos, $chain_stats);
-            }
-            else
-            {
-              $units->push('HIGH_WORD', $part, $part, $pos, $chain_stats);
-            }
-          }
+        if (($category eq 'WORD' || $category eq 'HIGH_WORD') &&
+            $part =~ /[a-z]{2,}[A-Z]/ &&
+            $part =~ /^[a-zA-Z]/ &&
+            $part !~ /^[a-z][A-Z]/)
+        {
+          print "CANX $part\n";
         }
+
+        $units->push($category, $part, $value, $pos, $chain_stats);
       }
 
       $pos++;

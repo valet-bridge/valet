@@ -15,6 +15,7 @@ my @MULTI_WORDS =
 (
   'Forcing NT',
   'Inverted Minors',
+  'Limit Raise',
   'New Minor Forcing',
   'Jacoby 2NT',
   'Jacoby Transfers',
@@ -123,7 +124,8 @@ my %SINGLE_TYPOS =
     'frcgnt',
     'frcnt',
     'frnt',
-    'frsnt'],
+    'frsnt',
+    'ntf'],
   Gerber => [
     'garbar',
     'garber',
@@ -447,6 +449,14 @@ my %SINGLE_TYPOS =
     'splynter',
     'spnter',
     'spntr'],
+  'Limit Raise' => [
+    'limitraise',
+    'limraise',
+    'limraises',
+    'limrs',
+    'limrse',
+    'limtrase',
+    'lmtr'],
   'New Minor Forcing' => [
     'newm',
     'newmf',
@@ -494,7 +504,10 @@ my %SINGLE_TYPOS =
     'reverdrury',
     'reversedrury',
     'rewdrury',
-    'rvrsdrury'],
+    'rvd',
+    'rvdrury',
+    'rvrsdrury',
+    'rvsdrury'],
   'Texas Transfers' => [
     'teaxas',
     'teaxs',

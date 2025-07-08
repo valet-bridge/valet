@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Exclusion Keycard',
   'Keycard Responses',
 );
 
@@ -27,6 +28,13 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Exclusion Keycard' => [
+    'exclbl',
+    'exclbw',
+    'voidvd',
+    'voidwd',
+    'voidwood',
+    'xclusionrkc'],
   Keycards => [
     'kc',
     'kca',

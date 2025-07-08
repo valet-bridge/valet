@@ -376,7 +376,14 @@ my %SINGLE_TYPOS =
     'bwoo',
     'bwood',
     'bwoow',
-    'bwsimple'],
+    'bwsimple',
+    'regblackw',
+    'regblkw',
+    'regblkwd',
+    'regblw',
+    'regblwd',
+    'regbw',
+    'regbwood'],
 );
 
 
