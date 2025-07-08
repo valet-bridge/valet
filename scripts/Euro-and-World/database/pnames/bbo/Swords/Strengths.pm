@@ -20,15 +20,15 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  weak
   strong
+  variable
+  weak
 );
 
 my %SINGLE_TYPOS =
 (
-  weak => [
-    'wk'],
   strong => [
+    'fuerte',
     'str',
     'strg',
     'strn',
@@ -59,6 +59,10 @@ my %SINGLE_TYPOS =
     'stronge',
     'strongg',
     'strongv'],
+  variable => [
+    'canblite'],
+  weak => [
+    'wk'],
 );
 
 

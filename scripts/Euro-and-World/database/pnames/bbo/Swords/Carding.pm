@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'King from AK',
   'Lavinthal Against NT',
   'Reverse Smith',
+  'Roman Discards',
   'Smith Echo',
   'Standard Carding',
 );
@@ -161,6 +162,21 @@ my %SINGLE_TYPOS =
   'Reverse Smith' => [
     'revsmith',
     'revsmithecho'],
+  'Roman Discards' => [
+    'rmndef',
+    'romand',
+    'romandef',
+    'romandisc',
+    'romandiscards',
+    'romandsc',
+    'romd',
+    'romdef',
+    'romdf',
+    'romdis',
+    'romdisc',
+    'romend',
+    'romendefos',
+    'romendisc'],
   'Smith Echo' => [
     'smithecho'],
   'Standard Carding' => [

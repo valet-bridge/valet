@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Gambling 3NT',
   'Strong NT',
   'Three Level Preempts',
   'Weak NT',
@@ -30,13 +31,24 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Gambling 3NT' => [
+    'gamblingnt',
+    'gamblnt',
+    'gambnt',
+    'gmbnt',
+    'ntgamb',
+    'ntgambl',
+    'ntgambling',
+    'ntgb',
+    'solidmin'],
   'Strong NT' => [
     'strngnt',
     'strongnt'],
   'Three Level Preempts' => [
     'threest'],
   'Weak NT' => [
-    'wknt',
+    'weaknt',
+    'weaksa',
     'wknt'],
   'Weak Two' => [
     'weakbids',
@@ -44,11 +56,19 @@ my %SINGLE_TYPOS =
     'weaktwos',
     'weattwo'],
   'Weak Two DHS' => [
+    'dhsweak',
+    'dhswk',
+    'hdsw',
+    'hdsweak',
+    'shdw',
     'weakdhs',
     'weakdsh',
     'weakshd',
     'wkdhs'],
   'Weak Two Major' => [
+    'hsm',
+    'hsweak',
+    'hsweaks',
     'weacsh',
     'weakhors',
     'weakhs',

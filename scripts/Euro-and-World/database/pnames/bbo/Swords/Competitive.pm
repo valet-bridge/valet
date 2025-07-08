@@ -13,10 +13,14 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Balancing Double',
+  'Jump Shift',
+  'Maximal Double',
   'Michaels Cuebid',
   'Modified Hamilton',
   'Multi Landy',
   'Negative Double',
+  'Negative Free Bid',
   'Responsive Double',
   'Rosenkranz Double',
   'Sandwich NT',
@@ -24,6 +28,7 @@ my @MULTI_WORDS =
   'Stolen Bid',
   'Strong Jump Shift',
   'Support Double',
+  'Takeout Double',
   'Unusual NT',
   'Weak Jump',
   'Weak Jump Shift',
@@ -43,10 +48,14 @@ my @SINGLE_WORDS = qw(
   Landy
   Lebensohl
   Michaels
+  Rubensohl
 );
 
 my %SINGLE_TYPOS =
 (
+  'Balancing Double' => [
+    'balancingd',
+    'balxs'],
   Brozel => [
     'brosel',
     'brosell',
@@ -383,6 +392,9 @@ my %SINGLE_TYPOS =
     'gshm',
     'gsthm',
     'gstm'],
+  'Jump Shift' => [
+    'jumpshift',
+    'jumpshifts'],
   Landy => [
     'landi',
     'landyy',
@@ -547,6 +559,10 @@ my %SINGLE_TYPOS =
     'lebson',
     'lebsonsol',
     'lebsor'],
+  'Maximal Double' => [
+    'maximalx',
+    'maxmlx',
+    'maxx'],
   Michaels => [
     'mchls',
     'mechels',
@@ -739,6 +755,11 @@ my %SINGLE_TYPOS =
     'ngtwx',
     'ngtx',
     'ngx'],
+  'Negative Free Bid' => [
+    'negativefreebids',
+    'negfb',
+    'negfreebid',
+    'negfreebids'],
   'Responsive Double' => [
     'respdb',
     'respdbl',
@@ -749,13 +770,22 @@ my %SINGLE_TYPOS =
   'Rosenkranz Double' => [
     'rosenkrantzx',
     'rozenkranzx',
+    'rozex',
     'rozx'],
+  Rubensohl => [
+    'ruben',
+    'rubenxfer'],
   'Sandwich NT' => [
     'sandn',
     'sandnt',
     'sandwichnt',
     'sandwnt',
-    'sdwhnt'],
+    'sdwhnt',
+    'sndnt',
+    'sndwchnt',
+    'sndwcht',
+    'sndwhnt',
+    'sndwnt'],
   'Sputnik Double' => [
     'controsputnik',
     'sputnikx',
@@ -765,6 +795,7 @@ my %SINGLE_TYPOS =
     'stlnbd',
     'stlnbid',
     'stlnbidx',
+    'stobid',
     'stolbidx',
     'stolenb',
     'stolenbid',
@@ -776,7 +807,8 @@ my %SINGLE_TYPOS =
   'Strong Jump Shift' => [
     'strgjs',
     'strjs',
-    'strongjs'],
+    'strongjs',
+    'strjumpshift'],
   'Support Double' => [
     'supd',
     'supdb',
@@ -831,6 +863,11 @@ my %SINGLE_TYPOS =
     'supxx',
     'supxxx',
     'supporx'],
+  'Takeout Double' => [
+    'infdbl',
+    'infox',
+    'takeoutx',
+    'takeoutxx'],
   'Unusual NT' => [
     'unconvnt',
     'unn',
@@ -867,10 +904,18 @@ my %SINGLE_TYPOS =
   'Weak Jump' => [
     'saltideb',
     'weakj',
+    'weakjump',
     'weakjumps',
     'wkjump',
     'wkjumps',
     'wjumps'],
+  'Weak Jump Overcall' => [
+    'weakjo',
+    'weakjumpo',
+    'weakjumpovercall',
+    'weakjumpovercl',
+    'wjoc',
+    'wkjo'],
   'Weak Jump Shift' => [
     'weakjs',
     'weakjshift',
@@ -885,13 +930,8 @@ my %SINGLE_TYPOS =
     'wkjs',
     'wkjshift',
     'wkjumpsh',
+    'wkjumpshift',
     'wkjumpshif'],
-  'Weak Jump Overcall' => [
-    'weakjo',
-    'weakjumpo',
-    'weakjumpovercall',
-    'weakjumpovercl',
-    'wjoc'],
   'Western Cuebid' => [
     'westcue',
     'westerncue',

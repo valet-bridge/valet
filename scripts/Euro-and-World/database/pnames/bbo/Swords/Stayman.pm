@@ -13,6 +13,8 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Minor Suit Stayman',
+  'Nonforcing Stayman',
   'Puppet Stayman',
 );
 
@@ -26,6 +28,15 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Minor Suit Stayman' => [
+    'minorstayman',
+    'mss'],
+  'Nonforcing Stayman' => [
+    'garbst',
+    'garbstayman',
+    'grbgstym',
+    'nfstay',
+    'nonfsty'],
   'Puppet Stayman' => [
     'puppetst',
     'puppetstay',
@@ -35,6 +46,7 @@ my %SINGLE_TYPOS =
     'puppstaym',
     'puppstayman',
     'puppstym',
+    'puppstymn',
     'pups',
     'pupst',
     'pupsta',
@@ -44,6 +56,7 @@ my %SINGLE_TYPOS =
     'pupsty',
     'pupstym'],
   Stayman => [
+    'básicstayman',
     'sayman',
     'sman',
     'staaman',

@@ -124,6 +124,7 @@ my %SINGLE_TYPOS =
     'eroberf',
     'eroberfarben',
     'eroberfb',
+    'erof',
     'imajör',
     'kmaj',
     'kmajor',

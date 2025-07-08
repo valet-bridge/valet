@@ -15,9 +15,11 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Almost Game Forcing',
   'Five Major',
   'Game Forcing',
   'King of Trumps',
+  'Over NT',
   'Queen of Trumps',
   'Semi Forcing',
   'Suit Forcing',
@@ -35,6 +37,7 @@ my @SINGLE_WORDS = qw(
   Bid
   Carding
   Checkback
+  Convenient
   Cuebid
   Defense
   Discard
@@ -55,6 +58,7 @@ my @SINGLE_WORDS = qw(
   Suit
   Support
   System
+  Takeout
   Texas
   Transfer
   Waiting
@@ -62,6 +66,8 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Almost Game Forcing' => [
+    'almostgf'],
   American => [
     'amer',
     'amerc',
@@ -354,7 +360,11 @@ my %SINGLE_TYPOS =
     'frce',
     'frcing',
     'frcng'],
+  'Game Forcing' => [
+    'alwaysfg',
+    'alwaysgameforcing'],
   Jacoby => [
+    'learningjcby',
     'jaboby',
     'jabocy',
     'jac',
@@ -701,12 +711,20 @@ my %SINGLE_TYPOS =
     'pys'],
   'King of Trumps' => [
     'trumpk'],
+  'Over NT' => [
+    'overnt',
+    'overntopening',
+    'ovnt',
+    'ovrnt',
+    'ovropnt'],
   'Queen of Trumps' => [
     'aandq',
     'andq',
     'atuq',
     'qdia',
-    'trumpqn'],
+    'trq',
+    'trumpq',
+    'withq'],
   Reverse => [
     'rev',
     'revars',
@@ -746,8 +764,11 @@ my %SINGLE_TYPOS =
     'revwese',
     'rewers'],
   'Semi Forcing' => [
+    'semforc',
     'semif',
-    'semifm'],
+    'semifcg',
+    'semifm',
+    'semiforc'],
   Standard => [
     'staand',
     'staandart',
@@ -892,6 +913,7 @@ my %SINGLE_TYPOS =
     'sytmn',
     'sytms'],
   Transfer => [
+    'learningtransfers',
     'tansf',
     'tansfer',
     'tansfers',

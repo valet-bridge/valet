@@ -63,13 +63,21 @@ my %SINGLE_TYPOS =
   'Benjamin ACOL' => [
     'benjiacol'],
   'Better Minor' => [
+    'bestmi',
     'bestmin',
     'bestminor',
     'betmin',
+    'betmn',
+    'betminor',
     'betterm',
     'betterminor',
+    'bettermnr',
     'bettmin',
-    'bettrminor'],
+    'bettrm',
+    'bettrminor',
+    'btermn',
+    'bstmin',
+    'btrmin'],
   'Blue Club' => [
     'bluec',
     'blueclub'],
@@ -79,6 +87,7 @@ my %SINGLE_TYPOS =
     'convm',
     'convminor',
     'convmn',
+    'convenientd',
     'convenientminor',
     'convminors'],
   'German Forum D' => [
@@ -100,6 +109,7 @@ my %SINGLE_TYPOS =
     'powprec'],
   Precision => [
     'alsoprecision',
+    'fioriforte',
     'orprec',
     'orprecision',
     'preccl',

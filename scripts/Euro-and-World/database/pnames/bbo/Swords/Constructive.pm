@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'Jacoby Transfers',
   'Reverse Drury',
   'Texas Transfers',
+  'Wolff Signoff',
 );
 
 my %MULTI_TYPOS =
@@ -44,10 +45,12 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Checkback Stayman' => [
+    'chbckst',
     'chbst',
     'chkbkst',
     'chkbackstymn',
     'chkbstaym',
+    'chkbs',
     'checkbackst',
     'checkbackstay',
     'checkbackstayman'],
@@ -135,7 +138,11 @@ my %SINGLE_TYPOS =
     'frcnt',
     'frnt',
     'frsnt',
-    'ntf'],
+    'ntf',
+    'ntfc',
+    'ntforc',
+    'ntforce',
+    'ntforcing' ],
   Gerber => [
     'garbar',
     'garber',
@@ -199,7 +206,8 @@ my %SINGLE_TYPOS =
     'invtdminor',
     'invtdminors',
     'invtdmnr',
-    'invtminor'],
+    'invtminor',
+    'ynvmi'],
   'Jacoby 2NT' => [
     'jabnt',
     'jacbyn',
@@ -212,6 +220,7 @@ my %SINGLE_TYPOS =
     'jbynt',
     'jcbnt',
     'jcbtr',
+    'ntja',
     'ntjac',
     'ntjacob',
     'ntjacoby'],
@@ -591,6 +600,8 @@ my %SINGLE_TYPOS =
     'txtx',
     'txxfer',
     'txxfrs'],
+  'Wolff Signoff' => [
+    'wolfsig'],
 );
 
 

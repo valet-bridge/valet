@@ -236,7 +236,8 @@ my %SINGLE_TYPOS =
     'romankeykard',
     'romeblcwd',
     'romenblackwood',
-    'rrkc'],
+    'rrkc',
+    'slamrkcb'],
 );
 
 
