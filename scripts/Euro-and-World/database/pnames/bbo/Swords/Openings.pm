@@ -13,6 +13,8 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Strong NT',
+  'Three Level Preempts',
   'Weak NT',
   'Weak Two',
   'Weak Two DHS',
@@ -28,6 +30,11 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Strong NT' => [
+    'strngnt',
+    'strongnt'],
+  'Three Level Preempts' => [
+    'threest'],
   'Weak NT' => [
     'wknt',
     'wknt'],
@@ -43,6 +50,7 @@ my %SINGLE_TYPOS =
     'wkdhs'],
   'Weak Two Major' => [
     'weacsh',
+    'weakhors',
     'weakhs',
     'weakm',
     'weakmjr',

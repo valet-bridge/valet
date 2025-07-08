@@ -14,6 +14,8 @@ my @MULTI_WORDS =
 (
   'Gold Life Master',
   'Life Master',
+  'Ruby Life Master',
+  'Silver Life Master',
 );
 
 my %MULTI_TYPOS =

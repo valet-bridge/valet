@@ -26,6 +26,8 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Blackwood => [
+    'acesblakw',
+    'acessa',
     'backwd',
     'backwo',
     'backwood',
@@ -377,13 +379,21 @@ my %SINGLE_TYPOS =
     'bwood',
     'bwoow',
     'bwsimple',
+    'ordinarybw',
+    'regb',
+    'regbakw',
     'regblackw',
     'regblkw',
     'regblkwd',
     'regblw',
     'regblwd',
     'regbw',
-    'regbwood'],
+    'regbwood',
+    'regularblackwood',
+    'simpleblackwood',
+    'simplebw',
+    'stdblackwood',
+    'stdbw'],
 );
 
 

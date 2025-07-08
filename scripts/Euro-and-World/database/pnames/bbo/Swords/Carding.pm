@@ -13,8 +13,11 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Ace from AK',
+  'King from AK',
   'Lavinthal Against NT',
   'Reverse Smith',
+  'Smith Echo',
   'Standard Carding',
 );
 
@@ -29,6 +32,14 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Ace from AK' => [
+    'akxleada',
+    'akleadka',
+    'afromak'],
+  'King from AK' => [
+    'kfmak',
+    'kfrak',
+    'kfromak'],
   Lavinthal => [
     'lav',
     'lavantal',
@@ -150,6 +161,8 @@ my %SINGLE_TYPOS =
   'Reverse Smith' => [
     'revsmith',
     'revsmithecho'],
+  'Smith Echo' => [
+    'smithecho'],
   'Standard Carding' => [
     'stancarding',
     'standardsigs',

@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Checkback Stayman',
   'Forcing NT',
   'Inverted Minors',
   'Limit Raise',
@@ -32,6 +33,7 @@ my @SINGLE_WORDS = qw(
   Drury
   Flannery
   Gerber
+  Namyats
   Ogust
   Puppet
   Roudinesco
@@ -41,6 +43,14 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Checkback Stayman' => [
+    'chbst',
+    'chkbkst',
+    'chkbackstymn',
+    'chkbstaym',
+    'checkbackst',
+    'checkbackstay',
+    'checkbackstayman'],
   Crodo => [
     'cro',
     'crod',
@@ -456,7 +466,8 @@ my %SINGLE_TYPOS =
     'limrs',
     'limrse',
     'limtrase',
-    'lmtr'],
+    'lmtr',
+    'lmtras'],
   'New Minor Forcing' => [
     'newm',
     'newmf',

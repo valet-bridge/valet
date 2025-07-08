@@ -11,9 +11,18 @@ package Swords::Misc;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
+# Some of these are building blocks of conventions
+
 my @MULTI_WORDS =
 (
   'Five Major',
+  'Game Forcing',
+  'King of Trumps',
+  'Queen of Trumps',
+  'Semi Forcing',
+  'Suit Forcing',
+  'Suit Game Forcing',
+  'Way Checkback',
 );
 
 my %MULTI_TYPOS =
@@ -32,6 +41,7 @@ my @SINGLE_WORDS = qw(
   Double
   Forcing
   Jacoby
+  Jordan
   Lead
   Multi
   Natural
@@ -41,10 +51,13 @@ my @SINGLE_WORDS = qw(
   Points
   Reverse
   Standard
+  Stolen
   Suit
   Support
   System
+  Texas
   Transfer
+  Waiting
 );
 
 my %SINGLE_TYPOS =
@@ -686,6 +699,14 @@ my %SINGLE_TYPOS =
     'punten',
     'puntos',
     'pys'],
+  'King of Trumps' => [
+    'trumpk'],
+  'Queen of Trumps' => [
+    'aandq',
+    'andq',
+    'atuq',
+    'qdia',
+    'trumpqn'],
   Reverse => [
     'rev',
     'revars',
@@ -724,6 +745,9 @@ my %SINGLE_TYPOS =
     'revserse',
     'revwese',
     'rewers'],
+  'Semi Forcing' => [
+    'semif',
+    'semifm'],
   Standard => [
     'staand',
     'staandart',
@@ -1303,6 +1327,13 @@ my %SINGLE_TYPOS =
     'xfr',
     'xfrs',
     'xfs'],
+  'Way Checkback' => [
+    'waycb',
+    'waycbs',
+    'waycback',
+    'waychbk',
+    'waycheckback',
+    'wayckbck'],
 );
 
 

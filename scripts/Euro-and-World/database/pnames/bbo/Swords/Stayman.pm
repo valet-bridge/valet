@@ -92,6 +92,7 @@ my %SINGLE_TYPOS =
     'stayerman',
     'stayhman',
     'stayiman',
+    'staylan',
     'staym',
     'stayma',
     'staymaan',

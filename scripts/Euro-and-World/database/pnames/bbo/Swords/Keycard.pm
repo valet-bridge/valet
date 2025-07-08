@@ -99,6 +99,7 @@ my %SINGLE_TYPOS =
     'keycblkwd',
     'keycblwd',
     'keysbkwd',
+    'norkc',
     'rbck',
     'rbk',
     'rbkc',

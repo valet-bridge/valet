@@ -93,7 +93,8 @@ my %SINGLE_TYPOS =
     'revebergen',
     'reverseberg',
     'reversebergen',
-    'rvberg'],
+    'rvberg',
+    'rvrsbergen'],
 );
 
 

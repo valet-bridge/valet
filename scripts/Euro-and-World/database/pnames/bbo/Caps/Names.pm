@@ -809,6 +809,16 @@ my %NAMES =
   'MeltonDoxey' => [NAME_FIRST => 'Melton', NAME_LAST => 'Doxey'],
   'nivlaC' => [NAME_FIRST => 'Calvin'],
   'nitraM' => [NAME_FIRST => 'Martin'],
+  'enTon' => [NAME_PARTICLES => 'en', NAME_LAST => 'Ton'],
+  'ozGul' => [NAME_FIRST => 'Özgül'],
+  'safakD' => [NAME_FIRST => 'Safak', NAME_INITIALS => 'D.'],
+  'FredN' => [NAME_FIRST => 'Fred', NAME_INITIALS => 'N.'],
+  'DenizWize' => [NAME_FIRST => 'Deniz', NAME_LAST => 'Wize'],
+  'AFLindaY' => [NAME_FIRST => 'Lindy', NAME_INITIALS => 'Y.'],
+  'ChuFa' => [NAME_FIRST => 'Chu Fa'],
+  'KaaN' => [NAME_FIRST => 'Kaan'],
+  'UyGaR' => [NAME_FIRST => 'Uygar'],
+  'MiaWalking' => [NAME_FIRST => 'Mia'],
 );
 
 sub split

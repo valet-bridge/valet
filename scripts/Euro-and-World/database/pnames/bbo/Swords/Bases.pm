@@ -74,11 +74,15 @@ my %SINGLE_TYPOS =
     'bluec',
     'blueclub'],
   'Convenient Minor' => [
+    'conmi',
+    'conminor',
     'convm',
     'convminor',
+    'convmn',
     'convenientminor',
     'convminors'],
   'German Forum D' => [
+    'bietsystemforum',
     'forumd',
     'forumdplus'],
   'Magic Diamond' => [
@@ -128,6 +132,7 @@ my %SINGLE_TYPOS =
     'saycs',
     'saycsayc',
     'saycsimple',
+    'saycstand',
     'saycwk',
     'saycyellow',
     'sayd',

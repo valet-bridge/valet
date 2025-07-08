@@ -18,6 +18,7 @@ our @EXPORT = qw(split_on_caps);
 use lib '.';
 
 use Caps::Names;
+use Caps::Fragments;
 use Caps::Cuts;
 
 
@@ -35,10 +36,15 @@ sub split_on_caps
     return 1;
   }
 
-  if (Caps::Cuts::divide($whole, $tag_list, $text, $splits))
+  if (Caps::Fragments::match($text, $splits))
   {
     return 1;
   }
+
+  # if (Caps::Cuts::divide($whole, $tag_list, $text, $splits))
+  # {
+    # return 1;
+  # }
 
   return 0;
 }
