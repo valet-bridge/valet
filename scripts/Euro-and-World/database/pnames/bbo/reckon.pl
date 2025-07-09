@@ -2,6 +2,7 @@
 use strict;
 use warnings;
 use utf8;
+use open ':std', ':encoding(UTF-8)';
 use feature 'unicode_strings';
 use Encode;
 use Encode::HanExtra;
@@ -305,6 +306,28 @@ while (my $line = <$fh>)
 }
 close $fh;
 
+my %SUBSTITUTE_LINES;
+open($fh, '<sub_lines.txt') or die "Cannot open sub_lines: $!!";
+my $sno = 0;
+while (my $line = <$fh>)
+{
+  $sno++;
+  if ($line !~ /^(.+), (\d+), (\d+)$/)
+  {
+    die "FORMAT $sno: $line";
+  }
+  my ($handle, $count, $lno) = ($1, $2, $3);
+  my $orig = <$fh>;
+  chomp $orig;
+  my $sub = <$fh>;
+  chomp $sub;
+  my $empty = <$fh>;
+
+  $SUBSTITUTE_LINES{$handle}{$count}{$lno}[0] = $orig;
+  $SUBSTITUTE_LINES{$handle}{$count}{$lno}[1] = $sub;
+}
+close $fh;
+
 my $file = 'db';
 my $data;
 read_raw_file($file, \$data);
@@ -319,21 +342,28 @@ my %handle_counts;
 
 for my $paragraph (@paragraphs)
 {
-  inspect_paragraph($whole, $paragraph);
+if ($paragraph->{HANDLE} eq 'FULLFUEL')
+{
+  print "HERE\n";
+}
   $handle_counts{$paragraph->{HANDLE}}++;
+  inspect_paragraph($whole, $paragraph, \%handle_counts);
 
   # print_paragraph($paragraph);
 
   # This caught many things, but is more of a linter.
   # check_tag_order($paragraph);
 
+  my $lno = -1;
   for my $entry (@{$paragraph->{LINES}})
   {
+    $lno++;
     my $chain = Chain->new();
     my @chains;
     push @chains, $chain;
 
     if (study_line($whole2, \@UNIT_TAGS, $entry, \@chains, 
+      $paragraph->{HANDLE}, $handle_counts{$paragraph->{HANDLE}}, $lno, 
       $histo, \%chain_stats))
     {
       next;
@@ -797,7 +827,7 @@ sub look_for_email
 
 sub inspect_paragraph
 {
-  my ($whole, $paragraph) = @_;
+  my ($whole, $paragraph, $handle_counts) = @_;
 
   my $country_seen = 0;
   my $private_seen = 0;
@@ -805,12 +835,31 @@ sub inspect_paragraph
   my $mail_seen = 0;
   my $level_seen = 0;
 
+  my $handle = $paragraph->{HANDLE};
   my $eno = -1;
   my $elen = $#{$paragraph->{LINES}};
 
   for my $entry (@{$paragraph->{LINES}})
   {
     $eno++;
+
+    if (exists $SUBSTITUTE_LINES{$handle} &&
+        exists $SUBSTITUTE_LINES{$handle}{$handle_counts->{$handle}}{$eno})
+    {
+      my $sub = 
+        $SUBSTITUTE_LINES{$handle}{$handle_counts->{$handle}}{$eno};
+      my $orig = $sub->[0];
+      my $repl = $sub->[1];
+      if ($entry->{TEXT} ne $orig)
+      {
+        print "HNDL ", $paragraph->{HANDLE}, "\n";
+        print "TEXT ", $entry->{TEXT}, "\n";
+        print "ORIG $orig\n";
+        print "REPL $repl\n";
+        die "Mismatch";
+      }
+      $entry->{TEXT} = $repl;
+    }
 
     if (! $country_seen)
     {
@@ -1285,7 +1334,8 @@ sub lines_to_list
 
 sub list_to_units
 {
-  my ($whole, $unit_tags, $list, $units, $histo, $chain_stats) = @_;
+  my ($whole, $unit_tags, $list, $units, 
+    $text, $handle, $hcount, $lno, $histo, $chain_stats) = @_;
 
   for my $datum (@$list)
   {
@@ -1300,49 +1350,63 @@ sub list_to_units
     my $sep = qr/(\d+|[\s\-\+\.\?_,:;=&@#*%\$^~"\/\\()<>|\[\]\{\}])/;
     my @parts = grep { $_ ne '' } split /$sep/, $datum;
 
-    my $pos = 0;
+    my $pos = -1;
     my @splits;
     for my $part (@parts)
     {
+      $pos++;
       $chain_stats->{PARTS}++;
       if (exists $PUNCTUATION{$part})
       {
         $units->push('PUNCTUATION', $part, $PUNCTUATION{$part},
           $pos, $chain_stats);
+        next;
       }
       elsif ($part eq ' ')
       {
         $units->push('PUNCTUATION', $part, 'SPACE', $pos, $chain_stats);
+        next;
       }
       elsif ($part =~ /^\d+$/)
       {
         $units->push_integer($part, $pos, $chain_stats);
+        next;
       }
       elsif (Caps::Deletions::present($part))
       {
         # Don't push anything.
+        next;
       }
-      elsif (Caps::CapSplit::split_on_caps($whole, $unit_tags, $part, \@splits))
+
+      my ($category, $value);
+      categorize($whole, $unit_tags, $part, \$category, \$value);
+
+      if ($category ne 'WORD' && $category ne 'HIGH_WORD')
+      {
+        $units->push($category, $part, $value, $pos, $chain_stats);
+        next;
+      }
+
+      if (Caps::CapSplit::split_on_caps($whole, $unit_tags, $part, 
+        \@splits, $lno))
       {
           # TODO Push the splits.
       }
       else
       {
-        my ($category, $value);
-        categorize($whole, $unit_tags, $part, \$category, \$value);
 
         if (($category eq 'WORD' || $category eq 'HIGH_WORD') &&
             $part =~ /[a-z]{2,}[A-Z]/ &&
             $part =~ /^[a-zA-Z]/ &&
             $part !~ /^[a-z][A-Z]/)
         {
-          print "CANX $part\n";
+          print "YYY $handle, $hcount, $lno\n";
+          print "$text\n";
+          print "$text\n";
+          print "[$part]\n\n";
         }
-
         $units->push($category, $part, $value, $pos, $chain_stats);
       }
-
-      $pos++;
     }
   }
 }
@@ -1558,14 +1622,15 @@ sub look_for_5c_major
 
 sub study_line
 {
-  my ($whole, $unit_tags, $entry, $chains, $histo, $chain_stats) = @_;
+  my ($whole, $unit_tags, $entry, $chains, 
+    $handle, $hcount, $lno, $histo, $chain_stats) = @_;
 
   my @list;
   lines_to_list($entry, \@list);
 
   my $units = Units->new();
   list_to_units($whole, $unit_tags, \@list, $units,
-    $histo, $chain_stats);
+    $entry->{TEXT}, $handle, $hcount, $lno, $histo, $chain_stats);
 
 return;
 

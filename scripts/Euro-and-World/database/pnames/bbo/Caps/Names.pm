@@ -843,6 +843,18 @@ my %NAMES =
   'EmileJ' => [NAME_FIRST => 'Emile', NAME_INITIALS => 'J.'],
   'franK' => [NAME_FIRST => 'Frank'],
   'xoxoxoJoan' => [NAME_FIRST => 'Joan'],
+  'xiaozhenQ' => [NAME_FIRST => 'Xiaozhen', NAME_INITIALS => 'Q.'],
+  'wictorRo' => [NAME_FIRST => 'Wictor'],
+  'shulavaskevitchPrivate' => [NAME_FIRST => 'Shula', NAME_LAST => 'Vaskevitch'],
+  'PrivateMikemansur' => [NAME_FIRST => 'Mike', NAME_LAST => 'Mansur'],
+  'PrivateZhujianfen' => [NAME_FIRST => 'Jianfen', NAME_LAST => 'Zhu'],
+  'frenkielfrenkielPrivate' => [NAME_LAST => 'Frenkiel'],
+  'nadinenickelPrivate' => [NAME_FIRST => 'Nadine', NAME_LAST => 'Nickel'],
+  'mariterenavaPrivate' => [NAME_FIRST => 'Maria Teresa', NAME_LAST => 'Nava'],
+  'odettwePrivate' => [NAME_FIRST => 'Odette'],
+  'gshillabeerPrivate' => [NAME_INITIALS => 'G.', NAME_LAST => 'Shillabeer'],
+  'errandoneaPrivate' => [NAME_LAST => 'Errandonea'],
+  'dellalPrivate' => [NAME_LAST => 'Dellal'],
 );
 
 sub split

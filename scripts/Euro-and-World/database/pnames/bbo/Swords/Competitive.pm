@@ -14,9 +14,13 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Balancing Double',
+  'Balancing NT',
+  'Flip Flop',
+  'Good Bad NT',
   'Jump Shift',
   'Lightner Double',
   'Maximal Double',
+  'Meckwell Against NT',
   'Michaels Cuebid',
   'Modified Hamilton',
   'Multi Landy',
@@ -47,10 +51,13 @@ my @SINGLE_WORDS = qw(
   Cappelletti
   DONT
   Ghestem
+  Landik
   Landy
   Lebensohl
   Michaels
   Rubensohl
+  Wilkosz
+  Woolsey
 );
 
 my %SINGLE_TYPOS =
@@ -58,6 +65,8 @@ my %SINGLE_TYPOS =
   'Balancing Double' => [
     'balancingd',
     'balxs'],
+  'Balancing NT' => [
+    'ntbalancing'],
   Brozel => [
     'brosel',
     'brosell',
@@ -394,9 +403,13 @@ my %SINGLE_TYPOS =
     'gshm',
     'gsthm',
     'gstm'],
+  'Good Bad NT' => [
+    'ntgoodbad'],
   'Jump Shift' => [
     'jumpshift',
     'jumpshifts'],
+  Landik => [
+    'landick'],
   Landy => [
     'landi',
     'landyy',
@@ -635,6 +648,8 @@ my %SINGLE_TYPOS =
     'michaelcb',
     'michaelcueb',
     'michaelqbid',
+    'michaelsc',
+    'michaelscb',
     'michaelscue',
     'michaelsq',
     'michaelsque',
@@ -664,7 +679,8 @@ my %SINGLE_TYPOS =
     'mikecbids',
     'mikeq',
     'miq',
-    'mkcuebid'],
+    'mkcuebid',
+    'mprécisé'],
   'Modified Hamilton' => [
     'modham'],
   'Multi Landy' => [
@@ -879,6 +895,10 @@ my %SINGLE_TYPOS =
     'takeoutx',
     'takeoutxx'],
   'Unusual NT' => [
+    'ntmiinors',
+    'ntu',
+    'ntun',
+    'ntunus',
     'unconvnt',
     'unn',
     'unnt',
@@ -926,6 +946,7 @@ my %SINGLE_TYPOS =
     'weakjumpo',
     'weakjumpovercall',
     'weakjumpovercl',
+    'wjo',
     'wjoc',
     'wkjo'],
   'Weak Jump Shift' => [
@@ -951,9 +972,12 @@ my %SINGLE_TYPOS =
     'westerq',
     'westq',
     'weternq',
+    'wqb',
     'wstnq',
     'wstq',
     'wstrnqbids'],
+  Woolsey => [
+    'wlsy'],
 );
 
 

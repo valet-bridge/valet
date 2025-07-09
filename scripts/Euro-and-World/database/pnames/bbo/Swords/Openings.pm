@@ -13,7 +13,9 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  '2D Multi',
   'Gambling 3NT',
+  'Short Club',
   'Strong NT',
   'Three Level Preempts',
   'Variable NT',
@@ -38,6 +40,7 @@ my %SINGLE_TYPOS =
     'gambnt',
     'gmbnt',
     'gmlgnt',
+    'ntgam',
     'ntgamb',
     'ntgambl',
     'ntgambling',

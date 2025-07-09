@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'Jacoby 2NT',
   'Jacoby Transfers',
   'Reverse Drury',
+  'Super Accepts',
   'Texas Transfers',
   'Wolff Signoff',
   'XY NT',
@@ -38,12 +39,14 @@ my @SINGLE_WORDS = qw(
   Drury
   Flannery
   Gerber
+  Minisplinter
   Namyats
   Ogust
   Puppet
   Roudinesco
   Smolen
   Splinter
+  Stenberg
   Walsh
 );
 
@@ -82,6 +85,7 @@ my %SINGLE_TYPOS =
     'druhry',
     'druly',
     'drur',
+    'drurel',
     'drurey',
     'drureyfittey',
     'druri',
@@ -94,6 +98,7 @@ my %SINGLE_TYPOS =
     'druruy',
     'druryfit',
     'druryfitte',
+    'druryfitté',
     'druryi',
     'druryr',
     'drurys',
@@ -161,6 +166,8 @@ my %SINGLE_TYPOS =
     'gerbe',
     'gerbeer',
     'gerber',
+    'gerberafternt',
+    'gerberaftnt',
     'gerbere',
     'gerberg',
     'gerberh',
@@ -305,6 +312,8 @@ my %SINGLE_TYPOS =
     'jcbytr',
     'jcbytrf',
     'jcbytrnsf'],
+  Minisplinter => [
+    'minispl'],
   Ogust => [
     'ogu',
     'ogus',
@@ -530,6 +539,12 @@ my %SINGLE_TYPOS =
     'nmrf',
     'nmsf'],
   'Reverse Drury' => [
+    'rdru',
+    'rdrury',
+    'rdruy',
+    'rdry',
+    'rvdr',
+    'rvdru',
     'revd',
     'revdr',
     'revdrry',

@@ -27,8 +27,11 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Carding
   UDCA
   Lavinthal
+  Low
+  High
 );
 
 my %SINGLE_TYPOS =

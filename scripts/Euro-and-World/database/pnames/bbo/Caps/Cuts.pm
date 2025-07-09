@@ -24,11 +24,11 @@ my %FRONTS =
   bergen => [ CATEGORY => 'BERGEN', VALUE => 'Bergen'],
   drury => [ CATEGORY => 'CONSTRUCTIVE', VALUE => 'Drury'],
   gerber => [ CATEGORY => 'CONSTRUCTIVE', VALUE => 'Gerber'],
+  michaels => [ CATEGORY => 'COMPETITIVE', VALUE => 'Michaels'],
   nt => [ CATEGORY => 'DENOMINATIONS', VALUE => 'notrump'],
+  private => [ CATEGORY => 'MISC', VALUE => 'private'],
   sa => [ CATEGORY => 'DENOMINATIONS', VALUE => 'notrump'],
   sayc => [ CATEGORY => 'BASES', VALUE => 'SAYC'],
-  stay => [ CATEGORY => 'STAYMAN', VALUE => 'Stayman'],
-  staym => [ CATEGORY => 'STAYMAN', VALUE => 'Stayman'],
   stayman => [ CATEGORY => 'STAYMAN', VALUE => 'Stayman'],
   staymn => [ CATEGORY => 'STAYMAN', VALUE => 'Stayman'],
   strong => [ CATEGORY => 'STRENGTHS', VALUE => 'strong'],
@@ -49,6 +49,7 @@ my $FREGEX = qr/^((?i:$FPATTERN))([A-Z].*)/;
 my %BACKS =
 (
   bergen => [ CATEGORY => 'BERGEN', VALUE => 'Bergen'],
+  private => [ CATEGORY => 'MISC', VALUE => 'private'],
   strong => [ CATEGORY => 'STRENGTHS', VALUE => 'strong'],
 );
 
@@ -86,20 +87,12 @@ my $orig = $text;
 
   return 0 unless $match;
 
-  my $total = length($text);
-  if ($total > 0)
-  {
-    my ($category, $value);
-    categorize($whole, $tag_list, $text, \$category, \$value);
+  my ($category, $value);
+  categorize($whole, $tag_list, $text, \$category, \$value);
 
 print "MIDDLEX $text ($orig) [$category]\n";
 
-    push @$splits, $category, $value;
-  }
-  else
-  {
-    print "MIDDLEY\n";
-  }
+  push @$splits, $category, $value;
 
   return 1 if $#temp == -1;
   push @$splits, @temp;

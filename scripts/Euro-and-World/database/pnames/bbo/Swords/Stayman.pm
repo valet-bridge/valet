@@ -55,7 +55,9 @@ my %SINGLE_TYPOS =
     'pupstaym',
     'pupstm',
     'pupsty',
-    'pupstym'],
+    'pupstym',
+    'staymanpoupet',
+    'staymanpoupett'],
   Stayman => [
     'básicstayman',
     'sayman',

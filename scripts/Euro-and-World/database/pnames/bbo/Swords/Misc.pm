@@ -44,15 +44,20 @@ my @SINGLE_WORDS = qw(
   Defense
   Discard
   Double
+  Feature
   Forcing
   Jacoby
   Jordan
+  kings
   Lead
   Multi
   Natural
   Negative
+  no
   Opener
   Opening
+  or
+  other
   Points
   Polish
   plus
@@ -66,7 +71,9 @@ my @SINGLE_WORDS = qw(
   System
   Takeout
   Texas
+  through
   Transfer
+  Truscott
   Unusual
   Waiting
 );
@@ -179,7 +186,8 @@ my %SINGLE_TYPOS =
     'checkback',
     'chekback',
     'chkback',
-    'chkbk'],
+    'chkbk',
+    'ckbck'],
   Cuebid => [
     'cub',
     'cubbit',
@@ -668,6 +676,9 @@ my %SINGLE_TYPOS =
     'opng',
     'opning',
     'opnng'],
+  other => [
+    'allother',
+    'allothers'],
   Points => [
     'hc',
     'hcdp',
@@ -738,6 +749,7 @@ my %SINGLE_TYPOS =
     'andq',
     'atuq',
     'qdia',
+    'qoftrumps',
     'trq',
     'trumpq',
     'trumpqn',
@@ -747,6 +759,7 @@ my %SINGLE_TYPOS =
   Private => [
     'askme',
     'byreqonly',
+    'demande',
     'whoeverunimportant'],
   Reverse => [
     'rev',

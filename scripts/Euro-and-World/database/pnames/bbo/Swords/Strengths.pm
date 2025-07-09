@@ -58,11 +58,14 @@ my %SINGLE_TYPOS =
     'stronge',
     'stronge',
     'strongg',
-    'strongv'],
+    'stronghand',
+    'strongv',
+    'verystrong'],
   variable => [
     'canblite'],
   weak => [
     'bidw',
+    'weakgoodsuit',
     'wk'],
 );
 
