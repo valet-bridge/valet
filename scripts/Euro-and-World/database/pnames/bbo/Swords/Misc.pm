@@ -15,6 +15,8 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Against NT',
+  'Against Suit',
   'Almost Game Forcing',
   'Five Major',
   'Game Forcing',
@@ -52,6 +54,10 @@ my @SINGLE_WORDS = qw(
   Opener
   Opening
   Points
+  Polish
+  plus
+  Private
+  Range
   Reverse
   Standard
   Stolen
@@ -61,11 +67,18 @@ my @SINGLE_WORDS = qw(
   Takeout
   Texas
   Transfer
+  Unusual
   Waiting
 );
 
 my %SINGLE_TYPOS =
 (
+  'Against NT' => [
+    'vssa'],
+  'Against Suit' => [
+    'vsn',
+    'vsnt',
+    'vss'],
   'Almost Game Forcing' => [
     'almostgf'],
   American => [
@@ -710,7 +723,10 @@ my %SINGLE_TYPOS =
     'puntos',
     'pys'],
   'King of Trumps' => [
-    'trumpk'],
+    'trumpk',
+    'whitK',
+    'withk',
+    'withtrumpk'],
   'Over NT' => [
     'overnt',
     'overntopening',
@@ -724,7 +740,14 @@ my %SINGLE_TYPOS =
     'qdia',
     'trq',
     'trumpq',
-    'withq'],
+    'trumpqn',
+    'withd',
+    'withq',
+    'withqoft'],
+  Private => [
+    'askme',
+    'byreqonly',
+    'whoeverunimportant'],
   Reverse => [
     'rev',
     'revars',
@@ -1349,6 +1372,12 @@ my %SINGLE_TYPOS =
     'xfr',
     'xfrs',
     'xfs'],
+  Unusual => [
+    'unntfor',
+    'unntminrs',
+    'unusuall',
+    'unusul',
+    'unusnweakjump'],
   'Way Checkback' => [
     'waycb',
     'waycbs',

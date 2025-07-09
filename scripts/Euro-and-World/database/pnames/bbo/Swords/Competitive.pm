@@ -15,12 +15,14 @@ my @MULTI_WORDS =
 (
   'Balancing Double',
   'Jump Shift',
+  'Lightner Double',
   'Maximal Double',
   'Michaels Cuebid',
   'Modified Hamilton',
   'Multi Landy',
   'Negative Double',
   'Negative Free Bid',
+  'Penalty Double',
   'Responsive Double',
   'Rosenkranz Double',
   'Sandwich NT',
@@ -559,6 +561,8 @@ my %SINGLE_TYPOS =
     'lebson',
     'lebsonsol',
     'lebsor'],
+  'Lightner Double' => [
+    'lighx'],
   'Maximal Double' => [
     'maximalx',
     'maxmlx',
@@ -760,6 +764,8 @@ my %SINGLE_TYPOS =
     'negfb',
     'negfreebid',
     'negfreebids'],
+  'Penalty Double' => [
+    'penaltyx'],
   'Responsive Double' => [
     'respdb',
     'respdbl',
@@ -803,7 +809,8 @@ my %SINGLE_TYPOS =
     'stolenbidx',
     'stolenstep',
     'stolenx',
-    'stolnx'],
+    'stolnx',
+    'xonstlnbids'],
   'Strong Jump Shift' => [
     'strgjs',
     'strjs',
@@ -866,6 +873,9 @@ my %SINGLE_TYPOS =
   'Takeout Double' => [
     'infdbl',
     'infox',
+    'takeoudbl',
+    'takeoutdb',
+    'takeoutdoubles',
     'takeoutx',
     'takeoutxx'],
   'Unusual NT' => [
@@ -893,6 +903,7 @@ my %SINGLE_TYPOS =
     'unusualn',
     'unusualnotrump',
     'unusualnt',
+    'unusualntovercall',
     'unusualsa',
     'unusulnt',
     'unusunt',
@@ -906,6 +917,7 @@ my %SINGLE_TYPOS =
     'weakj',
     'weakjump',
     'weakjumps',
+    'wkjincomp',
     'wkjump',
     'wkjumps',
     'wjumps'],

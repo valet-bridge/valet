@@ -36,7 +36,8 @@ my %SINGLE_TYPOS =
     'garbstayman',
     'grbgstym',
     'nfstay',
-    'nonfsty'],
+    'nonfsty',
+    'weakstay'],
   'Puppet Stayman' => [
     'puppetst',
     'puppetstay',

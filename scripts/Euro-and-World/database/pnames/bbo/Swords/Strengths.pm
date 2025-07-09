@@ -62,6 +62,7 @@ my %SINGLE_TYPOS =
   variable => [
     'canblite'],
   weak => [
+    'bidw',
     'wk'],
 );
 

@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  '2D Waiting',
   'Checkback Stayman',
   'Forcing NT',
   'Inverted Minors',
@@ -23,6 +24,8 @@ my @MULTI_WORDS =
   'Reverse Drury',
   'Texas Transfers',
   'Wolff Signoff',
+  'XY NT',
+  'XYZ NT',
 );
 
 my %MULTI_TYPOS =
@@ -30,6 +33,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Baron
   Crodo
   Drury
   Flannery
@@ -40,10 +44,14 @@ my @SINGLE_WORDS = qw(
   Roudinesco
   Smolen
   Splinter
+  Walsh
 );
 
 my %SINGLE_TYPOS =
 (
+  '2D Waiting' => [
+    'waitpreferans',
+    'waitaork'],
   'Checkback Stayman' => [
     'chbckst',
     'chbst',
@@ -159,6 +167,8 @@ my %SINGLE_TYPOS =
     'gerberl',
     'gerberm',
     'gerbern',
+    'gerbernt',
+    'gerberovernt',
     'gerberr',
     'gerbers',
     'gerbor',
@@ -181,6 +191,9 @@ my %SINGLE_TYPOS =
     'invertem',
     'invertm',
     'invertminor',
+    'invertminör',
+    'invertmýn',
+    'invitmin',
     'invm',
     'invmi',
     'invmimor',
@@ -198,6 +211,8 @@ my %SINGLE_TYPOS =
     'invmns',
     'invmr',
     'invmrs',
+    'invmýn',
+    'invörtm',
     'invrm',
     'invrtdm',
     'invrtdminrs',
@@ -207,6 +222,9 @@ my %SINGLE_TYPOS =
     'invtdminors',
     'invtdmnr',
     'invtminor',
+    'meninv',
+    'minvmin',
+    'ninvmin',
     'ynvmi'],
   'Jacoby 2NT' => [
     'jabnt',
@@ -602,6 +620,10 @@ my %SINGLE_TYPOS =
     'txxfrs'],
   'Wolff Signoff' => [
     'wolfsig'],
+  'XY NT' => [
+    'xynt'],
+  'XYZ NT' => [
+    'xyznt'],
 );
 
 

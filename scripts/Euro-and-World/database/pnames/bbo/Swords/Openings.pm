@@ -16,6 +16,7 @@ my @MULTI_WORDS =
   'Gambling 3NT',
   'Strong NT',
   'Three Level Preempts',
+  'Variable NT',
   'Weak NT',
   'Weak Two',
   'Weak Two DHS',
@@ -36,6 +37,7 @@ my %SINGLE_TYPOS =
     'gamblnt',
     'gambnt',
     'gmbnt',
+    'gmlgnt',
     'ntgamb',
     'ntgambl',
     'ntgambling',
@@ -46,9 +48,13 @@ my %SINGLE_TYPOS =
     'strongnt'],
   'Three Level Preempts' => [
     'threest'],
+  'Variable NT' => [
+    'variablent',
+    'varnt'],
   'Weak NT' => [
     'weaknt',
     'weaksa',
+    'wejba',
     'wknt'],
   'Weak Two' => [
     'weakbids',
@@ -56,6 +62,8 @@ my %SINGLE_TYPOS =
     'weaktwos',
     'weattwo'],
   'Weak Two DHS' => [
+    'dhsw',
+    'dhswe',
     'dhsweak',
     'dhswk',
     'hdsw',

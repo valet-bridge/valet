@@ -77,7 +77,11 @@ my %SINGLE_TYPOS =
     'bettrminor',
     'btermn',
     'bstmin',
-    'btrmin'],
+    'btrmin',
+    'meilleurmin',
+    'meilmin',
+    'meimin',
+    'openningbestminor'],
   'Blue Club' => [
     'bluec',
     'blueclub'],
@@ -90,6 +94,8 @@ my %SINGLE_TYPOS =
     'convenientd',
     'convenientminor',
     'convminors'],
+  'Five Card Major' => [
+    'nobv'],
   'German Forum D' => [
     'bietsystemforum',
     'forumd',
@@ -117,6 +123,7 @@ my %SINGLE_TYPOS =
     'precesionecl',
     'precisionclub'],
   SAYC => [
+    'americansyac',
     'basicsayc',
     'fullsayc',
     'naturalsayc',

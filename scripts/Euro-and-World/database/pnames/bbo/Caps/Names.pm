@@ -841,6 +841,8 @@ my %NAMES =
   'hoBERMAN' => [NAME_LAST => 'Hoberman'],
   'lsStella' => [NAME_FIRST => 'Stella'],
   'EmileJ' => [NAME_FIRST => 'Emile', NAME_INITIALS => 'J.'],
+  'franK' => [NAME_FIRST => 'Frank'],
+  'xoxoxoJoan' => [NAME_FIRST => 'Joan'],
 );
 
 sub split
