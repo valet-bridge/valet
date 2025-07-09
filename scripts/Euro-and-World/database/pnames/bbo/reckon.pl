@@ -312,6 +312,10 @@ my $sno = 0;
 while (my $line = <$fh>)
 {
   $sno++;
+if ($sno == 214)
+{
+  print "HERE\n";
+}
   if ($line !~ /^(.+), (\d+), (\d+)$/)
   {
     die "FORMAT $sno: $line";
@@ -322,6 +326,7 @@ while (my $line = <$fh>)
   my $sub = <$fh>;
   chomp $sub;
   my $empty = <$fh>;
+  $sno += 3;
 
   $SUBSTITUTE_LINES{$handle}{$count}{$lno}[0] = $orig;
   $SUBSTITUTE_LINES{$handle}{$count}{$lno}[1] = $sub;
@@ -836,6 +841,7 @@ sub inspect_paragraph
   my $level_seen = 0;
 
   my $handle = $paragraph->{HANDLE};
+  my $hcount = $handle_counts->{$handle};
   my $eno = -1;
   my $elen = $#{$paragraph->{LINES}};
 
@@ -843,11 +849,17 @@ sub inspect_paragraph
   {
     $eno++;
 
-    if (exists $SUBSTITUTE_LINES{$handle} &&
-        exists $SUBSTITUTE_LINES{$handle}{$handle_counts->{$handle}}{$eno})
+    if (exists $FLUFFED_LINES{$handle}{$hcount}{$eno})
     {
-      my $sub = 
-        $SUBSTITUTE_LINES{$handle}{$handle_counts->{$handle}}{$eno};
+      $entry->{CATEGORY} = 'FLUFF';
+      $entry->{VALUE} = $entry->{TEXT};
+      next;
+    }
+
+    if (exists $SUBSTITUTE_LINES{$handle} &&
+        exists $SUBSTITUTE_LINES{$handle}{$hcount}{$eno})
+    {
+      my $sub = $SUBSTITUTE_LINES{$handle}{$hcount}{$eno};
       my $orig = $sub->[0];
       my $repl = $sub->[1];
       if ($entry->{TEXT} ne $orig)

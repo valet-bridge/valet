@@ -38,6 +38,8 @@ my @SINGLE_WORDS = qw(
   Precision
   SAYC
   SEF
+  WJ05
+  WJXXI
 );
 
 my %SINGLE_TYPOS =
@@ -180,6 +182,8 @@ my %SINGLE_TYPOS =
   'Standard Italian' => [
     'standardbboitalia',
     'standarditalia'],
+  WJXXI => [
+    'wjxxiw'],
 );
 
 
