@@ -23,6 +23,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Keycards
+  Kickback
   Minorwood
   RKCB
 );
@@ -30,8 +31,11 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Exclusion Keycard' => [
+    'excb',
+    'excbl',
     'exclbl',
     'exclbw',
+    'exclusionblw',
     'voidvd',
     'voidwd',
     'voidwood',
@@ -71,6 +75,7 @@ my %SINGLE_TYPOS =
     'keykarte',
     'keys'],
   Minorwood => [
+    'minorrkc',
     'minwood'],
   RKCB => [
     'kbw',

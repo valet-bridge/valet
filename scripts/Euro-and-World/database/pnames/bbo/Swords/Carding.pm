@@ -16,10 +16,13 @@ my @MULTI_WORDS =
   'Ace from AK',
   'King from AK',
   'Lavinthal Against NT',
+  'McKenney Signal',
   'Reverse Smith',
   'Roman Discards',
+  'Schneider Signal',
   'Smith Echo',
   'Standard Carding',
+  'Standard Count',
 );
 
 my %MULTI_TYPOS =
@@ -37,6 +40,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Ace from AK' => [
+    'afrak',
     'akxleada',
     'akleadka',
     'afromak'],
@@ -162,6 +166,8 @@ my %SINGLE_TYPOS =
     'levintalsa',
     'levinthalsa',
     'levsa'],
+  'McKenney Signal' => [
+    'mckenny'],
   'Reverse Smith' => [
     'revsmith',
     'revsmithecho'],
@@ -180,6 +186,8 @@ my %SINGLE_TYPOS =
     'romend',
     'romendefos',
     'romendisc'],
+  'Schneider Signal' => [
+    'schneidersignal'],
   'Smith Echo' => [
     'smithecho'],
   'Standard Carding' => [
@@ -202,6 +210,8 @@ my %SINGLE_TYPOS =
     'stncrd',
     'stndc',
     'stndrdc'],
+  'Standard Count' => [
+    'stdcnt'],
   UDCA => [
     'uda',
     'udac',

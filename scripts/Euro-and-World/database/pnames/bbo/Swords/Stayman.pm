@@ -30,6 +30,7 @@ my %SINGLE_TYPOS =
 (
   'Minor Suit Stayman' => [
     'minorstayman',
+    'minorsuitstayman',
     'mss'],
   'Nonforcing Stayman' => [
     'garbst',

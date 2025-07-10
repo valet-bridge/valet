@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   'Five Card Major',
   'German Forum D',
   'Magic Diamond',
+  'Nordic Standard',
   'Polish ACOL',
   'Polish Club',
   'Power ACOL',
@@ -104,6 +105,8 @@ my %SINGLE_TYPOS =
     'forumdplus'],
   'Magic Diamond' => [
     'magicdiamond'],
+  'Nordic Standard' => [
+    'modifiednordicstandard'],
   'Polish ACOL' => [
     'polishacolholic'],
   'Polish Club' => [

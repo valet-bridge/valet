@@ -15,15 +15,21 @@ my @MULTI_WORDS =
 (
   '2D Waiting',
   'Checkback Stayman',
+  'Control Bid',
   'Forcing NT',
   'Inverted Minors',
+  'Kokish Game Try',
   'Limit Raise',
   'New Minor Forcing',
   'Jacoby 2NT',
   'Jacoby Transfers',
   'Reverse Drury',
+  'Slow Arrival',
+  'Serious 3NT',
+  'South African Texas',
   'Super Accepts',
   'Texas Transfers',
+  'Trial Bid',
   'Wolff Signoff',
   'XY NT',
   'XYZ NT',
@@ -60,6 +66,7 @@ my %SINGLE_TYPOS =
     'chbst',
     'chkbkst',
     'chkbackstymn',
+    'chkbaksa',
     'chkbstaym',
     'chkbs',
     'checkbackst',
@@ -137,6 +144,8 @@ my %SINGLE_TYPOS =
     'flany',
     'flrannery',
     'flry'],
+  'Control Bid' => [
+    'ctrlbids'],
   'Forcing NT' => [
     'font',
     'forcent',
@@ -309,6 +318,7 @@ my %SINGLE_TYPOS =
     'jacxfer',
     'jacxfers',
     'jacxfx',
+    'jcbtrans',
     'jcbytr',
     'jcbytrf',
     'jcbytrnsf'],
@@ -495,6 +505,8 @@ my %SINGLE_TYPOS =
     'splynter',
     'spnter',
     'spntr'],
+  'Kokish Game Try' => [
+    'kokishgt'],
   'Limit Raise' => [
     'limitraise',
     'limraise',
@@ -561,6 +573,10 @@ my %SINGLE_TYPOS =
     'rvdrury',
     'rvrsdrury',
     'rvsdrury'],
+  'Serious 3NT' => [
+    'serious3nt'],
+  'South African Texas' => [
+    'africantexas'],
   'Texas Transfers' => [
     'teaxas',
     'teaxs',
@@ -633,6 +649,8 @@ my %SINGLE_TYPOS =
     'txtx',
     'txxfer',
     'txxfrs'],
+  'Trial Bid' => [
+    'trialbid'],
   'Wolff Signoff' => [
     'wolfsig'],
   'XY NT' => [

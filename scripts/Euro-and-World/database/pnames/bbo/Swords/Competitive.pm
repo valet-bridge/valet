@@ -15,9 +15,11 @@ my @MULTI_WORDS =
 (
   'Balancing Double',
   'Balancing NT',
+  'Fit Jump',
   'Flip Flop',
   'Good Bad NT',
   'Jump Shift',
+  'Leaping Michaels',
   'Lightner Double',
   'Maximal Double',
   'Meckwell Against NT',
@@ -27,15 +29,19 @@ my @MULTI_WORDS =
   'Negative Double',
   'Negative Free Bid',
   'Penalty Double',
+  'Pinpoint Astro',
   'Responsive Double',
+  'Revised DONT',
   'Rosenkranz Double',
   'Sandwich NT',
+  'SOS Redouble',
   'Sputnik Double',
   'Stolen Bid',
   'Strong Jump Shift',
   'Support Double',
   'Takeout Double',
   'Unusual NT',
+  'Unusual vs Unusual',
   'Weak Jump',
   'Weak Jump Shift',
   'Weak Jump Overcall',
@@ -403,6 +409,11 @@ my %SINGLE_TYPOS =
     'gshm',
     'gsthm',
     'gstm'],
+  'Fit Jump' => [
+    'fitjump',
+    'fitjumps'],
+  'Flip Flop' => [
+    'flipflop'],
   'Good Bad NT' => [
     'ntgoodbad'],
   'Jump Shift' => [
@@ -416,6 +427,8 @@ my %SINGLE_TYPOS =
     'lnd',
     'lndi',
     'lndy'],
+  'Leaping Michaels' => [
+    'leapingmichaels'],
   Lebensohl => [
     'leb',
     'lebanhsol',
@@ -620,6 +633,7 @@ my %SINGLE_TYPOS =
     'michls',
     'michs',
     'mick',
+    'mickp',
     'mickael',
     'mickaels',
     'mickeals',
@@ -642,6 +656,7 @@ my %SINGLE_TYPOS =
     'mchlqbid',
     'mchq',
     'mckcb',
+    'mcueb',
     'mcuebid',
     'miccubib',
     'miccubid',
@@ -670,6 +685,9 @@ my %SINGLE_TYPOS =
     'mickaelcubid',
     'mickaelscb',
     'mickcb',
+    'micknp',
+    'mickpré',
+    'mickpréc',
     'mickq',
     'mickqbid',
     'micq',
@@ -782,13 +800,18 @@ my %SINGLE_TYPOS =
     'negfreebids'],
   'Penalty Double' => [
     'penaltyx'],
+  'Pinpoint Astro' => [
+    'pinpointastro'],
   'Responsive Double' => [
     'respdb',
     'respdbl',
+    'responsivex',
     'respronf',
     'respx',
     'respx\'s',
     'resx'],
+  'Revised DONT' => [
+    'revdont'],
   'Rosenkranz Double' => [
     'rosenkrantzx',
     'rozenkranzx',
@@ -808,6 +831,8 @@ my %SINGLE_TYPOS =
     'sndwcht',
     'sndwhnt',
     'sndwnt'],
+  'SOS Redouble' => [
+    'sosxx'],
   'Sputnik Double' => [
     'controsputnik',
     'sputnikx',
@@ -833,6 +858,7 @@ my %SINGLE_TYPOS =
     'strongjs',
     'strjumpshift'],
   'Support Double' => [
+    'sptx',
     'supd',
     'supdb',
     'supdbl',
@@ -927,11 +953,15 @@ my %SINGLE_TYPOS =
     'unusualsa',
     'unusulnt',
     'unusunt',
+    'unvun',
     'usnusnt',
     'usualnt',
     'usunt',
     'uunt',
     'uusnt'],
+  'Unusual vs Unusual' => [
+    'unvsun',
+    'uvsu'],
   'Weak Jump' => [
     'saltideb',
     'weakj',

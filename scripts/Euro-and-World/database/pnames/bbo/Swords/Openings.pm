@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  '2D Precision',
   '2D Multi',
   'Gambling 3NT',
   'Short Club',
@@ -34,6 +35,8 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  '2D Precision' => [
+    'miniroman'],
   'Gambling 3NT' => [
     'gamblingnt',
     'gamblnt',
@@ -46,6 +49,9 @@ my %SINGLE_TYPOS =
     'ntgambling',
     'ntgb',
     'solidmin'],
+  'Short Club' => [
+    'shortc',
+    'shortcl'],
   'Strong NT' => [
     'strngnt',
     'strongnt'],
@@ -60,6 +66,7 @@ my %SINGLE_TYPOS =
     'wejba',
     'wknt'],
   'Weak Two' => [
+    'lucas',
     'weakbids',
     'weaktwo',
     'weaktwos',
