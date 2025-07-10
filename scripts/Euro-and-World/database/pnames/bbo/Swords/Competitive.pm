@@ -39,6 +39,8 @@ my @MULTI_WORDS =
   'Stolen Bid',
   'Strong Jump Shift',
   'Support Double',
+  'System Off',
+  'System On',
   'Takeout Double',
   'Unusual NT',
   'Unusual vs Unusual',
@@ -912,6 +914,12 @@ my %SINGLE_TYPOS =
     'supxx',
     'supxxx',
     'supporx'],
+  'System Off' => [
+    'sysoff'],
+  'System On' => [
+    'syson',
+    'syston',
+    'systson'],
   'Takeout Double' => [
     'infdbl',
     'infox',
