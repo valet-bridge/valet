@@ -23,9 +23,11 @@ my @MULTI_WORDS =
   'New Minor Forcing',
   'Jacoby 2NT',
   'Jacoby Transfers',
+  'Quantitative NT',
   'Reverse Drury',
   'Slow Arrival',
   'Serious 3NT',
+  'Slow Arrival',
   'South African Texas',
   'Super Accepts',
   'Texas Transfers',
@@ -43,8 +45,8 @@ my @SINGLE_WORDS = qw(
   Baron
   Crodo
   Drury
-  Flannery
   Gerber
+  Ingberman
   Minisplinter
   Namyats
   Ogust
@@ -119,31 +121,6 @@ my %SINGLE_TYPOS =
     'druyy',
     'dryr',
     'dryry'],
-  Flannery => [
-    'flan',
-    'flanarry',
-    'flanary',
-    'flanely',
-    'flaner',
-    'flaneri',
-    'flanerry',
-    'flanery',
-    'flann',
-    'flannary',
-    'flanne',
-    'flanner',
-    'flannert',
-    'flanneryr',
-    'flanneryy',
-    'flanney',
-    'flannnery',
-    'flannnnery',
-    'flannry',
-    'flanr',
-    'flanry',
-    'flany',
-    'flrannery',
-    'flry'],
   'Control Bid' => [
     'ctrlbids'],
   'Forcing NT' => [
@@ -197,6 +174,8 @@ my %SINGLE_TYPOS =
     'grbe',
     'grber',
     'grbr'],
+  Ingberman => [
+    'inbergman'],
   'Inverted Minors' => [
     'inm',
     'inverm',
@@ -319,11 +298,14 @@ my %SINGLE_TYPOS =
     'jacxfers',
     'jacxfx',
     'jcbtrans',
+    'jcbtfrs',
     'jcbytr',
     'jcbytrf',
     'jcbytrnsf'],
   Minisplinter => [
-    'minispl'],
+    'minispl',
+    'minisplinters',
+    'minisplntr'],
   Ogust => [
     'ogu',
     'ogus',
@@ -550,6 +532,9 @@ my %SINGLE_TYPOS =
     'nmr',
     'nmrf',
     'nmsf'],
+  'Quantitative NT' => [
+    'quantn',
+    'quantnt'],
   'Reverse Drury' => [
     'rdru',
     'rdrury',
@@ -575,8 +560,13 @@ my %SINGLE_TYPOS =
     'rvsdrury'],
   'Serious 3NT' => [
     'serious3nt'],
+  'Slow Arrival' => [
+    'slowarrival'],
   'South African Texas' => [
     'africantexas'],
+  'Super Accepts' => [
+    'superacc',
+    'superaccepts'],
   'Texas Transfers' => [
     'teaxas',
     'teaxs',
@@ -650,6 +640,8 @@ my %SINGLE_TYPOS =
     'txxfer',
     'txxfrs'],
   'Trial Bid' => [
+    'helpsuit',
+    'helpsuitgametry',
     'trialbid'],
   'Wolff Signoff' => [
     'wolfsig'],

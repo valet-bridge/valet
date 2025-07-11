@@ -16,6 +16,7 @@ my @MULTI_WORDS =
   '2D Precision',
   '2D Multi',
   'Gambling 3NT',
+  'Reverse Flannery',
   'Short Club',
   'Strong NT',
   'Three Level Preempts',
@@ -31,12 +32,38 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Flannery
 );
 
 my %SINGLE_TYPOS =
 (
   '2D Precision' => [
     'miniroman'],
+  Flannery => [
+    'flan',
+    'flanarry',
+    'flanary',
+    'flanely',
+    'flaner',
+    'flaneri',
+    'flanerry',
+    'flanery',
+    'flann',
+    'flannary',
+    'flanne',
+    'flanner',
+    'flannert',
+    'flanneryr',
+    'flanneryy',
+    'flanney',
+    'flannnery',
+    'flannnnery',
+    'flannry',
+    'flanr',
+    'flanry',
+    'flany',
+    'flrannery',
+    'flry'],
   'Gambling 3NT' => [
     'gamblingnt',
     'gamblnt',
@@ -49,11 +76,14 @@ my %SINGLE_TYPOS =
     'ntgambling',
     'ntgb',
     'solidmin'],
+  'Reverse Flannery' => [
+    'revflannery'],
   'Short Club' => [
     'shortc',
     'shortcl'],
   'Strong NT' => [
     'strngnt',
+    'strnt',
     'strongnt'],
   'Three Level Preempts' => [
     'threest'],

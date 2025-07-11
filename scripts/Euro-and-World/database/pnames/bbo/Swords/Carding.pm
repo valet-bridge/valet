@@ -14,15 +14,18 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Ace from AK',
+  'High Encouraging',
   'King from AK',
   'Lavinthal Against NT',
   'McKenney Signal',
+  'Reverse Attitude',
   'Reverse Smith',
   'Roman Discards',
   'Schneider Signal',
   'Smith Echo',
   'Standard Carding',
   'Standard Count',
+  'Standard Discards',
 );
 
 my %MULTI_TYPOS =
@@ -44,6 +47,8 @@ my %SINGLE_TYPOS =
     'akxleada',
     'akleadka',
     'afromak'],
+  'High Encouraging' => [
+    'highencour'],
   'King from AK' => [
     'kfmak',
     'kfrak',
@@ -53,6 +58,7 @@ my %SINGLE_TYPOS =
     'lavantal',
     'lavanthal',
     'lavantl',
+    'lavdisc',
     'lavenhal',
     'lavent',
     'laventahl',
@@ -168,6 +174,8 @@ my %SINGLE_TYPOS =
     'levsa'],
   'McKenney Signal' => [
     'mckenny'],
+  'Reverse Attitude' => [
+    'revatt'],
   'Reverse Smith' => [
     'revsmith',
     'revsmithecho'],
@@ -192,6 +200,7 @@ my %SINGLE_TYPOS =
     'smithecho'],
   'Standard Carding' => [
     'stancarding',
+    'crdstndrrd',
     'standardsigs',
     'standcard',
     'standcarding',
@@ -212,6 +221,9 @@ my %SINGLE_TYPOS =
     'stndrdc'],
   'Standard Count' => [
     'stdcnt'],
+  'Standard Discards' => [
+    'stddisc',
+    'stdisc'],
   UDCA => [
     'uda',
     'udac',
@@ -229,7 +241,8 @@ my %SINGLE_TYPOS =
     'udka',
     'udlca',
     'udsa',
-    'udsca'],
+    'udsca',
+    'upsidedown'],
 );
 
 

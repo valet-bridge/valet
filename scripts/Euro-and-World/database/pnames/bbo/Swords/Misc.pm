@@ -67,6 +67,7 @@ my @SINGLE_WORDS = qw(
   Standard
   Stolen
   Suit
+  Supernegative
   Support
   System
   Takeout
@@ -879,6 +880,8 @@ my %SINGLE_TYPOS =
     'farben',
     'suit',
     'suits'],
+  Supernegative => [
+    'superneg'],
   Support => [
     'sup',
     'supo',

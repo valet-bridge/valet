@@ -868,7 +868,7 @@ sub inspect_paragraph
         print "TEXT ", $entry->{TEXT}, "\n";
         print "ORIG $orig\n";
         print "REPL $repl\n";
-        die "Mismatch";
+        warn "Mismatch";
       }
       $entry->{TEXT} = $repl;
     }

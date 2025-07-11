@@ -65,6 +65,7 @@ my %SINGLE_TYPOS =
     'brge',
     'brgen',
     'brgn',
+    'brgnraise',
     'brgr',
     'regber',
     'regberg'],

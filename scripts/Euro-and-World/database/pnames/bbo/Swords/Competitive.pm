@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Balancing NT',
   'Fit Jump',
   'Flip Flop',
+  'Game Try Double',
   'Good Bad NT',
   'Jump Shift',
   'Leaping Michaels',
@@ -31,6 +32,7 @@ my @MULTI_WORDS =
   'Penalty Double',
   'Pinpoint Astro',
   'Responsive Double',
+  'Reverse Cappelletti',
   'Revised DONT',
   'Rosenkranz Double',
   'Sandwich NT',
@@ -72,6 +74,7 @@ my %SINGLE_TYPOS =
 (
   'Balancing Double' => [
     'balancingd',
+    'balancingx',
     'balxs'],
   'Balancing NT' => [
     'ntbalancing'],
@@ -416,7 +419,10 @@ my %SINGLE_TYPOS =
     'fitjumps'],
   'Flip Flop' => [
     'flipflop'],
+  'Game Try Double' => [
+    'gametrydoubles'],
   'Good Bad NT' => [
+    'goodbadnt',
     'ntgoodbad'],
   'Jump Shift' => [
     'jumpshift',
@@ -430,7 +436,10 @@ my %SINGLE_TYPOS =
     'lndi',
     'lndy'],
   'Leaping Michaels' => [
-    'leapingmichaels'],
+    'leapingmichaels',
+    'leapm',
+    'leapmik',
+    'lpgmicls'],
   Lebensohl => [
     'leb',
     'lebanhsol',
@@ -595,6 +604,8 @@ my %SINGLE_TYPOS =
     'maximalx',
     'maxmlx',
     'maxx'],
+  'Meckwell Against NT' => [
+    'meckwell'],
   Michaels => [
     'mchls',
     'mechels',
@@ -606,6 +617,7 @@ my %SINGLE_TYPOS =
     'micahels',
     'micals',
     'micchaels',
+    'miccue',
     'mich',
     'michacls',
     'michaeals',
@@ -619,6 +631,7 @@ my %SINGLE_TYPOS =
     'michal',
     'michales',
     'michals',
+    'michc',
     'miche',
     'michea',
     'micheaels',
@@ -645,6 +658,7 @@ my %SINGLE_TYPOS =
     'micls',
     'mics',
     'miichaels',
+    'mikecue',
     'mikels',
     'mikles',
     'mikls',
@@ -660,8 +674,10 @@ my %SINGLE_TYPOS =
     'mckcb',
     'mcueb',
     'mcuebid',
+    'miccb',
     'miccubib',
     'miccubid',
+    'miccue',
     'michaelcb',
     'michaelcueb',
     'michaelqbid',
@@ -681,21 +697,25 @@ my %SINGLE_TYPOS =
     'micheleb',
     'michkqubit',
     'michlscue',
+    'michpré',
     'michq',
     'michqbid',
     'michscb',
+    'michsuperprec',
     'mickaelcubid',
     'mickaelscb',
     'mickcb',
     'micknp',
     'mickpré',
     'mickpréc',
+    'mickprec',
     'mickq',
     'mickqbid',
     'micq',
     'micqbid',
     'micqp',
     'mikcb',
+    'mikanp',
     'mikecbids',
     'mikeq',
     'miq',
@@ -812,6 +832,9 @@ my %SINGLE_TYPOS =
     'respx',
     'respx\'s',
     'resx'],
+  'Reverse Cappelletti' => [
+    'modcapp',
+    'revcapp'],
   'Revised DONT' => [
     'revdont'],
   'Rosenkranz Double' => [
@@ -860,6 +883,9 @@ my %SINGLE_TYPOS =
     'strongjs',
     'strjumpshift'],
   'Support Double' => [
+    'spptx',
+    'spprtx',
+    'sppx',
     'sptx',
     'supd',
     'supdb',
