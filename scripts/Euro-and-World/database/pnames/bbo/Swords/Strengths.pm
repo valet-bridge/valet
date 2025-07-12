@@ -28,7 +28,11 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   strong => [
+    'fort',
+    'forte',
+    'forts',
     'fuerte',
+    'stark',
     'str',
     'strg',
     'strn',
@@ -65,6 +69,9 @@ my %SINGLE_TYPOS =
     'canblite'],
   weak => [
     'bidw',
+    'faible',
+    'faibles',
+    'schwach',
     'weakgoodsuit',
     'wk'],
 );

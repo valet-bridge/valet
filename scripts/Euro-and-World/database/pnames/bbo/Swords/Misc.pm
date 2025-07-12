@@ -19,6 +19,7 @@ my @MULTI_WORDS =
   'Against Suit',
   'Almost Game Forcing',
   'Five Major',
+  'Help Suit',
   'Game Forcing',
   'King of Trumps',
   'Over NT',
@@ -35,6 +36,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   American
+  any
   Benjamin
   Bid
   Carding
@@ -50,6 +52,7 @@ my @SINGLE_WORDS = qw(
   Jordan
   kings
   Lead
+  McKenney
   Multi
   Natural
   Negative
@@ -61,6 +64,7 @@ my @SINGLE_WORDS = qw(
   Points
   Polish
   plus
+  Prepared
   Private
   Range
   Reverse
@@ -81,6 +85,10 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  any => [
+    'indeterminada',
+    'indeterminado',
+    'indeterminados'],
   'Against NT' => [
     'vssa'],
   'Against Suit' => [
@@ -382,9 +390,12 @@ my %SINGLE_TYPOS =
     'frce',
     'frcing',
     'frcng'],
+  'Help Suit' => [
+    'helpsuit'],
   'Game Forcing' => [
     'alwaysfg',
-    'alwaysgameforcing'],
+    'alwaysgameforcing',
+    'partieforcing'],
   Jacoby => [
     'learningjcby',
     'jaboby',
@@ -461,6 +472,9 @@ my %SINGLE_TYPOS =
     'entamez',
     'entamme',
     'entme'],
+  McKenney => [
+    'mckenney',
+    'mckenny'],
   Multi => [
     'mul',
     'mult',
@@ -757,6 +771,8 @@ my %SINGLE_TYPOS =
     'withd',
     'withq',
     'withqoft'],
+  Prepared => [
+    'voorbereidend'],
   Private => [
     'askme',
     'byreqonly',
@@ -951,6 +967,27 @@ my %SINGLE_TYPOS =
     'sytems',
     'sytmn',
     'sytms'],
+  Texas => [
+    'teaxas',
+    'teaxs',
+    'tex',
+    'texa',
+    'texac',
+    'texases',
+    'texass',
+    'texax',
+    'texay',
+    'texes',
+    'texs',
+    'texsa',
+    'texsaa',
+    'texsas',
+    'texss',
+    'textas',
+    'texxas',
+    'texy',
+    'txs',
+    'txsas'],
   Transfer => [
     'learningtransfers',
     'tansf',
@@ -1394,6 +1431,9 @@ my %SINGLE_TYPOS =
     'unusuall',
     'unusul',
     'unusnweakjump'],
+  'Waiting' => [
+    'waitpreferans',
+    'wait'],
   'Way Checkback' => [
     'waycb',
     'waycbs',

@@ -60,8 +60,6 @@ my @UNIT_TAGS = qw(
   RANKS
   SHAPES
   STRENGTHS
-  STRENGTHS_FRA
-  STRENGTHS_GER
 
   BASES
   OPENINGS
@@ -1399,24 +1397,21 @@ sub list_to_units
         next;
       }
 
+      my $identifier = "YYY $handle, $hcount, $lno\n" .
+        "$text\n$text\n[$part]\n";
+
       if (Caps::CapSplit::split_on_caps($whole, $unit_tags, $part, 
-        \@splits, $lno))
+        \@splits, $identifier))
       {
           # TODO Push the splits.
       }
       else
       {
-
-        if (($category eq 'WORD' || $category eq 'HIGH_WORD') &&
-            $part =~ /[a-z]{2,}[A-Z]/ &&
-            $part =~ /^[a-zA-Z]/ &&
-            $part !~ /^[a-z][A-Z]/)
+        if (length($part) > 12)
         {
-          print "YYY $handle, $hcount, $lno\n";
-          print "$text\n";
-          print "$text\n";
-          print "[$part]\n\n";
+          print "$identifier\n";
         }
+
         $units->push($category, $part, $value, $pos, $chain_stats);
       }
     }

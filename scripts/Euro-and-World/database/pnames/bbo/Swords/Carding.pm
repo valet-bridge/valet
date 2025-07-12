@@ -172,8 +172,6 @@ my %SINGLE_TYPOS =
     'levintalsa',
     'levinthalsa',
     'levsa'],
-  'McKenney Signal' => [
-    'mckenny'],
   'Reverse Attitude' => [
     'revatt'],
   'Reverse Smith' => [

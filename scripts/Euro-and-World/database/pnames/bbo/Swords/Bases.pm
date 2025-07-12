@@ -15,6 +15,7 @@ my @MULTI_WORDS =
 (
   'Benjamin ACOL',
   'Blue Club',
+  'Bluejay Club',
   'Better Minor',
   'Convenient Minor',
   'Five Card Major',
@@ -88,6 +89,8 @@ my %SINGLE_TYPOS =
   'Blue Club' => [
     'bluec',
     'blueclub'],
+  'Bluejay Club' => [
+    'bluejayclub'],
   'Convenient Minor' => [
     'conmi',
     'conminor',
@@ -98,6 +101,7 @@ my %SINGLE_TYPOS =
     'convenientminor',
     'convminors'],
   'Five Card Major' => [
+    'fivecardmayor',
     'nobv'],
   'German Forum D' => [
     'bietsystemforum',

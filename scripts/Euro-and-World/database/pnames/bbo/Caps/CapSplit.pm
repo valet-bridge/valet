@@ -24,7 +24,7 @@ use Caps::Cuts;
 
 sub split_on_caps
 {
-  my ($whole, $tag_list, $text, $splits, $lno) = @_;
+  my ($whole, $tag_list, $text, $splits, $identifier) = @_;
 
   return unless (
       $text =~ /[a-z]{2,}[A-Z]/ &&
@@ -41,10 +41,12 @@ sub split_on_caps
     return 1;
   }
 
-  if (Caps::Cuts::divide($whole, $tag_list, $text, $splits))
+  if (Caps::Cuts::divide($whole, $tag_list, $text, $splits, $identifier))
   {
     return 1;
   }
+
+  print "$identifier\n";
 
   return 0;
 }

@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'New Minor Forcing',
   'Jacoby 2NT',
   'Jacoby Transfers',
+  'Pattaya NT',
   'Quantitative NT',
   'Reverse Drury',
   'Slow Arrival',
@@ -43,6 +44,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Baron
+  Baze
   Crodo
   Drury
   Gerber
@@ -60,9 +62,6 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  '2D Waiting' => [
-    'waitpreferans',
-    'waitaork'],
   'Checkback Stayman' => [
     'chbckst',
     'chbst',
@@ -488,6 +487,7 @@ my %SINGLE_TYPOS =
     'spnter',
     'spntr'],
   'Kokish Game Try' => [
+    'kokishgametry',
     'kokishgt'],
   'Limit Raise' => [
     'limitraise',
@@ -497,6 +497,7 @@ my %SINGLE_TYPOS =
     'limrse',
     'limtrase',
     'lmtr',
+    'lmtraise',
     'lmtras'],
   'New Minor Forcing' => [
     'newm',
@@ -532,6 +533,8 @@ my %SINGLE_TYPOS =
     'nmr',
     'nmrf',
     'nmsf'],
+  'Pattaya NT' => [
+    'pattayant'],
   'Quantitative NT' => [
     'quantn',
     'quantnt'],
@@ -568,16 +571,8 @@ my %SINGLE_TYPOS =
     'superacc',
     'superaccepts'],
   'Texas Transfers' => [
-    'teaxas',
-    'teaxs',
-    'tex',
-    'texa',
-    'texac',
-    'texas',
     'texascfx',
-    'texases',
     'texaskonvention',
-    'texass',
     'texastr',
     'texastrans',
     'texastransf',
@@ -591,17 +586,8 @@ my %SINGLE_TYPOS =
     'texasxfer',
     'texasxfers',
     'texasy',
-    'texax',
-    'texay',
-    'texes',
-    'texs',
-    'texsa',
-    'texsaa',
-    'texsas',
     'texsastr',
     'texsax',
-    'texss',
-    'textas',
     'textor',
     'textr',
     'textrans',
@@ -612,12 +598,9 @@ my %SINGLE_TYPOS =
     'texxas',
     'texxfer',
     'texxfers',
-    'texy',
     'txas',
     'txastran',
     'txrs',
-    'txs',
-    'txsas',
     'txstrsf',
     'txt',
     'txtf',
@@ -640,9 +623,10 @@ my %SINGLE_TYPOS =
     'txxfer',
     'txxfrs'],
   'Trial Bid' => [
-    'helpsuit',
     'helpsuitgametry',
-    'trialbid'],
+    'triaibid',
+    'trialbid',
+    'trialbids'],
   'Wolff Signoff' => [
     'wolfsig'],
   'XY NT' => [

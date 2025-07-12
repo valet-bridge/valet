@@ -15,6 +15,7 @@ my @MULTI_WORDS =
 (
   'Balancing Double',
   'Balancing NT',
+  'Competitive Double',
   'Fit Jump',
   'Flip Flop',
   'Game Try Double',
@@ -414,6 +415,8 @@ my %SINGLE_TYPOS =
     'gshm',
     'gsthm',
     'gstm'],
+  'Competitive Double' => [
+    'compx'],
   'Fit Jump' => [
     'fitjump',
     'fitjumps'],
@@ -422,6 +425,7 @@ my %SINGLE_TYPOS =
   'Game Try Double' => [
     'gametrydoubles'],
   'Good Bad NT' => [
+    'goodbad',
     'goodbadnt',
     'ntgoodbad'],
   'Jump Shift' => [
@@ -656,6 +660,7 @@ my %SINGLE_TYPOS =
     'mickls',
     'micks',
     'micls',
+    'micprec',
     'mics',
     'miichaels',
     'mikecue',
@@ -680,6 +685,7 @@ my %SINGLE_TYPOS =
     'miccue',
     'michaelcb',
     'michaelcueb',
+    'michaelcuebidprecise',
     'michaelqbid',
     'michaelsc',
     'michaelscb',
@@ -718,6 +724,7 @@ my %SINGLE_TYPOS =
     'mikanp',
     'mikecbids',
     'mikeq',
+    'mikpréc',
     'miq',
     'mkcuebid',
     'mprécisé'],

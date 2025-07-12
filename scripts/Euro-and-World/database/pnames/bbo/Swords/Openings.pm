@@ -23,8 +23,8 @@ my @MULTI_WORDS =
   'Variable NT',
   'Weak NT',
   'Weak Two',
-  'Weak Two DHS',
-  'Weak Two Major',
+  'Weak DHS',
+  'Weak Major',
 );
 
 my %MULTI_TYPOS =
@@ -97,11 +97,13 @@ my %SINGLE_TYPOS =
     'wknt'],
   'Weak Two' => [
     'lucas',
+    'sottoapertura',
+    'sottoaperture',
     'weakbids',
     'weaktwo',
     'weaktwos',
     'weattwo'],
-  'Weak Two DHS' => [
+  'Weak DHS' => [
     'dhsw',
     'dhswe',
     'dhsweak',
@@ -113,7 +115,7 @@ my %SINGLE_TYPOS =
     'weakdsh',
     'weakshd',
     'wkdhs'],
-  'Weak Two Major' => [
+  'Weak Major' => [
     'hsm',
     'hsweak',
     'hsweaks',

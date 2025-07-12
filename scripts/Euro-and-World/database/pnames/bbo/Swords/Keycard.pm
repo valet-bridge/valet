@@ -36,6 +36,7 @@ my %SINGLE_TYPOS =
     'exclbl',
     'exclbw',
     'exclusionblw',
+    'exclusionbw',
     'voidvd',
     'voidwd',
     'voidwood',

@@ -17,8 +17,6 @@ use lib './Swords';
 use Swords::Denominations;
 use Swords::Ranks;
 use Swords::Strengths;
-use Swords::StrengthsFRA;
-use Swords::StrengthsGER;
 use Swords::Shapes;
 use Swords::Lengths;
 
@@ -38,11 +36,7 @@ my %TAGS =
 (
   DENOMINATIONS => \&Swords::Denominations::set_hashes,
   RANKS => \&Swords::Ranks::set_hashes,
-
   STRENGTHS => \&Swords::Strengths::set_hashes,
-  STRENGTHS_FRA => \&Swords::StrengthsFRA::set_hashes,
-  STRENGTHS_GER => \&Swords::StrengthsGER::set_hashes,
-
   SHAPES => \&Swords::Shapes::set_hashes,
   LENGTHS => \&Swords::Lengths::set_hashes,
 

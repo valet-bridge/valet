@@ -61,7 +61,7 @@ my $BREGEX = qr/^(.*[a-z])((?i:$BPATTERN))\z/;
 
 sub divide
 {
-  my ($whole, $tag_list, $text, $splits) = @_;
+  my ($whole, $tag_list, $text, $splits, $identifier) = @_;
 
 my $orig = $text;
 
@@ -90,7 +90,11 @@ my $orig = $text;
   my ($category, $value);
   categorize($whole, $tag_list, $text, \$category, \$value);
 
-print "MIDDLEX $text ($orig) [$category]\n";
+  if ($category eq 'WORD' || $category eq 'HIGH_WORD')
+  {
+    print $identifier;
+    print "MIDDLEX $text ($orig) [$category]\n\n";
+  }
 
   push @$splits, $category, $value;
 
