@@ -92,6 +92,7 @@ my $orig = $text;
 
   if ($category eq 'WORD' || $category eq 'HIGH_WORD')
   {
+    # Doesn't happen.
     print $identifier;
     print "MIDDLEX $text ($orig) [$category]\n\n";
   }

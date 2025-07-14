@@ -46,6 +46,7 @@ sub split_on_caps
     return 1;
   }
 
+  # Doesn't happen.
   print "$identifier\n";
 
   return 0;

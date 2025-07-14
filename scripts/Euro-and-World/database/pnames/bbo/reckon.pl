@@ -1383,7 +1383,7 @@ sub list_to_units
       {
         if (length($part) > 12)
         {
-          print "$identifier\n";
+          # print "$identifier\n";
         }
 
         $units->push($category, $part, $value, $pos, $chain_stats);
