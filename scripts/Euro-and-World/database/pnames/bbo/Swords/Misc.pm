@@ -46,6 +46,7 @@ my @SINGLE_WORDS = qw(
   Defense
   Discard
   Double
+  Encouraging
   Feature
   Forcing
   Jacoby
@@ -64,6 +65,7 @@ my @SINGLE_WORDS = qw(
   Points
   Polish
   plus
+  Preference
   Prepared
   Private
   Range
@@ -358,6 +360,8 @@ my %SINGLE_TYPOS =
     'kontra',
     'kontre',
     'kopalino'],
+  Encouraging => [
+    'encouragement'],
   Forcing => [
     'forace',
     'forc',
@@ -395,6 +399,8 @@ my %SINGLE_TYPOS =
   'Game Forcing' => [
     'alwaysfg',
     'alwaysgameforcing',
+    'forcingmanche',
+    'mancheforcing',
     'partieforcing'],
   Jacoby => [
     'learningjcby',
@@ -771,8 +777,17 @@ my %SINGLE_TYPOS =
     'withd',
     'withq',
     'withqoft'],
+  Preference => [
+    'préférentielle',
+    'preferentielle',
+    'preferansiyel',
+    'preferenziale'],
   Prepared => [
-    'voorbereidend'],
+    'voorbereidend',
+    'voorbereidende',
+    'voorbereident',
+    'voorbereiding',
+    'voorberijdend'],
   Private => [
     'askme',
     'byreqonly',

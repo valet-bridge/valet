@@ -981,6 +981,7 @@ my %SINGLE_TYPOS =
     'unujualnt',
     'unujusalnt',
     'ununt',
+    'unusalnotrump',
     'unusalnt',
     'unusaulnt',
     'unuslnt',

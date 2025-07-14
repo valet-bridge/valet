@@ -304,32 +304,13 @@ while (my $line = <$fh>)
 }
 close $fh;
 
-my %SUBSTITUTE_LINES;
-open($fh, '<sub_lines.txt') or die "Cannot open sub_lines: $!!";
-my $sno = 0;
-while (my $line = <$fh>)
-{
-  $sno++;
-if ($sno == 214)
-{
-  print "HERE\n";
-}
-  if ($line !~ /^(.+), (\d+), (\d+)$/)
-  {
-    die "FORMAT $sno: $line";
-  }
-  my ($handle, $count, $lno) = ($1, $2, $3);
-  my $orig = <$fh>;
-  chomp $orig;
-  my $sub = <$fh>;
-  chomp $sub;
-  my $empty = <$fh>;
-  $sno += 3;
+use SubLines;
+my $sublines = SubLines->new();
+$sublines->read_file('./new_sub_lines.txt');
+# $sublines->consolidate_with('./add');
+# $sublines->print();
+# exit;
 
-  $SUBSTITUTE_LINES{$handle}{$count}{$lno}[0] = $orig;
-  $SUBSTITUTE_LINES{$handle}{$count}{$lno}[1] = $sub;
-}
-close $fh;
 
 my $file = 'db';
 my $data;
@@ -854,21 +835,14 @@ sub inspect_paragraph
       next;
     }
 
-    if (exists $SUBSTITUTE_LINES{$handle} &&
-        exists $SUBSTITUTE_LINES{$handle}{$hcount}{$eno})
+if ($handle eq 'OYZZUM')
+{
+  print "HERE\n";
+}
+    if (my $replace = $sublines->lookup($handle, $hcount, $eno, 
+      $entry->{TEXT}))
     {
-      my $sub = $SUBSTITUTE_LINES{$handle}{$hcount}{$eno};
-      my $orig = $sub->[0];
-      my $repl = $sub->[1];
-      if ($entry->{TEXT} ne $orig)
-      {
-        print "HNDL ", $paragraph->{HANDLE}, "\n";
-        print "TEXT ", $entry->{TEXT}, "\n";
-        print "ORIG $orig\n";
-        print "REPL $repl\n";
-        warn "Mismatch";
-      }
-      $entry->{TEXT} = $repl;
+      $entry->{TEXT} = $replace;
     }
 
     if (! $country_seen)
