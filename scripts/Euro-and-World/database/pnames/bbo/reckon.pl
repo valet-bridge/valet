@@ -139,6 +139,14 @@ my %SYSTEM_TAGS_HASH =
   CARDING => 1,
 );
 
+my @CLUBS_FWD_LIKE = qw(c cl t tr);
+my %CLUBS_FWD_LIKE_HASH;
+$CLUBS_FWD_LIKE_HASH{$_} = 1 for @CLUBS_FWD_LIKE;
+
+my @DIAMONDS_FWD_LIKE = qw(d di k ka);
+my %DIAMONDS_FWD_LIKE_HASH;
+$DIAMONDS_FWD_LIKE_HASH{$_} = 1 for @DIAMONDS_FWD_LIKE;
+
 my @NOTRUMP_FWD_LIKE = qw(fa int ntp ntr nts sa sin sn snt);
 my %NOTRUMP_FWD_LIKE_HASH;
 $NOTRUMP_FWD_LIKE_HASH{$_} = 1 for @NOTRUMP_FWD_LIKE;
@@ -273,6 +281,7 @@ use Chain;
 use Token;
 use Util;
 use Butil;
+use LookFor;
 
 use Email::Email;
 
@@ -1393,6 +1402,20 @@ sub list_to_units
 }
 
 
+sub look_for_openings
+{
+  my ($units, $chain_stats) = @_;
+
+  LookFor::look_for_opening($units, 'notrump', 'NT', 1, 3,
+    \%NOTRUMP_FWD_LIKE_HASH, $chain_stats);
+
+  LookFor::look_for_opening($units, 'clubs', 'C', 1, 2,
+    \%CLUBS_FWD_LIKE_HASH, $chain_stats);
+
+  LookFor::look_for_opening($units, 'diamonds', 'D', 1, 2,
+    \%DIAMONDS_FWD_LIKE_HASH, $chain_stats);
+}
+
 sub look_for_nt_interval
 {
   my ($units, $lower, $upper, $level, $chain_stats) = @_;
@@ -1609,9 +1632,13 @@ sub study_line
   my @list;
   lines_to_list($entry, \@list);
 
-  my $units = Units->new();
-  list_to_units($whole, $unit_tags, \@list, $units,
+  my @battery;
+  $battery[0] = Units->new();
+  list_to_units($whole, $unit_tags, \@list, $battery[0],
     $entry->{TEXT}, $handle, $hcount, $lno, $histo, $chain_stats);
+
+  look_for_openings($battery[0], $chain_stats);
+
 
 return;
 
@@ -1620,13 +1647,13 @@ return;
   # look_for_nt_interval($units, 15, 20, 1, $chain_stats);
   # look_for_nt_interval($units, 20, 23, 2, $chain_stats);
 
-  my @streaks;
-  $units->get_number_streaks(\@streaks);
+  # my @streaks;
+  # $units->get_number_streaks(\@streaks);
 
   # The return value is the streak number, after which other
   # streak contents will no longer be valid.
-  Sparse::KeyResp::look_for_responses($units, \@streaks,
-    \%INT_COUNTS, $chain_stats);
+  # Sparse::KeyResp::look_for_responses($units, \@streaks,
+    # \%INT_COUNTS, $chain_stats);
 }
 
 

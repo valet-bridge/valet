@@ -184,6 +184,72 @@ sub collapse
 }
 
 
+sub copy_from
+{
+  my ($self, $index, $units2) = @_;
+
+  # The new units gets the tokens from index on.
+  @{$units2->{UNITS}} = @{$self->{UNITS}}[$index .. $self->{LAST}];
+}
+
+
+sub copy_upto
+{
+  my ($self, $index, $units2) = @_;
+
+  # The new units gets the tokens up to index.
+  @{$units2->{UNITS}} = @{$self->{UNITS}}[0 .. $index];
+}
+
+
+sub truncate_before
+{
+  my ($self, $index) = @_;
+
+  # The old units gets truncated one before the index (or sooner).
+  my $trunc = $index;
+  while ($trunc >= 1 && 
+    $self->{UNITS}[$trunc-1]->category() eq 'PUNCTUATION')
+  {
+    $trunc--;
+  }
+
+  splice @{$self->{UNITS}}, $trunc-1;
+}
+
+
+sub truncate_after
+{
+  my ($self, $index) = @_;
+
+  # The old units gets truncated one after the index (or later).
+  my $trunc = $index;
+  my $last => $self->last();
+  while ($trunc < $last && 
+    $self->{UNITS}[$trunc+1]->category() eq 'PUNCTUATION')
+  {
+    $trunc++;
+  }
+
+  splice @{$self->{UNITS}}, $trunc+1;
+}
+
+
+sub split_on
+{
+  my ($self, $index) = @_;
+  die "Index $index out of bounds" unless $index <= $self->last();
+  die "Splitting on front" if $index == 0;
+
+  my $units2 = Units->new();
+
+  $self->copy_from($index, $units2);
+  $self->truncate_before($index);
+
+  return $units2;
+}
+
+
 sub str_core_range
 {
   my ($self, $uno_lower, $uno_upper) = @_;
@@ -269,6 +335,27 @@ sub find_first_equal_anywhere
 }
 
 
+sub force_first_equal_forward
+{
+  my ($self, $start, $category, $value, $positives) = @_;
+
+  for my $no ($start .. $#{$self->{UNITS}})
+  {
+    my $unit = $self->{UNITS}[$no];
+    my $cat = $unit->{CATEGORY};
+    my $val = $unit->{VALUE};
+
+    if ($cat eq $category && $val eq $value)
+    {
+      return $no;
+    }
+  }
+
+  # Reached the end.
+  return -2;
+}
+
+
 sub find_first_equal_forward
 {
   my ($self, $start, $category, $value, $positives) = @_;
@@ -286,6 +373,31 @@ sub find_first_equal_forward
     elsif ($cat eq 'WORD')
     {
       return (exists $positives->{lc($val)} ? $no : -1);
+    }
+    elsif ($cat ne 'PUNCTUATION')
+    {
+      # Contradiction.
+      return -1;
+    }
+  }
+
+  # Reached the end.
+  return -2;
+}
+
+
+sub find_first_cat_backward
+{
+  my ($self, $start, $category, $positives) = @_;
+
+  for my $no (reverse 0 .. $start)
+  {
+    my $unit = $self->{UNITS}[$no];
+    my $cat = $unit->{CATEGORY};
+
+    if ($cat eq $category)
+    {
+      return $no;
     }
     elsif ($cat ne 'PUNCTUATION')
     {
