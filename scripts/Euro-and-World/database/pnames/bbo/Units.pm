@@ -672,4 +672,12 @@ sub get_number_streaks
   }
 }
 
+
+sub is_complete
+{
+  my ($self) = @_;
+
+  return exists $self->{COMPLETE};
+}
+
 1;

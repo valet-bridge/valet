@@ -288,6 +288,9 @@ use Email::Email;
 use Histo;
 my $histo = Histo->new();
 
+use UnitStats;
+my $unit_stats = UnitStats->new();
+
 my @DOMAINS = qw(
   ag ar at au be bg br ca ch cl cn co com cz de dk edu ee es eu fi fm fr 
   gr hk hr hu id ie il is it in jp lu lv mx net nl no nz org 
@@ -337,7 +340,7 @@ for my $paragraph (@paragraphs)
 {
 if ($paragraph->{HANDLE} eq 'FULLFUEL')
 {
-  print "HERE\n";
+  # print "HERE\n";
 }
   $handle_counts{$paragraph->{HANDLE}}++;
   inspect_paragraph($whole, $paragraph, \%handle_counts);
@@ -357,7 +360,7 @@ if ($paragraph->{HANDLE} eq 'FULLFUEL')
 
     if (study_line($whole2, \@UNIT_TAGS, $entry, \@chains, 
       $paragraph->{HANDLE}, $handle_counts{$paragraph->{HANDLE}}, $lno, 
-      $histo, \%chain_stats))
+      $histo, $unit_stats, \%chain_stats))
     {
       next;
     }
@@ -371,6 +374,8 @@ if ($paragraph->{HANDLE} eq 'FULLFUEL')
   # sub_system_chains($whole, $paragraph,
     # $handle_counts{$paragraph->{HANDLE}}, \%chain_stats);
 }
+
+$unit_stats->print();
 
 printf("Lines %10d\n", $chain_stats{DATA});
 printf("Parts %10d\n\n", $chain_stats{PARTS});
@@ -1627,7 +1632,7 @@ sub look_for_5c_major
 sub study_line
 {
   my ($whole, $unit_tags, $entry, $chains, 
-    $handle, $hcount, $lno, $histo, $chain_stats) = @_;
+    $handle, $hcount, $lno, $histo, $unit_stats, $chain_stats) = @_;
 
   my @list;
   lines_to_list($entry, \@list);
@@ -1639,6 +1644,10 @@ sub study_line
 
   look_for_openings($battery[0], $chain_stats);
 
+  for my $u (@battery)
+  {
+    $unit_stats->add($u);
+  }
 
 return;
 
