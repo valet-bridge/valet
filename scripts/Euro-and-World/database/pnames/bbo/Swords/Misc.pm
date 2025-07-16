@@ -68,6 +68,7 @@ my @SINGLE_WORDS = qw(
   Preference
   Prepared
   Private
+  Raise
   Range
   Reverse
   Standard
@@ -793,6 +794,8 @@ my %SINGLE_TYPOS =
     'byreqonly',
     'demande',
     'whoeverunimportant'],
+  Raise => [
+    'raises'],
   Reverse => [
     'rev',
     'revars',

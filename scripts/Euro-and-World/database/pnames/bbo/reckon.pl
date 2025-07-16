@@ -1655,6 +1655,8 @@ sub study_line
 
   look_for_openings($battery[0], $chain_stats);
 
+  look_for_bigrams($battery[0], $chain_stats);
+
   for my $u (@battery)
   {
     $unit_stats->add($u);
