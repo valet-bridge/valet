@@ -19,6 +19,9 @@ use lib './Caps';
 use lib './Sparse';
 use lib '..';
 
+use Carp::Assert;
+
+
 my %INT_COUNTS;
 
 my %PUNCTUATION =
@@ -851,7 +854,7 @@ sub inspect_paragraph
 
 if ($handle eq 'OYZZUM')
 {
-  print "HERE\n";
+  # print "HERE\n";
 }
     if (my $replace = $sublines->lookup($handle, $hcount, $eno, 
       $entry->{TEXT}))
@@ -1392,6 +1395,14 @@ sub list_to_units
         \@splits, $identifier))
       {
           # TODO Push the splits.
+        for (my $i = 0; $i <= $#splits; $i += 4)
+        {
+          assert($splits[$i] eq 'CATEGORY', "Not a category");
+          assert($splits[$i+2] eq 'VALUE', "Not a value");
+
+          $units->push($splits[$i+1], $part, $splits[$i+3], 
+            $pos, $chain_stats);
+        }
       }
       else
       {

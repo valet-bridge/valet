@@ -97,7 +97,7 @@ my $orig = $text;
     print "MIDDLEX $text ($orig) [$category]\n\n";
   }
 
-  push @$splits, $category, $value;
+  push @$splits, 'CATEGORY', $category, 'VALUE', $value;
 
   return 1 if $#temp == -1;
   push @$splits, @temp;
