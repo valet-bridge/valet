@@ -61,8 +61,10 @@ my %SINGLE_TYPOS =
     'staymanpoupett'],
   Stayman => [
     'básicstayman',
+    'satyman',
     'sayman',
     'sman',
+    'srayman',
     'staaman',
     'staeman',
     'staemen',

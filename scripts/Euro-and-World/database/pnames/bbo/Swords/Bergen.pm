@@ -87,6 +87,7 @@ my %SINGLE_TYPOS =
     'bergrev',
     'invertbergen',
     'rberg',
+    'rbergen',
     'revber',
     'revberg',
     'revbergen',

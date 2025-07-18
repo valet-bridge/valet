@@ -142,6 +142,7 @@ my %SINGLE_TYPOS =
     'majorcard',
     'majorcards',
     'majörle',
+    'oberf',
     'thmaior',
     'thmaj',
     'thmajor',

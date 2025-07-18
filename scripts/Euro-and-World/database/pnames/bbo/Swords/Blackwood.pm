@@ -400,7 +400,16 @@ my %SINGLE_TYPOS =
     'simpleblackwood',
     'simplebw',
     'stdblackwood',
-    'stdbw'],
+    'stdbw',
+    'bcwd',
+    'blackhood',
+    'classicblwd',
+    'klckwd',
+    'rblkwd',
+    'regbkwd',
+    'simpleblkwd',
+    'stdblkwd',
+    'xblkwd'],
 );
 
 

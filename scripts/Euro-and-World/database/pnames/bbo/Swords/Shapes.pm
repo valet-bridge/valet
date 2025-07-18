@@ -27,7 +27,28 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   balanced => [
-    'bal'],
+    'bal',
+    'balabnced',
+    'balaced',
+    'balanc',
+    'balancd',
+    'balance',
+    'balancee',
+    'balancer',
+    'balans',
+    'balansed',
+    'balanserad',
+    'balanserads',
+    'balasy',
+    'balc',
+    'balenced',
+    'balhand',
+    'ballance',
+    'ballanced',
+    'balnc',
+    'balnce',
+    'balnced',
+    'balned'],
   unbalanced => [
     'unbal'],
 );

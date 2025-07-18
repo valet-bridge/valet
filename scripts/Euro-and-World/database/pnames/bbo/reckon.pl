@@ -322,7 +322,7 @@ close $fh;
 use SubLines;
 my $sublines = SubLines->new();
 $sublines->read_file('./new_sub_lines.txt');
-# $sublines->consolidate_with('./add');
+# $sublines->consolidate_with('./edit');
 # $sublines->print();
 # exit;
 
@@ -1415,6 +1415,13 @@ sub list_to_units
       }
     }
   }
+
+  if ($units->last() > 60)
+  {
+    my $identifier = "YYY $handle, $hcount, $lno\n" .
+      "$text\n$text\n\n";
+    print $identifier;
+  }
 }
 
 
@@ -1425,8 +1432,8 @@ sub look_for_openings
   LookFor::look_for_opening($units, 'notrump', 'NT', 1, 3,
     \%NOTRUMP_FWD_LIKE_HASH, $chain_stats);
 
-  LookFor::look_for_opening($units, 'clubs', 'C', 1, 2,
-    \%CLUBS_FWD_LIKE_HASH, $chain_stats);
+  # LookFor::look_for_opening($units, 'clubs', 'C', 1, 2,
+    # \%CLUBS_FWD_LIKE_HASH, $chain_stats);
 
   LookFor::look_for_opening($units, 'diamonds', 'D', 1, 2,
     \%DIAMONDS_FWD_LIKE_HASH, $chain_stats);
@@ -1655,7 +1662,13 @@ sub study_line
 
   look_for_openings($battery[0], $chain_stats);
 
-  look_for_bigrams($battery[0], $chain_stats);
+  # look_for_bigrams($battery[0], $chain_stats);
+
+my $identifier = "YYY $handle, $hcount, $lno\n" .
+  $entry->{TEXT} . "\n" .
+  $entry->{TEXT} . "\n\n";
+
+  split_on_specifics(\@battery, $chain_stats, $identifier);
 
   for my $u (@battery)
   {

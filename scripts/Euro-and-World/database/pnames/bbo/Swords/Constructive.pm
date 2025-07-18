@@ -43,16 +43,20 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Albarran
   Baron
   Baze
   Crodo
   Drury
+  Gazzilli
   Gerber
   Ingberman
   Minisplinter
   Namyats
+  Niemeijer
   Ogust
   Puppet
+  RONF
   Roudinesco
   Smolen
   Splinter
@@ -62,6 +66,25 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  Albarran => [
+    'albar',
+    'albaran',
+    'albarant',
+    'albaron',
+    'albarr',
+    'albarra',
+    'albarrain',
+    'albarram',
+    'albarrans',
+    'albarre',
+    'albarrran',
+    'albayram',
+    'albbaran',
+    'alber',
+    'alberran',
+    'albran',
+    'albrn',
+    'albrr'],
   'Checkback Stayman' => [
     'chbckst',
     'chbst',
@@ -119,10 +142,21 @@ my %SINGLE_TYPOS =
     'druyru',
     'druyy',
     'dryr',
-    'dryry'],
+    'dryry',
+    'drarry',
+    'drary',
+    'droury',
+    'drury',
+    'durery',
+    'durry',
+    'duruy',
+    'dury',
+    'duryri',
+    'duryy'],
   'Control Bid' => [
     'ctrlbids'],
   'Forcing NT' => [
+    'fnt',
     'font',
     'forcent',
     'forcgnt',
@@ -141,6 +175,15 @@ my %SINGLE_TYPOS =
     'ntforc',
     'ntforce',
     'ntforcing' ],
+  Gazzilli => [
+    'gazelli',
+    'gazilli',
+    'gazillil',
+    'gazzil',
+    'gazzili',
+    'gazzill',
+    'gazzillli',
+    'gazzlli'],
   Gerber => [
     'garbar',
     'garber',
@@ -172,7 +215,10 @@ my %SINGLE_TYPOS =
     'grb',
     'grbe',
     'grber',
-    'grbr'],
+    'grbr',
+    'gber',
+    'geber',
+    'gurber'],
   Ingberman => [
     'inbergman'],
   'Inverted Minors' => [
@@ -188,6 +234,34 @@ my %SINGLE_TYPOS =
     'invertminör',
     'invertmýn',
     'invitmin',
+    'inmv',
+    "inv'min",
+    "inv'minor",
+    "inv'minors",
+    'inverminors',
+    'inversed',
+    'inverseminor',
+    'invertdminrs',
+    'invertedmi',
+    'invertedminor',
+    'invertedmnr',
+    'invertetm',
+    'invertetmin',
+    'invertidm',
+    'invertmn',
+    'invim',
+    'invminer',
+    'invms',
+    'invortedminor',
+    'invrminr',
+    'invrmn',
+    'invrtmin',
+    'invrttminear',
+    'invtdmin',
+    'invtm',
+    'invtmi',
+    'invtmin',
+    'invtmnr',
     'invm',
     'invmi',
     'invmimor',
@@ -305,6 +379,28 @@ my %SINGLE_TYPOS =
     'minispl',
     'minisplinters',
     'minisplntr'],
+  Namyats => [
+    'namyans',
+    'namyanst',
+    'namyants',
+    'namyas',
+    'namyast',
+    'namyat',
+    'namyaths',
+    'namyent',
+    'namynt',
+    'namyt',
+    'namyts'],
+  Niemeijer => [
+    'niemaier',
+    'niemay',
+    'niemayer',
+    'niemeie',
+    'niemeij',
+    'niemeyer',
+    'niemijer',
+    'niemyer',
+    'niemyr'],
   Ogust => [
     'ogu',
     'ogus',
@@ -317,6 +413,10 @@ my %SINGLE_TYPOS =
     'ougyst',
     'ugust'],
   Puppet => [
+    'pappet',
+    'poupee',
+    'pouppet',
+    'ppet',
     'ppt',
     'pup',
     'pupat',
@@ -327,6 +427,7 @@ my %SINGLE_TYPOS =
     'pupets',
     'pupett',
     'pupette',
+    'pupetts',
     'puphit',
     'pupi',
     'pupici',
@@ -491,6 +592,7 @@ my %SINGLE_TYPOS =
     'kokishgt'],
   'Limit Raise' => [
     'limitraise',
+    'limitraises',
     'limraise',
     'limraises',
     'limrs',
@@ -566,9 +668,12 @@ my %SINGLE_TYPOS =
   'Slow Arrival' => [
     'slowarrival'],
   'South African Texas' => [
-    'africantexas'],
+   Stenberg => [
+     'stenbergs'],
+     'africantexas'],
   'Super Accepts' => [
     'superacc',
+    'superaccept',
     'superaccepts'],
   'Texas Transfers' => [
     'texascfx',

@@ -22,10 +22,12 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  DOPI
   Keycards
   Kickback
   Minorwood
   RKCB
+  ROPI
 );
 
 my %SINGLE_TYPOS =
@@ -37,6 +39,10 @@ my %SINGLE_TYPOS =
     'exclbw',
     'exclusionblw',
     'exclusionbw',
+    'ekcb',
+    'exclblwood',
+    'exkc',
+    'voidw',
     'voidvd',
     'voidwd',
     'voidwood',
@@ -76,8 +82,11 @@ my %SINGLE_TYPOS =
     'keykarte',
     'keys'],
   Minorwood => [
+    'lackwd',
     'minorrkc',
-    'minwood'],
+    'minwood',
+    'mnrwd',
+    'minorwd'],
   RKCB => [
     'kbw',
     'kcask',

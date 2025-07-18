@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Five Major',
   'Help Suit',
   'Game Forcing',
+  'Game Try',
   'King of Trumps',
   'Over NT',
   'Queen of Trumps',
@@ -39,25 +40,35 @@ my @SINGLE_WORDS = qw(
   any
   Benjamin
   Bid
+  Canape
   Carding
   Checkback
+  Constructive
   Convenient
   Cuebid
+  Culbertson
   Defense
   Discard
   Double
   Encouraging
+  Exclusion
   Feature
   Forcing
+  Hamilton
+  Inverted
   Jacoby
   Jordan
+  Josephine
   kings
   Lead
+  Lightner
+  maximal
   McKenney
   Multi
   Natural
   Negative
   no
+  odd
   Opener
   Opening
   or
@@ -65,12 +76,19 @@ my @SINGLE_WORDS = qw(
   Points
   Polish
   plus
+  positive
   Preference
   Prepared
+  Quantitative
   Private
   Raise
   Range
+  responsive
   Reverse
+  Rusinow
+  Sandwich
+  Signaling
+  Sputnik
   Standard
   Stolen
   Suit
@@ -82,8 +100,12 @@ my @SINGLE_WORDS = qw(
   through
   Transfer
   Truscott
+  Turbo
+  twosuiter
   Unusual
+  Wagner
   Waiting
+  XYZ
 );
 
 my %SINGLE_TYPOS =
@@ -141,6 +163,8 @@ my %SINGLE_TYPOS =
     'amri',
     'amrican'],
   Benjamin => [
+    'bengi',
+    'beniamino',
     'benj',
     'benja',
     'benjam',
@@ -153,6 +177,7 @@ my %SINGLE_TYPOS =
     'benjie',
     'benjies',
     'benjii',
+    'benjiman',
     'benjimin',
     'benjis',
     'benjm',
@@ -179,6 +204,9 @@ my %SINGLE_TYPOS =
     'meld',
     'melding',
     'meldinger'],
+  Canape => [
+    'canaphe',
+    'canapes'],
   Carding => [
     'cardig',
     'cardin',
@@ -199,7 +227,71 @@ my %SINGLE_TYPOS =
     'chekback',
     'chkback',
     'chkbk',
-    'ckbck'],
+    'ckbck',
+    'cackback',
+    'cback',
+    'ccheckback',
+    'ceckback',
+    'cehckback',
+    'cekback',
+    'cekcback',
+    'chacback',
+    'chackbac',
+    'chakbac',
+    'chback',
+    'chbacks',
+    'chcback',
+    'chcekback',
+    'chckback',
+    'cheakback',
+    'cheback',
+    'checbac',
+    'checback',
+    'chechbac',
+    'checkbac',
+    'checkbacd',
+    'checkbach',
+    'checkbacki',
+    'checkbackl',
+    'checkbacks',
+    'chedback',
+    'cheeckback',
+    'cheekback',
+    'cheqback',
+    'chessback',
+    'chkbac',
+    'ckback',
+    'ckeback',
+    'cxback',
+    'wcheckback',
+    'xcheckback'],
+  Constructive => [
+    'constructif',
+    'gconstructive'],
+  Convenient => [
+    'conveient',
+    'conveiient',
+    'conveinent',
+    'conveinet',
+    'convenent',
+    'conveni',
+    'convenie',
+    'conveniencia',
+    'conveniet',
+    'conveninet',
+    'convenions',
+    'convenont',
+    'convernient',
+    'convienant',
+    'conviene',
+    'convienen',
+    'convienet',
+    'convienient',
+    'convin',
+    'convinent',
+    'convnient',
+    'convnt',
+    'covenient'],
   Cuebid => [
     'cub',
     'cubbit',
@@ -259,6 +351,11 @@ my %SINGLE_TYPOS =
     'qbit',
     'qbits',
     'qbt'],
+  Culbertson => [
+    'culberson',
+    'culberston',
+    'culbs',
+    'culby'],
   Defense => [
     'defence',
     'defense',
@@ -362,7 +459,64 @@ my %SINGLE_TYPOS =
     'kontre',
     'kopalino'],
   Encouraging => [
-    'encouragement'],
+    'enccourage',
+    'encge',
+    'enchourange',
+    'encing',
+    'encorages',
+    'encoraging',
+    'encorange',
+    'encorauge',
+    'encoreg',
+    'encorege',
+    'encorerate',
+    'encorg',
+    'encorige',
+    'encouage',
+    'encouer',
+    'encourace',
+    'encourading',
+    'encourage',
+    'encourageant',
+    'encouraged',
+    'encouragem',
+    'encouragement',
+    'encourages',
+    'encouragi',
+    'encouragin',
+    'encouraging',
+    'encouragining',
+    'encouragment',
+    'encourang',
+    'encourange',
+    'encouraqge',
+    'encoure',
+    'encoureging',
+    'encourg',
+    'encourge',
+    'encourges',
+    'encourging',
+    'encouridging',
+    'encourige',
+    'encourigin',
+    'encouriging',
+    'encouring',
+    'encoyr',
+    'encr',
+    'encrge',
+    'encuarage',
+    'encur',
+    'encurage',
+    'encuraging',
+    'encurajing'],
+  Exclusion => [
+    'excln',
+    'excls',
+    'exclsn',
+    'exclus',
+    'exclution',
+    'exlu',
+    'exlusion'],
   Forcing => [
     'forace',
     'forc',
@@ -394,15 +548,72 @@ my %SINGLE_TYPOS =
     'frc',
     'frce',
     'frcing',
-    'frcng'],
+    'frcng',
+    'forcen',
+    'forcinga',
+    'forcingue',
+    'forcinng',
+    'forcint',
+    'foring',
+    'forncing',
+    'forsa',
+    'forsi',
+    'forsingi',
+    'forsinn',
+    'forsn',
+    'forsng',
+    'forsnk',
+    'fortcing',
+    'forz'],
   'Help Suit' => [
     'helpsuit'],
   'Game Forcing' => [
     'alwaysfg',
     'alwaysgameforcing',
+    'fgame',
+    'forcetogame',
+    'forcgame',
+    'forcinggame',
     'forcingmanche',
+    'gamefor',
+    'gameforce',
+    'gameforceing',
+    'gameforcing',
+    'gameforsing',
+    'gamefrc',
+    'gf',
     'mancheforcing',
+    'partieforc',
     'partieforcing'],
+  'Game Try' => [
+    'gametry',
+    'gtry'],
+  Inverted => [
+    "inv'd",
+    'invd',
+    'inverd',
+    'inverded',
+    'inverdet',
+    'invered',
+    'inverido',
+    'inversed',
+    'inversees',
+    'inverses',
+    "invert'd",
+    'invertad',
+    'invertede',
+    'inverter',
+    'invertida',
+    'invertor',
+    'invertot',
+    'invertut',
+    'invetr',
+    'invort',
+    'invrd',
+    'invrete',
+    'invrtr',
+    "invt'd",
+    'invted'],
   Jacoby => [
     'learningjcby',
     'jaboby',
@@ -471,6 +682,15 @@ my %SINGLE_TYPOS =
     'jckoby',
     'jcobi',
     'jcoby'],
+  Jordan => [
+    'iordan',
+    'jorda',
+    'jordans'],
+  Josephine => [
+    'josefine',
+    'josehpen',
+    'josephin',
+    'josephina'],
   Lead => [
     'leading',
     'leads',
@@ -526,7 +746,13 @@ my %SINGLE_TYPOS =
     'multykaro',
     'multytwo',
     'mulyicolor',
-    'mulyt'],
+    'mulyt',
+    'mlty',
+    'mulit',
+    'muliti',
+    'mullty',
+    'multiy',
+    'multu'],
   Natural => [
     'nat',
     'natr',
@@ -651,6 +877,9 @@ my %SINGLE_TYPOS =
     'ngtive',
     'ngtivo',
     'ngtv'],
+  odd => [
+    'impair',
+    'impaire'],
   Opener => [
     'openner',
     'openners',
@@ -789,6 +1018,9 @@ my %SINGLE_TYPOS =
     'voorbereident',
     'voorbereiding',
     'voorberijdend'],
+  Quantitative => [
+    'quant',
+    'quantitatif'],
   Private => [
     'askme',
     'byreqonly',
@@ -834,12 +1066,17 @@ my %SINGLE_TYPOS =
     'revserse',
     'revwese',
     'rewers'],
+  Rusinow => [
+    'rusinov'],
   'Semi Forcing' => [
     'semforc',
     'semif',
     'semifcg',
     'semifm',
-    'semiforc'],
+    'semiforc',
+    'semiforcing'],
+  Sputnik => [
+    'spoutnik'],
   Standard => [
     'staand',
     'staandart',
@@ -985,6 +1222,8 @@ my %SINGLE_TYPOS =
     'sytems',
     'sytmn',
     'sytms'],
+  Takeout => [
+    'tkout'],
   Texas => [
     'teaxas',
     'teaxs',
@@ -1442,13 +1681,29 @@ my %SINGLE_TYPOS =
     'xfor',
     'xfr',
     'xfrs',
-    'xfs'],
+    'xfs',
+    'xsfer',
+    'xsfers',
+    'ransfer'],
+  Truscott => [
+    'truscot'],
+  twosuiter => [
+    'bicol',
+    'bicolor',
+    'bicolore',
+    'bicolour'],
   Unusual => [
     'unntfor',
     'unntminrs',
     'unusuall',
     'unusul',
-    'unusnweakjump'],
+    'unusnweakjump',
+    'inusual',
+    'unual',
+    'unus',
+    'unusal',
+    'unusl',
+    'unusua'],
   'Waiting' => [
     'waitpreferans',
     'wait'],

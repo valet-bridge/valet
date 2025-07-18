@@ -20,6 +20,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  invitational
   strong
   variable
   weak
@@ -27,12 +28,25 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  invitational => [
+    'invata',
+    'inveted',
+    'invett',
+    'invida',
+    'invirte',
+    'invita',
+    'invitee',
+    'invitel',
+    'inviter'],
   strong => [
     'fort',
     'forte',
     'forts',
     'fuerte',
+    'fuertes',
+    'fuerza',
     'stark',
+    'stong',
     'str',
     'strg',
     'strn',
@@ -69,10 +83,15 @@ my %SINGLE_TYPOS =
     'canblite'],
   weak => [
     'bidw',
+    'debil',
+    'debole',
+    'deboli',
     'faible',
     'faibles',
     'schwach',
+    'waek',
     'weakgoodsuit',
+    'week',
     'wk'],
 );
 

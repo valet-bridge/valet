@@ -42,7 +42,7 @@ sub new
 
 sub last
 {
-  my ($self, $index) = @_;
+  my ($self) = @_;
   return $#{$self->{UNITS}};
 }
 
@@ -60,6 +60,13 @@ sub value
   my ($self, $index) = @_;
   die "Index $index out of bounds" unless $index <= $#{$self->{UNITS}};
   return $self->{UNITS}[$index]{VALUE};
+}
+
+
+sub set_status
+{
+  my ($self, $status) = @_;
+  $self->{STATUS} = $status;
 }
 
 
@@ -189,7 +196,7 @@ sub copy_from
   my ($self, $index, $units2) = @_;
 
   # The new units gets the tokens from index on.
-  @{$units2->{UNITS}} = @{$self->{UNITS}}[$index .. $self->{LAST}];
+  @{$units2->{UNITS}} = @{$self->{UNITS}}[$index .. $self->last()];
 }
 
 
@@ -208,13 +215,12 @@ sub truncate_before
 
   # The old units gets truncated one before the index (or sooner).
   my $trunc = $index;
-  while ($trunc >= 1 && 
-    $self->{UNITS}[$trunc-1]->category() eq 'PUNCTUATION')
+  while ($trunc >= 1 && $self->category($trunc-1) eq 'PUNCTUATION')
   {
     $trunc--;
   }
 
-  splice @{$self->{UNITS}}, $trunc-1;
+  splice @{$self->{UNITS}}, $trunc;
 }
 
 
@@ -222,16 +228,8 @@ sub truncate_after
 {
   my ($self, $index) = @_;
 
-  # The old units gets truncated one after the index (or later).
-  my $trunc = $index;
-  my $last => $self->last();
-  while ($trunc < $last && 
-    $self->{UNITS}[$trunc+1]->category() eq 'PUNCTUATION')
-  {
-    $trunc++;
-  }
-
-  splice @{$self->{UNITS}}, $trunc+1;
+  # The old units gets truncated one after the index.
+  splice @{$self->{UNITS}}, $index+1;
 }
 
 
@@ -677,7 +675,7 @@ sub is_complete
 {
   my ($self) = @_;
 
-  return exists $self->{COMPLETE};
+  return exists $self->{STATUS} && $self->{STATUS} eq 'COMPLETE';
 }
 
 1;

@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Reverse Attitude',
   'Reverse Smith',
   'Roman Discards',
+  'Rusinow Leads',
   'Schneider Signal',
   'Smith Echo',
   'Standard Carding',
@@ -33,6 +34,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Attitude
   Carding
   UDCA
   Lavinthal
@@ -47,6 +49,22 @@ my %SINGLE_TYPOS =
     'akxleada',
     'akleadka',
     'afromak'],
+  Attitude => [
+    'attd',
+    'atti',
+    'attidude',
+    'attirude',
+    'attitud',
+    'attitude',
+    'attitudine',
+    'attituds',
+    'attitue',
+    'attitute',
+    'attityd',
+    'attityde',
+    'attt',
+    'atttitude',
+    'attutide'],
   'High Encouraging' => [
     'highencour'],
   'King from AK' => [
@@ -150,7 +168,33 @@ my %SINGLE_TYPOS =
     'lawt',
     'leventhal',
     'levent',
-    'levinthal'],
+    'levinthal',
+    'laevinthal',
+    'laewenthal',
+    'lafinthal',
+    'lahvinthal',
+    'larvinthal',
+    'lawithal',
+    'leiventhal',
+    'lenenthal',
+    'lenventhal',
+    'lev',
+    'levanthal',
+    'levental',
+    'leventhall',
+    'levethal',
+    'levingthal',
+    'levinth',
+    'levinthall',
+    'levithal',
+    'levnthal',
+    'lewenthal',
+    'lewinthal',
+    'liventhal',
+    'lrvinthal',
+    'lthal',
+    'lvnthal',
+    'lvthal'],
   'Lavinthal Against NT' => [
     'laventhalsa',
     'lavesa',
@@ -172,6 +216,15 @@ my %SINGLE_TYPOS =
     'levintalsa',
     'levinthalsa',
     'levsa'],
+  'McKenney Signal' => [
+    'mackinney',
+    'makinney',
+    'mck',
+    'mckinne',
+    'mckinney',
+    'mckinneys',
+    'mckinnie',
+    'mckinny'],
   'Reverse Attitude' => [
     'revatt'],
   'Reverse Smith' => [
@@ -209,6 +262,7 @@ my %SINGLE_TYPOS =
     'stdcardg',
     'stdcarding',
     'stdcd',
+    'stdcdg',
     'stdcding',
     'stdcg',
     'stdcrd',
@@ -223,6 +277,7 @@ my %SINGLE_TYPOS =
     'stddisc',
     'stdisc'],
   UDCA => [
+    'ucda',
     'uda',
     'udac',
     'udc',
