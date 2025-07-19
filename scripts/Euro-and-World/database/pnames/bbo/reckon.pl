@@ -322,7 +322,7 @@ close $fh;
 use SubLines;
 my $sublines = SubLines->new();
 $sublines->read_file('./new_sub_lines.txt');
-# $sublines->consolidate_with('./edit');
+# $sublines->consolidate_with('./ux6');
 # $sublines->print();
 # exit;
 
@@ -1418,9 +1418,9 @@ sub list_to_units
 
   if ($units->last() > 60)
   {
-    my $identifier = "YYY $handle, $hcount, $lno\n" .
-      "$text\n$text\n\n";
-    print $identifier;
+    # my $identifier = "YYY $handle, $hcount, $lno\n" .
+      # "$text\n$text\n\n";
+    # print $identifier;
   }
 }
 
@@ -1678,7 +1678,7 @@ my $identifier = "YYY $handle, $hcount, $lno\n" .
 
   for my $u (@battery)
   {
-    $unit_stats->add($u);
+    $unit_stats->add($u, $identifier);
   }
 
 return;

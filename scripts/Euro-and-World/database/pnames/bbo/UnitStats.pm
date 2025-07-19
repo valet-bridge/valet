@@ -20,10 +20,15 @@ sub new
 
 sub add
 {
-  my ($self, $units) = @_;
+  my ($self, $units, $identifier) = @_;
 
   my $len = $units->last() + 1;
   $self->{LEN}[$len]{COUNT}++;
+
+  if ($len >= 60)
+  {
+    print $identifier;
+  }
 
   for my $index (0 .. $units->last())
   {
