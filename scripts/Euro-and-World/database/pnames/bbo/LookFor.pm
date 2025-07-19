@@ -12,7 +12,7 @@ use Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(look_for_opening look_for_bigrams
-  split_on_specifics);
+  look_for_ranges split_on_specifics);
 
 my %BIGRAMS = (
   Benjamin  => { 'ACOL' => [ 'BASES', 'Benjamin ACOL' ] },
@@ -245,6 +245,27 @@ sub look_for_bigrams
       $first_pos = $second_pos;
       $first_value = $second_value;
     }
+  }
+}
+
+
+sub look_for_ranges
+{
+  my ($units, $streaks, $chain_stats, $identifier) = @_;
+
+  for my $streak_no (reverse 0 .. $#$streaks)
+  {
+    my $streak = $streaks->[$streak_no];
+    next unless $#$streak == 1;
+
+    my $first = $units->value($streak->[0]);
+    my $second = $units->value($streak->[1]);
+
+    next unless $first >= 12 && $second <= 24 &&
+      $first < $second && $second <= $first + 4;
+
+    $units->collapse($streak->[0], $streak->[1], 'RANGE', 
+      "$first to $second", $chain_stats);
   }
 }
 

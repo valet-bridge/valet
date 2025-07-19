@@ -1654,6 +1654,7 @@ sub study_line
 
   my @list;
   lines_to_list($entry, \@list);
+  return if $#list == -1; # COUNTRY, etc.
 
   my @battery;
   $battery[0] = Units->new();
@@ -1667,6 +1668,11 @@ sub study_line
 my $identifier = "YYY $handle, $hcount, $lno\n" .
   $entry->{TEXT} . "\n" .
   $entry->{TEXT} . "\n\n";
+
+  my @streaks;
+  $battery[0]->get_number_streaks(\@streaks);
+
+  look_for_ranges($battery[0], \@streaks, $chain_stats, $identifier);
 
   split_on_specifics(\@battery, $chain_stats, $identifier);
 
