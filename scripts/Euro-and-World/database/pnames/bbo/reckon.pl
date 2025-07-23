@@ -321,8 +321,9 @@ close $fh;
 
 use SubLines;
 my $sublines = SubLines->new();
-$sublines->read_file('./sub_lines.txt');
-# $sublines->consolidate_with('./ux2');
+# $sublines->read_file('./sub_lines.txt');
+$sublines->read_file('Manual/sub_lines.txt');
+# $sublines->consolidate_with('Manual/edmail2');
 # $sublines->print();
 # exit;
 

@@ -1,9 +1,6 @@
-name_edit:
-Make a Manual directory with
-name_lines.txt
-mail_lines.txt
-Split name_edit into edits+name and only name, same for mail.
-Read these more systematically in reckon.pl
+Read new fluffed
+Reed names, late mails
+
 Get them out of the recognition and get the lines labeled.
 
 Check that lines that come from Caps are labeled properly --
