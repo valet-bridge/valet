@@ -11,8 +11,8 @@ use open ':std', ':encoding(UTF-8)';
 use Exporter;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(look_for_opening look_for_bigrams
-  look_for_ranges split_on_specifics);
+our @EXPORT = qw(look_for_opening look_for_bigrams look_for_jac_mic
+  look_for_ranges look_for_notrump split_on_specifics);
 
 my %BIGRAMS = (
   Benjamin  => { 'ACOL' => [ 'BASES', 'Benjamin ACOL' ] },
@@ -44,6 +44,10 @@ my %SPLITTORS = (
   'Standard Italian' => 1,
   'Two Over One' => 1,
 
+  SAYC => 1,
+  SEF => 1,
+
+  Bergen => 1,
   'Bergen Raise' => 1,
   'Reverse Bergen' => 1,
 
@@ -65,6 +69,7 @@ my %SPLITTORS = (
 
   'Balancing Double' => 1,
   'Balancing NT' => 1,
+  Cappelletti => 1,
   'Competitive Double' => 1,
   'Fit Jump' => 1,
   'Flip Flop' => 1,
@@ -102,12 +107,13 @@ my %SPLITTORS = (
   'Weak Jump Overcall' => 1,
   'Western Cuebid' => 1,
 
-  'Brozel' => 1,
-  'Ghestem' => 1,
-  'Landik' => 1,
-  'Lebensohl' => 1,
-  'Rubensohl' => 1,
-  'Woolsey' => 1,
+  Brozel => 1,
+  DONT => 1,
+  Ghestem => 1,
+  Landik => 1,
+  Lebensohl => 1,
+  Rubensohl => 1,
+  Woolsey => 1,
 
   '2D Waiting' => 1,
   'Checkback Stayman' => 1,
@@ -134,15 +140,19 @@ my %SPLITTORS = (
   'XYZ NT' => 1,
 
   Baron => 1,
-  Baz => 1,
+  Baze => 1,
   Crodo => 1,
   Gerber => 1,
   Ingberman => 1,
   Minisplinter => 1,
   Namyats => 1,
+  Niemeijer => 1,
   Ogust => 1,
+  Puppet => 1,
+  RONF => 1,
   Roudinesco => 1,
   Smolen => 1,
+  Splinter => 1,
   Stenberg => 1,
   Walsh => 1,
 
@@ -167,6 +177,7 @@ my %SPLITTORS = (
   'Minor Suit Stayman' => 1,
   'Nonforcing Stayman' => 1,
   'Puppet Stayman' => 1,
+  Stayman => 1,
 );
 
 
@@ -261,11 +272,181 @@ sub look_for_ranges
     my $first = $units->value($streak->[0]);
     my $second = $units->value($streak->[1]);
 
+    if ($first == 2 && $second == 1 &&
+      $streak->[0] + 2 == $streak->[1] &&
+      $units->value($streak->[0] + 1) eq 'SLASH')
+    {
+      $units->collapse($streak->[0], $streak->[1], 'BASES', 
+        'Two Over One', $chain_stats);
+      next;
+    }
+
     next unless $first >= 12 && $second <= 24 &&
       $first < $second && $second <= $first + 4;
 
+    my $last = $second;
+    my $maybe_points = $units->find_next_substantial($streak->[1] + 1);
+    if ($maybe_points >= 0)
+    {
+      my $maybe_value = $units->value($maybe_points);
+      if ($maybe_value eq 'Points' || $maybe_value eq 'p')
+      {
+        $last = $maybe_points;
+      }
+    }
+
     $units->collapse($streak->[0], $streak->[1], 'RANGE', 
       "$first to $second", $chain_stats);
+  }
+}
+
+
+sub range_compatible
+{
+  # Not a class method.
+  my ($cat, $range) = @_;
+
+  if ($range !~ /^(\d+) to (\d+)$/)
+  {
+    die "Bad range .$range.";
+  }
+  my ($lo, $hi) = ($1, $2);
+
+  if ($cat eq 'OPENING_1NT')
+  {
+    return ($lo < 18 ? 1 : 0);
+  }
+  elsif ($cat eq 'OPENING_2NT')
+  {
+    return ($lo >= 18 ? 1 : 0);
+  }
+  elsif ($cat eq 'OPENING_3NT')
+  {
+    return ($lo >= 22 ? 1 : 0);
+  }
+  else
+  {
+    die "NT? $cat";
+  }
+}
+
+
+sub look_for_notrump
+{
+  my ($units, $chain_stats, $identifier) = @_;
+
+  my $first_pos = $units->find_next_substantial(0);
+  return if $first_pos < 0;
+
+  my $first_cat = $units->category($first_pos);
+  my $first_value = $units->value($first_pos);
+  my $range_in_front = 0;
+  my $pos_in_front = -1;
+  my $value_in_front = -1;
+
+  while (1) 
+  {
+    my $second_pos = $units->find_next_substantial($first_pos + 1);
+    my $second_cat = $units->category($second_pos);
+    my $second_value = $units->value($second_pos);
+
+    if ($first_cat eq 'OPENING_1NT' ||
+        $first_cat eq 'OPENING_2NT' ||
+        $first_cat eq 'OPENING_3NT')
+    {
+      if ($second_pos < 0)
+      {
+        if ($range_in_front && 
+            range_compatible($first_cat, $value_in_front))
+        {
+          # They probably belong together.
+          $units->collapse($pos_in_front, $first_pos,
+            $first_cat, $value_in_front, $chain_stats);
+        }
+        return;
+      }
+      elsif ($second_cat eq 'RANGE')
+      {
+        if ($range_in_front)
+        {
+          # Confused for now.
+          # print "XXX confused\n";
+          # print $identifier;
+        }
+        elsif (range_compatible($first_cat, $second_value))
+        {
+          $units->collapse($first_pos, $second_pos,
+            $first_cat, $second_value, $chain_stats);
+
+          # Redo the lookahead.
+          $second_pos = $units->find_next_substantial($first_pos + 1);
+          $second_cat = $units->category($second_pos);
+          $second_value = $units->value($second_pos);
+        }
+      }
+    }
+
+    last if $second_pos < 0;
+
+    if ($first_cat eq 'RANGE')
+    {
+      $range_in_front = 1;
+      $pos_in_front = $first_pos;
+      $value_in_front = $first_value
+    }
+    else
+    {
+      $range_in_front = 0;
+    }
+
+    $first_pos = $second_pos;
+    $first_cat = $second_cat;
+    $first_value = $second_value;
+  }
+}
+
+
+sub look_for_jac_mic
+{
+  my ($units, $word1, $word2, $combined, $chain_stats, $identifier) = @_;
+
+  my $first_pos = $units->find_next_substantial(0);
+  return if $first_pos < 0;
+
+  my $first_value = $units->value($first_pos);
+
+  while (1) 
+  {
+    my $second_pos = $units->find_next_substantial($first_pos + 1);
+    my $second_cat = $units->category($second_pos);
+    my $second_value = $units->value($second_pos);
+
+    # E.g. 'Michaels'
+    if ($first_value eq $word1)
+    {
+      if ($second_pos < 0)
+      {
+        $units->reslot($first_pos, 
+          'CONSTRUCTIVE', $combined, $chain_stats);
+        last;
+      }
+      elsif ($second_value eq $word2)
+      {
+        $units->collapse($first_pos, $second_pos,
+          'CONSTRUCTIVE', $combined, $chain_stats);
+      }
+      elsif ($second_cat ne 'WORD' && $second_cat ne 'HIGH_WORD')
+      { 
+        $units->reslot($first_pos, 
+          'CONSTRUCTIVE', $combined, $chain_stats);
+        last;
+      }
+    }
+
+    last if $second_pos < 0;
+
+    $first_pos = $second_pos;
+    $first_value = $second_value;
   }
 }
 
@@ -282,7 +463,10 @@ sub split_on_specifics
     for (my $uno = 0; $uno <= $units->last(); $uno++)
     {
       my $value = $units->value($uno);
-      next unless exists $SPLITTORS{$value};
+      next unless 
+        (exists $SPLITTORS{$value} ||
+        ($units->category($uno) =~ /^OPENING_.NT$/ &&
+          $value =~ /^(\d+) to (\d+)$/));
 
       if ($uno == 0)
       {
@@ -296,7 +480,7 @@ sub split_on_specifics
 
         }
         $units->truncate_after($uno);
-        $units->set_status('COMPLETE') if $uno == 0;
+        $units->set_status('COMPLETE');
       }
       else
       {
@@ -313,8 +497,9 @@ sub split_on_specifics
         }
         else
         {
-          print "HOW?";
           print $identifier;
+          # warn $identifier;
+          # warn "$uno: $value";
         }
       }
     }

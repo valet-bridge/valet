@@ -25,11 +25,6 @@ sub add
   my $len = $units->last() + 1;
   $self->{LEN}[$len]{COUNT}++;
 
-  if ($len >= 60)
-  {
-    print $identifier;
-  }
-
   for my $index (0 .. $units->last())
   {
     my $cat = $units->category($index);
@@ -54,6 +49,14 @@ sub add
 }
 
 
+sub add_unit_count
+{
+  my ($self, $count) = @_;
+
+  $self->{COUNT}[$count]++;
+}
+
+
 sub print
 {
   my ($self) = @_;
@@ -63,6 +66,7 @@ sub print
 
   my $sum = 0;
   my $sumprod = 0;
+  my %sums;
 
   for my $len (0 .. $#{$self->{LEN}})
   {
@@ -77,6 +81,34 @@ sub print
     my $count = $self->{LEN}[$len]{COUNT} // 0;
     $sum += $count;
     $sumprod += $len * $count;
+
+    for my $key (qw(COUNT REST WORD PUNCTUATION COMPLETE))
+    {
+      $sums{$key} += $self->{LEN}[$len]{$key} // 0;
+    }
+  }
+
+  print "\n";
+  printf("%4s %10d %10d %10d %10d %10d\n\n",
+    '',
+    $sums{COUNT},
+    $sums{REST},
+    $sums{WORD},
+    $sums{PUNCTUATION},
+    $sums{COMPLETE});
+
+  printf("\nAverage %8.2f\n\n", $sumprod / $sum);
+
+  $sum = 0;
+  $sumprod = 0;
+
+  for my $count (0 .. $#{$self->{COUNT}})
+  {
+    my $c = $self->{COUNT}[$count] // 0;
+    printf("%4d %10d\n", $count, $c);
+    
+    $sum += $c;
+    $sumprod += $count * $c;
   }
 
   printf("\nAverage %8.2f\n\n", $sumprod / $sum);

@@ -321,8 +321,8 @@ close $fh;
 
 use SubLines;
 my $sublines = SubLines->new();
-$sublines->read_file('./new_sub_lines.txt');
-# $sublines->consolidate_with('./ux6');
+$sublines->read_file('./sub_lines.txt');
+# $sublines->consolidate_with('./ux2');
 # $sublines->print();
 # exit;
 
@@ -1669,19 +1669,87 @@ my $identifier = "YYY $handle, $hcount, $lno\n" .
   $entry->{TEXT} . "\n" .
   $entry->{TEXT} . "\n\n";
 
+  look_for_jac_mic($battery[0], 'Michaels', 'Cuebid', 'Michaels Cuebid',
+    $chain_stats, $identifier);
+
+  # my @streaks0;
+  # $battery[0]->get_number_streaks(\@streaks0);
+  # Sparse::KeyResp::look_for_responses($battery[0], \@streaks0,
+    # \%INT_COUNTS, $chain_stats);
+
   my @streaks;
   $battery[0]->get_number_streaks(\@streaks);
 
   look_for_ranges($battery[0], \@streaks, $chain_stats, $identifier);
 
+  look_for_notrump($battery[0], $chain_stats, $identifier);
+
   split_on_specifics(\@battery, $chain_stats, $identifier);
+
+  if ($#battery >= 2)
+  {
+    # Assume it's a system line -- great assumption.
+    return;
+  }
+  else
+  {
+    my $longest = 0;
+    for my $units (@battery)
+    {
+      my $l = $units->last()+1;
+      $longest = $l if $l > $longest;
+    }
+
+    if ($longest > 8)
+    {
+      # Assume it's a system line -- great assumption.
+      # There are a few e-mails in with these.
+      return;
+    }
+
+    if ($longest > 6)
+    {
+      # print $identifier;
+    }
+  }
 
   for my $u (@battery)
   {
     $unit_stats->add($u, $identifier);
   }
+  $unit_stats->add_unit_count(1 + $#battery);
+
+
+
+  if ($#battery == 0 && $battery[0]->last() == 0)
+  {
+    print $identifier;
+  }
 
 return;
+
+  for my $units (@battery)
+  {
+    my $wcount = 0;
+    my $count = 0;
+
+    for my $i (0 .. $units->last())
+    {
+      my $c = $units->category($i);
+      next if $c eq 'PUNCTUATION';
+      $count++;
+      if ($c eq 'WORD' || $c eq 'HIGH_WORD')
+      {
+        $wcount++ if length($units->value($i)) > 2;
+      }
+    }
+
+    if ($wcount >= 6 && 2 * $wcount >= $count)
+    {
+      # print $identifier;
+    }
+  }
+
 
   # look_for_5c_major(\@units, $chain_stats);
 

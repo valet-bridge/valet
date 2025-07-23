@@ -183,9 +183,27 @@ sub collapse
 
   return if $lower == $upper;
 
-  $self->{UNITS}[$lower]{POS} = 
-    $self->{UNITS}[$lower]{POS} . " to " . 
-    $self->{UNITS}[$upper]{POS};
+  my $lpos;
+  if ($self->{UNITS}[$lower]{POS} =~ /^(\d+) to/)
+  {
+    $lpos = $1;
+  }
+  else
+  {
+    $lpos = $self->{UNITS}[$lower]{POS};
+  }
+
+  my $hpos;
+  if ($self->{UNITS}[$upper]{POS} =~ / to (\d+)$/)
+  {
+    $hpos = $1;
+  }
+  else
+  {
+    $hpos = $self->{UNITS}[$upper]{POS};
+  }
+
+  $self->{UNITS}[$lower]{POS} = "$lpos to $hpos";
 
   splice(@{$self->{UNITS}}, $lower+1, $upper - $lower);
 }

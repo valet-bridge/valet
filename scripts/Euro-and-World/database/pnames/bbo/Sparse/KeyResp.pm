@@ -145,7 +145,7 @@ sub include_straggler
 
   my $found = 0;
   my $next = $index;
-  do
+  while (1)
   {
     my $s = $units->find_next_substantial($next+1);
     return $next if $s < 0;
@@ -192,6 +192,7 @@ sub look_for_responses
       if (exists $SINGLETS{$value})
       {
         my $last = include_straggler($units, $index);
+        print "WWW $value\n";
         fix_keycard_streak($units, $index, $last, $chain_stats);
         return $streak_no;
       }
