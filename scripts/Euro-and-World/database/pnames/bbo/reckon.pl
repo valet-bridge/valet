@@ -286,6 +286,8 @@ use Util;
 use Butil;
 use LookFor;
 
+use Inspect;
+
 use Email::Email;
 
 use Histo;
@@ -312,18 +314,18 @@ $HANDLE_SKIPS_HASH{$_} = 1 for @HANDLE_SKIPS;
 
 use Manual::TargetedLines;
 
-my $fluffed_lines = Manual::TargetedLines->new();
+$fluffed_lines = Manual::TargetedLines->new();
 $fluffed_lines->read_file('Manual/fluffed_lines.txt');
 
-my $known_names = Manual::TargetedLines->new();
+$known_names = Manual::TargetedLines->new();
 $fluffed_lines->read_file('Manual/known_names.txt');
 
-my $late_mails = Manual::TargetedLines->new();
+$late_mails = Manual::TargetedLines->new();
 $fluffed_lines->read_file('Manual/late_mails.txt');
 
 
 use Manual::SubLines;
-my $sublines = Manual::SubLines->new();
+$sublines = Manual::SubLines->new();
 # $sublines->read_file('./sub_lines.txt');
 $sublines->read_file('Manual/sub_lines.txt');
 # $sublines->consolidate_with('Manual/edmail2');
@@ -350,7 +352,7 @@ if ($paragraph->{HANDLE} eq 'FULLFUEL')
   # print "HERE\n";
 }
   $handle_counts{$paragraph->{HANDLE}}++;
-  inspect_paragraph($whole, $paragraph, \%handle_counts);
+  Inspect::inspect_paragraph($whole, $paragraph, \%handle_counts);
 
   # print_paragraph($paragraph);
 
@@ -912,7 +914,7 @@ sub guess_private
 }
 
 
-sub inspect_paragraph
+sub inspect_paragraph_old
 {
   my ($whole, $paragraph, $handle_counts) = @_;
 
@@ -955,7 +957,6 @@ sub inspect_paragraph
         next;
       }
 
-
       my $l = look_for_single_tag($whole, \@LEVEL_ORDER, 'LEVEL',
         $entry->{TEXT});
       if ($l)
@@ -971,34 +972,6 @@ sub inspect_paragraph
       if ($p)
       {
         guess_private($entry, $p, $private_seen, $mail_seen, $level_seen);
-
-        # if ($level_seen && $private_seen)
-        # {
-          # $entry->{CATEGORY} = 'FLUFF';
-          # $entry->{VALUE} = $entry->{TEXT};
-        # }
-        # elsif (! $level_seen &&
-            # ($private_seen || $mail_seen) && 
-            # $entry->{TEXT} =~ /^other$/i)
-        # {
-          # $entry->{CATEGORY} = 'LEVEL';
-          # $entry->{VALUE} = 'Other';
-          # $level_seen = 1;
-        # }
-        # elsif (! $level_seen &&
-            # ($private_seen || $mail_seen) && 
-            # $entry->{TEXT} =~ /^private$/i)
-        # {
-          # $entry->{CATEGORY} = 'LEVEL';
-          # $entry->{VALUE} = 'Private';
-          # $level_seen = 1;
-        # }
-        # else
-        # {
-          # $entry->{CATEGORY} = 'PRIVATE';
-          # $entry->{VALUE} = $p;
-          # $private_seen = 1;
-        # }
         next;
       }
 
