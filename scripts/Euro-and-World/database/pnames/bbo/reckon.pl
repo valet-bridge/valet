@@ -310,17 +310,20 @@ my @HANDLE_SKIPS = qw(
 my %HANDLE_SKIPS_HASH;
 $HANDLE_SKIPS_HASH{$_} = 1 for @HANDLE_SKIPS;
 
-my %FLUFFED_LINES;
-open(my $fh, '<fluffed_lines.txt') or die "Cannot open fluffed_lines: $!!";
-while (my $line = <$fh>)
-{
-  $line =~ /^(.+), (\d+), (\d+)$/;
-  $FLUFFED_LINES{$1}{$2}{$3} = 1;
-}
-close $fh;
+use Manual::TargetedLines;
 
-use SubLines;
-my $sublines = SubLines->new();
+my $fluffed_lines = Manual::TargetedLines->new();
+$fluffed_lines->read_file('Manual/fluffed_lines.txt');
+
+my $known_names = Manual::TargetedLines->new();
+$fluffed_lines->read_file('Manual/known_names.txt');
+
+my $late_mails = Manual::TargetedLines->new();
+$fluffed_lines->read_file('Manual/late_mails.txt');
+
+
+use Manual::SubLines;
+my $sublines = Manual::SubLines->new();
 # $sublines->read_file('./sub_lines.txt');
 $sublines->read_file('Manual/sub_lines.txt');
 # $sublines->consolidate_with('Manual/edmail2');
@@ -826,6 +829,88 @@ sub look_for_email
 }
 
 
+sub pre_inspect
+{
+  # A return value of 1 means that we're done inspecting.
+
+  my ($entry, $handle, $hcount, $eno, $identifier) = @_;
+
+  if ($fluffed_lines->lookup($handle, $hcount, $eno))
+  {
+    $entry->{CATEGORY} = 'FLUFF';
+    $entry->{VALUE} = $entry->{TEXT};
+    return 1;
+  }
+
+  if (my $replace = $sublines->lookup($handle, $hcount, $eno, 
+    $entry->{TEXT}))
+  {
+    # Still fall through and inspect further.
+    $entry->{TEXT} = $replace;
+    return 0;
+  }
+
+  if ($late_mails->lookup($handle, $hcount, $eno))
+  {
+    my @list;
+    look_for_email($entry->{TEXT}, \@list);
+    if ($#list < 0)
+    {
+      print $identifier;
+      die "Not an email?";
+    }
+
+print $identifier;
+print "Parsed as a mail\n\n";
+    $entry->{CATEGORY} = 'LIST';
+    @{$entry->{LIST}} = @list;
+    return 1;
+  }
+
+  if ($known_names->lookup($handle, $hcount, $eno))
+  {
+    $entry->{CATEGORY} = 'NAMELIKE';
+    $entry->{VALUE} = $entry->{TEXT};
+    return 1;
+  }
+
+  return 0;
+}
+
+
+sub guess_private
+{
+  my ($entry, $text, $private_seen, $mail_seen, $level_seen) = @_;
+
+  if ($level_seen && $private_seen)
+  {
+    $entry->{CATEGORY} = 'FLUFF';
+    $entry->{VALUE} = $entry->{TEXT};
+  }
+  elsif (! $level_seen &&
+      ($private_seen || $mail_seen) && 
+      $entry->{TEXT} =~ /^other$/i)
+  {
+    $entry->{CATEGORY} = 'LEVEL';
+    $entry->{VALUE} = 'Other';
+    $level_seen = 1;
+  }
+  elsif (! $level_seen &&
+      ($private_seen || $mail_seen) && 
+      $entry->{TEXT} =~ /^private$/i)
+  {
+    $entry->{CATEGORY} = 'LEVEL';
+    $entry->{VALUE} = 'Private';
+    $level_seen = 1;
+  }
+  else
+  {
+    $entry->{CATEGORY} = 'PRIVATE';
+    $entry->{VALUE} = $text;
+    $private_seen = 1;
+  }
+}
+
 
 sub inspect_paragraph
 {
@@ -842,26 +927,21 @@ sub inspect_paragraph
   my $eno = -1;
   my $elen = $#{$paragraph->{LINES}};
 
+  # if ($paragraph->{HANDLE} eq 'GHISA')
+  # {
+    # print "HERE\n";
+  # }
+
   for my $entry (@{$paragraph->{LINES}})
   {
     $eno++;
 
-    if (exists $FLUFFED_LINES{$handle}{$hcount}{$eno})
-    {
-      $entry->{CATEGORY} = 'FLUFF';
-      $entry->{VALUE} = $entry->{TEXT};
-      next;
-    }
+    # Only needed for debugging.
+    # my $identifier = '';
+    my $identifier = "YYY $handle, $hcount, $eno\n" .
+      $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
 
-if ($handle eq 'OYZZUM')
-{
-  # print "HERE\n";
-}
-    if (my $replace = $sublines->lookup($handle, $hcount, $eno, 
-      $entry->{TEXT}))
-    {
-      $entry->{TEXT} = $replace;
-    }
+    next if pre_inspect($entry, $handle, $hcount, $eno, $identifier);
 
     if (! $country_seen)
     {
@@ -875,10 +955,6 @@ if ($handle eq 'OYZZUM')
         next;
       }
 
-if ($paragraph->{HANDLE} eq 'GHISA')
-{
-  # print "HERE\n";
- }
 
       my $l = look_for_single_tag($whole, \@LEVEL_ORDER, 'LEVEL',
         $entry->{TEXT});
@@ -894,33 +970,35 @@ if ($paragraph->{HANDLE} eq 'GHISA')
         $entry->{TEXT});
       if ($p)
       {
-        if ($level_seen && $private_seen)
-        {
-          $entry->{CATEGORY} = 'FLUFF';
-          $entry->{VALUE} = $entry->{TEXT};
-        }
-        elsif (! $level_seen &&
-            ($private_seen || $mail_seen) && 
-            $entry->{TEXT} =~ /^other$/i)
-        {
-          $entry->{CATEGORY} = 'LEVEL';
-          $entry->{VALUE} = 'Other';
-          $level_seen = 1;
-        }
-        elsif (! $level_seen &&
-            ($private_seen || $mail_seen) && 
-            $entry->{TEXT} =~ /^private$/i)
-        {
-          $entry->{CATEGORY} = 'LEVEL';
-          $entry->{VALUE} = 'Private';
-          $level_seen = 1;
-        }
-        else
-        {
-          $entry->{CATEGORY} = 'PRIVATE';
-          $entry->{VALUE} = $p;
-          $private_seen = 1;
-        }
+        guess_private($entry, $p, $private_seen, $mail_seen, $level_seen);
+
+        # if ($level_seen && $private_seen)
+        # {
+          # $entry->{CATEGORY} = 'FLUFF';
+          # $entry->{VALUE} = $entry->{TEXT};
+        # }
+        # elsif (! $level_seen &&
+            # ($private_seen || $mail_seen) && 
+            # $entry->{TEXT} =~ /^other$/i)
+        # {
+          # $entry->{CATEGORY} = 'LEVEL';
+          # $entry->{VALUE} = 'Other';
+          # $level_seen = 1;
+        # }
+        # elsif (! $level_seen &&
+            # ($private_seen || $mail_seen) && 
+            # $entry->{TEXT} =~ /^private$/i)
+        # {
+          # $entry->{CATEGORY} = 'LEVEL';
+          # $entry->{VALUE} = 'Private';
+          # $level_seen = 1;
+        # }
+        # else
+        # {
+          # $entry->{CATEGORY} = 'PRIVATE';
+          # $entry->{VALUE} = $p;
+          # $private_seen = 1;
+        # }
         next;
       }
 
@@ -938,17 +1016,9 @@ if ($paragraph->{HANDLE} eq 'GHISA')
       look_for_email($entry->{TEXT}, \@list);
       if ($#list >= 0)
       {
-        if ($mail_seen)
-        {
-          $entry->{CATEGORY} = 'FLUFF';
-          $entry->{VALUE} = $entry->{TEXT};
-        }
-        else
-        {
-          $entry->{CATEGORY} = 'LIST';
-          @{$entry->{LIST}} = @list;
-          $mail_seen = 1;
-        }
+        $entry->{CATEGORY} = 'LIST';
+        @{$entry->{LIST}} = @list;
+        $mail_seen = 1;
         next;
       }
 
@@ -1264,12 +1334,12 @@ sub sub_system_chains
   {
     $lno++;
 
-    if (exists $FLUFFED_LINES{$paragraph->{HANDLE}}{$handle_count}{$lno})
-    {
-      $entry->{CATEGORY} = 'FLUFF';
-      $entry->{VALUE} = $entry->{TEXT};
-      next;
-    }
+    # if (exists $FLUFFED_LINES{$paragraph->{HANDLE}}{$handle_count}{$lno})
+    # {
+      # $entry->{CATEGORY} = 'FLUFF';
+      # $entry->{VALUE} = $entry->{TEXT};
+      # next;
+    # }
 
     if ($entry->{CATEGORY} eq 'LIST')
     {
@@ -1710,7 +1780,7 @@ my $identifier = "YYY $handle, $hcount, $lno\n" .
 
     if ($longest > 6)
     {
-      # print $identifier;
+      print $identifier;
     }
   }
 
@@ -1724,7 +1794,7 @@ my $identifier = "YYY $handle, $hcount, $lno\n" .
 
   if ($#battery == 0 && $battery[0]->last() == 0)
   {
-    print $identifier;
+    # print $identifier;
   }
 
 return;

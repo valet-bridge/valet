@@ -1,6 +1,6 @@
 #!perl
 
-package SubLines;
+package Manual::SubLines;
 
 use strict;
 use warnings;
