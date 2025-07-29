@@ -12,6 +12,9 @@ package Inspect;
 # NAMELIKE
 # PRIVATE
 # SYSTEM
+#
+# It leaves in place categories that are not overwritten,
+# so e.g. OPEN can pass through.
 
 
 use v5.10;
@@ -24,6 +27,7 @@ use Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw($sublines $fluffed_lines $known_names $late_mails
+  $both_last $both_neither
   inspect_paragraph);
 
 use lib '../../bbo';
@@ -32,7 +36,8 @@ use Util;
 use lib './Email';
 use Email::Email;
 
-our ($sublines, $fluffed_lines, $known_names, $late_mails);
+our ($sublines, $fluffed_lines, $known_names, $late_mails,
+  $both_last, $both_neither);
 
 
 my @COUNTRY_ORDER = qw(COUNTRY);
@@ -95,8 +100,6 @@ sub pre_inspect
       die "Not an email?";
     }
 
-print $identifier;
-print "Parsed as a mail\n\n";
     $entry->{CATEGORY} = 'LIST';
     @{$entry->{LIST}} = @list;
     return 1;
@@ -106,6 +109,12 @@ print "Parsed as a mail\n\n";
   {
     $entry->{CATEGORY} = 'NAMELIKE';
     $entry->{VALUE} = $entry->{TEXT};
+    return 1;
+  }
+
+  if ($both_last->lookup($entry->{TEXT}))
+  {
+    $entry->{CATEGORY} = 'NAME_LAST';
     return 1;
   }
 
@@ -236,7 +245,6 @@ sub inspect_paragraph
         $entry->{VALUE} = $entry->{TEXT};
         next;
       }
-
     }
 
     if (! $magic_seen && $eno+1 >= $elen)

@@ -863,7 +863,7 @@ sub split
 
   if (exists $NAMES{$text})
   {
-    $splits = $NAMES{$text};
+    @$splits = @{$NAMES{$text}};
     return 1;
   }
   else

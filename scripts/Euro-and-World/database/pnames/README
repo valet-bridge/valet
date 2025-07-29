@@ -1,3 +1,5 @@
+In sublines, look for cases where nothing actually gets modified.
+
 Get them out of the recognition and get the lines labeled.
 
 Check that lines that come from Caps are labeled properly --

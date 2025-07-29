@@ -26,7 +26,7 @@ sub split_on_caps
 {
   my ($whole, $tag_list, $text, $splits, $identifier) = @_;
 
-  return unless (
+  return 0 unless (
       $text =~ /[a-z]{2,}[A-Z]/ &&
       $text =~ /^[a-zA-Z]/ &&
       $text !~ /^[a-z][A-Z]/);

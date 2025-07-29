@@ -76,20 +76,6 @@ my @UNIT_TAGS = qw(
   CARDING
 );
 
-my %CERTAIN_WORDS =
-(
-  BASES => 1,
-  OPENINGS => 1,
-  CONSTRUCTIVE => 1,
-  COMPETITIVE => 1,
-  BLACKWOOD => 1,
-  BERGEN => 1,
-  MISC => 1,
-  KEYCARD => 1,
-  STAYMAN => 1,
-  CARDING => 1,
-);
-
 my @TAG_ORDER = qw(
   BASES
   OPENINGS
@@ -114,6 +100,18 @@ my @TAG_ORDER = qw(
   FIRSTFIRST
   FIRSTMID
   FIRSTBBO
+  LASTLAST
+  LASTMID
+  LASTBBO
+);
+
+my @FIRST_ORDER = qw(
+  FIRSTFIRST
+  FIRSTMID
+  FIRSTBBO
+);
+
+my @LAST_ORDER = qw(
   LASTLAST
   LASTMID
   LASTBBO
@@ -238,27 +236,6 @@ my @POST_MAIL_ORDER = qw(
   CODE
 );
 
-# This is a small special case.
-my @COUNTRY_ORDER = qw(
-  COUNTRY
-);
-
-my @LEVEL_ORDER = qw(
-  LEVEL
-);
-
-my @PRIVATE_ORDER = qw(
-  PRIVATE
-);
-
-my @FLUFF_ORDER = qw(
-  FLUFF
-);
-
-my @SYSTEM_ORDER = qw(
-  SYSTEM
-);
-
 my %LOCAL_SUBS =
 (
   BARCANERA => {ZhangZhou => 'Zhou ZHANG'}
@@ -267,10 +244,12 @@ my %LOCAL_SUBS =
 # TODO Do something about Both.
 # Probaby split into BothFirstish and BothLastish and BothUnclear.
 
+# This is the one with name etc.
 use WholeBBO;
 my $whole = WholeBBO->new();
 $whole->init_hashes;
 
+# This is system-oriented.
 use WholeBBO2;
 my $whole2 = WholeBBO2->new();
 $whole2->init_hashes;
@@ -296,6 +275,10 @@ my $histo = Histo->new();
 use UnitStats;
 my $unit_stats = UnitStats->new();
 
+###
+### TODO We still have to look for COUNTRY etc.
+###
+
 my @DOMAINS = qw(
   ag ar at au be bg br ca ch cl cn co com cz de dk edu ee es eu fi fm fr 
   gr hk hr hu id ie il is it in jp lu lv mx net nl no nz org 
@@ -318,17 +301,25 @@ $fluffed_lines = Manual::TargetedLines->new();
 $fluffed_lines->read_file('Manual/fluffed_lines.txt');
 
 $known_names = Manual::TargetedLines->new();
-$fluffed_lines->read_file('Manual/known_names.txt');
+$known_names->read_file('Manual/known_names.txt');
 
 $late_mails = Manual::TargetedLines->new();
-$fluffed_lines->read_file('Manual/late_mails.txt');
+$late_mails->read_file('Manual/late_mails.txt');
+
+use Manual::TargetedWords;
+
+# Some words can be either first, last names or neither.
+$both_last = Manual::TargetedWords->new();
+$both_last->read_file('Manual/both_last.txt');
+
+$both_neither = Manual::TargetedWords->new();
+$both_neither->read_file('Manual/both_neither.txt');
 
 
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
-# $sublines->read_file('./sub_lines.txt');
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('Manual/edmail2');
+# $sublines->consolidate_with('un');
 # $sublines->print();
 # exit;
 
@@ -347,10 +338,10 @@ my %handle_counts;
 
 for my $paragraph (@paragraphs)
 {
-if ($paragraph->{HANDLE} eq 'FULLFUEL')
-{
+# if ($paragraph->{HANDLE} eq 'CAPERONE')
+# {
   # print "HERE\n";
-}
+# }
   $handle_counts{$paragraph->{HANDLE}}++;
   Inspect::inspect_paragraph($whole, $paragraph, \%handle_counts);
 
@@ -363,11 +354,17 @@ if ($paragraph->{HANDLE} eq 'FULLFUEL')
   for my $entry (@{$paragraph->{LINES}})
   {
     $lno++;
+
+    # Heavily curated.
+    next unless $entry->{CATEGORY} eq 'OPEN';
+
     my $chain = Chain->new();
     my @chains;
     push @chains, $chain;
 
-    if (study_line($whole2, \@UNIT_TAGS, $entry, \@chains, 
+
+
+    if (study_line($whole, $whole2, \@UNIT_TAGS, $entry, \@chains, 
       $paragraph->{HANDLE}, $handle_counts{$paragraph->{HANDLE}}, $lno, 
       $histo, $unit_stats, \%chain_stats))
     {
@@ -779,271 +776,6 @@ sub raw_to_paragraphs
 }
 
 
-sub look_for_single_tag
-{
-  # Is $text exactly a tag value, with nothing else in the string?
-  my ($whole, $tag_list, $tag, $text) = @_;
-
-  my @tags = (0);
-  my @values = ($text);
-  my @texts = ($text);
-
-  # Look for multi-word tag value.
-  if ($text =~ /[\s-]/)
-  {
-    split_on_multi($whole, $tag_list, 0, \@tags, \@values, \@texts);
-    return '' unless $#tags == 0;
-    return $values[0] if $tags[0] eq $tag;
-  }
-
-  # Look for single-word country.
-  my $fix = $whole->get_single($tag, lc($text));
-  return (defined $fix->{CATEGORY} ? $fix->{VALUE} : '');
-}
-
-
-sub look_for_email
-{
-  # TODO We could tolerate some spaces here, etc.
-
-  my ($text, $list) = @_;
-
-  Email::Email::looks_like(lc($text), $list);
-  return;
-
-  # TODO Still need to parse @list.
-
-  my @a = split '@', $text;
-  return '' unless $#a == 1;
-
-  my @b = split '\.', $a[1];
-  return '' unless $#b >= 1 && $#b <= 3;
-
-  my $domain = $b[$#b];
-  if (exists $DOMAINS_HASH{lc($domain)})
-  {
-    return $text;
-  }
-
-  print "ALIAS $text\n";
-  # print "DOMMISS $domain\n";
-  return '';
-}
-
-
-sub pre_inspect
-{
-  # A return value of 1 means that we're done inspecting.
-
-  my ($entry, $handle, $hcount, $eno, $identifier) = @_;
-
-  if ($fluffed_lines->lookup($handle, $hcount, $eno))
-  {
-    $entry->{CATEGORY} = 'FLUFF';
-    $entry->{VALUE} = $entry->{TEXT};
-    return 1;
-  }
-
-  if (my $replace = $sublines->lookup($handle, $hcount, $eno, 
-    $entry->{TEXT}))
-  {
-    # Still fall through and inspect further.
-    $entry->{TEXT} = $replace;
-    return 0;
-  }
-
-  if ($late_mails->lookup($handle, $hcount, $eno))
-  {
-    my @list;
-    look_for_email($entry->{TEXT}, \@list);
-    if ($#list < 0)
-    {
-      print $identifier;
-      die "Not an email?";
-    }
-
-print $identifier;
-print "Parsed as a mail\n\n";
-    $entry->{CATEGORY} = 'LIST';
-    @{$entry->{LIST}} = @list;
-    return 1;
-  }
-
-  if ($known_names->lookup($handle, $hcount, $eno))
-  {
-    $entry->{CATEGORY} = 'NAMELIKE';
-    $entry->{VALUE} = $entry->{TEXT};
-    return 1;
-  }
-
-  return 0;
-}
-
-
-sub guess_private
-{
-  my ($entry, $text, $private_seen, $mail_seen, $level_seen) = @_;
-
-  if ($level_seen && $private_seen)
-  {
-    $entry->{CATEGORY} = 'FLUFF';
-    $entry->{VALUE} = $entry->{TEXT};
-  }
-  elsif (! $level_seen &&
-      ($private_seen || $mail_seen) && 
-      $entry->{TEXT} =~ /^other$/i)
-  {
-    $entry->{CATEGORY} = 'LEVEL';
-    $entry->{VALUE} = 'Other';
-    $level_seen = 1;
-  }
-  elsif (! $level_seen &&
-      ($private_seen || $mail_seen) && 
-      $entry->{TEXT} =~ /^private$/i)
-  {
-    $entry->{CATEGORY} = 'LEVEL';
-    $entry->{VALUE} = 'Private';
-    $level_seen = 1;
-  }
-  else
-  {
-    $entry->{CATEGORY} = 'PRIVATE';
-    $entry->{VALUE} = $text;
-    $private_seen = 1;
-  }
-}
-
-
-sub inspect_paragraph_old
-{
-  my ($whole, $paragraph, $handle_counts) = @_;
-
-  my $country_seen = 0;
-  my $private_seen = 0;
-  my $magic_seen = 0;
-  my $mail_seen = 0;
-  my $level_seen = 0;
-
-  my $handle = $paragraph->{HANDLE};
-  my $hcount = $handle_counts->{$handle};
-  my $eno = -1;
-  my $elen = $#{$paragraph->{LINES}};
-
-  # if ($paragraph->{HANDLE} eq 'GHISA')
-  # {
-    # print "HERE\n";
-  # }
-
-  for my $entry (@{$paragraph->{LINES}})
-  {
-    $eno++;
-
-    # Only needed for debugging.
-    # my $identifier = '';
-    my $identifier = "YYY $handle, $hcount, $eno\n" .
-      $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
-
-    next if pre_inspect($entry, $handle, $hcount, $eno, $identifier);
-
-    if (! $country_seen)
-    {
-      my $c = look_for_single_tag($whole, \@COUNTRY_ORDER, 'COUNTRY',
-        $entry->{TEXT});
-      if ($c)
-      {
-        $entry->{CATEGORY} = 'COUNTRY';
-        $entry->{VALUE} = $c;
-        $country_seen = 1;
-        next;
-      }
-
-      my $l = look_for_single_tag($whole, \@LEVEL_ORDER, 'LEVEL',
-        $entry->{TEXT});
-      if ($l)
-      {
-        $entry->{CATEGORY} = 'LEVEL';
-        $entry->{VALUE} = $l;
-        $level_seen = 1;
-        next;
-      }
-
-      my $p = look_for_single_tag($whole, \@PRIVATE_ORDER, 'PRIVATE',
-        $entry->{TEXT});
-      if ($p)
-      {
-        guess_private($entry, $p, $private_seen, $mail_seen, $level_seen);
-        next;
-      }
-
-      my $f = look_for_single_tag($whole, \@FLUFF_ORDER, 'FLUFF',
-        $entry->{TEXT});
-      if ($f)
-      {
-        $entry->{CATEGORY} = 'FLUFF';
-        $entry->{VALUE} = $f;
-        next;
-      }
-
-      # Sometimes people give the same mail twice, or two different ones.
-      my @list;
-      look_for_email($entry->{TEXT}, \@list);
-      if ($#list >= 0)
-      {
-        $entry->{CATEGORY} = 'LIST';
-        @{$entry->{LIST}} = @list;
-        $mail_seen = 1;
-        next;
-      }
-
-      my $s = look_for_single_tag($whole, \@SYSTEM_ORDER, 'SYSTEM',
-        $entry->{TEXT});
-      if ($s)
-      {
-        $entry->{CATEGORY} = 'SYSTEM';
-        $entry->{VALUE} = $entry->{TEXT};
-        next;
-      }
-
-    }
-
-    if (! $magic_seen && $eno+1 >= $elen)
-    {
-      # Towards the end.
-      if ($entry->{TEXT} =~ /^(\d+)$/ && $1 >= 100 && $1 < 200)
-      {
-        $entry->{CATEGORY} = 'MAGIC';
-        $magic_seen = 1;
-        next;
-      }
-    }
-
-    if ($magic_seen && $eno == $elen &&
-        $entry->{TEXT} =~ /^(\d+)$/ && $1 >= 100 && $1 < 200)
-    {
-      # Not clear, but doesn't matter.
-      $entry->{CATEGORY} = 'FLUFF';
-      $entry->{VALUE} = $entry->{TEXT};
-    }
-
-    if ($eno+1 >= $elen &&
-        (($entry->{TEXT} =~ /^[0-9]n/ && $magic_seen) || 
-        $entry->{TEXT} =~ /^\dy[!|]/ ||
-        $entry->{TEXT} =~ /^\dy$/))
-    {
-      # Some kind of code.
-      $entry->{CATEGORY} = 'CODE';
-      next;
-    }
-
-    if (($country_seen || $mail_seen || $private_seen) && ! $magic_seen)
-    {
-      $entry->{CATEGORY} = 'SYSTEM';
-      next;
-    }
-  }
-}
-
-
 sub make_chain
 {
   my ($whole, $datum, $chain) = @_;
@@ -1450,21 +1182,9 @@ sub list_to_units
       }
       else
       {
-        if (length($part) > 12)
-        {
-          # print "$identifier\n";
-        }
-
         $units->push($category, $part, $value, $pos, $chain_stats);
       }
     }
-  }
-
-  if ($units->last() > 60)
-  {
-    # my $identifier = "YYY $handle, $hcount, $lno\n" .
-      # "$text\n$text\n\n";
-    # print $identifier;
   }
 }
 
@@ -1693,16 +1413,65 @@ sub look_for_5c_major
 
 sub study_line
 {
-  my ($whole, $unit_tags, $entry, $chains, 
+  my ($whole_names, $whole_system, $unit_tags, $entry, $chains, 
     $handle, $hcount, $lno, $histo, $unit_stats, $chain_stats) = @_;
 
   my @list;
   lines_to_list($entry, \@list);
   return if $#list == -1; # COUNTRY, etc.
 
+  if ($#list == 0 && $list[0] !~ / /)
+  {
+    # Could be a single name.
+    my $token_no = 0;
+    my $chain = Chain->new();
+    my $first_flag = 0;
+    my $last_flag = 0;
+
+    if (singleton_tag_matches_basic($whole_names, \@FIRST_ORDER,
+      \$token_no, $list[0], 0, $chain, $histo, ''))
+    {
+      $first_flag = 1;
+    }
+
+    if (singleton_tag_matches_basic($whole_names, \@LAST_ORDER,
+      \$token_no, $list[0], 0, $chain, $histo, ''))
+    {
+      $last_flag = 1;
+    }
+
+    if ($first_flag && ! $last_flag)
+    {
+      $entry->{CATEGORY} = 'NAME_FIRST';
+      return;
+    }
+    elsif (! $first_flag && $last_flag)
+    {
+      $entry->{CATEGORY} = 'NAME_LAST';
+      return;
+    }
+    elsif ($first_flag && $last_flag)
+    {
+      if ($both_neither->lookup($list[0]))
+      {
+        # Fall through.
+      }
+      elsif ($both_last->lookup($list[0]))
+      {
+        $entry->{CATEGORY} = 'NAME_LAST';
+        return;
+      }
+      else
+      {
+        $entry->{CATEGORY} = 'NAME_FIRST';
+        return;
+      }
+    }
+  }
+
   my @battery;
   $battery[0] = Units->new();
-  list_to_units($whole, $unit_tags, \@list, $battery[0],
+  list_to_units($whole_system, $unit_tags, \@list, $battery[0],
     $entry->{TEXT}, $handle, $hcount, $lno, $histo, $chain_stats);
 
   look_for_openings($battery[0], $chain_stats);
@@ -1730,31 +1499,45 @@ my $identifier = "YYY $handle, $hcount, $lno\n" .
 
   split_on_specifics(\@battery, $chain_stats, $identifier);
 
-  if ($#battery >= 2)
+  if ($#battery >= 1)
   {
     # Assume it's a system line -- great assumption.
+    # I've edited some with two units (so length 1).
     return;
   }
-  else
+
+  my $longest = 0;
+  for my $units (@battery)
   {
-    my $longest = 0;
-    for my $units (@battery)
-    {
-      my $l = $units->last()+1;
-      $longest = $l if $l > $longest;
-    }
+    my $l = $units->last()+1;
+    $longest = $l if $l > $longest;
+  }
 
-    if ($longest > 8)
-    {
-      # Assume it's a system line -- great assumption.
-      # There are a few e-mails in with these.
-      return;
-    }
+  # Heavily curated.
+  if ($entry->{CATEGORY} ne 'OPEN')
+  {
+    return;
+  }
 
-    if ($longest > 6)
-    {
-      print $identifier;
-    }
+  if ($battery[0]->status() eq 'COMPLETE')
+  {
+    return;
+  }
+
+  if ($longest == 2 || $longest >= 6)
+  {
+    return;
+  }
+
+
+  # if ($longest == 5)
+  # {
+    # print $identifier;
+  # }
+
+  if ($#battery == 0 && $battery[0]->last() == 0)
+  {
+    print $identifier;
   }
 
   for my $u (@battery)
@@ -1764,36 +1547,7 @@ my $identifier = "YYY $handle, $hcount, $lno\n" .
   $unit_stats->add_unit_count(1 + $#battery);
 
 
-
-  if ($#battery == 0 && $battery[0]->last() == 0)
-  {
-    # print $identifier;
-  }
-
 return;
-
-  for my $units (@battery)
-  {
-    my $wcount = 0;
-    my $count = 0;
-
-    for my $i (0 .. $units->last())
-    {
-      my $c = $units->category($i);
-      next if $c eq 'PUNCTUATION';
-      $count++;
-      if ($c eq 'WORD' || $c eq 'HIGH_WORD')
-      {
-        $wcount++ if length($units->value($i)) > 2;
-      }
-    }
-
-    if ($wcount >= 6 && 2 * $wcount >= $count)
-    {
-      # print $identifier;
-    }
-  }
-
 
   # look_for_5c_major(\@units, $chain_stats);
 

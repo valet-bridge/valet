@@ -70,6 +70,13 @@ sub set_status
 }
 
 
+sub status
+{
+  my ($self, $status) = @_;
+  return $self->{STATUS} // '';
+}
+
+
 sub push
 {
   my ($self, $category, $text, $value, $pos, $chain_stats) = @_;
