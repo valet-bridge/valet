@@ -29,7 +29,7 @@ sub read_file
   {
     $sno++;
     chomp $line;
-    $self->{LIST}{$line} = 1;
+    $self->{LIST}{lc($line)} = 1;
   }
   close $fh;
 }

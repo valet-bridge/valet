@@ -38,7 +38,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Akçeşme Albena Amanora Arjasa Atakoy Avren
+  Akcay Akçeşme Albena Amanora Arjasa Atakoy Avren
   Bahce Bahcesehir Balcova Balgat Baragnon Barrière Bayrampaþa Bellagatta
   Beroe Bieniewo Bogazici Borivli Bormali Bornova Bosphorus Bozdogan 
   Brotteaux Buca Buitenhof

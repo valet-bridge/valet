@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'Bisma Semarang',
   'Boeven Digoel',
   'Bone Bolango',
+  'Canary Islands',
   'Central Anatolia',
   'Central Districts',
   'Central Celebes',
@@ -38,6 +39,7 @@ my @MULTI_WORDS =
   'East Kalimantan',
   'East Nusa Tenggara',
   'Eastern Cape',
+  'Franche-Comté',
   'Fylke Innlandet',
   'Gabungan Malaku',
   'Himachal Pradesh',
@@ -130,6 +132,7 @@ my @MULTI_WORDS =
   'Val di Magra',
   'Vest Agder',
   'Vest Finnmark',
+  'Warminsko-Mazurskie',
   'West Bengal',
   'West Borneo',
   'West District',
@@ -243,36 +246,37 @@ my @SINGLE_WORDS = qw(
   Aceh Agder Akdeniz Akkad Anhui Ararat Ayrshire
   Badung Bahia Bairrada Bali Banten Belitung Bengal Bengkayang Bihar 
   Bogø Borneo Bornholm Bungo Buriram Buskerud
-  Cappadocia Catalonia Chengmai Comandatuba Corsica Crete
+  California Camargue Cappadocia Catalonia Chengmai Colorado 
+  Comandatuba Corsica Crete
   Dersým Druts
   Eyjafjallajokull
   Feixiang Fjends Flakstad Florida Fujian
-  Ganges Gansu Gauteng Goa Gorontalo Guangdong Guangxi 
+  Galapagos Ganges Gansu Gauteng Goa Gorontalo Guangdong Guangxi 
   Guizhou Gujarat
   Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Heilongjiang
   Henan Hordaland Huabei Hubei Hunan
-  Iberia Iskele
+  Iberia Illinois Iskele
   Jalisco Jharkhand Jiangsu Jiangxi Jilin
   Kaldbakur Kansai Kanto Karadon Karadeniz Karimata Karnataka Kawanua 
   Kedungwaru Kerala Kizil Krabi
-  Lampung Lebak Liaoning Liguria Lombok 
-  Madeira Maharashtra Maluku Malwa Manle Marmara Matopos Mazovia 
-  Midtsjælland Minahasa Minang Missouri Misya Mjøsa Muallim Munzur 
-  Mysia
-  Narathiwat Natuna Nordafjells Norrland Norrorts Northland Nusantara
+  Lampung Languedoc Lebak Liaoning Liguria Lombok 
+  Madeira Maharashtra Maine Maluku Malwa Manle Marmara Matopos Mazovia 
+  Michigan Midtsjælland Minahasa Minang Missouri Misya Mjøsa Muallim 
+  Munzur Mysia
+  Narathiwat Narman Natuna Nordafjells Norrland Norrorts Northland 
+  Nusantara
   Queensland Qiantang
-  Oberloiben Odisha Olona Orontes Otago
+  Oberloiben Odisha Ohio Olona Oregon Orontes Otago
   Papua Pasha Phatthalung Pomerania Porong Prachinburi Pudong Pufa
   Punjab
   Rajasthan Rajputana Ratchaburi Rhodes Rize Rogaland Rosfjord 
   Sahyadri Sakarya Sallière Salten Sambas Samutsakorn Sanggau 
-  Shandong Shanxi Siberia Sichuan Silesia Silla Sindh Sintang
-  Sitaro Skåne Slask Southland Suvalkija Sørlandet
-  Sydvest
+  Saskatchewan Shandong Shanxi Siberia Sichuan Silesia Silla Sindh 
+  Sintang Sitaro Skåne Slask Southland Suvalkija Sørlandet Sydvest
   Tala Tambun Tasmania Telemark Telengana Tenerife Thassos Thrace 
   Tianya Tigris Tinglin Tuncelý
   Uludag Uttarakhand Uzungol
-  Victoria Vojvodina
+  Valsugana Victoria Vojvodina
   Wachau Waikato Wujin
   Xizang Xinjiang
   Yongjia Yongjiang Yozgat Yunnan

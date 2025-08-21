@@ -315,11 +315,15 @@ $both_last->read_file('Manual/both_last.txt');
 $both_neither = Manual::TargetedWords->new();
 $both_neither->read_file('Manual/both_neither.txt');
 
+# OK as last names specifically as First Last (3 units).
+my $last3_names = Manual::TargetedWords->new();
+$last3_names->read_file('Manual/last3.txt');
+
 
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('un');
+# $sublines->consolidate_with('zz5');
 # $sublines->print();
 # exit;
 
@@ -1411,6 +1415,62 @@ sub look_for_5c_major
 }
 
 
+sub study_word
+{
+  my ($whole_names, $word, $histo) = @_;
+
+  my $token_no = 0;
+  my $chain = Chain->new();
+  my $first_flag = 0;
+  my $last_flag = 0;
+
+  if (singleton_tag_matches_basic($whole_names, \@FIRST_ORDER,
+    \$token_no, $word, 0, $chain, $histo, ''))
+  {
+    $first_flag = 1;
+  }
+
+  if (singleton_tag_matches_basic($whole_names, \@LAST_ORDER,
+    \$token_no, $word, 0, $chain, $histo, ''))
+  {
+    $last_flag = 1;
+  }
+
+  if ($first_flag && ! $last_flag)
+  {
+    return 'NAME_FIRST';
+  }
+  elsif (! $first_flag && $last_flag)
+  {
+    return 'NAME_LAST';
+  }
+  elsif ($first_flag && $last_flag)
+  {
+    if ($both_neither->lookup($word))
+    {
+      # Fall through.
+      return '';
+    }
+    elsif ($both_last->lookup($word))
+    {
+      return 'NAME_LAST';
+    }
+    else
+    {
+      return 'NAME_FIRST';
+    }
+  }
+  elsif ($word =~ /^[A-Za-z]$/)
+  {
+    return 'NAME_INITIAL';
+  }
+  else
+  {
+    return '';
+  }
+}
+
+
 sub study_line
 {
   my ($whole_names, $whole_system, $unit_tags, $entry, $chains, 
@@ -1423,64 +1483,79 @@ sub study_line
   if ($#list == 0 && $list[0] !~ / /)
   {
     # Could be a single name.
-    my $token_no = 0;
-    my $chain = Chain->new();
-    my $first_flag = 0;
-    my $last_flag = 0;
-
-    if (singleton_tag_matches_basic($whole_names, \@FIRST_ORDER,
-      \$token_no, $list[0], 0, $chain, $histo, ''))
+    my $cat = study_word($whole_names, $list[0], $histo);
+    if ($cat && $cat ne 'NAME_INITIAL')
     {
-      $first_flag = 1;
-    }
-
-    if (singleton_tag_matches_basic($whole_names, \@LAST_ORDER,
-      \$token_no, $list[0], 0, $chain, $histo, ''))
-    {
-      $last_flag = 1;
-    }
-
-    if ($first_flag && ! $last_flag)
-    {
-      $entry->{CATEGORY} = 'NAME_FIRST';
+      $entry->{CATEGORY} = $cat;
       return;
-    }
-    elsif (! $first_flag && $last_flag)
-    {
-      $entry->{CATEGORY} = 'NAME_LAST';
-      return;
-    }
-    elsif ($first_flag && $last_flag)
-    {
-      if ($both_neither->lookup($list[0]))
-      {
-        # Fall through.
-      }
-      elsif ($both_last->lookup($list[0]))
-      {
-        $entry->{CATEGORY} = 'NAME_LAST';
-        return;
-      }
-      else
-      {
-        $entry->{CATEGORY} = 'NAME_FIRST';
-        return;
-      }
     }
   }
+
+my $identifier = "YYY $handle, $hcount, $lno\n" .
+  $entry->{TEXT} . "\n" .
+  $entry->{TEXT} . "\n\n";
+
+if ($handle eq 'RJP1')
+{
+  # print "HERE\n";
+}
 
   my @battery;
   $battery[0] = Units->new();
   list_to_units($whole_system, $unit_tags, \@list, $battery[0],
     $entry->{TEXT}, $handle, $hcount, $lno, $histo, $chain_stats);
 
+  my $units = $battery[0];
+  if ($units->last() == 2 &&
+    $units->value(1) eq 'SPACE')
+  {
+    # Simple screen for names.
+    my $cat0 = study_word($whole_names, $units->value(0), $histo);
+    my $cat2 = study_word($whole_names, $units->value(2), $histo);
+
+    if ($cat2 eq '' && $last3_names->lookup($units->value(2)))
+    {
+      $cat2 = 'NAME_LAST';
+    }
+
+    if ($cat0 eq 'NAME_FIRST' && $cat2 eq 'NAME_LAST')
+    {
+      # TODO Probably keep the identification somewhere?
+      $entry->{CATEGORY} = 'NAMELIKE';
+      return;
+    }
+    elsif ($cat0 eq 'NAME_FIRST' && $cat2 eq 'NAME_INITIAL')
+    {
+      # TODO Probably keep the identification somewhere?
+      $entry->{CATEGORY} = 'NAMELIKE';
+      return;
+    }
+    elsif ($cat0 eq '' && $cat2 eq 'NAME_LAST')
+    {
+      # print "XCAND ", lc($units->value(2)), "\n";
+      # print $identifier;
+    }
+    else
+    {
+      # print $identifier;
+      # my $s = (($cat0 eq '' ? 'NONE' : $cat0) . " " .
+            # ($cat2 eq '' ? 'NONE' : $cat2) . "\n");
+      # print $s;
+      # print $identifier;
+    }
+
+    # The other way round (a) identifies only a small number, and
+    # (b) needs to be curated.
+    # print $identifier;
+  }
+  if ($units->last() == 0)
+  {
+    print $identifier;
+  }
+
   look_for_openings($battery[0], $chain_stats);
 
   # look_for_bigrams($battery[0], $chain_stats);
-
-my $identifier = "YYY $handle, $hcount, $lno\n" .
-  $entry->{TEXT} . "\n" .
-  $entry->{TEXT} . "\n\n";
 
   look_for_jac_mic($battery[0], 'Michaels', 'Cuebid', 'Michaels Cuebid',
     $chain_stats, $identifier);
@@ -1524,21 +1599,21 @@ my $identifier = "YYY $handle, $hcount, $lno\n" .
     return;
   }
 
-  if ($longest == 2 || $longest >= 6)
+  if ($longest == 2 || $longest == 4 || $longest >= 6)
   {
     return;
   }
 
 
-  # if ($longest == 5)
+  if ($longest == 3)
+  {
+    # print $identifier;
+  }
+
+  # if ($#battery == 0 && $battery[0]->last() == 0)
   # {
     # print $identifier;
   # }
-
-  if ($#battery == 0 && $battery[0]->last() == 0)
-  {
-    print $identifier;
-  }
 
   for my $u (@battery)
   {

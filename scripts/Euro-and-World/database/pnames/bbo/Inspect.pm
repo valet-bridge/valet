@@ -41,6 +41,9 @@ our ($sublines, $fluffed_lines, $known_names, $late_mails,
 
 
 my @COUNTRY_ORDER = qw(COUNTRY);
+my @CITY_ORDER = qw(CITY);
+my @REGION_ORDER = qw(REGION);
+my @LOCALITY_ORDER = qw(LOCALITY);
 my @LEVEL_ORDER = qw(LEVEL);
 my @PRIVATE_ORDER = qw(PRIVATE);
 my @FLUFF_ORDER = qw(FLUFF);
@@ -245,6 +248,33 @@ sub inspect_paragraph
         $entry->{VALUE} = $entry->{TEXT};
         next;
       }
+    }
+
+    my $city = look_for_single_tag($whole, \@CITY_ORDER, 'CITY',
+      $entry->{TEXT});
+    if ($city)
+    {
+      $entry->{CATEGORY} = 'CITY';
+      $entry->{VALUE} = $city;
+      next;
+    }
+
+    my $region = look_for_single_tag($whole, \@REGION_ORDER, 'REGION',
+      $entry->{TEXT});
+    if ($region)
+    {
+      $entry->{CATEGORY} = 'REGION';
+      $entry->{VALUE} = $region;
+      next;
+    }
+
+    my $locality = look_for_single_tag($whole, \@LOCALITY_ORDER, 'LOCALITY',
+      $entry->{TEXT});
+    if ($locality)
+    {
+      $entry->{CATEGORY} = 'LOCALITY';
+      $entry->{VALUE} = $locality;
+      next;
     }
 
     if (! $magic_seen && $eno+1 >= $elen)
