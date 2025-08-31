@@ -323,7 +323,7 @@ $last3_names->read_file('Manual/last3.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('zz5');
+# $sublines->consolidate_with('eex');
 # $sublines->print();
 # exit;
 
@@ -1548,7 +1548,7 @@ if ($handle eq 'RJP1')
     # (b) needs to be curated.
     # print $identifier;
   }
-  if ($units->last() == 0)
+  if ($units->last() == 4)
   {
     print $identifier;
   }

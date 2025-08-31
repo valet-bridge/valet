@@ -142,10 +142,10 @@ my @SINGLE_WORDS = qw(
   Aruba Australia Austria Azerbaijan
   Bahamas Bahrain Bangladesh Barbados Belarus Belgium Benin Bermuda 
   Bhutan Bolivia Bosnia Botswana Brazil Bulgaria
-  Cambodia Cameroon Canada Chile China Colombia Comoros Croatia 
-  Cuba Cyprus
+  Cambodia Cameroon Canada Chile China Colombia Comoros Congo Croatia 
+  Cuba Curacao Cyprus
   Denmark 
-  Ecuador Egypt England Estonia Eswatini
+  Ecuador Egypt England Estonia Eswatini Ethiopia
   Fiji Finland France
   Gabon Georgia Germany Georgia Greece Grenada Guadeloupe Guatemala 
   Guernsey Guyana
@@ -154,8 +154,8 @@ my @SINGLE_WORDS = qw(
   Jamaica Japan Jersey Jordan
   Kazakhstan Kenya Kuwait Kyrgyzstan
   Laos Latvia Lebanon Lesotho Libya Liechtenstein Lithuania Luxembourg 
-  Macau Madagascar Malaysia Mali Malta Martinique Mauritius Mexico 
-  Moldova Monaco Mongolia Montenegro Morocco Mozambique
+  Macau Madagascar Malawi Malaysia Mali Malta Martinique Mauritius 
+  Mexico Moldova Monaco Mongolia Montenegro Morocco Mozambique
   Namibia Nepal Netherlands Nicaragua Nigeria Norden Norway 
   Oman
   Pakistan Palestine Panama Paraguay Peru Philippines Poland Portugal
@@ -248,6 +248,7 @@ my %SINGLE_TYPOS =
   Switzerland => ['suitzerland', 'switserland', 'swiitzerland'],
   Taiwan => ['tw'],
   Thailand => ['thai', 'thailnad', 'thaland'],
+  'Trinidad and Tobago' => ['trinidad'],
   Tunisia => ['tunisie', 'tunisian'],
   Turkey => ['tur', 'turkish', 'turkiye', 'türkýye'],
   'United Arab Emirates' => ['uae'],

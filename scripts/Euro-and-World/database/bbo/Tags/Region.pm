@@ -243,41 +243,45 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Aceh Agder Akdeniz Akkad Anhui Ararat Ayrshire
-  Badung Bahia Bairrada Bali Banten Belitung Bengal Bengkayang Bihar 
-  Bogø Borneo Bornholm Bungo Buriram Buskerud
+  Aberdeenshire Aceh Agder Akdeniz Akkad Alabama Alaska Altiplano
+  Anhui Ararat Arizona Arkansas Auvergne Ayrshire
+  Badung Bahia Bairrada Bali Banten Bayern Belitung Bengal Bengkayang 
+  Bihar Bogø Borneo Bornholm Bungo Buriram Buskerud
   California Camargue Cappadocia Catalonia Chengmai Colorado 
-  Comandatuba Corsica Crete
+  Comandatuba Corfu Corsica Crete
   Dersým Druts
   Eyjafjallajokull
-  Feixiang Fjends Flakstad Florida Fujian
-  Galapagos Ganges Gansu Gauteng Goa Gorontalo Guangdong Guangxi 
+  Feixiang Fjends Flakstad Florida Fujian Fyn
+  Galapagos Ganges Gansu Gauteng Gibraltar Goa Gorontalo Guangdong Guangxi 
   Guizhou Gujarat
-  Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Heilongjiang
-  Henan Hordaland Huabei Hubei Hunan
-  Iberia Illinois Iskele
+  Hainan Haixing Hatay Haugaland Hawaii Hebei Hedmark Hegyvidék 
+  Heilongjiang Henan Hordaland Huabei Hubei Hunan
+  Iberia Illinois Indiana Iskele
   Jalisco Jharkhand Jiangsu Jiangxi Jilin
-  Kaldbakur Kansai Kanto Karadon Karadeniz Karimata Karnataka Kawanua 
-  Kedungwaru Kerala Kizil Krabi
-  Lampung Languedoc Lebak Liaoning Liguria Lombok 
-  Madeira Maharashtra Maine Maluku Malwa Manle Marmara Matopos Mazovia 
-  Michigan Midtsjælland Minahasa Minang Missouri Misya Mjøsa Muallim 
-  Munzur Mysia
-  Narathiwat Narman Natuna Nordafjells Norrland Norrorts Northland 
-  Nusantara
+  Kaldbakur Kansai Kansas Kanto Karadon Karadeniz Karimata Karnataka 
+  Kawanua Kedungwaru Kentucky Kerala Kizil Krabi Kurdistan
+  Lampung Languedoc Lebak Liaoning Liguria Lombok Louisiana
+  Madeira Maharashtra Maine Maluku Malwa Manle Marmara Maryland 
+  Matopos Mazovia Mesopotamia Michigan Midtsjælland Minahasa Minang 
+  Minnesota Mississippi Missouri Misya Mjøsa Montana Muallim Munzur 
+  Mysia
+  Narathiwat Narman Natuna Nebraska Nordafjells Normandy Norrland 
+  Norrorts Northland Nusantara
   Queensland Qiantang
-  Oberloiben Odisha Ohio Olona Oregon Orontes Otago
-  Papua Pasha Phatthalung Pomerania Porong Prachinburi Pudong Pufa
-  Punjab
-  Rajasthan Rajputana Ratchaburi Rhodes Rize Rogaland Rosfjord 
+  Oberloiben Odisha Ohio Oklahoma Olona Ontario Oregon Orontes Otago
+  Papua Pasha Pennsylvania Phatthalung Pomerania Porong Prachinburi 
+  Provence Pudong Pufa Punjab Pyrenees
+  Rajasthan Rajputana Ratchaburi Rhodes Rioja Rize Rogaland Rosfjord 
   Sahyadri Sakarya Sallière Salten Sambas Samutsakorn Sanggau 
   Saskatchewan Shandong Shanxi Siberia Sichuan Silesia Silla Sindh 
-  Sintang Sitaro Skåne Slask Southland Suvalkija Sørlandet Sydvest
-  Tala Tambun Tasmania Telemark Telengana Tenerife Thassos Thrace 
-  Tianya Tigris Tinglin Tuncelý
-  Uludag Uttarakhand Uzungol
+  Sintang Sitaro Skåne Slask Småland Southland Speyside Suvalkija 
+  Sørlandet Sydvest
+  Tala Tambun Tasmania Telemark Telengana Tenerife Tennessee Texas 
+  Thassos Thrace Tianya Tigris Tinglin Transvaal Transylvania Tuncelý 
+  Tuscany
+  Uludag Utah Uttarakhand Uzungol
   Valsugana Victoria Vojvodina
-  Wachau Waikato Wujin
+  Wachau Waikato Wisconsin Wujin
   Xizang Xinjiang
   Yongjia Yongjiang Yozgat Yunnan
   Zhejiang Zhongshan
@@ -312,6 +316,7 @@ my %SINGLE_TYPOS =
   'Kepulauan Riau' => ['riau', 'kepri'],
   'Kotawaringin Timur' => ['kotim'],
   'Kutai Timur' => ['kutim'],
+  'Lofoten og Vesterålen' => ['lofoten'],
   'Maha Sarakham' => ['mahasarakham'],
   Marmara => ['marmar'],
   'Midt Trøndelag' => ['midttrøndelag'],
@@ -323,6 +328,7 @@ my %SINGLE_TYPOS =
   'Nakhon Pathom' => ['nakhonpathom'],
   'National Capital Region' => ['ncr'],
   'New South Wales' => ['nsw'],
+  Normandy => ['normandie'],
   'North Sulawesi' => ['sulut'],
   'North Sumatra' => ['sumut'],
   'Northern Territory' => ['nt'],
@@ -344,6 +350,7 @@ my %SINGLE_TYPOS =
   'Tamil Nadu' => ['tamilnadu'],
   Telengana => ['telangana'],
   Tinglin => ['tingling'],
+  Tuscany => ['toscana'],
   'Uttar Pradesh' => ['up', 'upba'],
   Uttarakhand => ['uttaranchal'],
   'Victoria' => ['vic', 'viic'],
