@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Ko Shing',
   'Isen Mulang',
   'Lawang Salapan',
+  'Mescid-i Aksa',
   'Poiana Brasov',
   'Raewaya Hills',
   'Saint Honoré',
