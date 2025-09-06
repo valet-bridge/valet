@@ -15,7 +15,6 @@ use Encode::Guess;
 
 use lib '.';
 use lib './Email';
-use lib './Caps';
 use lib './Sparse';
 use lib '..';
 
@@ -252,7 +251,6 @@ $whole2->init_hashes;
 use Units;
 use Sparse::KeyResp;
 
-# use CapSplit;
 use Chain;
 use Token;
 use Util;
@@ -392,14 +390,6 @@ for my $paragraph (@paragraphs)
       next;
     }
   }
-
-  # Make chains for each unstructured field (OPEN, SYSTEM),
-  # make histograms, guess what the chains are.
-  # structure_paragraph($whole, $paragraph);
-  
-  # Look at sub-chains where important system stuff has been found.
-  # sub_system_chains($whole, $paragraph,
-    # $handle_counts{$paragraph->{HANDLE}}, \%chain_stats);
 }
 
 $unit_stats->print();
@@ -563,72 +553,6 @@ sub raw_to_paragraphs
 }
 
 
-sub make_chain
-{
-  my ($whole, $datum, $chain) = @_;
-
-  my @tags = (0);
-  my @values = ($datum);
-  my @texts = ($datum);
-
-  split_on_multi($whole, \@TAG_ORDER, 0, \@tags, \@values, \@texts);
-
-  # Split on separators.
-  my $sep = qr/[\s+\-\+\.,_:;&@"\/\(\)\|]/;
-
-  my $token_no = 0;
-  # my $unsolved_flag = 0;
-
-  # Make the chain.
-  for my $i (0 .. $#values)
-  {
-    if ($tags[$i] ne '0')
-    {
-      # We had a multi-word hit.
-      append_token($chain, 'SINGLETON', $tags[$i], $values[$i],
-        $texts[$i], \$token_no, $histo, '');
-      next;
-    }
-
-    # Split further.
-    my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
-    my $i = 0;
-    foreach my $value (@a)
-    {
-      if (study_component($whole, \@TAG_ORDER, $value, \$token_no, 
-        $chain, $histo))
-      {
-        next;
-      }
-
-      if ($i == 0 && 
-         (length($value) >= 3 && $value =~ /^[0-9](\p{Word}+)$/) ||
-         (length($value) >= 5 && $value =~ /^[A-Z](\p{Word}+)$/))
-      {
-        # It happens that there is a leading 0-9 or A-Z.
-        my $rest = $1;
-        if (study_component($whole, \@TAG_ORDER, $rest, \$token_no, 
-          $chain, $histo))
-        {
-          next;
-        }
-      }
-        
-      append_token($chain, 'UNKNOWN', '', $value, $value,
-        \$token_no, $histo, '');
-
-      # print "SSS value $value\n";
-      # $unsolved_flag = 1;
-    }
-  }
-
-  for my $i (0 .. $chain->last())
-  {
-    consolidate_names($chain->check_out($i));
-  }
-}
-
-
 sub get_token_tag
 {
   my ($token) = @_;
@@ -640,234 +564,6 @@ sub get_token_tag
   else
   {
     return $token->field();
-  }
-}
-
-
-sub make_chain_profile
-{
-  my ($chain, $profile) = @_;
-
-  for my $i (0 .. $chain->last())
-  {
-    my $token = $chain->check_out($i);
-    $profile->{get_token_tag($token)}++;
-  }
-}
-
-
-sub print_chain_info
-{
-  my ($chain) = @_;
-
-  my $semantics = '';
-  for my $i (0 .. $chain->last())
-  {
-    my $token = $chain->check_out($i);
-    my $tag = get_token_tag($token);
-    print "$tag ";
-    $semantics .= "SEMANTIC " . $token->value() . "\n" 
-      if is_semantic($tag);
-  }
-  print "\n$semantics\n\n";
-}
-
-
-sub is_semantic
-{
-  my ($tag) = @_;
-  return exists $SEMANTIC_HASH{$tag};
-}
-
-
-sub classify_chain_profile
-{
-  my ($chain, $profile, $datum) = @_;
-
-  my $count = 1 + $chain->last();
-
-  my $system_indicators = 0;
-  for my $key (qw(BASES OPENINGS KEYCARD CONVENTIONS CARDING SYSTEM FLUFF))
-  {
-    $system_indicators += $profile->{$key} // 0;
-  }
-
-  my $semantic_indicators = 0;
-  for my $key (qw(COUNTRY REGION CITY LOCALITY NATIONALITY
-    NOTNAMES FIRST LAST))
-  {
-    $semantic_indicators += $profile->{$key} // 0;
-  }
-
-  if ($count > 4)
-  {
-    if ($semantic_indicators)
-    {
-       print "($system_indicators, $semantic_indicators): $datum\n";
-       print_chain_info($chain);
-    }
-  }
-}
-
-
-sub print_sub_chains
-{
-  my ($chain, $profile, $datum, 
-    $handle, $hcount, $lno, $chain_stats) = @_;
-
-  my $count = 1 + $chain->last();
-  $chain_stats->{LENGTHS}[$count]++;
-
-  my $system_indicators = 0;
-  for my $key (qw(BASES OPENINGS CONSTRUCTIVE COMPETITIVE
-    AGAINSTNT KEYCARD CONVENTIONS CARDING))
-  {
-    $system_indicators += $profile->{$key} // 0;
-  }
-
-  return if $system_indicators == 0;
-  return if $system_indicators == $count;
-
-  print "($system_indicators of $count, $lno): $datum\n";
-
-  # Build up the texts on which to split.
-  my $pos = 0;
-  my $last_hit = -1;
-  for my $i (0 .. $chain->last())
-  {
-    my $token = $chain->check_out($i);
-    my $tag = get_token_tag($token);
-
-    next unless ($tag eq 'BASES' || $tag eq 'OPENINGS' ||
-        $tag eq 'KEYCARD' || $tag eq 'CONVENTIONS' ||
-        $tag eq 'CARDING' || $tag eq 'CONSTRUCTIVE' ||
-        $tag eq 'COMPETITIVE' || $tag eq 'AGAINSTNT');
-    
-    my $substr = $token->text();
-    my $index = index($datum, $substr, $pos);
-
-    die "Substring '$substr' not found in expected order" if $index == -1;
-
-    my $piece = substr($datum, $pos, $index - $pos);
-    my $sub_len = $i - $last_hit;
-    $last_hit = $i;
-    $chain_stats->{SUBS}++;
-    $chain_stats->{SUBLENGTHS}[$sub_len]++;
-
-    if ($piece)
-    {
-      $piece =~ s/^[- ,:;.()&\/]+//;
-      $piece =~  s/[- ,:;.()&\/]+$//;
-      if ($piece)
-      {
-
-        # if ($sub_len >= 10)
-        # {
-          print "Y ($handle, $hcount, $lno): $datum\n";
-          print "X '$piece',\n";
-        # }
-      }
-    }
-
-    $pos = $index + length($substr);
-  }
-  print "\n";
-}
-
-
-sub structure_paragraph
-{
-  my ($whole, $paragraph) = @_;
-
-  for my $entry (@{$paragraph->{LINES}})
-  {
-    if ($entry->{CATEGORY} eq 'LIST')
-    {
-      my $len = $#{$entry->{LIST}};
-
-      for (my $i = 0; $i <= $len; $i += 2)
-      {
-        if ($entry->{LIST}[$i] eq 'OPEN' ||
-            $entry->{LIST}[$i] eq 'SYSTEM')
-        {
-          my $chain = Chain->new();
-          make_chain($whole, $entry->{LIST}[$i+1], $chain);
-
-          my %profile;
-          make_chain_profile($chain, \%profile);
-
-          classify_chain_profile($chain, \%profile, $entry->{LIST}[$i+1]);
-        }
-      }
-    }
-    elsif ($entry->{CATEGORY} eq 'OPEN' ||
-        $entry->{CATEGORY} eq 'SYSTEM')
-    {
-      my $chain = Chain->new();
-      my $datum = $entry->{VALUE} // $entry->{TEXT};
-      make_chain($whole, $datum, $chain);
-
-      my %profile;
-      make_chain_profile($chain, \%profile);
-
-      classify_chain_profile($chain, \%profile, $datum);
-    }
-  }
-
-}
-
-
-sub sub_system_chains
-{
-  my ($whole, $paragraph, $handle_count, $chain_stats) = @_;
-
-  my $lno = -1;
-  for my $entry (@{$paragraph->{LINES}})
-  {
-    $lno++;
-
-    # if (exists $FLUFFED_LINES{$paragraph->{HANDLE}}{$handle_count}{$lno})
-    # {
-      # $entry->{CATEGORY} = 'FLUFF';
-      # $entry->{VALUE} = $entry->{TEXT};
-      # next;
-    # }
-
-    if ($entry->{CATEGORY} eq 'LIST')
-    {
-      my $len = $#{$entry->{LIST}};
-
-      for (my $i = 0; $i <= $len; $i += 2)
-      {
-        if ($entry->{LIST}[$i] eq 'OPEN' ||
-            $entry->{LIST}[$i] eq 'SYSTEM')
-        {
-          my $chain = Chain->new();
-          make_chain($whole, $entry->{LIST}[$i+1], $chain);
-          $chain_stats->{CHAINS}++;
-
-          my %profile;
-          make_chain_profile($chain, \%profile);
-
-          print_sub_chains($chain, \%profile, $entry->{LIST}[$i+1],
-            $paragraph->{HANDLE}, $handle_count, $lno, $chain_stats);
-        }
-      }
-    }
-    elsif ($entry->{CATEGORY} eq 'OPEN' ||
-        $entry->{CATEGORY} eq 'SYSTEM')
-    {
-      my $chain = Chain->new();
-      my $datum = $entry->{VALUE} // $entry->{TEXT};
-      make_chain($whole, $datum, $chain);
-      $chain_stats->{CHAINS}++;
-
-      my %profile;
-      make_chain_profile($chain, \%profile);
-
-      print_sub_chains($chain, \%profile, $datum, 
-        $paragraph->{HANDLE}, $handle_count, $lno, $chain_stats);
-    }
   }
 }
 
