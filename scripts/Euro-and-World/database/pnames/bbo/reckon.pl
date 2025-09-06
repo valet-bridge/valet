@@ -158,46 +158,6 @@ my %NOTRUMP_FWD_TWO_LIKE_HASH =
   s => { t => 1 }
 );
 
-my @NOTRUMP_BWD_LIKE = qw(fa int n ntp ntr nts sa sans senza sn snt);
-my %NOTRUMP_BWD_LIKE_HASH;
-$NOTRUMP_BWD_LIKE_HASH{$_} = 1 for @NOTRUMP_BWD_LIKE;
-
-my %NOTRUMP_BWD_TWO_LIKE_HASH =
-(
-  atout => { sans => 1},
-  t => { n => 1, s => 1},
-  trump => { no => 1 },
-  trumps => { no => 1 }
-);
-
-# The next four are used to find "5-card majors".
-my @CARDS_LIKE = qw(çrd ca car ccrd c cort cr crs cs cts
-  k karr kkrt ko korst kr);
-my %CARDS_LIKE_HASH;
-$CARDS_LIKE_HASH{$_} = 1 for @CARDS_LIKE;
-
-my @MAJOR_LIKE = qw(hs m ma mai may mg mgr mig mm moj mr ms
-  sh m's naijor naj nb mobile nobl noble);
-my %MAJOR_LIKE_HASH;
-$MAJOR_LIKE_HASH{$_} = 1 for @MAJOR_LIKE;
-
-my @CARDS_MAJOR_LIKE = qw(km crm crdsm);
-my %CARDS_MAJOR_LIKE;
-$CARDS_MAJOR_LIKE{$_} = 1 for @CARDS_MAJOR_LIKE;
-
-my @ORDINAL_LIKE = qw(a in en);
-my %ORDINAL_LIKE_HASH;
-$ORDINAL_LIKE_HASH{$_} = 1 for @ORDINAL_LIKE;
-
-
-my @POINTS_LIKE = qw(p ph ps ptsnt pys);
-my %POINTS_LIKE_HASH;
-$POINTS_LIKE_HASH{$_} = 1 for @POINTS_LIKE;
-
-my %SEMANTIC_HASH;
-$SEMANTIC_HASH{$_} = 1 for @SEMANTIC_TAGS;
-
-# Permissive of some order changes.
 # Other tags include DELETE and FLUFF.
 
 my @POST_MAIL_ORDER = qw(
@@ -432,72 +392,6 @@ for my $k (sort {$a <=> $b} keys %INT_COUNTS)
 
 exit;
 
-print "Chains ", $chain_stats{CHAINS}, "\n\n";
-my $sum = 0;
-my $sumprod = 0;
-for my $i (0 .. $#{$chain_stats{LENGTHS}})
-{
-  my $c = $chain_stats{LENGTHS}[$i] // 0;
-  printf("%2s %6d\n", $i, $c);
-  $sum += $c;
-  $sumprod += $c * $i;
-}
-printf("\nAverage %6.2f\n", $sumprod / $sum);
-
-print "\nSubchains ", $chain_stats{SUBS}, "\n\n";
-$sum = 0;
-$sumprod = 0;
-for my $i (0 .. $#{$chain_stats{SUBLENGTHS}})
-{
-  my $c = $chain_stats{SUBLENGTHS}[$i] // 0;
-  printf("%2s %6d\n", $i, $c);
-  $sum += $c;
-  $sumprod += $c * $i;
-}
-printf("\nAverage %6.2f\n", $sumprod / $sum);
-
-exit;
-
-my $countries = 0;
-my (@phist, @hhist);
-my %uniques;
-for my $paragraph (@paragraphs)
-{
-  $phist[$#{$paragraph->{LINES}}]++;
-  $uniques{$paragraph->{HANDLE}}++;
-
-  # if ($#{$paragraph->{LINES}} == 1)
-  # {
-    # print_paragraph($paragraph);
-  # }
-
-  for my $entry (@{$paragraph->{LINES}})
-  {
-    if ($entry->{CATEGORY} eq 'COUNTRY')
-    {
-      $countries++;
-      last;
-    }
-  }
-
-  # my $num_open = 0;
-  # for my $entry (@{$paragraph->{LINES}})
-  # {
-    # if ($entry->{CATEGORY} eq 'OPEN')
-    # {
-      # $num_open++;
-    # }
-  # }
-
-
-  # if ($num_open > 1)
-  # {
-    # print_paragraph($paragraph);
-  # }
-}
-
-exit;
-
 
 sub read_raw_file
 {
@@ -549,21 +443,6 @@ sub raw_to_paragraphs
       }
       $pno++;
     }
-  }
-}
-
-
-sub get_token_tag
-{
-  my ($token) = @_;
-
-  if ($token->category() eq 'UNKNOWN')
-  {
-    return 'UNKNOWN';
-  }
-  else
-  {
-    return $token->field();
   }
 }
 
@@ -658,6 +537,7 @@ sub look_for_openings
   LookFor::look_for_opening($units, 'diamonds', 'D', 1, 2,
     \%DIAMONDS_FWD_LIKE_HASH, $chain_stats);
 }
+
 
 sub study_word
 {
