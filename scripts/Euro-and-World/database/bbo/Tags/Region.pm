@@ -271,7 +271,8 @@ my @SINGLE_WORDS = qw(
   Oberloiben Odisha Ohio Oklahoma Olona Ontario Oregon Orontes Otago
   Papua Pasha Pennsylvania Phatthalung Pomerania Porong Prachinburi 
   Provence Pudong Pufa Punjab Pyrenees
-  Rajasthan Rajputana Ratchaburi Rhodes Rioja Rize Rogaland Rosfjord 
+  Rajasthan Rajputana Ratchaburi Rhodes Ringvassøy  Rioja Rize Rogaland 
+  Rosfjord 
   Sahyadri Sakarya Sallière Salten Sambas Samutsakorn Sanggau 
   Saskatchewan Shandong Shanxi Siberia Sichuan Silesia Silla Sindh 
   Sintang Sitaro Skåne Slask Småland Southland Speyside Suvalkija 

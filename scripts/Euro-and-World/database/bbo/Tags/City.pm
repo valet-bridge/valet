@@ -63,6 +63,7 @@ my @MULTI_WORDS =
   'La Baule-Escoublac',
   'La Chaux-de-Fonds',
   'La Marina',
+  'La Rochelle',
   'La Spezia',
   'Las Palmas',
   'Las Vegas',
@@ -127,6 +128,7 @@ my @MULTI_WORDS =
   'Udon Thani',
   'Urbana-Champaign',
   'Val de Seine',
+  'Vik i Sogn',
   'Villa Fabbriche',
   'Vrnjacka Banja',
   'Xin Zhu',
@@ -234,11 +236,12 @@ my @SINGLE_WORDS = qw(
   Dabrowka Dalaman Dalian Darmstadt Datca Deauville Debrecen Delft 
   Delhi Denizli Depok Derpt Deva Devrek Dikili Divrigi Diyarbakir 
   Dimitrovgrad Dobrich Doha Doki Dombivli Dongguan Dortmund Dörtyol 
-  Drammen Dubai Dublin Dubrovnik Dunfermlin Durban Düsseldorf Düzce
+  Drammen Drøbak Dubai Dublin Dubrovnik Dunfermlin Durban Düsseldorf 
+  Düzce
 
   Eastbourne Edinburgh Edirne Edmonton Edremit Egemen Egirdir Elblag 
-  Elmadag Enschede Erdek Eregli Ergene Eryaman Erzurum Esbjerg Esenler 
-  Eskisehir Essen Estoril Evanston Evora
+  Elmadag Enschede Erdek Eregli Ergene Eryaman Erzinkan Erzurum Esbjerg 
+  Esenler Eskisehir Essen Estoril Evanston Evora
 
   Farsund Farum Felletin Fernetti Fethiye Firenze Flekkefjord 
   Florianopolis Foca Fosnavåg Frankfurt Fredrikstad Freiburg Fritzlar 
@@ -264,25 +267,25 @@ my @SINGLE_WORDS = qw(
   Jiangsu Jiangyin Jiangyou Jianshe Jinchang Jincheng Jinjiang Jiujiang 
   Jixiexiang Johannesburg Juliopolis Jurmala
 
-  Kadirli Kaisei Kajaani Kalisz Kalundborg Kalyani Kanchanaburi Kanha 
-  Kanpur 
-  Kaohsiung Karabük Karacasu Karaman Karasu Karimun Karlovo Karlsruhe 
-  Karsiyaka Kartal Kashi Kassel Kastamonu Katowice Kavakdibi Kayseri 
-  Kazanlak Kediri Kedungwaru Keelung Kemalpasa Kesap Kesten Ketsch 
-  Kiel Kielce Kiev Kinali Kirkeby Kirklareli Kirsehir Kista Kiten 
-  Kitka Klabat Klepp Kleve Kocaeli Kolbotn Kolkata Konga Kongsberg 
-  Konnerud Konya Kópavogur Korfez Kornik Kosice Kostroma Koszalin 
-  Kota Koycegiz Köln Kragerø Krakow Kraljevica Kristiansand 
-  Krzywanice Kucukbakkalkoy Kudus Kunshan Kuopio Kusadasi 
-  Kutno Kuzguncuk Kütahya Kverndalen Kyoto Kyustendil Køge Kølabånn
+  Kabardey Kadirli Kahramanmaras Kaisei Kajaani Kalisz Kalundborg Kalyani 
+  Kanchanaburi Kanha Kanpur Kaohsiung Karabük Karacasu Karaman Karasu 
+  Karimun Karlovo Karlsruhe Karsiyaka Kartal Kashi Kassel Kastamonu 
+  Katowice Kavakdibi Kayseri Kazanlak Kediri Kedungwaru Keelung Kemalpasa 
+  Kesap Kesten Ketsch Kiel Kielce Kiev Kinali Kirkeby Kirklareli 
+  Kirsehir Kista Kiten Kitka Kiziltepe Klabat Klepp Kleve Kocaeli 
+  Kolbotn Kolkata Konga Kongsberg Konnerud Konya Kópavogur Korfez 
+  Kornik Kosice Kostroma Koszalin Kota Koycegiz Köln Kragerø Krakow 
+  Kraljevica Kristiansand Krzywanice Kucukbakkalkoy Kudus Kunshan 
+  Kuopio Kusadasi Kutno Kuzguncuk Kütahya Kverndalen Kyoto Kyustendil 
+  Køge Kølabånn
 
-  Lahore Landak Langkat Lanzhou Laodikya Lappeenranta Larnaca Larvik 
-  Lausanne Lebork Lecco Leiden Leipzig Leksand Lerum Lesno Leszno Leuven 
-  Leverkusen Lhokseumawe Liandui Liège Liepaja Lille Lillehammer Lima 
-  Limboto Linares Lincoln Lindesberg Linköping Lisbon Liushu Livane 
-  Liverpool Livorno Ljubljana Lodi Lodz Lojdy Lokotok Lom Lomza London 
-  Lovech Lowicz Lublin Lubomino Ludhiana Ludvikabygden Lufeng 
-  Luleburgaz Lumajang Luzern Lübeck Lyon
+  Lahore Landak Langkat Lanzhou Laodikya Lappeenranta Larissa Larnaca 
+  Larvik Lausanne Lebork Lecco Leiden Leipzig Leksand Lerum Lesno 
+  Leszno Leuven Leverkusen Lhokseumawe Liandui Liège Liepaja Lille 
+  Lillehammer Lima Limboto Linares Lincoln Lindesberg Linköping Lisbon 
+  Liushu Livane Liverpool Livorno Ljubljana Lodi Lodz Lojdy Lokotok Lom 
+  Lomza London Lovech Lowicz Lublin Lubomino Ludhiana Ludvikabygden 
+  Lufeng Luleburgaz Lumajang Luzern Lübeck Lyon
 
   Maastricht Madrid Magetan Mainz Makassar Malaga Malang Malatya 
   Malmö Manado Manchester Manila Manisa Manna Mannheim Marbella 
@@ -295,10 +298,10 @@ my @SINGLE_WORDS = qw(
 
   Nagari Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanjing
   Nanning Nantong Napoli Narlidere Narvik Nashik Nashville Nazilli 
-  Näsby Nebakan Neijiang Nesodden Netanya Neuruppin Newport Nganjuk 
-  Nice Nicosia Niedernhausen Nijmegen Nilüfer Nimes Ningbo Niš Noida 
-  Nonthaburi Norrbyskär Norrøna Nottingham Novosibirsk Nusaybin 
-  Nürnberg Nykøbing Nyon Nysa Nærbø Nærøysund Næstved Nøtterøy
+  Näsby Nebakan Neijiang Nesodden Netanya Neuruppin Nevsehir Newport 
+  Nganjuk Nice Nicosia Niedernhausen Nijmegen Nilüfer Nimes Ningbo 
+  Niš Noida Nonthaburi Norrbyskär Norrøna Nottingham Novosibirsk 
+  Nusaybin Nürnberg Nykøbing Nyon Nysa Nærbø Nærøysund Næstved Nøtterøy
 
   Odense Oderzo Odessa Odmet Ogndal Oldenburg Olrud Olsztyn Oltenita 
   Opatija Opole Ordu Orlando Orly Orneta Orhangazi Osaka Ostend 
@@ -328,16 +331,15 @@ my @SINGLE_WORDS = qw(
   Sendai Senigallia Seoul Serang Sevtopolis  Shanghai Shangrao Shaoguan 
   Sharjah Shenyang Shenzhen Shijiazhuang Shimla Shiraz Shouguang Shumen 
   Sibiu Sidoarjo Siedlce Siena Sieradz Siglufjordur Sigulda Silifke 
-  Silistra Silivri
-  Simav Simeonovgrad Sindi Singaraja Singkawang Singsås Sinop Siofok 
-  Sivas Skara Skarvemellen Skawina Ski Skien Skopje Slagelse Slavyanovo 
-  Slawa Sleman Sliven Smedstad Smolyan Smyrna Snåsa Sofia Solapur Solo 
-  Solok Songkhla Sopot Sortland Söke Sozopol Split Stanford Starachowice 
-  Stargard Stavanger Steinkjer Stirling Stockholm Stockton Stokke 
-  Stoholm Storsjöbygden Strasbourg Stureby Stuttgart Szczecin Sukma 
-  Sukomoro Sumedang Sunndalsøra Suqian Surabaya Suzhou Svendborg 
-  Svilengrad Svinninge Sydney Szczecinek Szczyrk Szeged Sztum Søborg 
-  Sømna Sørreisa Sørvoll
+  Silistra Silivri Simav Simeonovgrad Sindi Singaraja Singkawang 
+  Singsås Sinop Siofok Sirnak Sivas Skara Skarvemellen Skawina Ski 
+  Skien Skopje Slagelse Slavyanovo Slawa Sleman Sliven Smedstad Smolyan 
+  Smyrna Snåsa Sofia Solapur Solo Solok Solvorn Songkhla Sopot Sortland 
+  Söke Sozopol Split Stanford Starachowice Stargard Stavanger Steinkjer 
+  Stirling Stockholm Stockton Stokke Stoholm Storsjöbygden Strasbourg 
+  Strømmen Stureby Stuttgart Szczecin Sukma Sukomoro Sumedang 
+  Sunndalsøra Suqian Surabaya Suzhou Svendborg Svilengrad Svinninge 
+  Sydney Szczecinek Szczyrk Szeged Sztum Søborg Sømna Sørreisa Sørvoll
 
   Tabarka Taicang Taichung Tainan Taiyuan Taizhou Takayama Tallinn Tambun 
   Tangerang Taoyuan Tarakan Targoviste Tarnów Tarnobrzeg Tasikmalaya 

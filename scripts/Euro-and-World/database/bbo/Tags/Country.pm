@@ -19,6 +19,7 @@ my @MULTI_WORDS =
   'Bosnia & Herzegovina',
   'Burkina Faso',
   'Cayman Islands',
+  'Central African Republic',
   'Chinese Taipei',
   'Costa Rica',
   'Czech Republic',
