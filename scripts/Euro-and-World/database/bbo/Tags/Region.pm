@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'Bisma Semarang',
   'Boeven Digoel',
   'Bone Bolango',
+  'British Columbia',
   'Canary Islands',
   'Central Anatolia',
   'Central Districts',
@@ -89,11 +90,13 @@ my @MULTI_WORDS =
   'Nakhon Sawan',
   'Nakhon Si Thammarat',
   'National Capital Region',
+  'New Jersey',
   'New South Wales',
   'Nord Trøndelag',
   'Nord-Norge Omegn',
   'Norte Ilhas',
   'North Carolina',
+  'North Dakota',
   'North Minahasa',
   'North Celebes',
   'North Sulawesi',
@@ -244,7 +247,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Aberdeenshire Aceh Agder Akdeniz Akkad Alabama Alaska Altiplano
-  Anhui Ararat Arizona Arkansas Auvergne Ayrshire
+  Andalusia Anhui Ararat Arizona Arkansas Auvergne Ayrshire
   Badung Bahia Bairrada Bali Banten Bayern Belitung Bengal Bengkayang 
   Bihar Bogø Borneo Bornholm Bungo Buriram Buskerud
   California Camargue Cappadocia Catalonia Chengmai Colorado 

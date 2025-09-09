@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-my $file = 'edit5';
+my $file = 'edit3';
 my $lno = 0;
 open(my $fh, "<", $file) or die "Cannot open $file: $!";
 while (my $line = <$fh>)

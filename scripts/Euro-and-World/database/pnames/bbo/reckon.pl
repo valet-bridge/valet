@@ -296,7 +296,7 @@ $last3_names->read_file('Manual/last3.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('edit5');
+# $sublines->consolidate_with('open');
 # $sublines->print();
 # exit;
 
@@ -672,7 +672,7 @@ if ($handle eq 'RJP1')
     # (b) needs to be curated.
     # print $identifier;
   }
-  if ($units->last() == 4)
+  if ($units->last() == 0)
   {
     print $identifier;
   }
@@ -729,9 +729,12 @@ if ($handle eq 'RJP1')
   }
 
 
-  if ($longest == 3)
+  # if ($longest >= 2)
+  if ($units->last() >= 2)
   {
+    # With all the curation, this is a system line.
     # print $identifier;
+    return;
   }
 
   # if ($#battery == 0 && $battery[0]->last() == 0)

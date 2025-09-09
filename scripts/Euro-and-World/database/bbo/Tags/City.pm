@@ -81,6 +81,7 @@ my @MULTI_WORDS =
   'Monte Carlo',
   'Muara Bungo',
   'Nea Moudania',
+  'New Orleans',
   'New Taipei City',
   'New York City',
   'Nové Město',
@@ -100,6 +101,7 @@ my @MULTI_WORDS =
   'Saint-Ours',
   'Saint Petersburg',
   'Salt Lake City',
+  'San Francisco',
   'San Giorgio del Sannio',
   'San Luis',
   'San Marino City',
@@ -121,6 +123,7 @@ my @MULTI_WORDS =
   'Stara Zagora',
   'Taihu Lake',
   'Tanjung Pinang',
+  "Tain l'Hermitage",
   'Taipei City',
   'Tel Aviv',
   'The Hague',
@@ -128,6 +131,7 @@ my @MULTI_WORDS =
   'Udon Thani',
   'Urbana-Champaign',
   'Val de Seine',
+  'Veliko Tarnovo',
   'Vik i Sogn',
   'Villa Fabbriche',
   'Vrnjacka Banja',
@@ -275,9 +279,9 @@ my @SINGLE_WORDS = qw(
   Kirsehir Kista Kiten Kitka Kiziltepe Klabat Klepp Kleve Kocaeli 
   Kolbotn Kolkata Konga Kongsberg Konnerud Konya Kópavogur Korfez 
   Kornik Kosice Kostroma Koszalin Kota Koycegiz Köln Kragerø Krakow 
-  Kraljevica Kristiansand Krzywanice Kucukbakkalkoy Kudus Kunshan 
-  Kuopio Kusadasi Kutno Kuzguncuk Kütahya Kverndalen Kyoto Kyustendil 
-  Køge Kølabånn
+  Kraljevica Krasnodar Kristiansand Krzywanice Kucukbakkalkoy Kudus 
+  Kunshan Kuopio Kusadasi Kutno Kuzguncuk Kütahya Kverndalen Kyoto 
+  Kyustendil Køge Kølabånn
 
   Lahore Landak Langkat Lanzhou Laodikya Lappeenranta Larissa Larnaca 
   Larvik Lausanne Lebork Lecco Leiden Leipzig Leksand Lerum Lesno 
@@ -292,9 +296,9 @@ my @SINGLE_WORDS = qw(
   Marcelli Mardin Marijampolė Marmaris Marrakech Marseille Martapura Massy 
   Mautern Medan Medellin Melawi Melbourne Memphis Mersin Miami Miaoli 
   Michalovce Michalowo Midyat Milan Milas Minsk Miramar Miskolc 
-  Monticiano Montoro Montpellier Montreal Moradabad Mordogan Morsø 
-  Morud Moscow Moss Mragowo Mudanya Muðla Mulund Mumbai Munich 
-  Myndos Mysore
+  Momchilgrad Monticiano Montoro Montpellier Montreal Moradabad 
+  Mordogan Morsø Morud Moscow Moss Mragowo Mudanya Muðla Mulund 
+  Mumbai Munich Myndos Mysore
 
   Nagari Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanjing
   Nanning Nantong Napoli Narlidere Narvik Nashik Nashville Nazilli 
@@ -339,7 +343,8 @@ my @SINGLE_WORDS = qw(
   Stirling Stockholm Stockton Stokke Stoholm Storsjöbygden Strasbourg 
   Strømmen Stureby Stuttgart Szczecin Sukma Sukomoro Sumedang 
   Sunndalsøra Suqian Surabaya Suzhou Svendborg Svilengrad Svinninge 
-  Sydney Szczecinek Szczyrk Szeged Sztum Søborg Sømna Sørreisa Sørvoll
+  Svishtov Sydney Szczecinek Szczyrk Szeged Sztum Søborg Sømna Sørreisa 
+  Sørvoll
 
   Tabarka Taicang Taichung Tainan Taiyuan Taizhou Takayama Tallinn Tambun 
   Tangerang Taoyuan Tarakan Targoviste Tarnów Tarnobrzeg Tasikmalaya 
@@ -353,11 +358,11 @@ my @SINGLE_WORDS = qw(
   Udaipur Uddevalla Ulricehamn Umeå Underberg Uppsala Urla Usak Utrecht 
   Uzunköprü
 
-  Vadsø Vaduz Valencia Van Vancouver Varanasi Varberg Varese Varna Vasa 
-  Västervik Västerås Vejle Veldhoven Velingrad Venice Verdal Verona 
-  Versailles Vestfold Vestvågøy Viareggio Viborg Vienna Vikersund 
-  Villeurbanne Vilnius Vishakhapatanam Viterbo Vodskov Vorden Vraca 
-  Våge Vålerenga
+  Vadsø Vaduz Valcea Valencia Van Vancouver Varanasi Varberg Varese 
+  Varna Vasa Västervik Västerås Vejle Veldhoven Velingrad Venice Verdal 
+  Verona Versailles Vestfold Vestvågøy Viareggio Viborg Vienna 
+  Vikersund Villeurbanne Vilnius Vishakhapatanam Viterbo Vodskov 
+  Vorden Vraca Våge Vålerenga
 
   Walbrzych Waldsolms Waltham Wanzhou Warsaw Waterford Waterloo
   Wellington Wetzlar Wiesbaden Wimbledon Winnipeg Wisla Wolverhampton 
