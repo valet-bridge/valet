@@ -67,7 +67,7 @@ sub look_for_single_tag
     return $values[0] if $tags[0] eq $tag;
   }
 
-  # Look for single-word country.
+  # Look for single-word tag.
   my $fix = $whole->get_single($tag, lc($text));
   return (defined $fix->{CATEGORY} ? $fix->{VALUE} : '');
 }

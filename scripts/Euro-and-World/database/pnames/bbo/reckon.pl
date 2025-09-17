@@ -296,7 +296,7 @@ $last3_names->read_file('Manual/last3.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('open');
+# $sublines->consolidate_with('g');
 # $sublines->print();
 # exit;
 
@@ -317,10 +317,10 @@ my %handle_counts;
 
 for my $paragraph (@paragraphs)
 {
-# if ($paragraph->{HANDLE} eq 'CAPERONE')
-# {
+if ($paragraph->{HANDLE} eq 'LIBRAX')
+{
   # print "HERE\n";
-# }
+}
   $handle_counts{$paragraph->{HANDLE}}++;
   Inspect::inspect_paragraph($whole, $paragraph, \%handle_counts);
 
@@ -736,6 +736,12 @@ if ($handle eq 'RJP1')
     # print $identifier;
     return;
   }
+
+  if ($units->last() == 0)
+  {
+    print $identifier;
+  }
+
 
   # if ($#battery == 0 && $battery[0]->last() == 0)
   # {

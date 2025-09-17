@@ -164,7 +164,7 @@ my @SINGLE_WORDS = qw(
   Reunion Romania Russia Rwanda
   Scotland Senegal Serbia Seychelles Singapore Slovakia Slovenia 
   Spain Sudan Suriname Sweden Switzerland Syria
-  Taiwan Tanzania Thailand Togo Tunisia Turkey Turkmenistan
+  Taiwan Tajikistan Tanzania Thailand Togo Tunisia Turkey Turkmenistan
   Uganda Ukraine Universal Uruguay USA Uzbekistan
   Vanuatu Venezuela Vietnam
   Wales

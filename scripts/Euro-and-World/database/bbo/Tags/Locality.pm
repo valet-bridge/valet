@@ -40,9 +40,9 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Akcay Akçeşme Albena Amanora Arjasa Atakoy Avren
-  Bahce Bahcesehir Balcova Balgat Baragnon Barrière Bayrampaþa Bellagatta
-  Beroe Bieniewo Bogazici Borivli Bormali Bornova Bosphorus Bozdogan 
-  Brotteaux Buca Buitenhof
+  Bahce Bahcesehir Balcova Balgat Baragnon Barrière Bayrampaþa 
+  Bellagatta Beroe Bieniewo Bogazici Borivli Bormali Bornova 
+  Bosphorus Bozdogan Brotteaux Buca Buitenhof
   Çayyolu Cemara Cesmealti Changning Chelsea Chislehurst Civyork
   Cossipore Courseulles
   Ege Esenkent Estrela
@@ -61,12 +61,12 @@ my @SINGLE_WORDS = qw(
   Qiaoxie
   Palaiseau Pasham Pato
   Radkov Recoleta Ridabu
-  Sabadel Sancaktar Sansar Sarniak Senayan Serdika Shihua Simal 
+  Sabadel Sancaktar Sansar Sarniak Senayan Serdika Seved Shihua Simal 
   Sirinyer Slaska Sredec Sukomoro Suleymanpasa Suralaya
   Taihu Tama Tengah Tianya
   Uccle Ulus Unaós
   Varbergshus Vefa Viþnelik Vitacura
-  Wadas Wenang Wightwick Wratislavia Wroble Wujiang Wuyuanhe
+  Wadas Waikiki Wenang Wightwick Wratislavia Wroble Wujiang Wuyuanhe
   Yalikavak Yangpu Yarimca Yenisehir Yizhuang Yildirim Yuquan
   Yvelines
   Zaohe Zhujiang

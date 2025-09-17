@@ -246,49 +246,78 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Aberdeenshire Aceh Agder Akdeniz Akkad Alabama Alaska Altiplano
-  Andalusia Anhui Ararat Arizona Arkansas Auvergne Ayrshire
-  Badung Bahia Bairrada Bali Banten Bayern Belitung Bengal Bengkayang 
-  Bihar Bogø Borneo Bornholm Bungo Buriram Buskerud
-  California Camargue Cappadocia Catalonia Chengmai Colorado 
-  Comandatuba Corfu Corsica Crete
-  Dersým Druts
+  Aberdeenshire Aceh Agder Akdeniz Akkad Alabama Alaska Algarve
+  Altiplano Anatolia Andalusia Anhui Ararat Ardennes Arizona Arkansas 
+  Arunachala Auvergne Ayrshire Azores
+
+  Badakhshan Badung Bahia Bairrada Bali Banten Bayern Belitung Benchamas
+  Bengal Bengkayang Bihar Bogø Borneo Bornholm Bungo Buriram Buskerud
+
+  California Camargue Cantal Cappadocia Catalonia Charente Chartreuse
+  Chengmai Colorado Comandatuba Corfu Corsica Crete
+
+  Dersim Dobruca Dobruja Druts
+
   Eyjafjallajokull
+
   Feixiang Fjends Flakstad Florida Fujian Fyn
-  Galapagos Ganges Gansu Gauteng Gibraltar Goa Gorontalo Guangdong Guangxi 
-  Guizhou Gujarat
+
+  Galapagos Ganges Gansu Gauteng Gelderland Gibraltar Goa Gorontalo 
+  Guam Guangdong Guangxi Guizhou Gujarat
+
   Hainan Haixing Hatay Haugaland Hawaii Hebei Hedmark Hegyvidék 
-  Heilongjiang Henan Hordaland Huabei Hubei Hunan
-  Iberia Illinois Indiana Iskele
-  Jalisco Jharkhand Jiangsu Jiangxi Jilin
+  Heilongjiang Henan Herault Hordaland Huabei Hubei Hunan
+
+  Iberia Idaho Illinois Indiana Iowa Iskele
+
+  Jalisco Java Jharkhand Jiangsu Jiangxi Jilin
+
   Kaldbakur Kansai Kansas Kanto Karadon Karadeniz Karimata Karnataka 
-  Kawanua Kedungwaru Kentucky Kerala Kizil Krabi Kurdistan
-  Lampung Languedoc Lebak Liaoning Liguria Lombok Louisiana
-  Madeira Maharashtra Maine Maluku Malwa Manle Marmara Maryland 
-  Matopos Mazovia Mesopotamia Michigan Midtsjælland Minahasa Minang 
-  Minnesota Mississippi Missouri Misya Mjøsa Montana Muallim Munzur 
-  Mysia
-  Narathiwat Narman Natuna Nebraska Nordafjells Normandy Norrland 
-  Norrorts Northland Nusantara
+  Kawanua Kedungwaru Kentucky Kerala Khuzestan Kilimanjaro Kizil Krabi 
+  Kurdistan
+
+  Lampung Languedoc Lebak Liaoning Liguria Loire Lombok Louisiana
+
+  Madeira Maharashtra Maine Maluku Malwa Manle Marmara Marne Maryland 
+  Matopos Mazovia Menorca Mesopotamia Michigan Midtsjælland Minahasa 
+  Minang Minnesota Mississippi Missouri Misya Mjøsa Montana Muallim 
+  Munzur Mysia
+
+  Narathiwat Narman Natuna Nebraska Negev Ngawi Nordafjells Normandy 
+  Norrland Norrorts Northland Nusantara
+
+  Oberloiben Occitanie Odisha Ohio Oklahoma Olona Ontario Oregon 
+  Orontes Otago
+
+  Papua Paros Pasha Pennsylvania Phatthalung Pirojpur Podlaskie
+  Pomerania Porong Prachinburi Provence Pudong Pufa Punjab Pyrenees
+
   Queensland Qiantang
-  Oberloiben Odisha Ohio Oklahoma Olona Ontario Oregon Orontes Otago
-  Papua Pasha Pennsylvania Phatthalung Pomerania Porong Prachinburi 
-  Provence Pudong Pufa Punjab Pyrenees
-  Rajasthan Rajputana Ratchaburi Rhodes Ringvassøy  Rioja Rize Rogaland 
+
+  Rajasthan Rajputana Ratchaburi Rhodes Ringvassøy Rioja Rize Rogaland 
   Rosfjord 
-  Sahyadri Sakarya Sallière Salten Sambas Samutsakorn Sanggau 
-  Saskatchewan Shandong Shanxi Siberia Sichuan Silesia Silla Sindh 
-  Sintang Sitaro Skåne Slask Småland Southland Speyside Suvalkija 
-  Sørlandet Sydvest
+
+  Sahyadri Sakarya Sallière Salten Sambas Samutsakorn Sanggau Saros
+  Saskatchewan Schwyz Shandong Shanxi Siberia Sichuan Sicily Silesia 
+  Silla Sindh Sintang Sitaro Skåne Slask Småland Southland Speyside 
+  Sulawesi Suvalkija Sørlandet Sydvest
+
   Tala Tambun Tasmania Telemark Telengana Tenerife Tennessee Texas 
-  Thassos Thrace Tianya Tigris Tinglin Transvaal Transylvania Tuncelý 
-  Tuscany
+  Tharparkar Thassos Thrace Tianya Tigris Tinglin Transvaal 
+  Transylvania Trentino Tunceli Tuscany
+
   Uludag Utah Uttarakhand Uzungol
+
   Valsugana Victoria Vojvodina
-  Wachau Waikato Wisconsin Wujin
+
+  Wachau Waikato Wielkopolska Wisconsin Wujin Wyssa
+
   Xizang Xinjiang
-  Yongjia Yongjiang Yozgat Yunnan
+
+  Yongjia Yongjiang Yonne Yozgat Yunnan
+
   Zhejiang Zhongshan
+
 );
 
 my %SINGLE_TYPOS =
@@ -298,6 +327,7 @@ my %SINGLE_TYPOS =
   'Australian Central Territory' => ['act'],
   'Bangka Belitung' => ['babel'],
   Buriram => ['burirum'],
+  Dersim => ['dersým'],
   'Kabupaten Bekasi' => ['bekasi'],
   Cappadocia => ['kapadokya', 'kapodokya'],
   Catalonia => ['catalunya', 'cataluña'],
@@ -342,6 +372,7 @@ my %SINGLE_TYPOS =
   Qiantang => ['Qiangtang'],
   Rajasthan => ['rajsthan'],
   Ratchaburi => ['ratchanuri'],
+  Rhodes => ['rhodos'],
   'Sa Kaeo' => ['sakaeo'],
   'Samut Prakan' => ['samutprakan', 'sumutprakan'],
   'Samut Sakhon' => ['samutsakhon', 'samutsakorn'],
@@ -354,6 +385,7 @@ my %SINGLE_TYPOS =
   'Tamil Nadu' => ['tamilnadu'],
   Telengana => ['telangana'],
   Tinglin => ['tingling'],
+  Tunceli => ['tuncelý'],
   Tuscany => ['toscana'],
   'Uttar Pradesh' => ['up', 'upba'],
   Uttarakhand => ['uttaranchal'],
