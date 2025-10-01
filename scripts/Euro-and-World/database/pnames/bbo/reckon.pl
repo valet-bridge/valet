@@ -224,9 +224,6 @@ use Email::Email;
 use Histo;
 my $histo = Histo->new();
 
-use UnitStats;
-my $unit_stats = UnitStats->new();
-
 ###
 ### TODO We still have to look for COUNTRY etc.
 ###
@@ -261,6 +258,8 @@ my $unit_stats = UnitStats->new();
         # }
       # }
 
+# TODO Still need this?
+
 my @HANDLE_SKIPS = qw(
   123 270357
 );
@@ -272,6 +271,9 @@ use Manual::TargetedLines;
 
 $fluffed_lines = Manual::TargetedLines->new();
 $fluffed_lines->read_file('Manual/fluffed_lines.txt');
+
+$system_lines = Manual::TargetedLines->new();
+$system_lines->read_file('Manual/system_lines.txt');
 
 $known_names = Manual::TargetedLines->new();
 $known_names->read_file('Manual/known_names.txt');
@@ -326,9 +328,6 @@ if ($paragraph->{HANDLE} eq 'LIBRAX')
 
   # print_paragraph($paragraph);
 
-  # This caught many things, but is more of a linter.
-  # check_tag_order($paragraph);
-
   my $lno = -1;
   for my $entry (@{$paragraph->{LINES}})
   {
@@ -345,14 +344,12 @@ if ($paragraph->{HANDLE} eq 'LIBRAX')
 
     if (study_line($whole, $whole2, \@UNIT_TAGS, $entry, \@chains, 
       $paragraph->{HANDLE}, $handle_counts{$paragraph->{HANDLE}}, $lno, 
-      $histo, $unit_stats, \%chain_stats))
+      $histo, \%chain_stats))
     {
       next;
     }
   }
 }
-
-$unit_stats->print();
 
 printf("Lines %10d\n", $chain_stats{DATA});
 printf("Parts %10d\n\n", $chain_stats{PARTS});
@@ -598,7 +595,7 @@ sub study_word
 sub study_line
 {
   my ($whole_names, $whole_system, $unit_tags, $entry, $chains, 
-    $handle, $hcount, $lno, $histo, $unit_stats, $chain_stats) = @_;
+    $handle, $hcount, $lno, $histo, $chain_stats) = @_;
 
   my @list;
   lines_to_list($entry, \@list);
@@ -698,6 +695,14 @@ if ($handle eq 'RJP1')
 
   split_on_specifics(\@battery, $chain_stats, $identifier);
 
+  if ($entry->{CATEGORY} eq 'OPEN')
+  {
+    # Only because this is so heavily curated.
+    $entry->{CATEGORY} = 'SYSTEM';
+    # print $identifier;
+    return;
+  }
+
   if ($#battery >= 1)
   {
     # Assume it's a system line -- great assumption.
@@ -728,42 +733,13 @@ if ($handle eq 'RJP1')
     return;
   }
 
-
-  # if ($longest >= 2)
   if ($units->last() >= 2)
   {
     # With all the curation, this is a system line.
-    # print $identifier;
     return;
   }
 
-  if ($units->last() == 0)
-  {
-    print $identifier;
-  }
-
-
-  # if ($#battery == 0 && $battery[0]->last() == 0)
-  # {
-    # print $identifier;
-  # }
-
-  for my $u (@battery)
-  {
-    $unit_stats->add($u, $identifier);
-  }
-  $unit_stats->add_unit_count(1 + $#battery);
-
-
-return;
-
-  # my @streaks;
-  # $units->get_number_streaks(\@streaks);
-
-  # The return value is the streak number, after which other
-  # streak contents will no longer be valid.
-  # Sparse::KeyResp::look_for_responses($units, \@streaks,
-    # \%INT_COUNTS, $chain_stats);
+  die;
 }
 
 
@@ -786,6 +762,8 @@ sub locate_tag_number
 
 sub check_tag_order
 {
+  # This caught many things, but is more of a linter.
+
   my ($paragraph) = @_;
 
   my $post_index = 0;
@@ -822,70 +800,6 @@ sub check_tag_order
         return;
       }
     }
-  }
-}
-
-
-sub get_file
-{
-  my ($first, $fname) = @_;
-
-  open my $fh, '<', $fname or die "Can't read $fname: $!";
-  while (my $line = <$fh>)
-  {
-    chomp $line;
-    $line =~ s///g;
-    next if $line =~ /^\s*$/;
-  
-    if ($line =~ /\s+/)
-    {
-      warn "SPACE $line";
-      next;
-    }
-  
-    $first->{lc($line)} = 1;
-  }
-  close $fh;
-}
-
-
-sub consolidate_names
-{
-  my ($token) = @_;
-  my $field = $token->field();
-
-  if ($field eq 'FIRSTFIRST' ||
-      $field eq 'FIRSTMID' ||
-      $field eq 'FIRSTBBO')
-  {
-    $token->set_field('FIRST');
-  }
-  elsif ($field eq 'LASTLAST' ||
-      $field eq 'LASTMID' ||
-      $field eq 'LASTBBO')
-  {
-    $token->set_field('LAST');
-  }
-}
-
-
-sub study_component
-{
-  my ($whole, $tag_order, $value, $pos, $chain, $histo) = @_;
-
-  if (singleton_non_tag_matches_basic(
-    $value, $pos, $chain, $histo, ''))
-  {
-    return 1;
-  }
-  elsif (singleton_tag_matches_basic($whole, $tag_order,
-    $pos, $value, 0, $chain, $histo, ''))
-  {
-    return 1;
-  }
-  else
-  {
-    return 0;
   }
 }
 

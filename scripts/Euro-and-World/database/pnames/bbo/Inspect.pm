@@ -26,9 +26,8 @@ use open ':std', ':encoding(UTF-8)';
 use Exporter;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw($sublines $fluffed_lines $known_names $late_mails
-  $both_last $both_neither
-  inspect_paragraph);
+our @EXPORT = qw($sublines $fluffed_lines $system_lines
+  $known_names $late_mails $both_last $both_neither inspect_paragraph);
 
 use lib '../../bbo';
 use Util;
@@ -36,7 +35,7 @@ use Util;
 use lib './Email';
 use Email::Email;
 
-our ($sublines, $fluffed_lines, $known_names, $late_mails,
+our ($sublines, $fluffed_lines, $system_lines, $known_names, $late_mails,
   $both_last, $both_neither);
 
 
@@ -82,6 +81,14 @@ sub pre_inspect
   if ($fluffed_lines->lookup($handle, $hcount, $eno))
   {
     $entry->{CATEGORY} = 'FLUFF';
+    $entry->{VALUE} = $entry->{TEXT};
+print $identifier;
+    return 1;
+  }
+
+  if ($system_lines->lookup($handle, $hcount, $eno))
+  {
+    $entry->{CATEGORY} = 'SYSTEM';
     $entry->{VALUE} = $entry->{TEXT};
     return 1;
   }
