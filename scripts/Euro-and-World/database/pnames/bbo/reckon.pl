@@ -269,17 +269,45 @@ $HANDLE_SKIPS_HASH{$_} = 1 for @HANDLE_SKIPS;
 
 use Manual::TargetedLines;
 
-$fluffed_lines = Manual::TargetedLines->new();
-$fluffed_lines->read_file('Manual/fluffed_lines.txt');
+my %PRE_INSPECTED_LINES =
+(
+  'BEHAVIOR' => 'Manual/behaviors.txt',
+  'PICKY' => 'Manual/nomultiples.txt',
+  'FLUFF' => 'Manual/fluffed_lines.txt',
+  'MAIL' => 'Manual/late_mails.txt', # Special case
+  'NAMELIKE' => 'Manual/known_names.txt',
+  'PRIVATE' => 'Manual/privates.txt',
+  'PROFILE' => 'Manual/noprofiles.txt',
+  'SYSTEM' => 'Manual/system_lines.txt',
+  'UNDO' => 'Manual/noundos.txt'
+);
 
-$system_lines = Manual::TargetedLines->new();
-$system_lines->read_file('Manual/system_lines.txt');
+# Just in order of frequency.
+my @PRE_INSPECTED_ORDER = qw(
+  NAMELIKE
+  SYSTEM
+  FLUFF
+  PRIVATE
+  PROFILE
+  MAIL
+  UNDO
+  PICKY
+  BEHAVIOR
+);
 
-$known_names = Manual::TargetedLines->new();
-$known_names->read_file('Manual/known_names.txt');
+Inspect::init_pre_inspected(\%PRE_INSPECTED_LINES);
 
-$late_mails = Manual::TargetedLines->new();
-$late_mails->read_file('Manual/late_mails.txt');
+# $fluffed_lines = Manual::TargetedLines->new();
+# $fluffed_lines->read_file('Manual/fluffed_lines.txt');
+
+# $system_lines = Manual::TargetedLines->new();
+# $system_lines->read_file('Manual/system_lines.txt');
+
+# $known_names = Manual::TargetedLines->new();
+# $known_names->read_file('Manual/known_names.txt');
+
+# $late_mails = Manual::TargetedLines->new();
+# $late_mails->read_file('Manual/late_mails.txt');
 
 use Manual::TargetedWords;
 
@@ -298,7 +326,7 @@ $last3_names->read_file('Manual/last3.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('g');
+# $sublines->consolidate_with('nfx');
 # $sublines->print();
 # exit;
 
@@ -324,7 +352,8 @@ if ($paragraph->{HANDLE} eq 'LIBRAX')
   # print "HERE\n";
 }
   $handle_counts{$paragraph->{HANDLE}}++;
-  Inspect::inspect_paragraph($whole, $paragraph, \%handle_counts);
+  Inspect::inspect_paragraph($whole, $paragraph, 
+    \@PRE_INSPECTED_ORDER, \%handle_counts);
 
   # print_paragraph($paragraph);
 
@@ -669,7 +698,8 @@ if ($handle eq 'RJP1')
     # (b) needs to be curated.
     # print $identifier;
   }
-  if ($units->last() == 0)
+
+  # if ($units->last() == 0)
   {
     print $identifier;
   }

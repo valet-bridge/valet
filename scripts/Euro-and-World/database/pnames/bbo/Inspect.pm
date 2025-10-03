@@ -36,7 +36,7 @@ use lib './Email';
 use Email::Email;
 
 our ($sublines, $fluffed_lines, $system_lines, $known_names, $late_mails,
-  $both_last, $both_neither);
+  $both_last, $both_neither, %PRE_INSPECTED);
 
 
 my @COUNTRY_ORDER = qw(COUNTRY);
@@ -47,6 +47,17 @@ my @LEVEL_ORDER = qw(LEVEL);
 my @PRIVATE_ORDER = qw(PRIVATE);
 my @FLUFF_ORDER = qw(FLUFF);
 my @SYSTEM_ORDER = qw(SYSTEM);
+
+sub init_pre_inspected
+{
+  my ($fnames) = @_;
+
+  for my $tag (keys %$fnames)
+  {
+    $PRE_INSPECTED{$tag} = Manual::TargetedLines->new();
+    $PRE_INSPECTED{$tag}->read_file($fnames->{$tag});
+  }
+}
 
 
 sub look_for_single_tag
@@ -132,6 +143,53 @@ print $identifier;
 }
 
 
+sub pre_inspect_NEW
+{
+  my ($entry, $handle, $hcount, $eno, $order, $identifier) = @_;
+
+  if (my $replace = $sublines->lookup($handle, $hcount, $eno, 
+    $entry->{TEXT}))
+  {
+    # Still fall through and inspect further.
+    $entry->{TEXT} = $replace;
+  }
+
+  for my $tag (@$order)
+  {
+    if ($PRE_INSPECTED{$tag}->lookup($handle, $hcount, $eno))
+    {
+      if ($tag eq 'MAIL')
+      {
+        my @list;
+        Email::Email::looks_like(lc($entry->{TEXT}), \@list);
+        if ($#list < 0)
+        {
+          print $identifier;
+          die "Not an email?";
+        }
+
+        $entry->{CATEGORY} = 'LIST';
+        @{$entry->{LIST}} = @list;
+      }
+      else
+      {
+        $entry->{CATEGORY} = $tag;
+        $entry->{VALUE} = $entry->{TEXT};
+      }
+      return 1;
+    }
+  }
+
+  if ($both_last->lookup($entry->{TEXT}))
+  {
+    $entry->{CATEGORY} = 'NAME_LAST';
+    return 1;
+  }
+
+  return 0;
+}
+
+
 sub guess_private
 {
   my ($entry, $text, $private_seen, $mail_seen, $level_seen) = @_;
@@ -168,7 +226,7 @@ sub guess_private
 
 sub inspect_paragraph
 {
-  my ($whole, $paragraph, $handle_counts) = @_;
+  my ($whole, $paragraph, $pre_inspect_order, $handle_counts) = @_;
 
   my $country_seen = 0;
   my $private_seen = 0;
@@ -195,7 +253,9 @@ sub inspect_paragraph
     my $identifier = "YYY $handle, $hcount, $eno\n" .
       $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
 
-    next if pre_inspect($entry, $handle, $hcount, $eno, $identifier);
+    # next if pre_inspect($entry, $handle, $hcount, $eno, $identifier);
+    next if pre_inspect_NEW($entry, $handle, $hcount, $eno, 
+      $pre_inspect_order, $identifier);
 
     if (! $country_seen)
     {
