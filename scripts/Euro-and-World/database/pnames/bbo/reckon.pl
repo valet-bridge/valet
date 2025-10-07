@@ -326,7 +326,7 @@ $last3_names->read_file('Manual/last3.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('nfx');
+# $sublines->consolidate_with('lev');
 # $sublines->print();
 # exit;
 

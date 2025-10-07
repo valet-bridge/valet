@@ -68,6 +68,7 @@ my @MULTI_WORDS =
   'Kabupaten Sidoarjo',
   'Kabupaten Sijunjung',
   'Kabupaten Solok',
+  'Kabupaten Tabalong',
   'Kapuas Hulu',
   'Kepulauan Riau',
   'Kepulauan Seribu',
