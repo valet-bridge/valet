@@ -27,7 +27,8 @@ use Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw($sublines $fluffed_lines $system_lines
-  $known_names $late_mails $both_last $both_neither inspect_paragraph);
+  $known_names $late_mails $both_last $both_neither inspect_paragraph
+  $study_word);
 
 use lib '../../bbo';
 use Util;
@@ -47,6 +48,28 @@ my @LEVEL_ORDER = qw(LEVEL);
 my @PRIVATE_ORDER = qw(PRIVATE);
 my @FLUFF_ORDER = qw(FLUFF);
 my @SYSTEM_ORDER = qw(SYSTEM);
+
+my @MULTI_ORDER = qw(
+  COUNTRY
+  LEVEL
+  PRIVATE
+  CITY
+  REGION
+  LOCALITY
+);
+
+my @FIRST_ORDER = qw(
+  FIRSTFIRST
+  FIRSTMID
+  FIRSTBBO
+);
+
+my @LAST_ORDER = qw(
+  LASTLAST
+  LASTMID
+  LASTBBO
+);
+
 
 sub init_pre_inspected
 {
@@ -87,6 +110,7 @@ sub pre_inspect
 {
   # A return value of 1 means that we're done inspecting.
 
+  die "Dead code?";
   my ($entry, $handle, $hcount, $eno, $identifier) = @_;
 
   if ($fluffed_lines->lookup($handle, $hcount, $eno))
@@ -143,15 +167,115 @@ print $identifier;
 }
 
 
+sub study_word
+{
+  my ($whole_names, $word, $histo) = @_;
+
+  my $token_no = 0;
+  my $chain = Chain->new();
+  my $first_flag = 0;
+  my $last_flag = 0;
+
+  if (singleton_tag_matches_basic($whole_names, \@FIRST_ORDER,
+    \$token_no, $word, 0, $chain, $histo, ''))
+  {
+    $first_flag = 1;
+  }
+
+  if (singleton_tag_matches_basic($whole_names, \@LAST_ORDER,
+    \$token_no, $word, 0, $chain, $histo, ''))
+  {
+    $last_flag = 1;
+  }
+
+  if ($first_flag && ! $last_flag)
+  {
+    return 'NAME_FIRST';
+  }
+  elsif (! $first_flag && $last_flag)
+  {
+    return 'NAME_LAST';
+  }
+  elsif ($first_flag && $last_flag)
+  {
+    if ($both_neither->lookup($word))
+    {
+      # Fall through.
+      return '';
+    }
+    elsif ($both_last->lookup($word))
+    {
+      return 'NAME_LAST';
+    }
+    else
+    {
+      return 'NAME_FIRST';
+    }
+  }
+  elsif ($word =~ /^[A-Za-z]$/)
+  {
+    return 'NAME_INITIAL';
+  }
+  else
+  {
+    return '';
+  }
+}
+
+
+sub pre_parse
+{
+  my ($entry, $whole, $identifier, $histo) = @_;
+
+  my @components = split /\|\|/, $entry->{TEXT};
+  return 0 unless $#components == 1;
+
+  my @list;
+  for my $comp (@components)
+  {
+    my $found = 0;
+    for my $tag (@MULTI_ORDER)
+    {
+      my $fix = $whole->get_single($tag, lc($comp));
+      next unless defined $fix->{CATEGORY};
+
+      push @list, $tag, $fix->{VALUE};
+      $found = 1;
+      last;
+    }
+    next if $found;
+
+    my $cat = study_word($whole, $comp, $histo);
+    if ($cat && $cat ne 'NAME_INITIAL')
+    {
+      push @list, $cat, $comp;
+      next;
+    }
+
+    print "$entry->{TEXT}\n$comp MISS\n---\n\n";
+  }
+
+  $entry->{CATEGORY} = 'LIST';
+  @{$entry->{LIST}} = @list;
+  return 1;
+}
+
+
 sub pre_inspect_NEW
 {
-  my ($entry, $handle, $hcount, $eno, $order, $identifier) = @_;
+  my ($entry, $whole, $handle, $hcount, $eno, $order, 
+    $identifier, $histo) = @_;
 
   if (my $replace = $sublines->lookup($handle, $hcount, $eno, 
     $entry->{TEXT}))
   {
     # Still fall through and inspect further.
     $entry->{TEXT} = $replace;
+  }
+
+  if ($entry->{TEXT} =~ /\|\|/)
+  {
+    return if pre_parse($entry, $whole, $identifier, $histo);
   }
 
   for my $tag (@$order)
@@ -226,7 +350,8 @@ sub guess_private
 
 sub inspect_paragraph
 {
-  my ($whole, $paragraph, $pre_inspect_order, $handle_counts) = @_;
+  my ($whole, $paragraph, $pre_inspect_order, 
+    $handle_counts, $histo) = @_;
 
   my $country_seen = 0;
   my $private_seen = 0;
@@ -254,8 +379,8 @@ sub inspect_paragraph
       $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
 
     # next if pre_inspect($entry, $handle, $hcount, $eno, $identifier);
-    next if pre_inspect_NEW($entry, $handle, $hcount, $eno, 
-      $pre_inspect_order, $identifier);
+    next if pre_inspect_NEW($entry, $whole,
+      $handle, $hcount, $eno, $pre_inspect_order, $identifier, $histo);
 
     if (! $country_seen)
     {

@@ -104,18 +104,6 @@ my @TAG_ORDER = qw(
   LASTBBO
 );
 
-my @FIRST_ORDER = qw(
-  FIRSTFIRST
-  FIRSTMID
-  FIRSTBBO
-);
-
-my @LAST_ORDER = qw(
-  LASTLAST
-  LASTMID
-  LASTBBO
-);
-
 my @SEMANTIC_TAGS = qw(
   COUNTRY 
   REGION 
@@ -224,40 +212,6 @@ use Email::Email;
 use Histo;
 my $histo = Histo->new();
 
-###
-### TODO We still have to look for COUNTRY etc.
-###
-###
-### This is how to use a scan for the || format:
-
-  # my %NAMES =
-  # (
-    # AAlankBondo => [ CATEGORY => 'NAME_FIRST', VALUE => 'Alan', CATEGORY => 'NAME_INITIALS', VALUE => 'K.', CATEGORY => 'NAME_LAST', VALUE => 'Bondo' ],
-    # ...
-  # );
-
-    # if (exists $NAMES{$text})
-    # {
-      # @$splits = @{$NAMES{$text}};
-      # return 1;
-    # }
-
-
-      # if (Caps::CapSplit::split_on_caps($whole, $unit_tags, $part, 
-        # \@splits, $identifier))
-      # {
-        # print $identifier;
-
-        # for (my $i = 0; $i <= $#splits; $i += 4)
-        # {
-          # assert($splits[$i] eq 'CATEGORY', "Not a category");
-          # assert($splits[$i+2] eq 'VALUE', "Not a value");
-
-          # $units->push($splits[$i+1], $part, $splits[$i+3], 
-            # $pos, $chain_stats);
-        # }
-      # }
-
 # TODO Still need this?
 
 my @HANDLE_SKIPS = qw(
@@ -353,8 +307,9 @@ if ($paragraph->{HANDLE} eq 'LIBRAX')
 }
   $handle_counts{$paragraph->{HANDLE}}++;
   Inspect::inspect_paragraph($whole, $paragraph, 
-    \@PRE_INSPECTED_ORDER, \%handle_counts);
+    \@PRE_INSPECTED_ORDER, \%handle_counts, $histo);
 
+next;
   # print_paragraph($paragraph);
 
   my $lno = -1;
@@ -562,62 +517,6 @@ sub look_for_openings
 
   LookFor::look_for_opening($units, 'diamonds', 'D', 1, 2,
     \%DIAMONDS_FWD_LIKE_HASH, $chain_stats);
-}
-
-
-sub study_word
-{
-  my ($whole_names, $word, $histo) = @_;
-
-  my $token_no = 0;
-  my $chain = Chain->new();
-  my $first_flag = 0;
-  my $last_flag = 0;
-
-  if (singleton_tag_matches_basic($whole_names, \@FIRST_ORDER,
-    \$token_no, $word, 0, $chain, $histo, ''))
-  {
-    $first_flag = 1;
-  }
-
-  if (singleton_tag_matches_basic($whole_names, \@LAST_ORDER,
-    \$token_no, $word, 0, $chain, $histo, ''))
-  {
-    $last_flag = 1;
-  }
-
-  if ($first_flag && ! $last_flag)
-  {
-    return 'NAME_FIRST';
-  }
-  elsif (! $first_flag && $last_flag)
-  {
-    return 'NAME_LAST';
-  }
-  elsif ($first_flag && $last_flag)
-  {
-    if ($both_neither->lookup($word))
-    {
-      # Fall through.
-      return '';
-    }
-    elsif ($both_last->lookup($word))
-    {
-      return 'NAME_LAST';
-    }
-    else
-    {
-      return 'NAME_FIRST';
-    }
-  }
-  elsif ($word =~ /^[A-Za-z]$/)
-  {
-    return 'NAME_INITIAL';
-  }
-  else
-  {
-    return '';
-  }
 }
 
 

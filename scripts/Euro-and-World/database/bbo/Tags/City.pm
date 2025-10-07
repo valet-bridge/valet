@@ -348,7 +348,7 @@ my @SINGLE_WORDS = qw(
   Sombor Songkhla Sopot Sortland Söke Sozopol Split Stanford Starachowice 
   Stargard Stavanger Steinkjer Stirling Stockholm Stockton Stokke Stoholm 
   Storsjöbygden Strasbourg Strømmen Stureby Stuttgart Szczecin Sukma 
-  Sukomoro Sumedang Sunndalsøra Suqian Surabaya Suzhou Sürmene
+  Sukomoro Sumedang Sunndalsøra Suqian Surabaya Suzhou Suwalki Sürmene
   Svendborg Svilengrad Svinninge Svishtov Sydney Szczecinek Szczyrk 
   Szeged Sztum Søborg Sømna Sørreisa Sørvoll
 
