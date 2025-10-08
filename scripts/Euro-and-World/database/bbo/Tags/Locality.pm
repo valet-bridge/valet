@@ -61,8 +61,9 @@ my @SINGLE_WORDS = qw(
   Qiaoxie
   Palaiseau Pasham Pato
   Radkov Recoleta Ridabu
-  Sabadel Sancaktar Sansar Sarniak Senayan Serdika Seved Shihua Simal 
-  Sirinyer Slaska Sredec Sukomoro Suleymanpasa Suralaya
+  Sabadel Sancaktar Sansar Sarniak Senayan Serdika Setagaya
+  Seved Shihua Simal Sirinyer Slaska Sredec Sukomoro Suleymanpasa 
+  Suralaya
   Taihu Tama Tengah Tianya
   Uccle Ulus Unaós
   Varbergshus Vefa Viþnelik Vitacura

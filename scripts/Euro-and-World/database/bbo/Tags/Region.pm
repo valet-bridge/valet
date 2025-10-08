@@ -41,8 +41,8 @@ my @MULTI_WORDS =
   'East Nusa Tenggara',
   'Eastern Cape',
   'Franche-Comté',
-  'Fylke Innlandet',
   'Gabungan Malaku',
+  'Gran Canaria',
   'Himachal Pradesh',
   'Indragiri Hulu',
   'Java Bali',
@@ -79,6 +79,7 @@ my @MULTI_WORDS =
   'Kutai Kartanegara',
   'Kutai Timur',
   'KwaZulu Natal',
+  'Lake Garda',
   'Lofoten og Vesterålen',
   'Lower Silesia',
   'Madhya Pradesh',
@@ -91,12 +92,16 @@ my @MULTI_WORDS =
   'Nakhon Sawan',
   'Nakhon Si Thammarat',
   'National Capital Region',
+  'New Brunswick',
+  'New Hampshire',
   'New Jersey',
   'New South Wales',
+  'New York',
   'Nord Trøndelag',
   'Nord-Norge Omegn',
   'Norte Ilhas',
   'North Carolina',
+  'North Cyprus',
   'North Dakota',
   'North Minahasa',
   'North Celebes',
@@ -104,19 +109,24 @@ my @MULTI_WORDS =
   'Northern Gauteng',
   'Northern Norway',
   'Northern Territory',
+  'Nova Scotia',
   'Nusa Tenggara Barat',
   'Park Firtina',
   'Pearl River',
   'Ren Shou',
+  'Rhode Island',
   'Rio de Janeiro State',
   'Rusenski Lom',
   'Sa Kaeo',
   'Samut Prakan',
   'Samut Sakhon',
   'Si Sa Ket',
+  'Nord Trøndelag',
+  'Smoky Mountains',
   'South Australia',
   'South Bulgaria',
   'South Celebes',
+  'South Dakota',
   'South East Celebes',
   'South Jakarta',
   'South Kalimantan',
@@ -134,6 +144,7 @@ my @MULTI_WORDS =
   'Troms og Ofoten',
   'Uttar Pradesh',
   'Val di Magra',
+  'Vancouver Island',
   'Vest Agder',
   'Vest Finnmark',
   'Warminsko-Mazurskie',
@@ -148,7 +159,8 @@ my @MULTI_WORDS =
   'West Virginia',
   'Western Australia',
   'Western Province',
-  'Østfold Follo'
+  'Østfold Follo',
+  'Åland Islands'
 );
 
 my %MULTI_TYPOS =
@@ -169,6 +181,7 @@ my %MULTI_TYPOS =
   Hainan => ['hai nan'],
   Huabei => ['hua bei'],
   Hubei => ['hu bei'],
+  Innlandet => ['fylke innlandet'],
   Jiangsu => ['jiang su'],
   Jiangxi => ['jiang xi'],
   Jilin => ['ji lin'],
@@ -249,27 +262,30 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Aberdeenshire Aceh Agder Akdeniz Akkad Alabama Alaska Algarve
   Altiplano Anatolia Andalusia Anhui Ararat Ardennes Arizona Arkansas 
-  Arunachala Auvergne Ayrshire Azores
+  Arunachala Aurland Auvergne Ayrshire Azores
 
   Badakhshan Badung Bahia Bairrada Bali Banten Bayern Belitung Benchamas
-  Bengal Bengkayang Bihar Bogø Borneo Bornholm Bungo Buriram Buskerud
+  Bengal Bengkayang Bihar BizkaiyaBogø Bolu Borneo Bornholm Bungo 
+  Buriram Buskerud
 
-  California Camargue Cantal Cappadocia Catalonia Charente Chartreuse
-  Chengmai Colorado Comandatuba Corfu Corsica Crete
+  California Camargue Çankiri Cantal Cappadocia Catalonia Charente 
+  Chartreuse Chengmai Colorado Comandatuba Connecticut Corfu Corsica 
+  Crete Cukurova
 
   Dersim Dobruca Dobruja Druts
 
   Eyjafjallajokull
 
-  Feixiang Fjends Flakstad Florida Fujian Fyn
+  Feixiang Finnmark Fjends Flakstad Florida Frøya Fuji Fujian Fyn
 
   Galapagos Ganges Gansu Gauteng Gelderland Gibraltar Goa Gorontalo 
   Guam Guangdong Guangxi Guizhou Gujarat
 
-  Hainan Haixing Hatay Haugaland Hawaii Hebei Hedmark Hegyvidék 
-  Heilongjiang Henan Herault Hordaland Huabei Hubei Hunan
+  Hainan Haixing Hampshire Haryana Hatay Haugaland Hawaii Hebei 
+  Hedmark Hegyvidék Heilongjiang Hemshin Henan Herault Hordaland 
+  Huabei Hubei Hunan
 
-  Iberia Idaho Illinois Indiana Iowa Iskele
+  Iberia Idaho Illinois Indiana Innlandet Iowa Iskele
 
   Jalisco Java Jharkhand Jiangsu Jiangxi Jilin
 
@@ -279,43 +295,45 @@ my @SINGLE_WORDS = qw(
 
   Lampung Languedoc Lebak Liaoning Liguria Loire Lombok Louisiana
 
-  Madeira Maharashtra Maine Maluku Malwa Manle Marmara Marne Maryland 
-  Matopos Mazovia Menorca Mesopotamia Michigan Midtsjælland Minahasa 
-  Minang Minnesota Mississippi Missouri Misya Mjøsa Montana Muallim 
-  Munzur Mysia
+  Madeira Maharashtra Maine Maluku Malwa Manitoba Manle Marmara Marne 
+  Maryland Massachusetts Matopos Maui Mazovia Menorca Mesopotamia 
+  Michigan Midtsjælland Minahasa Minang Minnesota Mississippi Missouri 
+  Misya Mjøsa Montana Muallim Munzur Mysia
 
-  Narathiwat Narman Natuna Nebraska Negev Ngawi Nordafjells Normandy 
-  Norrland Norrorts Northland Nusantara
+  Narathiwat Narman Natuna Nebraska Negev Nevada Ngawi Nordafjells 
+  Normandy Norrland Norrorts Northland Nusantara
 
   Oberloiben Occitanie Odisha Ohio Oklahoma Olona Ontario Oregon 
-  Orontes Otago
+  Orontes Otago Overijssel
 
-  Papua Paros Pasha Pennsylvania Phatthalung Pirojpur Podlaskie
-  Pomerania Porong Prachinburi Provence Pudong Pufa Punjab Pyrenees
+  Papua Paros Pasha Patagonia Pennsylvania Phatthalung Pirin Pirojpur 
+  Podlaskie Pomerania Porong Prachinburi Provence Pudong Pufa Punjab 
+  Pyrenees
 
-  Queensland Qiantang
+  Queensland Quercy Qiantang
 
-  Rajasthan Rajputana Ratchaburi Rhodes Ringvassøy Rioja Rize Rogaland 
-  Rosfjord 
+  Rajasthan Rajputana Ratchaburi Rhodes Ringvassøy Rioja Riviera
+  Rize Rogaland Rosfjord 
 
-  Sahyadri Sakarya Sallière Salten Sambas Samutsakorn Sanggau Saros
-  Saskatchewan Schwyz Shandong Shanxi Siberia Sichuan Sicily Silesia 
-  Silla Sindh Sintang Sitaro Skåne Slask Småland Southland Speyside 
-  Sulawesi Suvalkija Sørlandet Sydvest
+  Sahyadri Sakarya Sallière Salten Sambas Samutsakorn Sanggau Santorini
+  Sardinia Saros Saskatchewan Schwyz Shandong Shanxi Siberia Sichuan 
+  Sicily Silesia Silla Sindh Sintang Sitaro Skåne Slask Småland 
+  Southland Speyside Suffolk Sulawesi Sumatra Suvalkija Sørlandet 
+  Sydvest
 
   Tala Tambun Tasmania Telemark Telengana Tenerife Tennessee Texas 
   Tharparkar Thassos Thrace Tianya Tigris Tinglin Transvaal 
-  Transylvania Trentino Tunceli Tuscany
+  Transylvania Trentino Trøndelag Tunceli Tuscany
 
   Uludag Utah Uttarakhand Uzungol
 
   Valsugana Victoria Vojvodina
 
-  Wachau Waikato Wielkopolska Wisconsin Wujin Wyssa
+  Wachau Waikato Washington Wielkopolska Wisconsin Wujin Wyoming Wyssa
 
   Xizang Xinjiang
 
-  Yongjia Yongjiang Yonne Yozgat Yunnan
+  Yongjia Yongjiang Yonne Yozgat Yorkshire Yunnan
 
   Zhejiang Zhongshan
 

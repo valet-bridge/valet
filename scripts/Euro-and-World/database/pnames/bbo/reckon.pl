@@ -306,7 +306,7 @@ if ($paragraph->{HANDLE} eq 'LIBRAX')
   # print "HERE\n";
 }
   $handle_counts{$paragraph->{HANDLE}}++;
-  Inspect::inspect_paragraph($whole, $paragraph, 
+  Inspect::inspect_paragraph($whole, $last3_names, $paragraph, 
     \@PRE_INSPECTED_ORDER, \%handle_counts, $histo);
 
 next;
@@ -558,6 +558,8 @@ if ($handle eq 'RJP1')
   if ($units->last() == 2 &&
     $units->value(1) eq 'SPACE')
   {
+    # TODO Use Inspect.pm::study_name
+    #
     # Simple screen for names.
     my $cat0 = study_word($whole_names, $units->value(0), $histo);
     my $cat2 = study_word($whole_names, $units->value(2), $histo);

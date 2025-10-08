@@ -219,6 +219,39 @@ my @SINGLE_WORDS = qw(
   Willa
 
   Zilla
+
+  Ahadin Aima Aina Ainaya Alaeddin Albane Aleth Alzuri Ananzi Andrée
+  Apolonia Arzaz Azu
+  Bayram Bektas Beyhan Birdie Bregtje Buby
+  Caty Cezmi Chania Cybèle
+  Daffi Dalila Davut Dhen
+  Efthimios Eid Elie Erdin Erol Eyyüp
+  Ferdy Ferit Filiz Fränzi Fulya
+  Gatot Gerti Giampi Graziamaria Gudveig Guena Günni
+  Haci Hallgeir Harshad Hisam Honeylee
+  Idman Iliya Ireta
+  Jakop Jeff Jehane Jeun Jogindra Jongky Juju Jørn
+  Karelle
+  Kasif Kasim Kayan Korine Kosyo Kyriakos
+  Lakjio Laudine Laurette Lauriane Lezinka Lilo Liselil Liujun
+  Liza Locky Lorella Luise Luma
+  Malbina Malissa Marizul Mariapaola Marlena Marnie Marsel Marzenna
+  Mayol Michala Mici Mido Miko Muhammet Mumu Müfit
+  Nacher Nadhin Nayak Nedko Nedo Nezihi Nige Nilesh N'Oga
+  Ozzie Önder Ören Özdener Özer
+  Paulie Pavinee Pepo Perisa Puchi
+  Ramazan Raylene Richi Roni Rosalila Ruç Ruja Rüstem
+  Sabyasachi Safa Sakke Samiksha Sasho Schoumicha Sefik Senol Sevinç
+  Shaban Shary Shukoufeh Sigbjørn Soad Songa Sowmitra Stevan Sudirman
+  Sülo Sveinngun Sy
+  Taara Tadjib Theodoros Tshepiso Txomin Tyroon
+  Üzeyir
+  Vahit Vehbi Viktoria Viliam
+  Waled Winson
+  Xenia
+  Yaren Yehudit Yeni Yoya Youyou Yueyin Yunyue
+  Zare Zekai Zekeriya Zdzicho Zhivko Zhixiu
+
 );
 
 my %SINGLE_TYPOS =

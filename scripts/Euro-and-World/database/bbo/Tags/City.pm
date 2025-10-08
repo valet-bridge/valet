@@ -30,18 +30,24 @@ my @MULTI_WORDS =
   'Boven Digoel',
   'Buenos Aires',
   'Buri Ram',
+  'Cape Town',
   'Chapel Hill',
   'Chiang Rai',
+  'Corpus Christi',
+  'Costa Mesa',
   'Courseulles-sur-Mer',
   'Cherven Briag',
   'Cluj-Napoca',
   'Czech-Pan',
+  'Den Haag',
   'Doliny Narwi',
   'El-Maadi',
+  'Garden Ridge',
   'Gaziantep Zeugma',
   'Gjøvik og Vardal',
   'Gold Coast',
   'Gorzow Wielkopolski',
+  'Grande Motte',
   'Greve Strand',
   'Hat Tai',
   'Haskovski Mineralni Bani',
@@ -65,10 +71,13 @@ my @MULTI_WORDS =
   'La Marina',
   'La Rochelle',
   'La Spezia',
+  'Lake Iseo',
   'Las Palmas',
   'Las Vegas',
   'Le Bouscat',
   'Lidzbark Warmiński',
+  'Little Rock',
+  'Long Island',
   'Mandobo Bodi',
   'Maha Sarakham',
   'Mar del Plata',
@@ -83,15 +92,20 @@ my @MULTI_WORDS =
   'Nea Moudania',
   'New Orleans',
   'New Taipei City',
+  'New Westminster',
   'New York City',
+  'Niagara Falls',
+  'North Garden',
   'Nové Město',
   'Novi Sad',
+  'Nowa Sol',
   'Palangka Raya',
   'Piatra Neamt',
   'Piggs Peak',
   'Ponta Delgada',
   'Reggio Calabria',
   'Reggio Emilia',
+  'Rio Claro',
   'Rio de Janeiro',
   'Rostov-on-Don',
   'Russia-Pan',
@@ -99,12 +113,17 @@ my @MULTI_WORDS =
   'Saint-Aubin',
   'Saint-Gelais',
   'Saint-Ours',
+  'Saint Louis',
   'Saint Petersburg',
   'Salt Lake City',
+  'San Diego',
   'San Francisco',
   'San Giorgio del Sannio',
+  'San Jose',
+  'San Juan',
   'San Luis',
   'San Marino City',
+  'San Remo',
   'San Servolo',
   'Santa Clara',
   'São Paulo',
@@ -119,7 +138,6 @@ my @MULTI_WORDS =
   'Silesia Gliwice',
   'Singapore City',
   'South Tangerang',
-  'St Louis',
   'Stara Zagora',
   'Taihu Lake',
   'Tanjung Pinang',
@@ -186,7 +204,7 @@ my %MULTI_TYPOS =
   Shenzhen => ['shen zhen'],
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice', 'silesia i gliwice'],
-  'St Louis' => ['washington st louis'],
+  'Saint Louis' => ['st louis', 'washington st louis'],
   'Stara Zagora' => ['st.zagora'],
   Taicang => ['tai cang'],
   'Taihu Lake' => ['suzhou taihu'],
@@ -203,68 +221,76 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Aabenraa Aachen Aalborg Adak Adakli Adalar Adana Adapazan Adelaide 
-  Adiyaman Afyonkarahisar Agadir Agresar Ahmedabad Ainhoa Airmadidi 
-  Akcakoca Akhisar Aksaray Aksehir Akyaka Akyazi Aladag Alcobaça 
-  Alexandria Aley Aliaga Alicante Allahabad Alta Altea Altinoluk 
-  Altinova Altrincham Alytus Amasya Ambon Amed Amman Amsterdam 
-  Analya Ankara Annecy Antakya Antalya Antibes Antony Antwerpen Aqaba 
-  Aral Ardesen Arendal Arezzo Arnhem Artvin Asenovec Asenovgrad Askim 
-  Asminderød Assis Assos Assunçao Atakum Atasehir Athens Atlanta 
-  Aubagne Auckland Augsburg Avignon Ayacucho Aydin Ayvalik Ayvansaray
+  Aabenraa Aachen Aalborg Aberdeen Adak Adakli Adalar Adana Adapazan 
+  Adelaide Adiyaman Afyonkarahisar Agadir Agresar Ahmedabad Ainhoa 
+  Airmadidi Akcakoca Akhisar Akron Aksaray Aksehir Akyaka Akyazi 
+  Aladag Alcobaça Alexandria Aley Aliaga Alicante Allahabad Alta 
+  Altea Altinoluk Altinova Altrincham Alytus Amasya Ambon Amed Amman 
+  Amsterdam Analya Angers Ankara Annecy Antakya Antalya Antibes Antony 
+  Antwerpen Aqaba Aral Ardesen Arendal Arezzo Arnhem Artvin Asenovec 
+  Asenovgrad Askim Asminderød Assis Assos Assunçao Atakum Atasehir 
+  Athens Atlanta Aubagne Auckland Augsburg Avignon Ayacucho Aydin 
+  Ayvalik Ayvansaray
 
   Babaeski Babayagmur Baghdad Baglarbasi Bagodi Baimao Balchik Bakauheni 
-  Bakirköy Balarampur Balaton Balatonföldvár Balikesir Balikpapan Ballerup 
-  Ballymena Bamberg Bandirma Bandung Bangalore Bangkok Banjarmasin 
-  Bansi Bansko Barcelona Barlinek Bartoszyce Basel Batam Bath 
-  Batikent Batman Batu Batununggal Bayramiç Bedford Begues Beihai 
+  Bakirköy Balarampur Balaton Balatonföldvár Balikesir Balikpapan 
+  Ballerup Ballymena Bamberg Bandirma Bandung Bangalore Bangkok 
+  Banjarmasin Bansi Bansko Barcelona Barlinek Bartoszyce Basel Batam 
+  Bath Batikent Batman Batu Batununggal Bayramiç Bedford Begues Beihai 
   Beijing Beirut Bekasi Belene Belgrade Belfast Bengkalis Bengkulu 
   Beograd Berdyczow Bereket Bergen Bergues Bergule Berkeley Berlin 
   Besiktas Bevagna Beyoglu Bhatpara Bhilwara Bhimavaram Bhubaneswar 
   Bialystok Biarritz Bielefeld Bikaner Bilbao Bilecik Birolo Bismil 
-  Bistrita Bitung Blitar Blois Bodrum Bochum Bodø Bogor Bogotá Boleslawiec 
-  Bologna Bolu Bonn Bordeaux Borlänge Bormali Bornova Boston Bozüyük 
-  Böblingen Braila Brandbu Braniewo Brasilia Brasov Bremen Brevik 
-  Brighton Brisbane Broadbeach Bromölla Brooklyn Bruges Brussels 
-  Bucharest Budapest Buffalo Bulancak Buonconvento Burghausen Bursa 
-  Burdur Buyukada Buzios Bydgoszcz Bytom Bø
+  Bistrita Bitung Blitar Blois Bodrum Bochum Bodø Bogor Bogotá 
+  Boleslawiec Bologna Bolu Bonn Bordeaux Borlänge Bormali Bornova 
+  Boston Bozüyük Böblingen Braila Brandbu Braniewo Brasilia Brasov 
+  Bremen Brevik Brighton Brisbane Bristol Broadbeach Bromölla Brooklyn 
+  Bruges Brussels Bucharest Budapest Buffalo Bulancak Buonconvento 
+  Burdwan Burghausen Bursa Burdur Burgas Buyukada Buzios Bydgoszcz 
+  Bytom Bø
 
-  Cadiz Caen Cairns Cairo Calais Calgary Cali Cambrils Canakkale 
-  Canberra Cankaya Cankiri Cannareggio Cannes Canterbury Caracas 
-  Casablanca Cassel Cascais Castres Catalca Catania Caykara Cerkezkoy 
-  Cesme Chandigarh Changhua Changsha Changzhou Charlottesville Charreau
-  Chavdar Chaville Chelmno Chelopech Chengdu Chennai Chepelare 
-  Chiayi Chicago Chongqing Christchurch Chumphon Cide Cigli Cildir
-  Cimahi Cirebon Civril Claremont Clichy Cluj Coimbra Comandatuba 
-  Copenhagen Corlu Corum Coventry Craiova Csapi Csíkszereda Cuenca Cuneo
+  Cadiz Caen Cagliari Cairns Cairo Calais Calangute Calgary Cali 
+  Cambrils Canakkale Canberra Cankaya Cankiri Cannareggio Cannes 
+  Canterbury Caracas Carlsbad Casablanca Cassel Cascais Castres 
+  Catalca Catania Çaycuma Caykara Cerkezkoy Cesme Champaign Chandigarh 
+  Changhua Changsha Changzhou Charleroi Charlottesville Charreau 
+  Chartres Chavdar Chaville Chelmno Chelopech Chengdu Chennai 
+  Chepelare Chiayi Chicago Chisinau Chongqing Christchurch Chumphon 
+  Cide Cigli Cildir Cimahi Cirebon Civril Claremont Clichy Cluj 
+  Coimbature Coimbra Comandatuba Copenhagen Corlu Corum Corvallis
+  Coventry Craiova Cranbrook Csapi Csíkszereda Cuenca Cuneo Cupertino
+  Curitiba
 
-  Dabrowka Dalaman Dalian Dambron Darmstadt Datca Deauville Debrecen 
-  Decazeville Degirmendere Delft Delhi Denizli Depok Derpt Deva Devrek 
-  Dhaka Dharmasraya Dijon Dikili Divrigi Diyarbakir Dimitrovgrad 
-  Dinhata Dobrich Doha Doki Dombivli Dongguan Dorohoi Dortmund Dörtyol 
-  Drammen Drøbak Dubai Dublin Dubrovnik Dunfermlin Durban Durgapur 
-  Düsseldorf Düzce
+  Dabrowka Dalaman Dalian Dambron Darmstadt Datca Daytona Deauville 
+  Debrecen Decazeville Degirmendere Delft Delhi Denizli Denver
+  Depok Derpt Detroit Deva Devrek Dhaka Dharmasraya Dijon Dikili 
+  Divrigi Diyarbakir Dimitrovgrad Dinhata Dobrich Doha Doki Dombivli 
+  Dongguan Dorohoi Dortmund Dörtyol Drammen Drøbak Dubai Dublin 
+  Dubrovnik Dunfermlin Durban Durgapur Durham Düsseldorf Düzce
 
   Eastbourne Edinburgh Edirne Edmonton Edremit Egemen Egirdir Elazig
-  Elblag Elmadag Emirdag Enschede Ephesus Erdek Eregli Ergene Eryaman 
-  Erzinkan Erzurum Esbjerg Esenler Eskisehir Essen Estoril Evanston Evora
+  Elblag Elmadag Elverum Emirdag Englewood Enschede Ephesus Erdek Eregli 
+  Ergene Eryaman Erzinkan Erzurum Esbjerg Esenler Eskisehir Essen 
+  Estoril Evanston Evansville Evora
 
   Farsund Farum Fauske Felletin Fernetti Fethiye Firenze Flekkefjord 
-  Florianopolis Foca Fosnavåg Frankfurt Fredrikstad Freiburg Fritzlar 
-  Funchal Fussey Fuzhou Førde
+  Florianopolis Foca Fosnavåg Frankfort Frankfurt Fredrikstad Freiburg 
+  Fritzlar Funchal Fussey Fuzhou Førde
 
   Gainesville Galveston Galway Gajaki Galleberg Garches Gaza Gaziemir 
-  Gazipasa Gävle Gdansk Gdynia Gebze Gelibolu Geneva Genoa Gent Gevgelija 
-  Geyve Giresun Giza Gizycko Glasgow Gliwice Gnesta Gniezno Gölcük 
-  Göteborg Gqeberha Graz Grenoble Gresik Grobogan Grodkow Grogol 
-  Groningen Guangdong Guangzhou Guayaquil Gudbrandsdal Gudivada 
-  Guoxing Gümüshane Gümüşlük Gütersloh Gyor
+  Gazipasa Gävle Gdansk Gdynia Gebze Gelibolu Geneva Genoa Gent 
+  Georgetown Gevgelija Geyve Giresun Giza Gizycko Glasgow Glendale
+  Gliwice Gnesta Gniezno Göksun Gölcük Göteborg Gqeberha Graz Grenoble 
+  Gresik Grobogan Grodkow Grogol Groningen Guangdong Guangzhou 
+  Guayaquil Gudbrandsdal Gudivada Guoxing Gümüshane Gümüşlük Gütersloh 
+  Gyor
 
-  Haderslev Haikou Hamar Hamburg Hammamet Hangzhou Hani Hanko Hannover 
-  Harplinge Harmanli Harstad Haskovo Hatay Havirov Hayrabolu Hebi 
-  Hedemora Heikendorf Heledia Helsinki Hemsin Hendek Herning Hillerød 
-  Hiroshima Hjørring Hobart Hobro Hornbæk Horsens Houston Hrubieszow 
-  Hsinchu Huayin Huldretråkket Hunedoara Hurepoix Huwei Hyderabad
+  Haderslev Haikou Hamar Hamburg Hammamet Hanau Hangzhou Hani Hanko 
+  Hannover Harplinge Harmanli Harstad Harvard Haskovo Hatay Havirov 
+  Hayrabolu Hebi Hedemora Heikendorf Heledia Helsingborg
+  Helsinki Hemsin Hendek Herning Hillerød Hiroshima Hjørring Hobart 
+  Hobro Honolulu Hornbæk Horsens Houston Hrubieszow Hsinchu Huayin 
+  Huldretråkket Hunedoara Hurepoix Huwei Hyderabad
 
   Iasi Incesu Indianapolis Indore Indramayu Inowroclaw 
   Iskenderun Isparta Issans Istanbul Ithaca Izmir Iznik
@@ -275,91 +301,97 @@ my @SINGLE_WORDS = qw(
 
   Kabardey Kadirli Kahramanmaras Kaisei Kajaani Kalisz Kalundborg Kalyani 
   Kanchanaburi Kanha Kanpur Kaohsiung Karabük Karacasu Karaman Karasu 
-  Karimun Karlovo Karlsruhe Karsiyaka Kartal Kashi Kassel Kastamonu 
-  Katowice Kavakdibi Kavarna Kayseri Kazanlak Kediri Kedungwaru 
-  Kedzierzyn Keelung Kemalpasa Kesap Kesten Ketsch Kiel Kielce Kiev 
-  Kigali Kinali Kirkeby Kirikcan Kirklareli Kirsehir Kista Kiten Kitka 
-  Kiziltepe Klabat Klepp Kleve Kocaeli Kolbotn Kolkata Kolobrzeg 
-  Konga Kongsberg Konnerud Konya Kópavogur Korfez Kornik Kosice 
-  Kostroma Koszalin Kota Koycegiz Köln Kragerø Krakow Kraljevica 
-  Krasnodar Kristiansand Krzywanice Kucukbakkalkoy Kudus Kunshan 
-  Kuopio Kusadasi Kutno Kuzguncuk Küçükçekmece Kütahya Kverndalen 
-  Kyoto Kyustendil Køge Kølabånn
+  Karimun Karlovo Karlsruhe Karlstad Karsiyaka Kartal Kashi Kassel 
+  Kastamonu Katowice Kavakdibi Kavarna Kayseri Kazanlak Kediri 
+  Kedungwaru Kedzierzyn Keelung Kemalpasa Kesap Kesten Ketsch 
+  Kharagpur Kiel Kielce Kiev Kigali Kinali Kirkeby Kirikcan Kirklareli 
+  Kirsehir Kista Kiten Kitka Kiziltepe Klabat Klepp Kleve Kocaeli 
+  Kolbotn Kolkata Kolobrzeg Konga Kongsberg Konnerud Konya Kópavogur 
+  Korfez Kornik Kosice Kostroma Koszalin Kota Koycegiz Köln Kragerø 
+  Krakow Kraljevica Krasnodar Kristiansand Krzywanice Kucukbakkalkoy 
+  Kudus Kunshan Kuopio Kusadasi Kutno Kuzguncuk Küçükçekmece Kütahya 
+  Kverndalen Kyoto Kyustendil Køge Kølabånn
 
   Lahore Lakselv Lambach Landak Langkat Lanzhou Laodikya Lappeenranta 
-  Larissa Larnaca Larvik Lausanne Lebork Lecco Leiden Leipzig Leksand 
-  Lerum Lesno Leszno Leuven Leverkusen Lhokseumawe Liandui Liège 
-  Liepaja Lille Lillehammer Lima Limboto Linares Lincoln Lindesberg 
-  Linköping Lisbon Liushu Livane Liverpool Livorno Ljubljana Lodi Lodz 
-  Lojdy Lokotok Lom Lomza London Lovech Lowicz Lublin Lubomino Ludhiana 
-  Ludvikabygden Lufeng Luleburgaz Lumajang Luzern Lübeck Lyngdal Lyon
+  Largo Larissa Larnaca Larvik Lausanne Lebork Lecco Leiden Leipzig 
+  Leksand Leogane Lerum Lesno Leszno Leuven Leverkusen Lhokseumawe 
+  Liandui Liège Liepaja Lille Lillehammer Lima Limboto Linares Lincoln 
+  Lindesberg Linköping Lisbon Liushu Livane Liverpool Livorno 
+  Ljubljana Lodi Lodz Lojdy Lokotok Lom Lomza London Loughborough
+  Lovech Lowicz Lubin Lublin Lubomino Ludhiana Ludvikabygden Lufeng 
+  Luleburgaz Lumajang Luzern Lübeck Lyngdal Lyon
 
   Maastricht Madrid Magetan Maillé Mainz Makassar Malaga Malang Malatya 
-  Malkara Malmö Manado Manchester Manila Manisa Manna Mannheim 
+  Malkara Malmö Manado Manavgat Manchester Manila Manisa Manna Mannheim 
   Marbella Marcelli Mardin Marijampolė Marmaris Marrakech Marseille 
   Martapura Massy Mautern Medan Medellin Melawi Melbourne Memphis 
   Meritxell Mersin Meursac Miami Miaoli Michalovce Michalowo Midyat 
-  Milan Milas Minsk Miramar Miskolc Momchilgrad Monticiano Montoro 
-  Montpellier Montreal Moradabad Mordogan Morsø Morud Moscow Moss 
-  Mragowo Mudanya Muðla Mulund Mumbai Munich Myndos Mysore
+  Milan Milas Minsk Miramar Miskolc Momchilgrad Montélimar
+  Monticiano Montoro Montpellier Montreal Moradabad Mordogan Morsø 
+  Morud Moscow Moss Mragowo Mudanya Muðla Mulhouse Mulund Mumbai Munich 
+  Myndos Mysore
 
   Nagari Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanjing
   Nanning Nantes Nantong Napoli Narlidere Narvik Nashik Nashville Nazilli 
   Näsby Nebakan Neijiang Nesodden Netanya Neuruppin Nevsehir Newport 
-  Nganjuk Nice Nicosia Niedernhausen Nijmegen Nilüfer Nimes Ningbo 
-  Niš Noida Nonthaburi Norrbyskär Norrøna Nottingham Notodden Novosibirsk 
-  Nusaybin Nuuk Nürnberg Nykøbing Nyon Nysa Nærbø Nærøysund Næstved 
-  Nøtterøy
+  Nganjuk Nice Nicosia Niedernhausen Nijmegen Niksar Nilüfer Nimes Ningbo 
+  Niš Noida Nonthaburi Norrbyskär Norrøna Nottingham Notodden Nouméa
+  Novosibirsk Nusaybin Nuuk Nürnberg Nykøbing Nyon Nysa Nærbø Nærøysund 
+  Næstved Nøtterøy
 
-  Odense Oderzo Odessa Odmet Ogndal Oldenburg Olrud Olsztyn Oltenita 
-  Opatija Opole Oradea Ordu Orlando Orly Orneta Orhangazi Osaka Ostend 
-  Oslo Osnabrück Ostrowiec Otepää Ottadalen Ottawa Oxford Ozarow 
-  Örebro Överum
+  Ocala Odense Oderzo Odessa Odmet Ogndal Oldenburg Olrud Olsztyn 
+  Oltenita Omaha Omurtag Opatija Opole Oradea Ordu Orlando Orly 
+  Orneta Orhangazi Osaka Ostend Oslo Osmaniye Osnabrück Ostrowiec 
+  Otepää Ottadalen Ottawa Oxford Ozarow Örebro Överum
 
   Pacitan Padang Padova Paimado Palembang Palencia Palermo Palma Palu 
   Pamukkale Panagyurishte Panaji Pancevo Panzhihua Pariaman Paris 
-  Pärnu Parvomay Pasadena Pasuruan Pattaya Pau Pazar Pazardjik Pecs 
-  Peebles Pekanbaru Pelitli Pelotas Pemangkat Penajam Pernik Perpignan 
-  Persepolis Perth Perula Pervera Pesaro Pescara Petersfield Petrelik 
-  Philadelphia Phitsanulok Phoenix Phokai Phuket Piedimonte Pieksämäki 
-  Pijnacker Pisa Pitane Pittsburgh Pleven Pliska Plock Plovdiv 
-  Plumergat Polokwane Pompeii Pontianak Popovo Porto Portobello 
-  Potsdam Poznan Prague Preslav Priboi Primorsko Probolinggo Protaras 
-  Przemysl Ptuj Pula Pulawy Pune Puri Pushkar Puutalo Pyrzyce
+  Pärnu Parvomay Pasadena Pasuruan Patna Pattaya Pau Pazar Pazardjik Pecs 
+  Peebles Pekanbaru Pelitli Pelotas Pemangkat Penajam Pensacola
+  Pernik Perpignan Persepolis Perth Perula Pervera Pesaro Pescara 
+  Petersfield Petrelik Philadelphia Phitsanulok Phoenix Phokai Phuket 
+  Piedimonte Pieksämäki Pijnacker Piraeus Pisa Pisco Pitane Pittsburgh 
+  Pleven Pliska Plock Plovdiv Plumergat Poitiers Polokwane Pompeii 
+  Pontianak Popovo Portland Porto Portobello Potsdam Poznan Prague 
+  Preslav Priboi Primorsko Probolinggo Protaras Przemysl Ptuj Pula 
+  Pulawy Pune Puri Pushkar Puutalo Pyrzyce
 
   Quebec Qingdao
 
-  Rabat Radkov Rakovski Rakvere Randers Rastignano Ravnkilde Rayong 
-  Razgrad Redmond Reims Relizane Rennes Reno Reykjavik Riau Richmond 
-  Rieneck Riga Rijeka Rimini Riyadh Rize Rochester Romana Rome Ronneby 
-  Roskilde Rotterdam Rottneros Royan Rozanka Rubbestadneset Ruen Rugao 
-  Ruian Ruse Rzepin Rzeszow Rødovre Rønne
+  Rabat Radauti Radkov Rakovski Rakvere Randers Rastignano Ravnkilde 
+  Rayong Razgrad Redmond Reims Relizane Rennes Reno Reykjavik Riau 
+  Richmond Rieneck Riga Rijeka Rimini Riverside Riyadh Rize Rochester 
+  Romana Rome Ronneby Roskilde Rotterdam Rottneros Royan Rozanka 
+  Rubbestadneset Ruen Rugao Ruian Ruse Rzepin Rzeszow Rødovre Rønne
 
   Saarbrücken Sabadell Safranbolu Saigon Salerno Salo Salsomaggiore 
-  Samarinda Samobor Sampit Samsun Sandefjord Sansepolcro Santiago Sanya 
-  Sariyer Sarpsborg Savona Sawahlunto Seattle Secunderabad Seferihisar 
-  Selfoss Semarang Sendai Senigallia Seoul Serang Sevtopolis Shanghai 
-  Shangrao Shaoguan Sharjah Shenyang Shenzhen Shijiazhuang Shimla 
-  Shiraz Shouguang Shumen Sibiu Sidoarjo Siedlce Siena Sieradz Sighisoara
-  Siglufjordur Sigulda Sile Silifke Silistra Silivri Simav Simeonovgrad 
-  Sindi Singaraja Singkawang Singsås Sinop Siofok Sirnak Sivas Skara 
-  Skarvemellen Skawina Ski Skien Skopje Slagelse Slavyanovo Slawa Sleman 
-  Sliven Smedstad Smolyan Smyrna Snåsa Sofia Solapur Solo Solok Solvorn 
-  Sombor Songkhla Sopot Sortland Söke Sozopol Split Stanford Starachowice 
-  Stargard Stavanger Steinkjer Stirling Stockholm Stockton Stokke Stoholm 
-  Storsjöbygden Strasbourg Strømmen Stureby Stuttgart Szczecin Sukma 
-  Sukomoro Sumedang Sunndalsøra Suqian Surabaya Suzhou Suwalki Sürmene
-  Svendborg Svilengrad Svinninge Svishtov Sydney Szczecinek Szczyrk 
-  Szeged Sztum Søborg Sømna Sørreisa Sørvoll
+  Samarinda Samobor Sampit Samsun Sandefjord Sanliurfa Sansepolcro 
+  Santiago Sanya Saragossa Sariyer Sarpsborg Savona Sawahlunto Seattle 
+  Secunderabad Seferihisar Selfoss Semarang Sendai Senigallia Seoul 
+  Serang Sevtopolis Shanghai Shangrao Shaoguan Sharjah Shenyang 
+  Shenzhen Shijiazhuang Shimla Shiraz Shouguang Shumen Sibiu Sidoarjo 
+  Siedlce Siena Sieradz Sighisoara Siglufjordur Sigulda Sile Silifke 
+  Silistra Silivri Simav Simeonovgrad Sindi Singaraja Singkawang 
+  Singsås Sinop Siofok Sirnak Sivas Skara Skarvemellen Skawina Ski 
+  Skien Skopje Slagelse Slavyanovo Slawa Sleman Sliven Smedstad 
+  Smithers Smolyan Smyrna Snåsa Sofia Sogndal Solapur Solo Solok 
+  Solvorn Sombor Songkhla Sopot Sortland Söke Sozopol Split Stanford 
+  Starachowice Stargard Stavanger Steinkjer Stirling Stockholm 
+  Stockton Stokke Stoholm Storsjöbygden Strasbourg Strømmen Stureby 
+  Stuttgart Szczecin Suceava Sukma Sukomoro Sumedang Sunndalsøra 
+  Suqian Surabaya Suzhou Suwalki Sürmene Svendborg Svilengrad 
+  Svinninge Svishtov Sydney Szczecinek Szczyrk Szeged Sztum Søborg 
+  Sømna Sørreisa Sørvoll
 
-  Tabarka Taicang Taichung Tainan Taiyuan Taizhou Takayama Talagante
-  Tallinn Tambun Tangerang Taoyuan Tarakan Targoviste Tarnów Tarnobrzeg 
-  Tasikmalaya Taskopru Tatvan Tavsanli Täby Täfteå Tbilisi Tczew 
-  Tekkekoy Tekýrdag Telmessos Temuco Ternopil Terzialan Thane 
-  Thanjavur Thessaloniki Thoisy Tianjin Tijuana Tilburg Timisoara 
-  Tire Tofta Tokyo Toledo Tomohon Tonara Tondano Tonya Torino Toronto 
-  Toshima Toulouse Tours Trabzon Tralles Trang Treviso Trieste Tripoli 
-  Trondheim Tromsø Tucson Tula Tunceli Turgutlu Turkistan Turunc Tübingen 
+  Tabarka Tacoma Taicang Taichung Tainan Taiyuan Taizhou Takayama 
+  Talagante Tallinn Tambun Tampa Tangerang Taoyuan Tarakan Targoviste 
+  Tarnów Tarnobrzeg Tasikmalaya Taskopru Tatvan Tavsanli Täby Täfteå 
+  Tbilisi Tczew Tekkekoy Tekýrdag Telmessos Temuco Ternopil Terzialan 
+  Texarkana Thane Thanjavur Thessaloniki Thoisy Tianjin Tijuana Tilburg 
+  Timisoara Tire Tofta Tokyo Toledo Tomohon Tonara Tondano Tonya Torino 
+  Toronto Torrance Toshima Toulon Toulouse Tours Trabzon Tralles 
+  Trang Treviso Trieste Tripoli Trondheim Tromsø Tucson Tula Tulsa 
+  Tunceli Turgutlu Turkistan Turku Turunc Tübingen 
 
   Udaipur Uddevalla Ulricehamn Umeå Underberg Uppsala Urla Usak Utrecht 
   Uzunköprü
@@ -370,11 +402,12 @@ my @SINGLE_WORDS = qw(
   Viborg Vienna Vikersund Vilamoura Villeurbanne Vilnius 
   Vishakhapatanam Viterbo Vodskov Vorden Vraca Våge Vålerenga
 
-  Walbryzch Waldsolms Waltham Wanzhou Warsaw Waterford Waterloo
-  Wellington Wetzlar Wiesbaden Wimbledon Winnipeg Wisla Wolverhampton 
-  Worcester Wroclaw Wronie Wuhan Wuxi Wuzhishan
+  Walbryzch Waldsolms Waltham Wanzhou Warsaw Warwick Waterford Waterloo
+  Wellington Wetzlar Wichita Wiesbaden Williamsburg Wimbledon 
+  Winnipeg Wisla Woburn Wolverhampton Worcester Wroclaw Wronie Wuhan 
+  Wuxi Wuzhishan
 
-  Xiamen Xian Xiantao Xinyi Xuzhou
+  Xanthi Xiamen Xian Xiantao Xingdong Xinyi Xuzhou
 
   Yalikavak Yalova Yambol Yamoussoukro Yancheng Yangzhong Yanshi Yantai 
   Yarimada Yarimca Yasothon Yatagan Yaykin Yekaterinburg Yerevan 
@@ -515,6 +548,7 @@ my %SINGLE_TYPOS =
   Petersfield => ['peterfield'],
   Phuket => ['puket'],
   'Piatra Neamt' => ['neamt'],
+  Pompeii => ['pompei'],
   Porto => ['invicta', 'oporto'],
   Potsdam => ['postdam'],
   Poznan => ['poz', 'poznañ'],

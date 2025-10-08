@@ -28,7 +28,7 @@ use Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT = qw($sublines $fluffed_lines $system_lines
   $known_names $late_mails $both_last $both_neither inspect_paragraph
-  $study_word);
+  study_word study_name);
 
 use lib '../../bbo';
 use Util;
@@ -106,67 +106,6 @@ sub look_for_single_tag
 }
 
 
-sub pre_inspect
-{
-  # A return value of 1 means that we're done inspecting.
-
-  die "Dead code?";
-  my ($entry, $handle, $hcount, $eno, $identifier) = @_;
-
-  if ($fluffed_lines->lookup($handle, $hcount, $eno))
-  {
-    $entry->{CATEGORY} = 'FLUFF';
-    $entry->{VALUE} = $entry->{TEXT};
-print $identifier;
-    return 1;
-  }
-
-  if ($system_lines->lookup($handle, $hcount, $eno))
-  {
-    $entry->{CATEGORY} = 'SYSTEM';
-    $entry->{VALUE} = $entry->{TEXT};
-    return 1;
-  }
-
-  if (my $replace = $sublines->lookup($handle, $hcount, $eno, 
-    $entry->{TEXT}))
-  {
-    # Still fall through and inspect further.
-    $entry->{TEXT} = $replace;
-  }
-
-  if ($late_mails->lookup($handle, $hcount, $eno))
-  {
-    my @list;
-    Email::Email::looks_like(lc($entry->{TEXT}), \@list);
-    if ($#list < 0)
-    {
-      print $identifier;
-      die "Not an email?";
-    }
-
-    $entry->{CATEGORY} = 'LIST';
-    @{$entry->{LIST}} = @list;
-    return 1;
-  }
-
-  if ($known_names->lookup($handle, $hcount, $eno))
-  {
-    $entry->{CATEGORY} = 'NAMELIKE';
-    $entry->{VALUE} = $entry->{TEXT};
-    return 1;
-  }
-
-  if ($both_last->lookup($entry->{TEXT}))
-  {
-    $entry->{CATEGORY} = 'NAME_LAST';
-    return 1;
-  }
-
-  return 0;
-}
-
-
 sub study_word
 {
   my ($whole_names, $word, $histo) = @_;
@@ -223,9 +162,39 @@ sub study_word
 }
 
 
+sub study_name
+{
+  my ($whole_names, $last3_names, $word1, $word2, $histo) = @_;
+
+  # Simple screen for names.
+  # TODO Keep more details of name structure.
+
+  my $cat1 = study_word($whole_names, $word1, $histo);
+  my $cat2 = study_word($whole_names, $word2, $histo);
+
+  if ($cat2 eq '' && $last3_names->lookup($word2))
+  {
+    $cat2 = 'NAME_LAST';
+  }
+
+  if ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_LAST')
+  {
+    return 'NAME_LIKE';
+  }
+  elsif ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_INITIAL')
+  {
+    return 'NAME_LIKE';
+  }
+
+  print "cat1 $cat1 cat2 $cat2\n";
+
+  return '';
+}
+
+
 sub pre_parse
 {
-  my ($entry, $whole, $identifier, $histo) = @_;
+  my ($entry, $whole, $last3_names, $identifier, $histo) = @_;
 
   my @components = split /\|\|/, $entry->{TEXT};
   return 0 unless $#components == 1;
@@ -252,6 +221,24 @@ sub pre_parse
       next;
     }
 
+    if ($comp =~ /^\d+$/ && $comp >= 1920 && $comp <= 2005)
+    {
+      push @list, 'YEAR_BIRTH', $comp;
+      next;
+    }
+
+    my @words = split ' ', $comp;
+    if ($#words == 1)
+    {
+      my $cat = study_name($whole, $last3_names,
+        $words[0], $words[1], $histo);
+      if ($cat)
+      {
+        push @list, $cat, $comp;
+        next;
+      }
+    }
+
     print "$entry->{TEXT}\n$comp MISS\n---\n\n";
   }
 
@@ -261,9 +248,9 @@ sub pre_parse
 }
 
 
-sub pre_inspect_NEW
+sub pre_inspect
 {
-  my ($entry, $whole, $handle, $hcount, $eno, $order, 
+  my ($entry, $whole, $last3_names, $handle, $hcount, $eno, $order, 
     $identifier, $histo) = @_;
 
   if (my $replace = $sublines->lookup($handle, $hcount, $eno, 
@@ -275,7 +262,8 @@ sub pre_inspect_NEW
 
   if ($entry->{TEXT} =~ /\|\|/)
   {
-    return if pre_parse($entry, $whole, $identifier, $histo);
+    return if pre_parse($entry, $whole, $last3_names,
+      $identifier, $histo);
   }
 
   for my $tag (@$order)
@@ -350,7 +338,7 @@ sub guess_private
 
 sub inspect_paragraph
 {
-  my ($whole, $paragraph, $pre_inspect_order, 
+  my ($whole, $last3_names, $paragraph, $pre_inspect_order, 
     $handle_counts, $histo) = @_;
 
   my $country_seen = 0;
@@ -378,8 +366,7 @@ sub inspect_paragraph
     my $identifier = "YYY $handle, $hcount, $eno\n" .
       $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
 
-    # next if pre_inspect($entry, $handle, $hcount, $eno, $identifier);
-    next if pre_inspect_NEW($entry, $whole,
+    next if pre_inspect($entry, $whole, $last3_names,
       $handle, $hcount, $eno, $pre_inspect_order, $identifier, $histo);
 
     if (! $country_seen)

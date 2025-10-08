@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Abu Dhabi',
   'American Samoa',
   'Bosnia & Herzegovina',
+  'Cape Verde',
   'Burkina Faso',
   'Cayman Islands',
   'Central African Republic',
@@ -34,6 +35,7 @@ my @MULTI_WORDS =
   'Hong Kong',
   'Isle of Man',
   'Ivory Coast',
+  'Marshall Islands',
   'Netherlands Antilles',
   'New Caledonia',
   'New Guinea',
@@ -157,6 +159,7 @@ my @SINGLE_WORDS = qw(
   Laos Latvia Lebanon Lesotho Libya Liechtenstein Lithuania Luxembourg 
   Macau Madagascar Malawi Malaysia Mali Malta Martinique Mauritius 
   Mexico Moldova Monaco Mongolia Montenegro Morocco Mozambique
+  Myanmar
   Namibia Nepal Netherlands Nicaragua Nigeria Norden Norway 
   Oman
   Pakistan Palestine Panama Paraguay Peru Philippines Poland Portugal
