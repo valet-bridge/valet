@@ -28,10 +28,13 @@ use Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT = qw($sublines $fluffed_lines $system_lines
   $known_names $late_mails $both_last $both_neither inspect_paragraph
-  study_word study_name);
+  lines_to_list list_to_units
+  study_word study_name study_name_two);
 
 use lib '../../bbo';
 use Util;
+
+use Butil;
 
 use lib './Email';
 use Email::Email;
@@ -70,6 +73,59 @@ my @LAST_ORDER = qw(
   LASTBBO
 );
 
+my @SYSTEM_TAGS = qw(
+  DENOMINATIONS
+  LENGTHS
+  RANKS
+  SHAPES
+  STRENGTHS
+
+  BASES
+  OPENINGS
+  CONSTRUCTIVE
+  COMPETITIVE
+  BLACKWOOD
+  BERGEN
+  MISC
+  KEYCARD
+  STAYMAN
+  CARDING
+);
+
+my %PUNCTUATION =
+(
+  '-' => 'DASH',
+  '+' => 'PLUS',
+  '.' => 'POINT',
+  '?' => 'QUESTION',
+  '_' => 'UNDERSCORE',
+  ',' => 'COMMA',
+  ':' => 'COLON',
+  ';' => 'SEMICOLON',
+  '=' => 'EQUAL',
+  '&' => 'AMPERSAND',
+  '@' => 'AT_SIGN',
+  '#' => 'HASH',
+  '*' => 'ASTERISK',
+  '%' => 'PERCENT',
+  '$' => 'DOLLAR',
+  '^' => 'CARET',
+  '~' => 'TILDE',
+  '"' => 'DOUBLEQUOTE',
+  '/' => 'SLASH',
+  '\\' => 'BACKSLASH',
+  '(' => 'PAREN_LEFT',
+  ')' => 'PAREN_RIGHT',
+  '<' => 'LESS_THAN',
+  '>' => 'GREATER_THAN',
+  '|' => 'PIPE',
+  '[' => 'SQUARE_LEFT',
+  ']' => 'SQUARE_RIGHT',
+  '{' => 'CURLY_LEFT',
+  '}' => 'CURLY_RIGHT',
+);
+
+
 
 sub init_pre_inspected
 {
@@ -103,6 +159,82 @@ sub look_for_single_tag
   # Look for single-word tag.
   my $fix = $whole->get_single($tag, lc($text));
   return (defined $fix->{CATEGORY} ? $fix->{VALUE} : '');
+}
+
+
+sub lines_to_list
+{
+  my ($entry, $list) = @_;
+
+  if ($entry->{CATEGORY} eq 'LIST')
+  {
+    my $len = $#{$entry->{LIST}};
+    for (my $i = 0; $i <= $len; $i += 2)
+    {
+      if ($entry->{LIST}[$i] eq 'OPEN' ||
+          $entry->{LIST}[$i] eq 'SYSTEM')
+      {
+        push @$list, $entry->{LIST}[$i+1];
+      }
+    }
+  }
+  elsif ($entry->{CATEGORY} eq 'OPEN' || $entry->{CATEGORY} eq 'SYSTEM')
+  {
+    my $datum = $entry->{VALUE} // $entry->{TEXT};
+    push @$list, $datum;
+  }
+}
+
+
+sub list_to_units
+{
+  my ($whole, $unit_tags, $list, $units, $text, $histo, $chain_stats) = @_;
+
+  for my $datum (@$list)
+  {
+    $chain_stats->{DATA}++;
+
+    if ($datum =~ /#fake@/)
+    {
+      $units->push('FLUFF', $datum, $datum, 0, $chain_stats);
+      return;
+    }
+
+    my $sep = qr/(\d+|[\s\-\+\.\?_,:;=&@#*%\$^~"\/\\()<>|\[\]\{\}])/;
+    my @parts = grep { $_ ne '' } split /$sep/, $datum;
+
+    my $pos = -1;
+    my @splits;
+    for my $part (@parts)
+    {
+      $pos++;
+      $chain_stats->{PARTS}++;
+
+      if (exists $PUNCTUATION{$part})
+      {
+        $units->push('PUNCTUATION', $part, $PUNCTUATION{$part},
+          $pos, $chain_stats);
+        next;
+      }
+      elsif ($part eq ' ')
+      {
+        $units->push('PUNCTUATION', $part, 'SPACE', $pos, $chain_stats);
+        next;
+      }
+      elsif ($part =~ /^\d+$/)
+      {
+        $units->push_integer($part, $pos, $chain_stats);
+        next;
+      }
+      else
+      {
+        my ($category, $value);
+        categorize($whole, $unit_tags, $part, \$category, \$value);
+
+        $units->push($category, $part, $value, $pos, $chain_stats);
+      }
+    }
+  }
 }
 
 
@@ -162,7 +294,7 @@ sub study_word
 }
 
 
-sub study_name
+sub study_name_two
 {
   my ($whole_names, $last3_names, $word1, $word2, $histo) = @_;
 
@@ -179,11 +311,15 @@ sub study_name
 
   if ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_LAST')
   {
-    return 'NAME_LIKE';
+    return 'NAMELIKE';
   }
   elsif ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_INITIAL')
   {
-    return 'NAME_LIKE';
+    return 'NAMELIKE';
+  }
+  elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_LAST')
+  {
+    return 'NAMELIKE';
   }
 
   print "cat1 $cat1 cat2 $cat2\n";
@@ -192,9 +328,27 @@ sub study_name
 }
 
 
+sub study_name
+{
+  my ($units, $whole_names, $last3_names, $histo) = @_;
+
+  # This is a feeble start of a more general method.
+  # TODO depunctuate to the bones
+
+  if ($units->last() == 2 && $units->category(1) eq 'PUNCTUATION')
+  {
+    return study_name_two($whole_names, $last3_names,
+      $units->value(0), $units->value(2), $histo);
+  }
+
+  return '';
+}
+
+
 sub pre_parse
 {
-  my ($entry, $whole, $last3_names, $identifier, $histo) = @_;
+  my ($entry, $whole_names, $whole_system, $last3_names, 
+    $identifier, $histo, $chain_stats) = @_;
 
   my @components = split /\|\|/, $entry->{TEXT};
   return 0 unless $#components == 1;
@@ -205,7 +359,7 @@ sub pre_parse
     my $found = 0;
     for my $tag (@MULTI_ORDER)
     {
-      my $fix = $whole->get_single($tag, lc($comp));
+      my $fix = $whole_names->get_single($tag, lc($comp));
       next unless defined $fix->{CATEGORY};
 
       push @list, $tag, $fix->{VALUE};
@@ -214,7 +368,7 @@ sub pre_parse
     }
     next if $found;
 
-    my $cat = study_word($whole, $comp, $histo);
+    my $cat = study_word($whole_names, $comp, $histo);
     if ($cat && $cat ne 'NAME_INITIAL')
     {
       push @list, $cat, $comp;
@@ -227,16 +381,18 @@ sub pre_parse
       next;
     }
 
-    my @words = split ' ', $comp;
-    if ($#words == 1)
+    my @list;
+    $list[0] = $comp;
+
+    my @battery;
+    $battery[0] = Units->new();
+    list_to_units($whole_system, \@SYSTEM_TAGS, \@list, $battery[0],
+      $comp, $histo, $chain_stats);
+    $cat = study_name($battery[0], $whole_names, $last3_names, $histo);
+    if ($cat)
     {
-      my $cat = study_name($whole, $last3_names,
-        $words[0], $words[1], $histo);
-      if ($cat)
-      {
-        push @list, $cat, $comp;
-        next;
-      }
+      push @list, $cat, $comp;
+      next;
     }
 
     print "$entry->{TEXT}\n$comp MISS\n---\n\n";
@@ -250,8 +406,8 @@ sub pre_parse
 
 sub pre_inspect
 {
-  my ($entry, $whole, $last3_names, $handle, $hcount, $eno, $order, 
-    $identifier, $histo) = @_;
+  my ($entry, $whole_names, $whole_system, $last3_names, 
+    $handle, $hcount, $eno, $order, $identifier, $histo, $chain_stats) = @_;
 
   if (my $replace = $sublines->lookup($handle, $hcount, $eno, 
     $entry->{TEXT}))
@@ -262,8 +418,8 @@ sub pre_inspect
 
   if ($entry->{TEXT} =~ /\|\|/)
   {
-    return if pre_parse($entry, $whole, $last3_names,
-      $identifier, $histo);
+    return if pre_parse($entry, $whole_names, $whole_system, $last3_names,
+      $identifier, $histo, $chain_stats);
   }
 
   for my $tag (@$order)
@@ -338,8 +494,9 @@ sub guess_private
 
 sub inspect_paragraph
 {
-  my ($whole, $last3_names, $paragraph, $pre_inspect_order, 
-    $handle_counts, $histo) = @_;
+  my ($whole_names, $whole_system, $last3_names, 
+    $paragraph, $pre_inspect_order, $handle_counts, 
+    $histo, $chain_stats) = @_;
 
   my $country_seen = 0;
   my $private_seen = 0;
@@ -366,13 +523,14 @@ sub inspect_paragraph
     my $identifier = "YYY $handle, $hcount, $eno\n" .
       $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
 
-    next if pre_inspect($entry, $whole, $last3_names,
-      $handle, $hcount, $eno, $pre_inspect_order, $identifier, $histo);
+    next if pre_inspect($entry, $whole_names, $whole_system, $last3_names,
+      $handle, $hcount, $eno, $pre_inspect_order, $identifier, 
+      $histo, $chain_stats);
 
     if (! $country_seen)
     {
-      my $c = look_for_single_tag($whole, \@COUNTRY_ORDER, 'COUNTRY',
-        $entry->{TEXT});
+      my $c = look_for_single_tag($whole_names, 
+        \@COUNTRY_ORDER, 'COUNTRY', $entry->{TEXT});
       if ($c)
       {
         $entry->{CATEGORY} = 'COUNTRY';
@@ -381,8 +539,8 @@ sub inspect_paragraph
         next;
       }
 
-      my $l = look_for_single_tag($whole, \@LEVEL_ORDER, 'LEVEL',
-        $entry->{TEXT});
+      my $l = look_for_single_tag($whole_names, 
+        \@LEVEL_ORDER, 'LEVEL', $entry->{TEXT});
       if ($l)
       {
         $entry->{CATEGORY} = 'LEVEL';
@@ -391,16 +549,16 @@ sub inspect_paragraph
         next;
       }
 
-      my $p = look_for_single_tag($whole, \@PRIVATE_ORDER, 'PRIVATE',
-        $entry->{TEXT});
+      my $p = look_for_single_tag($whole_names, 
+        \@PRIVATE_ORDER, 'PRIVATE', $entry->{TEXT});
       if ($p)
       {
         guess_private($entry, $p, $private_seen, $mail_seen, $level_seen);
         next;
       }
 
-      my $f = look_for_single_tag($whole, \@FLUFF_ORDER, 'FLUFF',
-        $entry->{TEXT});
+      my $f = look_for_single_tag($whole_names, 
+        \@FLUFF_ORDER, 'FLUFF', $entry->{TEXT});
       if ($f)
       {
         $entry->{CATEGORY} = 'FLUFF';
@@ -419,8 +577,8 @@ sub inspect_paragraph
         next;
       }
 
-      my $s = look_for_single_tag($whole, \@SYSTEM_ORDER, 'SYSTEM',
-        $entry->{TEXT});
+      my $s = look_for_single_tag($whole_names, 
+        \@SYSTEM_ORDER, 'SYSTEM', $entry->{TEXT});
       if ($s)
       {
         $entry->{CATEGORY} = 'SYSTEM';
@@ -429,8 +587,8 @@ sub inspect_paragraph
       }
     }
 
-    my $city = look_for_single_tag($whole, \@CITY_ORDER, 'CITY',
-      $entry->{TEXT});
+    my $city = look_for_single_tag($whole_names, 
+      \@CITY_ORDER, 'CITY', $entry->{TEXT});
     if ($city)
     {
       $entry->{CATEGORY} = 'CITY';
@@ -438,8 +596,8 @@ sub inspect_paragraph
       next;
     }
 
-    my $region = look_for_single_tag($whole, \@REGION_ORDER, 'REGION',
-      $entry->{TEXT});
+    my $region = look_for_single_tag($whole_names, 
+      \@REGION_ORDER, 'REGION', $entry->{TEXT});
     if ($region)
     {
       $entry->{CATEGORY} = 'REGION';
@@ -447,7 +605,8 @@ sub inspect_paragraph
       next;
     }
 
-    my $locality = look_for_single_tag($whole, \@LOCALITY_ORDER, 'LOCALITY',
+    my $locality = look_for_single_tag($whole_names, 
+      \@LOCALITY_ORDER, 'LOCALITY',
       $entry->{TEXT});
     if ($locality)
     {

@@ -243,11 +243,11 @@ my @SINGLE_WORDS = qw(
   Bialystok Biarritz Bielefeld Bikaner Bilbao Bilecik Birolo Bismil 
   Bistrita Bitung Blitar Blois Bodrum Bochum Bodø Bogor Bogotá 
   Boleslawiec Bologna Bolu Bonn Bordeaux Borlänge Bormali Bornova 
-  Boston Bozüyük Böblingen Braila Brandbu Braniewo Brasilia Brasov 
-  Bremen Brevik Brighton Brisbane Bristol Broadbeach Bromölla Brooklyn 
-  Bruges Brussels Bucharest Budapest Buffalo Bulancak Buonconvento 
-  Burdwan Burghausen Bursa Burdur Burgas Buyukada Buzios Bydgoszcz 
-  Bytom Bø
+  Boston Botosani Bozüyük Böblingen Braila Brandbu Braniewo Brasilia 
+  Brasov Bremen Brevik Brighton Brisbane Bristol Broadbeach Bromölla 
+  Brooklyn Bruges Brussels Bucharest Budapest Buffalo Bulancak 
+  Buonconvento Burdwan Burghausen Bursa Burdur Burgas Buyukada 
+  Buzios Bydgoszcz Bytom Bø
 
   Cadiz Caen Cagliari Cairns Cairo Calais Calangute Calgary Cali 
   Cambrils Canakkale Canberra Cankaya Cankiri Cannareggio Cannes 

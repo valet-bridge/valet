@@ -265,12 +265,12 @@ my @SINGLE_WORDS = qw(
   Arunachala Aurland Auvergne Ayrshire Azores
 
   Badakhshan Badung Bahia Bairrada Bali Banten Bayern Belitung Benchamas
-  Bengal Bengkayang Bihar BizkaiyaBogø Bolu Borneo Bornholm Bungo 
+  Bengal Bengkayang Bihar Bizkaia Bogø Bolu Borneo Bornholm Bungo 
   Buriram Buskerud
 
   California Camargue Çankiri Cantal Cappadocia Catalonia Charente 
-  Chartreuse Chengmai Colorado Comandatuba Connecticut Corfu Corsica 
-  Crete Cukurova
+  Chartreuse Chengmai Colorado Comandatuba Connecticut Cornwall
+  Corfu Corsica Crete Cukurova
 
   Dersim Dobruca Dobruja Druts
 
@@ -301,7 +301,7 @@ my @SINGLE_WORDS = qw(
   Misya Mjøsa Montana Muallim Munzur Mysia
 
   Narathiwat Narman Natuna Nebraska Negev Nevada Ngawi Nordafjells 
-  Normandy Norrland Norrorts Northland Nusantara
+  Nordland Normandy Norrland Norrorts Northland Nusantara
 
   Oberloiben Occitanie Odisha Ohio Oklahoma Olona Ontario Oregon 
   Orontes Otago Overijssel
@@ -327,7 +327,7 @@ my @SINGLE_WORDS = qw(
 
   Uludag Utah Uttarakhand Uzungol
 
-  Valsugana Victoria Vojvodina
+  Valsugana Vestland Victoria Vojvodina
 
   Wachau Waikato Washington Wielkopolska Wisconsin Wujin Wyoming Wyssa
 

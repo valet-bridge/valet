@@ -306,8 +306,9 @@ if ($paragraph->{HANDLE} eq 'LIBRAX')
   # print "HERE\n";
 }
   $handle_counts{$paragraph->{HANDLE}}++;
-  Inspect::inspect_paragraph($whole, $last3_names, $paragraph, 
-    \@PRE_INSPECTED_ORDER, \%handle_counts, $histo);
+  Inspect::inspect_paragraph($whole, $whole2, 
+    $last3_names, $paragraph, \@PRE_INSPECTED_ORDER, 
+    \%handle_counts, $histo, \%chain_stats);
 
 next;
   # print_paragraph($paragraph);
@@ -428,7 +429,7 @@ sub raw_to_paragraphs
 }
 
 
-sub lines_to_list
+sub lines_to_list_OLD
 {
   my ($entry, $list) = @_;
 
@@ -452,7 +453,7 @@ sub lines_to_list
 }
 
 
-sub list_to_units
+sub list_to_units_OLD
 {
   my ($whole, $unit_tags, $list, $units, 
     $text, $handle, $hcount, $lno, $histo, $chain_stats) = @_;
@@ -526,7 +527,7 @@ sub study_line
     $handle, $hcount, $lno, $histo, $chain_stats) = @_;
 
   my @list;
-  lines_to_list($entry, \@list);
+  lines_to_list_OLD($entry, \@list);
   return if $#list == -1; # COUNTRY, etc.
 
   if ($#list == 0 && $list[0] !~ / /)
@@ -551,7 +552,7 @@ if ($handle eq 'RJP1')
 
   my @battery;
   $battery[0] = Units->new();
-  list_to_units($whole_system, $unit_tags, \@list, $battery[0],
+  list_to_units_OLD($whole_system, $unit_tags, \@list, $battery[0],
     $entry->{TEXT}, $handle, $hcount, $lno, $histo, $chain_stats);
 
   my $units = $battery[0];
