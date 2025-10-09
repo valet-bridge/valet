@@ -238,6 +238,51 @@ sub list_to_units
 }
 
 
+sub list_to_units_no_punctuation
+{
+  my ($whole, $unit_tags, $list, $units, $text, $histo, $chain_stats) = @_;
+
+  for my $datum (@$list)
+  {
+    $chain_stats->{DATA}++;
+
+    if ($datum =~ /#fake@/)
+    {
+      $units->push('FLUFF', $datum, $datum, 0, $chain_stats);
+      return;
+    }
+
+    my $sep = qr/(\d+|[\s\-\+\.\?_,:;=&@#*%\$^~"\/\\()<>|\[\]\{\}])/;
+    my @parts = grep { $_ ne '' } split /$sep/, $datum;
+
+    my $pos = -1;
+    my @splits;
+    for my $part (@parts)
+    {
+      $pos++;
+      $chain_stats->{PARTS}++;
+
+      next if exists $PUNCTUATION{$part};
+
+      next if $part eq ' ';
+
+      if ($part =~ /^\d+$/)
+      {
+        $units->push_integer($part, $pos, $chain_stats);
+        next;
+      }
+      else
+      {
+        my ($category, $value);
+        categorize($whole, $unit_tags, $part, \$category, \$value);
+
+        $units->push($category, $part, $value, $pos, $chain_stats);
+      }
+    }
+  }
+}
+
+
 sub study_word
 {
   my ($whole_names, $word, $histo) = @_;
@@ -333,12 +378,11 @@ sub study_name
   my ($units, $whole_names, $last3_names, $histo) = @_;
 
   # This is a feeble start of a more general method.
-  # TODO depunctuate to the bones
 
-  if ($units->last() == 2 && $units->category(1) eq 'PUNCTUATION')
+  if ($units->last() == 1)
   {
     return study_name_two($whole_names, $last3_names,
-      $units->value(0), $units->value(2), $histo);
+      $units->value(0), $units->value(1), $histo);
   }
 
   return '';
@@ -386,8 +430,8 @@ sub pre_parse
 
     my @battery;
     $battery[0] = Units->new();
-    list_to_units($whole_system, \@SYSTEM_TAGS, \@list, $battery[0],
-      $comp, $histo, $chain_stats);
+    list_to_units_no_punctuation($whole_system, \@SYSTEM_TAGS, 
+      \@list, $battery[0], $comp, $histo, $chain_stats);
     $cat = study_name($battery[0], $whole_names, $last3_names, $histo);
     if ($cat)
     {

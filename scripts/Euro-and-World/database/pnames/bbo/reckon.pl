@@ -251,18 +251,6 @@ my @PRE_INSPECTED_ORDER = qw(
 
 Inspect::init_pre_inspected(\%PRE_INSPECTED_LINES);
 
-# $fluffed_lines = Manual::TargetedLines->new();
-# $fluffed_lines->read_file('Manual/fluffed_lines.txt');
-
-# $system_lines = Manual::TargetedLines->new();
-# $system_lines->read_file('Manual/system_lines.txt');
-
-# $known_names = Manual::TargetedLines->new();
-# $known_names->read_file('Manual/known_names.txt');
-
-# $late_mails = Manual::TargetedLines->new();
-# $late_mails->read_file('Manual/late_mails.txt');
-
 use Manual::TargetedWords;
 
 # Some words can be either first, last names or neither.
