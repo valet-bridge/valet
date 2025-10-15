@@ -238,9 +238,62 @@ sub list_to_units
 }
 
 
+sub merge_initials
+{
+  my $markup = shift;
+
+  # Look for a first initial.
+  my $found = 0;
+  my $p0;
+  for my $pos (0 .. $#$markup)
+  {
+    if ($markup->[$pos]{CATEGORY} eq 'NAME_INITIAL')
+    {
+      $found = 1;
+      $p0 = $pos;
+      last;
+    }
+  }
+  return unless $found;
+
+  my $merge = '';
+  my $p1;
+  for my $pos ($p0 .. $#$markup)
+  {
+    last unless $markup->[$pos]{CATEGORY} eq 'NAME_INITIAL';
+
+    $p1 = $pos;
+    $merge .= ' ' if $p1 > $p0;
+    $merge .= uc($markup->[$pos]{TEXT}) . '.';
+  }
+
+  $markup->[$p0]{TEXT} = $merge;
+  splice @$markup, $p0+1, $p1-$p0 if $p1 > $p0;
+}
+
+
+sub use_name_capitalization
+{
+  my $markup = shift;
+
+  if ($#$markup == 1)
+  {
+    if ($markup->[0]{CATEGORY} eq 'NAME_FIRST' &&
+        $markup->[1]{CATEGORY} eq 'NAME_FIRST' &&
+        $markup->[0]{UPPER} == 0 &&
+        $markup->[1]{UPPER} == 1)
+    {
+      $markup->[1]{CATEGORY} = 'NAME_LAST';
+    }
+  }
+}
+
+
 sub list_to_units_no_punctuation
 {
-  my ($whole, $unit_tags, $list, $units, $text, $histo, $chain_stats) = @_;
+  my ($whole, $list, $units, $text, $histo, $chain_stats) = @_;
+
+  my @markup;
 
   for my $datum (@$list)
   {
@@ -256,6 +309,7 @@ sub list_to_units_no_punctuation
     my @parts = grep { $_ ne '' } split /$sep/, $datum;
 
     my $pos = -1;
+    my $used_pos = -1;
     my @splits;
     for my $part (@parts)
     {
@@ -273,12 +327,26 @@ sub list_to_units_no_punctuation
       }
       else
       {
-        my ($category, $value);
-        categorize($whole, $unit_tags, $part, \$category, \$value);
-
-        $units->push($category, $part, $value, $pos, $chain_stats);
+        $used_pos++;
+        my $category = study_word($whole, $part, $histo);
+        $markup[$used_pos]{CATEGORY} = $category;
+        $markup[$used_pos]{TEXT} = $part;
+        $markup[$used_pos]{UPPER}= ($part eq uc($part) ? 1 : 0);
       }
     }
+  }
+
+  # Combine initials into one.
+  merge_initials(\@markup);
+
+  # Sometimes use an upper-case last name as a hint.
+  use_name_capitalization(\@markup);
+
+  for my $pos (0 .. $#markup)
+  {
+    my $e = $markup[$pos];
+    $units->push($e->{CATEGORY}, $e->{TEXT}, $e->{TEXT}, $pos,
+      $chain_stats);
   }
 }
 
@@ -341,13 +409,10 @@ sub study_word
 
 sub study_name_two
 {
-  my ($whole_names, $last3_names, $word1, $word2, $histo) = @_;
+  my ($last3_names, $word1, $cat1, $word2, $cat2, $list, $histo) = @_;
 
   # Simple screen for names.
   # TODO Keep more details of name structure.
-
-  my $cat1 = study_word($whole_names, $word1, $histo);
-  my $cat2 = study_word($whole_names, $word2, $histo);
 
   if ($cat2 eq '' && $last3_names->lookup($word2))
   {
@@ -356,36 +421,72 @@ sub study_name_two
 
   if ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_LAST')
   {
-    return 'NAMELIKE';
+    push @$list, $cat1, $word1, $cat2, $word2;
+    return 1;
   }
   elsif ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_INITIAL')
   {
-    return 'NAMELIKE';
+    my $u2 = uc($word2) . '.';
+    push @$list, $cat1, $word1, $cat2, $u2;
+    return 1;
   }
   elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_LAST')
   {
-    return 'NAMELIKE';
+    my $u1 = uc($word1) . '.';
+    push @$list, $cat1, $u1, $cat2, $word2;
+    return 1;
+  }
+  elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_INITIAL')
+  {
+    my $u1 = uc($word1) . '.';
+    my $u2 = uc($word2) . '.';
+    push @$list, $cat1, $u1, $cat2, $u2;
+    return 1;
   }
 
-  print "cat1 $cat1 cat2 $cat2\n";
-
-  return '';
+  return 0;
 }
 
 
 sub study_name
 {
-  my ($units, $whole_names, $last3_names, $histo) = @_;
+  my ($units, $whole_names, $last3_names, $list, 
+    $identifier, $histo) = @_;
 
   # This is a feeble start of a more general method.
 
-  if ($units->last() == 1)
+  if ($units->last() == 0)
   {
-    return study_name_two($whole_names, $last3_names,
-      $units->value(0), $units->value(1), $histo);
+    my $cat = $units->category(0);
+    if ($cat eq 'NAME_INITIAL')
+    {
+      return 1;
+    }
   }
 
-  return '';
+  if ($units->last() == 1)
+  {
+    if (study_name_two($last3_names,
+      $units->value(0), $units->category(0),
+      $units->value(1), $units->category(1), $list, $histo))
+    {
+      return 1;
+    }
+  }
+
+  my @cats;
+  for my $i (0 .. $units->last())
+  {
+    my $cat = $units->category($i);
+    $cat = "''" unless $cat;
+    push @cats, $cat;
+  }
+
+  print $identifier;
+  my $cstr = join ' - ', @cats;
+  print $cstr, "\n";
+
+  return 0;
 }
 
 
@@ -430,12 +531,11 @@ sub pre_parse
 
     my @battery;
     $battery[0] = Units->new();
-    list_to_units_no_punctuation($whole_system, \@SYSTEM_TAGS, 
+    list_to_units_no_punctuation($whole_names,
       \@list, $battery[0], $comp, $histo, $chain_stats);
-    $cat = study_name($battery[0], $whole_names, $last3_names, $histo);
-    if ($cat)
+    if (study_name($battery[0], $whole_names, $last3_names, 
+      \@list, $identifier, $histo))
     {
-      push @list, $cat, $comp;
       next;
     }
 

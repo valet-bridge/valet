@@ -252,6 +252,9 @@ my @SINGLE_WORDS = qw(
   Yaren Yehudit Yeni Yoya Youyou Yueyin Yunyue
   Zare Zekai Zekeriya Zdzicho Zhivko Zhixiu
 
+  Arnaut Cevdet Frédérique Gerasimos Göro Günay Ivonna Krzys
+  Sebahettin Öksel Özden Özgür Pål Rémy Samo Sergi Seyit Torvald
+  Ümit Yüksel
 );
 
 my %SINGLE_TYPOS =
