@@ -276,14 +276,61 @@ sub use_name_capitalization
 {
   my $markup = shift;
 
-  if ($#$markup == 1)
+  my $initial_seen = 0;
+  my $lower_seen = 0;
+  my $upper_seen = 0;
+
+  for my $m (@$markup)
   {
-    if ($markup->[0]{CATEGORY} eq 'NAME_FIRST' &&
-        $markup->[1]{CATEGORY} eq 'NAME_FIRST' &&
-        $markup->[0]{UPPER} == 0 &&
-        $markup->[1]{UPPER} == 1)
+    my $cat = $m->{CATEGORY};
+    return unless $cat =~ /^NAME_/;
+
+    if ($cat eq 'NAME_INITIAL')
     {
-      $markup->[1]{CATEGORY} = 'NAME_LAST';
+      # If there are multiple initials at this point, it is because
+      # they are not next to each other (see merge_initials), and we
+      # don't want to deal with that here.
+      return if $initial_seen;
+      $initial_seen = 1;
+      next;
+    }
+
+    my $upper = $m->{UPPER};
+    if ($upper)
+    {
+      # Might be an override.
+      $upper_seen = 1;
+    }
+    elsif ($upper_seen)
+    {
+      # We are going back from upper to lower, which we don't want
+      # to entertain.
+      return;
+    }
+    else
+    {
+      # Might be an override.
+      $lower_seen = 1;
+    }
+  }
+
+  return unless ($upper_seen && $lower_seen);
+
+  # We only consider capitalization when there is (a) either initials
+  # or a lower-case name, as well as (b) an upper-case name, and
+  # (c) we go linearly from lower-case to upper-case.
+  # In that case we consider (a) to be first names and (b) to be
+  # last names, no matter what the category says.
+
+  for my $m (@$markup)
+  {
+    if ($m->{CATEGORY} eq 'NAME_FIRST' && $m->{UPPER})
+    {
+      $m->{CATEGORY} = 'NAME_LAST';
+    }
+    elsif ($m->{CATEGORY} eq 'NAME_LAST' && ! $m->{UPPER})
+    {
+      $m->{CATEGORY} = 'NAME_FIRST';
     }
   }
 }
