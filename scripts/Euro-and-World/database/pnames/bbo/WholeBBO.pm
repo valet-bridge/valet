@@ -38,6 +38,8 @@ use Tags::FirstFirst;
 use Tags::FirstMid;
 use Tags::FirstBBO;
 
+use Tags::ParticleBBO;
+
 use Tags::LastLast;
 use Tags::LastMid;
 use Tags::LastBBO;
@@ -66,6 +68,7 @@ my %TAGS =
   FIRSTFIRST => \&Tags::FirstFirst::set_hashes,
   FIRSTMID => \&Tags::FirstMid::set_hashes,
   FIRSTBBO => \&Tags::FirstBBO::set_hashes,
+  PARTICLEBBO => \&Tags::ParticleBBO::set_hashes,
   LASTLAST => \&Tags::LastLast::set_hashes,
   LASTMID => \&Tags::LastMid::set_hashes,
   LASTBBO => \&Tags::LastBBO::set_hashes,

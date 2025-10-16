@@ -67,6 +67,10 @@ my @FIRST_ORDER = qw(
   FIRSTBBO
 );
 
+my @PARTICLE_ORDER = qw(
+  PARTICLEBBO
+);
+
 my @LAST_ORDER = qw(
   LASTLAST
   LASTMID
@@ -407,6 +411,12 @@ sub study_word
   my $first_flag = 0;
   my $last_flag = 0;
 
+  if (singleton_tag_matches_basic($whole_names, \@PARTICLE_ORDER,
+    \$token_no, $word, 0, $chain, $histo, ''))
+  {
+    return 'NAME_PARTICLE';
+  }
+
   if (singleton_tag_matches_basic($whole_names, \@FIRST_ORDER,
     \$token_no, $word, 0, $chain, $histo, ''))
   {
@@ -459,14 +469,14 @@ sub study_name_two
   my ($last3_names, $word1, $cat1, $word2, $cat2, $list, $histo) = @_;
 
   # Simple screen for names.
-  # TODO Keep more details of name structure.
 
   if ($cat2 eq '' && $last3_names->lookup($word2))
   {
     $cat2 = 'NAME_LAST';
   }
 
-  if ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_LAST')
+  if ($cat1 eq 'NAME_FIRST' && 
+      ($cat2 eq 'NAME_FIRST' || $cat2 eq 'NAME_LAST'))
   {
     push @$list, $cat1, $word1, $cat2, $word2;
     return 1;
@@ -477,10 +487,25 @@ sub study_name_two
     push @$list, $cat1, $word1, $cat2, $u2;
     return 1;
   }
+  elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_FIRST')
+  {
+    if ($word2 eq 'CASPER' || $word2 eq 'BALA' || $word2 eq 'MURAT')
+    {
+      # Rather a kludge to make these few entries go away.
+      my $u1 = uc($word1) . '.';
+      push @$list, $cat1, $u1, 'NAME_LAST', $word2;
+      return 1;
+    }
+  }
   elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_LAST')
   {
     my $u1 = uc($word1) . '.';
     push @$list, $cat1, $u1, $cat2, $word2;
+    return 1;
+  }
+  elsif ($cat1 eq 'NAME_PARTICLE' && $cat2 eq 'NAME_LAST')
+  {
+    push @$list, $cat1, $word1, $cat2, $word2;
     return 1;
   }
   elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_INITIAL')
@@ -488,6 +513,31 @@ sub study_name_two
     my $u1 = uc($word1) . '.';
     my $u2 = uc($word2) . '.';
     push @$list, $cat1, $u1, $cat2, $u2;
+    return 1;
+  }
+
+  return 0;
+}
+
+
+sub study_name_three
+{
+  my ($units, $list, $histo) = @_;
+
+  # Simple screen for names.
+
+  my $cat1 = $units->category(0);
+  my $cat2 = $units->category(1);
+  my $cat3 = $units->category(2);
+
+  if ($cat1 eq 'NAME_FIRST' && 
+      ($cat2 eq 'NAME_FIRST' || $cat2 eq 'NAME_INITIAL' ||
+       $cat2 eq 'NAME_PARTICLE' || $cat2 eq 'NAME_LAST') &&
+      $cat3 eq 'NAME_LAST')
+  {
+    push @$list, $cat1, $units->value(0), 
+        $cat2, $units->value(1),
+        $cat3, $units->value(2);
     return 1;
   }
 
@@ -521,19 +571,57 @@ sub study_name
     }
   }
 
-  my @cats;
-  for my $i (0 .. $units->last())
+  if ($units->last() == 2)
   {
-    my $cat = $units->category($i);
-    $cat = "''" unless $cat;
-    push @cats, $cat;
+    if (study_name_three($units, $list, $histo))
+    {
+      return 1;
+    }
   }
 
-  print $identifier;
-  my $cstr = join ' - ', @cats;
-  print $cstr, "\n";
+  # Another big kludge.
+  if ($units->last() == 3 &&
+      $units->value(0) eq 'Delia' &&
+      $units->value(1) eq 'Cane' &&
+      $units->value(2) eq 'de' &&
+      $units->value(3) eq 'Biquard')
+  {
+    push @$list, 
+      'NAME_FIRST', 'Delia',
+      'NAME_FIRST', 'Cane',
+      'NAME_PARTICLE', 'DE',
+      'NAME_LAST', 'BIQUARD';
+    return 1;
+  }
+
+  if ($units->last() == 2 &&
+      $units->value(0) eq 'Jan' &&
+      $units->value(1) eq 'Erik' &&
+      $units->value(2) eq 'AAS')
+  {
+    push @$list, 
+      'NAME_FIRST', 'Jan',
+      'NAME_FIRST', 'Erik',
+      'NAME_LAST', 'AAS';
+    return 1;
+  }
 
   return 0;
+
+  # If we wanted to debug.
+  # my @cats;
+  # for my $i (0 .. $units->last())
+  # {
+    # my $cat = $units->category($i);
+    # $cat = "''" unless $cat;
+    # push @cats, $cat;
+  # }
+
+  # print $identifier;
+  # my $cstr = join ' - ', @cats;
+  # print $cstr, "\n";
+
+  # return 0;
 }
 
 
@@ -573,20 +661,33 @@ sub pre_parse
       next;
     }
 
-    my @list;
-    $list[0] = $comp;
+    if ($comp =~ /@/ && $comp !~ /\s/)
+    {
+      my @elist;
+      Email::Email::looks_like(lc($comp), \@elist);
+      if ($#elist >= 0)
+      {
+        push @list, @elist;
+        next;
+      }
+    }
+
+    my @clist;
+    $clist[0] = $comp;
 
     my @battery;
     $battery[0] = Units->new();
     list_to_units_no_punctuation($whole_names,
-      \@list, $battery[0], $comp, $histo, $chain_stats);
+      \@clist, $battery[0], $comp, $histo, $chain_stats);
     if (study_name($battery[0], $whole_names, $last3_names, 
-      \@list, $identifier, $histo))
+      \@clist, $identifier, $histo))
     {
+      push @list, @clist;
       next;
     }
 
-    print "$entry->{TEXT}\n$comp MISS\n---\n\n";
+    # This would be another place to debug.
+    # print "$entry->{TEXT}\n$comp MISS\n---\n\n";
   }
 
   $entry->{CATEGORY} = 'LIST';
@@ -700,7 +801,7 @@ sub inspect_paragraph
   my $eno = -1;
   my $elen = $#{$paragraph->{LINES}};
 
-  # if ($paragraph->{HANDLE} eq 'GHISA')
+  # if ($paragraph->{HANDLE} eq 'NJANERI')
   # {
     # print "HERE\n";
   # }

@@ -298,7 +298,6 @@ if ($paragraph->{HANDLE} eq 'LIBRAX')
     $last3_names, $paragraph, \@PRE_INSPECTED_ORDER, 
     \%handle_counts, $histo, \%chain_stats);
 
-next;
   # print_paragraph($paragraph);
 
   my $lno = -1;
