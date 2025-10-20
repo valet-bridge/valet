@@ -255,6 +255,33 @@ my @SINGLE_WORDS = qw(
   Arnaut Cevdet Frédérique Gerasimos Göro Günay Ivonna Krzys
   Sebahettin Öksel Özden Özgür Pål Rémy Samo Sergi Seyit Torvald
   Ümit Yüksel
+
+  Aghita Ainy Akinom Annki Anyelik Apryanta Ayca Aygün Aymar
+  Bimla Birkan Blagi Brune Budi Byju
+  Caglar Cakircali Celile Cholai Craquotte
+  Divaraka Donita
+  Fahrettin Fenita Ferry Fuat
+  Gapil Gilly Gökay
+  Guangbin
+  Haohao Hazar Hery Huysuz
+  Inmaculada Irson
+  Jieren Jyaubin
+  Kamaljit Kata Kikou Kizola Konrat
+  Lindy Lukman
+  Macca Majvor Marj Melek Morena Murph Musty Mårten
+  Nadri Necmi Nial Normand
+  Okcan Öner Öktem
+  Paradima Prasanta Priti
+  Raymon Reki Ridvan Ronger
+  Sacit Sada Sadra Sankul Saya Semsettin Shalom Shansy Shterion
+  Surender Susu Sysser
+  Tiena Touran Till Tiny Trinitee Tuzar
+  Udatta Ulric
+  Valli Volkan
+  Xieluo Xuefeier
+  Yocheved Yolcu Yongfu
+  Zdzislaw Zoli
+  Øivind
 );
 
 my %SINGLE_TYPOS =

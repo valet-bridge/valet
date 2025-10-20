@@ -78,6 +78,7 @@ my @MULTI_WORDS =
   'Lidzbark Warmiński',
   'Little Rock',
   'Long Island',
+  'Los Angeles',
   'Mandobo Bodi',
   'Maha Sarakham',
   'Mar del Plata',
@@ -100,9 +101,11 @@ my @MULTI_WORDS =
   'Novi Sad',
   'Nowa Sol',
   'Palangka Raya',
+  'Palo Alto',
   'Piatra Neamt',
   'Piggs Peak',
   'Ponta Delgada',
+  'Punta del Este',
   'Reggio Calabria',
   'Reggio Emilia',
   'Rio Claro',
@@ -116,6 +119,7 @@ my @MULTI_WORDS =
   'Saint Louis',
   'Saint Petersburg',
   'Salt Lake City',
+  'San Antonio',
   'San Diego',
   'San Francisco',
   'San Giorgio del Sannio',
@@ -123,7 +127,9 @@ my @MULTI_WORDS =
   'San Juan',
   'San Luis',
   'San Marino City',
+  'San Miguel',
   'San Remo',
+  'San Sebastian',
   'San Servolo',
   'Santa Clara',
   'São Paulo',
@@ -152,6 +158,7 @@ my @MULTI_WORDS =
   'Veliko Tarnovo',
   'Vik i Sogn',
   'Villa Fabbriche',
+  'Vina del Mar',
   'Vrnjacka Banja',
   'Xin Zhu',
   'Yangzhong Shi',
@@ -226,7 +233,8 @@ my @SINGLE_WORDS = qw(
   Airmadidi Akcakoca Akhisar Akron Aksaray Aksehir Akyaka Akyazi 
   Aladag Alcobaça Alexandria Aley Aliaga Alicante Allahabad Alta 
   Altea Altinoluk Altinova Altrincham Alytus Amasya Ambon Amed Amman 
-  Amsterdam Analya Angers Ankara Annecy Antakya Antalya Antibes Antony 
+  Amsterdam Anaheim Analya Angers Ankara Annecy Antakya Antalya Antibes 
+  Antony 
   Antwerpen Aqaba Aral Ardesen Arendal Arezzo Arnhem Artvin Asenovec 
   Asenovgrad Askim Asminderød Assis Assos Assunçao Atakum Atasehir 
   Athens Atlanta Aubagne Auckland Augsburg Avignon Ayacucho Aydin 
@@ -236,7 +244,8 @@ my @SINGLE_WORDS = qw(
   Bakirköy Balarampur Balaton Balatonföldvár Balikesir Balikpapan 
   Ballerup Ballymena Bamberg Bandirma Bandung Bangalore Bangkok 
   Banjarmasin Bansi Bansko Barcelona Barlinek Bartoszyce Basel Batam 
-  Bath Batikent Batman Batu Batununggal Bayramiç Bedford Begues Beihai 
+  Bath Batikent Batman Batu Batumi Batununggal Bayramiç Bedford Begues 
+  Beihai 
   Beijing Beirut Bekasi Belene Belgrade Belfast Bengkalis Bengkulu 
   Beograd Berdyczow Bereket Bergen Bergues Bergule Berkeley Berlin 
   Besiktas Bevagna Beyoglu Bhatpara Bhilwara Bhimavaram Bhubaneswar 
@@ -257,7 +266,7 @@ my @SINGLE_WORDS = qw(
   Chartres Chavdar Chaville Chelmno Chelopech Chengdu Chennai 
   Chepelare Chiayi Chicago Chisinau Chongqing Christchurch Chumphon 
   Cide Cigli Cildir Cimahi Cirebon Civril Claremont Clichy Cluj 
-  Coimbature Coimbra Comandatuba Copenhagen Corlu Corum Corvallis
+  Coimbatore Coimbra Colmar Comandatuba Copenhagen Corlu Corum Corvallis
   Coventry Craiova Cranbrook Csapi Csíkszereda Cuenca Cuneo Cupertino
   Curitiba
 
@@ -274,8 +283,8 @@ my @SINGLE_WORDS = qw(
   Estoril Evanston Evansville Evora
 
   Farsund Farum Fauske Felletin Fernetti Fethiye Firenze Flekkefjord 
-  Florianopolis Foca Fosnavåg Frankfort Frankfurt Fredrikstad Freiburg 
-  Fritzlar Funchal Fussey Fuzhou Førde
+  Florianopolis Foca Foshan Fosnavåg Frankfort Frankfurt Fredrikstad 
+  Freiburg Fremont Fritzlar Funchal Fussey Fuzhou Førde
 
   Gainesville Galveston Galway Gajaki Galleberg Garches Gaza Gaziemir 
   Gazipasa Gävle Gdansk Gdynia Gebze Gelibolu Geneva Genoa Gent 
@@ -309,8 +318,8 @@ my @SINGLE_WORDS = qw(
   Kolbotn Kolkata Kolobrzeg Konga Kongsberg Konnerud Konya Kópavogur 
   Korfez Kornik Kosice Kostroma Koszalin Kota Koycegiz Köln Kragerø 
   Krakow Kraljevica Krasnodar Kristiansand Krzywanice Kucukbakkalkoy 
-  Kudus Kunshan Kuopio Kusadasi Kutno Kuzguncuk Küçükçekmece Kütahya 
-  Kverndalen Kyoto Kyustendil Køge Kølabånn
+  Kudus Kunming Kunshan Kuopio Kusadasi Kutno Kuzguncuk Küçükçekmece 
+  Kütahya Kverndalen Kyoto Kyustendil Køge Kølabånn
 
   Lahore Lakselv Lambach Landak Langkat Lanzhou Laodikya Lappeenranta 
   Largo Larissa Larnaca Larvik Lausanne Lebork Lecco Leiden Leipzig 
@@ -319,14 +328,15 @@ my @SINGLE_WORDS = qw(
   Lindesberg Linköping Lisbon Liushu Livane Liverpool Livorno 
   Ljubljana Lodi Lodz Lojdy Lokotok Lom Lomza London Loughborough
   Lovech Lowicz Lubin Lublin Lubomino Ludhiana Ludvikabygden Lufeng 
-  Luleburgaz Lumajang Luzern Lübeck Lyngdal Lyon
+  Lugoj Luleburgaz Lumajang Luzern Lübeck Lyngdal Lyon
 
   Maastricht Madrid Magetan Maillé Mainz Makassar Malaga Malang Malatya 
   Malkara Malmö Manado Manavgat Manchester Manila Manisa Manna Mannheim 
   Marbella Marcelli Mardin Marijampolė Marmaris Marrakech Marseille 
   Martapura Massy Mautern Medan Medellin Melawi Melbourne Memphis 
   Meritxell Mersin Meursac Miami Miaoli Michalovce Michalowo Midyat 
-  Milan Milas Minsk Miramar Miskolc Momchilgrad Montélimar
+  Milan Milas Milpitas Minsk Miramar Miskolc Mombasa Momchilgrad 
+  Montélimar
   Monticiano Montoro Montpellier Montreal Moradabad Mordogan Morsø 
   Morud Moscow Moss Mragowo Mudanya Muðla Mulhouse Mulund Mumbai Munich 
   Myndos Mysore
@@ -342,7 +352,7 @@ my @SINGLE_WORDS = qw(
   Ocala Odense Oderzo Odessa Odmet Ogndal Oldenburg Olrud Olsztyn 
   Oltenita Omaha Omurtag Opatija Opole Oradea Ordu Orlando Orly 
   Orneta Orhangazi Osaka Ostend Oslo Osmaniye Osnabrück Ostrowiec 
-  Otepää Ottadalen Ottawa Oxford Ozarow Örebro Överum
+  Otepää Ottadalen Ottawa Oulu Oxford Ozarow Örebro Överum
 
   Pacitan Padang Padova Paimado Palembang Palencia Palermo Palma Palu 
   Pamukkale Panagyurishte Panaji Pancevo Panzhihua Pariaman Paris 
@@ -366,7 +376,8 @@ my @SINGLE_WORDS = qw(
 
   Saarbrücken Sabadell Safranbolu Saigon Salerno Salo Salsomaggiore 
   Samarinda Samobor Sampit Samsun Sandefjord Sanliurfa Sansepolcro 
-  Santiago Sanya Saragossa Sariyer Sarpsborg Savona Sawahlunto Seattle 
+  Santiago Sanya Saragossa Sariyer Sarpsborg Savona Sawahlunto 
+  Scottsdale Seattle 
   Secunderabad Seferihisar Selfoss Semarang Sendai Senigallia Seoul 
   Serang Sevtopolis Shanghai Shangrao Shaoguan Sharjah Shenyang 
   Shenzhen Shijiazhuang Shimla Shiraz Shouguang Shumen Sibiu Sidoarjo 
@@ -375,7 +386,8 @@ my @SINGLE_WORDS = qw(
   Singsås Sinop Siofok Sirnak Sivas Skara Skarvemellen Skawina Ski 
   Skien Skopje Slagelse Slavyanovo Slawa Sleman Sliven Smedstad 
   Smithers Smolyan Smyrna Snåsa Sofia Sogndal Solapur Solo Solok 
-  Solvorn Sombor Songkhla Sopot Sortland Söke Sozopol Split Stanford 
+  Solvorn Sombor Songkhla Sopot Sortland Söke Sozopol Spartanburg
+  Split Stanford 
   Starachowice Stargard Stavanger Steinkjer Stirling Stockholm 
   Stockton Stokke Stoholm Storsjöbygden Strasbourg Strømmen Stureby 
   Stuttgart Szczecin Suceava Sukma Sukomoro Sumedang Sunndalsøra 
@@ -385,13 +397,14 @@ my @SINGLE_WORDS = qw(
 
   Tabarka Tacoma Taicang Taichung Tainan Taiyuan Taizhou Takayama 
   Talagante Tallinn Tambun Tampa Tangerang Taoyuan Tarakan Targoviste 
-  Tarnów Tarnobrzeg Tasikmalaya Taskopru Tatvan Tavsanli Täby Täfteå 
-  Tbilisi Tczew Tekkekoy Tekýrdag Telmessos Temuco Ternopil Terzialan 
-  Texarkana Thane Thanjavur Thessaloniki Thoisy Tianjin Tijuana Tilburg 
-  Timisoara Tire Tofta Tokyo Toledo Tomohon Tonara Tondano Tonya Torino 
-  Toronto Torrance Toshima Toulon Toulouse Tours Trabzon Tralles 
-  Trang Treviso Trieste Tripoli Trondheim Tromsø Tucson Tula Tulsa 
-  Tunceli Turgutlu Turkistan Turku Turunc Tübingen 
+  Tarnów Tarnobrzeg Tarragona Tasikmalaya Taskopru Tatvan Tavsanli 
+  Täby Täfteå Tbilisi Tczew Tekkekoy Tekýrdag Telmessos Temuco 
+  Ternopil Terzialan Texarkana Thane Thanjavur Thessaloniki Thoisy 
+  Tianjin Tijuana Tilburg Timisoara Timbuktu Tire Tofta Tokyo Toledo 
+  Tomohon Tonara Tondano Tonya Torino Toronto Torrance Torun Toshima 
+  Toulon Toulouse Tours Trabzon Tralles Trang Treviso Trieste Tripoli 
+  Trondheim Tromsø Tucson Tula Tulsa Tunceli Turgutlu Turkistan Turku 
+  Turunc Tübingen 
 
   Udaipur Uddevalla Ulricehamn Umeå Underberg Uppsala Urla Usak Utrecht 
   Uzunköprü

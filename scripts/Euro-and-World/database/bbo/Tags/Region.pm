@@ -79,6 +79,7 @@ my @MULTI_WORDS =
   'Kutai Kartanegara',
   'Kutai Timur',
   'KwaZulu Natal',
+  'Lake Como',
   'Lake Garda',
   'Lofoten og Vesterålen',
   'Lower Silesia',
@@ -125,6 +126,7 @@ my @MULTI_WORDS =
   'Smoky Mountains',
   'South Australia',
   'South Bulgaria',
+  'South Carolina',
   'South Celebes',
   'South Dakota',
   'South East Celebes',
@@ -262,11 +264,11 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Aberdeenshire Aceh Agder Akdeniz Akkad Alabama Alaska Algarve
   Altiplano Anatolia Andalusia Anhui Ararat Ardennes Arizona Arkansas 
-  Arunachala Aurland Auvergne Ayrshire Azores
+  Arunachala Aurland Auvergne Aveyron Ayrshire Azores
 
   Badakhshan Badung Bahia Bairrada Bali Banten Bayern Belitung Benchamas
-  Bengal Bengkayang Bihar Bizkaia Bogø Bolu Borneo Bornholm Bungo 
-  Buriram Buskerud
+  Bengal Bengkayang Bihar Bizkaia Blekinge Bogø Bolu Borneo Bornholm 
+  Bungo Buriram Buskerud
 
   California Camargue Çankiri Cantal Cappadocia Catalonia Charente 
   Chartreuse Chengmai Colorado Comandatuba Connecticut Cornwall
@@ -287,7 +289,7 @@ my @SINGLE_WORDS = qw(
 
   Iberia Idaho Illinois Indiana Innlandet Iowa Iskele
 
-  Jalisco Java Jharkhand Jiangsu Jiangxi Jilin
+  Jalisco Java Jämtland Jharkhand Jiangsu Jiangxi Jilin
 
   Kaldbakur Kansai Kansas Kanto Karadon Karadeniz Karimata Karnataka 
   Kawanua Kedungwaru Kentucky Kerala Khuzestan Kilimanjaro Kizil Krabi 
@@ -295,8 +297,8 @@ my @SINGLE_WORDS = qw(
 
   Lampung Languedoc Lebak Liaoning Liguria Loire Lombok Louisiana
 
-  Madeira Maharashtra Maine Maluku Malwa Manitoba Manle Marmara Marne 
-  Maryland Massachusetts Matopos Maui Mazovia Menorca Mesopotamia 
+  Madeira Maharashtra Maine Mallorca Maluku Malwa Manitoba Manle Marmara 
+  Marne Maryland Massachusetts Matopos Maui Mazovia Menorca Mesopotamia 
   Michigan Midtsjælland Minahasa Minang Minnesota Mississippi Missouri 
   Misya Mjøsa Montana Muallim Munzur Mysia
 
@@ -306,9 +308,9 @@ my @SINGLE_WORDS = qw(
   Oberloiben Occitanie Odisha Ohio Oklahoma Olona Ontario Oregon 
   Orontes Otago Overijssel
 
-  Papua Paros Pasha Patagonia Pennsylvania Phatthalung Pirin Pirojpur 
-  Podlaskie Pomerania Porong Prachinburi Provence Pudong Pufa Punjab 
-  Pyrenees
+  Papua Paros Pasha Patagonia Pennsylvania Phatthalung Piemonte Pirin 
+  Pirojpur Podlaskie Pomerania Porong Prachinburi Provence Pudong Pufa 
+  Punjab Pyrenees
 
   Queensland Quercy Qiantang
 
@@ -322,14 +324,15 @@ my @SINGLE_WORDS = qw(
   Sydvest
 
   Tala Tambun Tasmania Telemark Telengana Tenerife Tennessee Texas 
-  Tharparkar Thassos Thrace Tianya Tigris Tinglin Transvaal 
+  Tharparkar Thassos Thrace Thüringen Tianya Tigris Tinglin Transvaal 
   Transylvania Trentino Trøndelag Tunceli Tuscany
 
   Uludag Utah Uttarakhand Uzungol
 
   Valsugana Vestland Victoria Vojvodina
 
-  Wachau Waikato Washington Wielkopolska Wisconsin Wujin Wyoming Wyssa
+  Wachau Wakayama Waikato Washington Wielkopolska Wisconsin Wujin 
+  Wyoming Wyssa
 
   Xizang Xinjiang
 
