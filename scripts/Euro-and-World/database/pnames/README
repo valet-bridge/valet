@@ -1,22 +1,10 @@
-In sublines, look for cases where nothing actually gets modified.
-
-Get them out of the recognition and get the lines labeled.
-
-Check that lines that come from Caps are labeled properly --
-they are already split.
-
-Move on to build up stuff and do stats on lines:
-1/2/3 + NT = 1/2/3NT (a bid)
-Look for range in the pieces left behind
-Assign ranges to 1NT if sensible, 1NT 15-17
-Split on these
-Stats on chains and subchains in this way.
-
-Standard + American = Standard American
-
-Look at words that get isolated in this way
-
-
+- reckon.pl to run clean as is
+- Turn || errors back on, eliminate
+- Player numbers (e.g. Poland) find by regex
+- All known names should parse into first, initial, particle, last
+- No inconsistencies
+- In sublines, look for cases where nothing actually gets modified.
+- Split out remaining code in reckon.pl, clean up
 
 Consolidate
 - CITY and EMAIL_CITY
@@ -44,35 +32,11 @@ Consolidate
   - Flag conflict with USER_FIRST, INITIALS, PARTICLES, LAST
   - Eliminate USER_ONE and USER_TWO if matching
 
-
-
-Finish the last-first exceptions, implement
-Also implement some forced substitions, Swinkels AH => A. H. Swinkels
-CA Ratan = C. A. Ratan
-Rae Ann is one first name
-
-
-Country: Switch to Tags/Country (for the misspellings).
-City
-Region
-Club
-www.sth.sth
-Probably anything with a lot of spaces or commas is a NOTE
-please pls 
-
 Regenerate Both.pm
 Probably have to generate a presumption that it's one or the other.
 First + Both(Last) = First + Last
 Both(First) + Last = First + Last
 Count against EBL and BBO occurrences.
-
----
-
-Can also read a .txt file
-- Read what it matches, either complete lower-case or first cap
-Can capitalize first letter or all letters
-
-
 
 ---
 
