@@ -174,7 +174,7 @@ $last3_names->read_file('Manual/last3.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('editx');
+# $sublines->consolidate_with('remain10');
 # $sublines->print();
 # exit;
 

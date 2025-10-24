@@ -45,6 +45,7 @@ my @MULTI_WORDS =
   'North Macedonia',
   'Northern Ireland',
   'Palau Republic',
+  'Puerto Rico',
   'Republic of the Congo',
   'Saint Barthélemy',
   'Saint Kitts and Nevins',

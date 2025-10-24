@@ -606,22 +606,29 @@ sub study_name
     return 1;
   }
 
-  return 0;
+  # return 0;
 
   # If we wanted to debug.
-  # my @cats;
-  # for my $i (0 .. $units->last())
-  # {
-    # my $cat = $units->category($i);
-    # $cat = "''" unless $cat;
-    # push @cats, $cat;
-  # }
+  my (@cats, @values);
+  for my $i (0 .. $units->last())
+  {
+    my $cat = $units->category($i);
+    $cat = "''" unless $cat;
 
-  # print $identifier;
-  # my $cstr = join ' - ', @cats;
-  # print $cstr, "\n";
+    my $val = $units->value($i);
+    $val = "''" unless $val;
 
-  # return 0;
+    push @cats, $cat;
+    push @values, $val;
+  }
+
+  print $identifier;
+  my $cstr = join ' - ', @cats;
+  my $vstr = join ' - ', @values;
+  print $cstr, "\n";
+  print $vstr, "\n";
+
+  return 0;
 }
 
 

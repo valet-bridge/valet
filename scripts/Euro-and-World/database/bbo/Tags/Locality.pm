@@ -54,7 +54,8 @@ my @SINGLE_WORDS = qw(
   Kadikoy Karaçay Kardelen Kartal Katok Kaylaka Khalkedon 
   Kirim Kocamustafapasa Konak Korwin Kucukcekmece Kurtulus Küp
   Lappee Leilem Lemvourgeio Losari Lozenets
-  Maadi Makaliwe Manahasa Männiku Meski Monceau Mrzenci Muratpasa
+  Maadi Makaliwe Manahasa Marmaris Männiku Meski Monceau Mrzenci 
+  Muratpasa
   Nagbagan Nanshan Narbel Narita Narlidere Niski
   Olgiata
   Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong Puzhong

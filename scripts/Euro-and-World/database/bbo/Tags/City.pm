@@ -162,7 +162,6 @@ my @MULTI_WORDS =
   'Villa Fabbriche',
   'Vina del Mar',
   'Vrnjacka Banja',
-  'Washington DC',
   'Xin Zhu',
   'Yangzhong Shi',
   'Yedi Eylul',
@@ -234,13 +233,13 @@ my @SINGLE_WORDS = qw(
   Aabenraa Aachen Aalborg Aberdeen Adak Adakli Adalar Adana Adapazan 
   Adelaide Adiyaman Afyonkarahisar Agadir Agresar Ahmedabad Ainhoa 
   Airmadidi Akcakoca Akhisar Akron Aksaray Aksehir Akyaka Akyazi 
-  Aladag Alcobaça Alexandria Aley Aliaga Alicante Allahabad Alta 
+  Aladag Alanya Alcobaça Alexandria Aley Aliaga Alicante Allahabad Alta 
   Altea Altinoluk Altinova Altrincham Alytus Amasya Ambon Amed Amman 
-  Amsterdam Anaheim Analya Angers Ankara Annecy Antakya Antalya Antibes 
+  Amsterdam Anaheim Angers Ankara Annecy Antakya Antalya Antibes 
   Antony Antwerpen Aqaba Aral Ardesen Arendal Arezzo Ardahan Arhavi
   Arnhem Artvin Asenovec Asenovgrad Askim Asminderød Assis Assos Assunçao 
-  Asturia Atakum Atasehir Athens Atlanta Aubagne Auckland Augsburg 
-  Aveiro Avignon Ayacucho Aydin Ayvalik Ayvansaray
+  Atakum Atasehir Athens Atlanta Aubagne Auckland Augsburg 
+  Avignon Ayacucho Aydin Ayvalik Ayvansaray
 
   Babaeski Babayagmur Baghdad Baglarbasi Bagodi Baimao Balchik Bakauheni 
   Bakirköy Balarampur Balaton Balatonföldvár Balikesir Balikpapan 
@@ -256,8 +255,8 @@ my @SINGLE_WORDS = qw(
   Boston Botosani Bozüyük Böblingen Braila Brandbu Braniewo Brasilia 
   Brasov Bremen Brevik Briancon Brighton Brisbane Bristol Broadbeach 
   Bromölla Brooklyn Bruges Brussels Bucharest Budapest Buffalo Bulancak 
-  Buonconvento Burdwan Burghausen Bursa Burdur Burgas Buyukada 
-  Buzios Bydgoszcz Bytom Bø
+  Buonconvento Burdwan Burghausen Burhaniye Bursa Burdur Burgas 
+  Buyukada Buzios Bydgoszcz Bytom Bø
 
   Cadiz Caen Cagliari Cairns Cairo Calais Calangute Calgary Cali 
   Cambrils Canakkale Canberra Cankaya Cankiri Cannareggio Cannes 
@@ -267,12 +266,12 @@ my @SINGLE_WORDS = qw(
   Charreau Chartres Chavdar Chaville Chelmno Chelopech Chengdu Chennai 
   Chepelare Chiayi Chicago Chisinau Chongqing Christchurch Chumphon 
   Cide Cigli Cildir Cimahi Cirebon Civril Claremont Clichy Cluj 
-  Coimbatore Coimbra Colmar Comandatuba Copenhagen Correze Corlu 
+  Coimbatore Coimbra Colmar Comandatuba Copenhagen Corlu 
   Corum Corvallis Coventry Craiova Cranbrook Csapi Csíkszereda Cuenca 
   Cuneo Cupertino Curitiba Czestochowa
 
   Dabrowka Dalaman Dalian Dambron Darmstadt Datca Daytona Deauville 
-  Debrecen Decazeville Degirmendere Delaware Delft Delhi Denizli Denver
+  Debrecen Decazeville Degirmendere Delft Delhi Denizli Denver
   Depok Derpt Detroit Deva Devrek Dhaka Dharmasraya Dijon Dikili 
   Divrigi Diyarbakir Dimitrovgrad Dinhata Dobrich Doha Doki Dombivli 
   Dongguan Dorohoi Dortmund Dörtyol Drammen Drøbak Dubai Dublin 
@@ -287,7 +286,7 @@ my @SINGLE_WORDS = qw(
   Florianopolis Foca Foshan Fosnavåg Frankfort Frankfurt Fredrikstad 
   Freiburg Fremont Fritzlar Funchal Fussey Fuzhou Førde
 
-  Gainesville Galveston Galway Gajaki Galicia Galleberg Garches Gaza 
+  Gainesville Galveston Galway Gajaki Galleberg Garches Gaza 
   Gaziemir Gazipasa Gävle Gdansk Gdynia Gebze Gelibolu Geneva Genoa 
   Gent Georgetown Gevgelija Geyve Giresun Giza Gizycko Glasgow Glendale
   Gliwice Gnesta Gniezno Göksun Gölcük Göteborg Gqeberha Graz Grenoble 
@@ -333,7 +332,7 @@ my @SINGLE_WORDS = qw(
 
   Maastricht Madrid Magetan Maillé Mainz Makassar Malaga Malang Malatya 
   Malkara Malmö Manado Manavgat Manchester Manila Manisa Manna Mannheim 
-  Marbella Marcelli Mardin Marijampolė Marmaris Marrakech Marseille 
+  Marbella Marcelli Mardin Marijampolė Marmara Marrakech Marseille 
   Martapura Massy Mautern Medan Medellin Melawi Melbourne Memphis 
   Meritxell Mersin Meursac Miami Miaoli Michalovce Michalowo Midyat 
   Milan Milas Milpitas Minsk Miramar Miskolc Mombasa Momchilgrad 
@@ -349,7 +348,7 @@ my @SINGLE_WORDS = qw(
   Novosibirsk Nusaybin Nuuk Nürnberg Nykøbing Nyon Nysa Nærbø Nærøysund 
   Næstved Nøtterøy
 
-  Ocala Odense Oderzo Odessa Odmet Ogndal Oldenburg Olrud Olsztyn 
+  Ocala Odense Oderzo Odessa Odmet Oldenburg Olrud Olsztyn 
   Oltenita Omaha Omurtag Opatija Opole Oradea Ordu Orlando Orly 
   Orneta Orhangazi Osaka Ostend Oslo Osmaniye Osnabrück Ostrowiec 
   Otepää Ottadalen Ottawa Oulu Oxford Ozarow Örebro Överum
@@ -376,7 +375,7 @@ my @SINGLE_WORDS = qw(
 
   Saarbrücken Sabadell Safranbolu Saigon Salerno Salo Salsomaggiore 
   Samarinda Samobor Sampit Samsun Sandefjord Sanliurfa Sansepolcro 
-  Santiago Sanya Saragossa Sariyer Sarpsborg Savoie Savona Sawahlunto 
+  Santiago Sanya Saragossa Sariyer Sarpsborg Savona Sawahlunto 
   Scottsdale Seattle 
   Secunderabad Seferihisar Selfoss Semarang Sendai Senigallia Seoul 
   Serang Sevtopolis Shanghai Shangrao Shaoguan Sharjah Shenyang 

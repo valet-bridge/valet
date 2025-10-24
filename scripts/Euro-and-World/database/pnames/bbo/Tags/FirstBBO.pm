@@ -284,11 +284,34 @@ my @SINGLE_WORDS = qw(
   Øivind
 
   Amaranta Aramesh Armony
+  Bjørnar
   Cissi Curly Cüneyt
   Dimitar Elod Ferdi Feyzullah Gaétan Guglielmo Gündüz
-  Izzy Jieren Juana Karina Kerim Lysette Maité Miep Mildi
+  Izzy Jieren Juana Karina Kerim Lysette Maité Mayur Miep Mildi
   Nail Ocson Odd Oyil Öge Öztekin
   Reine Sjef Slamet Todd Turan Vinayak Ximena Zoé
+
+  Ade Aenul Afifah Africa Amatore Annigret Anonyo Arvat Aycha Ays
+  Berni Bicio Biji Boutaud Büsra Canip Cemo Chengquan Ciana Cumi
+  Dalin Danail Dante Dawet Decky Deli Demitrius Derya Dinar Dobo
+  Doel Dustin
+  Edit Eminella Encho Ermanno Erwan Eya Flavius
+  Gani Giorgetto Gitan Gogi Govind Grenfell Güven
+  Hafiz Hazell Heloise Hüseyn Idro Imam Ippokratis Izzio
+  Jef Josyane
+  Kani Katinka Keisho Kostis Kranthirao Kryzsztof Kuljit Kürsat Kåre
+  Lalou Laurance Lilka Ljubisa Lucetta Lusitana Lyng
+  Majd Mancy Margarete Margeritha Mariasun Martinha Merve
+  Mieczysław Mijntje Mikis Musti Müje
+  Nadina Naranja Natali Nati Natuk Nea Nesimi Neuquina Nevenka
+  Nibali Nietta Niraj Nurbay Nurullah
+  Oceane Ordac Oszkar Önce Rhianna
+  Rogeir Roki Ronni Röne Rumelili
+  Sabu Sakis Sasko Seza Shalom Siggen Simcha Sirri Skarbimir
+  Sooki Suayip Sueli Süreyya Sibylle Syham
+  Tagi Tassios Tauno Theodori Tiberiu Tico Ünal
+  Veny Vesya Virendra Virgul
+  Xuechun Yasen Yenchi Yendi Zarko Zhangjie Åse
 
 );
 

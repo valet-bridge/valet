@@ -150,6 +150,7 @@ my @MULTI_WORDS =
   'Vest Agder',
   'Vest Finnmark',
   'Warminsko-Mazurskie',
+  'Washington DC',
   'West Bengal',
   'West Borneo',
   'West District',
@@ -177,13 +178,12 @@ my %MULTI_TYPOS =
   'East Jakarta' => ['jakarta timur'],
   'East Java' => ['jawa timur', 'jatim'],
   'East Kalimantan' => ['kalimantan timur'],
-  'Fylke Innlandet' => ['hedmark og oppland'],
   'East Nusa Tenggara' => ['nusa tenggara timur'],
   Guangdong => ['guangdong province', 'guang dong'],
   Hainan => ['hai nan'],
   Huabei => ['hua bei'],
   Hubei => ['hu bei'],
-  Innlandet => ['fylke innlandet'],
+  Innlandet => ['fylke innlandet', 'hedmark og oppland'],
   Jiangsu => ['jiang su'],
   Jiangxi => ['jiang xi'],
   Jilin => ['ji lin'],
@@ -264,7 +264,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Aberdeenshire Aceh Agder Akdeniz Akkad Alabama Alaska Algarve
   Altiplano Anatolia Andalusia Anhui Ararat Ardennes Arizona Arkansas 
-  Arunachala Aurland Auvergne Aveyron Ayrshire Azores
+  Arunachala Asturia Aurland Auvergne Aveiro Aveyron Ayrshire Azores
 
   Badakhshan Badung Bahia Bairrada Bali Banten Bayern Belitung Benchamas
   Bengal Bengkayang Bihar Bizkaia Blekinge Bogø Bolu Borneo Bornholm 
@@ -272,22 +272,22 @@ my @SINGLE_WORDS = qw(
 
   California Camargue Çankiri Cantal Cappadocia Catalonia Charente 
   Chartreuse Chengmai Colorado Comandatuba Connecticut Cornwall
-  Corfu Corsica Crete Cukurova
+  Corfu Correze Corsica Crete Cukurova
 
-  Dersim Dobruca Dobruja Druts
+  Delaware Dersim Dobruca Dobruja Druts
 
   Eyjafjallajokull
 
   Feixiang Finnmark Fjends Flakstad Florida Frøya Fuji Fujian Fyn
 
-  Galapagos Ganges Gansu Gauteng Gelderland Gibraltar Goa Gorontalo 
-  Guam Guangdong Guangxi Guizhou Gujarat
+  Galapagos Galicia Ganges Gansu Gauteng Gelderland Gibraltar Goa 
+  Gorontalo Guam Guangdong Guangxi Guizhou Gujarat
 
   Hainan Haixing Hampshire Haryana Hatay Haugaland Hawaii Hebei 
   Hedmark Hegyvidék Heilongjiang Hemshin Henan Herault Hordaland 
   Huabei Hubei Hunan
 
-  Iberia Idaho Illinois Indiana Innlandet Iowa Iskele
+  Iberia Idaho Illinois Indiana Innlandet Iowa Isère Iskele
 
   Jalisco Java Jämtland Jharkhand Jiangsu Jiangxi Jilin
 
@@ -318,10 +318,10 @@ my @SINGLE_WORDS = qw(
   Rize Rogaland Rosfjord 
 
   Sahyadri Sakarya Sallière Salten Sambas Samutsakorn Sanggau Santorini
-  Sardinia Saros Saskatchewan Schwyz Shandong Shanxi Siberia Sichuan 
-  Sicily Silesia Silla Sindh Sintang Sitaro Skåne Slask Småland 
-  Southland Speyside Suffolk Sulawesi Sumatra Suvalkija Sørlandet 
-  Sydvest
+  Sardinia Saros Saskatchewan Savoie Schwyz Shandong Shanxi Siberia 
+  Sichuan Sicily Silesia Silla Sindh Sintang Sitaro Skåne Slask 
+  Småland Southland Speyside Suffolk Sulawesi Sumatra Suvalkija 
+  Sørlandet Sydvest
 
   Tala Tambun Tasmania Telemark Telengana Tenerife Tennessee Texas 
   Tharparkar Thassos Thrace Thüringen Tianya Tigris Tinglin Transvaal 
