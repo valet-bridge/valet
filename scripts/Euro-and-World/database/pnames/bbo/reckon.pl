@@ -23,39 +23,6 @@ use Carp::Assert;
 
 my %INT_COUNTS;
 
-my %PUNCTUATION =
-(
-  '-' => 'DASH',
-  '+' => 'PLUS',
-  '.' => 'POINT',
-  '?' => 'QUESTION',
-  '_' => 'UNDERSCORE',
-  ',' => 'COMMA',
-  ':' => 'COLON',
-  ';' => 'SEMICOLON',
-  '=' => 'EQUAL',
-  '&' => 'AMPERSAND',
-  '@' => 'AT_SIGN',
-  '#' => 'HASH',
-  '*' => 'ASTERISK',
-  '%' => 'PERCENT',
-  '$' => 'DOLLAR',
-  '^' => 'CARET',
-  '~' => 'TILDE',
-  '"' => 'DOUBLEQUOTE',
-  '/' => 'SLASH',
-  '\\' => 'BACKSLASH',
-  '(' => 'PAREN_LEFT',
-  ')' => 'PAREN_RIGHT',
-  '<' => 'LESS_THAN',
-  '>' => 'GREATER_THAN',
-  '|' => 'PIPE',
-  '[' => 'SQUARE_LEFT',
-  ']' => 'SQUARE_RIGHT',
-  '{' => 'CURLY_LEFT',
-  '}' => 'CURLY_RIGHT',
-);
-
 my @UNIT_TAGS = qw(
   DENOMINATIONS
   LENGTHS
@@ -73,58 +40,6 @@ my @UNIT_TAGS = qw(
   KEYCARD
   STAYMAN
   CARDING
-);
-
-my @TAG_ORDER = qw(
-  BASES
-  OPENINGS
-  CONSTRUCTIVE
-  COMPETITIVE
-  AGAINSTNT
-  KEYCARD
-  CONVENTIONS
-  CARDING
-  SYSTEM
-
-  FLUFF
-  NOTNAMES
-
-  COUNTRY
-  REGION
-  CITY
-  LOCALITY
-  NATIONALITY
-
-
-  FIRSTFIRST
-  FIRSTMID
-  FIRSTBBO
-  LASTLAST
-  LASTMID
-  LASTBBO
-);
-
-my @SEMANTIC_TAGS = qw(
-  COUNTRY 
-  REGION 
-  CITY 
-  LOCALITY 
-  NATIONALITY
-  NOTNAMES 
-  FIRST 
-  LAST
-);
-
-my %SYSTEM_TAGS_HASH =
-(
-  BASES => 1,
-  OPENINGS => 1,
-  CONSTRUCTIVE => 1,
-  COMPETITIVE => 1,
-  AGAINSTNT => 1,
-  KEYCARD => 1,
-  CONVENTIONS => 1,
-  CARDING => 1,
 );
 
 my @CLUBS_FWD_LIKE = qw(c cl t tr);
@@ -188,13 +103,13 @@ my @POST_MAIL_ORDER = qw(
 
 # This is the one with name etc.
 use WholeBBO;
-my $whole = WholeBBO->new();
-$whole->init_hashes;
+my $whole_names = WholeBBO->new();
+$whole_names->init_hashes;
 
 # This is system-oriented.
 use WholeBBO2;
-my $whole2 = WholeBBO2->new();
-$whole2->init_hashes;
+my $whole_system = WholeBBO2->new();
+$whole_system->init_hashes;
 
 use Units;
 use Sparse::KeyResp;
@@ -211,15 +126,6 @@ use Email::Email;
 
 use Histo;
 my $histo = Histo->new();
-
-# TODO Still need this?
-
-my @HANDLE_SKIPS = qw(
-  123 270357
-);
-
-my %HANDLE_SKIPS_HASH;
-$HANDLE_SKIPS_HASH{$_} = 1 for @HANDLE_SKIPS;
 
 use Manual::TargetedLines;
 
@@ -294,7 +200,7 @@ if ($paragraph->{HANDLE} eq 'LIBRAX')
   # print "HERE\n";
 }
   $handle_counts{$paragraph->{HANDLE}}++;
-  Inspect::inspect_paragraph($whole, $whole2, 
+  Inspect::inspect_paragraph($whole_names, $whole_system, 
     $last3_names, $paragraph, \@PRE_INSPECTED_ORDER, 
     \%handle_counts, $histo, \%chain_stats);
 
@@ -314,44 +220,97 @@ if ($paragraph->{HANDLE} eq 'LIBRAX')
 
 
 
-    if (study_line($whole, $whole2, \@UNIT_TAGS, $entry, \@chains, 
-      $paragraph->{HANDLE}, $handle_counts{$paragraph->{HANDLE}}, $lno, 
-      $histo, \%chain_stats))
+    my @list;
+    lines_to_list($entry, \@list);
+    next if $#list == -1; # COUNTRY, etc.
+
+    if ($#list == 0 && $list[0] !~ / /)
     {
+      # Could be a single name.
+      my $cat = study_word($whole_names, $list[0], $histo);
+      if ($cat && $cat ne 'NAME_INITIAL')
+      {
+        $entry->{CATEGORY} = $cat;
+        next;
+      }
+    }
+
+    my $handle = $paragraph->{HANDLE};
+    my $hcount = $handle_counts{$paragraph->{HANDLE}};
+
+    my $identifier = "YYY $handle, $hcount, $lno\n" .
+      $entry->{TEXT} . "\n" .
+      $entry->{TEXT} . "\n\n";
+
+    my @battery;
+    $battery[0] = Units->new();
+    # list_to_units($whole_system, \@UNIT_TAGS, \@list, $battery[0],
+      # $entry->{TEXT}, $histo, \%chain_stats);
+    list_to_units_no_punctuation($whole_names,
+      \@list, $battery[0], $entry->{TEXT}, $histo, \%chain_stats);
+
+    my @name_list;
+    if (Inspect::study_name($battery[0], $whole_names, $last3_names,
+      \@name_list, $identifier, $histo))
+    {
+      if ($#name_list >= 0)
+      {
+        $entry->{CATEGORY} = 'LIST';
+        ${$entry->{LIST}} = @name_list;
+      }
+      else
+      {
+        # TODO Should be somewhere else.
+        $entry->{CATEGORY} = 'NAME_INITIAL';
+      }
       next;
     }
+    else
+    {
+      # TMP For inspection
+      # Inspect::study_name($battery[0], $whole_names, $last3_names,
+        # \@name_list, $identifier, $histo);
+    }
+
+    # my $units = $battery[0];
+    # if ($units->last() == 2 &&
+      # $units->value(1) eq 'SPACE')
+    # {
+      # TODO Use Inspect.pm::study_name
+      #
+      # Simple screen for names.
+      # my $cat0 = study_word($whole_names, $units->value(0), $histo);
+      # my $cat2 = study_word($whole_names, $units->value(2), $histo);
+
+      # if ($cat2 eq '' && $last3_names->lookup($units->value(2)))
+      # {
+        # $cat2 = 'NAME_LAST';
+      # }
+
+      # if ($cat0 eq 'NAME_FIRST' && $cat2 eq 'NAME_LAST')
+      # {
+        # # TODO Probably keep the identification somewhere?
+        # $entry->{CATEGORY} = 'NAMELIKE';
+        # next;
+      # }
+      # elsif ($cat0 eq 'NAME_FIRST' && $cat2 eq 'NAME_INITIAL')
+      # {
+        # # TODO Probably keep the identification somewhere?
+        # $entry->{CATEGORY} = 'NAMELIKE';
+        # next;
+      # }
+    # }
+
+    print $identifier;
   }
 }
 
 printf("Lines %10d\n", $chain_stats{DATA});
 printf("Parts %10d\n\n", $chain_stats{PARTS});
 
-print "Categories\n\n";
-my $ssum = 0;
-for my $cat (sort keys %{$chain_stats{CATEGORIES}})
-{
-  printf("%-20s%8d\n", $cat, $chain_stats{CATEGORIES}{$cat});
-  $ssum += $chain_stats{CATEGORIES}{$cat};
-}
-printf("\n%20s%8d\n", "Sum", $ssum);
-
-print "\nWords\n\n";
-$ssum = 0;
-for my $word (sort keys %{$chain_stats{WORDS}})
-{
-  printf("%-20s%8d\n", $word, $chain_stats{WORDS}{$word});
-  $ssum += $chain_stats{WORDS}{$word};
-}
-printf("\n%20s%8d\n", "Sum", $ssum);
-
-print "High words\n\n";
-$ssum = 0;
-for my $word (sort keys %{$chain_stats{HIGH_WORDS}})
-{
-  printf("%-20s%8d\n", $word, $chain_stats{HIGH_WORDS}{$word});
-  $ssum += $chain_stats{HIGH_WORDS}{$word};
-}
-printf("\n%20s%8d\n", "Sum", $ssum);
+print_chain_stats_entry(\%chain_stats, 'Categories', 'CATEGORIES');
+print_chain_stats_entry(\%chain_stats, 'Words', 'WORDS');
+print_chain_stats_entry(\%chain_stats, 'High words', 'HIGH_WORDS');
 
 print "\nIntegers\n\n";
 for my $k (sort {$a <=> $b} keys %INT_COUNTS)
@@ -390,8 +349,6 @@ sub raw_to_paragraphs
         next;
       }
 
-      next if exists $HANDLE_SKIPS_HASH{$handle};
-
       $paragraphs[$pno]{HANDLE} = $handle;
 
       for my $line (split /[\x00-\x1F]+/, $chunks[$cno+1])
@@ -411,83 +368,6 @@ sub raw_to_paragraphs
           { CATEGORY => 'OPEN', TEXT => $line };
       }
       $pno++;
-    }
-  }
-}
-
-
-sub lines_to_list_OLD
-{
-  my ($entry, $list) = @_;
-
-  if ($entry->{CATEGORY} eq 'LIST')
-  {
-    my $len = $#{$entry->{LIST}};
-    for (my $i = 0; $i <= $len; $i += 2)
-    {
-      if ($entry->{LIST}[$i] eq 'OPEN' || 
-          $entry->{LIST}[$i] eq 'SYSTEM')
-      {
-        push @$list, $entry->{LIST}[$i+1];
-      }
-    }
-  }
-  elsif ($entry->{CATEGORY} eq 'OPEN' || $entry->{CATEGORY} eq 'SYSTEM')
-  {
-    my $datum = $entry->{VALUE} // $entry->{TEXT};
-    push @$list, $datum;
-  }
-}
-
-
-sub list_to_units_OLD
-{
-  my ($whole, $unit_tags, $list, $units, 
-    $text, $handle, $hcount, $lno, $histo, $chain_stats) = @_;
-
-  for my $datum (@$list)
-  {
-    $chain_stats->{DATA}++;
-
-    if ($datum =~ /#fake@/)
-    {
-      $units->push('FLUFF', $datum, $datum, 0, $chain_stats);
-      return;
-    }
-
-    my $sep = qr/(\d+|[\s\-\+\.\?_,:;=&@#*%\$^~"\/\\()<>|\[\]\{\}])/;
-    my @parts = grep { $_ ne '' } split /$sep/, $datum;
-
-    my $pos = -1;
-    my @splits;
-    for my $part (@parts)
-    {
-      $pos++;
-      $chain_stats->{PARTS}++;
-
-      if (exists $PUNCTUATION{$part})
-      {
-        $units->push('PUNCTUATION', $part, $PUNCTUATION{$part},
-          $pos, $chain_stats);
-        next;
-      }
-      elsif ($part eq ' ')
-      {
-        $units->push('PUNCTUATION', $part, 'SPACE', $pos, $chain_stats);
-        next;
-      }
-      elsif ($part =~ /^\d+$/)
-      {
-        $units->push_integer($part, $pos, $chain_stats);
-        next;
-      }
-      else
-      {
-        my ($category, $value);
-        categorize($whole, $unit_tags, $part, \$category, \$value);
-
-        $units->push($category, $part, $value, $pos, $chain_stats);
-      }
     }
   }
 }
@@ -513,85 +393,28 @@ sub study_line
   my ($whole_names, $whole_system, $unit_tags, $entry, $chains, 
     $handle, $hcount, $lno, $histo, $chain_stats) = @_;
 
+   # Invocation from above:
+   # study_line($whole_names, $whole_system, \@UNIT_TAGS, 
+     # $entry, \@chains, $paragraph->{HANDLE}, 
+     # $handle_counts{$paragraph->{HANDLE}}, $lno, 
+     # $histo, \%chain_stats);
+
   my @list;
-  lines_to_list_OLD($entry, \@list);
+  lines_to_list($entry, \@list);
   return if $#list == -1; # COUNTRY, etc.
 
-  if ($#list == 0 && $list[0] !~ / /)
-  {
-    # Could be a single name.
-    my $cat = study_word($whole_names, $list[0], $histo);
-    if ($cat && $cat ne 'NAME_INITIAL')
-    {
-      $entry->{CATEGORY} = $cat;
-      return;
-    }
-  }
-
-my $identifier = "YYY $handle, $hcount, $lno\n" .
-  $entry->{TEXT} . "\n" .
-  $entry->{TEXT} . "\n\n";
-
-if ($handle eq 'RJP1')
-{
-  # print "HERE\n";
-}
+  my $identifier = "YYY $handle, $hcount, $lno\n" .
+    $entry->{TEXT} . "\n" .
+    $entry->{TEXT} . "\n\n";
 
   my @battery;
   $battery[0] = Units->new();
-  list_to_units_OLD($whole_system, $unit_tags, \@list, $battery[0],
-    $entry->{TEXT}, $handle, $hcount, $lno, $histo, $chain_stats);
+  list_to_units($whole_system, $unit_tags, \@list, $battery[0],
+    $entry->{TEXT}, $histo, $chain_stats);
 
   my $units = $battery[0];
-  if ($units->last() == 2 &&
-    $units->value(1) eq 'SPACE')
-  {
-    # TODO Use Inspect.pm::study_name
-    #
-    # Simple screen for names.
-    my $cat0 = study_word($whole_names, $units->value(0), $histo);
-    my $cat2 = study_word($whole_names, $units->value(2), $histo);
 
-    if ($cat2 eq '' && $last3_names->lookup($units->value(2)))
-    {
-      $cat2 = 'NAME_LAST';
-    }
-
-    if ($cat0 eq 'NAME_FIRST' && $cat2 eq 'NAME_LAST')
-    {
-      # TODO Probably keep the identification somewhere?
-      $entry->{CATEGORY} = 'NAMELIKE';
-      return;
-    }
-    elsif ($cat0 eq 'NAME_FIRST' && $cat2 eq 'NAME_INITIAL')
-    {
-      # TODO Probably keep the identification somewhere?
-      $entry->{CATEGORY} = 'NAMELIKE';
-      return;
-    }
-    elsif ($cat0 eq '' && $cat2 eq 'NAME_LAST')
-    {
-      # print "XCAND ", lc($units->value(2)), "\n";
-      # print $identifier;
-    }
-    else
-    {
-      # print $identifier;
-      # my $s = (($cat0 eq '' ? 'NONE' : $cat0) . " " .
-            # ($cat2 eq '' ? 'NONE' : $cat2) . "\n");
-      # print $s;
-      # print $identifier;
-    }
-
-    # The other way round (a) identifies only a small number, and
-    # (b) needs to be curated.
-    # print $identifier;
-  }
-
-  # if ($units->last() == 0)
-  {
-    print $identifier;
-  }
+  print $identifier;
 
   look_for_openings($battery[0], $chain_stats);
 
@@ -614,50 +437,7 @@ if ($handle eq 'RJP1')
 
   split_on_specifics(\@battery, $chain_stats, $identifier);
 
-  if ($entry->{CATEGORY} eq 'OPEN')
-  {
-    # Only because this is so heavily curated.
-    $entry->{CATEGORY} = 'SYSTEM';
-    # print $identifier;
-    return;
-  }
-
-  if ($#battery >= 1)
-  {
-    # Assume it's a system line -- great assumption.
-    # I've edited some with two units (so length 1).
-    return;
-  }
-
-  my $longest = 0;
-  for my $units (@battery)
-  {
-    my $l = $units->last()+1;
-    $longest = $l if $l > $longest;
-  }
-
-  # Heavily curated.
-  if ($entry->{CATEGORY} ne 'OPEN')
-  {
-    return;
-  }
-
-  if ($battery[0]->status() eq 'COMPLETE')
-  {
-    return;
-  }
-
-  if ($longest == 2 || $longest == 4 || $longest >= 6)
-  {
-    return;
-  }
-
-  if ($units->last() >= 2)
-  {
-    # With all the curation, this is a system line.
-    return;
-  }
-
+  # Don't get to here anymore.
   die;
 }
 
@@ -752,3 +532,19 @@ sub print_paragraph
   }
   print "\n";
 }
+
+
+sub print_chain_stats_entry
+{
+  my ($chain_stats, $name, $field) = @_;
+
+  print "$name\n\n";
+  my $sum = 0;
+  for my $cat (sort keys %{$chain_stats->{$field}})
+  {
+    printf("%-20s%8d\n", $cat, $chain_stats->{$field}{$cat});
+    $sum += $chain_stats->{$field}{$cat};
+  }
+  printf("\n%20s%8d\n", "Sum", $sum);
+}
+

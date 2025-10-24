@@ -282,6 +282,14 @@ my @SINGLE_WORDS = qw(
   Yocheved Yolcu Yongfu
   Zdzislaw Zoli
   Øivind
+
+  Amaranta Aramesh Armony
+  Cissi Curly Cüneyt
+  Dimitar Elod Ferdi Feyzullah Gaétan Guglielmo Gündüz
+  Izzy Jieren Juana Karina Kerim Lysette Maité Miep Mildi
+  Nail Ocson Odd Oyil Öge Öztekin
+  Reine Sjef Slamet Todd Turan Vinayak Ximena Zoé
+
 );
 
 my %SINGLE_TYPOS =

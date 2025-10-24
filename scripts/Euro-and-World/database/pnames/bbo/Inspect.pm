@@ -28,7 +28,7 @@ use Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT = qw($sublines $fluffed_lines $system_lines
   $known_names $late_mails $both_last $both_neither inspect_paragraph
-  lines_to_list list_to_units
+  lines_to_list list_to_units list_to_units_no_punctuation
   study_word study_name study_name_two);
 
 use lib '../../bbo';
