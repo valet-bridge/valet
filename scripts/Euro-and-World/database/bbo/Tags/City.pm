@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Al-Rabwa',
   'Alba Iulia',
   'Bad Griesbach',
+  'Bad Salzbrunn',
   'Baleal Island',
   'Banda Aceh',
   'Bandar Lampung',
@@ -101,16 +102,19 @@ my @MULTI_WORDS =
   'Novi Sad',
   'Nowa Ruda',
   'Nowa Sol',
+  'Nowy Sacz',
   'Palangka Raya',
   'Palo Alto',
   'Piatra Neamt',
   'Piggs Peak',
   'Ponta Delgada',
+  'Porto Alegre',
   'Punta Arenas',
   'Punta del Este',
   'Reggio Calabria',
   'Reggio Emilia',
   'Rio Claro',
+  'Rio Cuarto',
   'Rio de Janeiro',
   'Rostov-on-Don',
   'Russia-Pan',
@@ -232,10 +236,10 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Aabenraa Aachen Aalborg Aberdeen Adak Adakli Adalar Adana Adapazan 
   Adelaide Adiyaman Afyonkarahisar Agadir Agresar Ahmedabad Ainhoa 
-  Airmadidi Akcakoca Akhisar Akron Aksaray Aksehir Akyaka Akyazi 
+  Airmadidi Ajaccio Akcakoca Akhisar Akron Aksaray Aksehir Akyaka Akyazi 
   Aladag Alanya Alcobaça Alexandria Aley Aliaga Alicante Allahabad Alta 
   Altea Altinoluk Altinova Altrincham Alytus Amasya Ambon Amed Amman 
-  Amsterdam Anaheim Angers Ankara Annecy Antakya Antalya Antibes 
+  Amsterdam Anaheim Ancona Angers Ankara Annecy Antakya Antalya Antibes 
   Antony Antwerpen Aqaba Aral Ardesen Arendal Arezzo Ardahan Arhavi
   Arnhem Artvin Asenovec Asenovgrad Askim Asminderød Assis Assos Assunçao 
   Atakum Atasehir Athens Atlanta Aubagne Auckland Augsburg 
@@ -252,11 +256,11 @@ my @SINGLE_WORDS = qw(
   Bialystok Biarritz Bielefeld Bikaner Bilbao Bilecik Birolo Bismil 
   Bistrita Bitlis Bitung Blitar Blois Bodrum Bochum Bodø Bogor Bogotá 
   Boleslawiec Bologna Bolu Bonn Bordeaux Borlänge Bormali Bornova 
-  Boston Botosani Bozüyük Böblingen Braila Brandbu Braniewo Brasilia 
-  Brasov Bremen Brevik Briancon Brighton Brisbane Bristol Broadbeach 
-  Bromölla Brooklyn Bruges Brussels Bucharest Budapest Buffalo Bulancak 
-  Buonconvento Burdwan Burghausen Burhaniye Bursa Burdur Burgas 
-  Buyukada Buzios Bydgoszcz Bytom Bø
+  Boston Botosani Boyaca Bozüyük Böblingen Braila Brandbu Braniewo 
+  Brasilia Brasov Bremen Brevik Briancon Brighton Brisbane Bristol 
+  Broadbeach Bromölla Brooklyn Bruges Brussels Bucharest Budapest 
+  Buffalo Bulancak Buonconvento Burdwan Burghausen Burhaniye Bursa 
+  Burdur Burgas Buyukada Buzios Bydgoszcz Bytom Bø
 
   Cadiz Caen Cagliari Cairns Cairo Calais Calangute Calgary Cali 
   Cambrils Canakkale Canberra Cankaya Cankiri Cannareggio Cannes 
@@ -264,7 +268,7 @@ my @SINGLE_WORDS = qw(
   Catalca Catania Çaycuma Caykara Cerkezkoy Cesme Champaign Chandigarh 
   Changhua Changsha Changzhou Chanteloup Charleroi Charlottesville 
   Charreau Chartres Chavdar Chaville Chelmno Chelopech Chengdu Chennai 
-  Chepelare Chiayi Chicago Chisinau Chongqing Christchurch Chumphon 
+  Chepelare Chiayi Chicago Chisinau Chojne Chongqing Christchurch Chumphon 
   Cide Cigli Cildir Cimahi Cirebon Civril Claremont Clichy Cluj 
   Coimbatore Coimbra Colmar Comandatuba Copenhagen Corlu 
   Corum Corvallis Coventry Craiova Cranbrook Csapi Csíkszereda Cuenca 
@@ -286,13 +290,13 @@ my @SINGLE_WORDS = qw(
   Florianopolis Foca Foshan Fosnavåg Frankfort Frankfurt Fredrikstad 
   Freiburg Fremont Fritzlar Funchal Fussey Fuzhou Førde
 
-  Gainesville Galveston Galway Gajaki Galleberg Garches Gaza 
+  Gabrovo Gainesville Galveston Galway Gajaki Galleberg Garches Gaza 
   Gaziemir Gazipasa Gävle Gdansk Gdynia Gebze Gelibolu Geneva Genoa 
   Gent Georgetown Gevgelija Geyve Giresun Giza Gizycko Glasgow Glendale
   Gliwice Gnesta Gniezno Göksun Gölcük Göteborg Gqeberha Graz Grenoble 
   Gresik Grobogan Grodkow Grogol Groningen Guangdong Guangzhou 
   Guayaquil Gudbrandsdal Gudivada Guoxing Gümüshane Gümüşlük Gütersloh 
-  Gyor
+  Gwalior Gyor
 
   Haderslev Haikou Hamar Hamburg Hammamet Hanau Hangzhou Hani Hanko 
   Hannover Harplinge Harmanli Harstad Harvard Haskovo Hatay Havirov 
@@ -314,12 +318,12 @@ my @SINGLE_WORDS = qw(
   Kastamonu Katowice Kavakdibi Kavarna Kayseri Kazanlak Kediri 
   Kedungwaru Kedzierzyn Keelung Kemaliye Kemalpasa Kesap Kesten Ketsch 
   Kharagpur Kiel Kielce Kiev Kigali Kinali Kirkeby Kirikcan Kirklareli 
-  Kirsehir Kista Kiten Kitka Kiziltepe Klabat Klepp Kleve Kocaeli 
-  Kolbotn Kolkata Kolobrzeg Konga Kongsberg Konnerud Konya Kópavogur 
-  Korfez Kornik Kosice Kostroma Koszalin Kota Koycegiz Köln Kragerø 
-  Krakow Kraljevica Krasnodar Kristiansand Krzywanice Kucukbakkalkoy 
-  Kudus Kunming Kunshan Kuopio Kusadasi Kutno Kuzguncuk Küçükçekmece 
-  Kütahya Kverndalen Kyoto Kyustendil Køge Kølabånn
+  Kirsehir Kista Kizildere Kiten Kitka Kiziltepe Klabat Klepp Kleve 
+  Kocaeli Kocarli Kolbotn Kolkata Kolobrzeg Konga Kongsberg Konnerud 
+  Konya Kópavogur Korfez Kornik Kosice Kostroma Koszalin Kota Koycegiz 
+  Köln Kragerø Krakow Kraljevica Krasnodar Kristiansand Krzywanice 
+  Kucukbakkalkoy Kudus Kunming Kunshan Kuopio Kusadasi Kutno Kuzguncuk 
+  Küçükçekmece Kütahya Kverndalen Kyoto Kyustendil Køge Kølabånn
 
   Lahore Lakselv Lambach Landak Langkat Lanzhou Laodikya Lappeenranta 
   Largo Larissa Larnaca Larvik Lausanne Lebork Lecco Leiden Leipzig 
@@ -330,25 +334,25 @@ my @SINGLE_WORDS = qw(
   Lovech Lowicz Lubin Lublin Lubomino Ludhiana Ludvikabygden Lufeng 
   Lugoj Luleburgaz Lumajang Luzern Lübeck Lyngdal Lyon
 
-  Maastricht Madrid Magetan Maillé Mainz Makassar Malaga Malang Malatya 
-  Malkara Malmö Manado Manavgat Manchester Manila Manisa Manna Mannheim 
-  Marbella Marcelli Mardin Marijampolė Marmara Marrakech Marseille 
-  Martapura Massy Mautern Medan Medellin Melawi Melbourne Memphis 
-  Meritxell Mersin Meursac Miami Miaoli Michalovce Michalowo Midyat 
-  Milan Milas Milpitas Minsk Miramar Miskolc Mombasa Momchilgrad 
-  Montélimar Monticiano Montoro Montpellier Montreal Moradabad Mordogan 
-  Morsø Morud Moscow Moss Mragowo Mudanya Muðla Mulhouse Mulund 
-  Mumbai Munich Myndos Mysore
+  Maastricht Madrid Madurai Magetan Maillé Mainz Makassar Malaga 
+  Malang Malatya Malkara Malmö Manado Manavgat Manchester Manila 
+  Manisa Manna Mannheim Marbella Marcelli Mardin Marijampolė Marmara 
+  Marrakech Marseille Martapura Massy Mautern Medan Medellin Melawi 
+  Melbourne Memphis Meritxell Mersin Meursac Miami Miaoli Michalovce 
+  Michalowo Midyat Milan Milas Milpitas Minsk Miramar Miskolc Mombasa 
+  Momchilgrad Montélimar Monticiano Montoro Montpellier Montreal 
+  Moradabad Mordogan Morsø Morud Moscow Moss Mragowo Mudanya Muðla 
+  Mulhouse Mulund Mumbai Munich Myndos Mysore
 
   Nagari Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanjing
-  Nanning Nantes Nantong Napoli Narlidere Narvik Nashik Nashville Nazilli 
-  Näsby Nebakan Neijiang Nesodden Netanya Neuruppin Nevsehir Newport 
-  Nganjuk Nice Nicosia Niedernhausen Nijmegen Niksar Nilüfer Nimes Ningbo 
-  Niš Noida Nonthaburi Norrbyskär Norrøna Nottingham Notodden Nouméa
-  Novosibirsk Nusaybin Nuuk Nürnberg Nykøbing Nyon Nysa Nærbø Nærøysund 
-  Næstved Nøtterøy
+  Nanning Nantes Nanto Nantong Napoli Narlidere Narvik Nashik Nashville 
+  Nazilli Näsby Nebakan Neijiang Nesodden Netanya Neuruppin Nevsehir 
+  Newport Nganjuk Nice Nicosia Niedernhausen Nijmegen Niksar Nilüfer 
+  Nimes Ningbo Niš Noida Nonthaburi Norrbyskär Norrøna Nottingham 
+  Notodden Nouméa Novosibirsk Nusaybin Nuuk Nürnberg Nykøbing Nyon 
+  Nysa Nærbø Nærøysund Næstved Nøtterøy
 
-  Ocala Odense Oderzo Odessa Odmet Oldenburg Olrud Olsztyn 
+  Ocala Odense Oderzo Odessa Odmet Oldenburg Olkusz Olrud Olsztyn 
   Oltenita Omaha Omurtag Opatija Opole Oradea Ordu Orlando Orly 
   Orneta Orhangazi Osaka Ostend Oslo Osmaniye Osnabrück Ostrowiec 
   Otepää Ottadalen Ottawa Oulu Oxford Ozarow Örebro Överum
@@ -373,26 +377,25 @@ my @SINGLE_WORDS = qw(
   Romana Rome Ronneby Roskilde Rotterdam Rottneros Royan Rozanka 
   Rubbestadneset Ruen Rugao Ruian Ruse Rzepin Rzeszow Rødovre Rønne
 
-  Saarbrücken Sabadell Safranbolu Saigon Salerno Salo Salsomaggiore 
-  Samarinda Samobor Sampit Samsun Sandefjord Sanliurfa Sansepolcro 
-  Santiago Sanya Saragossa Sariyer Sarpsborg Savona Sawahlunto 
-  Scottsdale Seattle 
-  Secunderabad Seferihisar Selfoss Semarang Sendai Senigallia Seoul 
-  Serang Sevtopolis Shanghai Shangrao Shaoguan Sharjah Shenyang 
-  Shenzhen Shijiazhuang Shimla Shiraz Shouguang Shumen Sibiu Sidoarjo 
-  Siedlce Siena Sieradz Sighisoara Siglufjordur Sigulda Sile Silifke 
-  Silistra Silivri Simav Simeonovgrad Sindi Singaraja Singkawang 
-  Singsås Sinop Siofok Sirnak Sivas Skara Skarvemellen Skawina Ski 
-  Skien Skopje Slagelse Slavyanovo Slawa Sleman Sliven Smedstad 
-  Smithers Smolyan Smyrna Snåsa Sofia Sogndal Solapur Solo Solok 
-  Solvorn Sombor Songkhla Sopot Sortland Söke Sozopol Spartanburg
-  Split Stanford 
+  Saarbrücken Sabadell Safranbolu Saigon Salerno Salihli Salo 
+  Salsomaggiore Samarinda Samobor Sampit Samsun Sandefjord Sanliurfa 
+  Sansepolcro Santiago Sanya Saragossa Sariyer Sarpsborg Savona 
+  Sawahlunto Scottsdale Seattle Secunderabad Seferihisar Selfoss 
+  Semarang Sendai Senkaya Senigallia Seoul Serang Sevtopolis Shanghai 
+  Shangrao Shaoguan Sharjah Shenyang Shenzhen Shijiazhuang Shimla 
+  Shiraz Shouguang Shumen Sibiu Sidoarjo Siedlce Siena Sieradz 
+  Sighisoara Siglufjordur Sigulda Sile Silifke Silistra Silivri 
+  Simav Simeonovgrad Sindi Singaraja Singkawang Singsås Sinop Siofok 
+  Sirnak Sivas Skara Skarvemellen Skawina Ski Skien Skopje Slagelse 
+  Slavyanovo Slawa Sleman Sliven Smedstad Smithers Smolyan Smyrna 
+  Snåsa Sofia Sogndal Solapur Solo Solok Solvorn Sombor Songkhla 
+  Sopot Sortland Söke Sozopol Spartanburg Split Stanford 
   Starachowice Stargard Stavanger Steinkjer Stirling Stockholm 
   Stockton Stokke Stoholm Storsjöbygden Strasbourg Strømmen Stureby 
   Stuttgart Szczecin Suceava Sukma Sukomoro Sumedang Sunndalsøra 
   Suqian Surabaya Suzhou Suwalki Sürmene Svendborg Svilengrad 
-  Svinninge Svishtov Sydney Szczecinek Szczyrk Szeged Sztum Søborg 
-  Sømna Sørreisa Sørvoll
+  Svinninge Svishtov Swidnica Sydney Szczecinek Szczyrk Szeged Sztum 
+  Søborg Sømna Sørreisa Sørvoll
 
   Tabarka Tacoma Taicang Taichung Tainan Taiyuan Taizhou Takayama 
   Talagante Tallinn Tambun Tampa Tangerang Taoyuan Tarakan Targoviste 
@@ -416,8 +419,8 @@ my @SINGLE_WORDS = qw(
 
   Walbryzch Waldsolms Waltham Wanzhou Warsaw Warwick Waterford Waterloo
   Wellington Wetzlar Wichita Wiesbaden Williamsburg Wimbledon 
-  Winnipeg Wisla Woburn Wolverhampton Wonosobo Worcester Wroclaw 
-  Wronie Wuhan Wuxi Wuzhishan
+  Winnipeg Wisla Wloclawek Woburn Wolverhampton Wonosobo Worcester 
+  Wroclaw Wronie Wuhan Wuxi Wuzhishan
 
   Xanthi Xiamen Xian Xiantao Xingdong Xinyi Xuzhou
 

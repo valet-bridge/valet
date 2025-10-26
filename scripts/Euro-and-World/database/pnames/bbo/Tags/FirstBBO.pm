@@ -273,7 +273,7 @@ my @SINGLE_WORDS = qw(
   Okcan Öner Öktem
   Paradima Prasanta Priti
   Raymon Reki Ridvan Ronger
-  Sacit Sada Sadra Sankul Saya Semsettin Shalom Shansy Shterion
+  Sacit Sada Sadra Sankul Saya Semsettin Shansy Shterion
   Surender Susu Sysser
   Tiena Touran Till Tiny Trinitee Tuzar
   Udatta Ulric
@@ -307,11 +307,26 @@ my @SINGLE_WORDS = qw(
   Nibali Nietta Niraj Nurbay Nurullah
   Oceane Ordac Oszkar Önce Rhianna
   Rogeir Roki Ronni Röne Rumelili
-  Sabu Sakis Sasko Seza Shalom Siggen Simcha Sirri Skarbimir
+  Sabu Sakis Sasko Seza Siggen Simcha Sirri Skarbimir
   Sooki Suayip Sueli Süreyya Sibylle Syham
   Tagi Tassios Tauno Theodori Tiberiu Tico Ünal
   Veny Vesya Virendra Virgul
   Xuechun Yasen Yenchi Yendi Zarko Zhangjie Åse
+
+  Aquiles Araf Dougall Gülden Gürol Ibo Jadzia Muneca Nawaz
+  Pumulo Rajon Rychu Sem Valmar Xuyou
+
+  Abir Adha Akhteruzzaman Arief Aristea Atahualpa Aura
+  Bjørke Bogac Bong Cengiz Chenhui Cudi
+  Dennica Didina Dulce Ersah Ertürk Eylül Feyza Frymeta
+  Gahis Gimgim Ginevra Gokay Gulten Güler Gültekin Güzide
+  Iole Jemy Kavi Kesanli Khairuddin Lokman Lussy Merche Moch
+  Nisa Pallina Pupa Rizgar Sedick Seiki Sevilay Shalom Sido Standa
+  Taiji Ülgen Wadud Wardeen Wided Yura Zbych Zbychu
+
+  Anang Anaz Asil Bayhan Blondu Burcan Cantürk Gulce Heniek Heru
+  Izzettin Inas Kasey Kwanyoung Lis Mendo Novi Sahabettin Samdi
+  Shalom Sipalui Suheyla Sukil Tavare Temur Tona Yuklong
 
 );
 

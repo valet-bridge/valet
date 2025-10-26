@@ -627,6 +627,7 @@ sub study_name
   my $vstr = join ' - ', @values;
   print $cstr, "\n";
   print $vstr, "\n";
+  print "-------------\n\n";
 
   return 0;
 }

@@ -270,9 +270,9 @@ my @SINGLE_WORDS = qw(
   Bengal Bengkayang Bihar Bizkaia Blekinge Bogø Bolu Borneo Bornholm 
   Bungo Buriram Buskerud
 
-  California Camargue Çankiri Cantal Cappadocia Catalonia Charente 
-  Chartreuse Chengmai Colorado Comandatuba Connecticut Cornwall
-  Corfu Correze Corsica Crete Cukurova
+  Calabria California Camargue Çankiri Cantal Cappadocia Catalonia 
+  Charente Chartreuse Chengmai Colorado Comandatuba Connecticut 
+  Cornwall Corfu Correze Corsica Crete Cukurova
 
   Delaware Dersim Dobruca Dobruja Druts
 
@@ -302,8 +302,8 @@ my @SINGLE_WORDS = qw(
   Michigan Midtsjælland Minahasa Minang Minnesota Mississippi Missouri 
   Misya Mjøsa Montana Muallim Munzur Mysia
 
-  Narathiwat Narman Natuna Nebraska Negev Nevada Ngawi Nordafjells 
-  Nordland Normandy Norrland Norrorts Northland Nusantara
+  Narathiwat Narman Natuna Naxos Nebraska Negev Nevada Ngawi 
+  Nordafjells Nordland Normandy Norrland Norrorts Northland Nusantara
 
   Oberloiben Occitanie Odisha Ohio Oklahoma Olona Ontario Oregon 
   Orontes Otago Overijssel
@@ -331,8 +331,8 @@ my @SINGLE_WORDS = qw(
 
   Valsugana Vestland Victoria Vojvodina
 
-  Wachau Wakayama Waikato Washington Wielkopolska Wisconsin Wujin 
-  Wyoming Wyssa
+  Wachau Wakayama Waikato Warmia Washington Wielkopolska Wisconsin 
+  Wujin Wyoming Wyssa
 
   Xizang Xinjiang
 
