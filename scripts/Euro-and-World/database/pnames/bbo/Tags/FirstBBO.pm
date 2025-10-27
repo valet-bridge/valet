@@ -109,7 +109,7 @@ my @SINGLE_WORDS = qw(
   Mam Mandy Manny Manon Marcie Marcy Marg Marga Marge Margret 
   Mariapia Mariarosa Mariateresa Maribel Mariela Marilou Marine 
   Marjie Marlis Marlon Marly Marmaris Martyn Marv Maryann Maryanne 
-  Maryellen Marylou María Mat Mattei Mavis Mazal Meira Melinda Melka 
+  Maryellen Marylou Mat Mattei Mavis Mazal Meira Melinda Melka 
   Melle Merlino Mersin Mery Mic MichÃ¨le Miki Milagros Milen 
   Millie Minas Misha Misho Missy Misty Mithat Mitzi Mm Mogens Moni 
   Monte Mort Muhittin Musa Myra Myrna Mónica 
@@ -177,7 +177,7 @@ my @SINGLE_WORDS = qw(
   Dedel Dermane Dhani Dhuni Dilla Dilly Dinan Diran Diren Dotti
   Duysal Dwill
 
-  Edita Efira Eirek Elies Emili Eros Esperanza Evita Ezibi
+  Edita Efira Eirek Elies Emili Esperanza Evita Ezibi
 
   Feray Ferhan Flippi Flore Florie Fosen Franda Friedel
 
@@ -225,51 +225,50 @@ my @SINGLE_WORDS = qw(
   Bayram Bektas Beyhan Birdie Bregtje Buby
   Caty Cezmi Chania Cybèle
   Daffi Dalila Davut Dhen Diao
-  Efthimios Eid Elie Erdin Erol Eyyüp
-  Ferdy Ferit Filiz Fränzi Fulya
+  Efthimios Eid Erdin Erol Eyyüp
+  Ferdy Fränzi Fulya
   Gatot Gerti Giampi Graziamaria Gudveig Guena Günni
-  Haci Hallgeir Harshad Hisam Honeylee
+  Haci Harshad Hisam Honeylee
   Idman Iliya Ireta
-  Jakop Jeff Jehane Jeun Jogindra Jongky Juju Jushi Jørn
+  Jakop Jehane Jeun Jogindra Jongky Juju Jushi Jørn
   Karelle
-  Kasif Kasim Kayan Korine Kosyo Kyriakos
-  Lakjio Laudine Laurette Lauriane Lezinka Lilo Liselil Liujun
-  Liza Locky Lorella Luise Luma
+  Kasif Kasim Kayan Korine Kosyo
+  Lakjio Laudine Laurette Lauriane Lezinka Liselil Liujun
+  Locky Lorella Luise Luma
   Malbina Malissa Marizul Mariapaola Marlena Marnie Marsel Marzenna
-  Mayol Mevlüt Michala Mici Mido Miko Muhammet Mumu Müfit
+  Mayol Mevlüt Michala Mici Mido Miko Mumu Müfit
   Nacher Nadhin Nayak Nedko Nedo Nezihi Nige Nilesh N'Oga
   Ozzie Önder Ören Özdener Özer
-  Paulie Pavinee Pepo Perisa Pik Pleun Puchi
-  Ramazan Raylene Richi Roni Rosalila Ruç Ruja Rüstem
+  Paulie Pepo Perisa Pik Pleun Puchi
+  Raylene Richi Rosalila Ruç Ruja Rüstem
   Sabyasachi Safa Sakke Samiksha Sasho Schoumicha Sefik Senol Sevinç
   Shaban Shary Shukoufeh Sigbjørn Soad Songa Sowmitra Stevan Sudarshan
   Sudirman Sülo Sveinngun Sy
-  Taara Tadjib Theodoros Tshepiso Txomin Tyroon
+  Taara Tadjib Tshepiso Txomin Tyroon
   Üzeyir
   Vahit Vehbi Viktoria Viliam
   Waled Winson Woen
   Xenia
   Yaren Yehudit Yeni Yoya Youyou Yueyin Yunyue
-  Zare Zekai Zekeriya Zdzicho Zhivko Zhixiu
+  Zare Zekai Zekeriya Zdzicho Zhixiu
 
   Arnaut Cevdet Frédérique Gerasimos Göro Günay Ivonna Krzys
   Sebahettin Öksel Özden Özgür Pål Rémy Samo Sergi Seyit Torvald
   Ümit Yüksel
 
   Aghita Ainy Akinom Annki Anyelik Apryanta Ayca Aygün Aymar
-  Bimla Birkan Blagi Brune Budi Byju
+  Bimla Birkan Blagi Brune Byju
   Caglar Cakircali Celile Cholai Craquotte
   Divaraka Donita
   Fahrettin Fenita Ferry Fuat
-  Gapil Gilly Gökay
-  Guangbin
-  Haohao Hazar Hery Huysuz
+  Gapil Gökay
+  Haohao Hazar Huysuz
   Inmaculada Irson
   Jieren Jyaubin
-  Kamaljit Kata Kikou Kizola Konrat
+  Kamaljit Kikou Kizola Konrat
   Lindy Lukman
   Macca Majvor Marj Melek Morena Murph Musty Mårten
-  Nadri Necmi Nial Normand
+  Nadri Necmi Nial 
   Okcan Öner Öktem
   Paradima Prasanta Priti
   Raymon Reki Ridvan Ronger
@@ -277,19 +276,19 @@ my @SINGLE_WORDS = qw(
   Surender Susu Sysser
   Tiena Touran Till Tiny Trinitee Tuzar
   Udatta Ulric
-  Valli Volkan
+  Valli 
   Xieluo Xuefeier
   Yocheved Yolcu Yongfu
-  Zdzislaw Zoli
+  Zoli
   Øivind
 
   Amaranta Aramesh Armony
   Bjørnar
   Cissi Curly Cüneyt
-  Dimitar Elod Ferdi Feyzullah Gaétan Guglielmo Gündüz
-  Izzy Jieren Juana Karina Kerim Lysette Maité Mayur Miep Mildi
-  Nail Ocson Odd Oyil Öge Öztekin
-  Reine Sjef Slamet Todd Turan Vinayak Ximena Zoé
+  Dimitar Elod Ferdi Feyzullah Gaétan Gündüz
+  Izzy Jieren Kerim Lysette Maité Mayur Miep Mildi
+  Ocson Oyil Öge Öztekin
+  Reine Sjef Slamet Vinayak Ximena Zoé
 
   Ade Aenul Afifah Africa Amatore Annigret Anonyo Arvat Aycha Ays
   Berni Bicio Biji Boutaud Büsra Canip Cemo Chengquan Ciana Cumi
@@ -317,16 +316,16 @@ my @SINGLE_WORDS = qw(
   Pumulo Rajon Rychu Sem Valmar Xuyou
 
   Abir Adha Akhteruzzaman Arief Aristea Atahualpa Aura
-  Bjørke Bogac Bong Cengiz Chenhui Cudi
+  Bjørke Bogac Bong Chenhui Cudi
   Dennica Didina Dulce Ersah Ertürk Eylül Feyza Frymeta
   Gahis Gimgim Ginevra Gokay Gulten Güler Gültekin Güzide
   Iole Jemy Kavi Kesanli Khairuddin Lokman Lussy Merche Moch
-  Nisa Pallina Pupa Rizgar Sedick Seiki Sevilay Shalom Sido Standa
+  Nisa Pallina Pupa Rizgar Sedick Seiki Sevilay Sido Standa
   Taiji Ülgen Wadud Wardeen Wided Yura Zbych Zbychu
 
   Anang Anaz Asil Bayhan Blondu Burcan Cantürk Gulce Heniek Heru
-  Izzettin Inas Kasey Kwanyoung Lis Mendo Novi Sahabettin Samdi
-  Shalom Sipalui Suheyla Sukil Tavare Temur Tona Yuklong
+  Izzettin Inas Kasey Kwanyoung Mendo Novi Sahabettin Samdi
+  Sipalui Suheyla Sukil Tavare Temur Tona Yuklong
 
 );
 

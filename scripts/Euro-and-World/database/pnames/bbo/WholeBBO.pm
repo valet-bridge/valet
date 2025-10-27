@@ -37,12 +37,16 @@ use Tags::Carding;
 use Tags::FirstFirst;
 use Tags::FirstMid;
 use Tags::FirstBBO;
+use Tags::FirstComb;
 
 use Tags::ParticleBBO;
 
 use Tags::LastLast;
 use Tags::LastMid;
 use Tags::LastBBO;
+use Tags::LastComb;
+
+use Tags::Both;
 
 
 my %TAGS =
@@ -68,10 +72,13 @@ my %TAGS =
   FIRSTFIRST => \&Tags::FirstFirst::set_hashes,
   FIRSTMID => \&Tags::FirstMid::set_hashes,
   FIRSTBBO => \&Tags::FirstBBO::set_hashes,
+  FIRSTCOMB => \&Tags::FirstComb::set_hashes,
   PARTICLEBBO => \&Tags::ParticleBBO::set_hashes,
   LASTLAST => \&Tags::LastLast::set_hashes,
   LASTMID => \&Tags::LastMid::set_hashes,
   LASTBBO => \&Tags::LastBBO::set_hashes,
+  LASTCOMB => \&Tags::LastComb::set_hashes,
+  NAMEBOTH => \&Tags::Both::set_hashes,
 );
 
 
@@ -322,6 +329,13 @@ sub get_multi_regex
 {
   my ($self, $tag) = @_;
   return $self->{MREGEX}{$tag};
+}
+
+
+sub peek_list
+{
+  my ($self, $tag) = @_;
+  return $self->{SWORDS}{$tag};
 }
 
 

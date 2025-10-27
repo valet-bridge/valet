@@ -1,29 +1,47 @@
 #!perl
 use strict;
 use warnings;
-
-# use lib '..';
-# use lib '../..';
-
-# use FirstBBO;
-# use LastBBO;
-
-# use FirstFirst;
-# use FirstMid;
-
-# use LastMid;
-# use LastLast;
-
-
-# dedup(\@FIRST_MID_NAMES, \@LAST_MID_NAMES, 'BOTH_FIRST', 'BOTH_LAST');
-# dedup(\@FIRST_FIRST_NAMES, \@FIRST_MID_NAMES, 'FIRST_FIRST_NAMES', 'FIRST_MID_NAMES');
-# dedup(\@LAST_MID_NAMES, \@LAST_LAST_NAMES, 'LAST_MID_NAMES', 'LAST_LAST_NAMES');
-
-# reprint(\@FIRST_BBO, 'FIRST_BBO');
+use utf8;
+use open ':std', ':encoding(UTF-8)';
+use feature 'unicode_strings';
 
 use lib '.';
-use lib '..';
-use Tags::Fluff;
-use Manip;
+use lib './Tags';
 
-reprint(\@SINGLE_WORDS, 'SINGLE_WORDS');
+use Manip;
+use WholeBBO;
+
+my %CATALOG = (
+  FIRSTFIRST => 'FirstFirst',
+  FIRSTMID => 'FirstMid',
+  FIRSTBBO => 'FirstBBO',
+  FIRSTCOMB => 'FirstComb',
+  LASTLAST => 'LastLast',
+  LASTMID => 'LastMid',
+  LASTBBO => 'LastBBO',
+  LASTCOMB => 'LastComb'
+);
+
+if ($#ARGV != 1)
+{
+  print "Usage: perl dupl.pl FIRSTFIRST FIRSTBBO > code.pl\n";
+  exit;
+}
+
+my $tag1 = shift;
+my $tag2 = shift;
+
+die "$tag1 is not a recognized tag" unless exists $CATALOG{$tag1};
+die "$tag2 is not a recognized tag" unless exists $CATALOG{$tag2};
+
+my $whole = WholeBBO->new();
+$whole->init_hashes;
+
+my $hash_first = $whole->peek_list($tag1);
+
+my $hash_firstBBO = $whole->peek_list($tag2);
+
+# reprint($hash_firstBBO, $CATALOG{$tag1});
+
+dedup($hash_first, $hash_firstBBO, $CATALOG{$tag1}, $CATALOG{$tag2});
+
