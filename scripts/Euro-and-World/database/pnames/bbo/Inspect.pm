@@ -62,9 +62,7 @@ my @MULTI_ORDER = qw(
 );
 
 my @FIRST_ORDER = qw(
-  FIRSTFIRST
-  FIRSTMID
-  FIRSTBBO
+  FIRSTCOMB
 );
 
 my @PARTICLE_ORDER = qw(
@@ -72,9 +70,11 @@ my @PARTICLE_ORDER = qw(
 );
 
 my @LAST_ORDER = qw(
-  LASTLAST
-  LASTMID
-  LASTBBO
+  LASTCOMB
+);
+
+my @NAME_BOTH = qw(
+  NAMEBOTH
 );
 
 my @SYSTEM_TAGS = qw(
@@ -328,11 +328,15 @@ sub use_name_capitalization
 
   for my $m (@$markup)
   {
-    if ($m->{CATEGORY} eq 'NAME_FIRST' && $m->{UPPER})
+    if (($m->{CATEGORY} eq 'NAME_FIRST' ||
+        $m->{CATEGORY} eq 'NAME_BOTH') && 
+        $m->{UPPER})
     {
       $m->{CATEGORY} = 'NAME_LAST';
     }
-    elsif ($m->{CATEGORY} eq 'NAME_LAST' && ! $m->{UPPER})
+    elsif (($m->{CATEGORY} eq 'NAME_LAST' ||
+        $m->{CATEGORY} eq 'NAME_BOTH') && 
+      ! $m->{UPPER})
     {
       $m->{CATEGORY} = 'NAME_FIRST';
     }
@@ -408,8 +412,6 @@ sub study_word
 
   my $token_no = 0;
   my $chain = Chain->new();
-  my $first_flag = 0;
-  my $last_flag = 0;
 
   if (singleton_tag_matches_basic($whole_names, \@PARTICLE_ORDER,
     \$token_no, $word, 0, $chain, $histo, ''))
@@ -420,38 +422,17 @@ sub study_word
   if (singleton_tag_matches_basic($whole_names, \@FIRST_ORDER,
     \$token_no, $word, 0, $chain, $histo, ''))
   {
-    $first_flag = 1;
-  }
-
-  if (singleton_tag_matches_basic($whole_names, \@LAST_ORDER,
-    \$token_no, $word, 0, $chain, $histo, ''))
-  {
-    $last_flag = 1;
-  }
-
-  if ($first_flag && ! $last_flag)
-  {
     return 'NAME_FIRST';
   }
-  elsif (! $first_flag && $last_flag)
+  elsif (singleton_tag_matches_basic($whole_names, \@LAST_ORDER,
+    \$token_no, $word, 0, $chain, $histo, ''))
   {
     return 'NAME_LAST';
   }
-  elsif ($first_flag && $last_flag)
+  elsif (singleton_tag_matches_basic($whole_names, \@NAME_BOTH,
+    \$token_no, $word, 0, $chain, $histo, ''))
   {
-    if ($both_neither->lookup($word))
-    {
-      # Fall through.
-      return '';
-    }
-    elsif ($both_last->lookup($word))
-    {
-      return 'NAME_LAST';
-    }
-    else
-    {
-      return 'NAME_FIRST';
-    }
+    return 'NAME_BOTH';
   }
   elsif ($word =~ /^[A-Za-z]$/)
   {

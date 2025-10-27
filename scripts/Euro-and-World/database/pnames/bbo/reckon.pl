@@ -195,7 +195,7 @@ my %handle_counts;
 
 for my $paragraph (@paragraphs)
 {
-if ($paragraph->{HANDLE} eq 'LIBRAX')
+if ($paragraph->{HANDLE} eq 'GHISA')
 {
   # print "HERE\n";
 }
@@ -265,41 +265,6 @@ if ($paragraph->{HANDLE} eq 'LIBRAX')
       }
       next;
     }
-    else
-    {
-      # TMP For inspection
-      # Inspect::study_name($battery[0], $whole_names, $last3_names,
-        # \@name_list, $identifier, $histo);
-    }
-
-    # my $units = $battery[0];
-    # if ($units->last() == 2 &&
-      # $units->value(1) eq 'SPACE')
-    # {
-      # TODO Use Inspect.pm::study_name
-      #
-      # Simple screen for names.
-      # my $cat0 = study_word($whole_names, $units->value(0), $histo);
-      # my $cat2 = study_word($whole_names, $units->value(2), $histo);
-
-      # if ($cat2 eq '' && $last3_names->lookup($units->value(2)))
-      # {
-        # $cat2 = 'NAME_LAST';
-      # }
-
-      # if ($cat0 eq 'NAME_FIRST' && $cat2 eq 'NAME_LAST')
-      # {
-        # # TODO Probably keep the identification somewhere?
-        # $entry->{CATEGORY} = 'NAMELIKE';
-        # next;
-      # }
-      # elsif ($cat0 eq 'NAME_FIRST' && $cat2 eq 'NAME_INITIAL')
-      # {
-        # # TODO Probably keep the identification somewhere?
-        # $entry->{CATEGORY} = 'NAMELIKE';
-        # next;
-      # }
-    # }
 
     print $identifier;
   }
