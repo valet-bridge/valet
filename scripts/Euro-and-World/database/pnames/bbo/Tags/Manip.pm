@@ -76,12 +76,12 @@ sub dedup
   foreach my $value (keys %$hash1)
   {
     %{$reduced1{$value}} = %{$hash1->{$value}} 
-      unless exists $dup{FIRST}{$value};
+      unless exists $dup{$value};
   }
   foreach my $value (keys %$hash2)
   {
     %{$reduced2{$value}} = %{$hash2->{$value}} 
-      unless exists $dup{SECOND}{$value};
+      unless exists $dup{$value};
   }
 
   reprint(\%reduced1, $name1);

@@ -195,7 +195,7 @@ my %handle_counts;
 
 for my $paragraph (@paragraphs)
 {
-if ($paragraph->{HANDLE} eq 'GHISA')
+if ($paragraph->{HANDLE} eq 'KJELL5')
 {
   # print "HERE\n";
 }

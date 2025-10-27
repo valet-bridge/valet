@@ -12,14 +12,8 @@ use Manip;
 use WholeBBO;
 
 my %CATALOG = (
-  FIRSTFIRST => 'FirstFirst',
-  FIRSTMID => 'FirstMid',
-  FIRSTBBO => 'FirstBBO',
-  FIRSTCOMB => 'FirstComb',
-  LASTLAST => 'LastLast',
-  LASTMID => 'LastMid',
-  LASTBBO => 'LastBBO',
-  LASTCOMB => 'LastComb'
+  NAMEFIRST => 'FirstComb',
+  NAMELAST => 'LastComb'
 );
 
 if ($#ARGV != 1)

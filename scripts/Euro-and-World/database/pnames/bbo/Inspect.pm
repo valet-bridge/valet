@@ -242,16 +242,16 @@ sub list_to_units
 }
 
 
-sub merge_initials
+sub merge_component_run
 {
-  my $markup = shift;
+  my ($markup, $tag) = @_;
 
   # Look for a first initial.
   my $found = 0;
   my $p0;
   for my $pos (0 .. $#$markup)
   {
-    if ($markup->[$pos]{CATEGORY} eq 'NAME_INITIAL')
+    if ($markup->[$pos]{CATEGORY} eq $tag)
     {
       $found = 1;
       $p0 = $pos;
@@ -264,11 +264,12 @@ sub merge_initials
   my $p1;
   for my $pos ($p0 .. $#$markup)
   {
-    last unless $markup->[$pos]{CATEGORY} eq 'NAME_INITIAL';
+    last unless $markup->[$pos]{CATEGORY} eq $tag;
 
     $p1 = $pos;
     $merge .= ' ' if $p1 > $p0;
-    $merge .= uc($markup->[$pos]{TEXT}) . '.';
+    $merge .= uc($markup->[$pos]{TEXT});
+    $merge .= '.' if $tag eq 'NAME_INITIAL';
   }
 
   $markup->[$p0]{TEXT} = $merge;
@@ -336,7 +337,7 @@ sub use_name_capitalization
     }
     elsif (($m->{CATEGORY} eq 'NAME_LAST' ||
         $m->{CATEGORY} eq 'NAME_BOTH') && 
-      ! $m->{UPPER})
+        ! $m->{UPPER})
     {
       $m->{CATEGORY} = 'NAME_FIRST';
     }
@@ -391,8 +392,9 @@ sub list_to_units_no_punctuation
     }
   }
 
-  # Combine initials into one.
-  merge_initials(\@markup);
+  # Combine initials and particles into one.
+  merge_component_run(\@markup, 'NAME_INITIAL');
+  merge_component_run(\@markup, 'NAME_PARTICLE');
 
   # Sometimes use an upper-case last name as a hint.
   use_name_capitalization(\@markup);
@@ -447,14 +449,9 @@ sub study_word
 
 sub study_name_two
 {
-  my ($last3_names, $word1, $cat1, $word2, $cat2, $list, $histo) = @_;
+  my ($word1, $cat1, $word2, $cat2, $list, $histo) = @_;
 
   # Simple screen for names.
-
-  if ($cat2 eq '' && $last3_names->lookup($word2))
-  {
-    $cat2 = 'NAME_LAST';
-  }
 
   if ($cat1 eq 'NAME_FIRST' && 
       ($cat2 eq 'NAME_FIRST' || $cat2 eq 'NAME_LAST'))
@@ -544,9 +541,42 @@ sub study_name
 
   if ($units->last() == 1)
   {
-    if (study_name_two($last3_names,
-      $units->value(0), $units->category(0),
-      $units->value(1), $units->category(1), $list, $histo))
+    # TODO Move to rename_two
+    my $cat0 = $units->category(0);
+    my $val0 = $units->value(0);
+    my $cat1 = $units->category(1);
+    my $val1 = $units->value(1);
+    my $upper0 = ($val0 eq uc($val0) ? 1 : 0);
+    my $upper1 = ($val1 eq uc($val1) ? 1 : 0);
+
+    if ($cat1 eq '' && $last3_names->lookup($val1))
+    {
+      $cat1 = 'NAME_LAST';
+      $units->reset_unit(1, $cat1, $val1);
+    }
+
+    if ($cat0 eq 'NAME_BOTH' && $cat1 eq 'NAME_LAST')
+    {
+      $cat0 = 'NAME_FIRST';
+      $units->reset_unit(0, $cat0, $val0);
+    }
+    elsif ($cat0 eq 'NAME_BOTH' && ! $upper0 && $cat1 eq 'NAME_INITIAL')
+    {
+      $cat0 = 'NAME_FIRST';
+      $units->reset_unit(0, $cat0, $val0);
+    }
+    elsif ($cat0 eq 'NAME_FIRST' && $cat1 eq 'NAME_BOTH')
+    {
+      $cat1 = 'NAME_LAST';
+      $units->reset_unit(1, $cat1, $val1);
+    }
+    elsif ($cat0 eq 'NAME_INITIAL' && $upper1 && $cat1 eq 'NAME_BOTH')
+    {
+      $cat1 = 'NAME_LAST';
+      $units->reset_unit(1, $cat1, $val1);
+    }
+
+    if (study_name_two($val0, $cat0, $val1, $cat1, $list, $histo))
     {
       return 1;
     }

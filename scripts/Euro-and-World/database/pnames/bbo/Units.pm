@@ -63,6 +63,15 @@ sub value
 }
 
 
+sub reset_unit
+{
+  my ($self, $index, $category, $value) = @_;
+  die "Index $index out of bounds" unless $index <= $#{$self->{UNITS}};
+  $self->{UNITS}[$index]{CATEGORY} = $category;
+  $self->{UNITS}[$index]{VALUE} = $value;
+}
+
+
 sub set_status
 {
   my ($self, $status) = @_;
