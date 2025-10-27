@@ -62,15 +62,15 @@ my @MULTI_ORDER = qw(
 );
 
 my @FIRST_ORDER = qw(
-  FIRSTCOMB
+  NAMEFIRST
 );
 
 my @PARTICLE_ORDER = qw(
-  PARTICLEBBO
+  NAMEPARTICLE
 );
 
 my @LAST_ORDER = qw(
-  LASTCOMB
+  NAMELAST
 );
 
 my @NAME_BOTH = qw(

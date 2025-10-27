@@ -34,18 +34,9 @@ use Tags::Keycard;
 use Tags::Conventions;
 use Tags::Carding;
 
-use Tags::FirstFirst;
-use Tags::FirstMid;
-use Tags::FirstBBO;
 use Tags::FirstComb;
-
 use Tags::ParticleBBO;
-
-use Tags::LastLast;
-use Tags::LastMid;
-use Tags::LastBBO;
 use Tags::LastComb;
-
 use Tags::Both;
 
 
@@ -69,15 +60,9 @@ my %TAGS =
   KEYCARD => \&Tags::Keycard::set_hashes,
   CONVENTIONS => \&Tags::Conventions::set_hashes,
   CARDING => \&Tags::Carding::set_hashes,
-  FIRSTFIRST => \&Tags::FirstFirst::set_hashes,
-  FIRSTMID => \&Tags::FirstMid::set_hashes,
-  FIRSTBBO => \&Tags::FirstBBO::set_hashes,
-  FIRSTCOMB => \&Tags::FirstComb::set_hashes,
-  PARTICLEBBO => \&Tags::ParticleBBO::set_hashes,
-  LASTLAST => \&Tags::LastLast::set_hashes,
-  LASTMID => \&Tags::LastMid::set_hashes,
-  LASTBBO => \&Tags::LastBBO::set_hashes,
-  LASTCOMB => \&Tags::LastComb::set_hashes,
+  NAMEFIRST => \&Tags::FirstComb::set_hashes,
+  NAMEPARTICLE => \&Tags::ParticleBBO::set_hashes,
+  NAMELAST => \&Tags::LastComb::set_hashes,
   NAMEBOTH => \&Tags::Both::set_hashes,
 );
 
