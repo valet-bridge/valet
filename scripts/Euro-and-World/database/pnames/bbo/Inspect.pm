@@ -43,14 +43,14 @@ our ($sublines, $fluffed_lines, $system_lines, $known_names, $late_mails,
   $both_last, $both_neither, %PRE_INSPECTED);
 
 
-my @COUNTRY_ORDER = qw(COUNTRY);
-my @CITY_ORDER = qw(CITY);
-my @REGION_ORDER = qw(REGION);
-my @LOCALITY_ORDER = qw(LOCALITY);
-my @LEVEL_ORDER = qw(LEVEL);
+# my @COUNTRY_ORDER = qw(COUNTRY);
+# my @CITY_ORDER = qw(CITY);
+# my @REGION_ORDER = qw(REGION);
+# my @LOCALITY_ORDER = qw(LOCALITY);
+# my @LEVEL_ORDER = qw(LEVEL);
 my @PRIVATE_ORDER = qw(PRIVATE);
-my @FLUFF_ORDER = qw(FLUFF);
-my @SYSTEM_ORDER = qw(SYSTEM);
+# my @FLUFF_ORDER = qw(FLUFF);
+# my @SYSTEM_ORDER = qw(SYSTEM);
 
 my @MULTI_ORDER = qw(
   COUNTRY
@@ -138,7 +138,7 @@ my %BOTH_BOTH_FIRST_FIRST = (
   'Ying Hui' => 1,
 );
 
-my %BOTH_BOTH_LAST_LAST = (
+my %LAST_LAST = (
   'SCRIVE LOYER' => 1,
   'SZÉKELY DOBY' => 1
 );
@@ -507,6 +507,12 @@ print "XZXY $word2\n";
     push @$list, $cat1, $u1, $cat2, $u2;
     return 1;
   }
+  elsif ($cat1 eq 'NAME_LAST' && $cat2 eq 'NAME_LAST' &&
+    exists $LAST_LAST{$word1 . ' ' . $word2})
+  {
+    push @$list, $cat1, $word1, $cat2, $word2;
+    return 1;
+  }
 
   return 0;
 }
@@ -587,14 +593,6 @@ sub rename_two
   {
     $cat0 = 'NAME_FIRST';
     $cat1 = 'NAME_FIRST';
-    $units->reset_unit(0, $cat0, $val0);
-    $units->reset_unit(1, $cat1, $val1);
-  }
-  elsif ($cat0 eq 'NAME_BOTH' && $cat1 eq 'NAME_BOTH' &&
-      exists $BOTH_BOTH_LAST_LAST{$val0 . ' ' . $val1})
-  {
-    $cat0 = 'NAME_LAST';
-    $cat1 = 'NAME_LAST';
     $units->reset_unit(0, $cat0, $val0);
     $units->reset_unit(1, $cat1, $val1);
   }
@@ -864,6 +862,21 @@ sub guess_private
 }
 
 
+sub inspect_for_tag
+{
+  my ($whole_names, $tag, $entry) = @_;
+
+  my $result = look_for_single_tag($whole_names, 
+      [$tag], $tag, $entry->{TEXT});
+
+  return 0 unless $result;
+
+  $entry->{CATEGORY} = $tag;
+  $entry->{VALUE} = $result;
+  return 1;
+}
+
+
 sub inspect_paragraph
 {
   my ($whole_names, $whole_system, $last3_names, 
@@ -901,22 +914,14 @@ sub inspect_paragraph
 
     if (! $country_seen)
     {
-      my $c = look_for_single_tag($whole_names, 
-        \@COUNTRY_ORDER, 'COUNTRY', $entry->{TEXT});
-      if ($c)
+      if (inspect_for_tag($whole_names, 'COUNTRY', $entry))
       {
-        $entry->{CATEGORY} = 'COUNTRY';
-        $entry->{VALUE} = $c;
         $country_seen = 1;
         next;
       }
 
-      my $l = look_for_single_tag($whole_names, 
-        \@LEVEL_ORDER, 'LEVEL', $entry->{TEXT});
-      if ($l)
+      if (inspect_for_tag($whole_names, 'LEVEL', $entry))
       {
-        $entry->{CATEGORY} = 'LEVEL';
-        $entry->{VALUE} = $l;
         $level_seen = 1;
         next;
       }
@@ -929,14 +934,7 @@ sub inspect_paragraph
         next;
       }
 
-      my $f = look_for_single_tag($whole_names, 
-        \@FLUFF_ORDER, 'FLUFF', $entry->{TEXT});
-      if ($f)
-      {
-        $entry->{CATEGORY} = 'FLUFF';
-        $entry->{VALUE} = $f;
-        next;
-      }
+      next if inspect_for_tag($whole_names, 'FLUFF', $entry);
 
       # Sometimes people give the same mail twice, or two different ones.
       my @list;
@@ -949,43 +947,12 @@ sub inspect_paragraph
         next;
       }
 
-      my $s = look_for_single_tag($whole_names, 
-        \@SYSTEM_ORDER, 'SYSTEM', $entry->{TEXT});
-      if ($s)
-      {
-        $entry->{CATEGORY} = 'SYSTEM';
-        $entry->{VALUE} = $entry->{TEXT};
-        next;
-      }
+      next if inspect_for_tag($whole_names, 'SYSTEM', $entry);
     }
 
-    my $city = look_for_single_tag($whole_names, 
-      \@CITY_ORDER, 'CITY', $entry->{TEXT});
-    if ($city)
-    {
-      $entry->{CATEGORY} = 'CITY';
-      $entry->{VALUE} = $city;
-      next;
-    }
-
-    my $region = look_for_single_tag($whole_names, 
-      \@REGION_ORDER, 'REGION', $entry->{TEXT});
-    if ($region)
-    {
-      $entry->{CATEGORY} = 'REGION';
-      $entry->{VALUE} = $region;
-      next;
-    }
-
-    my $locality = look_for_single_tag($whole_names, 
-      \@LOCALITY_ORDER, 'LOCALITY',
-      $entry->{TEXT});
-    if ($locality)
-    {
-      $entry->{CATEGORY} = 'LOCALITY';
-      $entry->{VALUE} = $locality;
-      next;
-    }
+    next if inspect_for_tag($whole_names, 'CITY', $entry);
+    next if inspect_for_tag($whole_names, 'REGION', $entry);
+    next if inspect_for_tag($whole_names, 'LOCALITY', $entry);
 
     if (! $magic_seen && $eno+1 >= $elen)
     {

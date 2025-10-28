@@ -20,6 +20,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  DA
   DE
   DI
   EL
