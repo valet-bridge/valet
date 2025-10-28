@@ -131,7 +131,7 @@ my @SINGLE_WORDS = qw(
   Azevedo Azhar Azize Azizul Azu Azuolas Azwerul Azza 
 
   Baard Babhrubahan Babs Babur Bachar Bachiraju Badal Badri Bae Baha 
-  Baharuddin Bahattin Baher Bahjat Baisong Bala Balakrishna Balaraman 
+  Baharuddin Bahattin Baher Bahjat Baisong Balakrishna Balaraman 
   Baliram Baljit Balk Balkaran Balkrishn Balkrishna Baltasar Balu 
   Bambang Bana Banashree Bandi Bando Bane Baneet Banghong Bangxiang 
   Bani Banjer Banu Baohua Baozhuo Bapsie Baptiste Barack Barbara 
@@ -193,7 +193,7 @@ my @SINGLE_WORDS = qw(
   Carlye Carlyn Carmel Carmela Carmelina Carmella Carmelo Carmen 
   Carmencita Carminia Carol Carol-Ann Carola Carole Carolee Carolien 
   Carolina Caroline Carolyn Carrie Carsten Caryll Caryn Cas Casmir 
-  Casper Cass Castor Cat Catalin Catalin-Lucian Catalina Catarina 
+  Cass Castor Cat Catalin Catalin-Lucian Catalina Catarina 
   Cate Caterina Cath Catharina Catharine Catheline Catherine Cathrine 
   Cathryn Cathy Catja Cato Catrin Caty Cavit Cayce Ceara Cebrail Cece 
   Cecil Cecile Cecilia Cecilie Cecille Cecily Ceco Cedric Cees 

@@ -1,6 +1,6 @@
 - reckon.pl to run clean as is
 - Turn || errors back on, eliminate
-- First and last collisions detect systematically
+- All categories and values set
 - Player numbers (e.g. Poland) find by regex
 - All known names should parse into first, initial, particle, last
 - No inconsistencies

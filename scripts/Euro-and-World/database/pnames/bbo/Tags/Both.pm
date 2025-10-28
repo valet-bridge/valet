@@ -34,7 +34,7 @@ my @SINGLE_WORDS = qw(
   Augusta Austin Avery Aviram Avis Avni Avon Avril Awwad Ay Aydin 
   Ayhan Aykan Aykut Ayman Ayu Azim Aziz Azzam 
 
-  Babu Bacon Bader Bagus Bahadir Baki Balasundaram Balazs Balint 
+  Babu Bacon Bader Bagus Bahadir Baki Bala Balasundaram Balazs Balint 
   Baltazar Bang Banna Bao Bar Barak Baran Barb Barbosa Baris Barna 
   Barnet Baron Barrett Barrie Barry Bart Barth Bas Basak Basar 
   Basheer Battista Baxter Bayram Bektas Bell Bella Ben Benedek 
@@ -47,7 +47,7 @@ my @SINGLE_WORDS = qw(
   Burton Buse 
 
   Cai Cal Calvi Cameron Can Caner Capri Carel Carlos Carlton Carmo 
-  Carter Casey Caspar Cassidy Cata Ceci Cengiz Cesare Cetin Cezmi 
+  Carter Casey Caspar Casper Cassidy Cata Ceci Cengiz Cesare Cetin Cezmi 
   Chacar Chan Chandra Chandrasekhar Chang Chao Charles Che Chelly 
   Chen Cheng Cheong Cheung Chi Chiara Chien Ching Ching-Chieh Chiu 
   Choi Chong Choo Chou Choukri Chow Christian Christie Chuck Chun 

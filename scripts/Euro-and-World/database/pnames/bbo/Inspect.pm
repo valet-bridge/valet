@@ -11,10 +11,9 @@ use open ':std', ':encoding(UTF-8)';
 use Exporter;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw($sublines $fluffed_lines $system_lines
-  $known_names $late_mails $both_last $both_neither inspect_paragraph
-  lines_to_list list_to_units list_to_units_no_punctuation
-  study_word study_name study_name_two);
+our @EXPORT = qw($sublines $both_last 
+  inspect_paragraph lines_to_list list_to_units 
+  list_to_units_no_punctuation study_word study_name);
 
 use lib '../../bbo';
 use Util;
@@ -24,9 +23,11 @@ use Butil;
 use lib './Email';
 use Email::Email;
 
-our ($sublines, $fluffed_lines, $system_lines, $known_names, $late_mails,
-  $both_last, $both_neither, %PRE_INSPECTED);
+our ($sublines, $both_last);
+my %PRE_INSPECTED;
 
+my $debug_study_name = 1;
+my $debug_pre_parse = 1;
 
 my @MULTI_ORDER = qw(
   COUNTRY
@@ -76,6 +77,7 @@ my %BOTH_BOTH_FIRST_FIRST = (
   'Maria Luisa' => 1,
   'Marie Reine' => 1,
   'Maria Teresa' => 1,
+  'Miguel Paulo' => 1,
   'Ying Hui' => 1,
 );
 
@@ -419,17 +421,6 @@ sub study_name_two
     push @$list, $cat1, $word1, $cat2, $u2;
     return 1;
   }
-  elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_FIRST')
-  {
-    if ($word2 eq 'CASPER' || $word2 eq 'BALA' || $word2 eq 'MURAT')
-    {
-print "XZXY $word2\n";
-      # Rather a kludge to make these few entries go away.
-      my $u1 = uc($word1) . '.';
-      push @$list, $cat1, $u1, 'NAME_LAST', $word2;
-      return 1;
-    }
-  }
   elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_LAST')
   {
     my $u1 = uc($word1) . '.';
@@ -452,31 +443,6 @@ print "XZXY $word2\n";
     exists $LAST_LAST{$word1 . ' ' . $word2})
   {
     push @$list, $cat1, $word1, $cat2, $word2;
-    return 1;
-  }
-
-  return 0;
-}
-
-
-sub study_name_three
-{
-  my ($units, $list, $histo) = @_;
-
-  # Simple screen for names.
-
-  my $cat1 = $units->category(0);
-  my $cat2 = $units->category(1);
-  my $cat3 = $units->category(2);
-
-  if ($cat1 eq 'NAME_FIRST' && 
-      ($cat2 eq 'NAME_FIRST' || $cat2 eq 'NAME_INITIAL' ||
-       $cat2 eq 'NAME_PARTICLE' || $cat2 eq 'NAME_LAST') &&
-      $cat3 eq 'NAME_LAST')
-  {
-    push @$list, $cat1, $units->value(0), 
-        $cat2, $units->value(1),
-        $cat3, $units->value(2);
     return 1;
   }
 
@@ -589,6 +555,32 @@ sub plausible_only_upper
 }
 
 
+sub print_units
+{
+  my ($units, $identifier) = @_;
+
+  my (@cats, @values);
+  for my $i (0 .. $units->last())
+  {
+    my $cat = $units->category($i);
+    $cat = "''" unless $cat;
+
+    my $val = $units->value($i);
+    $val = "''" unless $val;
+
+    push @cats, $cat;
+    push @values, $val;
+  }
+
+  print $identifier;
+  my $cstr = join ' - ', @cats;
+  my $vstr = join ' - ', @values;
+  print $cstr, "\n";
+  print $vstr, "\n";
+  print "-------------\n\n";
+}
+
+
 sub study_name
 {
   my ($units, $whole_names, $last3_names, $list, 
@@ -598,8 +590,8 @@ sub study_name
 
   if ($units->last() == 0)
   {
-    my $cat = $units->category(0);
-    if ($cat eq 'NAME_INITIAL')
+    # These are concatenated initials, two or more.
+    if ($units->category(0) eq 'NAME_INITIAL')
     {
       return 1;
     }
@@ -627,36 +619,10 @@ sub study_name
     return 1;
   }
 
-  if ($units->last() == 2)
+  if ($debug_study_name)
   {
-    if (study_name_three($units, $list, $histo))
-    {
-      return 1;
-    }
+    print_units($units, $identifier);
   }
-
-  # return 0;
-
-  # If we wanted to debug.
-  my (@cats, @values);
-  for my $i (0 .. $units->last())
-  {
-    my $cat = $units->category($i);
-    $cat = "''" unless $cat;
-
-    my $val = $units->value($i);
-    $val = "''" unless $val;
-
-    push @cats, $cat;
-    push @values, $val;
-  }
-
-  print $identifier;
-  my $cstr = join ' - ', @cats;
-  my $vstr = join ' - ', @values;
-  print $cstr, "\n";
-  print $vstr, "\n";
-  print "-------------\n\n";
 
   return 0;
 }
@@ -724,7 +690,10 @@ sub pre_parse
     }
 
     # This would be another place to debug.
-    # print "$entry->{TEXT}\n$comp MISS\n---\n\n";
+    if ($debug_pre_parse)
+    {
+      print "$entry->{TEXT}\n$comp MISS\n---\n\n";
+    }
   }
 
   $entry->{CATEGORY} = 'LIST';
@@ -864,7 +833,6 @@ sub inspect_paragraph
     $eno++;
 
     # Only needed for debugging.
-    # my $identifier = '';
     my $identifier = "YYY $handle, $hcount, $eno\n" .
       $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
 

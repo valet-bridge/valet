@@ -98,10 +98,8 @@ my @POST_MAIL_ORDER = qw(
   CODE
 );
 
-# TODO Do something about Both.
-# Probaby split into BothFirstish and BothLastish and BothUnclear.
 
-# This is the one with name etc.
+# This is the one with names etc.
 use WholeBBO;
 my $whole_names = WholeBBO->new();
 $whole_names->init_hashes;
@@ -162,9 +160,6 @@ use Manual::TargetedWords;
 # Some words can be either first, last names or neither.
 $both_last = Manual::TargetedWords->new();
 $both_last->read_file('Manual/both_last.txt');
-
-$both_neither = Manual::TargetedWords->new();
-$both_neither->read_file('Manual/both_neither.txt');
 
 # OK as last names specifically as First Last (3 units).
 my $last3_names = Manual::TargetedWords->new();
