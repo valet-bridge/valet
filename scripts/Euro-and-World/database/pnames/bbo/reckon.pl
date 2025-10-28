@@ -242,7 +242,7 @@ if ($paragraph->{HANDLE} eq 'KJELL5')
     # list_to_units($whole_system, \@UNIT_TAGS, \@list, $battery[0],
       # $entry->{TEXT}, $histo, \%chain_stats);
     list_to_units_no_punctuation($whole_names,
-      \@list, $battery[0], $entry->{TEXT}, $histo, \%chain_stats);
+      \@list, $battery[0], $histo, \%chain_stats);
 
     my @name_list;
     if (Inspect::study_name($battery[0], $whole_names, $last3_names,

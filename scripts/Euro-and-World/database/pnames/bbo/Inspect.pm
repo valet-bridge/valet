@@ -303,7 +303,7 @@ sub use_name_capitalization
 
 sub list_to_units_no_punctuation
 {
-  my ($whole, $list, $units, $text, $histo, $chain_stats) = @_;
+  my ($whole, $list, $units, $histo, $chain_stats) = @_;
 
   my @markup;
 
@@ -628,6 +628,32 @@ sub study_name
 }
 
 
+sub study_text_as_name
+{
+  my ($whole_names, $text, $last3_names, $list,
+    $identifier, $histo, $chain_stats) = @_;
+
+  my @battery;
+  $battery[0] = Units->new();
+
+  list_to_units_no_punctuation($whole_names, [$text],
+    $battery[0], $histo, $chain_stats);
+
+  my @clist;
+
+  if (study_name($battery[0], $whole_names, $last3_names, 
+      \@clist, $identifier, $histo))
+  {
+    push @$list, @clist;
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
+
 sub pre_parse
 {
   my ($entry, $whole_names, $whole_system, $last3_names, 
@@ -676,14 +702,8 @@ sub pre_parse
     }
 
     my @clist;
-    $clist[0] = $comp;
-
-    my @battery;
-    $battery[0] = Units->new();
-    list_to_units_no_punctuation($whole_names,
-      \@clist, $battery[0], $comp, $histo, $chain_stats);
-    if (study_name($battery[0], $whole_names, $last3_names, 
-      \@clist, $identifier, $histo))
+    if (study_text_as_name($whole_names, $comp, $last3_names, \@clist,
+      $identifier, $histo, $chain_stats))
     {
       push @list, @clist;
       next;
@@ -734,6 +754,22 @@ sub pre_inspect
       }
       else
       {
+if ($tag eq 'NAMELIKE')
+{
+  my $identifier = "YYY $handle, $hcount, $eno\n" .
+    $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
+  print $identifier;
+
+  # if (study_name($units, $whole_names, $last3_names, $list, 
+    # $identifier, $histo))
+  # if (study_text_as_name($whole_names, $entry->{TEXT}, $last3_names, 
+    # $list, $identifier, $histo, $chain_stats))
+  # {
+    # $entry->{CATEGORY} = 'LIST';
+    # @{$entry->{LIST}} = @list;
+    # return 1;
+  # }
+}
         $entry->{CATEGORY} = $tag;
         $entry->{VALUE} = $entry->{TEXT};
       }
