@@ -2,21 +2,6 @@
 
 package Inspect;
 
-# Can generate the following values of CATEGORY:
-# CODE
-# COUNTRY
-# FLUFF
-# LEVEL
-# LIST
-# MAGIC
-# NAMELIKE
-# PRIVATE
-# SYSTEM
-#
-# It leaves in place categories that are not overwritten,
-# so e.g. OPEN can pass through.
-
-
 use v5.10;
 use strict;
 use warnings;
@@ -43,15 +28,6 @@ our ($sublines, $fluffed_lines, $system_lines, $known_names, $late_mails,
   $both_last, $both_neither, %PRE_INSPECTED);
 
 
-# my @COUNTRY_ORDER = qw(COUNTRY);
-# my @CITY_ORDER = qw(CITY);
-# my @REGION_ORDER = qw(REGION);
-# my @LOCALITY_ORDER = qw(LOCALITY);
-# my @LEVEL_ORDER = qw(LEVEL);
-my @PRIVATE_ORDER = qw(PRIVATE);
-# my @FLUFF_ORDER = qw(FLUFF);
-# my @SYSTEM_ORDER = qw(SYSTEM);
-
 my @MULTI_ORDER = qw(
   COUNTRY
   LEVEL
@@ -59,41 +35,6 @@ my @MULTI_ORDER = qw(
   CITY
   REGION
   LOCALITY
-);
-
-my @FIRST_ORDER = qw(
-  NAMEFIRST
-);
-
-my @PARTICLE_ORDER = qw(
-  NAMEPARTICLE
-);
-
-my @LAST_ORDER = qw(
-  NAMELAST
-);
-
-my @NAME_BOTH = qw(
-  NAMEBOTH
-);
-
-my @SYSTEM_TAGS = qw(
-  DENOMINATIONS
-  LENGTHS
-  RANKS
-  SHAPES
-  STRENGTHS
-
-  BASES
-  OPENINGS
-  CONSTRUCTIVE
-  COMPETITIVE
-  BLACKWOOD
-  BERGEN
-  MISC
-  KEYCARD
-  STAYMAN
-  CARDING
 );
 
 my %PUNCTUATION =
@@ -428,23 +369,23 @@ sub study_word
   my $token_no = 0;
   my $chain = Chain->new();
 
-  if (singleton_tag_matches_basic($whole_names, \@PARTICLE_ORDER,
+  if (singleton_tag_matches_basic($whole_names, ['NAMEPARTICLE'],
     \$token_no, $word, 0, $chain, $histo, ''))
   {
     return 'NAME_PARTICLE';
   }
 
-  if (singleton_tag_matches_basic($whole_names, \@FIRST_ORDER,
+  if (singleton_tag_matches_basic($whole_names, ['NAMEFIRST'],
     \$token_no, $word, 0, $chain, $histo, ''))
   {
     return 'NAME_FIRST';
   }
-  elsif (singleton_tag_matches_basic($whole_names, \@LAST_ORDER,
+  elsif (singleton_tag_matches_basic($whole_names, ['NAMELAST'],
     \$token_no, $word, 0, $chain, $histo, ''))
   {
     return 'NAME_LAST';
   }
-  elsif (singleton_tag_matches_basic($whole_names, \@NAME_BOTH,
+  elsif (singleton_tag_matches_basic($whole_names, ['NAMEBOTH'],
     \$token_no, $word, 0, $chain, $histo, ''))
   {
     return 'NAME_BOTH';
@@ -630,6 +571,24 @@ sub mixed_consistent_cases
 }
 
 
+sub plausible_only_upper
+{
+  my ($units) = @_;
+
+  for my $i (0 .. $units->last())
+  {
+    my $cat = $units->category($i);
+    return 0 unless ($cat eq 'NAME_INITIAL' ||
+      $cat eq 'NAME_PARTICLE' || $cat eq 'NAME_LAST');
+
+    my $val = $units->value($i);
+    return 0 unless $val eq uc($val);
+  }
+
+  return 1;
+}
+
+
 sub study_name
 {
   my ($units, $whole_names, $last3_names, $list, 
@@ -658,7 +617,8 @@ sub study_name
     }
   }
 
-  if (mixed_consistent_cases($units))
+  if (mixed_consistent_cases($units) ||
+      plausible_only_upper($units))
   {
     for my $i (0 .. $units->last())
     {
@@ -927,7 +887,7 @@ sub inspect_paragraph
       }
 
       my $p = look_for_single_tag($whole_names, 
-        \@PRIVATE_ORDER, 'PRIVATE', $entry->{TEXT});
+        ['PRIVATE'], 'PRIVATE', $entry->{TEXT});
       if ($p)
       {
         guess_private($entry, $p, $private_seen, $mail_seen, $level_seen);
