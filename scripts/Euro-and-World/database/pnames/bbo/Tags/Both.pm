@@ -27,7 +27,7 @@ my @SINGLE_WORDS = qw(
   Alexis Ali Alkan Allan Allen Allison Alp Alper Altan Aly Amal Aman 
   Amar Ambrose Amedeo Amin Amir Amit Amos Ana Anal Anand Ananda 
   Anders Andras Andre Andrea Andree Andrei Andres Andrew Anette Ange 
-  Angel Angelova Anghel Angus Anikovich Anil Anisa Ansori Anton 
+  Angel Angeles Angelova Anghel Angus Anikovich Anil Anisa Ansori Anton 
   Antoni Antonio Ao Aran Ardi Ari Arianto Arie Arif Arifin Arman 
   Arnaud Arnold Arnon Aron Arora Arslan Arthur Arwin Asaf Ashe Ashley 
   Ashraf Asla Aslam Aslan Assaf Assis Astrand Ata Atakan Atila Atilla 
@@ -206,7 +206,7 @@ my @SINGLE_WORDS = qw(
   Ya Yahya Yalcin Yan Yang Yannan Yao Yasar Yasin Yasuko Yau Ye Yeh 
   Yehuda Yen Yener Yeung Yi Yildirim Yilmaz Yin Ying Yiu Yohanes Yong 
   Yoon You Young Youssef Yu Yuan Yue Yuen Yuksel Yulin Yun Yunief 
-  Yunus Yusuf 
+  Yunus Yusuf Yüksel
 
   Zach Zachary Zafar Zafer Zahir Zain Zakar Zaman Zara Zeljko Zen 
   Zenko Zhan Zhang Zhao Zhen Zheng Zhi Zhili Zhong Zhou Zhu Zhuo 

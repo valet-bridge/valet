@@ -73,7 +73,7 @@ my @SINGLE_WORDS = qw(
   Andreas Andreea Andreea-Magdalena Andreia Andreina Andrej Andrejs 
   Andreu Andrey Andrez Andriano Andrias Andrii Andrija Andris Andrius 
   Andronicos Andrse Andrsej Andrzei Andrzej André Andrée Andy Ane 
-  Aneta Aneurin Anfinn Angela Angeles Angelica Angelika Angeliki 
+  Aneta Aneurin Anfinn Angela Angelica Angelika Angeliki 
   Angelina Angeline Angelo Angie Angioletta Angiolisa Anhar Ani Ania 
   Anibal Anick Aniela Anika Aniket Aniko Anila Animesh Anina Anindara 
   Anindra Anirban Aniruddha Anirudh Anis Anish Anisha Anisia Anisul 
@@ -439,7 +439,7 @@ my @SINGLE_WORDS = qw(
   Haris Harish Hariyadi Harke Harm Harold Harpa Harri Harriet 
   Harriette Harry Harshad Hartmut Harue Haruki Harumi Harun Hasab 
   Hashim Hasinur Haskell Hasnat Hassibul Hassouna Hastings Hasyim 
-  Hatice Hatsuko Hattie Haugan Hauke Haukur Hava Haven Haya Haydar 
+  Hatice Hatsuko Hattie Haugan Hauke Haukur Hava Haven Haya Hayat Haydar 
   Haydee Hayk Haykanush Hayomo Hayri Hazar Hazell Hazem Hazur Hean 
   Heather Heber Hebin Hector Heddy Hedi Hedia Hedin Hedva Hedwig 
   Hedwige Hedy Hee-Jung Hefny Hege Hegumi Hei Heidar Heide Heidemari 
@@ -1185,8 +1185,8 @@ my @SINGLE_WORDS = qw(
   Yicheng Yichi Yici Yidan Yide Yidi Yifan Yifei Yifu Yigal Yigit 
   Yihan Yihao Yihong Yiji Yijia Yijing Yijun Yili Yilin Yiling Yimei 
   Yimin Yiming Yin-Shou Yin-Yu Ying-Cheng Ying-Hsuan Ying-Tsun 
-  Yinghao Yinglei Yingqi Yingxiang Yingying Yingzhe Yino Yinpei Yinuo 
-  Yipeng Yiping Yiqi Yiqin Yiran Yisheng Yiting Yitong Yitzhak Yiwei 
+  Yinghao Yinghui Yinglei Yingqi Yingxiang Yingying Yingzhe Yino Yinpei 
+  Yinuo Yipeng Yiping Yiqi Yiqin Yiran Yisheng Yiting Yitong Yitzhak Yiwei 
   Yiwen Yixiang Yixin Yixiong Yixuan Yiyang Yiyi Yiyun Yizhou Yizhuo 
   Yke Yl Ylva Yngve Yoav Yochai Yocheved Yochi Yoel Yogesh Yohan 
   Yohanan Yohsin Yoichi Yoke Yoko Yoland Yolanda Yolande Yolanta 
@@ -1208,7 +1208,7 @@ my @SINGLE_WORDS = qw(
   Yunita Yunjian Yunlong Yunn Yunnie Yunpeng Yunqing Yunyan Yunyi 
   Yunyue Yunzhong Yupeng Yuqi Yuqian Yuqiao Yura Yuri Yurina Yurong 
   Yury Yusaku Yusef Yushun Yusuke Yutaka Yuthasak Yutong Yuval Yuwei 
-  Yuxiang Yuxin Yuyang Yuzhang Yvan Yves Yvette Yvon Yvonne Yüksel 
+  Yuxiang Yuxin Yuyang Yuzhang Yvan Yves Yvette Yvon Yvonne
 
   Zacharias Zachariasz Zafiris Zaha Zahari Zahia Zahid Zahoor Zahra 
   Zaid Zaira Zakaria Zakir Zana Zanchao Zandra Zane Zaneta Zare Zarko 

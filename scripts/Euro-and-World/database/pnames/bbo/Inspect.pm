@@ -129,6 +129,19 @@ my %PUNCTUATION =
   '}' => 'CURLY_RIGHT',
 );
 
+my %BOTH_BOTH_FIRST_FIRST = (
+  'Jean Marie' => 1,
+  'Jean Pierre' => 1,
+  'Maria Luisa' => 1,
+  'Marie Reine' => 1,
+  'Maria Teresa' => 1,
+  'Ying Hui' => 1,
+);
+
+my %BOTH_BOTH_LAST_LAST = (
+  'SCRIVE LOYER' => 1,
+  'SZÉKELY DOBY' => 1
+);
 
 
 sub init_pre_inspected
@@ -469,6 +482,7 @@ sub study_name_two
   {
     if ($word2 eq 'CASPER' || $word2 eq 'BALA' || $word2 eq 'MURAT')
     {
+print "XZXY $word2\n";
       # Rather a kludge to make these few entries go away.
       my $u1 = uc($word1) . '.';
       push @$list, $cat1, $u1, 'NAME_LAST', $word2;
@@ -523,6 +537,101 @@ sub study_name_three
 }
 
 
+sub rename_two
+{
+  my ($units, $last3_names) = @_;
+
+  my $cat0 = $units->category(0);
+  my $val0 = $units->value(0);
+  my $cat1 = $units->category(1);
+  my $val1 = $units->value(1);
+  my $upper0 = ($val0 eq uc($val0) ? 1 : 0);
+  my $upper1 = ($val1 eq uc($val1) ? 1 : 0);
+
+  if ($cat1 eq '' && $last3_names->lookup($val1))
+  {
+    $cat1 = 'NAME_LAST';
+    $units->reset_unit(1, $cat1, $val1);
+  }
+
+  if ($cat0 eq 'NAME_BOTH' && $cat1 eq 'NAME_LAST')
+  {
+    $cat0 = 'NAME_FIRST';
+    $units->reset_unit(0, $cat0, $val0);
+  }
+  elsif ($cat0 eq 'NAME_BOTH' && ! $upper0 && $cat1 eq 'NAME_INITIAL')
+  {
+    $cat0 = 'NAME_FIRST';
+    $units->reset_unit(0, $cat0, $val0);
+  }
+  elsif ($cat0 eq 'NAME_FIRST' && $cat1 eq 'NAME_BOTH')
+  {
+    $cat1 = 'NAME_LAST';
+    $units->reset_unit(1, $cat1, $val1);
+  }
+  elsif ($cat0 eq 'NAME_INITIAL' && $upper1 && $cat1 eq 'NAME_BOTH')
+  {
+    $cat1 = 'NAME_LAST';
+    $units->reset_unit(1, $cat1, $val1);
+  }
+  elsif ($cat0 eq 'NAME_BOTH' && $cat1 eq 'NAME_FIRST' &&
+      ! $upper0 && ! $upper1)
+  {
+    $cat0 = 'NAME_FIRST';
+    $cat1 = 'NAME_FIRST';
+    $units->reset_unit(0, $cat0, $val0);
+    $units->reset_unit(1, $cat1, $val1);
+  }
+  elsif ($cat0 eq 'NAME_BOTH' && $cat1 eq 'NAME_BOTH' &&
+      exists $BOTH_BOTH_FIRST_FIRST{$val0 . ' ' . $val1})
+  {
+    $cat0 = 'NAME_FIRST';
+    $cat1 = 'NAME_FIRST';
+    $units->reset_unit(0, $cat0, $val0);
+    $units->reset_unit(1, $cat1, $val1);
+  }
+  elsif ($cat0 eq 'NAME_BOTH' && $cat1 eq 'NAME_BOTH' &&
+      exists $BOTH_BOTH_LAST_LAST{$val0 . ' ' . $val1})
+  {
+    $cat0 = 'NAME_LAST';
+    $cat1 = 'NAME_LAST';
+    $units->reset_unit(0, $cat0, $val0);
+    $units->reset_unit(1, $cat1, $val1);
+  }
+}
+
+
+sub mixed_consistent_cases
+{
+  my ($units) = @_;
+
+  my $upper_seen = 0;
+  my $lower_seen = 0;
+
+  for my $i (0 .. $units->last())
+  {
+    my $cat = $units->category($i);
+    my $val = $units->value($i);
+    my $upper = ($val eq uc($val) ? 1 : 0);
+    if ($upper)
+    {
+      $upper_seen = 1;
+    }
+    else
+    {
+      $lower_seen = 1;
+    }
+
+    return 0 if $cat eq 'NAME_BOTH';
+    return 0 if ($cat eq 'NAME_FIRST' && $upper);
+    return 0 if ($cat eq 'NAME_PARTICLE' && ! $upper);
+    return 0 if ($cat eq 'NAME_LAST' && ! $upper);
+  }
+
+  return ($lower_seen && $upper_seen);
+}
+
+
 sub study_name
 {
   my ($units, $whole_names, $last3_names, $list, 
@@ -541,45 +650,23 @@ sub study_name
 
   if ($units->last() == 1)
   {
-    # TODO Move to rename_two
-    my $cat0 = $units->category(0);
-    my $val0 = $units->value(0);
-    my $cat1 = $units->category(1);
-    my $val1 = $units->value(1);
-    my $upper0 = ($val0 eq uc($val0) ? 1 : 0);
-    my $upper1 = ($val1 eq uc($val1) ? 1 : 0);
+    # Various heuristics.
+    rename_two($units, $last3_names);
 
-    if ($cat1 eq '' && $last3_names->lookup($val1))
-    {
-      $cat1 = 'NAME_LAST';
-      $units->reset_unit(1, $cat1, $val1);
-    }
-
-    if ($cat0 eq 'NAME_BOTH' && $cat1 eq 'NAME_LAST')
-    {
-      $cat0 = 'NAME_FIRST';
-      $units->reset_unit(0, $cat0, $val0);
-    }
-    elsif ($cat0 eq 'NAME_BOTH' && ! $upper0 && $cat1 eq 'NAME_INITIAL')
-    {
-      $cat0 = 'NAME_FIRST';
-      $units->reset_unit(0, $cat0, $val0);
-    }
-    elsif ($cat0 eq 'NAME_FIRST' && $cat1 eq 'NAME_BOTH')
-    {
-      $cat1 = 'NAME_LAST';
-      $units->reset_unit(1, $cat1, $val1);
-    }
-    elsif ($cat0 eq 'NAME_INITIAL' && $upper1 && $cat1 eq 'NAME_BOTH')
-    {
-      $cat1 = 'NAME_LAST';
-      $units->reset_unit(1, $cat1, $val1);
-    }
-
-    if (study_name_two($val0, $cat0, $val1, $cat1, $list, $histo))
+    if (study_name_two($units->value(0), $units->category(0), 
+      $units->value(1), $units->category(1), $list, $histo))
     {
       return 1;
     }
+  }
+
+  if (mixed_consistent_cases($units))
+  {
+    for my $i (0 .. $units->last())
+    {
+      push @$list, $units->category($i), $units->value($i);
+    }
+    return 1;
   }
 
   if ($units->last() == 2)
@@ -588,33 +675,6 @@ sub study_name
     {
       return 1;
     }
-  }
-
-  # Another big kludge.
-  if ($units->last() == 3 &&
-      $units->value(0) eq 'Delia' &&
-      $units->value(1) eq 'Cane' &&
-      $units->value(2) eq 'de' &&
-      $units->value(3) eq 'Biquard')
-  {
-    push @$list, 
-      'NAME_FIRST', 'Delia',
-      'NAME_FIRST', 'Cane',
-      'NAME_PARTICLE', 'DE',
-      'NAME_LAST', 'BIQUARD';
-    return 1;
-  }
-
-  if ($units->last() == 2 &&
-      $units->value(0) eq 'Jan' &&
-      $units->value(1) eq 'Erik' &&
-      $units->value(2) eq 'AAS')
-  {
-    push @$list, 
-      'NAME_FIRST', 'Jan',
-      'NAME_FIRST', 'Erik',
-      'NAME_LAST', 'AAS';
-    return 1;
   }
 
   # return 0;
@@ -718,19 +778,14 @@ sub pre_parse
 sub pre_inspect
 {
   my ($entry, $whole_names, $whole_system, $last3_names, 
-    $handle, $hcount, $eno, $order, $identifier, $histo, $chain_stats) = @_;
+    $handle, $hcount, $eno, $order, $identifier, 
+    $histo, $chain_stats) = @_;
 
   if (my $replace = $sublines->lookup($handle, $hcount, $eno, 
     $entry->{TEXT}))
   {
     # Still fall through and inspect further.
     $entry->{TEXT} = $replace;
-  }
-
-  if ($entry->{TEXT} =~ /\|\|/)
-  {
-    return if pre_parse($entry, $whole_names, $whole_system, $last3_names,
-      $identifier, $histo, $chain_stats);
   }
 
   for my $tag (@$order)
@@ -763,6 +818,12 @@ sub pre_inspect
   {
     $entry->{CATEGORY} = 'NAME_LAST';
     return 1;
+  }
+
+  if ($entry->{TEXT} =~ /\|\|/)
+  {
+    return if pre_parse($entry, $whole_names, $whole_system, $last3_names,
+      $identifier, $histo, $chain_stats);
   }
 
   return 0;
