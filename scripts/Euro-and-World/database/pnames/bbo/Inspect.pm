@@ -7,6 +7,7 @@ use strict;
 use warnings;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
+use feature 'unicode_strings';
 
 use Exporter;
 
@@ -27,7 +28,7 @@ our ($sublines, $both_last);
 my %PRE_INSPECTED;
 
 my $debug_study_name = 1;
-my $debug_pre_parse = 1;
+my $debug_pre_parse = 0;
 
 my @MULTI_ORDER = qw(
   COUNTRY
@@ -572,27 +573,40 @@ sub print_units
     push @values, $val;
   }
 
-  print $identifier;
+# print $identifier;
   my $cstr = join ' - ', @cats;
   my $vstr = join ' - ', @values;
-  print $cstr, "\n";
+if ($cstr eq "''")
+{
+  # print $cstr, "\n";
   print $vstr, "\n";
-  print "-------------\n\n";
+}
+# print "-------------\n\n";
 }
 
 
 sub study_name
 {
-  my ($units, $whole_names, $last3_names, $list, 
+  my ($units, $whole_names, $first1_names, $last3_names, $list, 
     $identifier, $histo) = @_;
-
-  # This is a feeble start of a more general method.
 
   if ($units->last() == 0)
   {
-    # These are concatenated initials, two or more.
-    if ($units->category(0) eq 'NAME_INITIAL')
+    my $cat = $units->category(0);
+    if ($cat eq 'NAME_FIRST' ||
+        $cat eq 'NAME_INITIAL' ||
+        $cat eq 'NAME_LAST')
     {
+      return 1;
+    }
+    elsif ($cat eq '' && $last3_names->lookup($units->value(0)))
+    {
+      $units->reset_unit(0, 'NAME_LAST', $units->value(0));
+      return 1;
+    }
+    elsif ($cat eq '' && $first1_names->lookup($units->value(0)))
+    {
+      $units->reset_unit(0, 'NAME_FIRST', $units->value(0));
       return 1;
     }
   }
@@ -619,7 +633,7 @@ sub study_name
     return 1;
   }
 
-  if ($debug_study_name)
+  if ($debug_study_name && $units->last() == 0)
   {
     print_units($units, $identifier);
   }
@@ -630,7 +644,7 @@ sub study_name
 
 sub study_text_as_name
 {
-  my ($whole_names, $text, $last3_names, $list,
+  my ($whole_names, $text, $first1_names, $last3_names, $list,
     $identifier, $histo, $chain_stats) = @_;
 
   my @battery;
@@ -641,7 +655,7 @@ sub study_text_as_name
 
   my @clist;
 
-  if (study_name($battery[0], $whole_names, $last3_names, 
+  if (study_name($battery[0], $whole_names, $first1_names, $last3_names, 
       \@clist, $identifier, $histo))
   {
     push @$list, @clist;
@@ -656,7 +670,7 @@ sub study_text_as_name
 
 sub pre_parse
 {
-  my ($entry, $whole_names, $whole_system, $last3_names, 
+  my ($entry, $whole_names, $whole_system, $first1_names, $last3_names, 
     $identifier, $histo, $chain_stats) = @_;
 
   my @components = split /\|\|/, $entry->{TEXT};
@@ -702,7 +716,8 @@ sub pre_parse
     }
 
     my @clist;
-    if (study_text_as_name($whole_names, $comp, $last3_names, \@clist,
+    if (study_text_as_name($whole_names, $comp, 
+      $first1_names, $last3_names, \@clist,
       $identifier, $histo, $chain_stats))
     {
       push @list, @clist;
@@ -724,7 +739,7 @@ sub pre_parse
 
 sub pre_inspect
 {
-  my ($entry, $whole_names, $whole_system, $last3_names, 
+  my ($entry, $whole_names, $whole_system, $first1_names, $last3_names, 
     $handle, $hcount, $eno, $order, $identifier, 
     $histo, $chain_stats) = @_;
 
@@ -752,24 +767,33 @@ sub pre_inspect
         $entry->{CATEGORY} = 'LIST';
         @{$entry->{LIST}} = @list;
       }
+      elsif ($tag eq 'NAMELIKE')
+      {
+        my $identifier = "YYY $handle, $hcount, $eno\n" .
+          $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
+
+        my @list;
+        if (study_text_as_name($whole_names, $entry->{TEXT}, 
+          $first1_names, $last3_names, 
+          \@list, $identifier, $histo, $chain_stats))
+        {
+          $entry->{CATEGORY} = 'LIST';
+          @{$entry->{LIST}} = @list;
+          return 1;
+        }
+        else
+        {
+          # TODO
+          $entry->{CATEGORY} = $tag;
+          $entry->{VALUE} = $entry->{TEXT};
+# if ($entry->{TEXT} =~/ /)
+# {
+# print $identifier;
+# }
+        }
+      }
       else
       {
-if ($tag eq 'NAMELIKE')
-{
-  my $identifier = "YYY $handle, $hcount, $eno\n" .
-    $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
-  print $identifier;
-
-  # if (study_name($units, $whole_names, $last3_names, $list, 
-    # $identifier, $histo))
-  # if (study_text_as_name($whole_names, $entry->{TEXT}, $last3_names, 
-    # $list, $identifier, $histo, $chain_stats))
-  # {
-    # $entry->{CATEGORY} = 'LIST';
-    # @{$entry->{LIST}} = @list;
-    # return 1;
-  # }
-}
         $entry->{CATEGORY} = $tag;
         $entry->{VALUE} = $entry->{TEXT};
       }
@@ -785,8 +809,8 @@ if ($tag eq 'NAMELIKE')
 
   if ($entry->{TEXT} =~ /\|\|/)
   {
-    return if pre_parse($entry, $whole_names, $whole_system, $last3_names,
-      $identifier, $histo, $chain_stats);
+    return if pre_parse($entry, $whole_names, $whole_system, 
+      $first1_names, $last3_names, $identifier, $histo, $chain_stats);
   }
 
   return 0;
@@ -844,7 +868,7 @@ sub inspect_for_tag
 
 sub inspect_paragraph
 {
-  my ($whole_names, $whole_system, $last3_names, 
+  my ($whole_names, $whole_system, $first1_names, $last3_names, 
     $paragraph, $pre_inspect_order, $handle_counts, 
     $histo, $chain_stats) = @_;
 
@@ -872,7 +896,8 @@ sub inspect_paragraph
     my $identifier = "YYY $handle, $hcount, $eno\n" .
       $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
 
-    next if pre_inspect($entry, $whole_names, $whole_system, $last3_names,
+    next if pre_inspect($entry, $whole_names, $whole_system, 
+      $first1_names, $last3_names,
       $handle, $hcount, $eno, $pre_inspect_order, $identifier, 
       $histo, $chain_stats);
 
@@ -952,6 +977,7 @@ sub inspect_paragraph
       $entry->{CATEGORY} = 'SYSTEM';
       next;
     }
+
   }
 }
 

@@ -165,6 +165,9 @@ $both_last->read_file('Manual/both_last.txt');
 my $last3_names = Manual::TargetedWords->new();
 $last3_names->read_file('Manual/last3.txt');
 
+# Perhaps sloppier attempt at first names not otherwise found.
+my $first1_names = Manual::TargetedWords->new();
+$first1_names->read_file('Manual/first1.txt');
 
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
@@ -190,13 +193,13 @@ my %handle_counts;
 
 for my $paragraph (@paragraphs)
 {
-if ($paragraph->{HANDLE} eq 'KJELL5')
+if ($paragraph->{HANDLE} eq 'GHISA')
 {
   # print "HERE\n";
 }
   $handle_counts{$paragraph->{HANDLE}}++;
   Inspect::inspect_paragraph($whole_names, $whole_system, 
-    $last3_names, $paragraph, \@PRE_INSPECTED_ORDER, 
+    $first1_names, $last3_names, $paragraph, \@PRE_INSPECTED_ORDER, 
     \%handle_counts, $histo, \%chain_stats);
 
   # print_paragraph($paragraph);
@@ -245,8 +248,8 @@ if ($paragraph->{HANDLE} eq 'KJELL5')
       \@list, $battery[0], $histo, \%chain_stats);
 
     my @name_list;
-    if (Inspect::study_name($battery[0], $whole_names, $last3_names,
-      \@name_list, $identifier, $histo))
+    if (Inspect::study_name($battery[0], $whole_names, 
+      $first1_names, $last3_names, \@name_list, $identifier, $histo))
     {
       if ($#name_list >= 0)
       {
