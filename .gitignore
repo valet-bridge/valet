@@ -65,6 +65,7 @@ scripts/Euro-and-World/database/bbo/dates/*.xlsx
 scripts/Euro-and-World/database/Tournaments/DATED/*.pm
 scripts/Euro-and-World/database/pnames/full/EBL/*.txt
 scripts/Euro-and-World/database/pnames/bbo/Manual/*.txt
+scripts/Euro-and-World/database/pnames/bbo/namelists/**
 scripts/Euro-and-World/database/pnames/bbo/Manual/*/*.txt
 
 scripts/cluster/data/20*

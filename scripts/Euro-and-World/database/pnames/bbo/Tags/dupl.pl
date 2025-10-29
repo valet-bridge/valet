@@ -6,7 +6,7 @@ use open ':std', ':encoding(UTF-8)';
 use feature 'unicode_strings';
 
 use lib '.';
-use lib './Tags';
+use lib '..';
 
 use Manip;
 use WholeBBO;
@@ -34,8 +34,6 @@ $whole->init_hashes;
 my $hash_first = $whole->peek_list($tag1);
 
 my $hash_firstBBO = $whole->peek_list($tag2);
-
-# reprint($hash_firstBBO, $CATALOG{$tag1});
 
 dedup($hash_first, $hash_firstBBO, $CATALOG{$tag1}, $CATALOG{$tag2});
 
