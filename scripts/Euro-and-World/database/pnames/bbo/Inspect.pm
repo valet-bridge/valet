@@ -14,7 +14,7 @@ use Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT = qw($sublines $both_last 
   inspect_paragraph lines_to_list list_to_units 
-  list_to_units_no_punctuation study_word study_name);
+  list_to_units_no_punctuation study_word study_name print_units);
 
 use lib '../../bbo';
 use Util;
@@ -399,7 +399,10 @@ sub study_word
   }
   else
   {
-    return '';
+    # TODO These probably don't get scanned further.
+    # But if I set them to UNKNOWN, they do?
+    return 'UNKNOWN';
+    # return '';
   }
 }
 
@@ -453,7 +456,7 @@ sub study_name_two
 
 sub rename_two
 {
-  my ($units, $last3_names) = @_;
+  my ($units, $first1_names, $last3_names) = @_;
 
   my $cat0 = $units->category(0);
   my $val0 = $units->value(0);
@@ -462,7 +465,13 @@ sub rename_two
   my $upper0 = ($val0 eq uc($val0) ? 1 : 0);
   my $upper1 = ($val1 eq uc($val1) ? 1 : 0);
 
-  if ($cat1 eq '' && $last3_names->lookup($val1))
+  if (($cat0 eq '' || $cat0 eq 'UNKNOWN') && $first1_names->lookup($val0))
+  {
+    $cat0 = 'NAME_FIRST';
+    $units->reset_unit(0, $cat0, $val0);
+  }
+
+  if (($cat1 eq '' || $cat1 eq 'UNKNOWN') && $last3_names->lookup($val1))
   {
     $cat1 = 'NAME_LAST';
     $units->reset_unit(1, $cat1, $val1);
@@ -574,12 +583,20 @@ sub print_units
   }
 
 # print $identifier;
+
   my $cstr = join ' - ', @cats;
   my $vstr = join ' - ', @values;
-if ($cstr eq "''")
+
+# if ($cstr eq "''")
+# if ($cstr ne "''")
+# if (0)
+# if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /^UNKNOWN/)
+if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /UNKNOWN$/)
 {
   # print $cstr, "\n";
-  print $vstr, "\n";
+  # for my $v (@values) { print $v, "\n"; } print "\n"; 
+  # print $vstr, "\n\n";
+  print $identifier;
 }
 # print "-------------\n\n";
 }
@@ -587,8 +604,8 @@ if ($cstr eq "''")
 
 sub study_name
 {
-  my ($units, $whole_names, $first1_names, $last3_names, $list, 
-    $identifier, $histo) = @_;
+  my ($units, $whole_names, $first1_names, $last3_names, 
+    $known_name_flag, $list, $identifier, $histo) = @_;
 
   if ($units->last() == 0)
   {
@@ -599,12 +616,14 @@ sub study_name
     {
       return 1;
     }
-    elsif ($cat eq '' && $last3_names->lookup($units->value(0)))
+    elsif (($cat eq '' || $cat eq 'UNKNOWN') && 
+        $last3_names->lookup($units->value(0)))
     {
       $units->reset_unit(0, 'NAME_LAST', $units->value(0));
       return 1;
     }
-    elsif ($cat eq '' && $first1_names->lookup($units->value(0)))
+    elsif (($cat eq '' || $cat eq 'UNKNOWN') && 
+        $first1_names->lookup($units->value(0)))
     {
       $units->reset_unit(0, 'NAME_FIRST', $units->value(0));
       return 1;
@@ -614,12 +633,32 @@ sub study_name
   if ($units->last() == 1)
   {
     # Various heuristics.
-    rename_two($units, $last3_names);
+    rename_two($units, $first1_names, $last3_names);
 
     if (study_name_two($units->value(0), $units->category(0), 
       $units->value(1), $units->category(1), $list, $histo))
     {
       return 1;
+    }
+  }
+
+  if ($known_name_flag)
+  {
+    # Only do this when we know we won't have collisions with
+    # non-names.
+    for my $i (0 .. $units->last())
+    {
+      my $cat = $units->category($i);
+      next unless ($cat eq '' || $cat eq 'UNKNOWN');
+
+      if ($first1_names->lookup($units->value($i)))
+      {
+        $units->reset_unit($i, 'NAME_FIRST', $units->value($i));
+      }
+      elsif ($last3_names->lookup($units->value($i)))
+      {
+        $units->reset_unit($i, 'NAME_LAST', $units->value($i));
+      }
     }
   }
 
@@ -633,7 +672,8 @@ sub study_name
     return 1;
   }
 
-  if ($debug_study_name && $units->last() == 0)
+  # if ($debug_study_name && $units->last() == 0)
+  if ($debug_study_name && $units->last() >= 0)
   {
     print_units($units, $identifier);
   }
@@ -656,7 +696,7 @@ sub study_text_as_name
   my @clist;
 
   if (study_name($battery[0], $whole_names, $first1_names, $last3_names, 
-      \@clist, $identifier, $histo))
+      1, \@clist, $identifier, $histo))
   {
     push @$list, @clist;
     return 1;

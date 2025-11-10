@@ -387,8 +387,9 @@ my @SINGLE_WORDS = qw(
   Gerryanne Gert Gert-Jan Gerti Gertjan Gertrud Gertrude Gerty 
   Gesualdo Geta Geula Gevorg Geza Gezim Ghada Ghaffar Ghaith Ghaleb 
   Ghandi Ghassan Ghiath Ghislaine Ghita Ghulam Giacinto Giacomo 
-  Giambattista Giampao Giampi Giampiero Gian Gianantonio Gianarrigo 
-  Giancarlo Gianfranco Gianluca Gianluigi Gianmarco Gianmatteo Gianna 
+  Giambattista Giampao Giampi Giampiero Gian Gianandrea Gianantonio 
+  Gianarrigo Giancarlo Gianfranco Gianluca Gianluigi Gianmarco 
+  Gianmatteo Gianna 
   Gianni Giannis Gianpaolo Gideon Gidi Giedre Giedrius Gigello Gigi 
   Gijsbert Gila Gilad Gilberto Gildana Gili Gilla Gilles Gillian 
   Gilly Gilmar Gilpin Gimgim Gin Gina Ginette Ginevra Ginger Ginny 
@@ -569,7 +570,7 @@ my @SINGLE_WORDS = qw(
   Ka Ka-Cheung Kaan Kaarel Kaarle Kabelo Kabou Kacper Kadayam Kadir 
   Kagan Kah Kai Kai-Cheuk Kai-Ching Kai-En Kaijian Kailash Kaisa 
   Kaiti Kaiwen Kaj Kaja Kajal Kajetan Kal Kalamazad Kalervo Kalevi 
-  Kali Kalia Kalifa Kalin Kalle Kalman Kalpa Kalthoum Kalvi Kalyan 
+  Kali Kalia Kalifa Kalin Kalle Kalpa Kalthoum Kalvi Kalyan 
   Kalyanaraman Kam-Wing Kamala Kamalakara Kamales Kamaleshwar 
   Kamaljit Kamelia Kamen Kamiel Kamila Kamile Kamla Kamles Kamran 
   Kamrul Kamryn Kamuran Kanagarajulu Kanakamuthu Kanako Kandahar 
@@ -1012,7 +1013,7 @@ my @SINGLE_WORDS = qw(
   Soumadeep Soumalya Soumitra Soumya Sounak Soundararajan Sourav 
   Sourendra Souvik Souzy Sovan Sovert Sowmitra Spela Spike Spiridione 
   Spiros Spyridoula Srecko Sree Sreedharan Sreeemathi Sreekanth 
-  Sreekrishnan Sreekumar Sri Srihari Srikanta Srren Srs Staale Stacy 
+  Sreekrishnan Sreekumar Sri Srihari Srikanta Staale Stacy 
   Staf Staffan Stan Stancho Standa Stane Stani Stanimir Stanislaus 
   Stanislav Stanislaw Stanko Stasa Stasha Stathis Stav Stavros 
   Stavroula Steban Steef Stef Stefania Stefanie Stefanos Stefanus 
@@ -1020,7 +1021,7 @@ my @SINGLE_WORDS = qw(
   Stelio Stelios Stella Sten Sten-Sture Stense Stepan Steph Stephan 
   Stephane Stephanie Stephannie Stephy Sterling Stevan Steve Steven 
   Stevica Stevy Stew Steward Stian Stig Stine Stirling Stjepan Stoian 
-  Stojcho Stoyan Stoycho Stoyo Strato Stratos Strong Stu Sture Sturla 
+  Stojcho Stoyan Stoycho Stoyo Strato Stratos Stu Sture Sturla 
   Stylianos Su-Beng Suat Suayip Subadra Subba Subbarao Subhas Subhash 
   Subhashree Subhransu Subir Subodh Subrata Suchithra Suci Sudarmadi 
   Sudarshan Sudesh Sudha Sudhakar Sudhakara Sudhir Sudip Sudipta 
@@ -1042,7 +1043,7 @@ my @SINGLE_WORDS = qw(
   Syahrial Syam Syarif Sybil Sybill Sybille Syd Syham Sylva Sylvain 
   Sylvia Sylvian Sylviane Sylvie Sylwester Sylwia Syra Sysser Sytze 
   Szabolcs Szczepan Sze-Ching Sze-Guan Sze-Wing Szilvia Szymon 
-  Süleyman Sülo Süreyya 
+  Süleyman Sülo Süreyya Søren Søs
 
   Ta Taara Taavet Taavi Tabita Tad Tadahiro Tadashi Tadayoshi Tadej 
   Tadek Tadeshi Tadeusz Tadjib Tae Taeko Taf Tage Tagi Tahar Tahir 
@@ -1244,6 +1245,8 @@ my @SINGLE_WORDS = qw(
   Øivind Øyvind 
 
   Ülgen Ümit Ünal Üzeyir 
+
+  Annoyla Lanzo Laverne Leemor Uxue Yanjun Zviah
 );
 
 my %SINGLE_TYPOS =

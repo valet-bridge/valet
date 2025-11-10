@@ -172,7 +172,7 @@ $first1_names->read_file('Manual/first1.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('remain10');
+# $sublines->consolidate_with('remv');
 # $sublines->print();
 # exit;
 
@@ -247,9 +247,13 @@ if ($paragraph->{HANDLE} eq 'GHISA')
     list_to_units_no_punctuation($whole_names,
       \@list, $battery[0], $histo, \%chain_stats);
 
+# if ($entry->{TEXT} =~ /Plunkett/)
+# {
+  # print "HERE\n";
+# }
     my @name_list;
     if (Inspect::study_name($battery[0], $whole_names, 
-      $first1_names, $last3_names, \@name_list, $identifier, $histo))
+      $first1_names, $last3_names, 1, \@name_list, $identifier, $histo))
     {
       if ($#name_list >= 0)
       {
@@ -265,6 +269,7 @@ if ($paragraph->{HANDLE} eq 'GHISA')
     }
 
     print $identifier;
+    # print_units($battery[0], $identifier);
   }
 }
 

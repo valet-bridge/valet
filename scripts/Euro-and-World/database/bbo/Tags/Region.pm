@@ -45,6 +45,7 @@ my @MULTI_WORDS =
   'Gran Canaria',
   'Himachal Pradesh',
   'Indragiri Hulu',
+  'Inner Mongolia',
   'Java Bali',
   'Kabupaten Bekasi',
   'Kabupaten Blitar',
@@ -262,32 +263,33 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Aberdeenshire Aceh Agder Akdeniz Akkad Alabama Alaska Algarve
-  Altiplano Anatolia Andalusia Anhui Ararat Ardennes Arizona Arkansas 
-  Arunachala Asturia Aurland Auvergne Aveiro Aveyron Ayrshire Azores
+  Aberdeenshire Abkhazia Aceh Adjara Agder Akdeniz Akkad Alabama Alaska 
+  Algarve Altiplano Anatolia Andalusia Anhui Ararat Ardahan Ardeche
+  Ardennes Arizona Arkansas Arunachala Asturia Atacama Aurland Auvergne 
+  Aveiro Aveyron Ayrshire Azores
 
-  Badakhshan Badung Bahia Bairrada Bali Banten Bayern Belitung Benchamas
-  Bengal Bengkayang Bihar Bizkaia Blekinge Bogø Bolu Borneo Bornholm 
-  Bungo Buriram Buskerud
+  Badakhshan Badung Bahia Bairrada Balcova Bali Banten Bayern Belitung 
+  Benchamas Bengal Bengkayang Bihar Bizkaia Blekinge Bogø Bolu Borneo 
+  Bornholm Bungo Buriram Buskerud
 
   Calabria California Camargue Çankiri Cantal Cappadocia Catalonia 
   Charente Chartreuse Chengmai Colorado Comandatuba Connecticut 
-  Cornwall Corfu Correze Corsica Crete Cukurova
+  Corinthia Cornwall Corfu Correze Corsica Crete Cukurova
 
-  Delaware Dersim Dobruca Dobruja Druts
+  Delaware Dersim Dharmasraya Dobruca Dobruja Druts
 
   Eyjafjallajokull
 
   Feixiang Finnmark Fjends Flakstad Florida Frøya Fuji Fujian Fyn
 
   Galapagos Galicia Ganges Gansu Gauteng Gelderland Gibraltar Goa 
-  Gorontalo Guam Guangdong Guangxi Guizhou Gujarat
+  Goias Gorontalo Guam Guangdong Guangxi Guizhou Gujarat
 
   Hainan Haixing Hampshire Haryana Hatay Haugaland Hawaii Hebei 
   Hedmark Hegyvidék Heilongjiang Hemshin Henan Herault Hordaland 
   Huabei Hubei Hunan
 
-  Iberia Idaho Illinois Indiana Innlandet Iowa Isère Iskele
+  Iberia Idaho Illimani Illinois Indiana Innlandet Iowa Isère Iskele
 
   Jalisco Java Jämtland Jharkhand Jiangsu Jiangxi Jilin
 
@@ -295,17 +297,18 @@ my @SINGLE_WORDS = qw(
   Kawanua Kedungwaru Kentucky Kerala Khuzestan Kilimanjaro Kizil Krabi 
   Kurdistan
 
-  Lampung Languedoc Lebak Liaoning Liguria Loire Lombok Louisiana
+  Lampung Languedoc Lazio Lebak Liaoning Liguria Loire Lombok Louisiana
+  Lubusz
 
-  Madeira Maharashtra Maine Mallorca Maluku Malwa Manitoba Manle Marmara 
-  Marne Maryland Massachusetts Matopos Maui Mazovia Menorca Mesopotamia 
-  Michigan Midtsjælland Minahasa Minang Minnesota Mississippi Missouri 
-  Misya Mjøsa Montana Muallim Munzur Mysia
+  Madeira Maharashtra Maine Mallorca Malopolska Maluku Malwa Manitoba 
+  Manle Marmara Marne Maryland Massachusetts Matopos Maui Mazovia 
+  Menorca Mesopotamia Michigan Midtsjælland Minahasa Minang Minnesota 
+  Mississippi Missouri Misya Mjøsa Montana Muallim Munzur Mysia
 
   Narathiwat Narman Natuna Naxos Nebraska Negev Nevada Ngawi 
   Nordafjells Nordland Normandy Norrland Norrorts Northland Nusantara
 
-  Oberloiben Occitanie Odisha Ohio Oklahoma Olona Ontario Oregon 
+  Oberloiben Occitanie Odisha Ohio Oise Oklahoma Olona Ontario Oregon 
   Orontes Otago Overijssel
 
   Papua Paros Pasha Patagonia Pennsylvania Phatthalung Piemonte Pirin 
@@ -320,16 +323,16 @@ my @SINGLE_WORDS = qw(
   Sahyadri Sakarya Sallière Salten Sambas Samutsakorn Sanggau Santorini
   Sardinia Saros Saskatchewan Savoie Schwyz Shandong Shanxi Siberia 
   Sichuan Sicily Silesia Silla Sindh Sintang Sitaro Skåne Slask 
-  Småland Southland Speyside Suffolk Sulawesi Sumatra Suvalkija 
+  Småland Southland Speyside Suecava Suffolk Sulawesi Sumatra Suvalkija 
   Sørlandet Sydvest
 
-  Tala Tambun Tasmania Telemark Telengana Tenerife Tennessee Texas 
-  Tharparkar Thassos Thrace Thüringen Tianya Tigris Tinglin Transvaal 
-  Transylvania Trentino Trøndelag Tunceli Tuscany
+  Tala Tambun Tasmania Telemark Telengana Tenerife Tennessee Tesalia
+  Texas Tharparkar Thassos Thrace Thüringen Tianya Tigris Tinglin 
+  Tokaj Transvaal Transylvania Trentino Trøndelag Tunceli Tusba Tuscany
 
   Uludag Utah Uttarakhand Uzungol
 
-  Valsugana Vestland Victoria Vojvodina
+  Valsugana Vestland Victoria Vojvodina Vratsa
 
   Wachau Wakayama Waikato Warmia Washington Wielkopolska Wisconsin 
   Wujin Wyoming Wyssa
