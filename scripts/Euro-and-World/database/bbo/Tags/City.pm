@@ -284,10 +284,10 @@ my @SINGLE_WORDS = qw(
   Dongguan Dorohoi Dortmund Dörtyol Drammen Drøbak Dubai Dublin 
   Dubrovnik Dunfermlin Durban Durgapur Durham Düsseldorf Düzce
 
-  Eastbourne Edinburgh Edirne Edmonton Edremit Egemen Egirdir Elazig
-  Elblag Elmadag Elverum Emirdag Englewood Enschede Ephesus Erdek Eregli 
-  Ergene Eryaman Erzinkan Erzurum Esbjerg Esenler Eskisehir Essen 
-  Estoril Evanston Evansville Evora
+  Eastbourne Edinburgh Edirne Edmonton Edremit Egemen Egirdir i
+  Eindhoven Elazig Elblag Elmadag Elverum Emirdag Englewood Enschede 
+  Ephesus Erdek Eregli Ergene Eryaman Erzinkan Erzurum Esbjerg Esenler 
+  Eskisehir Essen Estoril Evanston Evansville Evora
 
   Farsund Farum Fauske Felletin Fernetti Fethiye Firenze Flekkefjord 
   Florianopolis Foca Foshan Fosnavåg Frankfort Frankfurt Fredrikstad 
@@ -337,7 +337,7 @@ my @SINGLE_WORDS = qw(
   Lima Limboto Linares Lincoln Lindesberg Linköping Lisbon Liushu Livane 
   Liverpool Livorno Ljubljana Lodi Lodz Lojdy Lokotok Lom Lomza London 
   Loughborough Lovech Lowicz Lubin Lublin Lubomino Ludhiana Ludvikabygden 
-  Lufeng Lugoj Lüleburgaz Lumajang Luzern Lübeck Lyngdal Lyon
+  Lufeng Lugo Lugoj Lüleburgaz Lumajang Luzern Lübeck Lyngdal Lyon
 
   Maastricht Madrid Madurai Magetan Maillé Mainz Makassar Malaga 
   Malang Malatya Malkara Malmö Manado Manavgat Manchester Manila 
