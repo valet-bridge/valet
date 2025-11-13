@@ -595,8 +595,10 @@ if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /UNKNOWN$/)
 {
   # print $cstr, "\n";
   # for my $v (@values) { print $v, "\n"; } print "\n"; 
-  # print $vstr, "\n\n";
-  print $identifier;
+
+  print $vstr, "\n";
+
+  # print $identifier;
 }
 # print "-------------\n\n";
 }
@@ -614,18 +616,21 @@ sub study_name
         $cat eq 'NAME_INITIAL' ||
         $cat eq 'NAME_LAST')
     {
+      push @$list, $cat, $units->value(0);
       return 1;
     }
     elsif (($cat eq '' || $cat eq 'UNKNOWN') && 
         $last3_names->lookup($units->value(0)))
     {
       $units->reset_unit(0, 'NAME_LAST', $units->value(0));
+      push @$list, 'NAME_LAST', $units->value(0);
       return 1;
     }
     elsif (($cat eq '' || $cat eq 'UNKNOWN') && 
         $first1_names->lookup($units->value(0)))
     {
       $units->reset_unit(0, 'NAME_FIRST', $units->value(0));
+      push @$list, 'NAME_FIRST', $units->value(0);
       return 1;
     }
   }
@@ -849,7 +854,7 @@ sub pre_inspect
 
   if ($entry->{TEXT} =~ /\|\|/)
   {
-    return if pre_parse($entry, $whole_names, $whole_system, 
+    return 1 if pre_parse($entry, $whole_names, $whole_system, 
       $first1_names, $last3_names, $identifier, $histo, $chain_stats);
   }
 
@@ -1018,6 +1023,15 @@ sub inspect_paragraph
       next;
     }
 
+    if ($entry->{TEXT} !~ / /)
+    {
+      my $cat = study_word($whole_names, $entry->{TEXT}, $histo);
+      if ($cat)
+      {
+        $entry->{CATEGORY} = $cat;
+        next;
+      }
+    }
   }
 }
 

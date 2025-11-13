@@ -172,7 +172,7 @@ $first1_names->read_file('Manual/first1.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('edit');
+# $sublines->consolidate_with('ee');
 # $sublines->print();
 # exit;
 
@@ -190,12 +190,14 @@ raw_to_paragraphs(\@chunks, \@paragraphs);
 
 my %chain_stats;
 my %handle_counts;
+my %cat_hist;
 
 for my $paragraph (@paragraphs)
 {
-if ($paragraph->{HANDLE} eq 'GHISA')
+# if ($paragraph->{HANDLE} eq 'STOXI11')
+if ($paragraph->{HANDLE} =~ /WALD/)
 {
-  # print "HERE\n";
+  print "HERE\n";
 }
   $handle_counts{$paragraph->{HANDLE}}++;
   Inspect::inspect_paragraph($whole_names, $whole_system, 
@@ -210,28 +212,19 @@ if ($paragraph->{HANDLE} eq 'GHISA')
     $lno++;
 
     # Heavily curated.
-    next unless $entry->{CATEGORY} eq 'OPEN';
+    if ($entry->{CATEGORY} ne 'OPEN')
+    {
+      # This happens a lot: From 2.1 mio down to 60k cases.
+      register_categories($entry, \%cat_hist);
+      next;
+    }
 
     my $chain = Chain->new();
     my @chains;
     push @chains, $chain;
 
-
-
     my @list;
     lines_to_list($entry, \@list);
-    next if $#list == -1; # COUNTRY, etc.
-
-    if ($#list == 0 && $list[0] !~ / /)
-    {
-      # Could be a single name.
-      my $cat = study_word($whole_names, $list[0], $histo);
-      if ($cat && $cat ne 'NAME_INITIAL')
-      {
-        $entry->{CATEGORY} = $cat;
-        next;
-      }
-    }
 
     my $handle = $paragraph->{HANDLE};
     my $hcount = $handle_counts{$paragraph->{HANDLE}};
@@ -242,36 +235,47 @@ if ($paragraph->{HANDLE} eq 'GHISA')
 
     my @battery;
     $battery[0] = Units->new();
-    # list_to_units($whole_system, \@UNIT_TAGS, \@list, $battery[0],
-      # $entry->{TEXT}, $histo, \%chain_stats);
     list_to_units_no_punctuation($whole_names,
       \@list, $battery[0], $histo, \%chain_stats);
 
-# if ($entry->{TEXT} =~ /Plunkett/)
-# {
-  # print "HERE\n";
-# }
+    # If we were still debugging and looking for system lines,
+    # this would be the place to continue.
+    # list_to_units($whole_system, \@UNIT_TAGS, \@list, $battery[0],
+      # $entry->{TEXT}, $histo, \%chain_stats);
+
+    # if ($entry->{TEXT} =~ /Plunkett/)
+    # {
+      # print "HERE\n";
+    # }
+
     my @name_list;
-    if (Inspect::study_name($battery[0], $whole_names, 
-      $first1_names, $last3_names, 1, \@name_list, $identifier, $histo))
+    if (! Inspect::study_name($battery[0], $whole_names, 
+      $first1_names, $last3_names, 1, \@name_list, $identifier, $histo) ||
+      $#name_list < 0)
     {
-      if ($#name_list >= 0)
-      {
-        $entry->{CATEGORY} = 'LIST';
-        ${$entry->{LIST}} = @name_list;
-      }
-      else
-      {
-        # TODO Should be somewhere else.
-        $entry->{CATEGORY} = 'NAME_INITIAL';
-      }
+      warn "$identifier: Should be a name, $#name_list";
       next;
     }
 
-    print $identifier;
-    # print_units($battery[0], $identifier);
+    $entry->{CATEGORY} = 'LIST';
+    @{$entry->{LIST}} = @name_list;
+    register_categories($entry, \%cat_hist);
   }
 }
+
+print "\n";
+
+for my $k (qw(DELETE INT_LARGE INT_MEDIUM INT_SMALL INT_TEXTISH NAMELIKE NAME_BOTH OPEN UNKNOWN USER_UNPARSEABLE))
+{
+  printf("%-16s%10d\n", $k, $cat_hist{$k});
+}
+
+print "\n";
+for my $k (sort keys %cat_hist)
+{
+  printf("%-16s%10d\n", $k, $cat_hist{$k});
+}
+exit;
 
 printf("Lines %10d\n", $chain_stats{DATA});
 printf("Parts %10d\n\n", $chain_stats{PARTS});
@@ -337,6 +341,24 @@ sub raw_to_paragraphs
       }
       $pno++;
     }
+  }
+}
+
+
+sub register_categories
+{
+  my ($entry, $hist) = @_;
+
+  if ($entry->{CATEGORY} eq 'LIST')
+  {
+    for (my $i = 0; $i <= $#{$entry->{LIST}}; $i += 2)
+    {
+      $hist->{$entry->{LIST}[$i]}++;
+    }
+  }
+  else
+  {
+    $hist->{$entry->{CATEGORY}}++;
   }
 }
 
