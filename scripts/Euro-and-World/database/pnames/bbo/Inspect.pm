@@ -147,6 +147,42 @@ sub lines_to_list
 }
 
 
+sub kludge_given_names
+{
+  my ($datum, $parts) = @_;
+
+  # Skip _
+  my $sep = qr/(\d+|[\s\-\+\.\?,:;=&@#*%\$^~"\/\\()<>|\[\]\{\}])/;
+
+  my @a = split /::/, $datum;
+  my $straggler = '';
+  for my $elem (@a)
+  {
+    my @sub_parts = grep { $_ ne '' } split /$sep/, $elem;
+
+    my $start = 0;
+    if ($straggler)
+    {
+      push @$parts, $straggler . '::' . $sub_parts[0];
+      $straggler = '';
+      $start = 1;
+    }
+
+    if ($start < $#sub_parts)
+    {
+      push @$parts, @sub_parts[$start .. $#sub_parts-1];
+      $straggler = $sub_parts[-1];
+    }
+  }
+
+  if ($straggler)
+  {
+    push @$parts, $straggler;
+  }
+
+}
+
+
 sub list_to_units
 {
   my ($whole, $unit_tags, $list, $units, $text, $histo, $chain_stats) = @_;
@@ -318,8 +354,19 @@ sub list_to_units_no_punctuation
       return;
     }
 
-    my $sep = qr/(\d+|[\s\-\+\.\?_,:;=&@#*%\$^~"\/\\()<>|\[\]\{\}])/;
-    my @parts = grep { $_ ne '' } split /$sep/, $datum;
+    my @parts;
+    my $kludge_flag = 0;
+    if ($datum =~ /::/)
+    {
+      kludge_given_names($datum, \@parts);
+      $kludge_flag = 1;
+    }
+    else
+    {
+      my $sep = qr/(\d+|[\s\-\+\.\?_,:;=&@#*%\$^~"\/\\()<>|\[\]\{\}])/;
+      @parts = grep { $_ ne '' } split /$sep/, $datum;
+    }
+
 
     my $pos = -1;
     my $used_pos = -1;
@@ -337,6 +384,15 @@ sub list_to_units_no_punctuation
       {
         $units->push_integer($part, $pos, $chain_stats);
         next;
+      }
+      elsif ($kludge_flag && $part =~ /::/)
+      {
+        my @a = split /::/, $part;
+        die "Kludge syntax: $part" unless $#a == 1;
+        $used_pos++;
+        $markup[$used_pos]{CATEGORY} = $a[0];
+        $markup[$used_pos]{TEXT} = $a[1];
+        $markup[$used_pos]{UPPER}= ($part eq uc($part) ? 1 : 0);
       }
       else
       {
@@ -447,6 +503,33 @@ sub study_name_two
     exists $LAST_LAST{$word1 . ' ' . $word2})
   {
     push @$list, $cat1, $word1, $cat2, $word2;
+    return 1;
+  }
+
+  return 0;
+}
+
+
+sub study_name_three
+{
+  my ($word1, $cat1, $word2, $cat2, $word3, $cat3, $list, $histo) = @_;
+
+  if ($cat1 eq 'NAME_FIRST' && 
+     ($cat2 eq 'NAME_PARTICLE' || $cat2 eq 'NAME_INITIAL' ||
+      $cat2 eq 'NAME_LAST') &&
+      $cat3 eq 'NAME_LAST')
+  {
+    my $u2 = uc($word2) . '.';
+    my $u3 = uc($word3) . '.';
+    push @$list, $cat1, $word1, $cat2, $u2, $cat3, $u3;
+    return 1;
+  }
+  elsif ($cat1 eq 'NAME_FIRST' && 
+      $cat2 eq 'NAME_FIRST' &&
+      $cat3 eq 'NAME_LAST')
+  {
+    my $u3 = uc($word3) . '.';
+    push @$list, $cat1, $word1, $cat2, $word2, $cat3, $u3;
     return 1;
   }
 
@@ -591,14 +674,19 @@ sub print_units
 # if ($cstr ne "''")
 # if (0)
 # if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /^UNKNOWN/)
-if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /UNKNOWN$/)
+# if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /UNKNOWN$/)
+# if ($identifier =~ /\|\|/)
+# if ($cstr =~ / - /)
+# if ($cstr eq 'NAME_FIRST - NAME_FIRST - NAME_LAST')
+if ($#cats > 2)
 {
-  # print $cstr, "\n";
-  # for my $v (@values) { print $v, "\n"; } print "\n"; 
+  print $cstr, "\n";
+  for my $v (@values) { print $v, "\n"; } print "\n"; 
 
-  print $vstr, "\n";
+  # print $vstr, "\n";
 
-  # print $identifier;
+  print $identifier;
+  print "-----\n\n";
 }
 # print "-------------\n\n";
 }
@@ -666,6 +754,19 @@ sub study_name
       }
     }
   }
+
+  if ($units->last() == 2)
+  {
+    if (study_name_three(
+      $units->value(0), $units->category(0), 
+      $units->value(1), $units->category(1), 
+      $units->value(2), $units->category(2), 
+      $list, $histo))
+    {
+      return 1;
+    }
+  }
+
 
   if (mixed_consistent_cases($units) ||
       plausible_only_upper($units))
@@ -737,7 +838,7 @@ sub pre_parse
     next if $found;
 
     my $cat = study_word($whole_names, $comp, $histo);
-    if ($cat && $cat ne 'NAME_INITIAL')
+    if ($cat && $cat ne 'NAME_INITIAL' && $cat ne 'UNKNOWN')
     {
       push @list, $cat, $comp;
       next;

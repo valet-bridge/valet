@@ -20,15 +20,13 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  DA
-  DE
-  DI
+  DA DE DEL DEN DER DES DI DO DOS DU
   EL
-  DEN
-  DER
-  LA
-  LOS
-  VAN
+  LA LAS LE LOS
+  SAINT SAINTE
+  VAN VON
+  'T TER
+  UD UL
 );
 
 my %SINGLE_TYPOS =

@@ -122,7 +122,7 @@ my @SINGLE_WORDS = qw(
   Attie Attila Attilio Attiya Atul Aty Aubrey Aud Aude Audhild 
   Audiary Audrey Audun Audy Aue Augusto Aujon Auke Aukje Aulia Aulid 
   Aulus Aura Auramani Auraya Aurea Aurel Aurele Aurelia Aureliano 
-  Aurelie Aurelio Aurora Ava Avi Avigdor Avijit Avik Avilash Avinash 
+  Aurelie Aurora Ava Avi Avigdor Avijit Avik Avilash Avinash 
   Avirup Avishek Aviv Aviva Avner Avraham Avram Avrick Avsar Aweel 
   Awuy Axel Aya Ayako Ayala Ayan Ayananshu Ayberg Ayca Aycha Ayd 
   Ayelet Ayeska Ayfer Aygün Ayla Aylin Aylwin Aymar Aymen Aymeric 
@@ -263,11 +263,11 @@ my @SINGLE_WORDS = qw(
   De Dea DeAnn Deanna Debabrata Debaditya Debanjan Debashish Debasish 
   Debayan Debbie Debby Debjit Debora Deborah Debra Deci Decio Decky 
   Declan Decon Dede Dedel Dee Deena Deepa Deepak Deepanjan 
-  Deepshubhra Defeng Degsy Deha Deirdre Dejan Dejana Del Delfina Deli 
+  Deepshubhra Defeng Degsy Deha Deirdre Dejan Dejana Delfina Deli 
   Della Delores Demetri Demetrio Demian Demie Demitrius Demly 
   Demosthenis Dendra Denes Dengzhou Denice Denisa Denise Denisse 
   Deniz Denmert Dennica Denny Denys Denyse Deone Deping Derek Dermane 
-  Dermot Derrick Derun Derya Des Desheng Desi Desiderio Desire 
+  Dermot Derrick Derun Derya Desheng Desi Desiderio Desire 
   Desiree Desislava Desmond Despina Dessie Dessy Desy Det Detlef 
   Detlev Detta Dev Devchand Deven Devendra Devendranath Devera Devi 
   Devid Devidas Devrim Devshi Dewan Dewantoro Dewita Dezideriu Dhani 
@@ -342,7 +342,7 @@ my @SINGLE_WORDS = qw(
   Fakiha Fakir Falah Falak Fanfei Fang-Wen Fangchen Fangming Fangqing 
   Fania Fanly Fanny Faramarz Faraz Farid Farida Farideh Faried Farly 
   Farooque Faroque Farouq Farrukh Faruq Faten Fatih Fatiha Fatim 
-  Fatima Fatma Fatos Fattouma Fausta Fausto Fauzan Fawad Fawzy Faycal 
+  Fatma Fatos Fattouma Fausta Fausto Fauzan Fawad Fawzy Faycal 
   Faye Fayes Fayez Faysal Fayza Fazle Fearghal Fede Federica Federigo 
   Fedor Fehmi Fehmina Fei-Yeung Feijo Feilan Feiwei Felice Felicia 
   Felicien Felicija Felicitas Felicity Felipe Felix Femke Femmy 
@@ -443,7 +443,7 @@ my @SINGLE_WORDS = qw(
   Hatice Hatsuko Hattie Haugan Hauke Haukur Hava Haven Haya Hayat Haydar 
   Haydee Hayk Haykanush Hayomo Hayri Hazar Hazell Hazem Hazur Hean 
   Heather Heber Hebin Hector Heddy Hedi Hedia Hedin Hedva Hedwig 
-  Hedwige Hedy Hee-Jung Hefny Hege Hegumi Hei Heidar Heide Heidemari 
+  Hedwige Hedy Hee-Jung Hefny Hege Hegumi Hei Heidar Heidemari 
   Heidi Heidrun Heidy Heike Heikki Heimir Heimo Heitie Heitor Helber 
   Helder Heldur Hele Helen Helena Helene Heleno Helga Helgard Helgi 
   Helina Helioui Hella Helli Helly Helma Helmar Helmer Helmi Helmut 
@@ -629,7 +629,7 @@ my @SINGLE_WORDS = qw(
   Lars-Ingvar Larus Larysa Lasha Lassad Lasse Laszlo Lata Latchmin 
   Latifah Laudine Laura Lauralee Laurance Laure Laureen Lauren 
   Laurens Laurent Laurentino Laurentiu Laurette Lauriane Laurie-Anne 
-  Laurillau Lauris Lauritz Lavinia LaVon Lazzaro Le Lea Leah Leandro 
+  Laurillau Lauris Lauritz Lavinia LaVon Lazzaro Lea Leah Leandro 
   Leao Lech Leda Leela Leen Leena Leenart Leendert Leentje Leevi 
   Lefteris Lehua Leia Leida Leif Leif-Erik Leif-Lke Leila Leise 
   Leixuan Lelia Lelio Lella Leman Lembit Lemet Lemiao Len Lene Leng 
@@ -644,7 +644,7 @@ my @SINGLE_WORDS = qw(
   Liisa Lija Lijun Lik Likui Lilani Lileta Lili Lilia Lilian Liliana 
   Liliane Liliek Lilja Lilka Lill Lilla Lillemor Lillian Lilliana 
   Lillienne Lilo Lily Lin-Huan Lin-Shou Lina Linas Linchun Linda 
-  Lindsey Lindy Linetta Ling-Fang Lingjian Lingke Lingwen Lingyi 
+  Lindy Linetta Ling-Fang Lingjian Lingke Lingwen Lingyi 
   Lingyun Linhua Linlin Linnea Lino Linus Linzhen Linzhong Lion Lior 
   Liora Liping Liqiang Liqun Liraz Liri Lisa Lisanne Lisbeth Liselil 
   Liselotte Lisette Lisha Lisi Lissa Lite Liu-Mou Liujun Liulin 
@@ -725,7 +725,7 @@ my @SINGLE_WORDS = qw(
   Mehves Meike Meikui Meilun Meira Meisheng Meixue Melania Melanie 
   Melek Melia Melic Melih Melike Melina-Marie Melinda Meline Melissa 
   Melle Meltem Melvin Memed Memet Memo Men Mendel Menderes Mendo 
-  Meng-Fei Meng-Hsuan Mengqi Mercedes Merche Merdan Merel Merete Meri 
+  Meng-Fei Meng-Hsuan Mengqi Merche Merdan Merel Merete Meri 
   Meriem Merih Merijn Merima Merja Merle Merlin Merlino Merrell 
   Merril Merrilee Merryn Mert Merter Merve Mervin Mervyn Mery Meryem 
   Mesbahur Meshack Messiha Mesut Metecan Metod Mette Mevlüt Mey Mi 
@@ -901,7 +901,7 @@ my @SINGLE_WORDS = qw(
   Revnak Reyhan Reymond Reynaldo Reynir Rezaul Rezzan Rhianna Rhoda 
   Rhona Rhonda Rhys Ri Rianto Riaz Ric Rica Ricardo Riccardo 
   Ricciardo Ricco Richa Richi Richie Richo Rick Rickard Ricki Ricky 
-  Rico Ricquier Ridha Ridi Ridvan Rie Rieks Rien Rienk Riet Rietje 
+  Rico Ricquier Ridha Ridi Ridvan Rie Rieks Rien Rienk Rietje 
   Rifat Rigga Rigmor Rigmore Riitta-Liisa Rik Rikard Rikarour 
   Rikhardur Riki Rikke Riko Riku Rima Rimantas Rimnong Rina Ringo 
   Rini Rinku Rino Rinus Riona Risk Risteard Ristu Riswan Ritambhar 

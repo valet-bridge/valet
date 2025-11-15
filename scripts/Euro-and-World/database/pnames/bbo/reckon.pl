@@ -172,7 +172,7 @@ $first1_names->read_file('Manual/first1.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('ee');
+# $sublines->consolidate_with('test13');
 # $sublines->print();
 # exit;
 
@@ -195,9 +195,9 @@ my %cat_hist;
 for my $paragraph (@paragraphs)
 {
 # if ($paragraph->{HANDLE} eq 'STOXI11')
-if ($paragraph->{HANDLE} =~ /WALD/)
+if ($paragraph->{HANDLE} =~ /HUMBERATO/)
 {
-  print "HERE\n";
+  # print "HERE\n";
 }
   $handle_counts{$paragraph->{HANDLE}}++;
   Inspect::inspect_paragraph($whole_names, $whole_system, 
@@ -211,11 +211,24 @@ if ($paragraph->{HANDLE} =~ /WALD/)
   {
     $lno++;
 
+    my $handle = $paragraph->{HANDLE};
+    my $hcount = $handle_counts{$paragraph->{HANDLE}};
+
+    my $identifier = "YYY $handle, $hcount, $lno\n" .
+      $entry->{TEXT} . "\n" .
+      $entry->{TEXT} . "\n\n";
+
+    if ($identifier =~ /0REINE57, 1/)
+    {
+      # print "HERE\n";
+    }
+
+
     # Heavily curated.
     if ($entry->{CATEGORY} ne 'OPEN')
     {
       # This happens a lot: From 2.1 mio down to 60k cases.
-      register_categories($entry, \%cat_hist);
+      register_categories($entry, $identifier, \%cat_hist);
       next;
     }
 
@@ -226,12 +239,12 @@ if ($paragraph->{HANDLE} =~ /WALD/)
     my @list;
     lines_to_list($entry, \@list);
 
-    my $handle = $paragraph->{HANDLE};
-    my $hcount = $handle_counts{$paragraph->{HANDLE}};
+    # my $handle = $paragraph->{HANDLE};
+    # my $hcount = $handle_counts{$paragraph->{HANDLE}};
 
-    my $identifier = "YYY $handle, $hcount, $lno\n" .
-      $entry->{TEXT} . "\n" .
-      $entry->{TEXT} . "\n\n";
+    # my $identifier = "YYY $handle, $hcount, $lno\n" .
+      # $entry->{TEXT} . "\n" .
+      # $entry->{TEXT} . "\n\n";
 
     my @battery;
     $battery[0] = Units->new();
@@ -253,28 +266,38 @@ if ($paragraph->{HANDLE} =~ /WALD/)
       $first1_names, $last3_names, 1, \@name_list, $identifier, $histo) ||
       $#name_list < 0)
     {
-      warn "$identifier: Should be a name, $#name_list";
+      # warn "$identifier: Should be a name, $#name_list";
+      print "$identifier: Should be a name, $#name_list\n";
       next;
     }
 
     $entry->{CATEGORY} = 'LIST';
     @{$entry->{LIST}} = @name_list;
-    register_categories($entry, \%cat_hist);
+    register_categories($entry, $identifier, \%cat_hist);
   }
 }
 
-print "\n";
+print "\n\n";
 
-for my $k (qw(DELETE INT_LARGE INT_MEDIUM INT_SMALL INT_TEXTISH NAMELIKE NAME_BOTH OPEN UNKNOWN USER_UNPARSEABLE))
+my $sum = 0;
+for my $k (qw(NAMELIKE NAME_BOTH UNKNOWN))
 {
   printf("%-16s%10d\n", $k, $cat_hist{$k});
+  $sum += $cat_hist{$k};
 }
+print '-' x 26, "\n";
+printf("%-16s%10d\n\n", '', $sum);
+exit;
 
 print "\n";
+$sum = 0;
 for my $k (sort keys %cat_hist)
 {
   printf("%-16s%10d\n", $k, $cat_hist{$k});
+  $sum += $cat_hist{$k};
 }
+print '-' x 26, "\n";
+printf("%-16s%10d\n\n", '', $sum);
 exit;
 
 printf("Lines %10d\n", $chain_stats{DATA});
@@ -331,7 +354,7 @@ sub raw_to_paragraphs
         $line =~ s/\s+$//;
         $line =~ s/\s{2,}/ /g;
         $line =~ s/^[!\-+:;'"@?\(\)\{\}\[\]<>*.,=#%&\/\$]+\s*//;
-        $line  =~ s/\s*[!\-+:;'"@?\(\)\{\}*.,=#%&\/\$]+$//;
+        $line =~ s/\s*[!\-+:;'"@?\(\)\{\}*.,=#%&\/\$]+$//;
 
         next if length($line) == 0;
         next if $line =~ /^[!_\-+:\(\)*.,=%\/\$'"@?#x\s]+$/;
@@ -343,22 +366,72 @@ sub raw_to_paragraphs
     }
   }
 }
-
+ 
 
 sub register_categories
 {
-  my ($entry, $hist) = @_;
+  my ($entry, $identifier, $hist) = @_;
+
+  my $flag = 0;
 
   if ($entry->{CATEGORY} eq 'LIST')
   {
     for (my $i = 0; $i <= $#{$entry->{LIST}}; $i += 2)
     {
       $hist->{$entry->{LIST}[$i]}++;
+      # if ($entry->{LIST}[$i] =~ /^USER_UNPARSEABLE/)
+      # {
+        # print $identifier;
+      # }
+      if ($entry->{LIST}[$i] eq 'NAMELIKE' ||
+          $entry->{LIST}[$i] eq 'NAME_BOTH' ||
+          $entry->{LIST}[$i] eq 'UNKNOWN')
+      {
+        $flag = 1;
+      }
     }
   }
   else
   {
     $hist->{$entry->{CATEGORY}}++;
+    # if ($entry->{CATEGORY} =~ /^INT_/)
+    # {
+      # print $identifier;
+    # }
+    if ($entry->{CATEGORY} eq 'NAMELIKE' ||
+        $entry->{CATEGORY} eq 'NAME_BOTH' ||
+        $entry->{CATEGORY} eq 'UNKNOWN')
+    {
+      $flag = 1;
+    }
+  }
+
+  if ($flag && 0)
+  {
+    # print $identifier;
+
+    my $cstr;
+    if ($entry->{CATEGORY} eq 'LIST')
+    {
+      my @cats;
+      for (my $i = 0; $i <= $#{$entry->{LIST}}; $i += 2)
+      {
+        push @cats, $entry->{LIST}[$i];
+      }
+      $cstr = join ' - ', @cats;
+
+    }
+    else
+    {
+      $cstr = $entry->{CATEGORY};
+    }
+
+    # if ($cstr =~ / / && $cstr =~ /UNKNOWN/)
+    # if ($cstr =~ /UNKNOWN/)
+    # {
+      print $identifier;
+      print $cstr, "\n\n---\n\n";
+    # }
   }
 }
 

@@ -31,8 +31,8 @@ my @SINGLE_WORDS = qw(
   Antoni Antonio Ao Aran Ardi Ari Arianto Arie Arif Arifin Arman 
   Arnaud Arnold Arnon Aron Arora Arslan Arthur Arwin Asaf Ashe Ashley 
   Ashraf Ashton Askin Asla Aslam Aslan Assaf Assis Astrand Ata Atakan 
-  Atila Atilla Augusta Austin Avery Aviram Avis Avni Avon Avril Awwad 
-  Ay Aydin Ayhan Aykan Aykut Ayman Ayu Ayub Azim Aziz Azzam 
+  Atila Atilla Augusta Aurelio Austin Avery Aviram Avis Avni Avon Avril 
+  Awwad Ay Aydin Ayhan Aykan Aykut Ayman Ayu Ayub Azim Aziz Azzam 
 
   Babu Bacon Bader Bagus Bahadir Baki Bala Balasundaram Balazs Balint 
   Baltazar Bang Banna Bao Bar Barak Baran Barb Barbosa Baris Barna 
@@ -68,7 +68,7 @@ my @SINGLE_WORDS = qw(
   Erdinc Erdogan Eren Erez Ergun Erich Erkan Ernest Ernst Erol Ertel 
   Erwin Esin Etienne Eva Eve Evelyn Everett Ewald Ewart 
 
-  Fabio Fabrizio Fady Falk Fan Fang Fani Farah Fares Faruk Fay 
+  Fabio Fabrizio Fady Falk Fan Fang Fani Farah Fares Faruk Fatima Fay 
   Federico Fei Fella Feng Ferdinand Ferdinando Ferenc Fernando Fiamma 
   Filip Finlay Finn Fletcher Fleur Flo Floris Floyd Fong Fonseca France 
   Francesco Francis Francisca Francisco Franck Franco Francois Frank 
@@ -88,7 +88,7 @@ my @SINGLE_WORDS = qw(
   Habib Hagen Hai Haider Haim Hakim Hakki Hala Hale Hallberg Hameed 
   Hamid Hamilton Han Hani Hank Hanna Hannah Hans Hansen Hao Haque 
   Harald Hari Harley Harmon Harris Harrison Hartono Harvey Hasan 
-  Hasmet Hassan Hassine Haugen Hayden Hayet Hazel He Hee Hein 
+  Hasmet Hassan Hassine Haugen Hayden Hayet Hazel He Hee Heide Hein 
   Heinrich Heinz Helge Helin Helle Helm Henderson Heng Henri Henry 
   Herbert Herman Hermann Hernando Herve Hiroya Hirsh Hisham Ho Hoi 
   Hon Hong Honghai Hope Horst Hossain Hossam Hou Hove Howard Hsi Hsia 
@@ -101,8 +101,8 @@ my @SINGLE_WORDS = qw(
   Jack Jackson Jacob Jacques Jamal James Jan Jana Jansa Javed Jay 
   Jayakumar Jean Jeffrey Jen Jeng Jesse Jesus Jett Jhon Ji Jia 
   Jiahong Jiang Jin Jing Jinlong Jiong Joao Joel John Jonas Jones 
-  Jordan Jorna Jorunn Joseph Jost Jourdain Joy Joyce Juan Julien 
-  Julius Jung Jurek Just 
+  Jordan Jorna Jorunn Joseph Josselin Jost Jourdain Joy Joyce Juan Jul 
+  Julien Julius Jung Jurek Just 
 
   Kaare Kahraman Kaligis Kalman Kalpana Kalyanasundaram Kam Kamal Kamel 
   Kamil Kamto Kang Kannan Kant Karel Karim Karol Kartal Kat Kate 
@@ -116,7 +116,7 @@ my @SINGLE_WORDS = qw(
   Lauge Laurence Lauri Laurie Lavi Lawrence Lazar Lazarus Lee Leeuw 
   Lei Leigh Lena Lenka Leo Leon Leonard Leone Leonid Leopold Leroy 
   Leslie Lester Letizia Lev Levan Levy Lew Lewis Liang Liem Lila 
-  Lilli Lilly Lin Lindsay Line Ling Linn Lionel Lis Lise Liss Liu 
+  Lilli Lilly Lin Lindsay Lindsey Line Ling Linn Lionel Lis Lise Liss Liu 
   Liviu Lloyd Lo Lockwood Long Lorentz Lorenzo Loretta Lotte Lou 
   Louis Louise Louk Lourdes Lu Lubis Lucas Luis Luisa Luiz Luke Lulu 
   Lung Luo Lutfi Lutz Lynn 
@@ -129,9 +129,9 @@ my @SINGLE_WORDS = qw(
   Marshall Marta Marti Martin Martins Marty Martyna Marvin Mas Masood 
   Mate Mateo Mather Mathew Mathieu Matko Matthias Mauri Maurice 
   Maurits Mauro Maury May Maya Mayer Mayo Mazhar Mee Meer Mehedi Mehta Mei 
-  Meiling Meir Meka Mel Melka Menachem Meng Meral Meredith Mersin 
+  Meiling Meir Meka Mel Melka Menachem Meng Meral Mercedes Meredith Mersin 
   Meta Mete Metin Meyer Miao Michael Michailov Michalek Michaux 
-  Michel Michele Miguel Mihai Mik Mika Milo Milos Milton Min Mina 
+  Michel Michele Miguel Mihai Mik Mika Miklós Milo Milos Milton Min Mina 
   Ming-Hsuan Minh Miran Miranda Miro Miroslaw Mirza Misra Mitchell 
   Mitko Mitra Mo Modi Moen Mohamed Mohammad Mohammed Mohan Mohd 
   Mohiuddin Mohsen Moon Mora Moran Morgan Morgen Morris Morten Morton 
@@ -141,7 +141,8 @@ my @SINGLE_WORDS = qw(
   Nabil Nadar Nader Nagy Naidu Nail Naki Nan Naran Narayan Narayanan 
   Narendra Natarajan Nathan Nazar Neil Neill Nell Nelson Neville Ni 
   Nicholas Nick Nico Nicolai Nicolas Nicole Nihal Nika Ning Nino 
-  Niranjan Nishat Nishino Nita Nixon No Noble Nobre Noel Nolan Noldy Norman 
+  Niranjan Nishat Nishino Nita Nixon No Noble Nobre Noel Noël
+  Nolan Noldy Norman 
 
   Octavian Oguz Okay Oksana Oktaviandita Oktay Oktem Oland Olcay 
   Olech Olive Oliver Olivier Omar Omer Omran Onder Ong Oren Orhan 
@@ -156,13 +157,13 @@ my @SINGLE_WORDS = qw(
 
   Qasim Qi Qian Qiao Qin Qiu Quentin Quinn
 
-  Rabin Rachel Rafa Rafal Raghavan Ragnar Rahim Rahman Rainer Rajeev 
-  Rajkumar Raju Raleigh Ralph Ram Ramadan Ramakrishnan Ramamurthy Raman 
-  Ramanathan Ramaratnam Ramesh Rami Ran Rana Randall Randy 
+  Rabin Rachel Rae Rafa Rafal Raghavan Ragnar Rahim Rahman Raimundo
+  Rainer Rajeev Rajkumar Raju Raleigh Ralph Ram Ramadan Ramakrishnan 
+  Ramamurthy Raman Ramanathan Ramaratnam Ramesh Rami Ran Rana Randall Randy 
   Ranganathan Rao Rashid Raul Ravi Ravichandran Ray Raymond Razi 
   Razvan Reese Rehman Reiner Reinhardt Reinhold Remy Ren Renard Renaud 
   Rens Renu Reshwadithya Reti Rex Reyes Reza Ria Riad Rian Ricard Rich 
-  Richard Riggs Rita Riva Riza Roald Roar Robb Roberts Rock Roger 
+  Richard Riet Riggs Rita Riva Riza Roald Roar Robb Roberts Rock Roger 
   Roisin Roland Rolland Rom Romaine Roman Romano Romeo Ron Rong Ronke 
   Rony Roos Rosa Rosalba Rosales Rosario Rose Rosetta Rosi Ross Roy 
   Ruben Rudolph Ruggiero Ruiz Rune Russ Russell Ryan 
@@ -170,7 +171,7 @@ my @SINGLE_WORDS = qw(
   Sa Saad Sabine Sabri Sadashiv Sadek Sadi Saeed Safak Safari Sai 
   Said Saket Sakthivel Salah Saleem Saleh Salem Salih Salim Salman 
   Salvador Salvatore Sameer Samir Samuel Samy San Sandro Sankaran 
-  Sanna Santanu Santoso Sapan Sari Sarp Sastry Satish Sato Satya Sau 
+  Sanna Sanne Santanu Santoso Sapan Sari Sarp Sastry Satish Sato Satya Sau 
   Saul Savas Scott Sedef See Sekhar Selcuk Sen Sencer Serban Serdar 
   Serenella Serif Seth Severin Sevin Seyhan Shacham Shah Shahaf 
   Shaker Shalom Shan Shane Shani Shannon Shaolin Shaomin Sharif 

@@ -274,8 +274,8 @@ my @SINGLE_WORDS = qw(
   Chengdu Chennai Chepelare Chiayi Chicago Chisinau Chojne Chongqing 
   Christchurch Chumphon Cide Cigli Cildir Cimahi Cirebon Civril Claremont 
   Clichy Cluj Coimbatore Coimbra Colmar Comandatuba Copenhagen Corlu 
-  Corum Corvallis Coventry Craiova Cranbrook Csapi Csíkszereda Cuenca 
-  Cuneo Cupertino Curitiba Czestochowa
+  Corrège Corum Corvallis Coventry Craiova Cranbrook Csapi Csíkszereda 
+  Cuenca Cuneo Cupertino Curitiba Czestochowa
 
   Dabrowka Dalaman Dalian Dambron Darmstadt Datca Daytona Deauville 
   Debrecen Decazeville Degirmendere Delft Delhi Denizli Denver
@@ -326,8 +326,8 @@ my @SINGLE_WORDS = qw(
   Kocaeli Kocarli Kolbotn Kolkata Kolobrzeg Konga Kongsberg Konnerud 
   Konya Kópavogur Korfez Kornik Kosice Kostroma Koszalin Kota Koycegiz 
   Köln Kragerø Krakow Kraljevica Krasnodar Kristiansand Kristianstad
-  Krzywanice Kucukbakkalkoy Kudus Kunming Kunshan Kuopio Kusadasi Kutno 
-  Kuzguncuk Küçükçekmece Kütahya Kverndalen Kyoto Kyustendil Køge 
+  Krosno Krzywanice Kucukbakkalkoy Kudus Kunming Kunshan Kuopio Kusadasi 
+  Kutno Kuzguncuk Küçükçekmece Kütahya Kverndalen Kyoto Kyustendil Køge 
   Kølabånn
 
   Lahore Lakselv Lambach Lancaster Landak Langkat Lanzhou Laodikya 
@@ -368,7 +368,7 @@ my @SINGLE_WORDS = qw(
   Peebles Pekanbaru Pelitli Pelotas Pemangkat Penajam Pendik Pensacola
   Pernik Perpignan Persepolis Perth Perula Pervera Pesaro Pescara 
   Petersfield Petrelik Philadelphia Phitsanulok Phoenix Phokai Phuket 
-  Piedimonte Pieksämäki Pijnacker Piraeus Pisa Pisco Pitane Pittsburgh 
+  Piedimonte Pieksämäki Pijnacker Pila Piraeus Pisa Pisco Pitane Pittsburgh 
   Pleven Pliska Plock Plovdiv Plumergat Pohang Poitiers Polokwane Pompeii 
   Pontianak Popovo Portland Porto Portobello Potsdam Poznan Prague 
   Preslav Priboi Primorsko Probolinggo Protaras Przemysl Ptuj Pula 
