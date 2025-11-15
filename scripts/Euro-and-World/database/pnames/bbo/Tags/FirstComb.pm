@@ -315,7 +315,7 @@ my @SINGLE_WORDS = qw(
   Emanuela Emanuele Emanule Emar Emel Emeline Emer Emeric Emi Emiel 
   Emil Emile Emili Emilia Emiliana Emiliano Emilie Emilio Emils Emily 
   Emin Emine Eminella Emir Emira Emma Emmaline Emmanno Emmanuel 
-  Emmanuele Emmanuelle Emmett Emmy Emory Emrah Emre En Ena Encho Enda 
+  Emmanuele Emmanuelle Emmett Emmy Emory Emrah Emre Ena Encho Enda 
   Endel Ender Endras Endre Enea Enes Engbert Enid Enis Enkh-Erdene 
   Enma Enn Ennio Enno Enok Enri Enrica Enrichetta Enrico Enrique 
   Entee Entscho Enver Enwen Enza Enzo Eoin Epko Eralda Eraldo Eram 
@@ -1233,7 +1233,7 @@ my @SINGLE_WORDS = qw(
   Zipi Zipora Zippi Ziqi Ziqian Ziqiao Ziqiu Zirui Zishu Zisu Zita 
   Zitong Ziva Ziwen Zixi Zixuan Ziya Ziyu Zizhuo Zizi Zlata Zlatko 
   Zmagoslav Zoe Zofia Zois Zoltan Zongze Zoraida Zoran Zorana Zorka 
-  Zoya Zoé Zsofi Zsofia Zsolt Zsuzsa Zsuzsanna Zu Zuanpei Zubeida 
+  Zoya Zoé Zsofi Zsofia Zsolt Zsuzsa Zsuzsanna Zuanpei Zubeida 
   Zuhal Zuhra Zumbulka Zuofa Zuqiang Zurab Zuyi Zuzana Zuzanna Zvia 
   Zvika Zvonimir Zvonko Zymantas 
 

@@ -87,6 +87,13 @@ my %LAST_LAST = (
   'SZÉKELY DOBY' => 1
 );
 
+my %DYNASTS = (
+  'jr' => 'Jr.',
+  'sr' => 'Sr.',
+  'ii' => 'II',
+  'iii' => 'III'
+);
+
 
 sub init_pre_inspected
 {
@@ -151,11 +158,18 @@ sub kludge_given_names
 {
   my ($datum, $parts) = @_;
 
-  # Skip _
+  # Skip _ in order not to destroy NAME_LAST etc.
   my $sep = qr/(\d+|[\s\-\+\.\?,:;=&@#*%\$^~"\/\\()<>|\[\]\{\}])/;
 
   my @a = split /::/, $datum;
+
   my $straggler = '';
+  if ($a[0] =~ /^[A-Z]+_[A-Z]+$/)
+  {
+    $straggler = $a[0];
+    shift @a;
+  }
+
   for my $elem (@a)
   {
     my @sub_parts = grep { $_ ne '' } split /$sep/, $elem;
@@ -599,7 +613,7 @@ sub rename_two
 }
 
 
-sub mixed_consistent_cases
+sub mixed_consistent_cases_strict
 {
   my ($units) = @_;
 
@@ -648,6 +662,88 @@ sub plausible_only_upper
 }
 
 
+sub mixed_with_fixable_both
+{
+  my ($units, $list) = @_;
+
+  my $upper_seen = 0;
+  my $lower_seen = 0;
+
+  my @cases;
+  for my $i (0 .. $units->last())
+  {
+
+    my $cat = $units->category($i);
+    my $val = $units->value($i);
+    next if $cat eq 'NAME_DYNAST';
+
+    my $upper = ($val eq uc($val) ? 1 : 0);
+    if ($upper)
+    {
+      if ($cat ne 'NAME_INITIAL')
+      {
+        $upper_seen = 1;
+      }
+    }
+    else
+    {
+      # Lower, then upper, not the other way round.
+      return 0 if $upper_seen;
+      $lower_seen = 1;
+    }
+
+    return 0 if ($cat eq 'NAME_FIRST' && $upper);
+    return 0 if ($cat eq 'NAME_PARTICLE' && ! $upper);
+    return 0 if ($cat eq 'NAME_INITIAL' && ! $upper);
+    return 0 if ($cat eq 'NAME_LAST' && ! $upper);
+    return 0 unless (
+      $cat eq 'NAME_FIRST' || $cat eq 'NAME_PARTICLE' ||
+      $cat eq 'NAME_INITIAL' || $cat eq 'NAME_LAST' || 
+      $cat eq 'NAME_BOTH');
+
+    $cases[$i] = $upper;
+  }
+
+  return 0 unless ($lower_seen && $upper_seen);
+
+  for my $i (0 .. $units->last())
+  {
+    my $cat = $units->category($i);
+    my $val = $units->value($i);
+
+    if ($cat ne 'NAME_BOTH')
+    {
+      push @$list, $cat, $val;
+    }
+    elsif ($cases[$i])
+    {
+      push @$list, 'NAME_LAST', $val;
+    }
+    else
+    {
+      push @$list, 'NAME_FIRST', $val;
+    }
+  }
+
+  return 1;
+}
+
+
+sub look_for_dynast
+{
+  my ($units) = @_;
+
+  my $l = $units->last();
+  return unless ($l > 0);
+  return unless ($units->category(0) =~ /^NAME_/);
+  return unless ($units->category($l) eq 'UNKNOWN');
+  my $val = lc($units->value($l));
+  return unless (exists $DYNASTS{$val});
+
+  $units->reset_unit($l, 'NAME_DYNAST', $DYNASTS{$val});
+}
+
+
 sub print_units
 {
   my ($units, $identifier) = @_;
@@ -678,7 +774,7 @@ sub print_units
 # if ($identifier =~ /\|\|/)
 # if ($cstr =~ / - /)
 # if ($cstr eq 'NAME_FIRST - NAME_FIRST - NAME_LAST')
-if ($#cats > 2)
+if ($#cats == 2)
 {
   print $cstr, "\n";
   for my $v (@values) { print $v, "\n"; } print "\n"; 
@@ -753,6 +849,8 @@ sub study_name
         $units->reset_unit($i, 'NAME_LAST', $units->value($i));
       }
     }
+
+    look_for_dynast($units);
   }
 
   if ($units->last() == 2)
@@ -768,13 +866,21 @@ sub study_name
   }
 
 
-  if (mixed_consistent_cases($units) ||
+  if (mixed_consistent_cases_strict($units) ||
       plausible_only_upper($units))
   {
     for my $i (0 .. $units->last())
     {
       push @$list, $units->category($i), $units->value($i);
     }
+    return 1;
+  }
+
+  if (mixed_with_fixable_both($units, $list))
+  {
+    # Look for mixed cases that are consistent with their categories,
+    # AND strictly from lower to upper.  Then BOTH is fixed according
+    # to its case.
     return 1;
   }
 

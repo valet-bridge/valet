@@ -79,7 +79,7 @@ my @SINGLE_WORDS = qw(
   Gennaro Gentile George Georges Gerard Gerardo Germaine German 
   Ghalib Gheorghe Ghias Ghose Giampaolo Giampietro Gil Gilbert Gilda 
   Giles Gill Gini Giordano Giovanna Giovanni Giuliano Go Godefroy Goksel 
-  Gonca Gopal Gordon Gordy Graca Grace Gracia Gracio Graf Graham 
+  Gonca Gopal Gordon Gordy Graca Graça Grace Gracia Gracio Graf Graham 
   Grant Granville Gray Grazia Greer Gregory Griffith Grigore Gu 
   Gudrun Gui Guido Gul Gulden Guler Gultekin Gunawan Guner Gunes 
   Guney Gunilla Gunn Gunter Gunther Guo Gupta Gur Guray Gursel Guy 
