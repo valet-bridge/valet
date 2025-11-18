@@ -172,11 +172,9 @@ $first1_names->read_file('Manual/first1.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('t');
+# $sublines->consolidate_with('ll');
 # $sublines->print();
 # exit;
-
-# TODO Name//Place
 
 
 my $file = 'db';

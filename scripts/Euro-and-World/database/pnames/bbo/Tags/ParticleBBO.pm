@@ -28,7 +28,7 @@ my @SINGLE_WORDS = qw(
   OP
   'S SAINT SAINTE
   VAN VON
-  'T TER
+  'T TE TER
   UD UL
   ZU
 );

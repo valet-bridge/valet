@@ -91,7 +91,8 @@ my %DYNASTS = (
   'jr' => 'Jr.',
   'sr' => 'Sr.',
   'ii' => 'II',
-  'iii' => 'III'
+  'iii' => 'III',
+  'iv' => 'IV'
 );
 
 
@@ -774,7 +775,8 @@ sub print_units
 # if ($identifier =~ /\|\|/)
 # if ($cstr =~ / - /)
 # if ($cstr eq 'NAME_FIRST - NAME_FIRST - NAME_LAST')
-if ($#cats == 2)
+if ($#cats != 1)
+# if ($#cats == 1)
 {
   print $cstr, "\n";
   for my $v (@values) { print $v, "\n"; } print "\n"; 
@@ -782,7 +784,7 @@ if ($#cats == 2)
   # print $vstr, "\n";
 
   print $identifier;
-  print "-----\n\n";
+  # print "-----\n\n";
 }
 # print "-------------\n\n";
 }
@@ -813,6 +815,13 @@ sub study_name
     elsif (($cat eq '' || $cat eq 'UNKNOWN') && 
         $first1_names->lookup($units->value(0)))
     {
+      $units->reset_unit(0, 'NAME_FIRST', $units->value(0));
+      push @$list, 'NAME_FIRST', $units->value(0);
+      return 1;
+    }
+    elsif ($cat eq 'NAME_BOTH')
+    {
+      # This only works due to heavy curation.
       $units->reset_unit(0, 'NAME_FIRST', $units->value(0));
       push @$list, 'NAME_FIRST', $units->value(0);
       return 1;
@@ -925,6 +934,7 @@ sub pre_parse
   my ($entry, $whole_names, $whole_system, $first1_names, $last3_names, 
     $identifier, $histo, $chain_stats) = @_;
 
+  # TODO: Must not be a known_names
   my @components = split /\|\|/, $entry->{TEXT};
   return 0 unless $#components == 1;
 
