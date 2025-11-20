@@ -137,7 +137,8 @@ my %PRE_INSPECTED_LINES =
   'PRIVATE' => 'Manual/privates.txt',
   'PROFILE' => 'Manual/noprofiles.txt',
   'SYSTEM' => 'Manual/system_lines.txt',
-  'UNDO' => 'Manual/noundos.txt'
+  'UNDO' => 'Manual/noundos.txt',
+  'FINAL' => 'Manual/final.txt'
 );
 
 # Just in order of frequency.
@@ -172,7 +173,7 @@ $first1_names->read_file('Manual/first1.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('ll');
+# $sublines->consolidate_with('df1');
 # $sublines->print();
 # exit;
 
@@ -193,13 +194,14 @@ my %cat_hist;
 for my $paragraph (@paragraphs)
 {
 # if ($paragraph->{HANDLE} eq 'STOXI11')
-if ($paragraph->{HANDLE} =~ /FALLIGAN/)
+if ($paragraph->{HANDLE} =~ /AUGUSTINHA/)
 {
   # print "HERE\n";
 }
   $handle_counts{$paragraph->{HANDLE}}++;
   Inspect::inspect_paragraph($whole_names, $whole_system, 
-    $first1_names, $last3_names, $paragraph, \@PRE_INSPECTED_ORDER, 
+    $first1_names, $last3_names,
+    $paragraph, \@PRE_INSPECTED_ORDER, 
     \%handle_counts, $histo, \%chain_stats);
 
   # print_paragraph($paragraph);
@@ -261,11 +263,13 @@ if ($paragraph->{HANDLE} =~ /FALLIGAN/)
 
     my @name_list;
     if (! Inspect::study_name($battery[0], $whole_names, 
-      $first1_names, $last3_names, 1, \@name_list, $identifier, $histo) ||
+      $first1_names, $last3_names,
+      1, \@name_list, $identifier, $histo) ||
       $#name_list < 0)
     {
       # warn "$identifier: Should be a name, $#name_list";
       print "$identifier: Should be a name, $#name_list\n";
+      print_list(\@name_list, $identifier);
       next;
     }
 

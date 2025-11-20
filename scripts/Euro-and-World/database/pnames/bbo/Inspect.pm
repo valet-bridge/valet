@@ -775,8 +775,59 @@ sub print_units
 # if ($identifier =~ /\|\|/)
 # if ($cstr =~ / - /)
 # if ($cstr eq 'NAME_FIRST - NAME_FIRST - NAME_LAST')
-if ($#cats != 1)
-# if ($#cats == 1)
+# if ($#cats != 1)
+if ($#cats == 1)
+# if ($#cats == 1 && $cstr eq 'NAME_BOTH - NAME_FIRST')
+{
+  print $cstr, "\n";
+  for my $v (@values) { print $v, "\n"; } print "\n"; 
+
+  # print $vstr, "\n";
+
+  print $identifier;
+  # print "-----\n\n";
+}
+# print "-------------\n\n";
+}
+
+
+sub print_list
+{
+  my ($list, $identifier) = @_;
+
+  my $n = $#$list;
+  return unless $n >= 0;
+
+  my (@cats, @values);
+
+  for (my $i = 0; $i <= $n; $i += 2)
+  {
+    my $cat = $list->[$i];
+    $cat = "''" unless $cat;
+
+    my $val = $list->[$i+1];
+    $val = "''" unless $val;
+
+    push @cats, $cat;
+    push @values, $val;
+  }
+
+# print $identifier;
+
+  my $cstr = join ' - ', @cats;
+  my $vstr = join ' - ', @values;
+
+# if ($cstr eq "''")
+# if ($cstr ne "''")
+# if (0)
+# if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /^UNKNOWN/)
+# if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /UNKNOWN$/)
+# if ($identifier =~ /\|\|/)
+# if ($cstr =~ / - /)
+# if ($cstr eq 'NAME_FIRST - NAME_FIRST - NAME_LAST')
+# if ($#cats != 1)
+if ($#cats == 1)
+# if ($#cats == 1 && $cstr eq 'NAME_BOTH - NAME_FIRST')
 {
   print $cstr, "\n";
   for my $v (@values) { print $v, "\n"; } print "\n"; 
@@ -792,7 +843,8 @@ if ($#cats != 1)
 
 sub study_name
 {
-  my ($units, $whole_names, $first1_names, $last3_names, 
+  my ($units, $whole_names, 
+    $first1_names, $last3_names,
     $known_name_flag, $list, $identifier, $histo) = @_;
 
   if ($units->last() == 0)
@@ -894,9 +946,14 @@ sub study_name
   }
 
   # if ($debug_study_name && $units->last() == 0)
-  if ($debug_study_name && $units->last() >= 0)
+  # if ($debug_study_name && $units->last() >= 0)
+  # {
+    # print_units($units, $identifier);
+  # }
+
+  for my $i (0 .. $units->last())
   {
-    print_units($units, $identifier);
+    push @$list, $units->category($i), $units->value($i);
   }
 
   return 0;
@@ -905,8 +962,8 @@ sub study_name
 
 sub study_text_as_name
 {
-  my ($whole_names, $text, $first1_names, $last3_names, $list,
-    $identifier, $histo, $chain_stats) = @_;
+  my ($whole_names, $text, $first1_names, $last3_names,
+    $list, $identifier, $histo, $chain_stats) = @_;
 
   my @battery;
   $battery[0] = Units->new();
@@ -916,7 +973,8 @@ sub study_text_as_name
 
   my @clist;
 
-  if (study_name($battery[0], $whole_names, $first1_names, $last3_names, 
+  if (study_name($battery[0], $whole_names, 
+      $first1_names, $last3_names,
       1, \@clist, $identifier, $histo))
   {
     push @$list, @clist;
@@ -924,6 +982,12 @@ sub study_text_as_name
   }
   else
   {
+    push @$list, @clist;
+    
+    if ($debug_study_name)
+    {
+      print_list(\@clist, $identifier);
+    }
     return 0;
   }
 }
@@ -999,9 +1063,32 @@ sub pre_parse
 }
 
 
+sub list_looks_final
+{
+  my $list = shift;
+  my $n = $#$list;
+  return 0 if $n < 0;
+
+  for (my $i = 0; $i <= $n; $i += 2)
+  {
+    my $elem = $list->[$i];
+    if ($elem ne 'NAME_FIRST' &&
+        $elem ne' NAME_INITIAL' &&
+        $elem ne' NAME_PARTICLE' &&
+        $elem ne' NAME_LAST' &&
+        $elem ne' NAME_DYNAST')
+    {
+      return 0;
+    }
+  }
+  return 1;
+}
+
+
 sub pre_inspect
 {
-  my ($entry, $whole_names, $whole_system, $first1_names, $last3_names, 
+  my ($entry, $whole_names, $whole_system, 
+    $first1_names, $last3_names,
     $handle, $hcount, $eno, $order, $identifier, 
     $histo, $chain_stats) = @_;
 
@@ -1036,12 +1123,29 @@ sub pre_inspect
 
         my @list;
         if (study_text_as_name($whole_names, $entry->{TEXT}, 
-          $first1_names, $last3_names, 
+          $first1_names, $last3_names,
           \@list, $identifier, $histo, $chain_stats))
         {
           $entry->{CATEGORY} = 'LIST';
           @{$entry->{LIST}} = @list;
           return 1;
+        }
+        elsif ($PRE_INSPECTED{FINAL}->lookup($handle, $hcount, $eno))
+        {
+          if (list_looks_final(\@list))
+          {
+            $entry->{CATEGORY} = 'LIST';
+            @{$entry->{LIST}} = @list;
+            return 1;
+          }
+          else
+          {
+            warn "Should be FINAL?";
+            warn $identifier;
+
+            $entry->{CATEGORY} = $tag;
+            $entry->{VALUE} = $entry->{TEXT};
+          }
         }
         else
         {
@@ -1130,7 +1234,8 @@ sub inspect_for_tag
 
 sub inspect_paragraph
 {
-  my ($whole_names, $whole_system, $first1_names, $last3_names, 
+  my ($whole_names, $whole_system, 
+    $first1_names, $last3_names,
     $paragraph, $pre_inspect_order, $handle_counts, 
     $histo, $chain_stats) = @_;
 
