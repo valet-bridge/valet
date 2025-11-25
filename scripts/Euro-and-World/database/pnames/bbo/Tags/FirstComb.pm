@@ -481,7 +481,7 @@ my @SINGLE_WORDS = qw(
   Ileana Ilene Ilgaz Ilham Ilia Ilian Ilias Iliga Ilir Iliya Ilkay 
   Ilker Ilkka Ilko Illy Ilmar Ilona Ilpo Ilse Ilse-Betina Ilsub Ilya 
   Ilyas Ilze Imad Imam Iman Imants Imelda Imma Imogen Imre Imtiaz Ina 
-  Inaki Inas Inci Inconnu Inda Indah Inderjit India Indika Indira 
+  Inaki Inas Inci Inconnu Inda Indah Inderjit Indika Indira 
   Indra Indranath Indre Indrek Ine Ineke Ines Inez Inga Ingar Inge 
   Inge-Margrethe Ingeborg Ingebrigt Ingela Ingemar Inger Ingi Ingjerd 
   Ingmar Ingmund Ingo Ingrid Ingu Ingunn Ingvald Ingvar Ingvild 

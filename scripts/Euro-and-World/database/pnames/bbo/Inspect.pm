@@ -14,7 +14,7 @@ use Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT = qw($sublines $both_last 
   inspect_paragraph lines_to_list list_to_units 
-  list_to_units_no_punctuation study_word study_name print_units);
+  list_to_units_no_punctuation study_word study_name);
 
 use lib '../../bbo';
 use Util;
@@ -745,52 +745,6 @@ sub look_for_dynast
 }
 
 
-sub print_units
-{
-  my ($units, $identifier) = @_;
-
-  my (@cats, @values);
-  for my $i (0 .. $units->last())
-  {
-    my $cat = $units->category($i);
-    $cat = "''" unless $cat;
-
-    my $val = $units->value($i);
-    $val = "''" unless $val;
-
-    push @cats, $cat;
-    push @values, $val;
-  }
-
-# print $identifier;
-
-  my $cstr = join ' - ', @cats;
-  my $vstr = join ' - ', @values;
-
-# if ($cstr eq "''")
-# if ($cstr ne "''")
-# if (0)
-# if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /^UNKNOWN/)
-# if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /UNKNOWN$/)
-# if ($identifier =~ /\|\|/)
-# if ($cstr =~ / - /)
-# if ($cstr eq 'NAME_FIRST - NAME_FIRST - NAME_LAST')
-# if ($#cats != 1)
-if ($#cats == 1)
-# if ($#cats == 1 && $cstr eq 'NAME_BOTH - NAME_FIRST')
-{
-  print $cstr, "\n";
-  for my $v (@values) { print $v, "\n"; } print "\n"; 
-
-  # print $vstr, "\n";
-
-  print $identifier;
-  # print "-----\n\n";
-}
-# print "-------------\n\n";
-}
-
-
 sub print_list
 {
   my ($list, $identifier) = @_;
@@ -827,7 +781,9 @@ sub print_list
 # if ($cstr eq 'NAME_FIRST - NAME_FIRST - NAME_LAST')
 # if ($#cats != 1)
 if ($#cats == 1)
-# if ($#cats == 1 && $cstr eq 'NAME_BOTH - NAME_FIRST')
+# if ($#cats == 1 && $cstr eq 'UNKNOWN - NAME_FIRST')
+# if ($#cats == 1 && $cstr eq 'NAME_BOTH - UNKNOWN' ||
+                   # $cstr eq 'UNKNOWN - NAME_BOTH')
 {
   print $cstr, "\n";
   for my $v (@values) { print $v, "\n"; } print "\n"; 
@@ -945,12 +901,6 @@ sub study_name
     return 1;
   }
 
-  # if ($debug_study_name && $units->last() == 0)
-  # if ($debug_study_name && $units->last() >= 0)
-  # {
-    # print_units($units, $identifier);
-  # }
-
   for my $i (0 .. $units->last())
   {
     push @$list, $units->category($i), $units->value($i);
@@ -983,11 +933,6 @@ sub study_text_as_name
   else
   {
     push @$list, @clist;
-    
-    if ($debug_study_name)
-    {
-      print_list(\@clist, $identifier);
-    }
     return 0;
   }
 }
@@ -996,7 +941,7 @@ sub study_text_as_name
 sub pre_parse
 {
   my ($entry, $whole_names, $whole_system, $first1_names, $last3_names, 
-    $identifier, $histo, $chain_stats) = @_;
+    $handle, $hcount, $eno, $identifier, $histo, $chain_stats) = @_;
 
   # TODO: Must not be a known_names
   my @components = split /\|\|/, $entry->{TEXT};
@@ -1049,11 +994,15 @@ sub pre_parse
       push @list, @clist;
       next;
     }
-
-    # This would be another place to debug.
-    if ($debug_pre_parse)
+    elsif ($PRE_INSPECTED{FINAL}->lookup($handle, $hcount, $eno) &&
+        list_looks_final(\@clist))
     {
-      print "$entry->{TEXT}\n$comp MISS\n---\n\n";
+      push @list, @clist;
+      next;
+    }
+    elsif ($debug_study_name)
+    {
+      print_list(\@clist, $identifier);
     }
   }
 
@@ -1073,10 +1022,11 @@ sub list_looks_final
   {
     my $elem = $list->[$i];
     if ($elem ne 'NAME_FIRST' &&
-        $elem ne' NAME_INITIAL' &&
-        $elem ne' NAME_PARTICLE' &&
-        $elem ne' NAME_LAST' &&
-        $elem ne' NAME_DYNAST')
+        $elem ne 'NAME_INITIAL' &&
+        $elem ne 'NAME_NICK' &&
+        $elem ne 'NAME_PARTICLE' &&
+        $elem ne 'NAME_LAST' &&
+        $elem ne 'NAME_DYNAST')
     {
       return 0;
     }
@@ -1121,6 +1071,12 @@ sub pre_inspect
         my $identifier = "YYY $handle, $hcount, $eno\n" .
           $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
 
+if ($entry->{TEXT} =~ /\|\|/)
+{
+  print "FENCE\n";
+  print $identifier;
+}
+
         my @list;
         if (study_text_as_name($whole_names, $entry->{TEXT}, 
           $first1_names, $last3_names,
@@ -1142,6 +1098,7 @@ sub pre_inspect
           {
             warn "Should be FINAL?";
             warn $identifier;
+            print_list(\@list, $identifier);
 
             $entry->{CATEGORY} = $tag;
             $entry->{VALUE} = $entry->{TEXT};
@@ -1152,10 +1109,13 @@ sub pre_inspect
           # TODO
           $entry->{CATEGORY} = $tag;
           $entry->{VALUE} = $entry->{TEXT};
-# if ($entry->{TEXT} =~/ /)
-# {
-# print $identifier;
-# }
+
+          if ($debug_study_name)
+          {
+            $identifier = "YYY $handle, $hcount, $eno\n" .
+              $entry->{TEXT} . "\n" .  $entry->{TEXT} . "\n\n";
+            print_list(\@list, $identifier);
+          }
         }
       }
       else
@@ -1176,7 +1136,9 @@ sub pre_inspect
   if ($entry->{TEXT} =~ /\|\|/)
   {
     return 1 if pre_parse($entry, $whole_names, $whole_system, 
-      $first1_names, $last3_names, $identifier, $histo, $chain_stats);
+      $first1_names, $last3_names, 
+      $handle, $hcount, $eno,
+      $identifier, $histo, $chain_stats);
   }
 
   return 0;

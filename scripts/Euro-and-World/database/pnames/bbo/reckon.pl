@@ -173,7 +173,7 @@ $first1_names->read_file('Manual/first1.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('df1');
+# $sublines->consolidate_with('tx');
 # $sublines->print();
 # exit;
 
@@ -194,7 +194,7 @@ my %cat_hist;
 for my $paragraph (@paragraphs)
 {
 # if ($paragraph->{HANDLE} eq 'STOXI11')
-if ($paragraph->{HANDLE} =~ /AUGUSTINHA/)
+if ($paragraph->{HANDLE} =~ /AQUARIUS17/)
 {
   # print "HERE\n";
 }
@@ -386,7 +386,7 @@ sub register_categories
         # print $identifier;
       # }
       if ($entry->{LIST}[$i] eq 'NAMELIKE' ||
-          $entry->{LIST}[$i] eq 'NAME_BOTH' ||
+          # $entry->{LIST}[$i] eq 'NAME_BOTH' ||
           $entry->{LIST}[$i] eq 'UNKNOWN')
       {
         $flag = 1;
@@ -401,14 +401,15 @@ sub register_categories
       # print $identifier;
     # }
     if ($entry->{CATEGORY} eq 'NAMELIKE' ||
-        $entry->{CATEGORY} eq 'NAME_BOTH' ||
+        # $entry->{CATEGORY} eq 'NAME_BOTH' ||
         $entry->{CATEGORY} eq 'UNKNOWN')
     {
       $flag = 1;
     }
   }
 
-  if ($flag && 0)
+  # if ($flag && 0)
+  if ($flag)
   {
     # print $identifier;
 

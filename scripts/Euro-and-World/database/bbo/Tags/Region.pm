@@ -75,6 +75,7 @@ my @MULTI_WORDS =
   'Kepulauan Seribu',
   'Kayong Utara',
   'Khon Kaen',
+  'Koh Samui',
   'Kotawaringin Timur',
   'Kubu Raya',
   'Kutai Kartanegara',
@@ -292,6 +293,7 @@ my @SINGLE_WORDS = qw(
   Huabei Hubei Hunan
 
   Iberia Idaho Illimani Illinois Indiana Innlandet Iowa Isère Iskele
+  Istria
 
   Jalisco Java Jämtland Jharkhand Jiangsu Jiangxi Jilin
 
