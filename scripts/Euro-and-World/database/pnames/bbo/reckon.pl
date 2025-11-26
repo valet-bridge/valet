@@ -197,7 +197,7 @@ my %cat_hist;
 for my $paragraph (@paragraphs)
 {
 # if ($paragraph->{HANDLE} eq 'STOXI11')
-if ($paragraph->{HANDLE} =~ /MSTF45/)
+if ($paragraph->{HANDLE} eq 'NEWKID0')
 {
   # print "HERE\n";
 }
@@ -209,23 +209,20 @@ if ($paragraph->{HANDLE} =~ /MSTF45/)
 
   # print_paragraph($paragraph);
 
+  my $handle = $paragraph->{HANDLE};
+  my $hcount = $handle_counts{$paragraph->{HANDLE}};
   my $lno = -1;
+
+  print "HANDLE $handle\n";
+  print "INSTANCE $hcount\n";
+
   for my $entry (@{$paragraph->{LINES}})
   {
     $lno++;
 
-    my $handle = $paragraph->{HANDLE};
-    my $hcount = $handle_counts{$paragraph->{HANDLE}};
-
     my $identifier = "YYY $handle, $hcount, $lno\n" .
       $entry->{TEXT} . "\n" .
       $entry->{TEXT} . "\n\n";
-
-    if ($identifier =~ /0REINE57, 1/)
-    {
-      # print "HERE\n";
-    }
-
 
     # Heavily curated.
     if ($entry->{CATEGORY} ne 'OPEN')
@@ -259,11 +256,6 @@ if ($paragraph->{HANDLE} =~ /MSTF45/)
     # list_to_units($whole_system, \@UNIT_TAGS, \@list, $battery[0],
       # $entry->{TEXT}, $histo, \%chain_stats);
 
-    # if ($entry->{TEXT} =~ /Plunkett/)
-    # {
-      # print "HERE\n";
-    # }
-
     my @name_list;
     if (! Inspect::study_name($battery[0], $whole_names, 
       $first1_names, $last3_names,
@@ -280,6 +272,8 @@ if ($paragraph->{HANDLE} =~ /MSTF45/)
     @{$entry->{LIST}} = @name_list;
     register_categories($entry, $identifier, \%cat_hist);
   }
+
+  print "\n";
 }
 
 print "\n\n";
@@ -372,7 +366,12 @@ sub register_categories
   {
     for (my $i = 0; $i <= $#{$entry->{LIST}}; $i += 2)
     {
-      $hist->{$entry->{LIST}[$i]}++;
+      my $cat = $entry->{LIST}[$i];
+      my $val = $entry->{LIST}[$i+1];
+      print "$cat $val\n";
+
+      $hist->{$cat}++;
+
       if ($entry->{LIST}[$i] eq 'INT_SMALL' ||
           $entry->{LIST}[$i] eq 'NAMELIKE' ||
           $entry->{LIST}[$i] eq 'UNKNOWN')
@@ -383,7 +382,12 @@ sub register_categories
   }
   else
   {
-    $hist->{$entry->{CATEGORY}}++;
+    my $cat = $entry->{CATEGORY};
+    my $val = $entry->{VALUE} || $entry->{TEXT};
+    print "$cat $val\n";
+
+    $hist->{$cat}++;
+
     if ($entry->{CATEGORY} eq 'INT_SMALL' ||
         $entry->{CATEGORY} eq 'NAMELIKE' ||
         $entry->{CATEGORY} eq 'UNKNOWN')

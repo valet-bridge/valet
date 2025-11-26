@@ -36,11 +36,11 @@ YEAR_BIRTH              18
 --------------------------
                    2318844
 
-- Look for particles (ben, others: Right or not?)
-- Capitalize and sort lists in Manual
 - All categories and values set (properly capitalized)
-- Player numbers (e.g. Poland) find by regex
-- In sublines, look for cases where nothing actually gets modified.
+- Look for particles (ben, others: Right or not?)
+- Player numbers (e.g. Poland) and years find by regex
+  - sub_lines
+  - Actual text
 - No inconsistencies
 
 Consolidate

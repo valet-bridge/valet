@@ -462,6 +462,22 @@ sub study_word
   }
 }
 
+sub normalize_first
+{
+  my ($str) = @_;
+  $str =~ s/^(\p{L})(.*)$/\u$1\L$2/;
+  return $str;
+}
+
+
+sub normalize_last
+{
+  my ($str) = @_;
+  $str = uc($str);
+  $str =~ s/^MC/Mc/;
+  return $str;
+}
+
 
 sub study_name_two
 {
@@ -469,27 +485,41 @@ sub study_name_two
 
   # Simple screen for names.
 
-  if ($cat1 eq 'NAME_FIRST' && 
-      ($cat2 eq 'NAME_FIRST' || $cat2 eq 'NAME_LAST'))
+  if ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_FIRST')
   {
-    push @$list, $cat1, $word1, $cat2, $word2;
+    push @$list, 
+      $cat1, normalize_first($word1), 
+      $cat2, normalize_first($word2);
+    return 1;
+  }
+  elsif ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_LAST')
+  {
+    push @$list, 
+      $cat1, normalize_first($word1), 
+      $cat2, normalize_last($word2);
     return 1;
   }
   elsif ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_INITIAL')
   {
     my $u2 = uc($word2) . '.';
-    push @$list, $cat1, $word1, $cat2, $u2;
+    push @$list, 
+      $cat1, normalize_first($word1), 
+      $cat2, $u2;
     return 1;
   }
   elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_LAST')
   {
     my $u1 = uc($word1) . '.';
-    push @$list, $cat1, $u1, $cat2, $word2;
+    push @$list, 
+      $cat1, $u1, 
+      $cat2, normalize_last($word2);
     return 1;
   }
   elsif ($cat1 eq 'NAME_PARTICLE' && $cat2 eq 'NAME_LAST')
   {
-    push @$list, $cat1, $word1, $cat2, $word2;
+    push @$list, 
+      $cat1, $word1, 
+      $cat2, normalize_last($word2);
     return 1;
   }
   elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_INITIAL')
@@ -515,7 +545,10 @@ sub study_name_three
   {
     my $u2 = uc($word2) . '.';
     my $u3 = uc($word3) . '.';
-    push @$list, $cat1, $word1, $cat2, $u2, $cat3, $u3;
+    push @$list, 
+      $cat1, normalize_first($word1), 
+      $cat2, $u2, 
+      $cat3, $u3;
     return 1;
   }
   elsif ($cat1 eq 'NAME_FIRST' && 
@@ -523,7 +556,10 @@ sub study_name_three
       $cat3 eq 'NAME_LAST')
   {
     my $u3 = uc($word3) . '.';
-    push @$list, $cat1, $word1, $cat2, $word2, $cat3, $u3;
+    push @$list, 
+      $cat1, normalize_first($word1), 
+      $cat2, normalize_first($word2), 
+      $cat3, $u3;
     return 1;
   }
 
@@ -545,42 +581,42 @@ sub rename_two
   if (($cat0 eq '' || $cat0 eq 'UNKNOWN') && $first1_names->lookup($val0))
   {
     $cat0 = 'NAME_FIRST';
-    $units->reset_unit(0, $cat0, $val0);
+    $units->reset_unit(0, 'NAME_FIRST', $first1_names->fix($val0));
   }
 
   if (($cat1 eq '' || $cat1 eq 'UNKNOWN') && $last3_names->lookup($val1))
   {
     $cat1 = 'NAME_LAST';
-    $units->reset_unit(1, $cat1, $val1);
+    $units->reset_unit(1, 'NAME_LAST', $last3_names->fix($val1));
   }
 
   if ($cat0 eq 'NAME_BOTH' && $cat1 eq 'NAME_LAST')
   {
     $cat0 = 'NAME_FIRST';
-    $units->reset_unit(0, $cat0, $val0);
+    $units->reset_unit(0, 'NAME_FIRST', normalize_first($val0));
   }
   elsif ($cat0 eq 'NAME_BOTH' && ! $upper0 && $cat1 eq 'NAME_INITIAL')
   {
     $cat0 = 'NAME_FIRST';
-    $units->reset_unit(0, $cat0, $val0);
+    $units->reset_unit(0, 'NAME_FIRST', normalize_first($val0));
   }
   elsif ($cat0 eq 'NAME_FIRST' && $cat1 eq 'NAME_BOTH')
   {
     $cat1 = 'NAME_LAST';
-    $units->reset_unit(1, $cat1, $val1);
+    $units->reset_unit(1, 'NAME_LAST', normalize_last($val1));
   }
   elsif ($cat0 eq 'NAME_INITIAL' && $upper1 && $cat1 eq 'NAME_BOTH')
   {
     $cat1 = 'NAME_LAST';
-    $units->reset_unit(1, $cat1, $val1);
+    $units->reset_unit(1, 'NAME_LAST', normalize_last($val1));
   }
   elsif ($cat0 eq 'NAME_BOTH' && $cat1 eq 'NAME_FIRST' &&
       ! $upper0 && ! $upper1)
   {
     $cat0 = 'NAME_FIRST';
     $cat1 = 'NAME_FIRST';
-    $units->reset_unit(0, $cat0, $val0);
-    $units->reset_unit(1, $cat1, $val1);
+    $units->reset_unit(0, 'NAME_FIRST', normalize_first($val0));
+    $units->reset_unit(1, 'NAME_FIRST', normalize_first($val1));
   }
 }
 
@@ -685,15 +721,26 @@ sub mixed_with_fixable_both
 
     if ($cat ne 'NAME_BOTH')
     {
-      push @$list, $cat, $val;
+      if ($cat eq 'NAME_FIRST')
+      {
+        push @$list, $cat, normalize_first($val);
+      }
+      elsif ($cat eq 'NAME_DYNAST')
+      {
+        push @$list, $cat, $val;
+      }
+      else
+      {
+        push @$list, $cat, normalize_last($val);
+      }
     }
     elsif ($cases[$i])
     {
-      push @$list, 'NAME_LAST', $val;
+      push @$list, 'NAME_LAST', normalize_last($val);
     }
     else
     {
-      push @$list, 'NAME_FIRST', $val;
+      push @$list, 'NAME_FIRST', normalize_first($val);
     }
   }
 
@@ -763,32 +810,37 @@ sub study_name
   if ($units->last() == 0)
   {
     my $cat = $units->category(0);
-    if ($cat eq 'NAME_FIRST' ||
-        $cat eq 'NAME_INITIAL' ||
-        $cat eq 'NAME_LAST')
+    my $val = $units->value(0);
+
+    if ($cat eq 'NAME_FIRST')
     {
-      push @$list, $cat, $units->value(0);
+      push @$list, $cat, normalize_first($val);
+      return 1;
+    }
+    elsif ($cat eq 'NAME_INITIAL' || $cat eq 'NAME_LAST')
+    {
+      push @$list, $cat, normalize_last($val);
       return 1;
     }
     elsif (($cat eq '' || $cat eq 'UNKNOWN') && 
-        $last3_names->lookup($units->value(0)))
+        $last3_names->lookup($val))
     {
-      $units->reset_unit(0, 'NAME_LAST', $units->value(0));
-      push @$list, 'NAME_LAST', $units->value(0);
+      $units->reset_unit(0, 'NAME_LAST', $val);
+      push @$list, 'NAME_LAST', $last3_names->fix($val);
       return 1;
     }
     elsif (($cat eq '' || $cat eq 'UNKNOWN') && 
-        $first1_names->lookup($units->value(0)))
+        $first1_names->lookup($val))
     {
-      $units->reset_unit(0, 'NAME_FIRST', $units->value(0));
-      push @$list, 'NAME_FIRST', $units->value(0);
+      $units->reset_unit(0, 'NAME_FIRST', $val);
+      push @$list, 'NAME_FIRST', $first1_names->fix($val);
       return 1;
     }
     elsif ($cat eq 'NAME_BOTH')
     {
       # This only works due to heavy curation.
-      $units->reset_unit(0, 'NAME_FIRST', $units->value(0));
-      push @$list, 'NAME_FIRST', $units->value(0);
+      $units->reset_unit(0, 'NAME_FIRST', $val);
+      push @$list, 'NAME_FIRST', normalize_first($val);
       return 1;
     }
   }
@@ -813,14 +865,15 @@ sub study_name
     {
       my $cat = $units->category($i);
       next unless ($cat eq '' || $cat eq 'UNKNOWN');
+      my $val = $units->value($i);
 
-      if ($first1_names->lookup($units->value($i)))
+      if ($first1_names->lookup($val))
       {
-        $units->reset_unit($i, 'NAME_FIRST', $units->value($i));
+        $units->reset_unit($i, 'NAME_FIRST', $first1_names->fix($val));
       }
-      elsif ($last3_names->lookup($units->value($i)))
+      elsif ($last3_names->lookup($val))
       {
-        $units->reset_unit($i, 'NAME_LAST', $units->value($i));
+        $units->reset_unit($i, 'NAME_LAST', $last3_names->fix($val));
       }
     }
 
@@ -1087,6 +1140,7 @@ if ($entry->{TEXT} =~ /\|\|/)
   if ($both_last->lookup($entry->{TEXT}))
   {
     $entry->{CATEGORY} = 'NAME_LAST';
+    $entry->{VALUE} = normalize_last($entry->{TEXT});
     return 1;
   }
 
@@ -1272,6 +1326,19 @@ sub inspect_paragraph
         if ($cat eq 'NAME_BOTH' && $both_first->lookup($entry->{TEXT}))
         {
           $entry->{CATEGORY} = 'NAME_FIRST';
+          $entry->{VALUE} = $both_first->fix($entry->{TEXT});
+          next;
+        }
+        elsif ($cat eq 'NAME_FIRST')
+        {
+          $entry->{CATEGORY} = $cat;
+          $entry->{VALUE} = normalize_first($entry->{TEXT});
+          next;
+        }
+        elsif ($cat eq 'NAME_LAST')
+        {
+          $entry->{CATEGORY} = $cat;
+          $entry->{VALUE} = normalize_last($entry->{TEXT});
           next;
         }
         else

@@ -30,7 +30,7 @@ sub read_file
   {
     $sno++;
     chomp $line;
-    $self->{LIST}{lc($line)} = 1;
+    $self->{LIST}{lc($line)} = $line;
   }
   close $fh;
 }
@@ -41,6 +41,14 @@ sub lookup
   my ($self, $word) = @_;
 
   return exists $self->{LIST}{lc($word)};
+}
+
+
+sub fix
+{
+  my ($self, $word) = @_;
+
+  return $self->{LIST}{lc($word)};
 }
 
 1;
