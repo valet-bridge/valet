@@ -12,7 +12,7 @@ use feature 'unicode_strings';
 use Exporter;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw($sublines $both_last 
+our @EXPORT = qw($sublines $both_first $both_last 
   inspect_paragraph lines_to_list list_to_units 
   list_to_units_no_punctuation study_word study_name);
 
@@ -24,7 +24,7 @@ use Butil;
 use lib './Email';
 use Email::Email;
 
-our ($sublines, $both_last);
+our ($sublines, $both_first, $both_last);
 my %PRE_INSPECTED;
 
 my $debug_study_name = 1;
@@ -70,21 +70,6 @@ my %PUNCTUATION =
   ']' => 'SQUARE_RIGHT',
   '{' => 'CURLY_LEFT',
   '}' => 'CURLY_RIGHT',
-);
-
-my %BOTH_BOTH_FIRST_FIRST = (
-  'Jean Marie' => 1,
-  'Jean Pierre' => 1,
-  'Maria Luisa' => 1,
-  'Marie Reine' => 1,
-  'Maria Teresa' => 1,
-  'Miguel Paulo' => 1,
-  'Ying Hui' => 1,
-);
-
-my %LAST_LAST = (
-  'SCRIVE LOYER' => 1,
-  'SZÉKELY DOBY' => 1
 );
 
 my %DYNASTS = (
@@ -514,12 +499,6 @@ sub study_name_two
     push @$list, $cat1, $u1, $cat2, $u2;
     return 1;
   }
-  elsif ($cat1 eq 'NAME_LAST' && $cat2 eq 'NAME_LAST' &&
-    exists $LAST_LAST{$word1 . ' ' . $word2})
-  {
-    push @$list, $cat1, $word1, $cat2, $word2;
-    return 1;
-  }
 
   return 0;
 }
@@ -597,14 +576,6 @@ sub rename_two
   }
   elsif ($cat0 eq 'NAME_BOTH' && $cat1 eq 'NAME_FIRST' &&
       ! $upper0 && ! $upper1)
-  {
-    $cat0 = 'NAME_FIRST';
-    $cat1 = 'NAME_FIRST';
-    $units->reset_unit(0, $cat0, $val0);
-    $units->reset_unit(1, $cat1, $val1);
-  }
-  elsif ($cat0 eq 'NAME_BOTH' && $cat1 eq 'NAME_BOTH' &&
-      exists $BOTH_BOTH_FIRST_FIRST{$val0 . ' ' . $val1})
   {
     $cat0 = 'NAME_FIRST';
     $cat1 = 'NAME_FIRST';
@@ -766,24 +737,10 @@ sub print_list
     push @values, $val;
   }
 
-# print $identifier;
-
   my $cstr = join ' - ', @cats;
   my $vstr = join ' - ', @values;
 
-# if ($cstr eq "''")
-# if ($cstr ne "''")
-# if (0)
-# if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /^UNKNOWN/)
-# if ($cstr ne "''" && $cstr =~ / \- / && $cstr =~ /UNKNOWN$/)
-# if ($identifier =~ /\|\|/)
-# if ($cstr =~ / - /)
-# if ($cstr eq 'NAME_FIRST - NAME_FIRST - NAME_LAST')
-# if ($#cats != 1)
-if ($#cats == 1)
-# if ($#cats == 1 && $cstr eq 'UNKNOWN - NAME_FIRST')
-# if ($#cats == 1 && $cstr eq 'NAME_BOTH - UNKNOWN' ||
-                   # $cstr eq 'UNKNOWN - NAME_BOTH')
+# if ($#cats >= 0)
 {
   print $cstr, "\n";
   for my $v (@values) { print $v, "\n"; } print "\n"; 
@@ -1312,8 +1269,16 @@ sub inspect_paragraph
       my $cat = study_word($whole_names, $entry->{TEXT}, $histo);
       if ($cat)
       {
-        $entry->{CATEGORY} = $cat;
-        next;
+        if ($cat eq 'NAME_BOTH' && $both_first->lookup($entry->{TEXT}))
+        {
+          $entry->{CATEGORY} = 'NAME_FIRST';
+          next;
+        }
+        else
+        {
+          $entry->{CATEGORY} = $cat;
+          next;
+        }
       }
     }
   }

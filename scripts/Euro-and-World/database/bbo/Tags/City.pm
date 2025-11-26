@@ -245,7 +245,7 @@ my @SINGLE_WORDS = qw(
   Antibes Antioch Antony Antwerpen Aqaba Aral Ardesen Arendal Arezzo 
   Ardahan Arhavi Arnhem Artvin Asenovec Asenovgrad Askim Asminderød 
   Assis Assos Assunçao Atakum Atasehir Athens Atlanta Aubagne Auckland 
-  Augsburg Avignon Ayacucho Aydin Ayvalik Ayvansaray
+  Augsburg Austin Avignon Ayacucho Aydin Ayvalik Ayvansaray
 
   Babaeski Babayagmur Bacau Baghdad Baglarbasi Bagodi Baimao Balchik 
   Bakauheni Bakirköy Balarampur Balaton Balatonföldvár Balikesir 
@@ -267,7 +267,7 @@ my @SINGLE_WORDS = qw(
 
   Cadiz Caen Cagliari Cairns Cairo Calais Calangute Calgary Cali 
   Cambridge Cambrils Canakkale Canberra Cankaya Cankiri Cannareggio Cannes 
-  Canterbury Caracas Carlsbad Casablanca Cassel Cascais Castres 
+  Canterbury Caracas Cardiff Carlsbad Casablanca Cassel Cascais Castres 
   Catalca Catania Çaycuma Caykara Cerkezkoy Cesme Chalkis Champaign 
   Chandigarh Changhua Changsha Changzhou Chanteloup Charleroi 
   Charlottesville Charreau Chartres Chavdar Chaville Chelmno Chelopech 
@@ -318,17 +318,17 @@ my @SINGLE_WORDS = qw(
 
   Kabardey Kadirli Kahramanmaras Kaisei Kajaani Kalisz Kalundborg Kalyani 
   Kanchanaburi Kanha Kanpur Kaohsiung Karabük Karacasu Karaman Karasu 
-  Karimun Karlovo Karlsruhe Karlstad Karsiyaka Kartal Kartepe Kashi Kassel 
-  Kastamonu Katowice Kavakdibi Kavarna Kayseri Kazanlak Kediri 
-  Kedungwaru Kedzierzyn Keelung Kemaliye Kemalpasa Kesap Kesten Ketsch 
-  Kharagpur Kiel Kielce Kiev Kigali Kinali Kirkeby Kirikcan Kirklareli 
-  Kirsehir Kista Kizildere Kiten Kitka Kiziltepe Klabat Klepp Kleve 
-  Kocaeli Kocarli Kolbotn Kolkata Kolobrzeg Konga Kongsberg Konnerud 
-  Konya Kópavogur Korfez Kornik Kosice Kostroma Koszalin Kota Koycegiz 
-  Köln Kragerø Krakow Kraljevica Krasnodar Kristiansand Kristianstad
-  Krosno Krzywanice Kucukbakkalkoy Kudus Kunming Kunshan Kuopio Kusadasi 
-  Kutno Kuzguncuk Küçükçekmece Kütahya Kverndalen Kyoto Kyustendil Køge 
-  Kølabånn
+  Kardzhali Karimun Karlovo Karlsruhe Karlstad Karsiyaka Kartal Kartepe 
+  Kashi Kassel Kastamonu Katowice Kavakdibi Kavarna Kayseri Kazanlak 
+  Kediri Kedungwaru Kedzierzyn Keelung Kemaliye Kemalpasa Kesap 
+  Kesten Ketsch Kharagpur Kiel Kielce Kiev Kigali Kinali Kinshasa
+  Kirkeby Kirikcan Kirklareli Kirsehir Kista Kizildere Kiten Kitka 
+  Kiziltepe Klabat Klepp Kleve Kocaeli Kocarli Kolbotn Kolkata Kolobrzeg 
+  Konga Kongsberg Konnerud Konya Kópavogur Korfez Kornik Kosice Kostroma 
+  Koszalin Kota Koycegiz Köln Kragerø Krakow Kraljevica Krasnodar 
+  Kristiansand Kristianstad Krosno Krzywanice Kucukbakkalkoy Kudus 
+  Kunming Kunshan Kuopio Kusadasi Kutno Kuzguncuk Küçükçekmece Kütahya 
+  Kverndalen Kyoto Kyustendil Køge Kølabånn
 
   Lahore Lakselv Lambach Lancaster Landak Langkat Lanzhou Laodikya 
   Lappeenranta Largo Larissa Larnaca Larvik Lausanne Lebork Lecco Legnica 
@@ -345,14 +345,14 @@ my @SINGLE_WORDS = qw(
   Marrakech Marseille Martapura Massy Mautern Medan Medellin Melawi 
   Melbourne Memphis Menemen Meritxell Mersin Meursac Miami Miaoli 
   Michalovce Michalowo Midyat Milan Milas Milpitas Minsk Miramar Miskolc 
-  Mombasa Momchilgrad Montélimar Monticiano Montoro Montpellier 
+  Modena Mombasa Momchilgrad Montélimar Monticiano Montoro Montpellier 
   Montreal Moradabad Mordogan Morsø Morud Moscow Moss Mragowo Mudanya 
   Mugla Mulhouse Mulund Mumbai Munich Murcia Myndos Mysore
 
   Nagari Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanjing
   Nanning Nantes Nanto Nantong Napoli Narlidere Narvik Nashik Nashville 
   Nazilli Näsby Nebakan Neijiang Nesodden Netanya Neuruppin Nevsehir 
-  Newport Nganjuk Nice Nicosia Niedernhausen Nijmegen Niksar Nilüfer 
+  Newport Nganjuk Nice Nicosia Niedernhausen Nigde Nijmegen Niksar Nilüfer 
   Nimes Ningbo Niš Noida Nonthaburi Norrbyskär Norrøna Nottingham 
   Notodden Nouméa Novosibirsk Nusaybin Nuuk Nürnberg Nykøbing Nyon 
   Nysa Nærbø Nærøysund Næstved Nøtterøy
@@ -372,7 +372,7 @@ my @SINGLE_WORDS = qw(
   Pleven Pliska Plock Plovdiv Plumergat Pohang Poitiers Polokwane Pompeii 
   Pontianak Popovo Portland Porto Portobello Potsdam Poznan Prague 
   Preslav Priboi Primorsko Probolinggo Protaras Przemysl Ptuj Pula 
-  Pulawy Pune Puri Pushkar Puutalo Pyrzyce
+  Pulawy Pune Puri Purworejo Pushkar Puutalo Pyrzyce
 
   Quebec Qingdao
 

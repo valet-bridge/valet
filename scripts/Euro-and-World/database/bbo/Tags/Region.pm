@@ -301,8 +301,8 @@ my @SINGLE_WORDS = qw(
   Kawanua Kedungwaru Kentucky Kerala Khuzestan Kilimanjaro Kizil Krabi 
   Kurdistan
 
-  Lampung Languedoc Lazio Lebak Liaoning Liguria Loire Lombok Louisiana
-  Lubusz
+  Lampung Languedoc Lazio Lebak Liaoning Liguria Loire Lombardy Lombok 
+  Louisiana Lubusz
 
   Madeira Maharashtra Maine Mallorca Malopolska Maluku Malwa Manitoba 
   Manle Marmara Marne Maryland Massachusetts Matopos Maui Mazovia 

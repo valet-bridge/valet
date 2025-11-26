@@ -1,11 +1,47 @@
-- reckon.pl to run clean as is
-- Turn || errors back on, eliminate
-- All categories and values set
+BEHAVIOR               807
+CITY                  8844
+CODE                189575
+COUNTRY             421068
+EMAIL                34567
+EMAIL_CITY              32
+EMAIL_COUNTRY         8267
+EMAIL_REGION             2
+EMAIL_UNIVERSITY         1
+FLUFF                53491
+LEVEL                 2034
+LOCALITY               290
+MAGIC               465355
+NAME_DYNAST             84
+NAME_FIRST          292098
+NAME_INITIAL         11464
+NAME_LAST           133374
+NAME_NICK               63
+NAME_PARTICLE         2503
+PICKY                   83
+PRIVATE             226594
+PROFILE               1311
+REGION                1468
+SYSTEM              423668
+UNDO                   254
+USER_FIRST             209
+USER_INITIALS          167
+USER_LAST              307
+USER_NUMERICAL         584
+USER_ONE             33086
+USER_PARTICLES          35
+USER_TITLE              28
+USER_TWO              6566
+USER_UNPARSEABLE       547
+YEAR_BIRTH              18
+--------------------------
+                   2318844
+
+- Look for particles (ben, others: Right or not?)
+- Capitalize and sort lists in Manual
+- All categories and values set (properly capitalized)
 - Player numbers (e.g. Poland) find by regex
-- All known names should parse into first, initial, particle, last
-- No inconsistencies
 - In sublines, look for cases where nothing actually gets modified.
-- Split out remaining code in reckon.pl, clean up
+- No inconsistencies
 
 Consolidate
 - CITY and EMAIL_CITY

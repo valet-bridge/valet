@@ -162,6 +162,9 @@ use Manual::TargetedWords;
 $both_last = Manual::TargetedWords->new();
 $both_last->read_file('Manual/both_last.txt');
 
+$both_first = Manual::TargetedWords->new();
+$both_first->read_file('Manual/both_first.txt');
+
 # OK as last names specifically as First Last (3 units).
 my $last3_names = Manual::TargetedWords->new();
 $last3_names->read_file('Manual/last3.txt');
@@ -173,7 +176,7 @@ $first1_names->read_file('Manual/first1.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('tx');
+# $sublines->consolidate_with('bb');
 # $sublines->print();
 # exit;
 
@@ -194,7 +197,7 @@ my %cat_hist;
 for my $paragraph (@paragraphs)
 {
 # if ($paragraph->{HANDLE} eq 'STOXI11')
-if ($paragraph->{HANDLE} =~ /AQUARIUS17/)
+if ($paragraph->{HANDLE} =~ /MSTF45/)
 {
   # print "HERE\n";
 }
@@ -282,17 +285,6 @@ if ($paragraph->{HANDLE} =~ /AQUARIUS17/)
 print "\n\n";
 
 my $sum = 0;
-for my $k (qw(NAMELIKE NAME_BOTH UNKNOWN))
-{
-  printf("%-16s%10d\n", $k, $cat_hist{$k});
-  $sum += $cat_hist{$k};
-}
-print '-' x 26, "\n";
-printf("%-16s%10d\n\n", '', $sum);
-exit;
-
-print "\n";
-$sum = 0;
 for my $k (sort keys %cat_hist)
 {
   printf("%-16s%10d\n", $k, $cat_hist{$k});
@@ -381,12 +373,8 @@ sub register_categories
     for (my $i = 0; $i <= $#{$entry->{LIST}}; $i += 2)
     {
       $hist->{$entry->{LIST}[$i]}++;
-      # if ($entry->{LIST}[$i] =~ /^USER_UNPARSEABLE/)
-      # {
-        # print $identifier;
-      # }
-      if ($entry->{LIST}[$i] eq 'NAMELIKE' ||
-          # $entry->{LIST}[$i] eq 'NAME_BOTH' ||
+      if ($entry->{LIST}[$i] eq 'INT_SMALL' ||
+          $entry->{LIST}[$i] eq 'NAMELIKE' ||
           $entry->{LIST}[$i] eq 'UNKNOWN')
       {
         $flag = 1;
@@ -396,23 +384,16 @@ sub register_categories
   else
   {
     $hist->{$entry->{CATEGORY}}++;
-    # if ($entry->{CATEGORY} =~ /^INT_/)
-    # {
-      # print $identifier;
-    # }
-    if ($entry->{CATEGORY} eq 'NAMELIKE' ||
-        # $entry->{CATEGORY} eq 'NAME_BOTH' ||
+    if ($entry->{CATEGORY} eq 'INT_SMALL' ||
+        $entry->{CATEGORY} eq 'NAMELIKE' ||
         $entry->{CATEGORY} eq 'UNKNOWN')
     {
       $flag = 1;
     }
   }
 
-  # if ($flag && 0)
   if ($flag)
   {
-    # print $identifier;
-
     my $cstr;
     if ($entry->{CATEGORY} eq 'LIST')
     {
@@ -429,12 +410,8 @@ sub register_categories
       $cstr = $entry->{CATEGORY};
     }
 
-    # if ($cstr =~ / / && $cstr =~ /UNKNOWN/)
-    # if ($cstr =~ /UNKNOWN/)
-    # {
-      print $identifier;
-      print $cstr, "\n\n---\n\n";
-    # }
+    print $identifier;
+    # print $cstr, "\n\n---\n\n";
   }
 }
 
