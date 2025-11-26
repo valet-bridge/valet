@@ -462,11 +462,27 @@ sub study_word
   }
 }
 
+
 sub normalize_first
 {
   my ($str) = @_;
   $str =~ s/^(\p{L})(.*)$/\u$1\L$2/;
   return $str;
+}
+
+
+sub normalize_first_hyphenated
+{
+  my ($val) = @_;
+
+  my @a = split '-', $val;
+  if ($#a != 1)
+  {
+    die "Funny hyphenated first name: $val";
+  }
+  my $n1 = normalize_first($a[0]);
+  my $n2 = normalize_first($a[1]);
+  return "$n1-$n2";
 }
 
 
@@ -479,6 +495,46 @@ sub normalize_last
 }
 
 
+sub push_onto_list
+{
+  my ($list, $cat, $val) = @_;
+
+  if ($cat eq 'NAME_FIRST')
+  {
+    if ($val =~ /\-/ && $val !~ / /)
+    {
+      push @$list, $cat, normalize_first_hyphenated($val);
+    }
+    else
+    {
+      push @$list, $cat, normalize_first($val);
+    }
+  }
+  elsif ($cat eq 'NAME_NICK')
+  {
+    push @$list, $cat, normalize_first($val);
+  }
+  elsif ($cat eq 'NAME_INITIAL')
+  {
+    push @$list, $cat, normalize_last($val);
+  }
+  elsif ($cat eq 'NAME_PARTICLE' ||
+      $cat eq 'NAME_LAST')
+  {
+    push @$list, $cat, normalize_last($val);
+  }
+  elsif ($cat eq 'NAME_DYNAST')
+  {
+    push @$list, $cat, $val;
+  }
+  else
+  {
+    # TODO What is this?
+    push @$list, $cat, $val;
+  }
+}
+
+
 sub study_name_two
 {
   my ($word1, $cat1, $word2, $cat2, $list, $histo) = @_;
@@ -487,46 +543,38 @@ sub study_name_two
 
   if ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_FIRST')
   {
-    push @$list, 
-      $cat1, normalize_first($word1), 
-      $cat2, normalize_first($word2);
+    push_onto_list($list, $cat1, $word1);
+    push_onto_list($list, $cat2, $word2);
     return 1;
   }
   elsif ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_LAST')
   {
-    push @$list, 
-      $cat1, normalize_first($word1), 
-      $cat2, normalize_last($word2);
+    push_onto_list($list, $cat1, $word1);
+    push_onto_list($list, $cat2, $word2);
     return 1;
   }
   elsif ($cat1 eq 'NAME_FIRST' && $cat2 eq 'NAME_INITIAL')
   {
-    my $u2 = uc($word2) . '.';
-    push @$list, 
-      $cat1, normalize_first($word1), 
-      $cat2, $u2;
+    push_onto_list($list, $cat1, $word1);
+    push_onto_list($list, $cat2, $word2 . '.');
     return 1;
   }
   elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_LAST')
   {
-    my $u1 = uc($word1) . '.';
-    push @$list, 
-      $cat1, $u1, 
-      $cat2, normalize_last($word2);
+    push_onto_list($list, $cat1, $word1 . '.');
+    push_onto_list($list, $cat2, $word2);
     return 1;
   }
   elsif ($cat1 eq 'NAME_PARTICLE' && $cat2 eq 'NAME_LAST')
   {
-    push @$list, 
-      $cat1, $word1, 
-      $cat2, normalize_last($word2);
+    push_onto_list($list, $cat1, $word1);
+    push_onto_list($list, $cat2, $word2);
     return 1;
   }
   elsif ($cat1 eq 'NAME_INITIAL' && $cat2 eq 'NAME_INITIAL')
   {
-    my $u1 = uc($word1) . '.';
-    my $u2 = uc($word2) . '.';
-    push @$list, $cat1, $u1, $cat2, $u2;
+    push_onto_list($list, $cat1, $word1 . '.');
+    push_onto_list($list, $cat2, $word2 . '.');
     return 1;
   }
 
@@ -721,26 +769,15 @@ sub mixed_with_fixable_both
 
     if ($cat ne 'NAME_BOTH')
     {
-      if ($cat eq 'NAME_FIRST')
-      {
-        push @$list, $cat, normalize_first($val);
-      }
-      elsif ($cat eq 'NAME_DYNAST')
-      {
-        push @$list, $cat, $val;
-      }
-      else
-      {
-        push @$list, $cat, normalize_last($val);
-      }
+      push_onto_list($list, $cat, $val);
     }
     elsif ($cases[$i])
     {
-      push @$list, 'NAME_LAST', normalize_last($val);
+      push_onto_list($list, 'NAME_LAST', $val);
     }
     else
     {
-      push @$list, 'NAME_FIRST', normalize_first($val);
+      push_onto_list($list, 'NAME_FIRST', $val);
     }
   }
 
@@ -864,8 +901,20 @@ sub study_name
     for my $i (0 .. $units->last())
     {
       my $cat = $units->category($i);
-      next unless ($cat eq '' || $cat eq 'UNKNOWN');
       my $val = $units->value($i);
+
+      if ($cat eq 'NAME_FIRST')
+      {
+        $units->reset_unit($i, 'NAME_FIRST', normalize_first($val));
+        next;
+      }
+      elsif ($cat eq 'NAME_LAST')
+      {
+        $units->reset_unit($i, 'NAME_LAST', normalize_last($val));
+        next;
+      }
+
+      next unless ($cat eq '' || $cat eq 'UNKNOWN');
 
       if ($first1_names->lookup($val))
       {
@@ -975,7 +1024,8 @@ sub pre_parse
     my $cat = study_word($whole_names, $comp, $histo);
     if ($cat && $cat ne 'NAME_INITIAL' && $cat ne 'UNKNOWN')
     {
-      push @list, $cat, $comp;
+      push_onto_list(\@list, $cat, $comp);
+      # push @list, $cat, $comp;
       next;
     }
 
@@ -1321,31 +1371,35 @@ sub inspect_paragraph
     if ($entry->{TEXT} !~ / /)
     {
       my $cat = study_word($whole_names, $entry->{TEXT}, $histo);
-      if ($cat)
+      next unless $cat;
+
+      my $val = $entry->{TEXT};
+      if ($cat eq 'NAME_BOTH' && $both_first->lookup($val))
       {
-        if ($cat eq 'NAME_BOTH' && $both_first->lookup($entry->{TEXT}))
-        {
-          $entry->{CATEGORY} = 'NAME_FIRST';
-          $entry->{VALUE} = $both_first->fix($entry->{TEXT});
-          next;
-        }
-        elsif ($cat eq 'NAME_FIRST')
-        {
-          $entry->{CATEGORY} = $cat;
-          $entry->{VALUE} = normalize_first($entry->{TEXT});
-          next;
-        }
-        elsif ($cat eq 'NAME_LAST')
+        $entry->{CATEGORY} = 'NAME_FIRST';
+        $entry->{VALUE} = $both_first->fix($val);
+      }
+      elsif ($cat eq 'NAME_FIRST')
+      {
+        if ($val =~ /\-/ && $val !~ / /)
         {
           $entry->{CATEGORY} = $cat;
-          $entry->{VALUE} = normalize_last($entry->{TEXT});
-          next;
+          $entry->{VALUE} = normalize_first_hyphenated($val);
         }
         else
         {
           $entry->{CATEGORY} = $cat;
-          next;
+          $entry->{VALUE} = normalize_first($val);
         }
+      }
+      elsif ($cat eq 'NAME_LAST')
+      {
+        $entry->{CATEGORY} = $cat;
+        $entry->{VALUE} = normalize_last($val);
+      }
+      else
+      {
+        $entry->{CATEGORY} = $cat;
       }
     }
   }
