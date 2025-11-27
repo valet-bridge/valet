@@ -40,6 +40,7 @@ my @MULTI_WORDS =
   'East Kalimantan',
   'East Nusa Tenggara',
   'Eastern Cape',
+  'Entre Rios',
   'Franche-Comté',
   'Gabungan Malaku',
   'Gran Canaria',

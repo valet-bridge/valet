@@ -197,7 +197,7 @@ my %cat_hist;
 for my $paragraph (@paragraphs)
 {
 # if ($paragraph->{HANDLE} eq 'STOXI11')
-if ($paragraph->{HANDLE} eq 'SEPIALLY')
+if ($paragraph->{HANDLE} eq '0     ASES')
 {
   # print "HERE\n";
 }

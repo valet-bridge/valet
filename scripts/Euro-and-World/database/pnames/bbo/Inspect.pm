@@ -591,8 +591,9 @@ sub study_name_three
       $cat2 eq 'NAME_LAST') &&
       $cat3 eq 'NAME_LAST')
   {
-    my $u2 = uc($word2) . '.';
-    my $u3 = uc($word3) . '.';
+    my $u2 = uc($word2);
+    $u2 .= '.' if $cat2 eq 'NAME_INITIAL';
+    my $u3 = uc($word3);
     push @$list, 
       $cat1, normalize_first($word1), 
       $cat2, $u2, 
@@ -603,11 +604,10 @@ sub study_name_three
       $cat2 eq 'NAME_FIRST' &&
       $cat3 eq 'NAME_LAST')
   {
-    my $u3 = uc($word3) . '.';
     push @$list, 
       $cat1, normalize_first($word1), 
       $cat2, normalize_first($word2), 
-      $cat3, $u3;
+      $cat3, normalize_last($word3);
     return 1;
   }
 

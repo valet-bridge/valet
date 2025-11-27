@@ -19,7 +19,7 @@ use Whole;
 my %COUNTRY_TO_REGION =
 (
   Afghanistan => ['badakhshan'],
-  Argentina => ['patagonia'],
+  Argentina => ['entre rios', 'patagonia'],
   Australia => ['australian central territory', 'new south wales',
     'northern territory', 'queensland', 'south australia', 
     'tasmania', 'victoria', 'western australia'],

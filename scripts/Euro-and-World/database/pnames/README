@@ -36,7 +36,6 @@ YEAR_BIRTH              18
 --------------------------
                    2318844
 
-- All categories and values set (properly capitalized)
 - Look for particles (ben, others: Right or not?)
 - Player numbers (e.g. Poland) and years find by regex
   - sub_lines
