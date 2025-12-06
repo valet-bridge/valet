@@ -176,7 +176,7 @@ $first1_names->read_file('Manual/first1.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('bb');
+# $sublines->consolidate_with('su');
 # $sublines->print();
 # exit;
 
@@ -263,7 +263,7 @@ if ($paragraph->{HANDLE} eq '0     ASES')
       $#name_list < 0)
     {
       # warn "$identifier: Should be a name, $#name_list";
-      print "$identifier: Should be a name, $#name_list\n";
+      print "$identifier: Should be a name, lno $lno, $#name_list\n";
       print_list(\@name_list, $identifier);
       next;
     }

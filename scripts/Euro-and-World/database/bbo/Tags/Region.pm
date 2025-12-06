@@ -284,7 +284,7 @@ my @SINGLE_WORDS = qw(
 
   Eyjafjallajokull
 
-  Feixiang Finnmark Fjends Flakstad Florida Frøya Fuji Fujian Fyn
+  Feixiang Finnmark Fjends Flakstad Flanders Florida Frøya Fuji Fujian Fyn
 
   Galapagos Galicia Ganges Gansu Gauteng Gelderland Gibraltar Goa 
   Goias Gorontalo Guam Guangdong Guangxi Guizhou Gujarat

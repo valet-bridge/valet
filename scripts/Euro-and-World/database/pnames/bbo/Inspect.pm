@@ -14,7 +14,7 @@ use Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT = qw($sublines $both_first $both_last 
   inspect_paragraph lines_to_list list_to_units 
-  list_to_units_no_punctuation study_word study_name);
+  list_to_units_no_punctuation study_word study_name print_list);
 
 use lib '../../bbo';
 use Util;
