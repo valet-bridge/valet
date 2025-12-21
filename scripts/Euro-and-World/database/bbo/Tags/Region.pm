@@ -289,7 +289,7 @@ my @SINGLE_WORDS = qw(
   Galapagos Galicia Ganges Gansu Gauteng Gelderland Gibraltar Goa 
   Goias Gorontalo Guam Guangdong Guangxi Guizhou Gujarat
 
-  Hainan Haixing Hampshire Haryana Hatay Haugaland Hawaii Hebei 
+  Hainan Haixing Hampshire Haryana Haugaland Hawaii Hebei 
   Hedmark Hegyvidék Heilongjiang Hemshin Henan Herault Hordaland 
   Huabei Hubei Hunan
 

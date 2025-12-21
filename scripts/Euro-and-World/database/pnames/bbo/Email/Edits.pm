@@ -225,7 +225,6 @@ my %EDITS =
   'nur..nurem@hotmail.com' => 'nurem@hotmail.com',
   'o.parry@t-online,de' => 'o.parry@t-online.de',
   'onur.tutar@hotmai' => 'onur.tutar@hotmail.com.tr',
-  'pad@wanadoo.ir' => 'pad@wanadoo.fr',
   'pairssbc@qmail.com' => 'sbc@qmail.com',
   'panjang_lama@yahoo.co.iid' => 'panjang_lama@yahoo.co.id',
   'patsyohanlon\'@gmail.com' => 'patsyohanlon@gmail.com',

@@ -91,6 +91,7 @@ my %SINGLE_TYPOS =
   Heimdal => ['heimdalbc'],
   Kadikoy => ['kadiköy'],
   'Ko Shing' => ['koshing'],
+  Kucukcekmece => ['küçükçekmece'],
   Küp => ['kup'],
   Manahasa => ['mnhasa'],
   Narlidere => ['narlýdere'],

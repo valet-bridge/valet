@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Abu Dhabi',
   'Aix en Provence',
   'Al-Rabwa',
   'Alba Iulia',
@@ -327,7 +328,7 @@ my @SINGLE_WORDS = qw(
   Konga Kongsberg Konnerud Konya Kópavogur Korfez Kornik Kosice Kostroma 
   Koszalin Kota Koycegiz Köln Kragerø Krakow Kraljevica Krasnodar 
   Kristiansand Kristianstad Krosno Krzywanice Kucukbakkalkoy Kudus 
-  Kunming Kunshan Kuopio Kusadasi Kutno Kuzguncuk Küçükçekmece Kütahya 
+  Kunming Kunshan Kuopio Kusadasi Kutno Kuzguncuk Kütahya 
   Kverndalen Kyoto Kyustendil Køge Kølabånn
 
   Lahore Lakselv Lambach Lancaster Landak Langkat Lanzhou Laodikya 
@@ -342,7 +343,7 @@ my @SINGLE_WORDS = qw(
   Maastricht Madrid Madurai Magetan Maillé Mainz Makassar Malaga 
   Malang Malatya Malkara Malmö Manado Manavgat Manchester Manila 
   Manisa Manna Mannheim Marbella Marcelli Mardin Marijampolė Marmara 
-  Marrakech Marseille Martapura Massy Mautern Medan Medellin Melawi 
+  Marrakech Marseille Martapura Massy Mautern Mdina Medan Medellin Melawi 
   Melbourne Memphis Menemen Meritxell Mersin Meursac Miami Miaoli 
   Michalovce Michalowo Midyat Milan Milas Milpitas Minsk Miramar Miskolc 
   Modena Mombasa Momchilgrad Montélimar Monticiano Montoro Montpellier 
@@ -370,9 +371,9 @@ my @SINGLE_WORDS = qw(
   Petersfield Petrelik Philadelphia Phitsanulok Phoenix Phokai Phuket 
   Piedimonte Pieksämäki Pijnacker Pila Piraeus Pisa Pisco Pitane Pittsburgh 
   Pleven Pliska Plock Plovdiv Plumergat Pohang Poitiers Polokwane Pompeii 
-  Pontianak Popovo Portland Porto Portobello Potsdam Poznan Prague 
-  Preslav Priboi Primorsko Probolinggo Protaras Przemysl Ptuj Pula 
-  Pulawy Pune Puri Purworejo Pushkar Puutalo Pyrzyce
+  Pontianak Popovo Portland Porto Portobello Postojna Potsdam Poznan 
+  Prague Preslav Priboi Primorsko Probolinggo Protaras Przemysl Ptuj 
+  Pula Pulawy Pune Puri Purworejo Pushkar Puutalo Pyrzyce
 
   Quebec Qingdao
 
