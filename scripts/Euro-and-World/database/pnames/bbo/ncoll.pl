@@ -76,7 +76,7 @@ read_modify_file('Manual/modify_tag.txt',
 modify(\%bbodb, \%modify_hash);
 
 my %out_stats;
-# write_file('temp', \%bbodb, \%out_stats);
+# write_file('temp_sort', \%bbodb, \%out_stats);
 # write_particle_like('temp', \%bbodb, \%out_stats);
 
 write_geo_file('temp', \%bbodb, \%paragraphs, \%out_stats);
@@ -317,6 +317,51 @@ sub str_instance
 }
 
 
+sub write_file
+{
+  my ($fname, $bbodb, $stats) = @_;
+
+  open(my $fh, ">", $fname) or die "Cannot open $fname $!";
+
+  for my $handle (sort keys %$bbodb)
+  {
+    for my $instance (1 .. $#{$bbodb->{$handle}})
+    {
+      print $fh "HANDLE $handle\n";
+      print $fh "INSTANCE $instance\n";
+      print $fh str_instance($bbodb->{$handle}[$instance]);
+      print $fh "\n";
+    }
+  }
+  close $fh;
+}
+
+
+sub str_db
+{
+  my ($orig_db, $handle, $instance) = @_;
+
+  my $s = "ORIGINAL DB:\n\n";
+  my $lno = 0;
+  my $subs = '';
+  for my $line (@{$orig_db->{$handle}[$instance]})
+  {
+    if (my $replace = $sub_lines->lookup($handle, $instance, $lno,
+      $line))
+    {
+      $subs .= "$lno:\n$line\n$replace\n\n";
+      
+    }
+    $s .= "$lno: $line\n";
+    $lno++;
+  }
+
+  $s .= "\n" . $subs;
+
+  return $s;
+}
+
+
 sub write_geo_file
 {
   my ($fname, $bbodb, $orig_db, $stats) = @_;
@@ -325,11 +370,13 @@ sub write_geo_file
 
   for my $handle (sort keys %$bbodb)
   {
+    my $geo = Geography->new();
+
     for my $instance ( 0 .. $#{$bbodb->{$handle}})
     {
       next if (! exists $bbodb->{$handle}[$instance]);
 
-      my $geo = Geography->new();
+      # my $geo = Geography->new();
       my $conflicts = '';
       for my $key (keys %{$bbodb->{$handle}[$instance]})
       {
@@ -369,24 +416,11 @@ sub write_geo_file
       print $fh str_instance(\%hash, $stats);
 
       print $fh "\n";
-      print $fh "ORIGINAL DB:\n\n";
-      my $lno = 0;
-      my $subs = '';
-      for my $line (@{$orig_db->{$handle}[$instance]})
-      {
-        if (my $replace = $sub_lines->lookup($handle, $instance, $lno,
-          $line))
-        {
-          $subs .= "$lno:\n$line\n$replace\n\n";
-          
-        }
-        print $fh "$lno: $line\n";
-        $lno++;
-      }
 
       my $draft = "$handle, $instance, \n\n";
 
-      print $fh "\n", $subs, $draft, '-' x 40, "\n\n";
+      print $fh str_db($orig_db, $handle, $instance), 
+        $draft, '-' x 40, "\n\n";
     }
   }
   close $fh;
