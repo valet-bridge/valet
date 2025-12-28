@@ -33,6 +33,13 @@ my %TAGS = (
   REGION => 'REGION'
 );
 
+my %IGNORE_SMALL = (
+  CODE => 1,
+  MAGIC => 1,
+  PRIVATE => 1,
+  SYSTEM => 1
+);
+
 if ($#ARGV < 0)
 {
   die "Usage: perl ncoll.pl file";
@@ -317,6 +324,37 @@ sub str_instance
 }
 
 
+sub str_instance_small
+{
+  my ($hash, $stats) = @_;
+  my $str = '';
+
+  for my $key (sort keys %$hash)
+  {
+    next if exists $IGNORE_SMALL{$key};
+    if ($key ne 'NAME')
+    {
+      for my $v (@{$hash->{$key}})
+      {
+        $str .= "$key $v\n";
+        $stats->{$key}++;
+      }
+    }
+    else
+    {
+      my $list = \@{$hash->{NAME}{LIST}};
+      for my $i (0 .. $#$list)
+      {
+        $str .= $list->[$i]{TAG} . ' ' . $list->[$i]{VALUE} . "\n";
+        $stats->{$list->[$i]{TAG}}++;
+      }
+    }
+  }
+
+  return $str;
+}
+
+
 sub write_file
 {
   my ($fname, $bbodb, $stats) = @_;
@@ -371,6 +409,8 @@ sub write_geo_file
   for my $handle (sort keys %$bbodb)
   {
     my $geo = Geography->new();
+    my $gstr = '';
+    my $conflict_flag = 0;
 
     for my $instance ( 0 .. $#{$bbodb->{$handle}})
     {
@@ -396,6 +436,7 @@ sub write_geo_file
         if ($flag)
         {
           $conflicts .= "CONFLICT $key\n";
+          $conflict_flag = 1;
         }
         else
         {
@@ -403,24 +444,26 @@ sub write_geo_file
         }
       }
 
-      next if $conflicts eq '';
+      $gstr .= "HANDLE $handle\nINSTANCE $instance\n";
+      if ($conflicts)
+      {
+        $gstr .= "***** $conflicts";
 
-      my $identifier = "HANDLE $handle\nINSTANCE $instance\n";
-      print $fh $identifier;
-      print $fh $conflicts;
+        my %hash;
+        $geo->set_hash(\%hash);
+        $gstr .= "***** " . str_instance(\%hash, $stats) . "\n";
+      }
 
-      print $fh str_instance($bbodb->{$handle}[$instance], $stats);
+      $gstr .= str_instance_small($bbodb->{$handle}[$instance], $stats);
+      $gstr .= "\n" . str_db($orig_db, $handle, $instance);
+      $gstr .= '-' x 10 . "\n\n";
+    }
 
-      my %hash;
-      $geo->set_hash(\%hash);
-      print $fh str_instance(\%hash, $stats);
+    if ($conflict_flag)
+    {
+      print $fh $gstr;
 
-      print $fh "\n";
-
-      my $draft = "$handle, $instance, \n\n";
-
-      print $fh str_db($orig_db, $handle, $instance), 
-        $draft, '-' x 40, "\n\n";
+      print $fh "$handle, \n\n" .  '=' x 40 . "\n\n";
     }
   }
   close $fh;

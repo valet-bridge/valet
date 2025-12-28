@@ -176,7 +176,7 @@ $first1_names->read_file('Manual/first1.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('temp1');
+# $sublines->consolidate_with('temp');
 # $sublines->print();
 # exit;
 
