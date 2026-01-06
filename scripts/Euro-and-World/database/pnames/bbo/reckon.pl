@@ -176,7 +176,7 @@ $first1_names->read_file('Manual/first1.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('temp');
+# $sublines->consolidate_with('z');
 # $sublines->print();
 # exit;
 
@@ -216,6 +216,7 @@ if ($paragraph->{HANDLE} eq '0     ASES')
   print "HANDLE $handle\n";
   print "INSTANCE $hcount\n";
 
+  my $name_lines = 0;
   for my $entry (@{$paragraph->{LINES}})
   {
     $lno++;
@@ -228,7 +229,8 @@ if ($paragraph->{HANDLE} eq '0     ASES')
     if ($entry->{CATEGORY} ne 'OPEN')
     {
       # This happens a lot: From 2.1 mio down to 60k cases.
-      register_categories($entry, $identifier, \%cat_hist);
+      $name_lines +=
+        register_categories($entry, $identifier, \%cat_hist);
       next;
     }
 
@@ -270,7 +272,20 @@ if ($paragraph->{HANDLE} eq '0     ASES')
 
     $entry->{CATEGORY} = 'LIST';
     @{$entry->{LIST}} = @name_list;
-    register_categories($entry, $identifier, \%cat_hist);
+    $name_lines +=
+      register_categories($entry, $identifier, \%cat_hist);
+  }
+
+  if ($name_lines > 1)
+  {
+    print "NAME_ALERT $name_lines\n\n";
+    my $n = 0;
+    for my $entry (@{$paragraph->{LINES}})
+    {
+      printf("%2d: %-16s %s\n",
+        $n, $entry->{CATEGORY}, $entry->{TEXT});
+      $n++;
+    }
   }
 
   print "\n";
@@ -361,6 +376,7 @@ sub register_categories
   my ($entry, $identifier, $hist) = @_;
 
   my $flag = 0;
+  my $contains_name = 0;
 
   if ($entry->{CATEGORY} eq 'LIST')
   {
@@ -371,6 +387,7 @@ sub register_categories
       print "$cat $val\n";
 
       $hist->{$cat}++;
+      $contains_name = 1 if $cat =~ /^NAME_/;
 
       if ($entry->{LIST}[$i] eq 'INT_SMALL' ||
           $entry->{LIST}[$i] eq 'NAMELIKE' ||
@@ -387,6 +404,7 @@ sub register_categories
     print "$cat $val\n";
 
     $hist->{$cat}++;
+      $contains_name = 1 if $cat =~ /^NAME_/;
 
     if ($entry->{CATEGORY} eq 'INT_SMALL' ||
         $entry->{CATEGORY} eq 'NAMELIKE' ||
@@ -417,6 +435,8 @@ sub register_categories
     print $identifier;
     # print $cstr, "\n\n---\n\n";
   }
+
+  return $contains_name;
 }
 
 

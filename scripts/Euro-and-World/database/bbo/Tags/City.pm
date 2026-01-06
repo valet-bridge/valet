@@ -243,10 +243,11 @@ my @SINGLE_WORDS = qw(
   Aladag Alanya Alcobaça Alexandria Aley Aliaga Alicante Alkmaar 
   Allahabad Alta Altea Altinoluk Altinova Altrincham Alytus Amasya Ambon 
   Amed Amman Amsterdam Anaheim Ancona Angers Ankara Annecy Antakya Antalya 
-  Antibes Antioch Antony Antwerpen Aqaba Aral Ardesen Arendal Arezzo 
-  Ardahan Arhavi Arnhem Artvin Asenovec Asenovgrad Askim Asminderød 
-  Assis Assos Assunçao Atakum Atasehir Athens Atlanta Aubagne Auckland 
-  Augsburg Austin Avignon Ayacucho Aydin Ayvalik Ayvansaray
+  Antibes Antioch Antony Antwerpen Aqaba Arad Aral Ardesen Arendal Arezzo 
+  Ardahan Arhavi Arnhem Artuklu Artvin Asenovec Asenovgrad Askim 
+  Asminderød Assis Assos Assunçao Atakum Atasehir Athens Atlanta 
+  Aubagne Auckland Augsburg Austin Avignon Ayacucho Aydin Ayvalik 
+  Ayvansaray
 
   Babaeski Babayagmur Bacau Baghdad Baglarbasi Bagodi Baimao Balchik 
   Bakauheni Bakirköy Balarampur Balaton Balatonföldvár Balikesir 
@@ -307,7 +308,7 @@ my @SINGLE_WORDS = qw(
   Hayrabolu Hämeenlinna Hebi Hedemora Heikendorf Heledia Helsingborg
   Helsinki Hemsin Hendek Herning Hillerød Hiroshima Hjørring Hobart 
   Hobro Honolulu Hopa Hornbæk Horsens Houston Hrubieszow Hsinchu Huayin 
-  Huldretråkket Hunedoara Hurepoix Huwei Hyderabad
+  Huesca Huldretråkket Hunedoara Hurepoix Huwei Hyderabad
 
   Iasi Incesu Indianapolis Indore Indramayu Inowroclaw 
   Iskenderun Isparta Issans Istanbul Ithaca Izmir Iznik
@@ -317,11 +318,11 @@ my @SINGLE_WORDS = qw(
   Jinchang Jincheng Jinjiang Jiujiang Jixiexiang Johannesburg Juliopolis 
   Jurmala
 
-  Kabardey Kadirli Kahramanmaras Kaisei Kajaani Kalisz Kalundborg Kalyani 
-  Kanchanaburi Kanha Kanpur Kaohsiung Karabük Karacasu Karaman Karasu 
-  Kardzhali Karimun Karlovo Karlsruhe Karlstad Karsiyaka Kartal Kartepe 
-  Kashi Kassel Kastamonu Katowice Kavakdibi Kavarna Kayseri Kazanlak 
-  Kediri Kedungwaru Kedzierzyn Keelung Kemaliye Kemalpasa Kesap 
+  Kabardey Kadirli Kahramanmaras Kaisei Kajaani Kalamata Kalisz Kalundborg 
+  Kalyani Kanchanaburi Kanha Kanpur Kaohsiung Karabük Karacasu Karaman 
+  Karasu Kardzhali Karimun Karlovo Karlsruhe Karlstad Karsiyaka Kartal 
+  Kartepe Kashi Kassel Kastamonu Katowice Kavakdibi Kavarna Kayseri 
+  Kazanlak Kediri Kedungwaru Kedzierzyn Keelung Kemaliye Kemalpasa Kesap 
   Kesten Ketsch Kharagpur Kiel Kielce Kiev Kigali Kinali Kinshasa
   Kirkeby Kirikcan Kirklareli Kirsehir Kista Kizildere Kiten Kitka 
   Kiziltepe Klabat Klepp Kleve Kocaeli Kocarli Kolbotn Kolkata Kolobrzeg 
@@ -365,22 +366,23 @@ my @SINGLE_WORDS = qw(
 
   Pacitan Padang Padova Paimado Palembang Palencia Palermo Palma Palu 
   Pamukkale Panagyurishte Panaji Pancevo Panzhihua Pariaman Paris 
-  Pärnu Parvomay Pasadena Pasuruan Patna Pattaya Pau Pazar Pazardjik Pecs 
-  Peebles Pekanbaru Pelitli Pelotas Pemangkat Penajam Pendik Pensacola
-  Pernik Perpignan Persepolis Perth Perula Pervera Pesaro Pescara 
-  Petersfield Petrelik Philadelphia Phitsanulok Phoenix Phokai Phuket 
-  Piedimonte Pieksämäki Pijnacker Pila Piraeus Pisa Pisco Pitane Pittsburgh 
-  Pleven Pliska Plock Plovdiv Plumergat Pohang Poitiers Polokwane Pompeii 
-  Pontianak Popovo Portland Porto Portobello Postojna Potsdam Poznan 
-  Prague Preslav Priboi Primorsko Probolinggo Protaras Przemysl Ptuj 
-  Pula Pulawy Pune Puri Purworejo Pushkar Puutalo Pyrzyce
+  Pärnu Parvomay Pasadena Pasuruan Patna Patras Pattaya Pau Pazar 
+  Pazardjik Pecs Peebles Pekanbaru Pelitli Pelotas Pemangkat Penajam 
+  Pendik Pensacola Pernik Perpignan Persepolis Perth Perula Pervera 
+  Pesaro Pescara Petersfield Petrelik Philadelphia Phitsanulok Phoenix 
+  Phokai Phuket Piedimonte Pieksämäki Pijnacker Pila Piraeus Pisa Pisco 
+  Pitane Pittsburgh Pleven Pliska Plock Plovdiv Plumergat Pohang Poitiers 
+  Polokwane Pompeii Pontianak Popovo Portland Porto Portobello 
+  Postojna Potsdam Poznan Prague Preslav Priboi Primorsko Probolinggo 
+  Protaras Przemysl Ptuj Pula Pulawy Pune Puri Purworejo Pushkar 
+  Puutalo Pyrzyce
 
   Quebec Qingdao
 
   Rabat Radauti Radkov Rakovski Rakvere Randers Rastignano Ravnkilde 
   Rayong Razgrad Redmond Reims Relizane Rembang Rennes Reno Reykjavik Riau 
   Richmond Rieneck Riga Rijeka Rimini Riverside Riyadh Rize Rochester 
-  Romana Rome Ronneby Roskilde Rotterdam Rottneros Royan Rozanka 
+  Romana Rome Ronneby Roskilde Rotorua Rotterdam Rottneros Royan Rozanka 
   Rseszow Rubbestadneset Ruen Rugao Ruian Ruse Rzepin Rødovre 
   Rønne
 

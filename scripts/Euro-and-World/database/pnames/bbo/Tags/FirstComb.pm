@@ -1239,7 +1239,7 @@ my @SINGLE_WORDS = qw(
 
   Åsa Åse 
 
-  Öge Öksel Ömer Önce Önder Öner Ören Özden Özdener Özel Özer Özgür 
+  Öge Öksel Ömer Önce Önder Öner Ören Özden Özdener Özer Özgür 
   Öztekin 
 
   Øivind Øyvind 

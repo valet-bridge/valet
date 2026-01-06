@@ -1,40 +1,8 @@
-BEHAVIOR               807
-CITY                  8844
-CODE                189575
-COUNTRY             421068
-EMAIL                34567
-EMAIL_CITY              32
-EMAIL_COUNTRY         8267
-EMAIL_REGION             2
-EMAIL_UNIVERSITY         1
-FLUFF                53491
-LEVEL                 2034
-LOCALITY               290
-MAGIC               465355
-NAME_DYNAST             84
-NAME_FIRST          292098
-NAME_INITIAL         11464
-NAME_LAST           133374
-NAME_NICK               63
-NAME_PARTICLE         2503
-PICKY                   83
-PRIVATE             226594
-PROFILE               1311
-REGION                1468
-SYSTEM              423668
-UNDO                   254
-USER_FIRST             209
-USER_INITIALS          167
-USER_LAST              307
-USER_NUMERICAL         584
-USER_ONE             33086
-USER_PARTICLES          35
-USER_TITLE              28
-USER_TWO              6566
-USER_UNPARSEABLE       547
-YEAR_BIRTH              18
---------------------------
-                   2318844
+Have a list of years and country IDs waiting to be integrated.
+
+Names
+- Per instance, only one line with names
+- 
 
 - Look for particles (ben, others: Right or not?)
 - Player numbers (e.g. Poland) and years find by regex
@@ -43,9 +11,6 @@ YEAR_BIRTH              18
 - No inconsistencies
 
 Consolidate
-- CITY and EMAIL_CITY
-- COUNTRY and EMAIL_COUNTRY
-- REGION and EMAIL_REGION
 - UNIVERSITY and EMAIL_UNIVERSITY
 - SYSTEM: Probably SYSTEM AND EMAIL_SYSTEM
   - EMAIL_SYSTEM is actually solid

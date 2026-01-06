@@ -11,6 +11,8 @@ use lib '.';
 
 use Geography;
 
+my $geo_flag = 1;
+
 use Manual::SubLines;
 
 my @SKIP_LIST = qw(BEHAVIOR CODE FLUFF MAGIC PICKY PRIVATE
@@ -86,7 +88,10 @@ my %out_stats;
 # write_file('temp_sort', \%bbodb, \%out_stats);
 # write_particle_like('temp', \%bbodb, \%out_stats);
 
-write_geo_file('temp', \%bbodb, \%paragraphs, \%out_stats);
+if ($geo_flag)
+{
+  write_geo_file('temp', \%bbodb, \%paragraphs, \%out_stats);
+}
 
 print_stats('Inputs', \%stats);
 print_stats('Outputs', \%out_stats);
