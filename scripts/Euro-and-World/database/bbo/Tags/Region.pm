@@ -276,7 +276,7 @@ my @SINGLE_WORDS = qw(
   Benchamas Bengal Bengkayang Bihar Bizkaia Blekinge Bogø Bolu Borneo 
   Bornholm Bungo Buriram Buskerud
 
-  Calabria California Camargue Çankiri Cantal Cappadocia Catalonia 
+  Calabria California Camargue Çankiri Cantal Cappadocia Capri Catalonia 
   Charente Chartreuse Chengmai Colorado Comandatuba Connecticut 
   Corinthia Cornwall Corfu Correze Corsica Crete Cukurova
 

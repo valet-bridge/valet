@@ -10,8 +10,10 @@ use feature 'unicode_strings';
 use lib '.';
 
 use Geography;
+use NameList;
 
-my $geo_flag = 1;
+my $geo_flag = 0;
+my $namelist_flag = 1;
 
 use Manual::SubLines;
 
@@ -24,7 +26,7 @@ my %SKIPS;
 # Work on CITY, COUNTRY, EMAIL_CITY, EMAIL_COUNTRY, EMAIL_REGION,
 # EMAIL_UNIVERSITY, LOCALITY, REGION.
 
-my %TAGS = (
+my %GEO_TAGS = (
   CITY  => 'CITY',
   COUNTRY  => 'COUNTRY',
   EMAIL_CITY => 'CITY',
@@ -33,6 +35,14 @@ my %TAGS = (
   EMAIL_UNIVERSITY => 'UNIVERSITY',
   LOCALITY => 'LOCALITY',
   REGION => 'REGION'
+);
+
+my %NAMELIST_TAGS = (
+  NAME_FIRST => 'NAME_FIRST',
+  NAME_INITIAL => 'NAME_INITIAL',
+  NAME_LAST => 'NAME_LAST',
+  NAME_NICK => 'NAME_NICK',
+  NAME_PARTICLE => 'NAME_PARTICLE'
 );
 
 my %IGNORE_SMALL = (
@@ -82,7 +92,7 @@ destroy(\%bbodb, \%destroy_email_country, 'EMAIL_COUNTRY');
 my %modify_hash;
 read_modify_file('Manual/modify_tag.txt', 
   \%modify_hash);
-modify(\%bbodb, \%modify_hash);
+
 
 my %out_stats;
 # write_file('temp_sort', \%bbodb, \%out_stats);
@@ -90,7 +100,12 @@ my %out_stats;
 
 if ($geo_flag)
 {
-  write_geo_file('temp', \%bbodb, \%paragraphs, \%out_stats);
+  write_geo_file('geotemp', \%bbodb, \%paragraphs, \%out_stats);
+}
+
+if ($namelist_flag)
+{
+  write_namelist_file('nltemp', \%bbodb, \%paragraphs, \%out_stats);
 }
 
 print_stats('Inputs', \%stats);
@@ -144,13 +159,11 @@ sub read_file
 
     if ($tag =~ /^NAME_/)
     {
-      my $anchor = \%{$bbodb->{$handle}[$instance]{NAME}};
-      my $pos = 1 + $#{$anchor->{LIST}};
+      my $anchor = \@{$bbodb->{$handle}[$instance]{NAME}};
+      my $pos = 1 + $#$anchor;
 
-      push @{$anchor->{HASH}{$tag}}, $value;
-
-      $anchor->{LIST}[$pos]{TAG} = $tag;
-      $anchor->{LIST}[$pos]{VALUE} = $value;
+      $anchor->[$pos]{TAG} = $tag;
+      $anchor->[$pos]{VALUE} = $value;
     }
     else
     {
@@ -316,7 +329,7 @@ sub str_instance
     }
     else
     {
-      my $list = \@{$hash->{NAME}{LIST}};
+      my $list = \@{$hash->{NAME}};
       for my $i (0 .. $#$list)
       {
         $str .= $list->[$i]{TAG} . ' ' . $list->[$i]{VALUE} . "\n";
@@ -347,7 +360,7 @@ sub str_instance_small
     }
     else
     {
-      my $list = \@{$hash->{NAME}{LIST}};
+      my $list = \@{$hash->{NAME}};
       for my $i (0 .. $#$list)
       {
         $str .= $list->[$i]{TAG} . ' ' . $list->[$i]{VALUE} . "\n";
@@ -405,6 +418,34 @@ sub str_db
 }
 
 
+sub str_first_non_private
+{
+  my ($orig_db, $handle, $instance) = @_;
+
+  my $lno = 0;
+  for my $line (@{$orig_db->{$handle}[$instance]})
+  {
+    if (my $replace = $sub_lines->lookup($handle, $instance, $lno,
+      $line))
+    {
+      $line = $replace;
+    }
+
+    if ($line ne 'Private')
+    {
+      my $s = "$handle, $instance, $lno\n";
+      $s .= "$line\n";
+      $s .= "Private\n\n";
+      return $s;
+    }
+
+    $lno++;
+  }
+
+  return '';
+}
+
+
 sub write_geo_file
 {
   my ($fname, $bbodb, $orig_db, $stats) = @_;
@@ -426,7 +467,7 @@ sub write_geo_file
       for my $key (keys %{$bbodb->{$handle}[$instance]})
       {
         next if $key eq 'NAME';
-        next unless exists $TAGS{$key};
+        next unless exists $GEO_TAGS{$key};
 
         my $flag = 0;
         for my $v (@{$bbodb->{$handle}[$instance]{$key}})
@@ -469,6 +510,63 @@ sub write_geo_file
       print $fh $gstr;
 
       print $fh "$handle, \n\n" .  '=' x 40 . "\n\n";
+    }
+  }
+  close $fh;
+}
+
+
+sub write_namelist_file
+{
+  my ($fname, $bbodb, $orig_db, $stats) = @_;
+
+  open(my $fh, ">", $fname) or die "Cannot open $fname $!";
+
+  for my $handle (sort keys %$bbodb)
+  {
+    my $namelist = NameList->new();
+    my $nstr = '';
+    my $conflict_flag = 0;
+
+    for my $instance (0 .. $#{$bbodb->{$handle}})
+    {
+      next if (! exists $bbodb->{$handle}[$instance]);
+      next if (! exists $bbodb->{$handle}[$instance]{NAME});
+
+      my @list;
+      for my $elem (@{$bbodb->{$handle}[$instance]{NAME}})
+      {
+        push @list, $elem->{TAG}, $elem->{VALUE};
+      }
+
+      $nstr .= "HANDLE $handle\nINSTANCE $instance\n";
+      if ($namelist->add_list(\@list))
+      {
+        delete $bbodb->{$handle}[$instance]{NAME};
+      }
+      else
+      {
+        $conflict_flag = 1;
+
+        $nstr .= "*****\n";
+        $nstr .= $namelist->str() . "\n";
+      }
+
+      $nstr .= str_instance_small($bbodb->{$handle}[$instance], $stats);
+      $nstr .= "\n" . str_db($orig_db, $handle, $instance);
+      $nstr .= '-' x 10 . "\n\n";
+    }
+
+    if ($conflict_flag)
+    {
+      print $fh $nstr;
+
+      for my $instance (0 .. $#{$bbodb->{$handle}})
+      {
+        print $fh str_first_non_private($orig_db, $handle, $instance);
+      }
+
+      print $fh "\n" . '=' x 40 . "\n\n";
     }
   }
   close $fh;

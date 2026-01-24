@@ -176,7 +176,7 @@ $first1_names->read_file('Manual/first1.txt');
 use Manual::SubLines;
 $sublines = Manual::SubLines->new();
 $sublines->read_file('Manual/sub_lines.txt');
-# $sublines->consolidate_with('z');
+# $sublines->consolidate_with('nltemp');
 # $sublines->print();
 # exit;
 
@@ -197,7 +197,7 @@ my %cat_hist;
 for my $paragraph (@paragraphs)
 {
 # if ($paragraph->{HANDLE} eq 'STOXI11')
-if ($paragraph->{HANDLE} eq '0     ASES')
+if ($paragraph->{HANDLE} eq 'AB4H')
 {
   # print "HERE\n";
 }

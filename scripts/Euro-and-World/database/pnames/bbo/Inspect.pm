@@ -516,6 +516,7 @@ sub push_onto_list
   }
   elsif ($cat eq 'NAME_INITIAL')
   {
+    $val =~ s/\.\.$/\./;
     push @$list, $cat, normalize_last($val);
   }
   elsif ($cat eq 'NAME_PARTICLE' ||
@@ -592,7 +593,7 @@ sub study_name_three
       $cat3 eq 'NAME_LAST')
   {
     my $u2 = uc($word2);
-    $u2 .= '.' if $cat2 eq 'NAME_INITIAL';
+    $u2 .= '.' if ($cat2 eq 'NAME_INITIAL' && $u2 !~ /\.$/);
     my $u3 = uc($word3);
     push @$list, 
       $cat1, normalize_first($word1), 
@@ -1364,8 +1365,24 @@ sub inspect_paragraph
 
     if (($country_seen || $mail_seen || $private_seen) && ! $magic_seen)
     {
-      $entry->{CATEGORY} = 'SYSTEM';
-      next;
+      if ($entry->{TEXT} !~ /@/ || $entry->{TEXT} =~ / /)
+      {
+        $entry->{CATEGORY} = 'SYSTEM';
+        next;
+      }
+      else
+      {
+        # Might be an out-of-order e-mail.
+        my @list;
+        Email::Email::looks_like(lc($entry->{TEXT}), \@list);
+        if ($#list >= 0)
+        {
+          $entry->{CATEGORY} = 'LIST';
+          @{$entry->{LIST}} = @list;
+          $mail_seen = 1;
+          next;
+        }
+      }
     }
 
     if ($entry->{TEXT} !~ / /)

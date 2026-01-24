@@ -358,6 +358,7 @@ my %DOMAINS =
   'org.cn' => 'China',
   'org.il' => 'Israel',
   'org.pl' => 'Poland',
+  'org.sg' => 'Singapore',
   'org.tr' => 'Turkey',
   'org.uk' => 'United Kingdom',
   'org.za' => 'South Africa',
