@@ -93,6 +93,7 @@ my %modify_hash;
 read_modify_file('Manual/modify_tag.txt', 
   \%modify_hash);
 
+modify(\%bbodb, \%modify_hash);
 
 my %out_stats;
 # write_file('temp_sort', \%bbodb, \%out_stats);
