@@ -1330,6 +1330,7 @@ sub inspect_paragraph
       next if inspect_for_tag($whole_names, 'SYSTEM', $entry);
     }
 
+    next if inspect_for_tag($whole_names, 'COUNTRY', $entry);
     next if inspect_for_tag($whole_names, 'CITY', $entry);
     next if inspect_for_tag($whole_names, 'REGION', $entry);
     next if inspect_for_tag($whole_names, 'LOCALITY', $entry);
