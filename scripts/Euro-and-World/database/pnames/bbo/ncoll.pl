@@ -13,15 +13,22 @@ use Geography;
 use NameList;
 
 my $geo_flag = 0;
-my $namelist_flag = 1;
+my $namelist_flag = 0;
+my $consolidate_flag = 1;
 
 use Manual::SubLines;
 
-my @SKIP_LIST = qw(BEHAVIOR CODE FLUFF MAGIC PICKY PRIVATE
-  PROFILE SYSTEM UNDO);
+# File of tags to delete, typically USER_ tags that aren't names.
+my $POST_DESTROY = 'Manual/post_destroy.txt';
+
+# File of tags to substitute, typically USER_ tags that are names.
+my $POST_SUBSTITUTE = 'Manual/post_substitute.txt';
+
+my @SKIP_LIST = qw(BEHAVIOR CODE DELETE FLUFF MAGIC PICKY PRIVATE
+  PROFILE SYSTEM UNDO USER_NUMERICAL);
 
 my %SKIPS;
-# $SKIPS{$_} = 1 for @SKIP_LIST;
+$SKIPS{$_} = 1 for @SKIP_LIST;
 
 # Work on CITY, COUNTRY, EMAIL_CITY, EMAIL_COUNTRY, EMAIL_REGION,
 # EMAIL_UNIVERSITY, LOCALITY, REGION.
@@ -52,6 +59,17 @@ my %IGNORE_SMALL = (
   SYSTEM => 1
 );
 
+my %PERMITTED_POST_SUBS_HASH = (
+  USER_TITLE => 1,
+  USER_ONE => 1,
+  USER_INITIALS => 1,
+  USER_PARTICLES => 1,
+  USER_TWO => 1
+);
+
+my @PERMITTED_POST_SUBS_LIST = qw(
+  USER_TITLE USER_ONE USER_INITIALS USER_PARTICLES USER_TWO);
+
 if ($#ARGV < 0)
 {
   die "Usage: perl ncoll.pl file";
@@ -72,11 +90,13 @@ raw_to_paragraphs(\@chunks, \%paragraphs);
 my $sub_lines = Manual::SubLines->new();
 $sub_lines->read_file('Manual/sub_lines.txt');
 
-
 my (%bbodb, %stats);
 
 my $file = shift;
 read_file($file, \%bbodb, \%stats);
+
+
+# ----- Instance-specific modification -----
 
 my %destroy_country;
 read_destroy_file('Manual/destroy_country.txt', 
@@ -95,6 +115,21 @@ read_modify_file('Manual/modify_tag.txt',
 
 modify(\%bbodb, \%modify_hash);
 
+
+# ----- Higher-level modification -----
+
+my %post_destroy_hash;
+read_post_destroy($POST_DESTROY, \%post_destroy_hash);
+
+remap_post_destroy(\%bbodb, \%post_destroy_hash);
+
+my %post_sub_hash;
+read_post_substitute($POST_SUBSTITUTE, \%post_sub_hash);
+
+remap_post_substitute(\%bbodb, \%post_sub_hash);
+
+
+
 my %out_stats;
 # write_file('temp_sort', \%bbodb, \%out_stats);
 # write_particle_like('temp', \%bbodb, \%out_stats);
@@ -109,10 +144,27 @@ if ($namelist_flag)
   write_namelist_file('nltemp', \%bbodb, \%paragraphs, \%out_stats);
 }
 
+if ($consolidate_flag)
+{
+  write_consol_file('consol.txt', \%bbodb, \%paragraphs, \%out_stats);
+}
+
 print_stats('Inputs', \%stats);
 print_stats('Outputs', \%out_stats);
 
 exit;
+
+
+sub append_to_name
+{
+  my ($bbodb, $handle, $instance, $tag, $value) = @_;
+
+  my $anchor = \@{$bbodb->{$handle}[$instance]{NAME}};
+  my $pos = 1 + $#$anchor;
+
+  $anchor->[$pos]{TAG} = $tag;
+  $anchor->[$pos]{VALUE} = $value;
+}
 
 
 sub read_file
@@ -160,16 +212,21 @@ sub read_file
 
     if ($tag =~ /^NAME_/)
     {
-      my $anchor = \@{$bbodb->{$handle}[$instance]{NAME}};
-      my $pos = 1 + $#$anchor;
+      append_to_name($bbodb, $handle, $instance, $tag, $value);
+      # my $anchor = \@{$bbodb->{$handle}[$instance]{NAME}};
+      # my $pos = 1 + $#$anchor;
 
-      $anchor->[$pos]{TAG} = $tag;
-      $anchor->[$pos]{VALUE} = $value;
+      # $anchor->[$pos]{TAG} = $tag;
+      # $anchor->[$pos]{VALUE} = $value;
     }
     else
     {
       push @{$bbodb->{$handle}[$instance]{$tag}}, $value;
     }
+if ($tag eq 'FLUFF')
+{
+  print "HERE\n";
+}
     $stats{$tag}++;
   }
 
@@ -194,6 +251,157 @@ sub read_destroy_file
     die "$lno: $line" unless ($#a == 2 && $a[1] =~ /^\d+$/);
 
     $hash->{$a[0]}{$a[1]} = $a[2];
+  }
+
+  close $fh;
+}
+
+
+sub normalize
+{
+  my ($tag, $text) = @_;
+
+  if ($tag eq 'NAME_FIRST')
+  {
+    $text =~ s/^(\p{L})(.*)$/\u$1\L$2/;
+    return $text;
+  }
+  elsif ($tag eq 'NAME_INITIALS')
+  {
+    my @a = split /\s+/, $text;
+    my $res = '';
+    for my $i (0 .. $#a)
+    {
+      my $v = $a[$i];
+      $v =~ s/\.$//;
+      if (length($v) != 1)
+      {
+        die "$v: " . length($v);
+      }
+      if ($i == $#a)
+      {
+        $res .= uc($v) . '.';
+      }
+      else
+      {
+        $res .= uc($v) . '. '
+      }
+    }
+    return $res;
+  }
+  elsif ($tag eq 'NAME_PARTICLES' || $tag eq 'NAME_LAST')
+  {
+    $text = uc($text);
+    $text =~ s/^MC/Mc/g;
+    return $text;
+  }
+  elsif ($tag eq 'NAME_TITLE')
+  {
+    if ($text eq 'Dr.')
+    {
+      return $text;
+    }
+    else
+    {
+      die "$tag, $text";
+    }
+  }
+  else
+  {
+    die "$tag, $text";
+  }
+}
+
+
+sub read_post_destroy
+{
+  my ($fname, $hash) = @_;
+
+  my $lno = 0;
+  open(my $fh, "<", $fname) or die "Cannot open $fname $!";
+
+  my $handle = '';
+  my $state = 0; # Looking for handle
+
+  while (my $line = <$fh>)
+  {
+    $lno++;
+    chomp $line;
+    $line =~ s///g;
+
+    if ($line =~ /^HANDLE (.*)$/)
+    {
+      die "HANDLE timing" unless $state == 0;
+      $handle = $1;
+      $state = 1;
+    }
+    elsif ($line eq '')
+    {
+      $handle = '';
+      $state = 0;
+    }
+    else
+    {
+      if ($line !~ /^([A-Z_]+) (.*)$/)
+      {
+        die "$lno: $line"
+      }
+
+      my ($tag, $value) = ($1, $2);
+      warn "$lno: $line" unless 
+        ($tag =~ /^USER_/ || $tag eq 'EMAIL');
+
+      push @{$hash->{$handle}{$tag}}, $value;
+    }
+  }
+
+  close $fh;
+}
+
+
+sub read_post_substitute
+{
+  my ($fname, $hash) = @_;
+
+  my $lno = 0;
+  open(my $fh, "<", $fname) or die "Cannot open $fname $!";
+
+  my $handle = '';
+  my $state = 0; # Looking for handle
+
+  while (my $line = <$fh>)
+  {
+    $lno++;
+    chomp $line;
+    $line =~ s///g;
+
+    if ($line =~ /^HANDLE (.*)$/)
+    {
+      die "HANDLE timing" unless $state == 0;
+      $handle = $1;
+      $state = 1;
+    }
+    elsif ($line eq '')
+    {
+      $handle = '';
+      $state = 0;
+    }
+    else
+    {
+      if ($line !~ /^([A-Z_]+) (.*) ([A-Z_]+)$/)
+      {
+        die "$lno: $line"
+      }
+
+      my ($tag_old, $value, $tag_new) = ($1, $2, $3);
+      warn "$lno: $line" unless 
+        ($tag_old =~ /^USER_/ && $tag_new =~ /^NAME_/);
+
+      die unless exists $PERMITTED_POST_SUBS_HASH{$tag_old};
+
+      push @{$hash->{$handle}{$tag_old}{VALUE}}, $value;
+      push @{$hash->{$handle}{$tag_old}{TAG}}, $tag_new;
+    }
   }
 
   close $fh;
@@ -309,6 +517,107 @@ sub modify
         push @{$bbodb->{$handle}[$instance]{$new_tag}}, $value;
       }
     }
+  }
+}
+
+
+sub remap_post_destroy
+{
+  my ($bbodb, $post_sub_hash) = @_;
+
+  for my $handle (sort keys %$bbodb)
+  {
+    for my $instance (0 .. $#{$bbodb->{$handle}})
+    {
+      next if (! exists $bbodb->{$handle}[$instance]);
+
+      for my $key (keys %{$bbodb->{$handle}[$instance]})
+      {
+        next unless exists $post_sub_hash->{$handle}{$key};
+
+        my $vlist = $bbodb->{$handle}[$instance]{$key};
+        my $destroy = $post_sub_hash->{$handle}{$key};
+
+        my %destroy_hash = map { $_ => 1 } @$destroy;
+
+        my @shortened_list = grep {! $destroy_hash{$_}} @$vlist;
+
+        if ($#shortened_list < 0)
+        {
+          delete $bbodb->{$handle}[$instance]{$key};
+        }
+        else
+        {
+          @{$bbodb->{$handle}[$instance]{$key}} = @shortened_list;
+        }
+      }
+    }
+  }
+}
+
+
+sub remap_post_substitute
+{
+  my ($bbodb, $post_sub_hash) = @_;
+
+  for my $handle (sort keys %$bbodb)
+  {
+    for my $instance (0 .. $#{$bbodb->{$handle}})
+    {
+      next if (! exists $bbodb->{$handle}[$instance]);
+
+      for my $key (@PERMITTED_POST_SUBS_LIST)
+      {
+        next unless exists $post_sub_hash->{$handle}{$key};
+
+        my $vlist = $bbodb->{$handle}[$instance]{$key};
+        my $modify = $post_sub_hash->{$handle}{$key};
+
+        # modify has a TAG and a VALUE list with the same length.
+
+        my %modify_hash = map { $_ => 1 } @{$modify->{VALUE}};
+
+        my @shortened_list = grep {! $modify_hash{$_}} @$vlist;
+
+        if ($#$vlist < $#{$modify->{VALUE}} + $#shortened_list)
+        {
+          die "Destruction might not be there";
+        }
+
+        if ($#shortened_list < 0)
+        {
+          delete $bbodb->{$handle}[$instance]{$key};
+        }
+        else
+        {
+          @{$bbodb->{$handle}[$instance]{$key}} = @shortened_list;
+        }
+
+        for my $i (0 .. $#{$post_sub_hash->{$handle}{$key}{VALUE}})
+        {
+          my $new_val = normalize(
+            $post_sub_hash->{$handle}{$key}{TAG}[$i],
+            $post_sub_hash->{$handle}{$key}{VALUE}[$i]);
+          append_to_name($bbodb, $handle, $instance, 
+            $post_sub_hash->{$handle}{$key}{TAG}[$i], $new_val);
+        }
+      }
+    }
+  }
+}
+
+
+sub add_to_list
+{
+  my ($master, $addition) = @_;
+
+  for my $a (@$addition)
+  {
+    for my $m (@$master)
+    {
+      last if $a eq $m;
+    }
+    push @$master, $a;
   }
 }
 
@@ -574,6 +883,87 @@ sub write_namelist_file
 }
 
 
+sub write_consol_file
+{
+  my ($fname, $bbodb, $orig_db, $stats) = @_;
+
+  open(my $fh, ">", $fname) or die "Cannot open $fname $!";
+
+  for my $handle (sort keys %$bbodb)
+  {
+    my $geo = Geography->new();
+    my $namelist = NameList->new();
+    my %rest;
+
+    for my $instance (0 .. $#{$bbodb->{$handle}})
+    {
+      next if (! exists $bbodb->{$handle}[$instance]);
+
+      if (exists $bbodb->{$handle}[$instance]{NAME})
+      {
+        my @list;
+        for my $elem (@{$bbodb->{$handle}[$instance]{NAME}})
+        {
+          push @list, $elem->{TAG}, $elem->{VALUE};
+        }
+
+        die "$handle, $instance: Clear namelist first\n" unless 
+          $namelist->add_list(\@list);
+
+        delete $bbodb->{$handle}[$instance]{NAME};
+      }
+
+      for my $key (keys %{$bbodb->{$handle}[$instance]})
+      {
+        if (exists $GEO_TAGS{$key})
+        {
+          for my $v (@{$bbodb->{$handle}[$instance]{$key}})
+          {
+            die "$handle, $instance: Clear geo first\n" unless 
+              $geo->add($key, $v);
+          }
+          delete $bbodb->{$handle}[$instance]{$key};
+          next;
+        }
+
+        if (! exists $rest{$key})
+        {
+          @{$rest{$key}} = @{$bbodb->{$handle}[$instance]{$key}};
+        }
+        else
+        {
+          add_to_list($bbodb->{$handle}[$instance]{$key},
+            \@{$rest{$key}});
+        }
+      }
+    }
+
+    my $rstr = str_instance(\%rest, $stats);
+    next unless $rstr =~ /USER_/;
+
+# TMP
+    # Name.
+    my $nstr = $namelist->str();
+    next if $nstr !~ /^NAME_/;
+
+    print $fh "HANDLE $handle\n";
+
+    # Everything except name and geography.
+    print $fh $rstr;
+
+    print $fh $nstr;
+    $namelist->update_stats($stats);
+
+    # Geography.
+    my %hash;
+    $geo->set_hash(\%hash);
+    print $fh str_instance(\%hash, $stats) . "\n";
+  }
+
+  close $fh;
+}
+
+
 sub print_stats
 {
   my ($text, $stats) = @_;
@@ -582,8 +972,9 @@ sub print_stats
   my $sum = 0;
   for my $key (sort keys %stats)
   {
-    printf "%-16s %8d\n", $key, $stats{$key};
-    $sum += $stats{$key};
+    next unless exists $stats->{$key};
+    printf "%-16s %8d\n", $key, $stats->{$key};
+    $sum += $stats->{$key};
   }
   print '-' x 25, "\n";
   printf "%-16s %8d\n", '', $sum;

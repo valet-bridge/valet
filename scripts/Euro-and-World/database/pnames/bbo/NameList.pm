@@ -93,9 +93,25 @@ sub add_list
 }
 
 
+sub update_stats
+{
+  my ($self, $stats) = @_;
+
+  return '' unless exists $self->{LIST};
+
+  for (my $i = 0; $i <= $self->{LAST}; $i += 2)
+  {
+    $stats->{$self->{LIST}[$i]}++;
+  }
+}
+
+
+
 sub str
 {
   my ($self) = @_;
+
+  return '' unless exists $self->{LIST};
 
   my $s = '';
   for (my $i = 0; $i <= $self->{LAST}; $i += 2)
