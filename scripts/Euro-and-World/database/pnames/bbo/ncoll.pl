@@ -62,9 +62,12 @@ my %IGNORE_SMALL = (
 my %PERMITTED_POST_SUBS_HASH = (
   USER_TITLE => 1,
   USER_ONE => 1,
+  USER_FIRST => 1,
   USER_INITIALS => 1,
   USER_PARTICLES => 1,
-  USER_TWO => 1
+  USER_TWO => 1,
+  USER_LAST => 1,
+  USER_UNPARSEABLE => 1
 );
 
 my @PERMITTED_POST_SUBS_LIST = qw(
@@ -349,7 +352,8 @@ sub read_post_destroy
 
       my ($tag, $value) = ($1, $2);
       warn "$lno: $line" unless 
-        ($tag =~ /^USER_/ || $tag eq 'EMAIL');
+        ($tag =~ /^USER_/ || $tag eq 'EMAIL' ||
+        $tag eq 'NAME_INITIAL');
 
       push @{$hash->{$handle}{$tag}}, $value;
     }
@@ -388,19 +392,35 @@ sub read_post_substitute
     }
     else
     {
-      if ($line !~ /^([A-Z_]+) (.*) ([A-Z_]+)$/)
+      if ($line =~ /^([A-Z_]+) ([\w-]+) ([A-Z_]+) ([\w '.]+)$/)
       {
-        die "$lno: $line"
+        my ($tag_old, $value_old, $tag_new, $value_new) = ($1, $2, $3, $4);
+        warn "$lno: $line" unless 
+          ($tag_old =~ /^USER_/ && $tag_new =~ /^NAME_/);
+
+        die "$lno: $line ($tag_old, $value_old, $tag_new, $value_new)" 
+          unless exists $PERMITTED_POST_SUBS_HASH{$tag_old};
+
+        push @{$hash->{$handle}{$tag_old}{VALUE_OLD}}, $value_old;
+        push @{$hash->{$handle}{$tag_old}{VALUE_NEW}}, $value_new;
+        push @{$hash->{$handle}{$tag_old}{TAG}}, $tag_new;
       }
+      elsif ($line =~ /^([A-Z_]+) ([\w .-]+) ([A-Z_]+)$/)
+      {
+        my ($tag_old, $value, $tag_new) = ($1, $2, $3);
+        warn "$lno: $line" unless 
+          ($tag_old =~ /^USER_/ && $tag_new =~ /^NAME_/);
 
-      my ($tag_old, $value, $tag_new) = ($1, $2, $3);
-      warn "$lno: $line" unless 
-        ($tag_old =~ /^USER_/ && $tag_new =~ /^NAME_/);
+        die unless exists $PERMITTED_POST_SUBS_HASH{$tag_old};
 
-      die unless exists $PERMITTED_POST_SUBS_HASH{$tag_old};
-
-      push @{$hash->{$handle}{$tag_old}{VALUE}}, $value;
-      push @{$hash->{$handle}{$tag_old}{TAG}}, $tag_new;
+        push @{$hash->{$handle}{$tag_old}{VALUE_OLD}}, $value;
+        push @{$hash->{$handle}{$tag_old}{VALUE_NEW}}, $value;
+        push @{$hash->{$handle}{$tag_old}{TAG}}, $tag_new;
+      }
+      else
+      {
+        die "$lno: $line";
+      }
     }
   }
 
@@ -573,9 +593,10 @@ sub remap_post_substitute
         my $vlist = $bbodb->{$handle}[$instance]{$key};
         my $modify = $post_sub_hash->{$handle}{$key};
 
-        # modify has a TAG and a VALUE list with the same length.
+        # modify has a TAG, a VALUE_OLD list and a VALUE_NEW list
+        # with the same length.
 
-        my %modify_hash = map { $_ => 1 } @{$modify->{VALUE}};
+        my %modify_hash = map { $_ => 1 } @{$modify->{VALUE_OLD}};
 
         my @shortened_list = grep {! $modify_hash{$_}} @$vlist;
 
@@ -593,11 +614,11 @@ sub remap_post_substitute
           @{$bbodb->{$handle}[$instance]{$key}} = @shortened_list;
         }
 
-        for my $i (0 .. $#{$post_sub_hash->{$handle}{$key}{VALUE}})
+        for my $i (0 .. $#{$post_sub_hash->{$handle}{$key}{VALUE_NEW}})
         {
           my $new_val = normalize(
             $post_sub_hash->{$handle}{$key}{TAG}[$i],
-            $post_sub_hash->{$handle}{$key}{VALUE}[$i]);
+            $post_sub_hash->{$handle}{$key}{VALUE_NEW}[$i]);
           append_to_name($bbodb, $handle, $instance, 
             $post_sub_hash->{$handle}{$key}{TAG}[$i], $new_val);
         }
@@ -944,7 +965,8 @@ sub write_consol_file
 # TMP
     # Name.
     my $nstr = $namelist->str();
-    next if $nstr !~ /^NAME_/;
+    # next if $nstr !~ /^NAME_/;
+    next if $nstr =~ /^NAME_/;
 
     print $fh "HANDLE $handle\n";
 
