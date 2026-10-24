@@ -58,10 +58,10 @@ bool readNameFile(const string& nameFile)
 
     tokens.clear();
     tokenize(line, tokens, "|");
-    if (tokens.size() != 2)
+    if (tokens.size() != 2 && tokens.size() != 3)
     {
       cerr << "File '" << nameFile << "', line " << lno << 
-        ":\nGot " << tokens.size() << " tokens, wanted 2\n";
+        ":\nGot " << tokens.size() << " tokens, wanted 2 or 3\n";
       cerr << "(" << line << ")" << endl;
       return false;
     }

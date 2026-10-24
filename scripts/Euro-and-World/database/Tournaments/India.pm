@@ -499,12 +499,14 @@ my %MEETS_INDIA =
       {
         MEET_ORDINAL => 50,
         CITY => 'Kanpur',
+        YEAR => 2008,
         DATE_START => '2008-11-12',
         DATE_END => '2008-11-23'
       },
       '2009' =>
       {
         MEET_ORDINAL => 51,
+        YEAR => 2009,
         DATE_START => '2009-12-18',
         DATE_END => '2009-12-24'
       },

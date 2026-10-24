@@ -1845,7 +1845,7 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
-  "d'Orsi" => 
+  "d'Orsi Senior Trophy" => 
   {
     ORIGIN => 'International',
     FORM => 'Teams',

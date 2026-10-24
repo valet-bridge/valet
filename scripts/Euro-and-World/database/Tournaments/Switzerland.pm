@@ -32,16 +32,19 @@ my %MEETS_SWITZERLAND =
     {
       '2012' =>
       {
+        YEAR => 2012,
         DATE_START => '2012-03-01',
         DATE_END => '2012-03-04'
       },
       '2013' =>
       {
+        YEAR => 2013,
         DATE_START => '2013-03-01',
         DATE_END => '2013-03-03'
       },
       '2014' =>
       {
+        YEAR => 2014,
         DATE_START => '2014-03-07',
         DATE_END => '2014-03-09'
       },

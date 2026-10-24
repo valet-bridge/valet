@@ -366,6 +366,11 @@ bool tokenToRank(
     r = 14;
     return true;
   }
+  else if (c == 'X')
+  {
+    r = 2;
+    return true;
+  }
   else
   {
     error.flag = true;
