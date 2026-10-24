@@ -57,6 +57,13 @@ class Score
 
     void compensate(const Score& oppScore);
 
+    void importIntoIndividual(
+      const unsigned playerNo,
+      const unsigned side,
+      const Score& score);
+
+    unsigned getPairNo() const;
+
     unsigned getCount() const;
 
     float figure(const SortingEnum sort) const;

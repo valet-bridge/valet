@@ -17,12 +17,15 @@
 #include "Scores.h"
 #include "ScoreInput.h"
 
+#include "../pairs/Pairs.h"
+
 #include "../cst.h"
 
 using namespace std;
 
 #define SCORES_CHUNK_SIZE 16
 
+extern Pairs pairs;
 extern Options options;
 
 
@@ -111,6 +114,31 @@ void Scores::compensate()
     oppResults.scale();
 
     sdata.score.compensate(oppResults);
+  }
+}
+
+
+void Scores::turnIntoIndividuals(const Scores& realScores)
+{
+  // Actual count, so 1 if there is 1 player.
+  unsigned numPlayers = pairs.size();
+  scoreData.resize(numPlayers+1);
+
+  for (auto& sdata: realScores.scoreData)
+  {
+    const auto& scoreOld = sdata.score;
+    const unsigned pno = scoreOld.getPairNo();
+    if (pno == 0)
+      continue;
+
+    unsigned pno1, pno2;
+    pairs.individualLookup(pno, pno1, pno2);
+
+    assert(pno1 >= 1 && pno1 <= numPlayers);
+    assert(pno2 >= 1 && pno2 <= numPlayers);
+
+    scoreData[pno1].score.importIntoIndividual(pno1, 1, scoreOld);
+    scoreData[pno2].score.importIntoIndividual(pno2, 2, scoreOld);
   }
 }
 

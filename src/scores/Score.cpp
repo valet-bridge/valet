@@ -40,6 +40,7 @@ enum ScoreEnum
 
 Score::Score()
 {
+  pairNo = 0;
   aspects.resize(VALET_ENTRY_SIZE);
 }
 
@@ -136,6 +137,42 @@ bool Score::operator < (const Score& s2) const
     return true;
   else
     return false;
+}
+
+
+void Score::importIntoIndividual(
+  const unsigned playerNo,
+  const unsigned side,
+  const Score& score)
+{
+  assert(aspects.size() == score.aspects.size());
+  if (pairNo == 0)
+    pairNo = playerNo;
+  else
+    assert(pairNo == playerNo);
+
+  vector<unsigned> map;
+  map.resize(VALET_ENTRY_SIZE);
+  for (unsigned i = 0; i < VALET_ENTRY_SIZE; i++)
+    map[i] = i;
+
+  if (side == 2)
+  {
+    map[VALET_DECL1] = VALET_DECL2;
+    map[VALET_DECL2] = VALET_DECL1;
+
+    map[VALET_LEAD1] = VALET_LEAD2;
+    map[VALET_LEAD2] = VALET_LEAD1;
+  }
+
+  for (size_t i = 0; i < aspects.size(); i++)
+    aspects[i] += score.aspects[map[i]];
+}
+
+
+unsigned Score::getPairNo() const
+{
+  return pairNo;
 }
 
 

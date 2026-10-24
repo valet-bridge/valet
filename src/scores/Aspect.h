@@ -48,6 +48,8 @@ class Aspect
 
     void scale();
 
+    void calcAverage();
+
     void compensate( const Aspect& a2);
 
     unsigned getCount() const;

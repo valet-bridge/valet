@@ -55,6 +55,8 @@ class Scores
 
     void compensate();
 
+    void turnIntoIndividuals(const Scores& realScores);
+
     void sort(const SortingEnum sort);
 
     string str() const;

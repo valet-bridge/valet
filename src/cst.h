@@ -93,6 +93,7 @@ const SortPair sortingTags[] =
 struct Options
 {
   ScoringEnum valet;
+  bool individualFlag;
 
   string directory;
   string nameFile;
@@ -131,5 +132,8 @@ struct Error
   int no;
   stringstream message;
 };
+
+// Should come last alphabetically.
+inline const string INDIVIDUAL_PARTNER = "All partners";
 
 #endif

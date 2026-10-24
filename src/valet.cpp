@@ -129,6 +129,18 @@ int main(int argc, char const * argv[])
     ps.close();
   }
 
+  if (options.individualFlag)
+  {
+    // A kludge to preserve the global pairs.
+    const auto pairsCopy = pairs;
+    pairs.reset();
+    pairs.turnIntoIndividuals(pairsCopy);
+
+    const auto scoresCopy = scores;
+    scores.clear();
+    scores.turnIntoIndividuals(scoresCopy);
+  }
+
   scores.scale();
 
   if (options.compensateFlag)

@@ -37,17 +37,40 @@ class Pairs
 
     vector<string> pairNoToPairName;
 
-    struct pairTags
+    struct PairTags
     {
       string tag1;
       string tag2;
     };
 
-    vector<pairTags> pairNoToPairTags;
+    vector<PairTags> pairNoToPairTags;
+
+    // The vector indices go 1 .. numPairs, not 0 .. numPairs-1.
 
     unsigned numPairs;
 
     unsigned listNo;
+
+    // This is a bit of kludge.  If the flag is set, this is a
+    // Pairs where the first player is a real player, and the second
+    // player is whatever partners that player had in an individual.
+    // We also keep track of the mapping from pair numbers
+    // (of which there were many in the individual) and the two
+    // "player pairs" here, in order.
+    //
+    // An individual is a pair with a first, real player and a
+    // second player called "All partners".
+
+    bool individualFlag;
+
+    struct Players
+    {
+      unsigned pno1;
+      unsigned pno2;
+    };
+
+    vector<Players> pairsToIndividuals;
+
 
     bool pairExists(const string& pair) const;
 
@@ -65,14 +88,9 @@ class Pairs
 
     Pairs();
 
-    ~Pairs();
-
     void reset();
-
-    // Return false if the player already exists.
-    bool addPlayer(
-      const string& tag,
-      const string& name);
+    
+    unsigned size() const;
 
     bool playerExists(const string& tag) const;
 
@@ -86,9 +104,20 @@ class Pairs
     // The pair numbers are consecutive, starting from 1.
     // Returns 0 as an error (at least one tag does not exist).
 
+    void turnIntoIndividuals(const Pairs& realPairs);
+
+    void individualLookup(
+      const unsigned pno,
+      unsigned& pno1,
+      unsigned& pno2) const;
+
     void getPairData(
       const string& tag1,
       const string& tag2,
+      PairData& pairData);
+
+    void getIndividualData(
+      const string& tag0,
       PairData& pairData);
 
     void getPairTags(

@@ -34,6 +34,7 @@ struct OptEntry
 const vector<OptEntry> optList =
 {
   {"v", "valettype", 1},
+  {"i", "individual", 0},
   {"d", "directory", 1},
   {"n", "names", 1},
   {"s", "scores", 1},
@@ -76,6 +77,8 @@ void usage(const char base[])
     "Usage: " << basename << " [options]\n\n" <<
     "-v, --valettype s  Valet type, one of datum, imps, matchpoints\n" <<
     "                   (default: imps).\n" <<
+    "\n" <<
+    "-i, --individual   Scores individuals, not pairs.\n" <<
     "\n" <<
     "-d, --directory s  Read the input files from directory s.\n" <<
     "\n" <<
@@ -189,6 +192,7 @@ int getNextArgToken(
 void setDefaults()
 {
   options.valet = VALET_IMPS_ACROSS_FIELD;
+  options.individualFlag = false;
   options.directory = ".";
   options.nameFile = "names.txt";
   options.scoresFile = "scores.txt";
@@ -217,6 +221,8 @@ void printOptions()
   cout << left;
   cout << setw(12) << "valettype" << 
     setw(12) << scoringTags[options.valet].arg << "\n";
+  cout << setw(12) << "individual" << 
+    setw(12) << (options.individualFlag ? "true" : "false") << "\n";
   cout << setw(12) << "directory" << 
     setw(12) << options.directory << "\n";
   cout << setw(12) << "names" << 
@@ -336,6 +342,10 @@ void readArgs(
           nextToken -= 2;
           errFlag = true;
         }
+        break;
+
+      case 'i':
+        options.individualFlag = true;
         break;
 
       case 'd':
