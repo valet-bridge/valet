@@ -106,6 +106,7 @@ void Result::setGeneralResult( // Without lead
 void Result::setNoLead()
 {
   leadRank = 0;
+  leadDenom = 0;
 }
 
 
